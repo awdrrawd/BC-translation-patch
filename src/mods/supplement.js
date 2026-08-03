@@ -6,6 +6,10 @@ export const supplement = {
         "Lick Forehead": "舔额头",
         "High Five!": "击掌！",
         "Farewell on leave": "离开时告别",
+        // 代名詞（JS 動態繪製，不在 CSV）
+        "None": "无",
+        "They/Them": "他（非二元）",
+        "It/It": "它",
     },
     // 動作訊息（模板，替換名字前；保留 SourceCharacter/PronounPossessive 等 token）
     activity: {

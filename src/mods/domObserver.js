@@ -16,13 +16,16 @@ function translateTextNodes(root, translate) {
 
 /** @param {(s: string) => (string | undefined)} translate */
 export function setupDomObserver(translate) {
+    // BC 的 DOM 選單容器：道具、動作、快捷鍵等（標籤文字都在裡面）
+    const SEL = '[id^="dialog-"], [id^="key-name-"], .keybind-name, .keybind-action';
+    const match = (el) => el.matches?.(SEL);
     const handle = (node) => {
         if (!node || node.nodeType !== 1) return;
         const el = /** @type {Element} */ (node);
-        const buttons = [];
-        if (el.id && el.id.startsWith("dialog-inventory")) buttons.push(el);
-        el.querySelectorAll?.('[id^="dialog-inventory"]').forEach((b) => buttons.push(b));
-        for (const b of buttons) translateTextNodes(b, translate);
+        const targets = [];
+        if (match(el)) targets.push(el);
+        el.querySelectorAll?.(SEL).forEach((b) => targets.push(b));
+        for (const b of targets) translateTextNodes(b, translate);
     };
     const obs = new MutationObserver((muts) => {
         for (const m of muts) m.addedNodes.forEach(handle);

@@ -38,3 +38,5 @@ Elf
 精灵
 Drow
 卓尔
+Pixie
+皮克西

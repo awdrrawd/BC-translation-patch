@@ -48,10 +48,11 @@ function tryActivity(key) {
     return undefined;
 }
 
-// dialog-inventory DOM 用的統一翻譯：道具名 → 選單 → 動作
+// DOM 選單用的統一翻譯：完整 base 字典(道具/動作/快捷鍵/所有 CSV) → mod
+const BASE = /** @type {any} */ (GEN).base || { CN: {}, TW: {} };
 function translateAny(key) {
     const lang = activeLang();
-    if (lang && ASSET[lang] && ASSET[lang][key]) return ASSET[lang][key];
+    if (lang && BASE[lang] && BASE[lang][key]) return BASE[lang][key];
     return tryMenu(key) || tryActivity(key);
 }
 

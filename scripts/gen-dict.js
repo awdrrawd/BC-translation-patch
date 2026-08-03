@@ -148,6 +148,15 @@ export function generateDict() {
         }
     }
 
+    // base 字典供 DOM observer 用（BC 越來越多選單是 DOM）。DOM 標籤都短，
+    // 只收 <= 50 字元的（道具/動作/快捷鍵/頭銜名），長句訊息交給注入/ChatRoomMessage，省體積。
+    const base = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
+    for (const [en, zh] of Object.entries(cnMap)) {
+        if (en.length > 50) continue;
+        base.CN[en] = zh;
+        base.TW[en] = overrideMap.has(en) ? overrideMap.get(en) : applyTerms(converter(zh));
+    }
+
     // BCX / LSCG 補充字典（translations/mods/*.txt，英文→中文），TW 由 OpenCC 轉
     const modMenu = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
     for (const f of walk(path.join(trRoot, "mods"), (p) => p.endsWith(".txt"))) {
@@ -160,7 +169,7 @@ export function generateDict() {
         }
     }
 
-    return { paths, cnMap, activity, assetName, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
+    return { paths, cnMap, activity, assetName, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
 // 允許 `npm run gen` 直接執行
