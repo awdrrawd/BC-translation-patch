@@ -1,0 +1,3 @@
+{
+  "Export/import works by converting the current configuration of the selected module feature into a long code word that is copied to your device's clipboard. You can then paste it anywhere you like, for instance a text file on your device. Functionality of this feature depends on the device you are using and if the clipboard can be used on it. This field will also show you status information while you try to export or import.\nCompressing the export will save you some space when storing it, as the text length will be shorter, although the exported string will no longer be human readable. ": "导出/导入的原理是把所选模块功能的当前配置转换成一段长代码，复制到你设备的剪贴板。然后你可以将它粘贴到任何地方，例如你设备上的文本文件。此功能是否可用取决于你使用的设备以及该设备能否使用剪贴板。你尝试导出或导入时，此栏还会显示状态信息。\n压缩导出会在存储时为你节省一些空间，因为文本更短，不过导出的字符串将不再可供人类阅读。 "
+}
