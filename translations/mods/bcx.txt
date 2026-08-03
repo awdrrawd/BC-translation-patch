@@ -1,1 +1,249 @@
 ### BCX 補譯（英文一行、中文一行）。用 npm run extract 產生 reports/missing-mods.md 當工作清單。
+Bondage Club Extended
+束缚俱乐部扩展
+Adding a rule
+添加规则
+Adding curses
+添加诅咒
+After clicking on it, you can edit the rule
+点击后即可编辑该规则
+All existing rules:
+所有现有规则：
+All rules (continued):
+所有规则（续）：
+Allow whispers
+允许私聊
+Already applied
+已应用
+Already cursed
+已诅咒
+Also block swapping items
+同时阻止交换物品
+Are you sure you want to continue?
+确定要继续吗？
+Blocked by BCX
+被 BCX 阻止
+Cannot be slowed down
+无法被减速
+Chat commands
+聊天命令
+Cheats disabled
+作弊已禁用
+Come to my room immediately
+立刻到我的房间来
+Commands module overview
+命令模块概览
+Copy report
+复制报告
+Current curses (continued):
+当前诅咒（续）：
+Current curses:
+当前诅咒：
+Current log config:
+当前日志配置：
+Current rules (continued):
+当前规则（续）：
+Current rules:
+当前规则：
+Curses module overview
+诅咒模块概览
+Data required
+需要数据
+Delete template
+删除模板
+Deposit all keys
+存入所有钥匙
+Developer mode disabled
+开发者模式已禁用
+Developer mode enabled
+开发者模式已启用
+Do not show this report again unless something changes
+除非有变动，否则不再显示此报告
+Due to a rule, you are not allowed to get a new lover!
+由于规则限制，你不能拥有新的恋人！
+Due to a rule, you are not allowed to leave your lover!
+由于规则限制，你不能离开你的恋人！
+Due to a rule, you are not allowed to let go of any of your submissive!
+由于规则限制，你不能放走任何一个你的顺从者！
+Due to a rule, you are not allowed to own a new submissive!
+由于规则限制，你不能拥有新的顺从者！
+End of introduction
+介绍结束
+Error Report (by BCX)
+错误报告（由 BCX 提供）
+Exported to clipboard!
+已导出到剪贴板！
+Extra gag anti-cheat
+额外口塞防作弊
+Forbid freeing others
+禁止解放他人
+Forbid tying up self
+禁止捆绑自己
+Forced say
+强制发言
+Forced typing task
+强制打字任务
+General permission examples
+一般权限示例
+Go and wait
+去等待
+Import failed:
+导入失败：
+Introduction to roles and permissions
+角色与权限介绍
+Invalid data
+无效数据
+Invalid value
+无效数值
+Leaving this room will cancel sending it.
+离开此房间将取消发送。
+Lift curse
+解除诅咒
+List of commands (continued):
+命令列表（续）：
+List of commands:
+命令列表：
+Logging configuration screen
+日志配置界面
+Logging module screen
+日志模块界面
+Manipulate the arousal meter
+操控兴奋度
+Minimum role that will be greeted
+会被问候的最低角色
+New BCX version is available! You can upgrade by logging in again.
+有新版 BCX 可用！重新登录即可升级。
+New chat room icons
+新的聊天室图标
+No permission matches the filter!
+没有权限符合筛选条件！
+Permission setup example 1
+权限设置示例 1
+Permission setup example 2
+权限设置示例 2
+Permission system base principles
+权限系统基本原则
+Permission system overview
+权限系统概览
+Prevent accessing curses by others
+阻止他人访问诅咒
+Prevent accessing rules by others
+阻止他人访问规则
+Quick overview
+快速概览
+Remove rule
+移除规则
+Replace spoken words
+替换发言词语
+Restrained speech
+受限发言
+Restrict console usage
+限制控制台使用
+Rules module overview
+规则模块概览
+Send set
+发送设置
+Send to asylum
+送往疯人院
+Send to cell
+送往牢房
+Send to serve drinks
+派去上饮料
+Show remaining time
+显示剩余时间
+There is no orgasm to stop currently.
+目前没有可停止的高潮。
+This is not possible right now.
+现在无法执行此操作。
+Trigger conditions
+触发条件
+Typing task
+打字任务
+Use as room creation dialog default
+用作创建房间对话框的默认值
+Using honorifics
+使用敬称
+Visible list:
+可见列表：
+You are allowed to speak only using one of the defined sounds!
+你只能使用指定的声音之一说话！
+You are forbidden from changing room settings while restrained
+你被束缚时禁止更改房间设置
+You are not allowed to change into this pose!
+你不被允许摆出这个姿势！
+You are not allowed to change the emoticon!
+你不被允许更改表情符号！
+You are not allowed to change what others wear!
+你不被允许更改他人的穿着！
+You are not allowed to change what you are wearing!
+你不被允许更改你的穿着！
+You are not allowed to change your difficulty!
+你不被允许更改你的难度！
+You are not allowed to create a new room!
+你不被允许创建新房间！
+You are not allowed to enter this room!
+你不被允许进入此房间！
+You are not allowed to lock items on your body!
+你不被允许锁住你身上的物品！
+You are not allowed to lock other's items!
+你不被允许锁住他人的物品！
+You are not allowed to lockpick items on others!
+你不被允许撬开他人身上的物品！
+You are not allowed to lockpick worn items on your body!
+你不被允许撬开你身上佩戴的物品！
+You are not allowed to recieve training by GGTS!
+你不被允许接受 GGTS 的训练！
+You are not allowed to remove an item from your body!
+你不被允许从身上移除物品！
+You are not allowed to talk openly in chatrooms!
+你不被允许在聊天室公开说话！
+You are not allowed to use OOC in messages while gagged.
+你被口塞时不被允许在消息中使用 OOC。
+You are not allowed to use OOC in messages!
+你不被允许在消息中使用 OOC！
+You are not allowed to use a key on items on your body!
+你不被允许对你身上的物品使用钥匙！
+You are not allowed to use a key on other's items!
+你不被允许对他人的物品使用钥匙！
+You are not allowed to use a remote control for items on your body!
+你不被允许对你身上的物品使用遥控器！
+You are not allowed to use a remote control on other's items!
+你不被允许对他人的物品使用遥控器！
+You are not allowed to use an item on yourself!
+你不被允许对自己使用物品！
+You are not allowed to use emotes in chatrooms!
+你不被允许在聊天室使用表情动作！
+You are not allowed to use the action command!
+你不被允许使用 action 命令！
+You are not allowed to use the antiblind command!
+你不被允许使用 antiblind 命令！
+You are not allowed to use the antigarble command!
+你不被允许使用 antigarble 命令！
+You are not allowed to whitelist this person!
+你不被允许将此人加入白名单！
+You are too restrained to use this right now.
+你被束缚得太紧，现在无法使用。
+You are unable to change clothes right now.
+你现在无法更换衣物。
+You broke a BCX rule by being inactive for too long. The transgression was logged.
+你因长时间不活跃而违反了 BCX 规则。此违规已被记录。
+You broke a rule by not using one of the allowed phrases for you!
+你因未使用允许你使用的短语之一而违反了规则！
+You broke the doll talk rule!
+你违反了玩偶说话规则！
+You broke the rule to greet this room like taught!
+你违反了按教导问候此房间的规则！
+You exceeded the number of allowed chat messages per minute!
+你超过了每分钟允许的聊天消息数！
+You exceeded the number of allowed emotes per minute!
+你超过了每分钟允许的表情动作数！
+You forgot to include one of the mandatory words!
+你忘了包含必需词语之一！
+You have no permission to change limits
+你没有更改限制的权限
+You have no permission to curse this
+你没有诅咒此项的权限
+You need to be admin in this room to use a .room command
+你需要是此房间的管理员才能使用 .room 命令
+You need to greet this room like taught!
+你需要按教导问候此房间！

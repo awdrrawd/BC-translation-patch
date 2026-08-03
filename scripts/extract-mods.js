@@ -49,7 +49,9 @@ function report(name, dir) {
         return { total: 0, missing: [] };
     }
     const all = extract(dir);
-    const missing = all.filter((s) => !echoHas(s));
+    // 濾掉 debug/log/內部訊息（非 UI，不該翻）
+    const DEBUG = /^BCX:|^(BCX init|BCX internal|BCX Debug|BCX Compatibility|BCX Developer|BCX Supporter)\b|\b(init|Init|handler|timeout|interval|Assertion|reseting|Unloaded|patchable|patched|subscreen|OnlineSettings|ExtensionSettings|MaidQuartersMaid|Dictionary|Bad data|not ready|not defined|already logged|LoginResponse)\b/;
+    const missing = all.filter((s) => !echoHas(s) && !DEBUG.test(s));
     return { total: all.length, missing };
 }
 
