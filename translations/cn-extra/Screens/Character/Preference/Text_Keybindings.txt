@@ -1,3 +1,15 @@
+- Keybindings Settings -
+- 快捷键设置 -
+Keybindings
+快捷键
+Chat
+聊天
+Chat Room
+聊天室
+Map Chat Room
+地图房
+Navigation
+导航
 Tries to complete the message to a command or print help about it.
 尝试将消息补全为命令，或显示其帮助。
 Auto Complete

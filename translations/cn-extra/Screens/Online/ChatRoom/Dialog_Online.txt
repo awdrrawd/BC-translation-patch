@@ -1,0 +1,6 @@
+###_PLAYER
+(Add friend without notifying them.)
+（添加好友时不通知对方。）
+###_PLAYER
+(Add friend with notification.)
+（添加好友并通知对方。）

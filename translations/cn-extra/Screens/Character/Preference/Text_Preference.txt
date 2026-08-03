@@ -1,9 +1,5 @@
 - Censorship Settings -
 - 审查设置 -
-- Keybindings Settings -
-- 快捷键设置 -
-Keybindings
-快捷键
 Show friend request messages
 显示好友请求消息
 Toggle color picker

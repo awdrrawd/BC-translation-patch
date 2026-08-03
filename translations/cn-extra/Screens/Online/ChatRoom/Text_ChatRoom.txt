@@ -13,9 +13,9 @@ Add back
 Added SourceCharacter as a friend.
 已将 SourceCharacter 加为好友。
 Ghost SourceCharacter
-鬼隐 SourceCharacter
+忽略 SourceCharacter
 SourceCharacter is now Ghosted.
-SourceCharacter 现在已被鬼隐。
+SourceCharacter 现在已被忽略(幽灵名单)。
 Ignore request
 忽略请求
 Invalid number.

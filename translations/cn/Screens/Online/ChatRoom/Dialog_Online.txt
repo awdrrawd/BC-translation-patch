@@ -88,10 +88,10 @@
 (从好友列表移除)
 ###_PLAYER
 (Add friend without notifying them.)
-（添加好友时不通知对方。）
+(Add friend without notifying them.)
 ###_PLAYER
 (Add friend with notification.)
-（添加好友并通知对方。）
+(Add friend with notification.)
 ###_NPC
 (This member is not longer considered to be a friend by you.)
 (DialogCharacterObject不再是您的朋友)

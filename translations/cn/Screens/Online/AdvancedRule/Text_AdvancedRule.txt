@@ -208,5 +208,3 @@ Device (Bottom Left & Right)
 装置（左下角和右下角）
 Addon (Top Right)
 附件（右上角）
-None
-无
