@@ -52,6 +52,15 @@ function mergePairs(base, extra) {
     return out;
 }
 
+// 這些「資料/名稱」檔即使官方有 TW 也用完整的 CN 轉出來覆蓋：
+// 官方 TW 常是舊快照、缺新道具/動作，官方 CN 較完整。
+const TW_FORCE_PREFIXES = [
+    "Assets/Female3DCG/", // Female3DCG, AssetStrings, LayerNames, ColorGroups
+    "Screens/Character/Preference/ActivityDictionary",
+    "Screens/Interface",
+];
+const twForced = (base) => TW_FORCE_PREFIXES.some((p) => base === p || base.startsWith(p));
+
 export function generateDict() {
     const officialTW = new Set(readJsonOptional(path.join(trRoot, "official-tw.json"), []));
 
@@ -103,8 +112,8 @@ export function generateDict() {
             cnFiles++;
         }
 
-        // TW：官方沒有 _TW.txt、或有補充 → 輸出（轉換）
-        if (!officialTW.has(base) || hasExtra) {
+        // TW：官方沒有 _TW.txt、有補充、或屬於需強制完整覆蓋的資料檔 → 輸出（轉換）
+        if (!officialTW.has(base) || hasExtra || twForced(base)) {
             const twPairs = merged.map(([en, zh]) => {
                 const k = en.trim();
                 if (overrideMap.has(k)) return [en, overrideMap.get(k)];

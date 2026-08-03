@@ -1,5 +1,6 @@
 import { setupInjection } from "./inject.js";
 import { setupDiagnostics } from "./diagnostics.js";
+import { reapply } from "./reapply.js";
 import { activeLang } from "./lang.js";
 
 // 由建置時的 esbuild define 注入
@@ -28,11 +29,13 @@ import { activeLang } from "./lang.js";
 
     const { count } = setupInjection(mod);
     if (/** @type {any} */ (globalThis).BCTP_DEBUG) setupDiagnostics(mod);
+    reapply();
 
     /** @type {any} */ (globalThis).BCTP = {
         version: __BCTP_VERSION__,
         lang: activeLang,
         pathCount: count,
+        reapply,
     };
 
     console.log(
