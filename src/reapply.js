@@ -6,18 +6,13 @@ export function reapply() {
     if (!activeLang()) return;
     const g = /** @type {any} */ (globalThis);
 
-    // 重建動作字典（TextCache）
+    // 重建動作字典（TextCache）。buildCache 從英文 CSV 重跑，冪等安全。
+    // 注意：不要重跑 TranslationAsset —— 它就地翻譯，二次呼叫會把已翻的中文
+    //       用 findIndex 反查成下一個英文詞（腐化回英文）。道具描述交給官方啟動時處理。
     try {
         const c = g.ActivityDictionaryLoad?.();
         c?.buildCache?.();
     } catch (e) {
         console.debug("[BCTP] 動作字典重建失敗", e);
-    }
-
-    // 重新套用道具/部位描述翻譯（只填補仍是英文的，不動已翻的）
-    try {
-        g.TranslationAsset?.("Female3DCG");
-    } catch (e) {
-        console.debug("[BCTP] 道具描述重譯失敗", e);
     }
 }
