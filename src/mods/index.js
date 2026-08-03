@@ -20,14 +20,26 @@ export function getMissing() {
 // 我們補譯的 BCX/LSCG 字典（translations/mods/*.txt），優先於 ECHO
 const MOD = /** @type {any} */ (GEN).modMenu || { CN: {}, TW: {} };
 
-function tryMenu(key) {
+function lookupMenu(key) {
     if (supplement.menu[key]) return supplement.menu[key];
     const lang = activeLang();
-    const m = lang && MOD[lang] && MOD[lang][key];
-    if (m) return m;
+    if (lang && MOD[lang] && MOD[lang][key]) return MOD[lang][key];
     for (const u of units) {
         const t = u.translateMenuText?.(key);
         if (t) return t;
+    }
+    return undefined;
+}
+
+function tryMenu(key) {
+    const direct = lookupMenu(key);
+    if (direct) return direct;
+    // BCX 把「名稱 (副標)」合併成一句畫出（rules_add.ts）；拆開分別翻再合併
+    const combo = key.match(/^(.+?) \((.+)\)$/);
+    if (combo) {
+        const a = lookupMenu(combo[1]);
+        const b = lookupMenu(combo[2]);
+        if (a && b) return `${a}（${b}）`;
     }
     return undefined;
 }

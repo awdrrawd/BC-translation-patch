@@ -58,7 +58,7 @@ This command sends PLAYER_NAME to sell 5 drinks as a maid in multiplayer chat ro
 Controls PLAYER_NAME's orgasms directly
 直接控制 PLAYER_NAME 的高潮
 This command controls PLAYER_NAME's arousal meter directly, allowing four things:\n1. Setting the bar directly to a number from 1 to 100, whereas 100 triggers a normal orgasm.\n2. Triggering a forced orgasm that cannot be resisted.\n3. Triggering an orgasm that gets ruined.\n4. Stopping an orgasm already triggered (e.g. by a toy).
-此命令直接控制 PLAYER_NAME 的 欲望值，允许四种操作：\n1. 将数值直接设为 1 到 100 之间的数字，其中 100 会触发普通高潮。\n2. 触发无法抵抗的强制高潮。\n3. 触发被破坏的高潮（ruined orgasm）。\n4. 停止已触发的高潮（例如由玩具引发的）。
+此命令直接控制 PLAYER_NAME 的 兴奋值，允许四种操作：\n1. 将数值直接设为 1 到 100 之间的数字，其中 100 会触发普通高潮。\n2. 触发无法抵抗的强制高潮。\n3. 触发被破坏的高潮（ruined orgasm）。\n4. 停止已触发的高潮（例如由玩具引发的）。
 Emoticon
 表情气泡
 Control PLAYER_NAME's emoticon

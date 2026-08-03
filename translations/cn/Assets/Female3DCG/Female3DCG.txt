@@ -3095,7 +3095,9 @@ He/Him
 She/Her
 她
 They/Them
-They/Them
+他(非二元)
+It/It
+它
 Genitalia
 生殖器
 Penis

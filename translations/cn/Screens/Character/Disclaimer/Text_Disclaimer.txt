@@ -1,29 +1,29 @@
 ### seeded from upstream: Screens/Character/Disclaimer/Text_Disclaimer_CN.txt
 ### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
 Bondage Club – Terms of Service
-Bondage Club – Terms of Service
+Bondage Club – 服务条款
 To play the game and create a character, you must read and agree to the Terms of Service (TOS).
-To play the game and create a character, you must read and agree to the Terms of Service (TOS).
+要游玩游戏并创建角色，您必须阅读并同意服务条款（TOS）。
 These terms can change at any time. By playing the game, you agree to the terms below.
-These terms can change at any time. By playing the game, you agree to the terms below.
+这些条款随时可能变更。游玩游戏即表示您同意以下条款。
 Age Eligibility: This website contains age-restricted materials including nudity and explicit descriptions of sexual activities. You must be a legal adult in your country and at least 18 years old to play the Bondage Club. Minors are not allowed and should leave this website immediately. Never create a character that would be a minor.
-Age Eligibility: This website contains age-restricted materials including nudity and explicit descriptions of sexual activities. You must be a legal adult in your country and at least 18 years old to play the Bondage Club. Minors are not allowed and should leave this website immediately. Never create a character that would be a minor.
+年龄资格：本网站包含年龄限制内容，包括裸露及对性活动的露骨描述。您必须是您所在国家的法定成年人，且年满18岁方可游玩 Bondage Club。未成年人不得使用，应立即离开本网站。切勿创建未成年角色。
 Player License: As a player, you do not own the game, you are granted a license to play it. This license can be revoked, and your character can be banned or deleted if these terms are violated.
-Player License: As a player, you do not own the game, you are granted a license to play it. This license can be revoked, and your character can be banned or deleted if these terms are violated.
+玩家许可：作为玩家，您并不拥有该游戏，而是被授予游玩许可。该许可可能被撤销，若违反这些条款，您的角色可能被禁止或删除。
 User Conduct: As a player, you must conduct yourself in a civilized manner. Do not harass others, make hateful statements or try to harm others maliciously. You can cheat by using scripts or mods on yourself, but do not use them on others without their consent. Do not, in any way, try to hack or disrupt the server.
-User Conduct: As a player, you must conduct yourself in a civilized manner. Do not harass others, make hateful statements or try to harm others maliciously. You can cheat by using scripts or mods on yourself, but do not use them on others without their consent. Do not, in any way, try to hack or disrupt the server.
+用户行为：作为玩家，您必须以文明的方式行事。请勿骚扰他人、发表仇恨言论或恶意伤害他人。您可以使用脚本或模组对自身进行作弊，但未经他人同意不得将其用于他人。请勿以任何方式尝试入侵或破坏服务器。
 Assets Ownership: Many assets (drawings, real pictures & sounds) used in the Bondage Club game are not owned by the Bondage Club developers or Bondage Projects. The game is a community driven visible source game and these assets were imported from all over the web, making it almost impossible to track and credit all the sources. If you're the owner of one of these assets, please inform Ben987 on Patreon, Discord or DeviantArt.
-Assets Ownership: Many assets (drawings, real pictures & sounds) used in the Bondage Club game are not owned by the Bondage Club developers or Bondage Projects. The game is a community driven visible source game and these assets were imported from all over the web, making it almost impossible to track and credit all the sources. If you're the owner of one of these assets, please inform Ben987 on Patreon, Discord or DeviantArt.
-No Warranty: The game is a community driven visible source game and can be modified in hundreds of ways, bugs are to be expected. There is no guarantee that the game won’t crash, that the server will be running and the client hosting will remain available. The Bondage Club is not responsible for any data loss on your accounts.
-No Warranty: The game is a community driven visible source game and can be modified in hundreds of ways, bugs are to be expected. There is no guarantee that the game won’t crash, that the server will be running and the client hosting will remain available. The Bondage Club is not responsible for any data loss on your accounts.
+资产所有权：Bondage Club 游戏中使用的许多资产（绘图、真实图片及音效）并非由 Bondage Club 开发者或 Bondage Projects 拥有。该游戏是一个社区驱动的可见源代码游戏，这些资产来自网络各处，几乎无法追踪并标注所有来源。如果您是其中某项资产的所有者，请通过 Patreon、Discord 或 DeviantArt 告知 Ben987。
+No Warranty: The game is a community driven visible source game and can be modified in hundreds of ways, bugs are to be expected. There is no guarantee that the game won't crash, that the server will be running and the client hosting will remain available. The Bondage Club is not responsible for any data loss on your accounts.
+无担保：该游戏是一个社区驱动的可见源代码游戏，可通过数百种方式修改，因此出现错误是意料之中的。无法保证游戏不会崩溃、服务器将持续运行或客户端托管保持可用。Bondage Club 不对您账户上的任何数据丢失负责。
 Limitation of Liability: The Bondage Club is a free game and is not liable for any direct or indirect damage. Since you do not pay for the game, you cannot get a refund or sue the developers for bugs or content that does not meet your expectations.
-Limitation of Liability: The Bondage Club is a free game and is not liable for any direct or indirect damage. Since you do not pay for the game, you cannot get a refund or sue the developers for bugs or content that does not meet your expectations.
+责任限制：Bondage Club 是一款免费游戏，不对任何直接或间接损害承担责任。由于您无需为游戏付费，您不能因错误或内容不符合预期而要求退款或起诉开发者。
 Termination of Access: The Bondage Club can be shut down at any time, without prior notification. There are no obligations to continue supporting the game in the future.
-Termination of Access: The Bondage Club can be shut down at any time, without prior notification. There are no obligations to continue supporting the game in the future.
+访问终止：Bondage Club 可随时关闭，恕不事先通知。未来没有任何义务继续支持该游戏。
 Privacy: Your private information is not required to play the game. The only information you might want to provide is an email address to recover your account password. It is not advised, but you can share your private information with other players if you desire. The Bondage Club is not liable if the shared information is used against you in the future. The Bondage Club values your privacy and will not share or distribute your email address.
-Privacy: Your private information is not required to play the game. The only information you might want to provide is an email address to recover your account password. It is not advised, but you can share your private information with other players if you desire. The Bondage Club is not liable if the shared information is used against you in the future. The Bondage Club values your privacy and will not share or distribute your email address.
+隐私：游玩游戏无需提供您的私人信息。您唯一可能需要提供的是用于恢复账户密码的电子邮箱地址。不建议您与其他玩家共享私人信息，但如果您愿意，也可以这样做。若共享信息在未来被用于对您不利的用途，Bondage Club 不承担任何责任。Bondage Club 重视您的隐私，不会分享或散布您的电子邮箱地址。
 Please accept these Terms of Service to create your character.
-Please accept these Terms of Service to create your character.
+请接受这些服务条款以创建您的角色。
 Return
 返回
 I accept

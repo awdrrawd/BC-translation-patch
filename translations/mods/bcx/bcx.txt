@@ -3,6 +3,8 @@ Bondage Club Extended
 束缚俱乐部扩展
 Adding a rule
 添加规则
+curse
+诅咒
 Adding curses
 添加诅咒
 After clicking on it, you can edit the rule
@@ -23,6 +25,10 @@ Are you sure you want to continue?
 确定要继续吗？
 Blocked by BCX
 被 BCX 阻止
+View
+检查
+Edit the
+编辑
 Cannot be slowed down
 无法被减速
 Chat commands
@@ -95,6 +101,10 @@ Leaving this room will cancel sending it.
 离开此房间将取消发送。
 Lift curse
 解除诅咒
+Change this curse's configuration
+更改此诅咒的配置
+Don't remove item when curse is dormant
+诅咒休眠时请勿移除物品
 List of commands (continued):
 命令列表（续）：
 List of commands:
@@ -247,3 +257,5 @@ Export/import works by converting the current configuration of the selected modu
 导出/导入功能的工作原理是将所选模块功能的当前配置转换为一个长代码字，并将其复制到您设备的剪贴板。然后，您可以将其粘贴到任何位置，例如设备上的文本文件。此功能的可用性取决于您使用的设备以及该设备是否支持剪贴板。此字段还会显示您尝试导出或导入时的状态信息。
 Compressing the export will save you some space when storing it, as the text length will be shorter, although the exported string will no longer be human readable. 
 压缩导出内容可以节省存储空间，因为文本长度会缩短，但导出的字符串将不再易于阅读。
+Warning: This item is not standardized and some or all of its configuration states could behave in unexpected ways if they are cursed with the above checkbox. Please assume most of them will not work correctly. Issues could range from respawning with a different configuration to the curse triggering randomly all the time. As some of these items do work (partially), the option to curse the configuration is still offered.
+警告：此项目并非标准化项目，如果勾选上述复选框，其部分或全部配置状态可能会出现意外行为。请假定大多数配置都无法正常工作。问题可能包括重生后配置发生变化，或者错误状态随机触发。由于部分配置确实可以正常工作（但功能有限），因此仍然提供错误配置的选项。
