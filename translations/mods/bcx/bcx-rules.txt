@@ -455,3 +455,5 @@ Farewell on leave
 (仅当对方处于缓慢离开状态时)
 Forces PLAYER_NAME to say farewells to people leaving the room slowly. Only does it once per 10 minutes per room. Can start with * or ** for emote.
 强制 PLAYER_NAME 向缓慢离开房间的人道别。每个房间每10分钟仅执行一次。可以以 * 或 ** 开头来表示动作（表情）。
+(Existing BC setting)
+(现有BC设置)
