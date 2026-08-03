@@ -105,6 +105,28 @@ export function setupMods(mod) {
         return next(args);
     });
 
+    // 聊天記錄裡「已組裝、名字已替換」的動作訊息：用自動生成的 regex 模板翻
+    const AREGEX = /** @type {any} */ (GEN).activityRegex || { CN: [], TW: [] };
+    const compiled = { CN: null, TW: null };
+    const getRegex = (lang) => {
+        if (!compiled[lang]) compiled[lang] = (AREGEX[lang] || []).map((x) => ({ re: new RegExp(x.p), r: x.r }));
+        return compiled[lang];
+    };
+    ChatHistoryTranslator.registerTranslationFunc((src) => {
+        const lang = activeLang();
+        if (!lang || typeof src !== "string") return undefined;
+        const s = src.trim();
+        const wrap = s.match(/^\((.*)\)$/); // 動作訊息常被 () 包住
+        const inner = wrap ? wrap[1] : s;
+        for (const { re, r } of getRegex(lang)) {
+            if (re.test(inner)) {
+                const t = inner.replace(re, r);
+                return wrap ? `(${t})` : t;
+            }
+        }
+        return undefined;
+    });
+
     // BCX 在聊天記錄輸出的 HTML 說明
     ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src));
 
