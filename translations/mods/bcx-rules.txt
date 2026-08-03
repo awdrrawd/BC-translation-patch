@@ -1,0 +1,439 @@
+### BCX 規則名/說明/指令（抽自 bc_blocks.ts / speech_control.ts / command_definitions.ts）。保留 PLAYER_NAME 佔位符。
+Forbid using remotes on self
+禁止对自己使用遥控器
+PLAYER_NAME using one on PLAYER_NAME
+PLAYER_NAME 对 PLAYER_NAME 使用
+This rule forbids PLAYER_NAME to use or trigger a vibrator or similar remote controlled item on her own body. (Others still can use remotes on her)
+此规则禁止 PLAYER_NAME 对自己身体使用或触发振动器等遥控物品。（他人仍可对她使用遥控器）
+Forbid using remotes on others
+禁止对他人使用遥控器
+This rule forbids PLAYER_NAME to use or trigger a vibrator or similar remote controlled item on other club members.
+此规则禁止 PLAYER_NAME 对其他俱乐部成员使用或触发振动器等遥控物品。
+Forbid using keys on self
+禁止对自己使用钥匙
+This rule forbids PLAYER_NAME to unlock any locked item on her own body. Note: Despite the name, this rule also blocks unlocking locks that don't require a key (e.g. exclusive lock). However, locks that can be unlocked in other ways (timer locks by removing time, code/password locks by entering correct code) can still be unlocked by PLAYER_NAME. Others can still unlock her items on her normally.
+此规则禁止 PLAYER_NAME 解开自己身上任何锁定的物品。注意：尽管名称如此，此规则也会阻止解开无需钥匙的锁（如专属锁）。但可用其他方式解开的锁（定时锁通过减少时间、密码锁通过输入正确密码）PLAYER_NAME 仍可解开。他人仍可正常解开她身上的物品。
+Forbid using keys on others
+禁止对他人使用钥匙
+This rule forbids PLAYER_NAME to unlock any locked item on other club members, with options to still allow unlocking of owner and/or lover locks and items. Note: Despite the name, this rule also blocks unlocking locks that don't require a key (e.g. exclusive lock). However, locks that can be unlocked in other ways (timer locks by removing time, code/password locks by entering correct code) can still be unlocked by PLAYER_NAME.
+此规则禁止 PLAYER_NAME 解开其他俱乐部成员身上任何锁定的物品，可选择仍允许解开主人和/或恋人的锁与物品。注意：尽管名称如此，此规则也会阻止解开无需钥匙的锁（如专属锁）。但可用其他方式解开的锁（定时锁通过减少时间、密码锁通过输入正确密码）PLAYER_NAME 仍可解开。
+Still allow unlocking owner locks or items
+仍允许解开主人的锁或物品
+Still allow unlocking lover locks or items
+仍允许解开恋人的锁或物品
+Forbid picking locks on self
+禁止撬开自己身上的锁
+PLAYER_NAME picking one on PLAYER_NAME
+PLAYER_NAME 撬开 PLAYER_NAME 身上的
+This rule forbids PLAYER_NAME to lockpick any locked items on her own body. (Others still can pick locks on her normally)
+此规则禁止 PLAYER_NAME 撬开自己身上任何锁定的物品。（他人仍可正常撬开她身上的锁）
+Forbid picking locks on others
+禁止撬开他人身上的锁
+This rule forbids PLAYER_NAME to lockpick any locked items on other club members.
+此规则禁止 PLAYER_NAME 撬开其他俱乐部成员身上锁定的物品。
+Forbid using locks on self
+禁止对自己使用锁
+This rule forbids PLAYER_NAME to use any kind of lock on her own body. (Others still can add locks on her items normally)
+此规则禁止 PLAYER_NAME 对自己身体使用任何锁。（他人仍可正常为她的物品加锁）
+Forbid using locks on others
+禁止对他人使用锁
+This rule forbids PLAYER_NAME to use any kind of lock on other club members.
+此规则禁止 PLAYER_NAME 对其他俱乐部成员使用任何锁。
+Forbid wardrobe use on self
+禁止使用自己的衣橱
+PLAYER_NAME using PLAYER_NAME's wardrobe
+PLAYER_NAME 使用 PLAYER_NAME 的衣橱
+This rule forbids PLAYER_NAME to access her own wardrobe. (Others still can change her clothes normally)
+此规则禁止 PLAYER_NAME 访问自己的衣橱。（他人仍可正常更换她的衣物）
+Forbid wardrobe use on others
+禁止使用他人的衣橱
+This rule forbids PLAYER_NAME to use the wardrobe of other club members.
+此规则禁止 PLAYER_NAME 使用其他俱乐部成员的衣橱。
+Restrict allowed body poses
+限制可用的身体姿势
+Allows to restrict the body poses PLAYER_NAME is able to get into by herself.
+可限制 PLAYER_NAME 自己能够摆出的身体姿势。
+Mark poses as being allowed or forbidden:
+标记姿势为允许或禁止：
+Forbid creating new rooms
+禁止创建新房间
+This rule forbids PLAYER_NAME to create new rooms.
+此规则禁止 PLAYER_NAME 创建新房间。
+Restrict entering rooms
+限制进入房间
+only allow entering specific ones
+仅允许进入特定房间
+This rule forbids PLAYER_NAME to enter all rooms, that are not on an editable whitelist of still allowed ones. NOTE: As safety measure this rule is not in effect while the list is empty. TIP: This rule can be combined with the rule "Forbid creating new rooms".
+此规则禁止 PLAYER_NAME 进入所有不在可编辑白名单中的房间。注意：作为安全措施，列表为空时此规则不生效。提示：此规则可与「禁止创建新房间」规则搭配使用。
+Only joining rooms with these names is allowed:
+仅允许进入以下名称的房间：
+Prevent leaving the room
+阻止离开房间
+while defined roles are inside
+当指定角色在房间内时
+This rule prevents PLAYER_NAME from leaving the room they are currently inside while at least one character with the set minimum role or a higher one is present inside. NOTE: Careful when setting the minimum role too low. If it is set to public for instance, it would mean that PLAYER_NAME can only leave the room when they are alone in it.
+此规则会在房间内至少有一名达到所设最低角色或更高角色的角色时，阻止 PLAYER_NAME 离开当前房间。注意：将最低角色设得过低时要小心。例如设为「公开」，就意味着 PLAYER_NAME 只有在房间里独处时才能离开。
+Minimum role preventing room leaving:
+阻止离开房间的最低角色：
+Forbid freeing self
+禁止解放自己
+PLAYER_NAME removing any items from PLAYER_NAME's body
+PLAYER_NAME 从 PLAYER_NAME 身上移除任何物品
+This rule forbids PLAYER_NAME to remove any items from her own body. Other people can still remove them. The rule has a toggle to optionally still allow to remove items which were given a low difficulty score by the original asset maker, such as hand-held items, plushies, etc. This means that custom crafted properties given to an item such as 'decoy' are not factored in. It also has a toggle to prevent swapping items.
+此规则禁止 PLAYER_NAME 从自己身上移除任何物品。他人仍可移除。规则有一个开关可选择仍允许移除原作者给予低难度分的物品（如手持物、毛绒玩具等）。这意味着物品的自定义制作属性（如「诱饵」）不计入。规则还有一个开关可阻止交换物品。
+Still allow removing low difficulty items
+仍允许移除低难度物品
+This rule forbids PLAYER_NAME to remove any items from other characters. The rule has a toggle to optionally still allow to remove items which were given a low difficulty score by the original asset maker, such as hand-held items, plushies, etc. This means that custom crafted properties given to an item such as 'decoy' are not factored in. It also has a toggle to prevent swapping items.
+此规则禁止 PLAYER_NAME 从其他角色身上移除任何物品。规则有一个开关可选择仍允许移除原作者给予低难度分的物品（如手持物、毛绒玩具等）。这意味着物品的自定义制作属性（如「诱饵」）不计入。规则还有一个开关可阻止交换物品。
+This rule forbids PLAYER_NAME to use any items on herself.
+此规则禁止 PLAYER_NAME 对自己使用任何物品。
+Forbid tying up others
+禁止捆绑他人
+either everybody or only more dominant characters
+所有人、或仅更具支配地位的角色
+This rule forbids PLAYER_NAME to use any items on other characters. Can be set to only affect using items on characters with a higher dominant / lower submissive score than PLAYER_NAME has.
+此规则禁止 PLAYER_NAME 对其他角色使用任何物品。可设为仅影响对支配分高于/顺从分低于 PLAYER_NAME 的角色使用物品。
+Only forbid tying people with higher dominance
+仅禁止捆绑支配度更高的人
+Prevent blacklisting
+阻止拉黑
+and ghosting of the defined roles
+以及鬼隐指定角色
+This rule prevents PLAYER_NAME from adding characters with the set minimum role or a higher one to their bondage club blacklist and ghostlist.
+此规则阻止 PLAYER_NAME 将达到所设最低角色或更高角色的角色加入其束缚俱乐部黑名单和鬼隐名单。
+Minimum role forbidden to blacklist:
+禁止拉黑的最低角色：
+Prevent whitelisting
+阻止加白名单
+of roles 'friend' or 'public'
+「好友」或「公开」角色
+This rule prevents PLAYER_NAME from adding characters with a role lower than a BCX Mistress to their bondage club whitelist.
+此规则阻止 PLAYER_NAME 将角色低于 BCX 女主人的角色加入其束缚俱乐部白名单。
+Forbid the antiblind command
+禁止 antiblind 命令
+BCX's .antiblind command
+BCX 的 .antiblind 命令
+This rule forbids PLAYER_NAME to use the antiblind command. Antiblind is a BCX feature that enables a BCX user to see the whole chat room and all other characters at all times, even when wearing a blinding item. If PLAYER_NAME should be forbidden to use the command, this rule should be used.
+此规则禁止 PLAYER_NAME 使用 antiblind 命令。Antiblind 是一项 BCX 功能，让 BCX 用户即使佩戴致盲物品也能始终看到整个聊天室和所有其他角色。若要禁止 PLAYER_NAME 使用该命令，应使用此规则。
+Forbid changing difficulty
+禁止更改难度
+multiplayer difficulty preference
+多人难度偏好
+This rule forbids PLAYER_NAME to change her Bondage Club multiplayer difficulty, regardless of the current value.
+此规则禁止 PLAYER_NAME 更改其束缚俱乐部多人难度，无论当前值为何。
+Prevent usage of all activities
+阻止使用所有动作
+any action buttons such as kissing or groping
+任何动作按钮，如亲吻或爱抚
+This rule forbids PLAYER_NAME to use any (sexual) activities in chat rooms. Other players can still use activities on her, as this rules does not block the arousal & sexual activities system itself, as forcing the according BC setting would.
+此规则禁止 PLAYER_NAME 在聊天室使用任何（性）动作。其他玩家仍可对她使用动作，因为此规则本身不会像强制相应 BC 设置那样禁用兴奋与性动作系统。
+Forbid mainhall maid services
+禁止大厅女仆服务
+to get out of any restraints
+用以解除任何束缚
+This rule forbids PLAYER_NAME to use a maid's help to get out of restraints in the club's main hall. Recommended to combine with the rule: 'Force 'Cannot enter single-player rooms when restrained' (Existing BC setting)' to prevent NPCs in other rooms from helping.
+此规则禁止 PLAYER_NAME 在俱乐部大厅利用女仆的帮助解除束缚。建议与规则「强制『被束缚时无法进入单人房间』（现有 BC 设置）」搭配，以防其他房间的 NPC 提供帮助。
+Forbid the action command
+禁止 action 命令
+BCX's .action/.a chat command
+BCX 的 .action/.a 聊天命令
+This rule forbids PLAYER_NAME to use the action command. Action is a BCX feature that enables to format a message to look like a BC chat action. If PLAYER_NAME should be forbidden to use the command to communicate, this rule should be used.
+此规则禁止 PLAYER_NAME 使用 action 命令。Action 是一项 BCX 功能，可将消息格式化为看起来像 BC 聊天动作。若要禁止 PLAYER_NAME 用该命令交流，应使用此规则。
+Prevent using BCX permissions
+阻止使用 BCX 权限
+PLAYER_NAME using her permissions for her own BCX, with some exceptions
+PLAYER_NAME 对自己的 BCX 使用其权限，但有若干例外
+This rule forbids PLAYER_NAME access to some parts of their own BCX they have permission to use, making it as if they do not have 'self access' (see BCX tutorial on permission system) while the rule is active. This rule still leaves access for all permissions where the lowest permitted role ('lowest access') is also set to PLAYER_NAME (to prevent getting stuck). This rule does not affect PLAYER_NAME's permissions to use another users's BCX.
+此规则禁止 PLAYER_NAME 访问自己 BCX 中某些她本有权使用的部分，规则生效期间就如同她没有「自我访问」权限（见 BCX 权限系统教学）。对于最低许可角色（「最低访问」）也设为 PLAYER_NAME 的所有权限，此规则仍保留访问（以防被卡死）。此规则不影响 PLAYER_NAME 使用他人 BCX 的权限。
+PLAYER_NAME accessing curses placed on herself by others
+PLAYER_NAME 访问他人对她施加的诅咒
+This rule forbids PLAYER_NAME from accessing (or removing) any curses that were placed on her by other BCX users. This additionally blocks bulk actions and editing the global config to prevent bypassing this rule. PLAYER_NAME can still access (and remove) curses she herself placed. This rule does not affect PLAYER_NAME's permissions to use another users' BCX.
+此规则禁止 PLAYER_NAME 访问（或移除）其他 BCX 用户对她施加的任何诅咒。这还会阻止批量操作和编辑全局配置，以防绕过此规则。PLAYER_NAME 仍可访问（并移除）她自己施加的诅咒。此规则不影响 PLAYER_NAME 使用他人 BCX 的权限。
+PLAYER_NAME accessing rules placed on herself by others
+PLAYER_NAME 访问他人对她施加的规则
+This rule forbids PLAYER_NAME from accessing (or removing) any rules that were placed on her by other BCX users. This additionally blocks bulk actions and editing the global config to prevent bypassing this rule. PLAYER_NAME can still access (and remove) rules she herself placed. This rule does not affect PLAYER_NAME's permissions to use another users' BCX.
+此规则禁止 PLAYER_NAME 访问（或移除）其他 BCX 用户对她施加的任何规则。这还会阻止批量操作和编辑全局配置，以防绕过此规则。PLAYER_NAME 仍可访问（并移除）她自己施加的规则。此规则不影响 PLAYER_NAME 使用他人 BCX 的权限。
+Forbid looking at room admin UI
+禁止查看房间管理界面
+while blindfolded
+被蒙眼时
+This rule forbids PLAYER_NAME from opening the room admin screen while blindfolded, as this discloses the room background and the member numbers of admins, potentially in the room right now. If PLAYER_NAME is a room admin, she can still use chat commands for altering the room or kicking/banning.
+此规则禁止 PLAYER_NAME 在被蒙眼时打开房间管理界面，因为这会泄露房间背景和管理员（可能正在房间内）的会员编号。若 PLAYER_NAME 是房间管理员，她仍可使用聊天命令更改房间或踢出/封禁。
+Forbid using GGTS
+禁止使用 GGTS
+training by GGTS is forbidden
+禁止接受 GGTS 训练
+This rule forbids PLAYER_NAME to revieve training by the base club's GGTS feature. If the rule is enforced while PLAYER_NAME has remaining GGTS training time, it is removed the moment PLAYER_NAME enters the GGTS room.
+此规则禁止 PLAYER_NAME 接受基础俱乐部 GGTS 功能的训练。若在 PLAYER_NAME 还有剩余 GGTS 训练时间时强制此规则，则在她进入 GGTS 房间时立即清除。
+Prevent working as club slave
+阻止充当俱乐部奴隶
+the task from the mistress room
+女主人房间的任务
+This rule prevents PLAYER_NAME to work as a club slave by picking up a club slave collar from the club management room.
+此规则阻止 PLAYER_NAME 通过在俱乐部管理室拿取俱乐部奴隶项圈来充当俱乐部奴隶。
+Prevent using items of others
+阻止使用他人的物品
+items not bought
+未购买的物品
+This rule prevents PLAYER_NAME to use items she does not own herself, but can use on someone because this person owns them.
+此规则阻止 PLAYER_NAME 使用她自己不拥有、但因对方拥有而能对其使用的物品。
+Prevent changing own emoticon
+阻止更改自己的表情气泡
+for just PLAYER_NAME
+仅针对 PLAYER_NAME
+This rule prevents PLAYER_NAME from showing, removing or changing an emoticon (afk, zZZ, etc.) over her head. It also blocks her from using the emoticon command on herself.
+此规则阻止 PLAYER_NAME 显示、移除或更改她头顶的表情气泡（afk、zZZ 等）。也会阻止她对自己使用表情气泡命令。
+Force-hide UI elements
+强制隐藏界面元素
+e.g., icons, bars, or names
+如图标、条状栏或名称
+This rule enforces hiding of certain UI elements for PLAYER_NAME over all characters inside the room. Different levels of the effect can be set which follow exactly the behavior of the 'eye'-toggle in the button row above the chat. There is also an option to hide emoticon bubbles over all characters' heads.
+此规则为 PLAYER_NAME 强制隐藏房间内所有角色的某些界面元素。可设置不同程度的效果，完全遵循聊天上方按钮行中「眼睛」开关的行为。还有一个选项可隐藏所有角色头顶的表情气泡。
+Select what shall be hidden:
+选择要隐藏的内容：
+Also hide emoticons during the effect
+效果期间也隐藏表情气泡
+Allow specific sounds only
+仅允许特定声音
+such as an animal sound
+如动物叫声
+This rule allows PLAYER_NAME to only communicate using a list of specific sound patterns in chat messages and whispers. These patterns cannot be mixed in the same message, though. Only one sound from the list per message is valid. That said, any variation of a sound in the list is allowed as long as the letters are in order. (Example: if the set sound is 'Meow', then this is a valid message: 'Me..ow? meeeow! mmeooowwwwwww?! meow. me.. oo..w ~')
+此规则只允许 PLAYER_NAME 在聊天消息和私聊中使用一组特定声音模式交流。但同一条消息中不能混用这些模式，每条消息只能用列表中的一种声音。不过，只要字母顺序不变，列表中某声音的任何变体都被允许。（例如：若设定声音为「Meow」，则这是有效消息：「Me..ow? meeeow! mmeooowwwwwww?! meow. me.. oo..w ~」）
+Set the allowed sounds:
+设定允许的声音：
+Block OOC chat while gagged
+被塞口时阻止 OOC 聊天
+no more misuse of OOC for normal chatting while gagged
+不再在被塞口时滥用 OOC 进行正常聊天
+This rule forbids PLAYER_NAME to use OOC (messages between round brackets) in chat or OOC whisper messages while she is gagged.
+此规则禁止 PLAYER_NAME 在被塞口时于聊天或私聊中使用 OOC（圆括号内的消息）。
+Block OOC chat
+阻止 OOC 聊天
+blocks use of OOC in messages
+阻止在消息中使用 OOC
+This rule forbids PLAYER_NAME to use OOC (messages between round brackets) in chat or OOC whisper messages at any moment. This is a very extreme rule and should be used with great caution!
+此规则在任何时刻都禁止 PLAYER_NAME 在聊天或私聊中使用 OOC（圆括号内的消息）。这是非常极端的规则，请极为谨慎使用！
+Doll talk
+玩偶说话
+allows only short sentences with simple words
+只允许用简单词语的短句
+This rule forbids PLAYER_NAME to use any words longer than set limit and limits number of words too. Both limits are configurable independently. Doesn't affect OOC text, but does affect whispers. Note: Setting '0' means this part is not limited (∞), as there is another rule to forbid open talking completely.
+此规则禁止 PLAYER_NAME 使用超过所设长度上限的词，并同时限制词数。两个上限可独立配置。不影响 OOC 文本，但影响私聊。注意：设为「0」表示该部分不限制（∞），因为另有规则可完全禁止公开说话。
+Max. character length of any word:
+任何词的最大字符长度：
+Max. number of words per message:
+每条消息的最大词数：
+Forbid saying certain words in chat
+禁止在聊天中说某些词
+based on a configurable blacklist
+基于可配置的黑名单
+This rule forbids PLAYER_NAME to use certain words in the chat. The list of banned words can be configured. Checks are not case sensitive (forbidding 'no' also forbids 'NO' and 'No'). Doesn't affect emotes and OOC text, but does affect whispers.
+此规则禁止 PLAYER_NAME 在聊天中使用某些词。禁词列表可配置。检查不区分大小写（禁止「no」也会禁止「NO」和「No」）。不影响表情动作和 OOC 文本，但影响私聊。
+All forbidden words:
+所有禁用词：
+Forbid saying certain words in emotes
+禁止在表情动作中说某些词
+This rule forbids PLAYER_NAME to use certain words as part of any emote messages. The list of banned words can be configured. Checks are not case sensitive (forbidding 'no' also forbids 'NO' and 'No').
+此规则禁止 PLAYER_NAME 在任何表情动作消息中使用某些词。禁词列表可配置。检查不区分大小写（禁止「no」也会禁止「NO」和「No」）。
+Forbid talking openly
+禁止公开说话
+in a chat room
+在聊天室中
+This rule forbids PLAYER_NAME to send a message to all people inside a chat room. Does not affect whispers or emotes, but does affect OOC.
+此规则禁止 PLAYER_NAME 向聊天室内所有人发送消息。不影响私聊或表情动作，但影响 OOC。
+Limit talking openly
+限制公开说话
+only allow a set number of chat messages per minute
+每分钟仅允许一定数量的聊天消息
+This rule limits PLAYER_NAME's ability to send a message to all people inside a chat room to only the set number per minute. Does not affect whispers or emotes, but does affect OOC. Note: Setting '0' will have no effect, as there is another rule to forbid open talking completely.
+此规则将 PLAYER_NAME 向聊天室内所有人发送消息的能力限制为每分钟仅所设数量。不影响私聊或表情动作，但影响 OOC。注意：设为「0」不会有效果，因为另有规则可完全禁止公开说话。
+Maximum allowed number of chat messages per minute (> 0):
+每分钟允许的最大聊天消息数（> 0）：
+Forbid using emotes
+禁止使用表情动作
+This rule forbids PLAYER_NAME to send an emote (with * or /me) to all people inside a chat room.
+此规则禁止 PLAYER_NAME 向聊天室内所有人发送表情动作（用 * 或 /me）。
+Limit using emotes
+限制使用表情动作
+only allow a set number of emotes per minute
+每分钟仅允许一定数量的表情动作
+This rule forbids PLAYER_NAME to send an emote (with * or /me) to all people inside a chat room to only the set number per minute. Note: Setting '0' will have no effect, as there is another rule to forbid using emotes completely.
+此规则将 PLAYER_NAME 向聊天室内所有人发送表情动作（用 * 或 /me）限制为每分钟仅所设数量。注意：设为「0」不会有效果，因为另有规则可完全禁止使用表情动作。
+Maximum allowed number of emotes per minute (> 0):
+每分钟允许的最大表情动作数（> 0）：
+Restrict sending whispers
+限制发送私聊
+except to defined roles
+指定角色除外
+This rule forbids PLAYER_NAME to whisper anything to most people inside a chat room, except to the defined roles. Also affects whispered OOC messages.
+此规则禁止 PLAYER_NAME 向聊天室内大多数人私聊，指定角色除外。也影响私聊的 OOC 消息。
+Minimum role whispering is still allowed to:
+仍允许私聊的最低角色：
+Restrict receiving whispers
+限制接收私聊
+except from defined roles
+指定角色除外
+This rule prevents PLAYER_NAME from receiving any whispers, except from the defined roles. If someone tries to send PLAYER_NAME a whisper message while this rule blocks them from doing so, they get an auto reply whisper, if the rule has an auto reply set (text field is not empty). PLAYER_NAME won't get any indication that she would have received a whisper unless the rule is not enforced, in which case she will see both the whisper and the auto reply. This rule can also be used (by dommes) to prevent getting unwanted whispers from strangers in public.
+此规则阻止 PLAYER_NAME 接收任何私聊，指定角色除外。若有人在此规则阻止的情况下尝试向 PLAYER_NAME 发送私聊，且规则设有自动回复（文本框非空），对方会收到一条自动回复私聊。除非规则未被强制，否则 PLAYER_NAME 不会有任何收到私聊的提示；未强制时她会同时看到私聊和自动回复。此规则也可（由支配者）用来防止在公共场合收到陌生人的骚扰私聊。
+Minimum role still allowed to send whisper:
+仍允许发送私聊的最低角色：
+Auto replies blocked sender with this:
+用此内容自动回复被阻止的发送者：
+Restrict sending beep messages
+限制发送蜂鸣消息
+except to selected members
+选定成员除外
+This rule forbids PLAYER_NAME to send any beeps with message, except to the defined list of member numbers. Sending beeps without a message is not affected. Optionally, it can be set that PLAYER_NAME is only forbidden to send beeps while she is unable to use her hands (e.g. fixed to a cross).
+此规则禁止 PLAYER_NAME 发送任何带消息的蜂鸣，指定会员编号列表除外。发送不带消息的蜂鸣不受影响。可选择设为仅在 PLAYER_NAME 无法使用双手时（如被固定在十字架上）禁止其发送蜂鸣。
+Member numbers still allowed to be beeped:
+仍允许蜂鸣的会员编号：
+Only in effect when unable to use hands
+仅在无法使用双手时生效
+Restrict receiving beeps
+限制接收蜂鸣
+and beep messages, except from selected members
+及蜂鸣消息，选定成员除外
+This rule prevents PLAYER_NAME from receiving any beep (regardless if the beep carries a message or not), except for beeps from the defined list of member numbers. If someone tries to send PLAYER_NAME a beep message while this rule blocks them from doing so, they get an auto reply beep, if the rule has an auto reply set. PLAYER_NAME won't get any indication that she would have received a beep unless the rule is not enforced, in which case she will see both the beep and the auto reply. Optionally, the rule can be set to only activate while PLAYER_NAME is unable to use her hands (e.g. fixed to a cross).
+此规则阻止 PLAYER_NAME 接收任何蜂鸣（无论是否带消息），指定会员编号列表除外。若有人在此规则阻止的情况下尝试向 PLAYER_NAME 发送蜂鸣消息，且规则设有自动回复，对方会收到一条自动回复蜂鸣。除非规则未被强制，否则 PLAYER_NAME 不会有任何收到蜂鸣的提示；未强制时她会同时看到蜂鸣和自动回复。可选择设为仅在 PLAYER_NAME 无法使用双手时（如被固定在十字架上）激活。
+Member numbers still allowed to send beeps:
+仍允许发送蜂鸣的会员编号：
+Order to greet club
+命令问候俱乐部
+when entering it through the login portal
+通过登录门户进入时
+PLAYER_NAME will automatically send all defined member numbers (if they are currently online and friends with PLAYER_NAME) a beep the moment PLAYER_NAME joins the club or the moment she start BCX to make her presence known. Disconnects don't count as coming into the club again, as far as detectable. NOTE: Trigger conditions should not be selected when using this rule, as if you for instance select 'when in public room' the rule will only greet when you load BCX in a public room.
+在 PLAYER_NAME 加入俱乐部或启动 BCX 的那一刻，她会自动向所有指定会员编号（若对方当前在线且与 PLAYER_NAME 是好友）发送蜂鸣以宣告到场。就可检测范围而言，断线不算再次进入俱乐部。注意：使用此规则时不应选择触发条件，因为例如选择「在公共房间时」，规则只会在你于公共房间加载 BCX 时问候。
+Member numbers that will be greeted:
+将被问候的会员编号：
+Forbid the antigarble option
+禁止 antigarble 选项
+BCX's .antigarble command
+BCX 的 .antigarble 命令
+This rule forbids PLAYER_NAME to use the antigarble command. Antigarble is a BCX feature that enables a BCX user to understand muffled voices from other gagged characters or when wearing a deafening item. If PLAYER_NAME should be forbidden to use the command, this rule should be used.
+此规则禁止 PLAYER_NAME 使用 antigarble 命令。Antigarble 是一项 BCX 功能，让 BCX 用户能听懂其他被塞口角色或自己佩戴致聋物品时的含糊话语。若要禁止 PLAYER_NAME 使用该命令，应使用此规则。
+with others in all chat, whisper and OOC messages
+在所有聊天、私聊和 OOC 消息中对他人
+Automatically replaces specific words PLAYER_NAME uses in chat messages, whispers and OOC with another set word from a defineable a list of words with a special syntax (e.g. [Clare,Lily;Mistress],[Claudia;the maid],[I;this slut]).
+自动将 PLAYER_NAME 在聊天消息、私聊和 OOC 中使用的特定词替换为可定义列表中的另一设定词，使用特殊语法（如 [Clare,Lily;Mistress],[Claudia;the maid],[I;this slut]）。
+List in syntax: [word1;substitute1],[w2,w3,...;s2],...
+按语法列出：[词1;替换1],[词2,词3,...;替换2],...
+in front of specific names in all chat, whisper and OOC messages
+在所有聊天、私聊和 OOC 消息中特定名称之前
+Define a listing of words (e.g. Miss, Mistress, ...) where one of them always needs to be typed before any one out of a listing of names (e.g. Julia, Eve, ...) in all chat, whisper and OOC messages. Needs a certain syntax (e.g. [Goddess,Mistress;Lily,Clare],[slut;Mona], ...)
+定义一组词（如 Miss、Mistress、…），要求在所有聊天、私聊和 OOC 消息中，任一名称（如 Julia、Eve、…）之前必须先键入其中之一。需要特定语法（如 [Goddess,Mistress;Lily,Clare],[slut;Mona], …）
+List in syntax: [name1,name2;honorific1],[n2,n3,...;h2],...
+按语法列出：[名称1,名称2;敬称1],[名称2,名称3,...;敬称2],...
+Force to retype
+强制重新输入
+if sending a message in chat is rejected by BCX due to a rule violation
+若聊天消息因违反规则而被 BCX 拒绝
+This rule forces PLAYER_NAME to retype any chat/whisper/emote/OOC message as a punishment when they try to send it and another enforced BCX speech rule determines that there is any rule violation in that message.
+当 PLAYER_NAME 尝试发送聊天/私聊/表情/OOC 消息、而另一条已强制的 BCX 言语规则判定该消息存在违规时，此规则作为惩罚强制她重新输入该消息。
+Order to greet room
+命令问候房间
+with a settable sentence when entering it newly
+新进入房间时用可设定的句子
+Sets a specific sentence that PLAYER_NAME must say loud after entering a room that is not empty. The sentence is autopopulating the chat window text input. When to say it is left to PLAYER_NAME, but when the rule is enforced, it is the only thing that can be said in this room after joining it. Emotes can still be used, though, unless toggled to be forbidden. Disconnects don't count as coming into a new room again, as far as detectable.
+设定一句 PLAYER_NAME 进入非空房间后必须公开说出的话。该句子会自动填入聊天窗口输入框。何时说由 PLAYER_NAME 决定，但规则强制时，进入房间后这是唯一能说的话。不过表情动作仍可使用，除非被切换为禁止。就可检测范围而言，断线不算再次进入新房间。
+The sentence that has to be used to greet any joined room:
+进入任何房间时必须用来问候的句子：
+Also forbid emote messages before greeting
+问候前也禁止表情动作消息
+Greet new guests
+问候新访客
+when they join the current room
+当他们加入当前房间时
+Forces PLAYER_NAME to greet people newly entering the current chat room with the set sentence. NOTE: Only PLAYER_NAME and the new guest can see the message not to make it spammy. After a new person has been greeted, she will not be greeted for 10 minutes after she left (including disconnect) the room PLAYER_NAME is in. Setting an emote as a greeting is also supported by starting the set message with one or two '*' characters. %name% is replaced by the name from the relationships module or their normal name. The %titled_name% prepends Master/Mistress/Owner.
+强制 PLAYER_NAME 用设定句子问候新进入当前聊天室的人。注意：为避免刷屏，只有 PLAYER_NAME 和新访客能看到该消息。某人被问候后，在其离开（含断线）PLAYER_NAME 所在房间后的 10 分钟内不会再被问候。以一或两个「*」字符开头设定消息，也支持将表情动作作为问候。%name% 会替换为关系模块中的名称或其正常名称。%titled_name% 会在前面加上 主人/女主人/所有者。
+Farewell on leave
+离开时告别
+only when under slow leave
+仅在缓慢离开时
+Forces PLAYER_NAME to say farewells to people leaving the room slowly. Only does it once per 10 minutes per room. Can start with * or ** for emote.
+强制 PLAYER_NAME 向缓慢离开房间的人道别。每个房间每 10 分钟仅一次。可用 * 或 ** 开头表示表情动作。
+only the set sentences are allowed to be spoken
+只允许说设定的句子
+This rule no longer allows PLAYER_NAME to speak freely, she is given a set of sentences allowed and can only use those in chat and whispers. Does not affect OOC.
+此规则不再允许 PLAYER_NAME 自由说话，她会得到一组允许的句子，且只能在聊天和私聊中使用这些句子。不影响 OOC。
+Only these phrases are still allowed:
+仅以下短语仍被允许：
+Enforce faltering speech
+强制结巴说话
+an enhanced studder effect is added to PLAYER_NAME's chat texts
+为 PLAYER_NAME 的聊天文本加上增强的结巴效果
+Thus rule converts PLAYER_NAME's messages, so she is only able to speak studdering and with random filler sounds, for some [RP] reason (anxiousness, arousal, fear, etc.). Converts the typed chat text automatically. Affects chat messages and whispers, but not OOC.
+此规则会转换 PLAYER_NAME 的消息，使她因某些 [RP] 原因（紧张、兴奋、恐惧等）只能结结巴巴、夹带随机语气词地说话。自动转换所键入的聊天文本。影响聊天消息和私聊，但不影响 OOC。
+Establish mandatory words
+设定必用词
+of which at least one needs to always be included when speaking
+说话时至少必须包含其中之一
+This rule gives PLAYER_NAME a list of words from which at least one has to always be used in any chat message. The list of mandatory words can be configured. Checks are not case sensitive (adding 'miss' also works for 'MISS' and 'Miss' - Note: 'Miiiiissss' would also match). Doesn't affect whispers, emotes and OOC text. There is a toggle for affecting whispers, too.
+此规则给 PLAYER_NAME 一份词表，任何聊天消息中都必须至少使用其中一个。必用词列表可配置。检查不区分大小写（加入「miss」对「MISS」和「Miss」也有效——注意：「Miiiiissss」也会匹配）。不影响私聊、表情动作和 OOC 文本。另有一个开关也可影响私聊。
+At least one of these words always needs to be used:
+以下词至少必须使用一个：
+Also affect whispered messages
+也影响私聊消息
+Establish mandatory words in emotes
+在表情动作中设定必用词
+of which at least one needs to always be included
+至少必须包含其中之一
+This rule gives PLAYER_NAME a list of words from which at least one has to always be used in any emote message. The list of mandatory words can be configured. Checks are not case sensitive (adding 'miss' also works for 'MISS' and 'Miss' - Note: 'Miiiiissss' would also match).
+此规则给 PLAYER_NAME 一份词表，任何表情动作消息中都必须至少使用其中一个。必用词列表可配置。检查不区分大小写（加入「miss」对「MISS」和「Miss」也有效——注意：「Miiiiissss」也会匹配）。
+Partial hearing
+部分听清
+of muffled speech - random & word list based
+含糊话语——基于随机与词表
+This rule gives PLAYER_NAME ability to understand parts of a muffled sentence ungarbled, based on a white list of words and/or randomly. On default, applies only to muffled hearing from deafening effects on PLAYER_NAME, but optionally can be enhanced to allow also partially understanding the muffled speech of other persons who are speech impaired. Doesn't affect emotes and OOC text.
+此规则让 PLAYER_NAME 能够基于词语白名单和/或随机地，听清含糊句子的部分内容。默认仅适用于 PLAYER_NAME 因致聋效果而产生的含糊听觉，但可选择增强为也能部分听懂其他言语受损者的含糊话语。不影响表情动作和 OOC 文本。
+Words that can always be understood:
+总能听懂的词：
+Some words are randomly understood
+部分词随机被听懂
+Can also understand gagged persons
+也能听懂被塞口的人
+Force garbled speech
+强制含糊说话
+force PLAYER_NAME to talk as if they were gagged
+强制 PLAYER_NAME 说话如同被塞口
+The level of forced garbling
+强制含糊的程度
+Eyes
+眼睛
+Control PLAYER_NAME's eyes
+控制 PLAYER_NAME 的眼睛
+Mouth
+嘴
+Control PLAYER_NAME's mouth
+控制 PLAYER_NAME 的嘴
+Arms
+手臂
+Control PLAYER_NAME's arm poses
+控制 PLAYER_NAME 的手臂姿势
+Legs
+腿
+Control PLAYER_NAME's leg poses
+控制 PLAYER_NAME 的腿部姿势
+Allfours
+四肢着地
+Make PLAYER_NAME get on all fours
+让 PLAYER_NAME 四肢着地
+Makes PLAYER_NAME leave and wait in another chat room.
+让 PLAYER_NAME 离开并在另一个聊天室等待。
+Lock PLAYER_NAME in a singleplayer isolation cell
+将 PLAYER_NAME 锁进单人隔离牢房
+Lock PLAYER_NAME into the aslyum
+将 PLAYER_NAME 锁进疯人院
+Store away PLAYER_NAME's keys
+收起 PLAYER_NAME 的钥匙
+Remaining time of keyhold, asylum stay, or GGTS training
+保管钥匙、疯人院停留或 GGTS 训练的剩余时间
+Force PLAYER_NAME to do bound maid work
+强制 PLAYER_NAME 做被束缚的女仆工作
+<number from 1 to 100> | forced | ruined | stop
+<1 到 100 的数字> | forced | ruined | stop
+Controls PLAYER_NAME's orgasms directly
+直接控制 PLAYER_NAME 的高潮
+Emoticon
+表情气泡
+Control PLAYER_NAME's emoticon
+控制 PLAYER_NAME 的表情气泡
