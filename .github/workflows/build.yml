@@ -24,9 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Clone upstream Bondage Club (for CN seed + TW gap detection)
-        run: git clone --depth 1 https://gitlab.com/BondageProjects/Bondage-College.git .upstream/Bondage-College
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -36,9 +33,8 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      # 建置完全依賴 repo 內的 translations/ 與 manifest，不需 clone 官方原始碼
       - name: Build
-        env:
-          BC_UPSTREAM_DIR: ${{ github.workspace }}/.upstream/Bondage-College/BondageClub
         run: npm run build
 
       - name: Upload Pages artifact

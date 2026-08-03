@@ -56,7 +56,8 @@ npm run diff     # 對比官方英文，列出尚未翻譯的字串 -> reports/m
 
 ### 找出官方新增、還沒翻的內容
 
-- 每週的 **Upstream Diff** Action 會自動開 issue 附上缺口清單；也可手動 `npm run diff`。
+- 本機執行 `npm run diff`（需有官方原始碼，見上）→ 產生 `reports/missing-cn.md` 缺口清單。
+- 官方更新後重新 `npm run seed` 會刷新 `translations/cn/` 與 manifest，未改動的檔會自動跟上官方。
 - 遊戲內：在 console 設 `BCTP_DEBUG = true` 再重載，畫布上出現的英文字串會記到 console，`BCTP_drawnEN()` 可匯出。
 
 ## 首次啟用 GitHub Pages
