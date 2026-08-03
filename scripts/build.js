@@ -14,10 +14,10 @@ const cfg = pkg.bctp;
 const distDir = path.join(repoRoot, "dist");
 
 // 1) 字典
-const { paths, activity, activityRegex, assetName, base, modMenu, stats } = generateDict();
+const { paths, activity, activityRegex, modRegex, assetName, base, modMenu, stats } = generateDict();
 const dictOut = path.join(repoRoot, "src", "generated", "dict.json");
 ensureDir(dictOut);
-fs.writeFileSync(dictOut, JSON.stringify({ paths, activity, activityRegex, assetName, base, modMenu }), "utf8");
+fs.writeFileSync(dictOut, JSON.stringify({ paths, activity, activityRegex, modRegex, assetName, base, modMenu }), "utf8");
 console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles} 檔（路徑鍵 ${Object.keys(paths).length}）`);
 
 // 2) 打包

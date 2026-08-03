@@ -20,6 +20,16 @@ export function getMissing() {
 // 我們補譯的 BCX/LSCG 字典（translations/mods/*.txt），優先於 ECHO
 const MOD = /** @type {any} */ (GEN).modMenu || { CN: {}, TW: {} };
 
+// BCX PLAYER_NAME 動態字串的 regex（畫之前名字已替換）。只在 BCX 畫面試，避免每幀掃全部。
+const MREGEX = /** @type {any} */ (GEN).modRegex || { CN: [], TW: [] };
+const mrCompiled = { CN: null, TW: null };
+function modRegexMatch(key, lang) {
+    if (/** @type {any} */ (globalThis).CurrentScreen !== "InformationSheet") return undefined;
+    if (!mrCompiled[lang]) mrCompiled[lang] = (MREGEX[lang] || []).map((x) => ({ re: new RegExp(x.p), r: x.r }));
+    for (const { re, r } of mrCompiled[lang]) if (re.test(key)) return key.replace(re, r);
+    return undefined;
+}
+
 function lookupMenu(key) {
     if (supplement.menu[key]) return supplement.menu[key];
     const lang = activeLang();
@@ -27,6 +37,10 @@ function lookupMenu(key) {
     for (const u of units) {
         const t = u.translateMenuText?.(key);
         if (t) return t;
+    }
+    if (lang) {
+        const m = modRegexMatch(key, lang);
+        if (m) return m;
     }
     return undefined;
 }
