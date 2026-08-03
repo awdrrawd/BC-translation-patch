@@ -7,6 +7,8 @@ function translateTextNodes(root, translate) {
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     for (const n of nodes) {
+        // 跳過 <dfn>：BC 會用其 textContent 組查表 key（如製作屬性 Description<name>），翻了會壞
+        if (n.parentElement && n.parentElement.closest("dfn")) continue;
         const key = n.data.trim();
         if (!key) continue;
         const t = translate(key);
@@ -16,8 +18,9 @@ function translateTextNodes(root, translate) {
 
 /** @param {(s: string) => (string | undefined)} translate */
 export function setupDomObserver(translate) {
-    // BC 的 DOM 選單容器：道具、動作、快捷鍵等（標籤文字都在裡面）
-    const SEL = '[id^="dialog-"], [id^="key-name-"], .keybind-name, .keybind-action';
+    // 只翻道具名(dialog-inventory)與快捷鍵。動作選單改由 ActivityDictionaryText hook 處理，
+    // 不再用寬鬆的 [id^="dialog-"]（會誤傷製作/詛咒等 BC 會讀回 textContent 的 UI）。
+    const SEL = '[id^="dialog-inventory"], [id^="key-name-"], .keybind-name, .keybind-action';
     const match = (el) => el.matches?.(SEL);
     const handle = (node) => {
         if (!node || node.nodeType !== 1) return;

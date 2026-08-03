@@ -1,6 +1,12 @@
 ### BCX 補譯（英文一行、中文一行）。用 npm run extract 產生 reports/missing-mods.md 當工作清單。
 Bondage Club Extended
 束缚俱乐部扩展
+Owner
+所有者
+Mistress
+女主人
+unknown name
+未知玩家
 Adding a rule
 添加规则
 curse
