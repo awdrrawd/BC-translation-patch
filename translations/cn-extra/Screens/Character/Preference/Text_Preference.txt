@@ -1,5 +1,7 @@
 - Keybindings Settings -
 - 快捷键设置 -
+Keybindings
+快捷键
 Chat
 聊天
 Chat Room
