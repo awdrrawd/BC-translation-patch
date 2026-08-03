@@ -1,0 +1,4 @@
+### seeded from upstream: Screens/Room/Cafe/Text_Cafe_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Sorry miss. You don't have enough money for that right now.
+抱歉，女士。你没现在没有足够的钱买这个。

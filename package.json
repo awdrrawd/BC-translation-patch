@@ -1,0 +1,27 @@
+{
+  "name": "bc-translation-patch",
+  "version": "0.1.0",
+  "description": "Bondage Club 補完翻譯外掛 (簡體中文 / 繁體中文)。以 CN 為來源，TW 由 OpenCC 自動生成。",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "seed": "node scripts/seed-from-upstream.js",
+    "gen": "node scripts/gen-dict.js",
+    "build": "node scripts/build.js",
+    "diff": "node scripts/diff-upstream.js"
+  },
+  "author": "awdrrawd",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "opencc-js": "^1.0.5"
+  },
+  "bctp": {
+    "modName": "BCTranslationPatch",
+    "modFullName": "BC 補完翻譯 (CN/TW)",
+    "repository": "https://github.com/awdrrawd/BC-translation-patch",
+    "pagesBaseUrl": "https://awdrrawd.github.io/BC-translation-patch/",
+    "bundleName": "bc-translation-patch.js",
+    "loaderName": "bc-translation-patch.user.js"
+  }
+}

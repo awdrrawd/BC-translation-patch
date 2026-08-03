@@ -1,0 +1,10 @@
+### seeded from upstream: Screens/MiniGame/MagicPuzzle/Text_MagicPuzzle_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Click in the green zone to start.
+在绿色区域内点击以开始。
+Reach the red zone.  Never touch the dark zone.  Current time is
+到达红色区域。避开暗色区域。当前时间是
+You've succeeded.  Click here to return.  Your time was
+你成功了。点击这里返回。你的耗时是
+You've failed.  Click here to return.  Your time was
+你失败了。点击这里返回。你的耗时是

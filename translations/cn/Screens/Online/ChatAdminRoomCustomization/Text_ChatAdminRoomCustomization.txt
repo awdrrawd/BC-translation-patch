@@ -1,0 +1,56 @@
+### seeded from upstream: Screens/Online/ChatAdminRoomCustomization/Text_ChatAdminRoomCustomization_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Room customization allows using external resources.  By default, players need to allow it manually.
+房间自定义允许使用外部资源。默认情况下，玩家需要手动启用。
+Use can use copyright free music from the library.
+用户可以使用来自音乐库的免费版权音乐。
+Put the address of the background jpg image to use.  Ex: https://bondageprojects.com/images/school.jpg
+填入要使用的背景jpg地址。例如：https://bondageprojects.com/images/school.jpg
+You can use game resources also.  Ex: Screens/Room/Platform/Background/Savannah/TentInterior.jpg
+你也可以使用游戏资源。例如：Screens/Room/Platform/Background/Savannah/TentInterior.jpg
+Fill the room
+充满房间
+Fill the room, original aspect ratio
+充满房间，原始要素比例
+Full image, original aspect ratio
+完整图片，原始要素比例
+You can put a color filter that will go over your background.  For example, use #00000080 to dim the lights.
+你可以在背景上添加颜色滤镜。例如，使用#00000080来调暗灯光。
+Put the address of the background mp3 music file to use.  Ex: https://bondageprojects.com/music/relax.mp3
+填入要使用的背景mp3地址。例如：https://bondageprojects.com/music/relax.mp3
+Library
+音乐库
+Preview
+预览
+Clear All
+全部清除
+Save
+保存
+Cancel
+取消
+Return
+返回
+Fantasy Ambience
+奇幻氛围
+Horror Ambience
+恐怖氛围
+Western Ambience
+西方氛围
+Pop 2020
+流行2020
+Pop 2022
+流行2022
+Progressive House 2022
+渐进浩室2022
+Metal Instrumental 2021
+金属纯音乐2021
+Electro Dance 2022
+电子舞曲2022
+Electro Dance 2023
+电子舞曲2023
+Electro by Roy Knox
+Roy Knox电子乐
+Dance Electro Pop
+流行电子舞曲
+Dark Techno
+黑暗科技舞曲

@@ -1,0 +1,8 @@
+### seeded from upstream: Screens/Room/Photographic/Text_Photographic_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Select the item to use
+选择要使用的项目
+There are no items for this category.
+此类别没有项目。
+Can I use anything else to you?
+我可以用别的东西给你吗？

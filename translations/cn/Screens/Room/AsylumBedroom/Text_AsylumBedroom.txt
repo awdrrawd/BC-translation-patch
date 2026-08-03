@@ -1,0 +1,12 @@
+### seeded from upstream: Screens/Room/AsylumBedroom/Text_AsylumBedroom_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Remaining Time:
+剩余时间：
+Punishment Time:
+剩余惩罚时间：
+Asylum Entrance
+收容所入口
+Your Profile
+个人档案
+Sleep (Log Off)
+睡觉（退出）

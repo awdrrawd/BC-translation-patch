@@ -1,0 +1,6 @@
+### seeded from upstream: Screens/Room/PlatformDialog/Text_PlatformDialog_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Main Hall
+返回大厅
+Your Profile
+个人档案

@@ -1,0 +1,14 @@
+### seeded from upstream: Screens/Cutscene/PlayerMistress/Text_PlayerMistress_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Mistresses from the Bondage Club gather to meet you and introduce themselves.
+束缚俱乐部的女主人们聚在一起，与你见面，并相互介绍。
+They congratulate you on your promotion and talk about future club events.
+他们对你的晋升表示了祝贺，并讨论了未来俱乐部的活动安排。
+You're provided with the official Bondage Club Mistress padlocks and keys.
+接着，你收到了俱乐部女主人专用的挂锁以及钥匙。
+After a while, they bring in the bound maids to serve drinks and refreshments.
+过了一会儿，被捆绑的女仆们进入现场，为你们提供饮料和茶点。
+You meet many new Dominant friends who now address you as "Mistress".
+你在派对上遇到了很多新的支配者朋友，她们现在用“女主人”来称呼你。
+Once the party is over, everyone walks away, and the club resume its activities.
+派对结束后，大家也就离开了，俱乐部回到了正常的活动中。

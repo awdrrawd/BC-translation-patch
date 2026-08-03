@@ -1,0 +1,30 @@
+### seeded from upstream: Screens/MiniGame/PlayerAuction/Text_PlayerAuction_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Current bid:
+当前出价：
+Highest bidder:
+最高出价者：
+I bid
+我出
+Nobody
+没有人
+First
+第一
+Second
+第二
+Third
+第三
+Plead
+恳求
+Do I hear
+我听到了
+Going once!
+确认一次！
+Going twice!
+确认二次！
+Sold!
+成交！
+Silence!
+安静！
+Return
+返回

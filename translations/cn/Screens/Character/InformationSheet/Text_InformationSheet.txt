@@ -1,0 +1,328 @@
+### seeded from upstream: Screens/Character/InformationSheet/Text_InformationSheet_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Name:
+名字：
+Nickname:
+昵称：
+Title:
+称号：
+None
+无
+Mistress
+女主人
+Master
+男主人
+Club Slave
+俱乐部奴隶
+Head Maid
+女仆长
+Maid
+女仆
+Bondage Maid
+束缚女仆
+Master Kidnapper
+绑架大师
+Kidnapper
+绑匪
+Patient
+患者
+Permanent Patient
+永久患者
+Escaped Patient
+出逃患者
+Nurse
+护士
+Doctor
+医生
+Lady Luck
+幸运女士
+Lord Fortune
+幸运领主
+Patron
+赞助者
+College Student
+学生
+Nawashi
+绳师
+Houdini
+逃脱大师
+Superheroine
+超级女英雄
+Superhero
+超级英雄
+Foal
+母马
+Farm Horse
+农场马
+Cold Blood Horse
+冷血马
+Warm Blood Horse
+温血马
+Hot Blood Horse
+热血马
+Wild Mustang
+野马
+Shining Unicorn
+闪耀独角兽
+Flying Pegasus
+翱翔天马
+Majestic Alicorn
+威严神驹
+Mole
+间谍
+Infiltrator
+渗透者
+Agent
+探员
+Operative
+密探
+Superspy
+超级间谍
+Wizard
+法师
+Magus
+魔战士
+Magician
+魔术师
+Sorcerer
+术士
+Sage
+贤者
+Oracle
+先知
+Witch
+女巫
+Warlock
+邪术师
+Little One
+小不点
+Baby
+小宝贝
+Diaper Lover
+纸尿裤爱好者
+Bondage Baby
+被缚宝贝
+Duchess
+女公爵
+Duke
+公爵
+Switch
+转换者(Switch)
+Princess
+公主
+Prince
+王子
+Missy
+丫头
+Sissy
+娘炮
+Tomboy
+假小子
+Femboy
+男娘
+Pet
+宠物
+Brat
+调皮鬼
+Kitten
+猫咪
+Puppy
+狗狗
+Foxy
+狐狸
+Bunny
+兔兔
+Doll
+玩偶
+Demon
+恶魔
+Angel
+天使
+Alien
+外星人
+Succubus
+魅魔
+Incubus
+梦魔
+Good Girl
+乖女孩
+Good Slave Girl
+乖女奴
+Good Boy
+乖男孩
+Good Slave Boy
+乖男奴
+Good Slave
+乖奴隶
+Drone
+仆从机
+Mistree
+机械师
+Good One
+妙人
+Liege
+领主
+Concubus
+魅精
+Majesty
+陛下
+Captain
+船长
+Admiral
+海军上校
+Dominatrix
+主宰者
+Pronouns:
+称谓：
+Member Number:
+成员编号:
+-
+-
+- Relationships -
+- 关系 -
+Lover:
+恋人:
+Owner:
+主人:
+GGTS
+GGTS
+Money:
+金钱:
+Member for
+加入了
+Bondage Club Birthday! 
+俱乐部生日！
+Friends for
+认识了
+On trial for
+试任了
+Collared for
+认主了
+Dating for
+约会了
+Engaged for
+订婚了
+Married for
+结婚了
+day(s)
+天
+Unknown
+未知
+- Reputation -
+- 声望 -
+Dungeoneer:
+地下城探险家：
+Dominant:
+支配者：
+Submissive:
+顺从者：
+Maid Sorority:
+女仆社团：
+Kidnappers League:
+绑匪联盟：
+Asylum Nurse:
+收容所护士：
+Asylum Patient:
+收容所病员：
+LARP Battles:
+体感对战：
+Gambling Hall:
+赌场：
+ABDL:
+恋尿布：
+House Maiestas:
+麦斯塔威法社：
+House Vincula:
+温库拉束限社：
+House Amplector:
+安派托怀围社：
+House Corporis:
+科泼里躯形社：
+difficulty
+难度
+ - Can change again in NumberOfDays day(s)
+- 经过NumberOfDays天可以再次改变
+Roleplay
+角色扮演
+Regular
+通常
+Hardcore
+硬核
+Extreme
+极限
+- Skills -
+- 技能 -
+Bondage:
+捆绑：
+Self-bondage:
+自缚：
+Lockpicking:
+开锁：
+Evasion:
+逃脱：
+Willpower:
+意志：
+Infiltration:
+潜入：
+Dressage:
+马术：
+ABSVAL for DURATION
+ABSVAL持续了DURATION
+- Traits -
+- 特点 -
+Spend more time with her to know her traits
+与她继续交往以了解她的爱好特点
+Violent:
+暴力：
+Peaceful:
+和平：
+Horny:
+饥渴：
+Frigid:
+冰冷：
+Rude:
+粗鲁：
+Polite:
+礼貌：
+Wise:
+明智：
+Dumb:
+愚蠢：
+Serious:
+严肃：
+Playful:
+贪玩：
+Relation:
+关系：
+(Perfect)
+(完美)
+(Great)
+(很棒)
+(Good)
+(不错)
+(Fair)
+(还行)
+(Neutral)
+(一般)
+(Poor)
+(较差)
+(Bad)
+(很差)
+(Horrible)
+(可怕)
+(Atrocious)
+(仇恨)
+Allowed interactions:
+允许互动：
+Everyone, no exceptions
+所有人
+Everyone, except blacklist
+所有人，除了黑名单成员
+Owner, Lovers, whitelist & Dominants
+主人、恋人、白名单&支配者
+Owner, Lovers and whitelist only
+仅主人、恋人和白名单
+Owner and Lovers only
+仅主人和恋人
+Owner only
+仅主人

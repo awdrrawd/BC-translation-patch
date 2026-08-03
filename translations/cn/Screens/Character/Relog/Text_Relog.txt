@@ -1,0 +1,32 @@
+### seeded from upstream: Screens/Character/Relog/Text_Relog_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+You've disconnected from the server.
+你已经与服务器断开连接
+Connecting to server...
+正在连接服务器...
+Enter your password to log back in.
+重新输入密码以登录
+Account name:
+账户名：
+Password:
+密码：
+Log back in
+重新登录
+Leave
+离开
+Validating name and password...
+正在验证用户名及密码...
+Waiting in queue on position: QUEUE_POS
+排队顺序：QUEUE_POS
+Invalid name or password
+无效的用户名或密码
+Disconnected from server. Retrying...
+与服务器断开连接，重试中...
+Disconnected for duplicated login
+因重复登录而失去连接
+Unable to connect to server. Retrying...
+无法连接到服务器，正在重试...
+Connection rejected: your connection has been rate limited.
+拒绝连接：你的连接受到了速率限制。
+Enter your name and password
+请输入你的账户和密码

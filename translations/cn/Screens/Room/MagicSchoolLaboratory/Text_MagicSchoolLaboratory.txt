@@ -1,0 +1,12 @@
+### seeded from upstream: Screens/Room/MagicSchoolLaboratory/Text_MagicSchoolLaboratory_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Back to the Bondage Club
+返回束缚俱乐部
+Your Profile
+个人档案
+Dress in your House Outfit
+穿上你结社的服装
+Explore the Magic School
+探索魔法学校
+Escape Challenge
+逃脱挑战

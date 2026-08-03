@@ -1,0 +1,8 @@
+### seeded from upstream: Screens/MiniGame/RhythmGame/Text_RhythmGame_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Audience Patience Level
+听众的耐心
+Accuracy
+准确度
+Bonus
+奖励分数

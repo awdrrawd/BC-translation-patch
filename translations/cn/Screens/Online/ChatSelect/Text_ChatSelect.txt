@@ -1,0 +1,18 @@
+### seeded from upstream: Screens/Online/ChatSelect/Text_ChatSelect_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Exit Chatrooms
+退出聊天室
+Bondage Club Classic
+束缚俱乐部经典
+No Male Aspects (He/him, Flat Chests, & Male Genitalia disabled) 
+无男性特征（禁用他，平胸，男性生殖器）
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Bondage Club Expanded
+束缚俱乐部扩展
+No Aspects Blocked (Males and Females allowed)
+没有要素被屏蔽（男性女性都许可）
+Bondage Club Men's Lounge
+束缚俱乐部男性大厅
+No Female Aspects (She/Her, Breasts, & Female Genitalia disabled)
+无女性要素（禁用她，胸部，女性生殖器）

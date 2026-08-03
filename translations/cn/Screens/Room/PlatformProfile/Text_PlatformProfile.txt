@@ -1,0 +1,212 @@
+### seeded from upstream: Screens/Room/PlatformProfile/Text_PlatformProfile_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Return to Bondage Brawl
+返回束缚格斗
+Change active character
+更改活动角色
+Reset perk selection
+重置技能选择
+Name:
+名称：
+Profession:
+职业：
+Dominant:
+支配力：
+Protector:
+保护者：
+Owner:
+主人：
+Mistress:
+女主人：
+Lover:
+爱人：
+Girlfriend:
+女朋友：
+Fiancée:
+未婚妻：
+Wife:
+妻子：
+None
+无
+Age: 21
+年龄：21
+Age: 20
+年龄：20
+Age: 138
+年龄：138
+Age: 34
+年龄：34
+Level:
+等级：
+Free perks:
+免费技能：
+Health:
+生命值：
+As a baby orphan, Melody was adopted by Countess Isabella Alberus.  Her best friend is Lady Olivia, which she serves and protects like a sister.  She's trained as a maid, a career not particularly suited for her strong temper.  She's known to never take breaks and having no fear.
+梅洛蒂还是个孤儿时就被伯爵夫人伊莎贝拉·阿尔贝鲁斯收养。她最好的朋友是奥利维亚夫人，她像姐姐一样侍奉和保护她。她接受过女仆训练，这个职业并不适合她那暴躁的脾气。她以永不休息和无所畏惧而闻名。
+Olivia Alberus is the second daughter of Countess Isabella.  She’s over-protected by her mother who keeps her chained to sleep and locked permanently in a chastity belt.  She’s engaged to Duke Sunesk and her best friend is maid Melody.  She’s very kind-hearted and possess her bloodline magic powers.
+奥莉薇娅·阿尔贝鲁斯是伊莎贝拉伯爵夫人的次女。她受到母亲的过度保护，母亲用铁链将她锁在床上，让她永远处于贞操带中。她与苏内斯克公爵订婚，女仆梅洛蒂是她最好的朋友。她心地善良，拥有血统魔法力量。
+Edlaran Rouen'Dlaroft is an archer of the Lorian Elven Tribes.  She fled from her clan many years ago to pursue a life of liberty and shady businesses.  She joined the forest bandits for adventure and gold, but left them to help Melody.  She's a free spirit and doesn't care much for Olivia's royal blood.
+艾德拉兰·鲁昂德拉夫特是洛里安精灵部落的弓箭手。多年前，她逃离了自己的部落，追求自由的生活和不正当的生意。她加入了森林强盗的队伍，寻求冒险和金币，但后来为了帮助梅洛蒂而离开了他们。她是一个自由的灵魂，不太在乎奥利维亚的皇室血统。
+From flower seller to food thief, to road bandit, to slaver boss, Lyn did it all.  Born in poverty, she’s a self-made woman, proud of her businesses.  She might loan money, but never forgets about it.  She’s Edlaran previous boss and joined Melody when her minions revolted.  She’s known to strike in the back.
+从卖花人到偷食物的人，再到路匪，再到奴隶贩子，琳什么都做过。她出身贫寒，白手起家，对自己的事业感到自豪。她可能会借钱，但永远不会忘记。她是艾德拉兰的前老板，在梅洛迪的奴才叛变时加入了她。她以暗中袭击而闻名。
+No owner bonus
+没有主人奖励
+No lover bonus
+没有爱人奖励
++10% maximum health points
++10%最大生命值
++10% experience gained
++10%经验值获取
++10% walking & running speed
++10%行走和奔跑速度
++1 damage on back attack
++1背部攻击伤害
+Healthy
+生命值
++10% Health
++10%生命值
+Robust
+耐力
++15% Health
++15%生命值
+Vigorous
+活力
+Faster recovery when K.O.
+K.O.时更快恢复
+Spring
+跳跃
+Higher jump height
+更高的跳跃高度
+Impact
+冲击
+Stronger uppercut on airborn
+空中更强的上勾拳
+Block
+格挡
+Use "P" when still to block
+静止时使用"P"来格挡
+Deflect
+偏转
+Push back blocked enemies
+击退被格挡的敌人
+Seduction
+诱惑
+Love progresses faster
+爱情进展更快
+Persuasion
+劝说
+Domination progresses faster
+支配进展更快
+Manipulation
+操纵
+Creates new dialog options
+带来新的对话选项
+Apprentice
+学徒
+Unlock magic, use "K" to scream
+解锁魔法，使用"K"来尖叫
+Witch
+女巫
++20% magic points
++20%魔法值
+Meditation
+冥想
+Faster magic regeneration
+更快的魔法恢复
+Scholar
+学者
++20% experience points
++20%经验值
+Heal
+治疗
+Use "P" to heal yourself
+使用"P"来治疗自己
+Cure
+治愈
+Faster healing cooldown
+更快的治疗冷却
+Howl
+嚎叫
+Faster screams cooldown
+更快的尖叫冷却
+Roar
+咆哮
+Screams can turn back ennemies
+尖叫可以使敌人后退
+Teleport
+传送
+Use "I" to teleport forward
+使用"I"向前传送
+Freedom
+自由
+Faster teleports cooldown
+更快的传送冷却
+Fletcher
+弓箭手
+Get arrows when restraining
+束缚时获得箭矢
+Burglar
+窃贼
+Loot more items and BC money
+掠夺更多物品和BC金钱
+Athletic
+矫健
++10% walking/running speed
++10%行走/奔跑速度
+Sprint
+冲刺
++15% walking/running speed
++15%行走/奔跑速度
+Backflip
+后空翻
+Move back quickly with "I"
+使用"I"快速后退
+Acrobat
+特技
+Longer backflips
+更长的后空翻
+Archery
+箭术
++1 arrow damage
++1箭矢伤害
+Celerity
+迅捷
+Faster arrow shoots
+更快的射箭速度
+Capacity
+容量
++5 maximum arrows
++5最大箭矢
+Sneak
+潜行
++1 damage to back attack
++1背部攻击伤害
+Backstab
+背刺
+Add another +1 damage
+额外+1伤害
+Kidnapper
+绑架犯
+Auto restrain on back K.O.
+K.O.时自动束缚
+Rigger
+绑缚师
+Restrain at double speed
+双倍速束缚
+Thief
+小偷
++1 BC $ on each back hit
+每次背部攻击+1BC$
+Bounce
+弹跳
+Can jump twice
+可以双跳
+Inventory
+物品
+Carry 1 extra knife
+携带1把额外的刀
+Duplicate
+复制
+Knives go both ways
+刀可以双向使用

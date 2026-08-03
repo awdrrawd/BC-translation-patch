@@ -1,0 +1,7 @@
+node_modules/
+dist/
+src/generated/
+.upstream/
+reports/
+*.log
+.DS_Store

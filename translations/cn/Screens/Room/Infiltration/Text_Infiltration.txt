@@ -1,0 +1,8 @@
+### seeded from upstream: Screens/Room/Infiltration/Text_Infiltration_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Main Hall
+大厅
+Your Profile
+个人档案
+Select your Perks
+选择特技

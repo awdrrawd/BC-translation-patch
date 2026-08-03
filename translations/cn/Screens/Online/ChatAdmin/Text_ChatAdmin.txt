@@ -1,0 +1,118 @@
+### seeded from upstream: Screens/Online/ChatAdmin/Text_ChatAdmin_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Room Name
+房间名
+Language
+语言
+Description
+描述
+Description of the room
+房间描述
+Ban List
+封禁列表
+Administrator List
+房管列表
+Whitelist
+白名单
+Size (2-20)
+大小 (2-20)
+Member numbers separated by commas (ex: 123, ...)
+逗号分隔的用户号 (如: 123, ...)
+Use the above buttons to quickadd to the respective lists
+使用上述按钮快速添加到相应列表中
+Quick Add
+快速添加
+Owner
+主人
+Lovers
+恋人
+Friends
+朋友
+Quick Ban
+快速封禁
+Blacklist
+黑名单成员
+Ghostlist
+忽视列表成员
+Room settings can only be updated by administrators
+房间选项仅能被房管修改
+Background
+背景
+Visibility
+可见性
+Public
+公众
+Admin + Whitelist
+管理员 + 白名单
+Admin
+管理员
+Unlisted
+未列入名单
+Access
+访问
+Import room code
+导入房间代码
+Please paste the room code. Importing room codes will overwrite existing settings. Are you sure?
+请粘贴房间代码。导入房间代码将覆盖现有设置。确定吗？
+Failed to parse the passed room code (incomplete? invalid? outdated?)
+无法解析传入的房间代码（不完整？无效？已过时？）
+Successfully imported room code
+房间代码导入成功
+Export room code
+导出房间代码
+Failed to copy room code to clipboard
+复制房间代码到剪贴板失败
+Room code copied to clipboard
+房间代码已复制到剪贴板
+Create
+创建
+Save
+保存
+Exit
+退出
+Cancel
+取消
+Creating the chat room…
+创建聊天室中...
+Updating the chat room...
+更新聊天室...
+This room name is already taken
+该房间名已被占用
+Account error, please try to relog
+账号错误,请重新登录
+Invalid chat room data detected
+无效的聊天室数据
+Room created, joining it...
+房间已创建，正在加入...
+Block Categories
+屏蔽性癖
+Customization
+房间自定义
+(Click anywhere to return)
+(点击任意位置返回)
+Don't use maps
+不使用地图
+Never use the map exploration
+永不使用地图探索
+Allow on and off
+允许开关
+Hybrid map, can go on and off
+混合地图，能够开关
+Only use maps
+只使用地图
+Only use the map, no regular chat
+只使用地图，没有常规聊天
+No Game
+无游戏
+Club Card
+俱乐部卡牌
+LARP
+体感对战
+Magic Battle
+魔法对战
+GGTS
+GGTS
+Pandora
+潘多拉
+Spanish
+西语

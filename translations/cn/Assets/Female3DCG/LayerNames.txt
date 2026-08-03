@@ -1,0 +1,2112 @@
+### seeded from upstream: Assets/Female3DCG/LayerNames_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Body
+主体
+Forehead 1
+额头1
+Forehead 2
+额头2
+Forehead 3
+额头3
+Face 1
+面部1
+Face 2
+面部2
+Face 3
+面部3
+Chest 1
+胸部1
+Chest 2
+胸部2
+Chest 3
+胸部3
+Chest 4
+胸部4
+Tummy 1
+肚子1
+Tummy 2
+肚子2
+Tummy 3
+肚子3
+Tummy 4
+肚子4
+Internal Mouth
+嘴内部
+Internal Front
+前内部
+Internal Back
+后内部
+Nipple Drip
+乳头滴
+Bands
+束带
+Lace
+蕾丝
+Spikes
+尖刺
+Right band
+左侧带
+Left band
+右侧带
+Band
+束带
+Face
+面部
+Trim
+装饰
+Main
+主体
+Sides
+两侧
+Leather
+皮革
+Buckles
+搭扣
+Bra
+胸罩
+Flowers
+花朵
+Design
+样式
+Waist
+腰部
+Shine
+高光
+Fabric
+布料
+Jewel
+珠宝
+Straps
+束带
+Frills
+花边
+Silk
+丝绸
+Harness
+束带
+Metal
+金属
+Side Pattern
+侧部样式
+Lace Bra
+蕾丝胸罩
+Middle Lace
+中间蕾丝
+Lining  
+边线
+ Bra
+胸罩
+ Lace
+蕾丝
+ Rings
+环圈
+Zipper
+拉链
+Stomach
+肚子
+Bra Straps
+胸罩带
+Belt
+皮带
+Base
+打底
+Back Stripe
+背部条纹
+Front Stripe
+前部条纹
+Bib
+围嘴
+Pattern
+图案
+Text
+文字
+Holder
+包装
+Joints
+关节
+Legs
+腿
+Bow
+领结
+Collar
+项圈
+Cuffs
+锁铐
+Back
+后部
+Front
+前部
+Metal details
+金属细节
+Chain details
+链环细节
+Color One
+颜色1
+Color Two
+颜色2
+Upper buckle
+上部搭扣
+Lower buckle
+下部搭扣
+Metal detail
+金属细节
+Shoulders
+肩膀
+Buckle
+皮带扣
+Collar latex base
+项圈乳胶底
+Top ruffled detail
+顶部褶边细节
+Below ruffled detail
+下部褶边细节
+Collar buttons
+项圈扣子
+Leather choker
+皮革颈圈
+Choker button
+贴颈项圈扣子
+Cape
+斗篷
+Shoulder
+肩部
+Ruffles
+褶边
+Jacket
+外套
+Shirt
+衬衫
+Dress
+裙子
+Sash
+腰带
+Skirt
+裙子
+Brooch
+饰针
+Ribbon Tie
+丝带领结
+Cloth Collar
+布料领子
+Collar Detail
+领子细节
+Back Ribbon
+后部丝带
+Tie
+领带
+Lower Gradient
+下部渐变
+Buttons
+扣子
+Upper Gradient
+上部渐变
+Top
+上部
+Inner Trim
+内侧边饰
+Text Inner
+内侧文字
+Text Outer
+外侧文字
+Cloth
+布料
+Corset
+束腰
+T-Shirt
+T恤
+Stamp
+印花
+Fur
+绒毛
+Bottom
+底部
+Corset Buckles
+束腰搭扣
+Lower Belts
+下部皮带
+Lower Belt Buckles
+下部皮带搭扣
+Colar Buckle
+领子搭扣
+Shine Jacket
+闪亮夹克
+Shine Sleeves
+闪亮袖子
+Sleeves
+袖子
+Pocket
+口袋
+Hips
+臀部
+Sleeve
+袖子
+Wrist
+手腕
+Hood
+头套
+Rivets
+铆钉
+Ribbon
+丝带
+Shawl
+披肩
+Shawl Fur
+披肩柔毛
+Interior
+内侧
+Left
+左侧
+Right
+右侧
+Fishnet Top
+渔网上衣
+ Latex
+乳胶
+ Frills
+花边
+Inside Skirt
+裙子内侧
+Main Dress
+裙子主体
+Belts
+皮带
+Dress Trim
+裙边
+Corset Buttons
+束腰搭扣
+Hood Inner
+兜帽内侧
+Hood Trim
+兜帽边缘
+Hood Outer
+兜帽外侧
+Laces
+系带
+Waist and Wrists
+腰和手腕
+ Tank Top
+坎肩
+ Collar
+领子
+ Loose Hood
+松垮头套
+ Pulled Hood
+拉起头套
+ Hoddie Up
+拉起兜帽
+ Hoodie Down
+放下兜帽
+Frill
+褶边
+Pants Zipped
+裤子拉上拉链
+Pants Unzipped
+裤子未拉上拉链
+Pants Down
+拉下裤子
+Pants
+裤子
+Crosses
+十字架
+DesignV2
+样式V2
+SkirtV2
+裙子V2
+Panty
+内裤
+Panty Line
+内裤绳
+Veil
+面纱
+Leaves
+叶子
+Pollen
+花蕊
+Stripe
+条纹
+Waistband
+腕带
+ Pants
+裤子
+ Trim
+剪裁
+Latex
+乳胶
+Boot
+靴
+Layer 1
+第1层
+Layer 2
+第2层
+Layer 3
+第2层
+Layer 4
+第4层
+Front Buttons
+前部扣子
+Belt Loops
+皮带环
+D Rings
+环圈
+Waist Belt Details
+腰带细节
+Waist Belt
+腰带
+Snaps
+皮带扣
+Side Belt Details
+侧带细节
+Side Belts
+侧带
+Front Panel
+前部嵌板
+Left Panel
+左面板
+Right Panel
+右面板
+Apron
+围裙
+Detail Trim
+细节装饰
+Edge Trim
+边缘装饰
+Gloves
+手套
+Suit
+套装
+Stains
+污渍
+Chains
+锁链
+Rope
+绳子
+Chest
+胸部
+Arm Puffs
+肩部蓬松
+Print
+图案
+Ring
+环圈
+Piercings
+穿刺
+Eyebrow
+眉毛
+Eyeball
+眼球
+Retina
+眼底
+Eyepupil
+眼瞳
+Shadow
+影子
+Eyelids
+眼睑
+ Eyeliner
+眼线
+ Eyeshadow
+眼影
+Right leg garter
+右腿袜带
+Left leg garter
+左腿袜带
+Goggles
+护目镜
+Lenses
+镜片
+Strap
+束带
+Frame
+框架
+Glass
+玻璃
+Glasses
+眼镜
+Hair
+头发
+Nose
+鼻子
+Right lens
+右镜片
+Left lens
+左镜片
+Accessory
+配饰
+Elbow Stripe
+肘部条纹
+Glove
+手套
+Inner Ear
+耳朵内侧
+Line
+线条
+Outer Ear
+耳朵外侧
+Tuft
+耳心毛
+Inner
+内部
+Outer
+外部
+Ears
+耳朵
+Horns
+尖角
+Headband
+头带
+Bell
+铃铛
+Core
+核心
+Glow
+亮光
+Headset
+头戴耳机
+Mic
+话筒
+Stem
+连杆
+Lights
+灯光
+Outside
+外部
+Light
+亮色
+Left Base
+左侧基础
+Right Base
+右侧基础
+Left Tip
+左侧顶端
+Right Tip
+右侧顶端
+Inner Ears
+耳朵内侧
+Outer Ears
+耳朵外侧
+Inner Webbing
+内侧网状
+Edge
+边缘
+Tip
+顶端
+Tips
+顶端
+Fluff
+绒毛
+Stud1 Left
+钉1左侧
+Stud2 Left
+钉2左侧
+Stud3 Left
+钉3左侧
+Stud4 Left
+钉4左侧
+Stud1 Right
+钉1右侧
+Stud2 Right
+钉2右侧
+Stud3 Right
+钉3右侧
+Stud4 Right
+钉4右侧
+SmallRing1 Left
+小环1左侧
+SmallRing2 Left
+小环2左侧
+SmallRing3 Left
+小环3左侧
+SmallRing4 Left
+小环4左侧
+SmallRing1 Right
+小环1右侧
+SmallRing2 Right
+小环2右侧
+SmallRing3 Right
+小环3右侧
+SmallRing4 Right
+小环4右侧
+Bar Left
+杆左侧
+Bar Right
+杆右侧
+Bells Left
+铃铛左侧
+Bells Right
+铃铛右侧
+Tag Left
+标签左侧
+Tag Right
+标签右侧
+BigRing1 Left
+大环1左侧
+BigRing1 Right
+大环1右侧
+BigRing2 Left
+大环2左侧
+BigRing2 Right
+大环2右侧
+Bun
+包子
+Braid
+织物
+Scrunchies
+束发带
+Ribbons
+丝带
+Main Right
+主体右侧
+Main Left
+主体左侧
+Tip Right
+顶端右侧
+Tip Left
+顶端左侧
+Streak
+条纹
+Right Bun
+右侧团子
+Left Bun
+左侧团子
+Right Strand
+右侧发缕
+Left Strand
+左侧发缕
+Right Braid
+右侧辫子
+Left Braid
+左侧辫子
+Left Tie
+左侧扎带
+Right Tie
+左侧扎带
+Tone
+色调
+Left Main
+左侧主体
+Left Clip
+左侧发卡
+Right Main
+右侧主体
+Right Clip
+右侧发卡
+Left Streak
+左侧发缕
+Right Streak
+右侧发缕
+ Base
+基础
+ Fluff
+ Fluff
+ Tip
+顶端
+Bangs
+刘海
+Fade
+变暗
+Tint
+色调
+Tone1
+色调1
+Tone2
+色调2
+Color1
+颜色1
+Color2
+颜色2
+Front Hair
+前发
+Front Plate
+前部板
+Ends
+顶端
+Strands
+发缕
+Extra
+额外
+Clip
+扣环
+Full
+整体
+Highlights
+高光
+Shadows
+阴影
+Outline
+边缘
+Tiara
+头冠
+Detail
+细节
+Button
+扣子
+Panel
+嵌板
+Side
+侧边
+Visor
+面罩
+Bandana
+大头巾
+Patterns
+样式
+Bonnet
+童帽
+Brim
+帽檐
+Insignia
+徽章
+Hat
+帽子
+Crown
+王冠
+Jewels
+珠宝
+Hat stripes
+帽子条纹
+Main Flowers
+主要花朵
+Petals
+花瓣
+Beads
+珠子
+Cowl
+面巾
+Symbol
+徽记
+Inside
+内部
+Dots
+圆点
+Skull
+头骨
+Logo
+标志
+Feather Front
+羽毛前部
+Feather Back
+羽毛后部
+Badge
+徽记
+Flower Center
+中央花朵
+End Flowers
+边缘花朵
+Main Flower
+主要花朵
+Side Flowers
+两侧花朵
+Roses
+玫瑰
+Cap
+柱子顶盖
+Metal cuff
+金属铐
+Padlock
+挂锁
+Upper and armbinder
+上部和臂束带
+Suit lower part
+套装下部
+Latex single heel
+乳胶单鞋跟
+Cuff and chain link
+手铐和链环
+Ankle shackles
+脚踝镣铐
+Leg metal parts
+腿部金属组件
+Collar metal part
+项圈金属组件
+Harness belt buckles
+束带搭扣
+Shoulder belt buckles
+肩部带扣
+Single heel metal parts
+单鞋跟金属组件
+Leg Straps
+腿部束带
+Harness belts
+束带
+Shoulder straps
+肩部束带
+Heel straps
+鞋跟束带
+Rubber skirt
+橡胶裙子
+Locks
+锁
+Zippers
+拉链
+Arm Strap
+手臂束带
+Crotch Straps
+胯部束带
+Chain
+锁链
+Suspension Chain
+悬挂锁链
+Binder
+束缚
+Display
+显示屏
+Lock
+锁
+Material
+材质
+Mesh
+色调
+Ropes
+绳子
+Inv. Suspension Rope
+反向悬挂绳
+Suspension Rope
+悬挂绳
+Crotch Panel
+胯部遮挡
+Crotch
+胯部
+Eyelets
+眼圈
+Buckle Hole
+搭扣孔
+Rings
+环圈
+Edging
+边缘
+Bed Straps
+床束带
+Gems
+珠宝
+Wood
+木质
+Stripes
+条带
+Color 1
+颜色1
+Color 2
+颜色2
+Slime Girl
+史莱姆女孩
+Shoulder Straps
+肩部束带
+Binder Straps
+束手束带
+Seams
+接缝
+Lower Half
+下半部
+Upper Half
+上半部
+Below Breast Belt
+胸下皮带
+Above Breast Belt
+胸上皮带
+Suckers
+吸盘
+Shorts
+短裤
+Bars
+杆子
+Lacing Back
+后部系带
+Lacing
+系带
+Lacing Trim
+系带装饰
+Paws
+爪子
+Extra Straps
+额外束带
+Mittens
+手套
+Mittens shine
+手套高光
+Mittens straps
+手套束带
+Padlocks
+挂锁
+Pogo Ball
+健身球
+Pogo Ball shine
+健身球高光
+Pogo Ball rubber ankles
+健身球橡胶脚踝
+Heels
+鞋跟
+Shoes
+鞋
+Iron Ballet
+铁芭蕾
+Iron cuff locks
+铁手铐锁
+Boots
+靴子
+Straps buckles
+束带搭扣
+Vamp
+防水台
+Ankles
+膝盖
+Feet
+脚
+Toes
+指头
+Horseshoes
+马蹄铁
+Single boot
+单靴
+Boot shine
+靴子高光
+Boot straps
+靴子带
+Boot metal details
+靴子金属细节
+Belt buckles
+皮带搭扣
+Foam tape
+泡沫胶带
+Leg metal pillories
+腿部金属枷锁
+Hooves
+蹄子
+Straps Base
+系带基础
+Bra Cup
+罩杯
+Lining
+线条
+Tickler
+挠痒器
+Wiring
+电线
+Under layer
+下层
+Plate Shine
+贞操板反光
+Under layer shine
+下层反光
+Tail
+尾巴
+Tails
+尾巴
+Heart
+心
+Headboard
+床头板
+Mattress
+床垫
+Pillow
+枕头
+Bench
+长椅
+Structure
+结构
+Legs Window
+腿部窗户
+LED details
+LED细节
+Sunshade fabric
+遮阳伞布料
+Sunshade structure
+遮阳伞结构
+Right object
+右侧物体
+Center object
+中央物体
+Left object
+左侧物体
+Background wall
+背景墙
+Portal
+传送门
+Metal restraints
+金属束缚
+Main wall
+主墙
+Wall grid
+墙壁网格
+Bucket
+桶
+Ratchets
+棘轮
+Pole
+杆子
+Tabletop
+桌面
+Lid (closed)
+盖子（关闭）
+Velvet
+绒垫
+Lid (open)
+盖子（打开）
+Cloak
+斗篷
+Pillow Trim
+枕头装饰
+Plushies
+毛绒玩具
+Label
+标签
+Custom Text
+自定义文本
+Paper
+纸
+Caps
+盖子
+Dildo
+假阳具
+Plastic
+塑料
+Blanket
+毛毯
+Padding
+垫子
+Harness Clamps
+束带扣环
+Actuator
+作动器
+Screen
+屏幕
+Window
+窗户
+Lid
+盖子
+Restraint Frame
+束缚框架
+Restraint Padding
+束缚垫子
+Harness Straps
+束带带子
+Cum
+精液
+Portrait Frame
+特写框
+Recording
+录像
+Background
+背景
+Foreground
+前景
+Door
+门
+Front Frame
+前部框架
+Kennel
+狗笼
+Cage
+笼子
+Collar cuff
+项圈铐
+Floor
+地面
+Arrow
+箭头
+Wheel Border
+轮盘边界
+Wooden Stand
+木质支架
+MetalStand
+金属支架
+Metal Stand Frame
+金属支架边框
+Metal Stand Text
+金属支架文本
+Toys
+玩具
+Flogger
+鞭打
+Gag
+口塞
+Rope Sections
+绳子分区
+Chain Sections
+锁链分区
+Gag Sections
+口塞分区
+Bed Frame
+床框架
+Net
+网子
+Weights
+配重
+Bar
+穿刺棒
+Tiny Cushion
+小垫子
+Option
+可选
+Closed
+关闭
+Bed
+床
+Blanket Lining
+毛毯内衬
+Bed Lining
+床内衬
+Bowl
+碗
+Ankle rubber
+脚踝橡胶
+Arms
+手臂
+Float bag
+漂浮气囊
+Wheel Holders
+轮子挡板
+Wheels
+轮子
+Deco Item
+装饰物
+Seat
+座位
+Throne
+王座
+Upper
+上半
+Lower
+下半
+Sheet
+覆盖物
+Sheet Back
+后部覆盖物
+Sheet Front
+前部覆盖物
+Sign
+牌子
+Feet Stocks
+脚枷
+Wooden Frame
+木质框架
+ Ropes
+绳子
+Arm Stocks
+手枷
+Chair
+椅子
+Tray
+托盘
+Cushion
+靠垫
+Baby Food
+婴儿食品
+Fork
+叉子
+Plate
+底板
+Brocoli
+西兰花
+Potato
+土豆
+Cookie Shapes
+饼干形状
+Cookies
+饼干
+Bottle Milk
+牛奶瓶
+Bottle Outline
+瓶轮廓
+Bottle Cork
+瓶塞
+Sippy Cup
+吸管杯
+Face Stains
+面部污渍
+Dark
+深色
+Leather Cuff Link
+皮革手铐连接
+Spread Bar
+开腿杆
+Details
+细节
+Lower Rope
+下部绳子
+Upper Rope
+上部绳子
+Feet Belt
+脚部皮带
+Lower Belt
+下部皮带
+Upper Belt
+上部皮带
+Wand side
+魔棒侧面
+Staff side
+手杖侧面
+Big gem
+大宝石
+Central ornament
+中央装饰
+Spheres
+球体
+Power switch
+电源开关
+Accent
+风格
+Smoke
+烟
+Lit
+点燃
+Filter
+滤嘴
+Smoke In Mouth
+嘴里的烟
+Lit In Mouth
+嘴里点燃
+Filter In Mouth
+嘴里滤嘴
+Paper In Mouth
+嘴里纸
+Fan paper
+扇子纸面
+Fan paper 2nd color
+扇子纸面颜色2
+Fan paper 3rd color
+扇子纸面颜色3
+Fan base
+扇子基础
+Fan detail
+扇子细节
+Fan folding
+扇子折叠
+Fluids
+液体
+Mug
+马克杯
+Choose a plushie
+选择一个毛绒玩具
+Sin
+Sin
+Raven
+Raven
+CassandraLee
+CassandraLee
+Rika
+Rika
+Roslin
+Roslin
+Gangriel
+Gangriel
+Celiko
+Celiko
+Lavender
+Lavender
+Sabie
+Sabie
+Siscuit
+Siscuit
+Aeri
+Aeri
+Delta
+Delta
+Khloe
+Khloe
+Lillian
+Lillian
+Minerva
+Minerva
+Nabi
+Nabi
+TinyRaven
+TinyRaven
+XDress
+XDress
+Magdalena
+Magdalena
+Sonic
+Sonic
+Alunra
+Alunra
+Mel
+Mel
+Elora
+Elora
+Hoshi-Ko
+Hoshi-Ko
+Layottu
+Layottu
+Lisa
+Lisa
+Little Sera
+Little Sera
+Mana
+Mana
+Melanie
+Melanie
+Zoi
+Zoi
+Zoe
+Zoe
+Zannah
+Zannah
+Bag
+袋子
+Corn
+爆米花
+Tablet
+平板电脑
+Belly
+腹部
+Eye
+眼睛
+Mouth
+嘴巴
+Teeth
+牙齿
+Case
+壳
+Phone
+手机
+Fan edge
+扇子边缘
+Fan inner rods
+扇子内部杆
+Main Behind
+后部主体
+Straps Behind
+后部束带
+Beans Behind
+后部肉球
+Locks Behind
+后部锁
+Right Mitt Base
+右侧连指手套基础
+Left Mitt Base
+左侧连指手套基础
+Right Mitt Shine
+右侧连指手套高光
+Left Mitt Shine
+左侧连指手套高光
+Right Wrist Base
+右侧手腕基础
+Left Wrist Base
+左侧手腕基础
+Right Wrist Shine
+右侧手腕高光
+Left Wrist Shine
+左侧手腕高光
+Right Nozzle
+右侧管口
+Left Nozzle
+左侧管口
+Right Pattern
+右侧样式
+Left Pattern
+左侧样式
+Right Pattern Shine
+右侧样式高光
+Left Pattern Shine
+左侧样式高光
+Harness Ring
+束带环
+Cuff Rings
+手铐环
+Left Eyelids
+左眼睑
+Left Lens
+左镜片
+Right Eyelids
+右眼睑
+Right Lens
+右镜片
+Blindfold
+眼罩
+Padded layer
+垫层
+Eyes
+眼睛
+Head
+头部
+Mask
+面罩
+Lock Icon
+锁标志
+HUD
+显示器
+Left Eye
+左眼
+Left Eye Sticker
+左眼贴
+Right Eye
+右眼
+Right Eye Sticker
+右眼贴
+Thread Right
+右侧线条
+Thread Left
+左侧线条
+Decal
+贴花
+Head Bead
+头部珠子
+Head Bead Support
+头部珠子支撑
+Rubber balloon
+橡胶气球
+Balloon shine
+气球高光
+Neck rope
+颈部绳索
+Canvas
+画布
+ Lacing
+系带
+ Outline
+边缘
+Spots
+斑点
+Neck spikes
+脖子尖刺
+Iron blindfold
+铁制眼罩
+Nose guard
+鼻子保护
+Pattern Shine
+图案高光
+Pattern 2
+图案2
+Pattern 2 Shine
+图案2高光
+Eye Fill Panels
+眼睛填充遮罩
+Mouth Fill Panel
+嘴部填充遮罩
+Hair Inside Hood
+头发在头套内
+Eye Lining
+眼睛线条
+Face Lining
+面部线条
+Mouth Lining
+嘴部线条
+Eye Panel
+眼睛遮罩
+Mouth Panel
+嘴部遮罩
+Cover Hood
+覆盖头套
+Edges
+边缘
+Markings
+标记
+ Fuzz
+绒毛
+ Face
+脸
+ Ear Canal
+耳道
+ Lenses
+镜片
+ Ear
+耳朵
+Frames
+框架
+Bolts
+螺丝
+Lables
+标签
+Lens
+镜片
+Mouthpiece
+滤嘴
+Mask 1st detail
+面罩第一细节
+Mask 2nd detail
+面罩第二细节
+Mask 3rd detail
+面罩第三细节
+Collar metal
+项圈金属
+Inside mask
+面罩内部
+Hairband
+发带
+Lips
+嘴唇
+Blush
+腮红
+Drawings
+图画
+Linings
+内衬
+Openings
+开口
+Forehead Panel
+额头嵌板
+Exterior
+外部
+Switch
+开关
+ Hood
+头套
+ Inner Ear
+耳朵内侧
+ Mouth
+嘴
+ Nose
+鼻子
+ Outer Ear
+耳朵外侧
+Collar Band
+项圈带子
+Collar Link
+项圈链接
+ Lining
+内衬
+ Holes
+洞
+ Muzzle
+口套
+Blinding Lenses
+遮眼镜片
+Breathing Attachment
+呼吸附件
+Plug
+塞子
+ Pantyhose
+裤袜
+ Hair
+头发
+Sticky tape
+胶带
+Points
+点
+Paperbag
+纸袋
+Eyebrows
+眉毛
+Iris
+虹膜
+Cheeks
+面颊
+Wig
+假发
+Wig Accessory
+假发配件
+Earplug
+耳塞
+ Silencer
+隔音器
+ Lips
+嘴唇
+Helmet
+头盔
+Chin Strap
+下巴束带
+Side Pieces
+两侧组件
+Hypno Spiral Icon
+催眠旋涡标志
+ Clipped Hose
+卡箍软管
+Clipped Hose
+卡箍软管
+ Pump
+泵
+Pump
+泵
+ Lens
+镜片
+ Clip
+夹子
+ Rebreather Bag
+循环呼吸袋
+Rebreather Bag
+循环呼吸袋
+ Breathing Tube
+呼吸管
+Breathing Tube
+呼吸管
+Marks
+标记
+tLegs
+腿部
+Sticker
+贴纸
+Plaque
+标牌
+PlaqueBolts
+标牌螺栓
+PlaqueBorder
+标牌边框
+Postit
+便条纸
+Refreshments
+物件
+Metal straps
+金属束带
+Muzzle
+口套
+Ball
+球
+Bit
+嚼子
+Bone
+骨头
+Carrot
+萝卜
+Cup
+杯子
+Duster
+掸子
+Icon
+标志
+Glue
+胶水
+Metal Parts
+金属组件
+Pacifier Ring
+奶嘴环
+Pacifier
+奶嘴
+ Bobble
+小绒球
+ Metal
+金属
+ Straps
+束带
+Lines
+线条
+Mask Loose
+面具松散
+Mask Shine
+面具高光
+Panel Shine
+嵌板高光
+Straps Buckles
+束带搭扣
+Tubes
+管子
+Fixing
+固定圈
+Pony
+小马
+Mouth Shine
+嘴部高光
+Dark Stripes
+暗条纹
+Light Stripes
+亮条纹
+Ballgag
+口球
+Rubber Bit
+橡胶嚼子
+Blinders
+视野遮蔽
+Flags
+旗帜
+Horn
+角
+ManeBase
+鬃毛基部
+Mane
+鬃毛
+Ornament
+装饰
+Plume
+羽饰
+Post
+柱子
+Reins
+系绳
+Pumpkin
+南瓜
+Shoe
+鞋
+Thread
+线条
+Main sticker
+主要贴纸
+Sticker text
+贴纸文字
+Sticker border
+贴纸边框
+Rod
+杆
+Default
+默认
+Grin
+咧嘴
+Open
+打开
+Serious
+严肃
+Foam ball
+泡沫球
+Under foam tape
+泡沫胶带下
+Rubber glue
+橡胶胶水
+Rubber tape
+橡胶胶带
+Metal strip
+金属条
+Screw strip
+螺丝条
+External foam tape
+外部泡沫胶带
+Close
+关闭
+Ball Shine
+球体高光
+ BitGag
+口衔
+ BitGag 2
+口衔2
+Clothes Peg
+晾衣夹
+Tongue ring
+舌环
+Bells
+铃铛
+Collar Chain
+项圈锁链
+Hook
+钩子
+Mouth Ring
+口环
+Nail
+钉子
+Tongue
+舌头
+Main Strap
+主要束带
+Cross Straps
+交叉束带
+Cross Straps Buckles
+交叉束带搭扣
+Extra Muzzle
+额外口套
+Extra Muzzle Straps
+额外口套束带
+Cloth mask
+布料面具
+Stuffing
+填充
+Tape
+胶带
+Tag
+标签
+Stripes Shine
+条带高光
+Lock Body Heart
+锁体心形
+Lock Body Plain
+锁体普通
+Studs
+嵌钉
+Eye Shade
+眼罩
+Wires
+线路
+Stencil
+图案
+Mesh (for copying to items)
+色调（用于复制到其他物品）
+Ornaments
+饰物
+Heart Link
+心形环
+Leather Strap
+皮束带
+Patch
+补丁
+ Buckles
+搭扣
+Middle Ring
+中间环
+Left Ring
+左边环
+Right Ring
+右边环
+Handle
+抓手
+Leash
+牵引绳
+Cuff collar
+手铐项圈
+Handcuffs
+手铐
+Handcuffs chains
+手铐链条
+Leash handle
+牵引绳把手
+Baseplate
+底板
+Side Plates
+两侧面板
+Suns
+太阳
+Center Moon
+中央月亮
+Moons
+月亮
+Center Sun
+中央太阳
+Clamps
+夹子
+Rubber Tips
+皮革顶端
+Piercing
+穿刺
+Left Vibe Egg
+左侧跳弹
+Right Vibe Egg
+右侧跳弹
+Left Tape Strip
+左侧胶带
+Right Tape Strip
+右侧胶带
+Diaper
+尿裤
+Crotch Padding
+跨部垫子
+Waist Band
+腰带
+Plug Cap
+塞子盖
+Shield
+挡板
+Brush sticks
+刷子棒
+Brushes
+刷子
+Spreader Clips
+开阴器架子
+Spreader Straps
+开阴器束带
+Transparent Shield
+透明挡板
+Upper belt
+上部皮带
+Center strap
+中央束带
+Leg straps
+腿部束带
+Crotch Plate
+胯部挡板
+Metal Band
+金属带
+Attachment
+附件
+Shackle
+镣铐
+Rubber
+橡胶
+Small Shield
+小挡板
+Big Shield
+大挡板
+Crotch Shield
+胯部挡板
+Negative Wire
+阴极线
+Positive Wire
+阳极线
+Engraving
+刻字
+LED
+发光二极管
+Hex
+六边形
+Portal Unit
+传送单元
+Panty Base
+内裤打底
+Clitoris Toy
+阴蒂玩具
+Pussy Toy
+阴部玩具
+Interface
+屏幕
+Waist belt
+腰部皮带
+Waist belt detail
+腰部皮带细节
+Waist metal
+腰部金属
+Leg straps metal
+腿部束带金属
+Harness belts metal
+固定束带基础
+Link leg strap
+腿部连接束带
+Link strap metal
+连接束带金属
+Strap accessory A
+束带配件A
+Strap accessory metal A
+束带配件金属A
+Strap accessory B
+束带配件B
+Strap accessory metal B
+束带配件金属B
+Strap On support
+假阳具托
+Strap On metal support
+假阳具金属托
+Strap On dildo
+假阳具
+Chastity belt base
+贞操带基础
+Chastity metal base parts
+贞操带基础组件
+Chastity metal cover
+贞操带金属覆盖
+Chastity cover bolts
+贞操带覆盖螺丝
+Vibrator strap support
+振动器束带固定
+Vibrator metal part support
+振动器金属部分固定
+Vibrator head
+振动器头部
+Vibrator body
+振动器身体
+Middle
+中部
+Tabs
+标签
+Wet
+湿润
+Indicator
+指示器
+Module
+模块
+Clasps
+扣环
+Belly belt
+腹部皮带
+Belly belt metal
+腹部皮带金属
+Belly belt padlock
+腹部皮带挂锁
+Legs belts
+腿部皮带
+Legs belts metal
+腿部皮带金属
+Legs belts padlocks
+腿部皮带挂锁
+Corset collar
+束腰项圈
+Collar link belts
+项圈连接皮带
+Collar link metal
+项圈连接金属
+Belt locks
+皮带锁
+Fist Handcuffs
+拳头手铐
+Arm Handcuffs
+手臂手铐
+Cock Ring
+阴茎环
+Penis
+阴茎
+Base Ring
+基础环
+Top Ring
+顶部环
+Lock Pin
+锁销
+Pouch
+包囊
+Wand
+振动棒
+ Belt
+皮带
+ Lock
+锁
+ Valve
+阀门
+ Butterfly Vibe
+蝴蝶振动器
+Harem Chain
+后宫链
+Harem Veil
+后宫纱
+Weight
+配重
+Sound
+尿道棒
+Egg
+跳蛋
+Vibe Egg
+跳蛋
+End
+顶端
+Remote
+遥控器
+Fur Ankle
+脚踝绒毛
+Fur Knee
+膝盖绒毛
+Color
+色彩
+Honor Ring
+荣誉戒指
+Honor Ring Jewels
+荣誉戒指珠宝
+Index Ring
+食指戒指
+Middle Finger Ring
+中指戒指
+Pinkie Ring
+小拇指戒指
+Ring Finger Ring
+无名指戒指
+Thumb Ring
+大拇指戒指
+Wedding Ring
+结婚戒指
+Nails Color
+指甲颜色
+Nails Outline
+指甲轮廓
+Claws Color
+爪子颜色
+Claws Outline
+爪子轮廓
+String
+系绳
+Nose Gloss
+鼻子光泽
+Whiskers
+胡子
+Halo
+光环
+Necklace
+项链
+Star
+星星
+Choker
+颈环
+Center
+中部
+Card
+卡
+Lanyard
+挂带
+Key
+钥匙
+Normal
+普通
+Long
+长
+Cock Sock
+鸡鸡袜
+Plastic Cover
+塑料外层
+Panties
+内裤
+Bulge
+凸起
+Holemesh
+网格
+Side Straps
+侧边束带
+Catsuit Panties
+紧身衣内裤
+Waist detail parts
+腰部细节组件
+Waist metal parts
+腰部金属组件
+Leg belts
+腿部束带
+Link belts
+连接束带
+Link metal parts
+束带金属组件
+Top Stripe
+上身条纹
+Sole
+脚底
+Soles
+脚底
+Ankle Straps
+脚踝束带
+Mid Straps
+中部束带
+Lower Straps
+下部束带
+Inner & Laces
+内侧和系带
+Rear
+后部
+Fins
+鳍
+Dai
+鞋底
+Hanao
+鞋带
+Cosmetic padlocks
+装饰锁
+ Shoe
+鞋
+ Heels
+鞋跟
+Round Base
+圆形底部
+ Sole
+脚底
+Leather Belt
+皮革腰带
+Leather Boots
+皮革靴
+Chains Details
+锁链细节
+ Band
+带子
+ Boot
+靴子
+ Sock
+袜子
+Front detail
+前部细节
+Guards
+护板
+Sock
+袜
+Fuzz
+绒毛
+Guard
+护板
+Left Sock
+左袜子
+Right Sock
+右袜子
+Vest
+马甲
+Zip
+拉链
+Catsuit
+紧身衣
+Underlayment
+衬底层
+Base Shine
+基底高光
+Scales
+鳞片
+Scales Shine
+鳞片高光
+Primary
+主要
+Secondary
+次要
+Veins
+脉络
+Wings
+翅膀
+Shade
+阴影
+Gears
+齿轮
+Webbing
+织带
+Supports
+支撑
+Binding buckles
+束缚搭扣
+Binding straps
+束缚束带

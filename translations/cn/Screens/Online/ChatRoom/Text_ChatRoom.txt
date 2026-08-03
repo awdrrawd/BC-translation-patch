@@ -1,0 +1,216 @@
+### seeded from upstream: Screens/Online/ChatRoom/Text_ChatRoom_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+(Two maids grab you and escort you to their quarters.  Another maid addresses you.)  Your owner sent you here to work.
+（两个女仆把你架出了房间来到了宿舍,并且给你换了衣服）你的主人把你送到这里，来进行工作
+Talk to everyone
+和所有人说话
+Whisper to
+悄悄话
+Whisper from
+悄悄话来自
+The character you were whispering to has left.
+你之前正在说悄悄话的角色已经离开了
+Whisper target is out of range.  Returning to normal chat.
+悄悄话目标超出范围。返回正常聊天。
+Keep 20- or all current-room messages
+保留20条以下或者所有当前房间消息
+Your character profile
+你的角色档案
+Room administration
+房间管理
+Turn room customization on
+打开房间自定义
+Turn room customization off
+关闭房间自定义
+View next 10 characters
+查看之后10个角色
+View previous 10 characters
+查看之前10个角色
+Go to character view
+前往角色视图
+Go to map view
+前往地图视图
+Kneel down / Stand up
+跪下/站起
+Show / hide character icons
+显示/隐藏角色图标
+Take a picture
+拍照
+Dress your character
+更换服装
+Leave this chat room
+离开房间
+Stop leaving
+放弃离开
+Game options
+游戏选项
+You must be a Pandora's guard to use this command.
+你必须是潘多拉的守卫才能使用此命令。
+Your target is not a Pandora's inmate.
+你的目标不是潘多拉的囚犯。
+Invalid Pandora activity, type /help to get the list.
+无效的潘多拉活动，输入/help获取列表。
+This activity cannot be performed on this target.
+这个活动不能对这个目标执行。
+An orgasm is coming!
+高潮即将来临!
+Resist!
+抵抗!
+Try to resist
+尝试抵抗
+Surrender
+投降
+Recovering from an orgasm...
+从高潮中恢复...
+Struggling...
+挣扎中...
+Loosening...
+解松中...
+Impossible!
+不可能!
+Loosen
+解松
+Give up
+放弃
+Replying to
+回复给
+Message could not be found.
+消息无法找到。
+Invalid member number for target: $target.
+目标会员编号无效: $target.
+(Beep to {NAME} ({NUMBER}): {MESSAGE})
+（向 {NAME} ({NUMBER})发送悄悄话: {MESSAGE}）
+We're not friend with member $target.
+我们和会员 $target 不是好友关系。
+Please enter a beep message.
+请输入私聊消息。
+<strong>Help: KeyWord</strong>
+<strong>帮助: 关键词</strong>
+command: no such command
+command:没有该命令
+command: prerequisite check failed
+command:发送前检查失败
+HELP IS MISSING
+帮助不见啦!!!
+Friendlist:
+好友列表:
+Ghostlist:
+忽视列表:
+Whitelist:
+白名单:
+Blacklist:
+黑名单:
+<img src='Icons/Small/FocusEnabledWarning.png' style='display: inline-block; height: 1em; vertical-align: middle; transform: translateY(-0.15em);' aria-hidden='true'>
+<img src='Icons/Small/FocusEnabledWarning.png' style='display: inline-block; height: 1em; vertical-align: middle; transform: translateY(-0.15em);' aria-hidden='true'>
+<strong>NOTICE</strong>: The FocusEnabledWarningIcon <strong>focus list</strong> FocusEnabledWarningIcon is now <strong>enabled</strong>. <i>Only characters on your focus list will be visible to you in the chatroom</i>. To disable this, use <code>/focus clear</code> or the button in the menu bar.
+<strong>注意</strong>: FocusEnabledWarningIcon <strong>focus list</strong> FocusEnabledWarningIcon 现在已经 <strong>启用</strong>. <i>只有在你的关注列表中的角色可以看到你在聊天室中</i>. 要关闭此选项，使用 <code>/focus clear</code> 或者菜单栏中的按钮.
+IGNORING 'Targeter': multiple matches found.
+忽略 'Targeter': 找到多个匹配。
+IGNORING 'Targeter': result was previously matched.
+忽略 'Targeter': 结果已经匹配过了。
+IGNORING 'Targeter': no match was found.
+忽略 'Targeter': 没有找到匹配.
+<strong>FAIL</strong>: no targets were found (targeters did not match or were not provided) -- no changes were made.
+<strong>失败</strong>: 没有找到目标（目标者没有匹配或者没有提供）-- 没有进行任何更改。
+<strong>SUCCESS</strong>: The following targets were added to your focus list: Changed.
+<strong>成功</strong>: 下列目标已经加入了你的关注列表： Changed.
+<strong>SUCCESS</strong>: The following targets were removed from your focus list: Changed.
+<strong>成功</strong>: 下列目标已经从你的关注列表中清除： Changed.
+<strong>SUCCESS</strong>: Your focus list was cleared.
+<strong>成功</strong>: 你的关注列表已经清空。
+Focus List:
+关注列表:
+/focus add/remove/list/clear/help [targeter(s)]
+/focus add/remove/list/clear/help [目标]
+Modifies your focus list. When you have users on your focus list, the characters you can visually see in the chatroom are filtered to only those on your focus list. When your focus list is enabled, you will see the FocusEnabledWarningIcon icon on all characters. To go back to viewing all characters, use <code>/focus clear</code> or the button in the menu bar.
+修改你的关注列表. 当你有用户在你的关注列表中时，你在聊天室中可以看到的角色将被过滤为只有在你的关注列表中的角色。 当你的关注列表启用时，你将在所有角色上看到FocusEnabledWarningIcon图标。 要返回查看所有角色，请使用<code>/focus clear</code>或菜单栏中的按钮。
+Notes:
+注意:
+<li>If you normally would not be able to see a character on your focus list (e.g. sensory deprivation), they still will not be visible to you.</li><li>Neither chat messages nor map rooms are affected by the focus list.</li><li>If a player on your focus list leaves the room, they are removed from the list.</li>
+<li>如果你通常不能看到关注列表中的角色（例如感官剥夺），他们对你仍然不可见。</li><li>聊天消息和地图房间都不受关注列表的影响。</li><li>如果关注列表中的玩家离开房间，他们将从列表中删除。</li>
+Subcommands:
+子命令:
+Add the members to your focus list
+将此成员加入你的关注列表
+Removes the members from your focus list
+将此成员从你的关注列表中移除
+Shows the members on your focus list
+显示你关注列表中的成员
+Clears your focus list (returns to viewing all members)
+清空你的关注列表（返回查看所有成员）
+Display this help message
+显示此帮助信息
+Targeters: A list of names or member numbers to target in a subcommand, separated by spaces. Names can be partial, but must be unique. Exact name matches will take precedence over partial matches.
+目标: 一个用空格分隔的在子命令中要定位的名字或成员编号列表。 名字可以是部分的，但必须是唯一的。 精确的名字匹配将优先于部分匹配。
+Clear changelog
+清空变更日志
+Collapse section
+折叠部分
+{shift} to collapse all
+{shift} 折叠所有
+Whisper target was not found:
+找不到悄悄话目标：
+No message provided.
+没有提供信息。
+You can whisper to: $TargetsClick on the name or use the member number.
+你可以和$Targets说悄悄话。点击名字或者使用用户编号。
+Whispering to
+说悄悄话
+You're no longer whispering.
+你停止说悄悄话
+Specify the member number or name to whisper to.
+指定你要说悄悄话的用户编号或者名字。
+Send a message starting with \ and it will escape any message. Example: \/message will send /message. \*emote will send *emote.
+发送以\开始的消息，会转义消息。例如：\/message会发送/message。\*emote会发送*emote。
+(Two nurses wearing futuristic gear grab you and carry you to the Asylum.  Another nurse is waiting for you there.)  Welcome.  Don't be scared.
+（两个穿着未来装备的护士抓住你，把你带到收容所。另一名护士在那里等着你）欢迎，不要害怕
+Talking is forbidden when your owner is present.
+当你的主人在场时，禁止说话
+Emoting is forbidden when your owner is present.
+当你的主人在场时，禁止发送心里话
+Whispering to others is forbidden when your owner is present.
+当你的主人在场时，禁止对其他人发送悄悄话
+Changing pose is forbidden when your owner is present.
+当你的主人在场时，禁止改变姿势
+Accessing yourself is forbidden when your owner is present.
+当你的主人在场时，禁止接触自己
+Accessing others is forbidden when your owner is present.
+当你的主人在场时，禁止接触他人
+PLAYERNAME has been selected randomly to start the game.
+PLAYERNAME被随机选择开始游戏。
+PLAYERNAME has joined the Club Card game.
+PLAYERNAME加入了俱乐部卡牌游戏。
+Your appearance data has been copied to your clipboard.  Paste it somewhere else to save it.
+你的外观数据已经复制到了你的剪贴板中。粘贴到其他地方来保存。
+Your pasted appearance is loaded.
+你粘贴的外观已经加载。
+Your pasted appearance cannot be loaded.
+你粘贴的外观无法加载。
+You cannot change your appearance.
+你不能改变你的外观。
+The current map data has been copied to your clipboard.  Paste it somewhere else to save it.
+当前地图数据已经复制到了你的剪贴板中。粘贴到其他地方来保存。
+There's no map data to copy.
+没有可以复制的地图数据。
+Your pasted map data is loaded.
+你复制的地图数据已经加载。
+Your pasted map data cannot be loaded.
+你粘贴的地图数据无法加载
+Only room administrators can paste the map.
+只有房间管理员能够粘贴地图。
+You are restrained
+你被束缚了
+You are a club slave
+你是俱乐部奴隶
+The game blocks it
+游戏阻止如此做
+GGTS blocks it
+GGTS阻止如此做
+A rule blocks it
+一个规则阻止如此做
+Your owner forbids it
+你的主人禁止如此做
+You have not joined the Ponies
+你还没有加入小马
+Invalid Pony activity, type /help to get the list.
+无效小马活动，输入/help获取列表。

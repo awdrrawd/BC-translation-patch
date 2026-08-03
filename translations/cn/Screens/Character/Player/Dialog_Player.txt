@@ -1,0 +1,211 @@
+### seeded from upstream: Screens/Character/Player/Dialog_Player_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+###_NPC
+(You can use or remove items by selecting specific body regions on yourself.)
+(你可以选择身体的特定部位来使用或移除物品)
+###_PLAYER
+(View your profile.)
+(查看你的资料)
+(Change your clothes.)
+(更换你的衣服)
+(Room administrator action.)
+(房间管理员动作)
+###_NPC
+(As a room administrator, you can take these actions.)
+(作为房间管理员，你可以做以下动作)
+###_PLAYER
+(Character actions.)
+(角色动作)
+###_NPC
+(Possible character actions.)
+(可选的角色动作)
+###_PLAYER
+(Spend GGTS minutes.)
+(花费GGTS分钟)
+###_NPC
+(Select how to spend your minutes.)
+(选择如何花费你的分钟)
+###_PLAYER
+(View your current rules.)
+(查看你目前的规则)
+###_NPC
+(Here are your currently active rules.)
+(这些是现在生效中的规则)
+###_PLAYER
+(Leave this menu.)
+(离开此菜单。)
+(Move Character.)
+(移动角色)
+###_NPC
+(Move started.)
+(开始移动)
+###_PLAYER
+(Back to main menu.)
+(回到主菜单.)
+(Spend 15 minutes for a bondage position change.)
+(花费15分钟，改变束缚姿势)
+###_NPC
+(You don't have enough minutes available.)
+(你没有足够的可花费分钟)
+###_PLAYER
+(Spend 15 minutes for a new blindness level.)
+(花费15分钟，改变遮眼等级)
+(Spend 15 minutes for a new deafness level.)
+(花费15分钟，改变塞耳等级)
+(Spend 15 minutes for an sexual intensity change.)
+(花费15分钟，改变性刺激强度)
+(Spend 15 minutes for a sexual intensity change.)
+(花费15分钟，改变性刺激强度)
+(Spend 30 minutes to unlock the door.)
+(花费30分钟，解锁房间)
+###_NPC
+(You must have 30 minutes and be the admistrator of the locked room.)
+(你必须有30分钟，并且需要是被锁住房间的管理员。)
+###_PLAYER
+(Spend 120 minutes to get $100.)
+(花费120分钟，获得$100)
+###_NPC
+(GGTS gives you $100 and substracts 120 minutes to your total.)
+(GGTS给了你$100，并从你的总分钟中减少了120分钟)
+###_PLAYER
+(Spend 200 minutes to get your own GGTS helmet.)
+(花费200分钟，得到你自己的GGTS头盔)
+###_NPC
+(You get a GGTS helmet and the AI substracts 200 minutes from your total.)
+（你获得了一个GGTS头盔，AI从你的GGTS分钟代币中减去了200分钟）
+(You don't have enough minutes available or you already have the helmet in your inventory.)
+（你没有足够的GGTS分钟或你已经拥有GGTS头盔了）
+###_PLAYER
+(Adjust your bondage skill.)
+(调整你的束缚技能)
+###_NPC
+(By default, you restrain using your full bondage skill.  You can use less of your skill and make it easier for your victims to escape.)
+(默认状况下,你会使用你所有的捆绑技能. 你可以选择使用更少技能来让目标容易逃脱.)
+###_PLAYER
+(Adjust your evasion skill.)
+(调整你的逃脱技能)
+###_NPC
+(By default, you struggle using your full evasion skill.  You can use less of your skill and make it harder for you to struggle free.)
+(默认状况下,你会使用你所有的逃脱技能. 你可以选择使用更少技能来让自己更难逃脱.)
+###_PLAYER
+(Call the maids for help)
+(呼叫女仆帮助)
+###_NPC
+(The maids are not supposed to take room calls. This will result in punishment and public humiliation. Are you sure?)
+(女仆们一般不接受聊天室呼叫，这会让你陷入惩罚和公开羞辱。你确定吗？)
+(The maids will be here shortly...)
+(女仆们马上就到...)
+###_PLAYER
+(Use your safeword.)
+(使用安全词)
+###_NPC
+(A safeword is serious and should not be used to cheat.  It can revert your clothes and restraints to when you entered the lobby, or release you completely.)
+(安全词应该是严肃的且不应被用于作弊，它可以将你的服装和束缚恢复到登录时的状态，或是完全解放你)
+###_PLAYER
+(Take a photo of yourself.)
+(给自己拍张照片。)
+(Craft an item.)
+(制作一件物品。)
+(Boot Kinky Dungeon)
+(启动淫靡地城)
+###_NPC
+(The helmet chimes as Kinky Dungeon starts up)
+(淫靡地城启动的时候，头盔轻轻嗡鸣)
+###_PLAYER
+(Play Kinky Dungeon)
+(玩淫靡地城)
+###_NPC
+(Main menu.)
+(主菜单)
+###_PLAYER
+(Use your full bondage skill.  100%)
+(使用你所有的束缚技能.  100%)
+###_NPC
+(You will now use your full bondage skill when using a restraint.  100%)
+(你会在束缚他人时使出你的浑身解数 100%)
+###_PLAYER
+(Use most of your bondage skill.  75%)
+(使用你大部分的束缚技能.  75%)
+###_NPC
+(You will now use most of your bondage skill when using a restraint.  75%)
+(你会在束缚他人时稍稍留些余地 75%)
+###_PLAYER
+(Use half of your bondage skill.  50%)
+(使用你大约一般的束缚技能.  50%)
+###_NPC
+(You will now use half of your bondage skill when using a restraint.  50%)
+(你会在束缚他人时放亿点点水 50%)
+###_PLAYER
+(Use very little of your bondage skill.  25%)
+(使用一点点你的束缚技能.  25%)
+###_NPC
+(You will now use very little of your bondage skill when using a restraint.  25%)
+(你会在束缚他人时心不在焉 25%)
+###_PLAYER
+(Use none of your bondage skill.  0%)
+(完全不使用束缚技能.  0%)
+###_NPC
+(You will now use none of your bondage skill when using a restraint.  0%)
+(我觉得你就是想被绑 0%)
+###_PLAYER
+(Don't change your skill.)
+(不改变你的技能.)
+(Use your full evasion skill.  100%)
+(使用你所有的逃脱技能.  100%)
+###_NPC
+(You will now use your full evasion skill when trying to struggle free.  100%)
+(你会在试图逃脱时使出你的浑身解数 100%)
+###_PLAYER
+(Use most of your evasion skill.  75%)
+(使用你大部分的逃脱技能.  75%)
+###_NPC
+(You will now use most of your evasion skill when trying to struggle free.  75%)
+(你会在试图逃脱时放一点水 75%)
+###_PLAYER
+(Use half of your evasion skill.  50%)
+(使用你大约一半的逃脱技能.  50%)
+###_NPC
+(You will now use half of your evasion skill when trying to struggle free.  50%)
+(你会在试图逃脱时放亿点点水 50%)
+###_PLAYER
+(Use very little of your evasion skill.  25%)
+(使用一点点你的逃脱技能.  25%)
+###_NPC
+(You will now use very little of your evasion skill when trying to struggle free.  25%)
+(你会在试图逃脱时心不在焉 25%)
+###_PLAYER
+(Use none of your evasion skill.  0%)
+(完全不使用逃脱技能 0%)
+###_NPC
+(You will now use none of your evasion skill when trying to struggle free.  0%)
+(你大概是想被这么绑着一辈子吧 0%)
+###_PLAYER
+(Yes! Get me out of this room!)
+(是的！把我从这弄出去！)
+(No, don't call the maids.)
+(不，不要呼叫女仆)
+(Revert Character.)
+(恢复角色)
+###_NPC
+(This will revert your character's clothes and restraints back to how they were when you entered the lobby. Use this if you were forced into restraints against your consent. Are you sure you want to revert your character?)
+(这会将你的角色的服装和束缚恢复到登录时的状态。如果你未自愿就被强行绑上束缚时可以使用。你确定要使用吗？)
+###_PLAYER
+(Release Character.)
+(释放角色.)
+###_NPC
+(This will immediately release you of ALL restraints you are wearing and return you to the Main Lobby. Use this only if you are stuck in restraints and nobody can or wants to help you. Are you sure about this?)
+(这会立即解开你身上的所有束缚并把你送回大厅。请仅在被困在束缚中，且没有人能够帮助的情况下使用它。你确定要使用吗？)
+###_PLAYER
+(Don't use Safeword.)
+(不要使用安全词)
+(Yes, revert Character.)
+(是的，恢复角色)
+(No, don't revert Character.)
+(不，不要恢复)
+(Yes, I want to be released.)
+(是的，我想要被解开)
+(No, don't release me.)
+(不，不要解开)
+###_NPC
+(As you enter the luxurious hallway, a maid comes to greet you.)  Welcome to the Bondage Club, is this your first visit?
+(当你走进富丽堂皇的入口时,一位女仆向你鞠躬.)   欢迎来到拘束俱乐部,这是您第一次来吗?

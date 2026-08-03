@@ -1,0 +1,90 @@
+### seeded from upstream: Screens/MiniGame/ClubCardBuilder/Text_ClubCardBuilder_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Exit the deck builder
+退出套牌构筑
+Select the deck to modify
+选择要编辑的套牌
+Deck #
+套牌#
+Rename
+更改名称
+Enter a new name for this deck
+为这个牌组输入新的名称
+Clear
+清空
+Default
+默认
+Select the cards for
+选择卡牌放入套牌:
+Click on a card to zoom it
+点击卡牌放大
+Undo changes
+取消改变
+Save your deck
+保存你的卡牌
+Next 30 cards
+后30张牌
+Previous 30 cards
+前30张牌
+Unselect all cards
+取消选择所有卡牌
+Reset to default deck
+重置为默认套牌
+All Cards
+所有卡牌
+Event Cards
+事件卡牌
+Ungrouped
+无分组
+Liability
+闹事者
+Staff
+工作人员
+Police
+警察
+Criminal
+罪犯
+Fetishist
+恋物癖者
+Porn Actress
+色情演员
+Maid
+女仆
+Asylum Patient
+收容所病人
+Asylum Nurse
+收容所护士
+Dominant
+支配者
+Mistress
+女主人
+ABDL Baby
+ABDL宝宝
+ABDL Mommy
+ABDL妈咪
+College Student
+大学学生
+College Teacher
+大学老师
+Shibari
+绳艺
+Knot
+绳结
+Pet
+宠物
+Owner
+主人
+Online Player
+在线玩家
+Reward Cards
+奖励卡牌
+Change sleeve
+更改套牌保护套
+Change card game background
+更改卡牌游戏背景
+Save selected sleeve
+保存所选套牌保护套
+Next 30 sleeves
+下一组30张套牌保护套
+Previous 30 sleeves
+上一组30张套牌保护套

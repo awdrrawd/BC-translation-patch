@@ -1,0 +1,122 @@
+### seeded from upstream: Screens/Online/ChatRoom/Text_Commands_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+[Message]: Display the message as an action, without including your name. **[Message] does the same
+[Message]: 将消息显示为动作，不包含你的名字。**[Message]效果相同
+: Toggle AFK emote
+:切换AFK表情
+[Percentage 0-100]% [Message]: Display “[PlayerName] Message: ✔ or ❌ (Percentage %) as an attempt action. Percentage is a success chance. *[Percentage]% [Message] does the same. If percentage is omitted, success chance is 50%.
+[Percentage 0-100]% [Message]:以尝试动作来显示“[PlayerName] Message: ✔或者❌ (Percentage %)”。Percentage是成功率。*[Percentage]% [Message]是同样的效果。如果没有提供Percentage参数，成功率是50%。
+[MemberNumber]: Ban the player from the room
+[MemberNumber]:将玩家从本房间封禁
+[MemberNumber]: Send a beep to the player
+[MemberNumber]:对玩家发送一次好友私聊
+[MemberNumber]: Add the player to your blacklist
+[MemberNumber]:将玩家添加到黑名单
+[MemberNumber]: Remove the player from your blacklist
+[MemberNumber]:将玩家从黑名单移除
+[0-5], ”+”, ”-” or ”b” or ”blue”: Remove blush with ”0”, set red blush intensity with ”1” to ”5” or increase and decrease it with ”+” and ”-”, or set blue blush with ”b” or ”blue”. Giving no blush opens the blush menu.
+[0-5]、“+”、”-”或者“b”或者”blue”: 使用“0”移除脸红，使用“1”到“5”设置脸红程度，或者使用“+”或者“-”来增减脸红程度，或使用“b”或者“blue”设置为蓝色。不提供脸红会打开脸红菜单。
+[Message]: sends hidden message to bots
+[Message]:对机器人发送隐藏消息
+[start][stop]: Show the Bondage Club changelog for the specified version(s); defaults to the latest version
+[start][stop]:显示指定版本的Bondage Club变更日志；默认为最新版本
+: Toss a coin
+:丢一枚硬币
+: Open the crafting menu
+: 打开制作物品菜单
+[MemberNumber]: Demote the player from room administrator
+[MemberNumber]:取消玩家房管权限
+[Number]: Roll a 6-sided die. Adding “[Number]” after the command for any number between 2 and 100 will roll a die of that many sides instead. Adding “[Number]d[Number]” will roll multiple dice and sum the total.
+[Number]:丢一个6面骰.追加一个“[Number]”在命令后将会丢一个D[Number]的骰子.添加“[Number]d[Number]”会丢出多枚多面骰.
+[0-5]: Clear or load facial expression. ”0” after the command will clear current expression. ”1” to ”5” will load expression from the saved slot. Giving no number opens the saved expression menu.
+[0-5]: 清空或加载面部表情。指令后的“0”会清空当前的表情。“1”到“5”会从保存栏位加载表情。如果没有提供数字，会打开已保存的表情菜单。
+[o|c][l|r] or [expression]: Open or close eyes or change expression. ”c” will close, ”o” will open, using ”l” or ”r” will target only one eye. Giving no action opens the expression menu, using one of ”default”, ”dazed”, ”shy”, ”sad”, ”horny”, ”lewd”, ”verylewd”, ”heart”, ”heartpink”, ”lewdheart”, ”lewdheartpink”, ”dizzy” (or ”@@”), ”daydream” (or ”><”), ”shylyhappy” (or ”^^”), ”angry” (or ”èé”), ”surprised” (or ”éè”) or ”scared” will change expression.
+[o|c][l|r] 或者 [expression]: 睁开或关闭眼睛，或者改变表情。“c”会闭眼，“o”会睁眼，使用“l”或者“r”来只针对一侧的眼睛。如果没有提供动作，会打开表情菜单，使用下列之一来改变表情：“defualt”、“dazed”、“shy”、“sad”、“horny”、“lewd”、“verylewd”、“heart”、“heartpink”、“lewdheartpink”、“dizzy”（或“@@”）、“daydream”（或者“><”）、“shylyhappy”（或者“^^”）、“angry”（或“èé”）、“surprised”（或“éè”）、“scared”。
+add/remove/list/clear/help [targeter(s)]: Modifies your focus list (which allows you to selectively view players in a chatroom). Run '/focus' for more information.
+add/remove/list/clear/help [目标]: 修改你的关注列表（允许你选择性地查看聊天室中的玩家）。运行'/focus'获取更多信息。
+[targeter(s)]: Alias for /focus add [targeter(s)]
+[targeter(s)]: 这个指令 /focus add [targeter(s)] 的别名
+[targeter(s)]: Alias for /focus remove [targeter(s)]
+[targeter(s)]: 这个指令 /focus remove [targeter(s)] 的别名
+: Alias for /focus list
+: /focus list 的别名
+: Alias for /focus clear
+: /focus clear 的别名
+: Alias for /focus help
+: /focus help 的别名
+[MemberNumber]: Add the player to your friendlist
+[MemberNumber]:将玩家添加到好友列表
+[MemberNumber]: Remove the player from your friendlist
+[MemberNumber]:将玩家从好友列表移除
+[MemberNumber]: Add the player to your ghostlist
+[MemberNumber]:将玩家添加到忽视列表
+[MemberNumber]: Remove the player from your ghostlist
+[MemberNumber]:将玩家从忽视列表移除
+[Keyword]: Display help for the command with prefix Keyword. Exclude [Keyword] to view all valid commands
+[Keyword]:显示符合本关键字前缀的命令,不输入关键词可查看所有命令
+[MemberNumber]: Kick the player out of the room
+[MemberNumber]:将玩家踢出房间
+[Message]: Display “[PlayerName] Message” as an action. *[Message] does the same.
+[Message]:以动作形式显示“[PlayerName] Message”。*[Message]是同样的效果。
+[Activity]: Do a Pandora Guard activity on your whisper selection or all inmates if there's no selection. (Activities: Bondage, Cage, Chastity, Detain, Gag, Hogtie, Hose, Lock, Naked, Spank, Ungag, Release, Shibari, Uncage, Unchaste, Unlock)
+[Activity]: 在你的悄悄话选择的目标，或者如果没有选择时，对所有囚犯上执行一个潘多拉守卫动作。（可选动作：Bondage, Cage, Chastity, Detain, Gag, Hogtie, Hose, Lock, Naked, Spank, Ungag, Release, Shibari, Uncage, Unchaste, Unlock）
+[Activity]: Do a Pony activity (Activities: Stand, Trot, Gallop, Passage, Pirouette)
+[Activity]: 执行一个小马活动（可选动作：Stand, Trot, Gallop, Passage, Pirouette）
+[MemberNumber]: Promote the user to room administrator
+[MemberNumber]:使玩家成为房管
+[MemberNumber]: Removes the user from the room whitelist
+[MemberNumber]:将用户从房间白名单中删除
+[MemberNumber]: Adds the user to the room whitelist
+[MemberNumber]:将用户加入房间白名单
+use safeword
+使用安全词
+: View your blacklist
+:查看黑名单
+: View you friendlist
+:查看好友列表
+: View your ghostlist
+:查看忽视列表
+: View your whitelist
+:查看白名单
+: Open the friendlist screen
+:打开好友列表
+[MemberNumber]: Remove a ban on a player
+[MemberNumber]:移除玩家的封禁
+[MemberNumber]: Add a player to your whitelist
+[MemberNumber]:将玩家添加到白名单
+[MemberNumber]: Remove a player from your whitelist
+[MemberNumber]:将玩家从白名单移除
+Display your forbidden words set by your owner
+显示你的主人设置的禁止词
+Spin your Wheel of Fortune
+转动你的命运之轮
+[MemberNumber]: Release a submissive from your ownership
+[MemberNumber]: 释放一个被你拥有的顺从者
+[URL]: Set the http address of the background jpg/png image to use
+[URL]: 设置背景使用的jpg/png图片的http地址
+[Color]: Set the color code of the background filter (ex: #0000FF40)
+[Color]: 设置背景图片的滤镜颜色（例如：#0000FF40）
+[URL]: Set the http address of the background mp3/mp4 music to use
+[URL]: 设置背景mp3/mp4音乐使用的http地址
+Copy your current appearance in your clipboard
+将你当前的外观复制到你的剪贴板中
+[Appearance]: Change your current appearance with the pasted string. No argument will use the clipboard.
+[Appearance]: 使用粘贴的字符串更改你的当前外观。不提供参数将使用剪贴板。
+Display your current coordinates
+显示你当前的坐标
+Copy the current map layout in your clipboard
+将当前地图布局复制到你的剪贴板中
+[Map]: Paste your map string to load it as current. No argument will use the clipboard.
+[Map]: 粘贴你的地图字符串，并加载为当前地图。不提供参数将使用剪贴板。
+[X] [Y]: Teleport yourself to X,Y. <br>maptp [MemberNumber|Name|Nickname] [X] [Y]: Teleport player to X,Y.<br>maptp [MemberNumber|Name|Nickname]: Teleport to player.<br>maptp [MemberNumber|Name|Nickname] [MemberNumber|Name|Nickname]: Teleport first player to second player.<br>Use '@' as a prefix for MemberNumber<br>Requires admin privileges.
+[X] [Y]: 传送你自己到X,Y。<br>maptp [MemberNumber|Name|Nickname] [X] [Y]: 传送玩家到X,Y。<br>maptp [MemberNumber|Name|Nickname]: 传送到玩家。<br>maptp [MemberNumber|Name|Nickname] [MemberNumber|Name|Nickname]: 传送第一个玩家到第二个玩家。<br>使用'@'作为MemberNumber的前缀<br>需要管理员权限。
+[MemberNumber|Name|Nickname]: Begin whispering to player.  Leave blank to stop whispering.<br>[MemberNumber|Name|Nickname] [Message]: Send whisper to target player.
+[MemberNumber|Name|Nickname]: 开始与玩家说悄悄话。留空停止悄悄话。<br>[MemberNumber|Name|Nickname] [Message]: 向目标玩家发送悄悄话。
+Access the shop
+访问商店
+: Open the club card editor
+: 打开俱乐部卡牌编辑器
+ [MemberNumber] [bronze] [silver] [gold]: Give any map key to a player 
+ [MemberNumber] [bronze] [silver] [gold]: 给予玩家任何地图钥匙
+ [MemberNumber] [bronze] [silver] [gold]: Take any map key from a player 
+ [MemberNumber] [bronze] [silver] [gold]: 从玩家那里拿走任何地图钥匙

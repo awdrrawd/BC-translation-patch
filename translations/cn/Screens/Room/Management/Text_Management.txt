@@ -1,0 +1,4 @@
+### seeded from upstream: Screens/Room/Management/Text_Management_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Mistress
+女主人

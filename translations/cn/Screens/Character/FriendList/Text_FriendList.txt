@@ -1,0 +1,60 @@
+### seeded from upstream: Screens/Character/FriendList/Text_FriendList_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Online friends
+在线好友
+All friends
+全部好友
+Beep history
+好友私聊历史
+Name
+名字
+Nickname
+昵称
+Member number
+会员编号
+Chat room
+聊天室
+Room type
+房间类型
+Relation type
+关系类型
+Send a Beep
+发送好友私聊
+Read a Beep
+阅读好友私聊
+Delete a Friend
+删除好友
+Toggle 30 sec auto-refresh
+开关30秒自动刷新
+Refresh
+刷新
+Reset sorting
+重置排序
+Exit
+退出
+Previous mode
+上一个模式
+Next mode
+下一个模式
+Room name: included
+房间名：包含
+Room name: excluded
+房间名：不含
+Owner
+主人
+Lover
+恋人
+Submissive
+服从者
+Friend
+朋友
+Female-only room
+仅限女性房间
+Male-only room
+仅限男性房间
+Mixed male/female room
+混合男性/女性房间
+Asylum room
+收容所房间
+Private room
+私人房间

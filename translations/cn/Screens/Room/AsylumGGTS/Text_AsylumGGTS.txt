@@ -1,0 +1,6 @@
+### seeded from upstream: Screens/Room/AsylumGGTS/Text_AsylumGGTS_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Back to the Asylum
+返回收容所
+Your Profile
+你的档案

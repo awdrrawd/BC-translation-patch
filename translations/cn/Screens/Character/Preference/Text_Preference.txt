@@ -1,0 +1,744 @@
+### seeded from upstream: Screens/Character/Preference/Text_Preference_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+- Preferences -
+- 设置 -
+- General Preferences -
+- 通用设置 -
+- Multiplayer Difficulty Preferences -
+- 多人游戏难度设置 -
+- Restriction Preferences -
+- 束缚设置 -
+- Chat Preferences -
+- 聊天设置 -
+- Audio Preferences -
+- 音频设置 -
+- Arousal Meter & Sexual Activities Preferences -
+- 性奋量表与交互动作设置 -
+- Security Preferences -
+- 安全设置 -
+- Item Preferences -
+- 物品设置 -
+- Graphical Preferences -
+- 显示设置 -
+- Online Preferences -
+- 在线设置 -
+- Immersion Preferences -
+- 沉浸设置 -
+- Controller Preferences -
+- 手柄设置 -
+- Notification Preferences -
+- 通知设置 -
+- Gender Preferences -
+- 性别设置 -
+- Script Permission Preferences -
+- 脚本权限设置 -
+- Extensions Preferences -
+- 扩展组件设置 -
+General
+通用
+Difficulty
+难度
+Restriction
+束缚
+Chat
+聊天
+Censored Words
+屏蔽词
+Audio
+音频
+Arousal
+性奋
+Security
+安全
+Item Visibility
+物品可见性
+Online
+在线
+Immersion
+沉浸
+Graphics
+显示
+Controller
+手柄
+Notifications
+通知
+Gender
+性别
+Scripts
+脚本
+Extensions
+扩展组件
+The difficulty mode enforces BDSM restrictions in multi-player only.  Click for details.
+难度模式仅在多人游戏中使BDSM限制强制生效。点击以了解更多
+Roleplay
+角色扮演
+Roleplay - This mode is fully open to customise your experience.
+角色扮演 - 本模式下可以完全自定义你的体验
+It allows you to choose which restrictions or mechanisms to ignore.\nYou can select this mode any time, but you won't be able\nto select the Hardcore or Extreme mode for seven days.
+你可以选择不想要使用的束缚器具和机制。\n你可以随时切换到本模式，但是7天内你将无法切换到硬核或极限难度。
+Regular
+通常
+Regular - This default mode enforces the basic rules and restrictions.
+通常 - 本模式下需要遵守基础的规则和限制.
+It's made to restrict you and keep you safe at the same time.\nLots of options can be configured under this mode.\nYou can select this mode any time, but you won't be able\nto select the Hardcore or Extreme mode for seven days.
+这能同时对你进行限制并保证你的安全。\n本模式下可以修改大多数选项。\n你可以随时切换到本模式，但是7天内你将无法切换到硬核或极限难度。
+Hardcore
+硬核
+Hardcore - This mode is geared for players wanting to be helpless.
+硬核 - 本模式面向想要体验无助感的玩家
+No rescue maid will come, and no NPC will help you out.\nNo safeword can be used, you must find help from players.\nYou must be a member for at least seven days to select this mode.\nYou cannot select this if you've changed mode in the last seven days.
+没有救援女仆，没有NPC会帮助你脱身。\n没有安全词可用，你必须从其他玩家处获得帮助。\n你至少需要注册7天才能选择本难度。\n如果你更改了难度模式，7天内你将无法选择本模式。
+Extreme
+极限
+Extreme - This mode is built for players wanting to be full slaves.
+极限 - 本模式面向希望成为完全的奴隶的玩家
+No rescue maid will come, and no NPC will help you out.\nNo safeword can be used and you cannot leave your owner.\nAll immersion settings are maxed, and you cannot block any item.\nYou cannot select this if you've changed mode in the last seven days.
+没有救援女仆，没有NPC会帮助你脱身。\n没有安全词可用，你必须从其他玩家处获得帮助\n没有安全词可用，并且你无法摆脱主人。\n所有的沉浸设置都被强制固定为最大，同时你不可以屏蔽任何物品。\n如果你更改了难度模式，7天内你将无法选择本模式。
+Easy mode - Restrictions and game mechanisms\ncan be ignored with toggles.  For pure roleplayers.
+简单模式 - 束缚和游戏机制可以通过开关无视。\n专为RP玩家设计。
+Normal mode - Basic restrictions are enforced,\nmany options to protect you.  For most players.
+普通模式 - 需要遵守基础的规则和限制，有很多自我保护选项。\n适合大多数玩家。
+Hard mode - No rescue maids, no safeword and no\nhelp from any NPC.  For players that want trouble.
+硬核模式 - 没有救援女仆，没有NPC帮助，也没有安全词。\n专为想要麻烦的玩家设计。
+Slavery mode - No maids, no safeword, no NPC help,\nno blocked items, cannot leave owner.  Fully helpless.
+奴隶模式 - 没有救援女仆，没有NPC帮助，没有安全词，\n不能屏蔽物品，不能从主人处逃跑。完全的无助。
+You're already playing on that difficulty mode.
+你已经在游玩该难度模式了
+You need to wait NumberOfHours hours before you can activate this mode.
+你还需要等待NumberOfHours小时才能启动该模式
+I accept the consequences and want to use this mode.
+我了解这样做的后果,确认要启动该模式
+Go
+Go~
+You can configure game restrictions to bypass in the multi-player environment.
+你可以设置多人游玩时无视的限制内容
+Players using the Roleplay difficulty can configure multi-player restrictions to bypass.
+使用角色扮演难度的玩家可以设置多人游玩时无视的限制内容
+Bypass the struggling mini-game.
+无视挣扎小游戏
+Cannot be slowed down from leaving a room.
+离开房间时不会被减速
+Skip punishment when calling maids from chat room.
+从聊天室召唤女仆时，无视惩罚。
+Don't garble online chat and whispers when gagged.
+被塞住嘴时，不混淆在线聊天和悄悄话。
+Character label color:
+角色标签颜色:
+Allowed interactions:
+允许互动:
+Everyone, no exceptions
+所有人
+Everyone, except blacklist
+所有人，除了黑名单成员
+Owner, Lover, whitelist & Dominants
+主人、恋人、白名单&支配者
+Owner, Lover and whitelist only
+仅主人、恋人和白名单
+Owner and Lover only
+仅主人和恋人
+Owner only
+仅主人
+Put a valid hex #red-green-blue color
+请输入有效的十六位#RGB颜色
+Theme:
+主题:
+Light
+明亮
+Dark
+黑暗
+ Light 2
+明亮2
+Dark 2
+黑暗2
+Enter/Leave message style:
+进入/离开消息风格:
+Normal
+普通
+Smaller
+小号
+Hidden
+隐藏
+Display member numbers:
+显示成员编号:
+Always
+总是
+Never
+永不
+On Mouseover
+悬浮时
+Font size:
+字体大小:
+Small
+小号
+Medium
+中号
+Large
+大号
+Display timestamps
+显示时间戳
+Color names
+姓名染色
+Color actions
+动作染色
+Color emotes
+表情染色
+Color activities
+行动染色
+Shrink all messages except dialogue
+缩小除对话外所有信息
+Show sexual activities & orgasms
+显示交互动作&高潮
+Use : as alias for /me and *
+使用 : 作为 /me 和 * 的同义词
+Ban blacklist when creating a room
+创建房间时禁止黑名单成员进入
+Ban ghostlist when creating a room
+创建房间时禁止无视名单成员进入
+Order rooms by number of friends
+以好友数量排序聊天室
+Disable scripted assets on others
+禁用其他角色的脚本内容
+Show all automatic messages
+显示所有自动消息
+Preserve whitespace in messages
+在消息中保持空白
+Show help on first enter
+第一次进入时显示帮助
+Show beep notifications in chat
+在聊天中显示好友私聊提示
+Preserve chat logs between rooms
+在房间之间保留聊天记录
+Disable reply feature
+禁用回复功能
+Default chatroom background: 
+默认聊天室背景:
+Page 1/2
+页面 1/2
+Page 2/2
+页面 2/2
+Audio volume
+声音音量
+Music volume
+音乐音量
+Audio alarm for beeps
+播放好友私聊提示音
+Play item sounds in chatrooms
+播放聊天室内的物品声音
+Only play item sounds if you're involved
+仅播放与你有关的物品声音
+Allow audio alerts for notifications
+允许好友私聊同时发送通知
+Lock this menu while bound
+被束缚时锁定本菜单
+Return to chatrooms on relog
+重新登录时回到聊天室
+Auto-remake rooms
+自动重建房间
+Hide others' messages
+隐藏他人消息
+All immersion settings are maxed out under the Extreme difficulty mode
+所有的限制设置在极限难度下被固定为最强
+Hide non-adjacent players while partially blind
+部分失明时隐藏不临近的角色
+Events while plugged or vibed
+被插入或被振动时的事件
+Garble chat room names and descriptions while blind
+失明时隐藏聊天室名和描述
+Room customization:
+房间自定义：
+Disabled by default
+默认关闭
+Enabled by default
+默认启用
+Sensory deprivation setting
+感觉剥夺设置
+Hide names
+隐藏角色名
+Heavy
+重度
+Total
+完全
+Flash after blindness
+失明后闪光
+Zoom chatrooms smoothly
+平滑缩放聊天室
+Center players in chatrooms
+居中聊天室内角色
+Players can drag you to rooms when leashed
+被牵引时可以被带入房间
+Your owner can change or lock your nickname
+你的主人可以更改或锁定你的昵称
+Maids come automatically when restrained
+被束缚时女仆会自动前来救援
+Locks on you can't be picked
+你身上的锁无法被偷偷打开
+Disable examining when blind
+失明时无法检查
+Keep all restraints when relogging
+重新登录时保持所有束缚
+Cannot enter single-player rooms when restrained
+被束缚时无法进入私人房间
+Block advanced vibrator modes (edge, random, etc)
+禁止高级振动模式(寸止、随机等)
+Safewords and help from NPCs are disabled on Hardcore or Extreme
+安全词和NPC帮助在硬核和极限难度不可用
+Items can affect your facial expression
+物品可以影响你的面部表情
+Max
+最高
+High
+高
+Low
+低
+Lower
+更低
+Lowest
+最低
+Animation quality
+动画效果
+Reduce if inputs such as sliders are slow to respond
+如果输入和滚动条延迟时请调低
+Display all characters at maximum height
+以最大身高显示所有角色
+Show AFK bubble if idle for 5 minutes
+闲置5分钟后显示AFK气泡
+Allow Safeword use (Cannot enable while bound)
+允许使用安全词(被束缚时不能更改)
+(Click to confirm) Allow Safeword use (Cannot enable while bound)
+(点击以确定)允许使用安全词(被束缚时不能更改)
+Allow others to alter your whole appearance
+允许其他玩家修改你所有外观
+Prevent others from changing cosplay items
+禁止其他玩家更改Cosplay物品
+Show status bubble
+显示状态泡泡
+Send your status
+发送你的状态
+Linking an email will allow password recovery
+链接邮箱地址可以找回密码
+Update Email
+更新邮箱
+Current email:
+现在的邮箱:
+New email:
+新邮箱:
+No email saved, write here to add one
+没有储存邮箱地址,输入以添加
+An email is linked, write it here to update it
+已储存邮箱地址,输入以更新
+Your email has been updated.
+你的邮箱地址已更新
+Current email does not match
+现在的邮箱地址错误
+Invalid characters
+无效字符
+Show other characters meter
+显示其他角色量表
+Affect your facial expressions
+影响你的面部表情
+Activation:
+启用:
+Disable sexual activities
+禁用交互动作
+Allow without a meter
+启用量表
+Allow with a manual meter
+启用手动量表
+Allow with a hybrid meter
+启用混合量表
+Allow with a locked meter
+启用锁定量表
+Arousal meter visuals
+性奋量表外观
+Bare meter
+纯量表
+Solid glow
+持续发光
+Temporary animation
+短暂动画
+Constant animation
+持续动画
+Vibrator screen filters
+振动屏幕过滤
+None
+无
+Flickering glow
+闪烁发光
+Arousal screen filter
+性奋屏幕过滤
+Strong gradient
+强梯度
+Solid color filter
+固定颜色滤镜
+Solid filter at high arousal
+高性奋时出现固定颜色滤镜
+Meter visibility:
+量表可见性:
+Show arousal to everyone
+每个人都可见
+Show if they have access
+有权限者可见
+Show to yourself only
+仅对自己显示
+Fetish preferences:
+爱好设置:
+Being restrained
+被束缚
+Being gagged
+被堵嘴
+Being blind
+被遮眼(失明)
+Being deaf
+被塞耳(失聪)
+Being chaste
+贞操带
+Being naked
+裸露
+Masochism
+受虐
+Sadism
+施虐
+Rope
+绳索
+Latex
+乳胶
+Leather
+皮革
+Metal
+金属
+Tape
+胶带
+Nylon
+尼龙
+Lingerie
+亚麻
+Pony
+马驹游戏
+ABDL
+恋尿布
+Pet play
+宠物游戏
+Forniphilia (human furniture)
+物品化（人形家具）
+Spandex (Snug & Tight)
+氨纶（紧身）
+Hate it
+讨厌
+Doesn't like it
+不喜欢
+Neutral on it
+无所谓
+Like it
+喜欢
+Adore it
+特别喜爱
+Activity preferences:
+行动设置:
+Done on yourself:
+自己被做:
+Doing it to others:
+对别人做:
+Forbid/Block it
+禁止
+Click on yourself to set your erogenous zones
+点击你自己来设置你的敏感带
+Configure this zone to be erogenous or not
+设置该区域的敏感度
+Block all activities on this zone
+禁止对该区域的一切行动
+Dislike this zone, it's a turn-off
+不喜欢,禁止
+This zone isn't special for you
+没什么特别的
+Like this zone, it turns you on
+喜欢,使你兴奋
+Love this zone, it's a big turn-on
+喜爱,特别有效
+This zone can give you an orgasm
+该区域可以使你高潮
+Feet & Toes
+脚与足趾
+Lower Legs
+小腿
+Upper Legs
+大腿
+Pussy & Vagina
+外阴与阴道
+Clitoris
+阴蒂
+Butt / Anal
+臀部/后庭
+Pelvis & Belly
+腹部与小腹
+Torso & Ribs
+躯干&肋部
+Nipples
+乳头
+Breast
+乳房
+Arms & Shoulders
+手臂与肩膀
+Hands
+手
+Neck
+颈部
+Mouth & Lips
+嘴巴与嘴唇
+Head & Hair
+头与头发
+Nose
+鼻子
+Ears
+耳朵
+Head
+头
+Speech stuttering:
+语言混淆:
+Never stutter
+从不混淆
+When you're aroused
+性奋时
+When you're vibrated
+被振动时
+Aroused & vibrated
+性奋或振动时
+Group:
+分类:
+Asset:
+子类别:
+Hide
+隐藏
+Block
+屏蔽
+This icon will appear beside a character that's wearing a hidden item
+该图标会出现在穿戴隐藏物品的角色身旁
+Reset All
+重置全部
+This will reset all items to be visible. Click again to confirm and exit.
+这将重置所有物品为可见.再次点击以确认并退出.
+All items are forced visible under the Extreme difficulty mode
+所有物品在极难难度下都强制可见
+Accept changes
+接受改动
+Cancel changes
+取消改动
+Game font
+游戏字体
+Fallback fonts will be used if your chosen font is unsupported on your device.
+如果设备不支持,会回退到默认字体.
+Arial
+Arial
+Times New Roman
+Times New Roman
+Papyrus
+Papyrus
+Comic Sans
+Comic Sans
+Impact
+Impact
+Verdana
+Verdana
+Helvetica Neue
+黑体
+Century Gothic
+世纪哥特体
+Georgia
+Georgia
+Courier New
+Courier New
+Copperplate
+Copperplate
+Flip the room vertically when upside-down
+当被倒吊起来时垂直翻转房间
+Flash the screen for certain effects
+受到特定效果时闪烁屏幕
+Enable antialiasing
+启用抗锯齿
+For this browser, if supported
+若浏览器支持
+Not running on WebGL, cannot edit rendering configurations.
+未在WebGL运行,无法修改渲染设置.
+Preferred power consumption mode
+偏好功耗／效能模式
+Low consumption, slower rendering
+低消耗,渲染较慢
+Default
+普通
+High consumption, faster rendering
+高消耗,渲染较快
+Sensitivity
+灵敏度
+Controller Active
+启用手柄
+Map Buttons
+设置按钮
+Map Sticks
+设置摇杆
+Move left stick up
+上移左摇杆
+Move left stick right
+右移左摇杆
+Move right stick up
+上移右摇杆
+Move right stick right
+右移右摇杆
+Press A button
+按下A按钮
+Press B button
+按下B按钮
+Press X button
+按下X按钮
+Press Y button
+按下Y按钮
+Press left bumper
+按下左肩键
+Press right bumper
+按下右肩键
+Press left trigger
+按下左扳机
+Press right trigger
+按下右肩键
+Press Select button
+按下选择键
+Press Start button
+按下开始键
+Press left stick button
+按下左摇杆键
+Press right stick button
+按下右摇杆键
+Press Up on Dpad
+按下上方向键
+Press Down on Dpad
+按下下方向键
+Press Left on Dpad
+按下左方向键
+Press Right on Dpad
+按下右方向键
+Press Home button
+按下Home键
+Dead Zone
+死区
+Off
+关闭
+(1) in title
+(1) 在标题中
+Popup
+弹出
+(1) in icon
+(1) 在图标中
+Raise notifications for missed events:
+为漏掉的事件发送通知:
+: Play a sound for only
+: 仅在第一次
+the first occurrence of an event
+发生事件时播放声音
+Only:
+仅:
+Beeps
+好友私聊
+Messages in chat rooms
+聊天室消息
+Normal Messages
+普通消息
+Whispers
+悄悄话
+Items/Activities
+物品/行动
+Name Mentioned
+提到名字
+Players entering chat rooms
+玩家进入聊天室
+Owner
+主人
+Lovers
+恋人
+Friends
+好友
+Owned Subs
+你的服从者们
+Disconnect from the game
+失去连接
+Your turn in a LARP game
+你的体感对战回合
+Raise a test notification
+发送测试通知
+Clear raised notifications
+清除目前的通知
+Hello there!
+啦哩吼!
+Page
+页
+Allow item tint effects
+启用物品染色效果
+Can only leave a map near an entry or exit
+只能在入口或出口附近离开地图
+Allow item blur effects
+启用物品模糊效果
+Turn off if experiencing frame rate drops
+如果遇到帧率降低，请关闭
+Females
+女性
+Males
+男性
+Automatically enter the chatroom area for:
+自动加入此类型聊天室区域：
+Hide shop items exclusively for:
+隐藏商店的此类专门物品：
+Hide titles in settings for:
+隐藏设置中的这些标题：
+Apply the censoring
+应用屏蔽
+Select the censorship to apply and the words to censor in both the chat and room labels.
+选择在聊天和房间标签中应用的屏蔽词。
+Censorship:
+屏蔽方式：
+Replace the word by ***
+将这词替换为***
+Replace the phrase by ***
+将这句话替换为***
+Hide the phrase or room
+隐藏这句话或者房间
+Censored words:
+屏蔽词：
+Add
+添加
+WARNING!
+警告！
+Changing the settings on this page can allow people to modify your items and appearance using scripts in ways that are not possible in the core game. If you don't want this, or if you don't know what you're doing, don't touch these settings!
+更改此页面上的设置可以让人们使用脚本以核心游戏中无法做到的方式修改你的物品和外观。如果您不想要这个，或者如果您不知道自己在做什么，请不要修改这些设置！
+I Accept
+我同意
+Specify who can modify your worn items using scripts, and what they're allowed to do.
+指定谁可以使用脚本修改你穿戴的物品，以及允许他们做什么。
+To reduce issues and maintain a baseline level of visual coherence, the Bondage Club enforces a series of restrictions which prevents people from modifying your items in ways that might cause clipping or graphical issues.\nThis screen allows you to configure bypasses of those restrictions for certain people.\nWhile it enables more elaborate behaviors of items, be aware that it can cause severe visual glitches, including invisible items or characters, and that setting permissions to 'Public' gives everyone the ability to modify that feature, even trolls. Please use this with caution.\nUnwanted script effects can be removed at any time by disabling all permissions for that effect (including 'Self').\nTo find out more about the properties that you can assign permissions for and what each might do and the associated risks, click the '?' icon next to each one.
+为了减少问题并保持视觉效果统一的基准水平，束缚俱乐部包含一系列措施，可防止人们以可能导致错误或显示问题的方式修改你的物品。在此屏幕上，你可以选择允许某些人通过自定义脚本或插件绕过这些限制。这可以允许对项目进行更高程度的图形定制，但请注意，它也可能导致严重的显示错误，包括导致物品或角色不可见，因此使用这些选项需要你自担风险。要了解有关你可以为其分配权限的属性以及每个属性可能执行的操作以及相关风险的更多信息，请单击每个“？”旁边的图标。 请注意，将权限设置为公开意味着任何人都可以修改该功能，甚至是故意破坏者，因此请谨慎使用。请记住，你可以随时通过删除该效果的所有权限（包括“自身”）来删除不需要的脚本效果。
+Permits scripts to override the default item-hiding behaviour of Bondage Club. This can enhance your game by allowing item combinations that wouldn't normally be possible, or by allowing items to be hidden to achieve a particular look that doesn't necessarily reflect exactly what you're wearing. However, it can also be used to create severe visual glitches, including making items or even your whole character invisible. Use with caution!
+允许脚本覆盖束缚俱乐部的默认项目隐藏行为。这可以让你用通常无法实现的物品组合来增强你的游戏体验，或者通过隐藏物品来使得你的外观不反映你身上的物品穿戴。但是，这也可以用来制造严重的显示问题，包括让物品甚至你的整个角色不可见。谨慎使用！
+Permits scripts to override the default item-blocking behaviour of Bondage Club. This is the functionality that prevents you from equipping items on others, or can prevent sexual activities on blocked zones. Allowing scripts to add custom blocking behaviour can allow for additional restriction, preventing players from removing worn items or adding new ones in a given slot, but can also result in items that you can't remove yourself without the help of a script (or by removing this permission).
+允许脚本覆盖束缚俱乐部的默认物品阻挡。此功能可以防止你在他人身上装备物品，也可以防止在阻挡的区域进行互动。允许脚本添加自定义阻挡，可以带来额外的限制，防止玩家移除旧物品或在给定物品栏中添加新物品，但也可能导致你无法自行移除物品，除非获得脚本的帮助（或删除此权限）。
+Self
+自身
+Whitelist
+白名单
+Public
+公开
+FPS Limit
+帧率限制
+Unfocused FPS limit
+失焦时帧率限制
+Display FPS Counter
+显示帧率
+Unlimited
+无限制
+10 FPS
+10 FPS
+15 FPS
+15 FPS
+30 FPS
+30 FPS
+60 FPS
+60 FPS
+Auto-close OOC messages
+自动关闭OOC消息
+Show ungarbled contents of messages if available
+如果可用，显示未混淆的消息内容

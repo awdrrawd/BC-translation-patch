@@ -1,0 +1,406 @@
+### seeded from upstream: Backgrounds/Backgrounds_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Abandoned Building
+废弃建筑
+Abandoned Side Room
+废弃房间
+Alchemist Office
+炼金学办公室
+Ancient Ruins
+上古遗迹
+Bedroom
+卧室
+Entrance
+入口
+GGTS Computer Room
+GGTS电脑房
+Meeting
+会议
+Therapy
+治疗
+Back Alley
+后巷
+Balcony Night
+阳台夜间
+Ballet Class
+芭蕾舞课
+Bar Restaurant
+酒吧餐厅
+BDSM Room Blue
+蓝色调教室
+BDSM Room Purple
+紫色调教室
+BDSM Room Red 1
+红色调教室1
+BDSM Room Red 2
+红色调教室2
+Beach
+海滩
+Beach Promenade Café
+海滨长廊咖啡馆
+Beach Hotel 1
+海滩酒店
+Beach Hotel 2
+海滩酒店
+Beach Sunset
+海滩日落
+Bondage Bedchamber
+束缚用卧室
+Boudoir
+闺房
+Shop Dressing Rooms
+商店换衣间
+Boutique Shop
+精品店
+Captain Cabin
+船长室
+Casino
+赌场
+Fancy Castle
+美妙城堡
+Cellar
+地窖
+Ceremony Venue
+典礼场
+Chill Room
+冷藏室
+Cafeteria 1
+咖啡厅1
+Cafeteria 2
+咖啡厅2
+Classroom 1
+教室1
+Classroom 2
+教室2
+Classroom 3
+教室2
+Concert Stage
+音乐会舞台
+Detention Class
+拘留教室
+College Entrance
+大学入口
+College Hall 1
+大学大厅1
+College Hall 2
+大学大厅2
+College Hall 3
+大学大厅3
+College Pool
+大学泳池
+Teachers' Lounge
+教师休息室
+Tennis Court
+网球场
+Theater
+剧场
+Shower Room
+淋浴室
+Sports Ground
+运动场
+Staff Room
+员工休息室
+Commercial Street Night
+商业街夜晚
+Confessions
+忏悔室
+Cosy Chalet
+舒适的小屋
+Cozy Living Room
+舒适的客厅
+Creepy Basement
+骇人的地下室
+Deep Forest
+森林深处
+Desert
+沙漠
+Desolate Village
+无人村庄
+Dining Room
+餐厅
+Dungeon
+地牢
+Ruined Dungeon
+地牢遗迹
+Dystopian City
+反乌托邦城市
+Egyptian Exhibit
+埃及博览会
+Egyptian Tomb
+埃及古墓
+Empty Warehouse
+空仓库
+Fancy Bedroom
+豪华卧室
+Forest Cave
+森林洞穴
+Forest Path
+森林小道
+Public Garden
+花园
+Garden Café 1
+花园咖啡馆1
+Garden Café 2
+花园咖啡馆2
+Garden Museum
+花园博物馆
+Gymnasium
+体育馆
+Entrance to Heaven
+天堂入口
+Entrance to Hell
+地狱入口
+Horse Stable
+马驹训练场
+Hotel Bedroom
+酒店卧室
+Hotel Bedroom 2
+酒店卧室2
+Hotel Bedroom 3
+酒店卧室3
+Empty Basement 1
+空地下室1
+Empty Basement 2
+空地下室2
+Empty Basement 3
+空地下室3
+Studio Living Room
+工作室客厅
+Wooden Living Room
+木屋客厅
+Appartment Living Room
+公寓客厅
+Japanese Living Room
+日式客厅
+Hypnotic Spiral 2
+催眠螺旋2
+Hypnotic Spiral
+催眠螺旋
+Indoor Pool
+室内泳池
+Industrial
+工业风
+Infiltration Bunker
+潜入暗堡
+Interrogation Room
+审讯室
+Introduction
+介绍处
+Jungle Temple
+丛林寺庙
+Kennels
+养犬场
+Kidnappers League
+绑匪联盟
+Kinky Shop
+怪癖商店
+Kitchen 1
+厨房 1
+Kitchen 2
+厨房 2
+Latex Room
+乳胶房间
+Leather Chamber
+皮革房间
+Lingerie Shop
+内衣店
+Locker Room
+储物室
+Lost Wages Casino
+吃人赌场
+Lounge Piano
+休息室钢琴
+Maid Café
+女仆咖啡
+Maid Quarters
+女仆协会
+Main Hall
+大厅
+Club Management
+俱乐部办公室
+Medina Market
+当地市场
+Middletown School
+城中学校
+Movie Studio
+电影工厂
+Nightclub
+夜总会
+Nursery
+育婴室
+Luxury Office
+奢侈品店
+Open Office
+开放式办公室
+Old Farm
+老农场
+Onsen
+温泉
+Outdoor Pool
+室外泳池
+Luxury Pool
+豪华泳池
+Outside Cells
+开放房间
+Padded Cell
+软墙病房
+Padded Cell 2
+软墙病房2
+Pandora Cell A
+Pandora牢房A
+Pandora Cell B
+Pandora牢房B
+Pandora Cell C
+Pandora牢房C
+Pandora Cell D
+Pandora牢房D
+Pandora Cell E
+Pandora牢房E
+Pandora Cell F
+Pandora牢房F
+Pandora Cell G
+Pandora牢房G
+Park Day
+公园日间
+Park Night
+公园夜晚
+Park Winter
+冬日公园
+Party Basement
+地下室派对
+Pirate Island
+海盗岛屿
+Pirate Island Night
+海盗岛屿夜间
+Pool Bottom
+泳池底
+Prison Hall
+监狱大厅
+Private Room
+私人房间
+Public Bath
+公共厕所
+Rainy Forest Path Day
+雨中森林小道
+Rainy Forest Path Night
+夜雨森林小道
+Rainy Street Day
+雨中城市街道
+Rainy Street Night
+雨夜城市街道
+Ranch
+牧场
+Research Lab
+研究所
+Restaurant 1
+餐厅1
+Restaurant 2
+餐厅2
+Rooftop Party
+楼顶派对
+Rusty Saloon
+锈蚀的沙龙
+School Hallway
+学校走廊
+School Hospital
+校医院
+Abandoned School
+废弃学校
+Sci Fi Cell
+科幻监狱
+Sci Fi Outdoors
+科幻室外
+Red Sci-Fi Room
+红色科幻室
+Secret Chamber
+隐藏房间
+Sheikh Private Room
+酋长房间
+Sheikh Tent
+酋长帐篷
+Shibari Dojo
+紧缚道场
+Ship's Deck
+轮船甲板
+Ship Wreck
+沉船
+Slippery Classroom
+流动教室
+Slum Apartment
+贫民公寓
+Slum Cellar
+贫民窟地窖
+Slum Ruins
+贫瘠废墟
+Snowy Chalet Day
+雪天小屋
+Snowy Chalet Night
+雪夜小屋
+Snowy Deep Forest
+雪中密林
+Snowy Forest Path Day
+雪中森林小道
+Snowy Forest Path Night
+雪夜森林小道
+Snowy Lake Night
+雪夜湖边
+Snowy Street
+积雪街道
+Snowy Street Day 1
+雪天街道1
+Snowy Street Day 2
+雪天街道2
+Snowy Street Night
+雪夜街道
+Snowy Town 1
+雪天小镇1
+Snowy Town 2
+雪天小镇2
+Space Station Captain Bedroom
+太空站站长卧室
+Spooky Forest
+阴森的森林
+Christmas Street Night
+圣诞节街道夜晚
+Student Bedroom
+学生卧室
+Sun Temple
+太阳神庙
+Virtual World
+虚拟世界
+Throne Room
+王冠室
+Tiled Bathroom
+瓷砖浴室
+Underwater One
+水下1
+Vault Corridor
+保险库走廊
+Wagon Circle
+马车道
+Wedding Arch
+婚礼拱门
+Wedding Beach
+婚礼海滩
+Wedding Room
+婚礼室
+Western Street
+西式街道
+Witch Wood
+女巫森林
+Wooden Cabin
+木质小屋
+Ring
+环
+Christmas Day Lounge
+圣诞节接待室
+Christmas Eve Lounge
+圣诞夜接待室
+Yacht Chill Room
+游艇休息室
+Yacht Main Hall
+游艇主厅
+Yacht Deck
+游艇甲板
+Wooden Board
+木板路

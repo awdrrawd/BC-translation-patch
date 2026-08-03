@@ -1,0 +1,72 @@
+### seeded from upstream: Screens/Room/Shop2/Text_Shop2_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+View previous items
+查看之前的物品
+View next items
+查看后面的物品
+Exit
+退出
+Clothes
+衣服
+Underwear
+内衣
+Cosplay
+角色扮演
+Nude
+裸体
+Use item
+使用物品
+Change item color
+改变物品颜色
+Shop mode: Preview
+商店模式：试用
+Shop mode: Sell
+商店模式：卖出
+Shop mode: Buy
+商店模式：购买
+Filter by item name
+按物品名称筛选
+Filter by item group
+按物品组筛选
+Show item group filter
+展开物品组过滤器
+Select All
+全选
+Select None
+全不选
+Change item layering
+改变物品分层
+male-only
+只看男性
+female-only
+只看女性
+Preview items: Page 0
+试用物品：第0页
+Buy items: Page 0
+购买物品：第0页
+Sell items: Page 0
+卖出物品：第0页
+Preview female-only items: Page 0
+试用女性物品：第0页
+Buy female-only items: Page 0
+购买女性物品：第0页
+Sell female-only items: Page 0
+卖出女性物品：第0页
+Preview male-only items: Page 0
+试用男性物品：第0页
+Buy male-only items: Page 0
+购买男性物品：第0页
+Sell male-only items: Page 0
+卖出男性物品：第0页
+Body & Clothing
+身体 & 衣服
+Toys & Restraints
+玩具 & 束缚
+Misc
+杂项
+Select pose
+选择姿势
+Show pose menu
+展开姿势菜单
+Reset pose
+重置姿势

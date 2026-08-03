@@ -1,0 +1,1000 @@
+### seeded from upstream: Screens/Interface_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+'s
+的
+You cannot access your items
+你无法使用你的物品
+SourceCharacter used PronounPossessive safeword and wants to be released. PronounSubject is guided out of the room for PronounPossessive safety.
+SourceCharacter 使用了安全词，并希望被释放。为了PronounPossessive安全，她已被送出房间。
+SourceCharacter used PronounPossessive safeword. Please check for PronounPossessive well-being.
+SourceCharacter 使用了安全词。请检查她的身心健康状况。
+SourceCharacter adds a NextAsset on DestinationCharacter FocusAssetGroup PrevAsset.
+SourceCharacter在DestinationCharacterFocusAssetGroup上PrevAsset上加了NextAsset.
+SourceCharacter changes the color of NextAsset on DestinationCharacter FocusAssetGroup.
+SourceCharacter改变了DestinationCharacterFocusAssetGroup上NextAsset的颜色.
+SourceCharacter flips a coin. The result is: CoinResult.
+SourceCharacter丢了一枚硬币.结果是: CoinResult.
+SourceCharacter rolls DiceType. The result is: DiceResult.
+SourceCharacter丢了DiceType.结果是: DiceResult.
+SourceCharacter hops off the PrevAsset.
+SourceCharacter从她的PrevAsset跳下来。
+SourceCharacter escapes from the PrevAsset.
+SourceCharacter从她的PrevAsset逃脱出来。
+TargetCharacterName gives a sealed envelope to TargetPronounPossessive owner.
+TargetCharacterName把一个封住的信封交给TargetPronounPossessive主人。
+TargetCharacterName gets grabbed by two maids and locked in a timer cell, following TargetPronounPossessive owner's commands.
+TargetCharacterName被两个女仆拽走，按照TargetPronounPossessive主人的命令，把她关进了定时监牢里。
+TargetCharacterName gets grabbed by two nurses wearing futuristic gear and locked in the Asylum for GGTS, following TargetPronounPossessive owner's commands.
+TargetCharacterName被两个穿着未来装备的护士拽走，按照她的主人的命令，被关在了收容所进行GGTS。
+TargetCharacterName gets grabbed by two maids and escorted to the maid quarters to serve drinks for TargetPronounPossessive owner.
+TargetCharacterName被两个女仆拽走，按照TargetPronounPossessive主人的命令，押送她到女仆宿舍开始送饮料。
+SourceCharacter was interrupted while trying to use a NextAsset on TargetCharacter.
+SourceCharacter 试图在 TargetCharacter 身上使用 NextAsset，但是操作被中断了。
+SourceCharacter was interrupted while going for the PrevAsset on TargetCharacter.
+SourceCharacter 试图操作 TargetCharacter 身上的 NextAsset，但是操作被中断了。
+SourceCharacter was interrupted while swapping a PrevAsset for a NextAsset on TargetCharacter.
+SourceCharacter 试图将 TargetCharacter 身上的 PrevAsset 换成 NextAsset，但是操作被中断了。
+SourceCharacter locks a NextAsset on DestinationCharacter FocusAssetGroup.
+SourceCharacter把DestinationCharacterFocusAssetGroup上NextAsset上了锁.
+SourceCharacter loosens the PrevAsset on DestinationCharacter FocusAssetGroup a little.
+SourceCharacter稍微解松了位于DestinationCharacterFocusAssetGroup上的PrevAsset。
+SourceCharacter loosens the PrevAsset on DestinationCharacter FocusAssetGroup a lot.
+SourceCharacter将位于DestinationCharacterFocusAssetGroup上的PrevAsset解松了很多。
+SourceCharacter struggles and loosens the PrevAsset on DestinationCharacter FocusAssetGroup.
+SourceCharacter挣扎着解松了位于DestinationCharacterFocusAssetGroup上的PrevAsset。
+SourceCharacter picks the lock on DestinationCharacter PrevAsset.
+SourceCharacter撬开了DestinationCharacterPrevAsset上的锁。
+SourceCharacter removes the PrevAsset from DestinationCharacter FocusAssetGroup.
+SourceCharacter从DestinationCharacterFocusAssetGroup移除了PrevAsset.
+SourceCharacter slips out of TargetPronounPossessive PrevAsset.
+SourceCharacter从她的PrevAsset滑脱出来。
+SourceCharacter swaps a PrevAsset for a NextAsset on DestinationCharacter FocusAssetGroup.
+SourceCharacter把DestinationCharacterFocusAssetGroup上的PrevAsset换成了NextAsset.
+SourceCharacter tightens the PrevAsset on DestinationCharacter FocusAssetGroup a little.
+SourceCharacter稍微绑紧了位于DestinationCharacterFocusAssetGroup上的PrevAsset。
+SourceCharacter tightens the PrevAsset on DestinationCharacter FocusAssetGroup a lot.
+SourceCharacter用力绑紧了位于DestinationCharacterFocusAssetGroup上的PrevAsset。
+SourceCharacter unlocks the PrevAsset on DestinationCharacter FocusAssetGroup.
+SourceCharacter打开了DestinationCharacterFocusAssetGroup上PrevAsset的锁。
+SourceCharacter unlocks and removes the PrevAsset from DestinationCharacter FocusAssetGroup.
+SourceCharacter打开并移除了DestinationCharacterFocusAssetGroup上的PrevAsset.
+SourceCharacter uses a NextAsset on DestinationCharacter FocusAssetGroup.
+SourceCharacter在DestinationCharacterFocusAssetGroup上使用了NextAsset.
+Adding...
+添加中...
+Add
+添加
+Add TimerTime minutes to the Timer
+增加TimerTime分钟定时
+Tighten / Loosen
+绑紧/解松
+Option already set
+选项已设置
+Beep
+发送私聊
+Beep from
+好友私聊来自
+Beep from your owner in your private room
+来自你私人房中主人的私聊
+(Mail)
+(邮件)
+With Message
+以及以下信息
+Toggle closed eyes blindness
+更改闭眼时的失明等级
+Item is already equipped.
+物品已经装备.
+Item is blocked by GGTS.
+物品被GGTS锁住了.
+AssetName must be unlocked first.
+AssetName必须先解锁.
+Item is blocked by user.
+物品被用户屏蔽了.
+Item is blocked in this room.
+物品在这个房间被屏蔽了.
+Brightness
+亮度
+Cancel
+取消
+Cannot change this option by yourself.
+不能自己更改这个选项。
+Cannot use on yourself.
+不能对自己使用
+Cannot change while locked
+不能在被锁定时使用
+Challenge:
+挑战:
+Type /help for a list of commands
+输入 /help 查看命令列表
+You are not on that member's friendlist; ask TargetPronounObject to friend you before leashing TargetPronounObject.
+你不在该玩家的好友列表中。在使用链子之前，请先让该玩家添加你为好友。
+Mixed
+混合区
+Male-only
+仅男性
+Female-only
+仅女性
+Asylum
+收容所
+Choose struggling method...
+选择挣扎方式...
+Struggle in chat room
+在聊天室中公开挣扎
+SourceCharacter struggles to remove PronounPossessive PrevAsset
+SourceCharacter 挣扎着试图移除 PronounPossessive 的 PrevAsset
+SourceCharacter gives up struggling out of PronounPossessive PrevAsset
+SourceCharacter 放弃移除 PronounPossessive 的 PrevAsset
+SourceCharacter struggles out of PronounPossessive PrevAsset
+SourceCharacter 解开了 PronounPossessive 的 PrevAsset
+SourceCharacter is slowly struggling out of PronounPossessive PrevAsset
+SourceCharacter 正缓慢的挣开 PronounPossessive 的 PrevAsset
+SourceCharacter is making progress while struggling on PronounPossessive PrevAsset
+SourceCharacter在挣扎中逐渐取得进展，试图挣脱PronounPossessive的PrevAsset。
+SourceCharacter struggles skillfully to remove PronounPossessive PrevAsset
+SourceCharacter有技巧地解松PronounPossessive的PrevAsset。
+SourceCharacter gradually struggles out of PronounPossessive PrevAsset
+SourceCharacter渐渐松开了PronounPossessive的PrevAsset。
+SourceCharacter methodically works to struggle out of PronounPossessive PrevAsset
+SourceCharacter有条不紊地从PronounPossessive的PrevAsset挣脱了
+Clear active poses
+清除当前姿势
+Clear facial expressions
+清除面部表情
+Save color to currently selected slot
+将颜色存储至目前选择的槽位
+Use this color
+使用该颜色
+Confirm
+确认
+Return to the item menu
+回到物品菜单
+Crafted item properties.
+制作的物品的特性。
+Description: CraftDescription
+描述：CraftDescription
+Crafter: MemberName (MemberNumber)
+制作者：MemberName (MemberNumber)
+Name: CraftName
+名称：CraftName
+Private: CraftPrivate
+私有: CraftPrivate
+Effects: CraftProperty
+特性：CraftProperty
+Current Mode:
+目前的模式:
+Decoding the lock...
+正在解码…
+Delete
+删除
+Glans
+龟头
+Penis
+阴茎
+Sexual activities
+交互动作
+Default color
+默认颜色
+Change item color
+更换颜色
+Change expression color
+更改表情颜色
+Select default color
+选择默认颜色
+Unable to change color due to player permissions
+因玩家权限设置无法更改颜色
+Crafted properties
+制作特性
+Dismount
+起身
+Escape from the item
+逃离该物品
+Back to character
+回到角色
+GGTS controls this item
+GGTS控制这个物品
+Inspect the lock
+检查锁
+Unable to inspect due to player permissions
+因玩家权限设置无法检查
+Change item layering
+改变物品分层
+Use a lock
+使用一把锁
+Unable to lock item due to player permissions
+因角色权限设置无法上锁
+Lock related actions
+锁定相关动作
+View next items
+查看后续物品
+Exit permission mode
+退出权限编辑模式
+Edit item permissions
+编辑物品权限
+Try to pick the lock
+尝试开锁
+Unable to pick the lock
+无法撬锁
+Cannot reach lock
+无法接触到锁
+Try to pick the lock (jammed)
+尝试开锁（卡住了）
+Unable to pick without lockpicks
+没有开锁工具无法撬锁
+Unable to pick the lock due to player permissions
+由于玩家权限设置无法撬锁
+View previous items
+查看之前物品
+Use your remote
+使用你的遥控器
+Unable to use due to player permissions
+因玩家权限设置无法使用
+Your hands must be free to use remotes
+你必须双手自由才能使用遥控器
+You do not have access to this item
+没有足够的权限
+You have not bought a lover's remote yet.
+你还没买过爱人遥控器
+You have not bought a remote yet.
+你还没买过遥控器
+Your owner is preventing you from using remotes.
+你的主人禁止你使用遥控器
+Using remotes on this item has been blocked
+对该物品使用遥控器的能力被屏蔽了
+Remove the item
+移除该物品
+Try to struggle out
+尝试挣脱
+Unlock the item
+解锁物品
+Use this item
+使用该物品
+Dismounting...
+正在离开…
+Enable random input of time from everyone else
+允许所有其他人随机输入时间
+Escaping...
+正在逃离…
+Unavailable while crafting
+在制作物品时不可用。
+Blocked due to item permissions
+因物品权限而被禁止
+Remove locks before changing
+更改前移除锁
+Facial expression
+面部表情
+Hacking the item...
+正在黑入…
+hours
+小时
+in the Asylum
+在收容所
+in room
+位于房间
+Intensity:
+强度：
+Item intensity: Disabled
+物品强度：关闭
+Item intensity: Low
+物品强度：低
+Item intensity: Medium
+物品强度：中
+Item intensity: High
+物品强度：高
+Item intensity: Maximum
+物品强度：最大
+Configure {asset} priority
+配置总优先级
+Exit
+退出
+Hide hidden layers
+隐藏隐藏层
+Layer priority
+配置特定层的优先级
+Item configuration locked
+物品配置已锁定
+Reset layering
+重置分层
+Show hidden layers
+显示隐藏层
+Locking...
+正在锁上…
+Member number on lock:
+锁上标着的会员编号:
+Another item is blocking access to this lock
+另一个物品挡住了这个锁
+Your hands are shaky and you lose some tension by accident!
+你的双手发抖，不小心松开了一些锁芯！
+SourceCharacter jammed a lock on DestinationCharacterName and broke PronounPossessive lockpick!
+SourceCharacter卡住了DestinationCharacterName的锁并且损坏了PronounPossessive开锁器！
+You jammed the lock.
+你把锁芯卡住了
+You are too tired to continue. Time remaining:
+你太累了无法继续. 剩余时间:
+Click the pins in the correct order to open the lock!
+按照正确的顺序点击锁芯来解锁!
+Clicking the wrong pin may falsely set it.
+点击错误的锁芯可能会将它错误的抬起.
+It will fall back after clicking other pins.
+它在你点击其他锁芯后可能会重新掉落.
+Failing or quitting will break your lockpick for 1 minute
+失败或退出后的一分钟内无法尝试开锁
+Remaining tries:
+剩余尝试次数:
+Loosen...
+解松…
+Click or press space when the circles are aligned
+当圆圈对齐的时候，点击或者按下空格
+...A little
+…一点点
+...A lot
+…很多
+You can struggle to loosen this restraint
+你可以通过挣扎来解松此束缚
+Maximum:
+最大：
+Minimum:
+最小：
+minutes
+分钟
+View next expressions
+查看后续表情
+View next page
+查看下一页
+You have no items in this category
+这个分类下没有物品
+No lockable item equipped
+没有装备可上锁的物品
+Joined Room
+加入了房间
+Chat Message
+聊天消息
+Disconnected
+掉线了
+from ChatRoomName
+来自ChatRoomName
+LARP - Your turn
+体感对战-你的回合
+Test Notification
+测试通知
+Change Opacity
+改变遮光度
+Option needs to be bought
+需要购买的选项
+Blocked by owner rule
+被主人规则屏蔽
+<b>You've asked TargetCharacterName to become your submissive. Don't forget to friend them if they accept!</b>
+<b>你已经请求TargetCharacterName成为你的顺从者。如果她同意了，别忘了添加她为好友！</b>
+Page
+页
+A Pandora guard puts TargetCharacterName in new restraints.
+一位潘多拉守卫将TargetCharacterName用新的束缚固定。
+A Pandora guard spanks TargetCharacterName butt many times.
+一位潘多拉守卫多次打击TargetCharacterName的屁股。
+A Pandora guard hoses TargetCharacterName with cold water.
+一位潘多拉守卫用冷水冲洗TargetCharacterName。
+A Pandora guard gags TargetCharacterName.
+一位潘多拉守卫给TargetCharacterName塞上口塞。
+A Pandora guard removes the gag from TargetCharacterName.
+一位潘多拉守卫从TargetCharacterName的嘴里取出口塞。
+A Pandora guard chains and hogties TargetCharacterName.
+一位潘多拉守卫用锁链将TargetCharacterName绑成驷马束缚。
+A Pandora guard puts TargetCharacterName in shibari bondage.
+一位潘多拉守卫将TargetCharacterName用绳子束缚。
+A Pandora guard uses prison restraints on TargetCharacterName.
+一位潘多拉守卫用监狱式束缚固定TargetCharacterName。
+A Pandora guard strips TargetCharacterName and confiscates the clothes for a while.
+一位潘多拉守卫脱掉TargetCharacterName的衣服并没收了一段时间。
+A Pandora guard adds locks on TargetCharacterName restraints.
+一位潘多拉守卫在TargetCharacterName的束缚上加锁。
+A Pandora guard locks a chastity device on TargetCharacterName.
+一位潘多拉守卫在TargetCharacterName身上锁上贞操带。
+A Pandora guard removes the chastity device from TargetCharacterName.
+一位潘多拉守卫从TargetCharacterName身上取下贞操带。
+A Pandora guard unlocks some restraints on TargetCharacterName.
+一位潘多拉守卫解开TargetCharacterName的一些束缚。
+A Pandora guard removes some restraints on TargetCharacterName.
+一位潘多拉守卫移除TargetCharacterName的一些束缚。
+A Pandora guard puts TargetCharacterName in a case.
+一位潘多拉守卫将TargetCharacterName关进一个箱子。
+A Pandora guard releases TargetCharacterName from the case.
+一位潘多拉守卫将TargetCharacterName从箱子里释放出来。
+Pandora guard SourceCharacter puts TargetCharacterName in new restraints.
+潘多拉守卫SourceCharacter将TargetCharacterName固定在新的束缚中。
+Pandora guard SourceCharacter spanks TargetCharacterName butt many times.
+潘多拉守卫SourceCharacter多次打击TargetCharacterName的屁股。
+Pandora guard SourceCharacter hoses TargetCharacterName with cold water.
+潘多拉守卫SourceCharacter用冷水冲洗TargetCharacterName。
+Pandora guard SourceCharacter gags TargetCharacterName.
+潘多拉守卫SourceCharacter给TargetCharacterName塞上口塞。
+Pandora guard SourceCharacter removes the gag from TargetCharacterName.
+潘多拉守卫SourceCharacter从TargetCharacterName的嘴里取出口塞。
+Pandora guard SourceCharacter chains and hogties TargetCharacterName.
+潘多拉守卫SourceCharacter用锁链将TargetCharacterName绑成驷马束缚。
+Pandora guard SourceCharacter puts TargetCharacterName in shibari bondage.
+潘多拉守卫SourceCharacter将TargetCharacterName用绳子束缚。
+Pandora guard SourceCharacter uses prison restraints on TargetCharacterName.
+潘多拉守卫SourceCharacter用监狱式束缚固定TargetCharacterName。
+Pandora guard SourceCharacter strips TargetCharacterName and confiscates the clothes for a while.
+潘多拉守卫SourceCharacter脱掉TargetCharacterName的衣服并没收了一段时间。
+Pandora guard SourceCharacter adds locks on TargetCharacterName restraints.
+潘多拉守卫SourceCharacter在TargetCharacterName的束缚上加锁。
+Pandora guard SourceCharacter locks a chastity device on TargetCharacterName.
+潘多拉守卫SourceCharacter在TargetCharacterName身上锁上贞操带。
+Pandora guard SourceCharacter removes the chastity device from TargetCharacterName.
+潘多拉守卫SourceCharacter从TargetCharacterName身上取下贞操带。
+Pandora guard SourceCharacter unlocks some restraints on TargetCharacterName.
+潘多拉守卫SourceCharacter解锁了TargetCharacterName的一些束缚。
+Pandora guard SourceCharacter removes some restraints on TargetCharacterName.
+潘多拉守卫SourceCharacter移除了TargetCharacterName的一些束缚。
+Pandora guard SourceCharacter puts TargetCharacterName in a case.
+潘多拉守卫SourceCharacter将TargetCharacterName关进一个箱子。
+Pandora guard SourceCharacter releases TargetCharacterName from the case.
+潘多拉守卫SourceCharacter将TargetCharacterName从箱子里释放出来。
+Pandora guard SourceCharacter puts all inmates in new restraints.
+潘多拉守卫SourceCharacter将所有囚犯固定在新的束缚中。
+Pandora guard SourceCharacter spanks all inmates one by one.
+潘多拉守卫SourceCharacter一个一个地打击所有囚犯的屁股。
+Pandora guard SourceCharacter hoses all inmates with cold water.
+潘多拉守卫SourceCharacter用冷水冲洗所有囚犯。
+Pandora guard SourceCharacter gags all inmates.
+潘多拉守卫SourceCharacter给所有囚犯塞上口塞。
+Pandora guard SourceCharacter removes the gag from all inmates.
+潘多拉守卫SourceCharacter从所有囚犯的嘴里取出口塞。
+Pandora guard SourceCharacter chains and hogties all inmates.
+潘多拉守卫SourceCharacter用锁链将所有囚犯绑成驷马束缚。
+Pandora guard SourceCharacter puts all inmates in shibari bondage.
+潘多拉守卫SourceCharacter将所有囚犯用绳子束缚。
+Pandora guard SourceCharacter uses prison restraints on all inmates.
+潘多拉守卫SourceCharacter用监狱式束缚固定所有囚犯。
+Pandora guard SourceCharacter strips all inmates and confiscates the clothes for a while.
+潘多拉守卫SourceCharacter脱掉所有囚犯的衣服并没收了一段时间。
+Pandora guard SourceCharacter adds locks on all inmates restraints.
+潘多拉守卫SourceCharacter在所有囚犯的束缚上加锁。
+Pandora guard SourceCharacter locks a chastity device on all inmates.
+潘多拉守卫SourceCharacter在所有囚犯身上锁上贞操带。
+Pandora guard SourceCharacter removes the chastity device from all inmates.
+潘多拉守卫SourceCharacter从所有囚犯身上取下贞操带。
+Pandora guard SourceCharacter unlocks some restraints on all inmates.
+潘多拉守卫SourceCharacter解锁了所有囚犯的一些束缚。
+Pandora guard SourceCharacter removes some restraints on all inmates.
+潘多拉守卫SourceCharacter移除了所有囚犯的一些束缚。
+Pandora guard SourceCharacter puts all inmates in cases.
+潘多拉守卫SourceCharacter将所有囚犯关进箱子。
+Pandora guard SourceCharacter releases all inmates from their cases.
+潘多拉守卫SourceCharacter将所有囚犯从箱子里释放出来。
+Picking the lock...
+正在开锁…
+Loading, please wait
+加载中，请稍候
+SourceCharacter tries to stand properly. The exercise receives: StablePerformance points. StableResult
+SourceCharacter尝试标准站立。该练习获得：StablePerformance点。StableResult
+SourceCharacter tries to walks in a trot. The exercise receives: StablePerformance points. StableResult
+SourceCharacter尝试小跑。该练习获得：StablePerformance点。StableResult
+SourceCharacter tries to runs at a gallop. The exercise receives: StablePerformance points. StableResult
+SourceCharacter尝试飞奔。该练习获得：StablePerformance点。StableResult
+SourceCharacter tries to steps a passage. The exercise receives: StablePerformance points. StableResult
+SourceCharacter尝试走过过一段路。该练习获得：StablePerformance点。StableResult
+SourceCharacter tries to dance a pirouette. The exercise receives: StablePerformance points. StableResult
+SourceCharacter尝试跳一段单脚尖旋转。该练习获得：StablePerformance点。StableResult
+Excellent
+完美
+Very good
+非常好
+Good
+好
+Fairly good
+相当好
+Satisfactory
+满意
+Marginal
+勉强
+Insufficient
+不足
+Fairly Bad
+相当差
+Bad
+差
+Very bad
+非常差
+Not executed
+未执行
+Pose
+姿势
+Must have an arm/torso/pelvis item to use ceiling tethers.
+手臂/躯干/小腹必须有物品才能使用牵引绳
+Cannot change to the AllFours pose.
+无法改变到AllFours姿势。
+Cannot change to the BackBoxTie pose.
+无法改变到BackBoxTie姿势。
+Cannot change to the BackCuffs pose.
+无法改变到BackCuffs姿势。
+Cannot change to the BackElbowTouch pose.
+无法改变到BackElbowTouch姿势。
+Cannot change to the BaseLower pose.
+无法改变到BaseLower姿势。
+Cannot change to the BaseUpper pose.
+无法改变到BaseUpper姿势。
+Remove the suit first.
+先移除紧身衣
+Cannot be used over the applied gags.
+不能在已穿戴的口塞上使用
+Cannot be used over the applied hood.
+不能在已穿戴的头套上使用
+Cannot be used over the applied mask.
+不能在已穿戴的口罩上使用
+Cannot be used when mounted.
+不能在坐在家具上时使用
+Cannot be used while yoked.
+不能在被轭住时使用
+Cannot be used while serving drinks.
+不能在送餐时使用
+Cannot be used while the legs are spread.
+不能在腿被分开时使用
+Remove the wand first.
+先把棒子拔了
+Cannot change to the Hogtied pose.
+无法改变到Hogtied姿势。
+Cannot change to the Kneel pose.
+无法改变到Kneel姿势。
+Cannot change to the KneelingSpread pose.
+无法改变到KneelingSpread姿势。
+Cannot change to the LegsClosed pose.
+无法改变到LegsClosed姿势。
+Cannot change to the LegsOpen pose.
+无法改变到LegsOpen姿势。
+Cannot change to the OverTheHead pose.
+无法改变到OverTheHead姿势。
+Cannot use this option when wearing the item
+已经佩戴时无法使用该选项
+Cannot change to the Spread pose.
+无法改变到Spread姿势。
+You'll need help to get out
+你需要帮助来脱身
+Cannot change to the Suspension pose.
+无法改变到Suspension姿势。
+Cannot change to the TapedHands pose.
+无法改变到TapedHands姿势。
+Cannot change to the Yoked pose.
+无法改变到Yoked姿势。
+Cannot close on shaft.
+在支柱上无法封闭。
+Must be able to kneel.
+必须可以跪下
+Must be wearing a set of arm cuffs first.
+必须要先戴上一副手臂铐
+Must be wearing a set of ankle cuffs first.
+必须先戴上一副脚铐
+Must be on a bed to attach addons to.
+必须在床上才能添加配件
+Requires a closed gag.
+选择一个封闭的口塞。
+A collar must be fitted first to attach accessories to.
+必须先戴好项圈才能添加挂件
+Must free arms first.
+必须先解开手臂束缚
+Must empty butt first.
+必须先清空后庭
+Must remove clitoris piercings first
+必须先移除阴蒂穿环
+Must free feet first.
+必须先解开脚部束缚
+Must free hands first.
+必须先解开手部束缚
+Must free legs first.
+必须先解开腿部束缚
+Must empty vulva first.
+必须先清空阴道
+Must have female upper body.
+必须有女性上身。
+Must have male upper body.
+必须有男性上身。
+Must have full penis access first.
+必须能够完全使用阴茎。
+Must have male genitalia.
+必须有男性生殖器。
+Must have female genitalia.
+必须有女性生殖器。
+Must not have a forced erection.
+必须不能有强制勃起。
+Must remove chastity cage first.
+必须先移除贞操笼。
+Must stand up first.
+必须先站起来
+TargetPronounSubject must be wearing a baby harness to chain the mittens.
+TargetPronounObject必须穿戴婴儿束带才能连接无指手套的链子。
+You need some padlocks to do this.
+你需要一些挂锁才能如此做。
+You need a padlock key to do this.
+你需要一些挂锁钥匙才能如此做。
+Requires a chest harness.
+需要胸部束带。
+Requires a hip harness.
+需要臀部束带。
+Requires round piercings on nipples.
+需要乳头上是圆形穿环。
+Unchain mittens.
+移除手套链子
+Remove the chain first.
+先移除锁链
+Must remove chastity first.
+必须先移除贞操带
+Remove some clothes first.
+先脱掉些衣服
+Must remove face mask first.
+必须先摘下面具
+Remove some restraints first.
+先移除一些束缚
+Must remove shackles first.
+必须先移除镣铐
+Remove the suspension first.
+先从悬挂上下来
+Unzip the suit first.
+先解开外套
+,
+，
+, and
+，和
+View previous expressions
+查看之前表情
+Allowed limited item
+允许限制物品
+Heavily blinds
+重度遮眼
+Lightly blinds
+轻度遮眼
+Blinds
+遮眼
+Restrains hands
+束缚手
+Blocked item
+被屏蔽的物品
+Buygroup member
+购买物品组成员
+Heavily deafens
+重度遮耳
+Lightly deafens
+轻度遮耳
+Deafens
+遮耳
+Extended item
+扩展物品
+D/s Family only
+仅限主奴家族
+Favorite
+最爱
+Favorite (theirs & yours)
+最爱(对方的&你的)
+Favorite (yours)
+最爱(你的)
+Restrains legs
+束缚腿
+Heavily gags
+重度塞口
+Lightly gags
+轻度塞口
+Gags
+塞口
+Totally gags
+完全塞口
+Held
+手持
+Locked
+锁定
+Lovers only
+仅限恋人
+Owner only
+仅限主人
+Locked with a AssetName
+被AssetName锁住了
+Automatically locks
+自动上锁
+View previous page
+查看上一页
+Private
+私人
+<i>Private</i>
+<i>私人房间</i>
+Click here to speed up the progress
+点击这里来加速
+Click when the player reaches the buckle to progress
+角色碰到搭扣前按下鼠标来获得进度
+Click the ropes before they hit the ground to progress
+在绳索落到地面前点击以获得进度
+Alternate keys A (Q on AZERTY) and D to speed up
+交替点按A和D键加速（在AZERTY键盘上为Q和D）
+Alternate keys A and S or X and Y on a controller
+交替按下按控制器上的A键和S键，或X键和Y键
+him
+他
+her
+她
+them
+TA
+his
+他的
+their
+TA的
+himself
+他自己
+herself
+她自己
+themself
+TA自己
+he
+他
+she
+她
+they
+TA
+Received at
+接收于
+Remove item when the lock timer runs out
+在计时器耗尽时移除物品
+Removing...
+移除中…
+Need Bondage ReqLevel
+需要束缚技能等级ReqLevel
+Requires the player character
+需要玩家角色
+Requires self-bondage ReqLevel.
+需要自缚技能等级ReqLevel
+Active owner/lover rules
+启用的主人/恋人规则
+Cannot change:
+无法更改:
+Blocked: Family keys
+禁止:家族钥匙
+Blocked: Normal keys
+禁止:普通钥匙
+Your owner cannot use lover locks on you
+你的主人不能对你使用恋人锁
+No lover locks on yourself
+不能对自己使用恋人锁
+Cannot change your nickname
+不能修改你的昵称
+No owner locks on yourself
+你的身上没有主人锁
+Blocked: Remotes on anyone
+禁止:所有人的遥控器
+Blocked: Remotes on yourself
+禁止:你自己的遥控器
+No whispers around your owner
+在你主人身边时无法悄悄话
+No active rules
+没有生效的规则
+Slave collar unlocked
+奴隶项圈已解锁
+Save/Load Expressions
+存储/读取表情
+(Empty)
+(空白)
+Load
+读取
+Save
+保存
+Select an activity to use on the GroupName.
+请选择要对GroupName做的动作.
+No activity available on the GroupName.
+在GroupName上没有可用的动作。
+Select an item to use on the GroupName.
+请选择要用在GroupName的物品
+Select a lock to use on the GroupName.
+请选择要用在GroupName的锁。
+This looks like its locked by a AssetName.
+这看起来被AssetName锁上了。
+This looks like its locked by something.
+这看起来被什么东西锁上了。
+Sent at
+发送自
+Unknown ($target)
+未知 ($target)
+TargetCharacterName was banned by SourceCharacter.
+TargetCharacterName被SourceCharacter给BAN掉了.
+TargetCharacterName was demoted from administration by SourceCharacter.
+TargetCharacterName被SourceCharacter取消了房间管理员权限.
+SourceCharacter disconnected.
+SourceCharacter掉线了.
+SourceCharacter entered.
+SourceCharacter进来了.
+SourceCharacter called the maids to escort TargetCharacterName out of the room.
+SourceCharacter呼叫女仆把TargetCharacterName从房间护送出去。
+SourceCharacter left.
+SourceCharacter离开了.
+The Bondage Club is pleased to announce that SourceCharacter and TargetCharacter are starting a 7 days minimum period as lovers.
+束缚俱乐部荣幸地宣布 SourceCharacter 与 TargetCharacter 成为了爱人。爱人阶段至少7天可以订婚。
+The Bondage Club is pleased to announce that SourceCharacter and TargetCharacter are now engaged and are starting a 7 days minimum period as fiancées.
+束缚俱乐部荣幸地宣布 SourceCharacter 与 TargetCharacter 已订婚，成为了未婚妻。订婚阶段至少7天可以结婚。
+The Bondage Club is proud to announce that SourceCharacter and TargetCharacter are now married. Long may it last.
+束缚俱乐部骄傲地宣布 SourceCharacter 与 TargetCharacter 结婚了。祝你们的婚姻长长久久。
+The Bondage Club announces that SourceCharacter released TargetCharacter from PronounPossessive ownership.
+束缚俱乐部宣布SourceCharacter解除了对TargetCharacter的所有权。
+The Bondage Club announces that SourceCharacter canceled the trial ownership of TargetCharacter.
+束缚俱乐部宣布SourceCharacter取消了与TargetCharacter的主从试用关系。
+The Bondage Club is proud to announce that SourceCharacter is now fully collared. PronounPossessive fate is in PronounPossessive owners hands.
+束缚俱乐部宣布SourceCharacter已经被戴上项圈。PronounObject的命运将由PronounObject的主人决定。
+Saying a forbidden word is blocked by your owner.  You can use /forbiddenwords to review the words.
+你被你的主人禁止说出禁止词。你可以使用/forbiddenwords来查看这些词。
+You said a forbidden word and will be silenced for 15 minutes.  You can use /forbiddenwords to review the words.
+你因为说出禁止词而被禁言10分钟。你可以使用/forbiddenwords来查看这些词。
+You said a forbidden word and will be silenced for 30 minutes.  You can use /forbiddenwords to review the words.
+你因为说出禁止词而被禁言30分钟。你可以使用/forbiddenwords来查看这些词。
+You said a forbidden word and will be silenced for 5 minutes.  You can use /forbiddenwords to review the words.
+你因为说出禁止词而被禁言5分钟。你可以使用/forbiddenwords来查看这些词。
+Your lover is now allowing your owner to use lovers locks on you.
+你的恋人现在允许你的主人对你使用恋人锁。
+Your lover is now preventing your owner from using lovers locks on you.
+你的恋人现在禁止你的主人对你使用恋人锁。
+Your lover is now allowing you to use lovers locks on yourself.
+你的恋人现在允许你对自己使用恋人锁。
+Your lover is now preventing you from using lovers locks on yourself.
+你的恋人现在禁止你对自己使用恋人锁。
+SourceCharacter is asking you to be PronounPossessive lover.  Click on PronounObject and manage your relationship to accept, don't do anything to refuse.
+SourceCharacter 正在请求你做PronounObject的恋人。点击该玩家并选择“管理你们的关系”以接受。如果要拒绝，你不需要执行任何操作。
+SourceCharacter is asking you to become PronounPossessive fiancée.  Click on PronounObject and manage your relationship to accept, don't do anything to refuse.
+SourceCharacter 正在请求你做PronounObject的未婚妻。点击该玩家并选择“管理你们的关系”以接受。如果要拒绝，你不需要执行任何操作。
+SourceCharacter is proposing you to become PronounPossessive wife.  Click on PronounObject and manage your relationship to accept, don't do anything to refuse.
+SourceCharacter 正在请求你做PronounObject的妻子。点击该玩家并选择“管理你们的关系”以接受。如果要拒绝，你不需要执行任何操作。
+SourceCharacter has prepared a great collaring ceremony.  A maid brings a slave collar, which PronounPossessive submissive must consent to wear.
+SourceCharacter准备了一场隆重的收奴典礼。一位女仆拿出了一个奴隶项圈，PronounObject的从仆必须自愿才能戴上。
+SourceCharacter is offering you to start a trial period as PronounPossessive submissive.  Click on PronounObject and manage your relationship to accept, don't do anything to refuse.
+SourceCharacter向你提供了试成为PronounObject的从仆的机会。点击PronounObject并选择管理你们的关系来接受邀请。若你要拒绝，忽略本消息即可。
+Your owner is now allowing you to access others when they're there.
+你的主人现在允许你于她在场时接触其他人。
+Your owner is now preventing you from accessing others when they're there.
+你的主人现在禁止你于她在场时接触其他人。
+Your owner is now allowing you to access yourself when they're there.
+你的主人现在允许你于她在场时接触自己。
+Your owner is now preventing you from accessing yourself when they're there.
+你的主人现在禁止你于她在场时接触自己。
+Your owner has changed the appearance zones you can modify.
+你的主人改变了你能够修改的外观区域。
+Your owner has changed the item zones you can access.
+你的主人改变了你能够接触的物品区域。
+Your owner has changed the Bondage Club areas you can access.
+你的主人改变了你能够访问的束缚俱乐部区域。
+Your owner is now allowing you to access your wardrobe and change clothes.
+你的主人现在允许你访问衣柜并更换服装了。
+Your owner has blocked your wardrobe access.  You won't be able to change clothes until that rule is revoked.
+你的主人禁用了你的衣柜。直到该限制被撤销，你无法更换服装。
+Your owner has blocked your wardrobe access for a day.  You won't be able to change clothes.
+你的主人禁用了你的衣柜，时长为1天。你现在无法更换服装。
+Your owner has blocked your wardrobe access for an hour.  You won't be able to change clothes.
+你的主人禁用了你的衣柜，时长为1小时。你现在无法更换服装。
+Your owner has blocked your wardrobe access for a week.  You won't be able to change clothes.
+你的主人禁用了你的衣柜，时长为1星期。你现在无法更换服装。
+Your owner is now allowing you to change your pose when they're there.
+你的主人现在允许你于她在场时改变姿势。
+Your owner is now preventing you from changing your pose when they're there.
+你的主人现在禁止你于她在场时
+Your owner released you from the slave collar.
+你的主人卸下了你的奴隶项圈。
+Your owner has locked the slave collar on your neck.
+你的主人在你的脖子上安装了奴隶项圈。
+Your owner is now allowing you to emote when they're there.
+你的主人现在允许你于她在场时说心里话。
+Your owner is now preventing you from emoting when they're there.
+你的主人现在禁止你于她在场时说心里话。
+Your owner has changed your list of forbidden words.  You can use /forbiddenwords to review the words.
+你的主人改变了你的禁止词列表。你可以使用/forbiddenwords来查看这些词。
+Your owner requires you to spin the Wheel of Fortune.
+你的主人要求你转动命运之轮。
+Your owner is now allowing you to have keys.  You can buy keys from the club shop.
+你的主人现在允许你持有钥匙。你可以在俱乐部商店购买钥匙。
+Your owner is now allowing you to use family keys.
+你的主人现在允许你使用家族钥匙。
+Your owner is now preventing you from getting new keys.  The club shop will not sell keys to you anymore.
+你的主人现在不允许你获取新的钥匙。俱乐部商店将不再向你出售钥匙。
+Your owner is now preventing you from using family keys.
+你的主人现在禁止你使用家族钥匙。
+Your owner has confiscated your keys.  All your regular keys are lost.
+你的主人没收了你的钥匙。你失去了你所有的一般钥匙。
+Your owner has changed your nickname.
+你的主人更改了你的昵称
+Your owner is now allowing you to change your nickname.
+你的主人现在允许你改变你的昵称。
+Your owner is now preventing you from changing your nickname.
+你的主人现在禁止你改变你的昵称。
+Your owner is now allowing you to have remotes.  You can buy remotes from the club shop.
+你的主人现在允许你持有遥控器。你可以在俱乐部商店购买遥控器。
+Your owner is now allowing you to use remotes on yourself.
+你的主人现在允许你在自己身上使用遥控器。
+Your owner is now preventing you from getting new remotes.  The club shop will not sell remotes to you anymore.
+你的主人现在不允许你获取新的遥控器。俱乐部商店将不再向你出售遥控器。
+Your owner is now preventing you from using remotes on yourself.
+你的主人现在不允许你在自己身上使用遥控器。
+Your owner has confiscated your remotes.  All your remotes are lost.
+你的主人没收了你的遥控器。你失去了所有遥控器
+Your owner is now allowing to using owner locks on yourself.
+你的主人现在允许你在自己身上使用主人锁。
+Your owner is now preventing you from using owner locks on yourself.
+你的主人现在不允许你在自己身上使用主人锁。
+Your owner is now allowing you to talk publicly when they're there.
+你的主人现在允许你于她在场时公开讲话。
+Your owner is now preventing you from talking publicly when they're there.
+你的主人现在禁止你于她在场时公开讲话。
+Your owner is now allowing you to whisper to other members when they're there.
+你的主人现在允许你于她在场时向其他人发送悄悄话。
+Your owner is now preventing you from whispering to other members when they're there.
+你的主人现在禁止你于她在场时向其他人发送悄悄话。
+Your owner has released you.  You're free from all ownership.
+你的主人释放了你。你已经不再被拥有。
+The member number is invalid or you do not own this submissive.
+会员编号无效，或者你并不拥有这个顺从者。
+Your submissive is now fully released from your ownership.
+你的顺从者已经完全从你的拥有中得到释放。
+The Bondage Club is pleased to announce that SourceCharacter is starting a 7 days minimum trial period as a submissive.
+束缚俱乐部很荣幸的宣布SourceCharacter开始了从仆试任期，试任至少7天后才能转正。
+TargetCharacterName was moved to the left by SourceCharacter.
+TargetCharacterName被SourceCharacter移到了左边.
+TargetCharacterName was moved to the right by SourceCharacter.
+TargetCharacterName被SourceCharacter移到了右边.
+TargetCharacterName was promoted to administrator by SourceCharacter.
+TargetCharacterName被SourceCharacter设为了房间管理员.
+TargetCharacterName was removed from the room whitelist by SourceCharacter.
+TargetCharacterName已被SourceCharacter从房间白名单中删除。
+TargetCharacterName was added to the room whitelist by SourceCharacter.
+TargetCharacterName已被SourceCharacter添加到房间白名单。
+SourceCharacter shuffles the position of everyone in the room randomly.
+SourceCharacter随机安排了房间中所有人的位置.
+SourceCharacter swapped TargetCharacterName and DestinationCharacterName1 places.
+SourceCharacter交换了TargetCharacterName和DestinationCharacterName1的位置。
+SourceCharacter updated the room. Name: ChatRoomName. Limit: ChatRoomLimit.  ChatRoomPrivacy.  ChatRoomLocked.
+SourceCharacter更新了房间信息. 名称: ChatRoomName. 人数上限: ChatRoomLimit.  ChatRoomPrivacy.  ChatRoomLocked.
+Show all zones
+显示所有区域
+Show the time remaining/being added
+显示剩余时间和增加的时间
+Someone
+某人
+Status & effects:
+状态和效果：
+Try to unfasten
+试着打开扣锁
+Try to squeeze out
+试着挤出去
+Impossible to escape!
+不可能逃脱!
+Use brute force
+使用蛮力
+Struggling...
+挣扎中…
+Swapping...
+正在交换…
+Tighten...
+绑紧…
+You can tighten or loosen this item
+你可以绑紧或解松此物品
+tightens
+捆紧
+Tightness:
+松紧度：
+Try to loosen the item
+尝试解松该物品
+Time left:
+剩余时间
+Unknown time left
+未知剩余时间
+Unlocked
+解锁
+Unlocking...
+解锁中…
+Using none of your skill...
+不使用你的技巧...
+Using 25% of your skill...
+使用你25%的技巧...
+Using 50% of your skill...
+使用你50%的技巧...
+Using 75% of your skill...
+使用你75%的技巧...
+Wink/Blink
+眨眼
+The item will be removed when the lock timer runs out
+在计时器耗尽时该物品会被移除
+The item will stay when the lock timer runs out
+在计时器耗尽时该物品会保留
+This zone is out of reach from another item
+这个区域目前因其他物品影响无法触及
+Your owner doesn't allow you to access that zone
+你的主人不允许你接触该区域
+You're too far to reach DialogCharacterObject's body and items.
+你距离太远，无法触及DialogCharacterObject的身体和物品。

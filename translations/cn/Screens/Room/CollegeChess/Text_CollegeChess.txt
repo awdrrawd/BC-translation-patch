@@ -1,0 +1,6 @@
+### seeded from upstream: Screens/Room/CollegeChess/Text_CollegeChess_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+College Entrance
+大学入口
+Your Profile
+个人档案

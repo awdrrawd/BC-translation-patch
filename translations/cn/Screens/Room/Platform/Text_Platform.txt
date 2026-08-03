@@ -1,0 +1,58 @@
+### seeded from upstream: Screens/Room/Platform/Text_Platform_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Exit Bondage Brawl
+退出束缚格斗
+Save your progress
+保存您的进度
+Select a slot to save your progress
+选择一个位置来保存您的进度
+Save on slot #
+保存在位置 #
+Character details
+角色详情
+Change active character
+更改活动角色
+Turn audio on/off
+打开/关闭音频
+Game over.  Use the exit button to try again.
+游戏结束。使用退出按钮重试。
+CharacterName gained a level!
+角色名称升级！
+Give her an item
+给她一个物品
+Start dating Olivia
+开始与 Olivia 约会
+Break-up with Olivia
+与 Olivia 分手
+Dominate Olivia
+支配 Olivia
+Release Olivia
+释放 Olivia
+Submit to Olivia
+屈服于 Olivia
+Get free from Olivia
+摆脱 Olivia
+Start dating Edlaran
+开始与 Edlaran 约会
+Break-up with Edlaran
+与 Edlaran 分手
+Dominate Edlaran
+支配 Edlaran
+Release Edlaran
+释放 Edlaran
+Submit to Edlaran
+屈服于 Edlaran
+Get free from Edlaran
+摆脱 Edlaran
+Start dating Lyn
+开始与 Lyn 约会
+Break-up with Lyn
+与 Lyn 分手
+Dominate Lyn
+支配 Lyn
+Release Lyn
+释放 Lyn
+Submit to Lyn
+屈服于 Lyn
+Get free from Lyn
+从 Lyn 手里逃脱

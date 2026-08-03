@@ -1,0 +1,20 @@
+### seeded from upstream: Screens/Room/PrivateBed/Text_PrivateBed_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Return to your room
+返回你的房间
+Change your clothes
+更换你的衣服
+Your items & profile
+你的物品和资料
+An orgasm is coming!
+高潮即将来临!
+Resist!
+抵抗!
+Try to resist
+尝试抵抗
+Surrender
+投降
+Recovering from an orgasm...
+从高潮中恢复...
+Your owner forbids you from leaving too quickly.
+你的主人禁止你太快离开。

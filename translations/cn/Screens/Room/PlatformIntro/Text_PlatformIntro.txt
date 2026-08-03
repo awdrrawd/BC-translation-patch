@@ -1,0 +1,32 @@
+### seeded from upstream: Screens/Room/PlatformIntro/Text_PlatformIntro_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Exit
+退出
+New Game
+新游戏
+Load
+载入
+Cancel
+取消
+Loading assets:
+加载资源中：
+Bondage Brawl is a 2D platformer built to test MMD animations.
+束缚格斗是一个用于测试 MMD 动画的 2D 平台游戏。
+If you like it or have ideas to improve it, please contact Ben987.
+如果你喜欢它或有改进的想法，请联系 Ben987。
+To walk, use the A or D keys.  Double-tap these keys to run.
+使用A或D键行走。双击按键以奔跑。
+Use the space bar to jump, W to enter doors and S to crouch.
+使用空格键跳跃，W键进入门，S键蹲下。
+L to punch, K to kick, I to uppercut and O to restrain wounded.
+L键拳击，K键踢腿，I键上勾拳，O键制服受伤者。
+You can also use a controller, set it up in your preferences.
+你也可以使用控制器，在你的偏好设置中设置它。
+Your health and experience are on the top left of the screen.
+你的生命值和经验值显示在屏幕左上角。
+Restrain wounded girls to get experience before they get up.
+在受伤的女孩她们起身之前束缚住她们以获得经验。
+Go to any bedroom to heal and save, using keys from 0 to 9.
+去任何卧室治疗和保存，使用0到9键。
+The models might blink if you don't wait for all assets to load.
+如果你不等待所有资源加载完毕，模型可能会闪烁。

@@ -1,0 +1,10 @@
+### seeded from upstream: Screens/MiniGame/GetUp/Text_GetUp_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Click to lean right. Try to stay in the middle!
+点击以向右靠。试着保持在中间！
+Click to start.
+点击以开始。
+You did it!
+你做到了！
+You lost your balance!
+你失去了平衡！

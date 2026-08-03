@@ -1,0 +1,10 @@
+### seeded from upstream: Screens/Room/MaidQuarters/Text_MaidQuarters_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Back to the Bondage Club
+返回束缚俱乐部
+Your Profile
+个人档案
+Change Appearance
+更换外观
+Wear Maid Uniform
+穿上女仆制服

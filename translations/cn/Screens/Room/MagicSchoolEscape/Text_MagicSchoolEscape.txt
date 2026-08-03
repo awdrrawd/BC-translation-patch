@@ -1,0 +1,8 @@
+### seeded from upstream: Screens/Room/MagicSchoolEscape/Text_MagicSchoolEscape_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Back to the Magic School
+返回魔法学校
+Your Profile
+个人档案
+Cast an Escape Spell
+施放一个逃脱咒语

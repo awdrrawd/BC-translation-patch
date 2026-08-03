@@ -1,0 +1,10 @@
+### seeded from upstream: Screens/MiniGame/DojoStruggle/Text_DojoStruggle_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Tap to navigate the rope between the other ropes.  Tap to start.
+点击屏幕，将绳头穿过其他绳子。触碰以开始。
+Perfect!  You've escaped on the first try.  Click on yourself to continue.
+完美！你第一次尝试就逃脱了。点击你自己以继续。
+Congrats!  You were able to escape.  Click on yourself to continue.
+恭喜！你成功逃脱了。点击你自己以继续。
+Sorry, you've failed to escape.  Click on yourself to continue.
+抱歉，你没能逃脱。点击你自己以继续。

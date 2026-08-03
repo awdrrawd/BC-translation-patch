@@ -1,0 +1,28 @@
+### seeded from upstream: Screens/Online/GameClubCard/Text_GameClubCard_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Online Club Card Configuration
+在线俱乐部卡牌配置
+Your player slot:
+你的玩家位置：
+Not playing
+不玩
+First player
+第一玩家
+Second player
+第二玩家
+A room administrator can start the game when two players are selected.
+房间管理员能在两个玩家被选定后开启游戏。
+The Club Card game is running, you cannot change settings.
+俱乐部卡牌游戏正在运行，你不能改变设置。
+Start the game
+开始游戏
+Join the game
+加入游戏
+Cannot join the game, the room administrator isn't in it.
+无法加入游戏，房间管理员不在其中。
+Reset Game
+重置游戏
+Club Card Animation
+俱乐部卡牌动画
+Auto Spectate
+自动观战

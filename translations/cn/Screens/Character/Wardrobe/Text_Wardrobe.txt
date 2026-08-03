@@ -1,0 +1,16 @@
+### seeded from upstream: Screens/Character/Wardrobe/Text_Wardrobe_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Load
+读取
+Save
+储存
+Return
+返回
+Save or load your favorite appearance
+储存或读取你喜爱的外观
+Reorder Slots
+排列栏位
+Click to select slots to move
+点击选择栏位移动
+Click on slots to place selections
+点击栏位放置选择内容

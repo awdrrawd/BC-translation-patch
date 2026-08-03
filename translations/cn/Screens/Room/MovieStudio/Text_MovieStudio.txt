@@ -1,0 +1,54 @@
+### seeded from upstream: Screens/Room/MovieStudio/Text_MovieStudio_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Main Hall
+回到大厅
+Your Profile
+个人资料
+Wait 1 Minute
+等待1分钟
+Scene 1
+场景1
+Scene 2
+场景2
+Scene 3
+场景3
+(The movie director waves at you.  Telling you to try something else.)
+(电影导演向你挥手，告诉你尝试其他事情。)
+(The movie director taps her foot.  She seems to be getting impatient.)
+(电影导演点着脚。她似乎变得不耐烦了。)
+(The movie director checks on her phone.  She seems to be bored by what you're doing.)
+(电影导演查看她的手机。她似乎对你正在做的事情感到无聊。)
+(The movie director yawns loudly.  She seems to want more action.)
+(电影导演大声打哈欠。她似乎想要更多的动作。)
+(A maid enters the room, moves the drawer away and looks at you with a grin.)  Someone got herself in trouble?
+(一个女仆走进房间，移开抽屉，笑着看着你。) 有人惹上麻烦了？
+(A maid enters the room, moves the drawer away and rubs her hands greedily.)  Well, well, well, what do we have here?
+(一个女仆走进房间，移开抽屉，贪婪地揉着手。) 哦，哦，哦，我们这里有什么？
+(A maid enters the room, moves the drawer away and smiles at you.)  Hello, Miss.
+(一个女仆走进房间，移开抽屉，对你微笑。) 你好，小姐。
+(A maid enters the room, moves the drawer away and nods politely.)  Sorry to bother you.
+(一个女仆走进房间，移开抽屉，礼貌地点头。) 很抱歉打扰你。
+(A Club Mistress enters the room, her heels clicking on the ground.  She looks at you two.)  What's going on here?
+(一个俱乐部女主人走进房间，她的高跟鞋在地上发出咔哒声。她看着你们两个。) 这里发生了什么？
+(A Club Mistress enters the room.  She stares at you two and crosses her arms.)  What are you two doing?
+(一个俱乐部女主人走进房间。她盯着你们两个，双臂交叉。) 你们两个在干什么？
+(A Club Mistress enters the rooms.  She looks at you two and grins.)  What is happening here?
+(一个俱乐部女主人走进房间。她看着你们两个，咧嘴一笑。) 这里发生了什么？
+(A Club Mistress enters the rooms.  Her eyes wander around and she seems to ponder.)  This is interesting.
+(一个俱乐部女主人走进房间。她的目光四处游走，似乎在思考。) 这很有趣。
+(The director stops the movie and cheers.)  Cut!  The End!  Fin!  We have a film!  Congratulations!
+(导演停止电影并欢呼。) 卡！结束！完结！我们有一部电影！恭喜！
+(The director stops the movie and cheers.)  Cut!  This is it girls, we made it!  Congratulations!
+(导演停止电影并欢呼。) 卡！就到这里，女孩们，我们成功了！恭喜！
+(The director stops the movie and cheers.)  Cut!  Wonderful!  You will all become stars.  Congratulations!
+(导演停止电影并欢呼。) 卡！太棒了！你们都会成为明星。恭喜！
+(The director stops the movie and cheers.)  Cut!  Filming is done, it's time to edit it.  Congratulations!
+(导演停止电影并欢呼。) 卡！拍摄结束了，现在是编辑的时候了。恭喜！
+(As soon as you release her, they quickly pounce on you and grab your arms to immobilize you.  The journalist defies you.)  Here we go!
+(当你释放她时，他们迅速扑向你，抓住你的手臂使你无法动弹。记者向你挑战。) 我们开始吧！
+(Act two begins, a customer enters the place and stares at you two.)  Hello?  I'm here for the open house.  Why are you two naked?
+(第二幕开始，一个顾客进入这个地方，盯着你们两个。) 你好？我来看房。你们两个为什么赤裸裸的？
+(Act two begins, a customer enters the place and stares at you.)  Hello?  I'm here for the open house.  Why are you naked?
+(第二幕开始，一个顾客进入这个地方，盯着你。) 你好？我来看房。你为什么赤裸裸的？
+(Act two begins, a customer enters the place and stares at the new girlfriend.)  Hello?  I'm here for the open house.  Why is she naked?
+(第二幕开始，一个顾客进入这个地方，盯着新女友。) 你好？我来看房。她为什么赤裸裸的？

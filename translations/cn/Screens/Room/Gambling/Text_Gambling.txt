@@ -1,0 +1,6 @@
+### seeded from upstream: Screens/Room/Gambling/Text_Gambling_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Try to steal the dice.
+尝试偷取骰子。
+You have successfully stolen the dice.
+你成功偷取了骰子。

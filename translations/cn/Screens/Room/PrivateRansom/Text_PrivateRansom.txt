@@ -1,0 +1,20 @@
+### seeded from upstream: Screens/Room/PrivateRansom/Text_PrivateRansom_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+RansomCharacterName is in our hands.
+RansomCharacterName已经被我们控制了。
+Don't try anything or she will get hurt.
+不要尝试任何事情，否则她会受伤。
+She will work as a slave for our customers.
+她将作为奴隶为我们的客人工作。
+When her debt is paid, she will be freed.
+当她的债务还清时，她将被释放。
+You can also pay $100 to release her now.
+你也可以支付$100现在释放她。
+Pandora's Box
+潘多拉魔盒
+Put the ransom away
+把赎金放在一边
+Inquire with infiltration
+询问间谍潜入
+Hello Comrade!  Is there something troubling you?
+你好，同志！有什么困扰你吗？

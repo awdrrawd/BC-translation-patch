@@ -1,0 +1,16 @@
+### seeded from upstream: Screens/Character/ItemColor/ItemColor_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Accept
+接受
+Cancel
+取消
+Default
+默认
+Many
+复数
+Next page
+下一页
+Whole Item
+物品整体
+All
+所有

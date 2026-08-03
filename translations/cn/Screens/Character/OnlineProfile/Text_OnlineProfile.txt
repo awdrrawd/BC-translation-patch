@@ -1,0 +1,12 @@
+### seeded from upstream: Screens/Character/OnlineProfile/Text_OnlineProfile_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Enter your online description (MAXLEN characters maximum)
+输入你的在线描述（限MAXLEN字符）
+CharacterName's online description
+CharacterName的在线描述
+Exit profile
+退出档案
+Accept changes
+接受改动
+Cancel changes
+取消改动

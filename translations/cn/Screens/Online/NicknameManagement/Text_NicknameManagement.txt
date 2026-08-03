@@ -1,0 +1,18 @@
+### seeded from upstream: Screens/Online/NicknameManagement/Text_NicknameManagement_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Accept the changes
+接受这些改变
+Cancel the changes
+取消这些改变
+You can change or lock your submissive nickname.
+您可以更改或锁定您的顺从者昵称。
+A locked nickname can only be changed by you.
+被锁定的昵称只能由你自己更改。
+Real Name:
+真名：
+Current Nickname:
+当前昵称：
+New Nickname:
+新昵称：
+Lock her nickname
+锁定她的昵称

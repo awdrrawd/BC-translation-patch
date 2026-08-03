@@ -1,0 +1,166 @@
+### seeded from upstream: Assets/Female3DCG/ColorGroups_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Body
+身体
+Shine
+光亮
+Tutu
+芭蕾裙
+Latex suit parts
+乳胶套装组件
+Latex shine
+乳胶光泽
+Leather parts
+皮革组件
+Metal parts
+金属组件
+Cuff-shackles and chain link
+手铐-镣铐和链环
+Canvas
+帆布
+Straps
+带子
+Bottom Strap
+底部带子
+Top Strap
+顶部带子
+Belts
+皮带
+Metal
+金属
+Stripes
+条纹
+Brick sector
+砖块部分
+Metal sector
+金属部分
+Cage
+笼子
+Coffin
+棺木
+Capsule
+胶囊
+Box
+盒子
+Label & Text
+标识&文本
+Machine
+机器
+Harness
+绳束
+Padding
+填充
+Pleasure Module
+刺激模块
+Structure
+结构
+Wall
+墙壁
+Misc
+杂项
+Wheel Sections
+转盘分区
+Stand
+支架
+Sheet
+床单
+Wood
+木质
+Pattern
+样式
+Cover Hood Parts
+兜帽组件
+Linings
+线条
+Panels
+面板
+Eyes
+眼睛
+Attachments
+附件
+Skin sector
+皮肤部分
+Eyes sector
+眼睛部分
+Devices sector
+装置部分
+Wig sector
+假发部分
+Tubes
+管子
+Fixing
+固定
+Glow
+发光
+Gags
+口塞
+Ears
+耳朵
+Gag
+口塞
+Rings
+项圈环
+Vibe Eggs
+跳蛋
+Tape Strips
+胶带条纹
+Rubber
+橡胶
+Lock
+锁
+Addons
+配件
+Main Belts
+主要皮带
+Leg Straps
+腿束带
+Leg Link Strap
+腿连接束带
+Primary Harness Straps
+主要固定束带
+Accessory Harness Straps
+附属固定束带
+Strap On Device
+装置上的束带
+Chastity Belt Device
+贞操带装置
+Vibrator Wand Device
+振动器装置
+Objects
+物品
+Sunshade
+遮阳伞
+Fan paper
+扇子纸面
+Fan paper 2nd color
+扇子纸面颜色2
+Fan paper 3rd color
+扇子纸面颜色3
+Mask
+面具
+Mask 1st detail
+面具细节1
+Mask 2nd detail
+面具细节2
+Mask 3rd detail
+面具细节3
+Inside mask
+面具内部
+Collar
+项圈
+Belly belt
+腹部皮带
+Legs belts
+腿部皮带
+Corset collar
+束腰项圈
+Extras Left
+左侧附件
+Extras Right
+右侧附件
+Main boot
+主要靴子
+Boot straps
+靴子带
+Belts
+皮带

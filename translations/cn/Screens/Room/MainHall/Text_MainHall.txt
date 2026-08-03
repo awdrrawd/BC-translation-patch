@@ -1,0 +1,168 @@
+### seeded from upstream: Screens/Room/MainHall/Text_MainHall_CN.txt
+### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行
+Synchronizing with server, please wait...
+正在与服务器同步，请稍候……
+A rescue maid is coming...
+救援女仆正在赶来……
+Online Members:
+在线人数：
+Introduction Class
+新手课堂
+Maid Quarters
+女仆宿舍
+Shibari Dojo
+紧缚道场
+Kidnappers League
+绑匪联盟
+Private Room
+私人房间
+Club Management
+俱乐部办公室
+Search for Sarah
+寻找Sarah
+Explore the Club
+探索俱乐部
+Online Chat Rooms
+在线聊天室
+Club Shop
+俱乐部商店
+Your Profile
+个人档案
+Change Appearance
+更改外观
+Timer Cell
+定时监牢
+Slave Market
+奴隶市场
+Look for Trouble
+找点事情
+Asylum
+收容所
+Visit the College
+学院
+LARP Battles
+体感对战 (LARP)
+Movie Studio
+电影工作室
+Infiltration
+间谍潜入
+Bondage Poker
+紧缚扑克
+Magic School
+魔法学校
+Bondage Brawl
+束缚格斗
+Item Crafting
+物品制作
+Club Card Lounge
+俱乐部卡牌大厅
+Leave the Club
+离开俱乐部
+Do you want to leave the club?
+你要离开俱乐部吗?
+Sarah's Bedroom
+Sarah的卧室
+Gambling by git4nick
+赌场 by git4nick
+Prison by git4nick
+监狱 by git4nick
+Photographic by git4nick
+照相馆 by git4nick
+Stable by git4nick
+马驹训练场 by git4nick
+The Nursery by wildsj
+育婴室 by wildsj
+Houdini's Theater by git4nick
+逃脱剧场 by git4nick
+Cafe by wildsj
+咖啡店 by wildsj
+Arcade by Ada18980
+街机店 by Ada18980
+Request maid service
+呼叫女仆服务
+Open the changelog
+打开更新记录
+This game is for adults only.  Minors must leave immediately.
+本游戏仅限成人游玩. 未成年人请即刻离开.
+All game characters are considered adults, no exceptions.
+本游戏中所有角色均已成年，没有例外。
+Please be courteous and polite.  Help new members to get started.
+请礼貌待人. 记得帮助萌新.
+Console cheating can break your account forever.  Please be careful.
+控制台可能造成永久死档！请小心操作。
+Have an open mind, your fetishes might be different from others.
+保持观念开放，你和其他人的口味可能有所不同。
+Following a player web link can get you a virus or steal your account.
+点击陌生网址可能会被盗号或电脑中毒。
+Please respect other players limits.  Enforce your own limits.
+请尊重其他人的底线，正如尊重你的底线一样。
+Do not attempt anything that could harm you in your real life.
+请不要在现实中尝试任何可能会伤害到你的事。
+Remember your friends in your private room or they will leave.
+请记得你私人房间里的朋友不然她们会跑掉的。
+If you find bugs or exploits, please report them and give details.
+如果你发现了BUG或漏洞，记得详细上报它们
+Take good care of each other feelings and your submissives.
+请照顾好他人和你的sub们的感受。
+If you give any real-life information, it might be used against you.
+如果你泄露了任何现实信息，它都可能被用来人肉你。
+A collared college girl can be convinced to give you her uniform.
+戴上项圈的大学女孩可能会愿意给你她们的校服。
+It's easier to destroy a reputation than to build one.
+摧毁声望比建立声望要容易的多。
+There's no best way to make money.  Simply find a job you enjoy.
+获得钱的最好方式就是找份工作。
+Please do not use console commands to grief other players.
+请不要使用控制台玩弄其他玩家。
+Beta items will be lost if you go back to the regular version.
+Beta测试的物品可能会在正式版本遗失。
+You can protect yourself by blocking items and blacklisting players.
+你可以通过屏蔽物品和玩家来保护自己。
+Reach us on Discord, DeviantArt or Patreon if you need help.
+请在我们的Discord,DeviantArt或Patreon寻求帮助。
+Type /help in a chatroom to know the available chat commands.
+在聊天框中输入/help来显示可用的聊天指令。
+Try changing your graphics preferences if you get performance issues.
+如果你遇到了性能问题，请尝试访问你的图像偏好。
+Don't forget to do the daily job in the Introduction Room.
+不要忘记做介绍处房间里的每日工作。
+Corsets can be worn both as clothing and a restraint.
+束腰可以当做衣服穿，也可以当做束缚穿。
+Chat rooms are where you can interact with other people, stay safe.
+聊天室是你能和其他人互动的地方，注意安全。
+Locks makes it harder to struggle out of restraints.
+锁能让束缚无法通过你自己解开。
+Ring the bell if you get stuck, a maid will be with you shortly.
+如果你被困住了，可以弄响铃铛，女仆会很快来照看你。
+Certain actions train different skills, making you better with restraints.
+特定的动作会训练不同的技能，让你更擅长于束缚。
+The Maid Quarters is always looking to pay those that help out.
+女仆协会总是乐于为给予帮助的人支付薪水。
+The Kidnapper's League pays quite a bit for those that can catch others.
+束缚俱乐部为那些能抓住别人的家伙支付不少钱。
+The Asylum also has its own chat room, along with payment as a Nurse.
+收容所里面有它自己的聊天室，并且作为护士工作能得到工资。
+Your profile has a LOT of settings, feel free to take a look.
+你的资料中有一大堆设置，请随意查看。
+Need a stat boost? The Cafe might have something to help.
+需要提升属性？咖啡店里可能有些能帮到你的东西。
+(A woman blocks your path.)  DialogPlayerName!  You've been a nuisance for Pandora's Box for far too long.  Surrender now or you will get hurt.
+（一个女人挡住了你的去路。）DialogPlayerName！你给潘多拉魔盒造成困扰的时间实在是太久了。立即投降，否则你会受伤的。
+(A girl taps on your shoulder.)  Here you are!  Pandora's Box sent me to get you.  Get on your knees right now or there will be trouble.
+（一个女孩拍拍你的肩膀。）你在这里啊！潘多拉魔盒派我来抓走你。立即跪下，否则你就有麻烦了。
+(Someone springs from behind you.)  No offense DialogPlayerName, but Pandora's Box as put a bounty on you.  Come with me quietly.
+（一个人从你身后跳了出来。）无意冒犯，DialogPlayerName，但潘多拉魔盒悬赏了你这个人。别乱叫跟我走吧。
+(A girl jumps in front of you.)  Your days of causing trouble are over DialogPlayerName.  I'm bringing you bound and gagged to Pandora's Box.
+（一个女孩跳到你面前。）你惹的麻烦到此为止了，DialogPlayerName。我要把你绑起来，戴上口塞，送到潘多拉魔盒。
+(A woman chases you down.)  You won't be running away this time girl.  Pandora's Box has a special cell ready for your ass.
+（一个女人追上了你。）这次你逃不掉了，女孩。潘多拉魔盒给你这混蛋专门准备了一间牢房。
+(A Dominatrix from Pandora's Box jumps in front of you.)  DialogPlayerName!  You've stolen our technology
+（一位潘多拉魔盒的女王跳到你面前。）DialogPlayerName！你偷窃了我们的技术
+(A Dominatrix from Pandora's Box taps on your shoulder.)  Here you are!  The Box sent me to recover the lock and key that you've stolen.
+（一位潘多拉魔盒的女王轻拍你的肩膀。）你在这里啊！魔盒派我来取回你偷的锁和钥匙。
+(Someone springs from behind you.)  No offense DialogPlayerName, but Pandora's Box wants to recover their lock and key.
+（一个人从你身后跳了出来。）无意冒犯，DialogPlayerName，但潘多拉魔盒想要取回他们的锁和钥匙。
+(A girl jumps in front of you.)  Your days of causing trouble are over DialogPlayerName.  I'm bringing back what you've stolen.
+（一个女孩跳到你面前。）你惹的麻烦到此为止了，DialogPlayerName。我要拿回你偷走的东西。
+(A Dominatrix chases you down.)  You won't be running away this time girl.  Give us back our technology or there will be trouble.
+（一个女王追上了你。）这次你逃不掉了，女孩。 把我们的技术还回来，否则你就有麻烦了。
