@@ -18,7 +18,7 @@ const { paths, stats } = generateDict();
 const dictOut = path.join(repoRoot, "src", "generated", "dict.json");
 ensureDir(dictOut);
 fs.writeFileSync(dictOut, JSON.stringify({ paths }), "utf8");
-console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles} 檔（路徑鍵 ${Object.keys(paths).length}，manifest：${stats.manifest ? "是" : "否"}）`);
+console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles} 檔（路徑鍵 ${Object.keys(paths).length}）`);
 
 // 2) 打包
 ensureDir(path.join(distDir, "x"));

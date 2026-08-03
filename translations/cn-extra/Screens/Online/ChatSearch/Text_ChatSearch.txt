@@ -1,0 +1,18 @@
+Request timeout
+请求超时
+Request already in progress!
+请求已在进行中！
+Filter on click
+点击以过滤
+Filtered
+已过滤
+A room will be hidden if it meets one or more of the following criteria: it is not in your selected language, it contains a filtered out word, it has been filtered (see below), or its creator is ghostlisted.
+符合以下任一条件的房间将被隐藏：不是你所选的语言、包含被过滤的词、已被过滤（见下方）、或其创建者在你的鬼隐名单中。
+Click on a room in this view to instantly filter that one room (until next login) and/or ghostlist the player who made the room (saved permanently until you remove them from ghostlist). Make sure the room wasn't recreated, or you're gonna ghost some random player.
+在此视图中点击某个房间，可立即过滤该房间（直到下次登录），并/或将创建该房间的玩家加入鬼隐名单（永久保存，直到你将其移除）。请确认该房间不是被重建的，否则你可能会误鬼隐到无关的玩家。
+Clicking a hidden room will unhide it. If the room is just filtered it will be unhidden instantly. Otherwise you will be asked to confirm if you want to unghostlist the creator and/or remove some filter words to allow the room to be shown.
+点击已隐藏的房间会将其取消隐藏。若该房间只是被过滤，会立即取消隐藏；否则会询问你是否要将创建者移出鬼隐名单，并/或移除部分过滤词以让该房间显示。
+Smoking is not allowed in this room.
+本房间禁止吸烟。
+Club Card is active in this room.
+本房间启用了俱乐部卡牌。

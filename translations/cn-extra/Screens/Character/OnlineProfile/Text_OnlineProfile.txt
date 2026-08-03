@@ -1,0 +1,6 @@
+Enter public notes for CharacterName (MAXLEN chars maximum)
+为 CharacterName 输入公开备注（最多 MAXLEN 个字符）
+Notes from OwnerName, CharacterName's owner
+来自 OwnerName（CharacterName 的主人）的备注
+Owner's Notes
+主人的备注

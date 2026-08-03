@@ -47,8 +47,13 @@ npm run diff     # 對比官方英文，列出尚未翻譯的字串 -> reports/m
 
 ## 如何補翻譯
 
-1. 找到（或新增）`translations/cn/` 下對應的 `.txt`，格式為**英文一行、中文一行**，`###` 開頭為註解。
-   - 補漏行時**保留官方既有行**、只往下加（我方檔需為官方超集才會正確覆寫）。
+> **重要**：`translations/cn/` 是官方鏡像，由 `npm run seed` 覆蓋生成，**不要手改**（會被沖掉）。
+> 你的所有補充/覆寫都放 `translations/cn-extra/`，`seed` 不會動它，可隨時安全刷新官方。
+
+1. 在 `translations/cn-extra/` 下**用相同的官方路徑**建立 `.txt`（例如 `Screens/Character/Creation/Text_Creation.txt`），
+   格式為**英文一行、中文一行**，`###` 開頭為註解。
+   - 只需寫「你要補或要蓋」的行；建置時會疊到官方 `cn/` 之上（同英文覆寫、新英文追加）。
+   - 含變數的字串（`$value$`、`$inputName`、`{Expression}`、`\n`）請原樣保留變數。
 2. 需要修正繁中用語時：
    - 全域詞彙：改 [`translations/tw-terms.json`](translations/tw-terms.json)（例：`"信息":"訊息"`）。
    - 個別字串：加到 [`translations/tw-overrides.txt`](translations/tw-overrides.txt)（英文一行、繁中一行）。

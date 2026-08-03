@@ -1,0 +1,31 @@
+### 補充：官方 CN 未翻譯的字串（此檔在 cn-extra，seed 不會覆蓋）
+Character name
+角色名
+Account password
+密码
+Confirm password
+确认密码
+(letters & spaces)
+（英文字符和空格）
+(letters & numbers)
+（英文字符和数字）
+Email
+邮箱
+(optional, to recover password)
+（可选，用于恢复密码）
+Invalid characters: $invalidCharacters
+无效字符：$invalidCharacters
+$inputName: Invalid format ($maxLength).\n$invalidCharacters
+$inputName：格式无效（$maxLength）。\n$invalidCharacters
+$inputName: required.
+$inputName：必填。
+$inputName: too long ($maxLength).
+$inputName：过长（$maxLength）。
+max $maxLength
+最多 $maxLength
+max length
+最大长度
+$inputName: contains invalid characters.\n$invalidCharacters
+$inputName：包含无效字符。\n$invalidCharacters
+$inputName: invalid email address.
+$inputName：无效的邮箱地址。

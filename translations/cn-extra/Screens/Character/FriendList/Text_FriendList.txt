@@ -1,0 +1,20 @@
+Chat room size
+聊天室人数
+Actions
+操作
+No actions available
+没有可用的操作
+Pending friend...
+好友申请中……
+Add friends
+添加好友
+Add friends (comma separated list of member numbers)
+添加好友（用逗号分隔的会员编号列表）
+No valid member numbers were provided.
+未提供有效的会员编号。
+Added friends numbers: $addedMembers.
+已添加好友编号：$addedMembers。
+No new friends were added.
+没有添加新的好友。
+Are you sure you want to delete $memberName ($memberNumber)?
+确定要删除 $memberName（$memberNumber）吗？
