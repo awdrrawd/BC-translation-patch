@@ -1,0 +1,55 @@
+import { activeLang } from "../lang.js";
+import { BCX } from "./bc/BCX/index.js";
+import { LSCG } from "./bc/LSCG/index.js";
+import { BCXHelp } from "./html/BCX.js";
+import { ChatHistoryTranslator } from "./html/utils/chatObserver.js";
+import { supplement } from "./supplement.js";
+
+// BCX / LSCG 翻譯層（字典移植自 Echo 的动作拓展 https://github.com/SugarChain-Studio/echo-activity-ext ）。
+// 這些 mod 自己畫 HTML/canvas，不走遊戲 CSV 管線，所以用 hook + observer 攔截。
+const units = [BCX, LSCG];
+
+function tryMenu(key) {
+    if (supplement.menu[key]) return supplement.menu[key];
+    for (const u of units) {
+        const t = u.translateMenuText?.(key);
+        if (t) return t;
+    }
+    return undefined;
+}
+
+function tryActivity(key) {
+    if (supplement.activity[key]) return supplement.activity[key];
+    for (const u of units) {
+        const t = u.translateActivityText?.(key);
+        if (t) return t;
+    }
+    return undefined;
+}
+
+/** @param {any} mod bcModSdk 註冊物件 */
+export function setupMods(mod) {
+    const on = () => !!activeLang();
+
+    for (const fn of ["DrawText", "DrawTextFit", "DrawTextWrap", "DynamicDrawText"]) {
+        mod.hookFunction(fn, 10, (args, next) => {
+            if (on() && typeof args[0] === "string") {
+                const t = tryMenu(args[0]);
+                if (t) args[0] = t;
+            }
+            return next(args);
+        });
+    }
+
+    mod.hookFunction("ActivityDictionaryText", 1, (args, next) => {
+        let r = next(args);
+        if (on() && typeof r === "string") {
+            const t = tryActivity(r);
+            if (t) r = t;
+        }
+        return r;
+    });
+
+    // BCX 在聊天記錄輸出的 HTML 說明
+    ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src));
+}
