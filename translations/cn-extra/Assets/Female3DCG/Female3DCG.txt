@@ -1,3 +1,63 @@
 ### 官方 CN 未翻的道具/部位名（英文→中文）。DOM observer 會在 dialog-inventory 套用。
 Cybertech Gas Mask
 赛博防毒面具
+Inflatable Restraint Bag
+充气束缚袋
+Long Burlap Sack
+长麻布袋
+Microphone
+麦克风
+Potty
+便盆
+Enema Fixture
+灌肠装置
+Gift Box
+礼盒
+X-Frame
+X形架
+Chocolate Bar
+巧克力棒
+Dragon Plush
+龙玩偶
+Electric Guitar
+电吉他
+Laptop
+笔记本电脑
+Leather Paddle
+皮革拍板
+Baby Powder
+爽身粉
+Wipes
+湿巾
+Mini Dolls
+迷你玩偶
+Ballet Boots Mittens
+芭蕾靴连指手套
+Bishop Gag
+主教口塞
+Pumpkin Harness Gag
+南瓜束带口塞
+Rose Ball Gag
+玫瑰球状口塞
+Cage Muzzle Gag
+笼状口罩口塞
+Christmas Sticker Gag
+圣诞贴纸口塞
+Adjustable Ball Gag
+可调节球状口塞
+Steampunk Spiked Collar
+蒸汽朋克尖刺项圈
+Steampunk Collar
+蒸汽朋克项圈
+Ribbon Collar
+丝带项圈
+Piercing Name Badge
+穿孔名牌
+Nose Shackle
+鼻部镣铐
+Mystery Box
+神秘盒子
+Used Condom
+用过的避孕套
+Chastity Tunnel Piercings
+贞操隧道穿孔
