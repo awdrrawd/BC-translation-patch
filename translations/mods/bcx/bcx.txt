@@ -19,6 +19,16 @@ All existing rules:
 所有现有规则：
 All rules (continued):
 所有规则（续）：
+Change this rule's configuration
+更改此规则的配置
+Remaining duration of the rule
+规则剩余有效时间
+Rule will be enforced
+规则将强制执行
+Rule violations will be logged
+违规行为将被记录
+Activates in
+持续
 Allow whispers
 允许私聊
 Already applied
