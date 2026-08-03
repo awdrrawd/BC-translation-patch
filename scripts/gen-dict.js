@@ -98,6 +98,8 @@ export function generateDict() {
     let twFiles = 0;
 
     for (const [base, { base: basePairs, extra: extraPairs }] of bases) {
+        // KinkyDungeon 是內嵌小遊戲、有自己的 i18n，整個排除（避免污染 base 字典、也省體積）
+        if (base.includes("KinkyDungeon")) continue;
         const merged = extraPairs.length ? mergePairs(basePairs, extraPairs) : basePairs;
         if (!merged.length) continue;
 
