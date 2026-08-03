@@ -1,0 +1,32 @@
+[MemberNumber]: Add the player to your friend list with a notification
+[MemberNumber]：将该玩家加入好友列表并发送通知
+View or change the room's custom configuration.
+查看或更改房间的自定义配置。
+Enables the room customization
+启用房间自定义
+Use URL as the room background. `-` to unset
+使用 URL 作为房间背景。`-` 表示取消设置
+Use #hexcode as the room effect. `-` to unset
+使用 #hexcode 作为房间效果。`-` 表示取消设置
+Use URL as the room background music. `-` to unset
+使用 URL 作为房间背景音乐。`-` 表示取消设置
+Enable/disable music syncing
+启用/禁用音乐同步
+Removes all messages from the chat
+清除聊天中的所有消息
+Sets your arousal level
+设置你的兴奋度
+Show Mod SDK related commands
+显示 Mod SDK 相关命令
+Show Mod SDK mods loaded in your client in the chat log
+在聊天记录中显示你客户端已加载的 Mod SDK 模组
+[MemberNumber|Name|Nickname] Ask others (or one player) for their Mod SDK list; results appear after replies or timeout.
+[MemberNumber|Name|Nickname] 向他人（或某一玩家）查询其 Mod SDK 列表；结果在对方回应或超时后显示。
+target player
+目标玩家
+Optional player in this room (name or member number); omit to query everyone else
+本房间中的可选玩家（名称或会员编号）；留空则查询其他所有人
+Toggle SOS emote
+切换 SOS 表情
+Toggle Be-right-back emote
+切换 马上回来 表情

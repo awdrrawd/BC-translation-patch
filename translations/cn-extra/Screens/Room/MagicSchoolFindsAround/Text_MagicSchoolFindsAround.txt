@@ -1,0 +1,6 @@
+You leave the school and fresh air hits your face. You take a look around; there are many interesting places around. Close to the school you see a garden filled with flowers, and a bit further away you can see a forest brimming with magic.
+你离开学校，新鲜空气扑面而来。你环顾四周，附近有许多有趣的地方。学校旁边你看到一座开满鲜花的花园，稍远处则是一片充满魔力的森林。
+Check out the garden
+去花园看看
+Walk to the forest
+走向森林

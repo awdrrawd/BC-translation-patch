@@ -1,0 +1,40 @@
+Add/increment effect
+添加/增加效果
+Filter crafts
+筛选制作物
+Reorder
+重新排序
+Select crafting mode
+选择制作模式
+Edit
+编辑
+Delete Mode:{br}{click} or {shift} + {click} on the to-be deleted crafting slot(s) and then click this button to confirm their {permanent} deletion
+删除模式：{br}{click} 或 {shift} + {click} 要删除的制作槽位，然后点击此按钮确认它们的{permanent}删除
+Reorder Mode:{br}{click} or {shift} + {click} on the to-be moved crafting slot(s), drag-and-drop them to their desired position and then click this button to confirm their movement
+排序模式：{br}{click} 或 {shift} + {click} 要移动的制作槽位，拖放到想要的位置，然后点击此按钮确认移动
+Edit Mode:{br}{click} on a crafting slot to modify a craft or, when empty, to create a new one
+编辑模式：{br}{click} 某个制作槽位以修改制作物，若为空则新建一个
+Failed to delete any crafts
+未能删除任何制作物
+Successfully deleted {nItems} crafts
+成功删除了 {nItems} 个制作物
+Failed to reorder any crafts
+未能重新排序任何制作物
+Successfully reordered {nItems} crafts
+成功重新排序了 {nItems} 个制作物
+Multiple effects
+多种效果
+Remove/decrement effect
+移除/减少效果
+Delete {n} crafting items
+删除 {n} 个制作物
+Reorder {n} crafting items
+重新排序 {n} 个制作物
+Edit or craft a new item
+编辑或制作新物品
+click
+点击
+permanent
+永久
+shift
+Shift

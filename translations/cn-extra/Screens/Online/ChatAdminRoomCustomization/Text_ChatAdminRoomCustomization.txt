@@ -1,0 +1,22 @@
+Chat Room Customization
+聊天室自定义
+You can pick custom background images and background music for your room here by loading external resources. Note that players need to enable those customizations manually.
+你可以在这里通过加载外部资源，为房间选择自定义背景图片和背景音乐。注意：玩家需要手动启用这些自定义内容。
+This is a selection of copyright free music you can use.
+这是一些你可以使用的无版权音乐。
+Custom background image:
+自定义背景图片：
+You can use game resources as well, like https://bondageprojects.com/images/school.jpg or Screens/Room/Platform/Background/Savannah/TentInterior.jpg
+你也可以使用游戏资源，例如 https://bondageprojects.com/images/school.jpg 或 Screens/Room/Platform/Background/Savannah/TentInterior.jpg
+Select image fill mode:
+选择图片填充模式：
+Color filter:
+颜色滤镜：
+Custom music:
+自定义音乐：
+Put the address of the background mp3 music file to use.
+填入要使用的背景 mp3 音乐文件地址。
+Synchronize music track across the room
+在房间内同步音乐
+Reset
+重置

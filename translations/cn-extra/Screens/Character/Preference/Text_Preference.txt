@@ -1,0 +1,50 @@
+- Censorship Settings -
+- 审查设置 -
+- Keybindings Settings -
+- 快捷键设置 -
+Keybindings
+快捷键
+Show friend request messages
+显示好友请求消息
+Toggle color picker
+切换取色器
+Answer mod list queries from others
+回应他人的模组列表查询
+Reset every item preference so hidden items become visible again, then exit and save?
+重置所有物品偏好，让隐藏的物品重新可见，然后退出并保存？
+Search...
+搜索……
+No items match your search
+没有符合搜索的物品
+Show help
+显示帮助
+No Extensions Found
+未找到扩展
+Search Mode
+搜索模式
+Action
+操作
+Category
+类别
+Key Combination
+按键组合
+Type to search...
+输入以搜索……
+Not Bound
+未绑定
+Error
+错误
+Show conflicts only
+仅显示冲突
+Conflicts with:\n$conflicts$
+冲突于：\n$conflicts$
+Contexts:\n$contexts$
+适用场景：\n$contexts$
+Reset combination
+重置组合键
+Unbind combination
+解除绑定
+Waiting for input for $action$...
+正在等待 $action$ 的输入……
+Filtering
+筛选中
