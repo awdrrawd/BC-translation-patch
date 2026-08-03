@@ -1,0 +1,58 @@
+days
+天
+Cannot have an erection.
+无法勃起。
+Unchain mittens
+解开连指手套
+Penis may not be limp.
+阴茎不能处于疲软状态。
+The use of remotes is forbidden by your owner.
+你的主人禁止使用遥控器。
+Item does not support mitten attachment.
+该物品不支持连指手套附加。
+Internal error: missing character or item.
+内部错误：缺少角色或物品。
+Illegal expression {Expression}.
+非法表情 {Expression}。
+it
+它
+its
+它的
+itself
+它自己
+Timer hidden
+计时器已隐藏
+Using all of your skill...
+用尽你的全部技巧……
+Your private room
+你的私人房间
+$value$y
+$value$年
+$value$m
+$value$月
+$value$w
+$value$周
+$value$d
+$value$天
+$value$h
+$value$时
+$value$min
+$value$分
+$value$s
+$value$秒
+$value$ year(s)
+$value$ 年
+$value$ month(s)
+$value$ 个月
+$value$ week(s)
+$value$ 周
+$value$ day(s)
+$value$ 天
+$value$ hour(s)
+$value$ 小时
+$value$ minute(s)
+$value$ 分钟
+$value$ second(s)
+$value$ 秒
+Duration error
+时长错误
