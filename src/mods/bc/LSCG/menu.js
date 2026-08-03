@@ -1,4 +1,4 @@
-import { LSCGenabled } from "./enable";
+import { LSCGenabled } from "./enable.js";
 
 const translation = {
     // LSCG

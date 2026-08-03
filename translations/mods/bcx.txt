@@ -1,0 +1,1 @@
+### BCX 補譯（英文一行、中文一行）。用 npm run extract 產生 reports/missing-mods.md 當工作清單。

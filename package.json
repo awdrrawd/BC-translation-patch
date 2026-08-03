@@ -8,7 +8,8 @@
     "seed": "node scripts/seed-from-upstream.js",
     "gen": "node scripts/gen-dict.js",
     "build": "node scripts/build.js",
-    "diff": "node scripts/diff-upstream.js"
+    "diff": "node scripts/diff-upstream.js",
+    "extract": "node scripts/extract-mods.js"
   },
   "author": "awdrrawd",
   "license": "MIT",

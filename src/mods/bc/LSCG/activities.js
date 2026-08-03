@@ -1,5 +1,5 @@
-import { translatePronouns } from "../pronouns";
-import { LSCGenabled } from "./enable";
+import { translatePronouns } from "../pronouns.js";
+import { LSCGenabled } from "./enable.js";
 
 const translation = {
     "Bap": "拍打",

@@ -1,4 +1,4 @@
-import { BCXenabled } from "./enable";
+import { BCXenabled } from "./enable.js";
 
 const regexTranslations = [
     { regex: /(.+) spoke openly in a room\./, replacement: "$1尝试在房间说话." },

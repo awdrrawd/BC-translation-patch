@@ -1,4 +1,4 @@
-import { translateNode } from "./utils";
+import { translateNode } from "./utils.js";
 
 class _ChatHistoryTranslator {
     /** @type {(TranslationFunction) [] } */

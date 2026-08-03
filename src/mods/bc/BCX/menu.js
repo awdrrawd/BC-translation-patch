@@ -1,4 +1,4 @@
-import { BCXenabled } from "./enable";
+import { BCXenabled } from "./enable.js";
 
 const regexTranslations = [
     {

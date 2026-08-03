@@ -16,8 +16,14 @@ export function getMissing() {
     return [...missing].sort();
 }
 
+// 我們補譯的 BCX/LSCG 字典（translations/mods/*.txt），優先於 ECHO
+const MOD = /** @type {any} */ (GEN).modMenu || { CN: {}, TW: {} };
+
 function tryMenu(key) {
     if (supplement.menu[key]) return supplement.menu[key];
+    const lang = activeLang();
+    const m = lang && MOD[lang] && MOD[lang][key];
+    if (m) return m;
     for (const u of units) {
         const t = u.translateMenuText?.(key);
         if (t) return t;

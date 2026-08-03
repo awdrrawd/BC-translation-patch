@@ -136,7 +136,19 @@ export function generateDict() {
         }
     }
 
-    return { paths, cnMap, activity, stats: { cnFiles, twFiles } };
+    // BCX / LSCG 補充字典（translations/mods/*.txt，英文→中文），TW 由 OpenCC 轉
+    const modMenu = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
+    for (const f of walk(path.join(trRoot, "mods"), (p) => p.endsWith(".txt"))) {
+        for (const [en, zh] of parseTxtPairs(fs.readFileSync(f, "utf8"))) {
+            const k = en.trim();
+            if (k && zh) {
+                modMenu.CN[k] = zh;
+                modMenu.TW[k] = overrideMap.has(k) ? overrideMap.get(k) : applyTerms(converter(zh));
+            }
+        }
+    }
+
+    return { paths, cnMap, activity, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
 // 允許 `npm run gen` 直接執行
