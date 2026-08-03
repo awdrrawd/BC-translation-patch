@@ -1,3 +1,13 @@
+- Keybindings Settings -
+- 快捷键设置 -
+Chat
+聊天
+Chat Room
+聊天室
+Map Chat Room
+地图房
+Navigation
+导航
 - Censorship Settings -
 - 审查设置 -
 Show friend request messages
