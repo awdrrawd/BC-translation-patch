@@ -39,8 +39,10 @@ const ASSET = /** @type {any} */ (GEN).assetName || { CN: {}, TW: {} };
 function tryActivity(key) {
     if (supplement.activity[key]) return supplement.activity[key];
     const lang = activeLang();
-    const base = lang && ACT[lang] && ACT[lang][key];
-    if (base) return base;
+    if (lang) {
+        if (ACT[lang] && ACT[lang][key]) return ACT[lang][key]; // base 動作字典
+        if (MOD[lang] && MOD[lang][key]) return MOD[lang][key]; // LSCG/BCX 動作模板(lscg.txt 等)
+    }
     for (const u of units) {
         const t = u.translateActivityText?.(key);
         if (t) return t;
@@ -105,27 +107,8 @@ export function setupMods(mod) {
         return next(args);
     });
 
-    // 聊天記錄裡「已組裝、名字已替換」的動作訊息：用自動生成的 regex 模板翻
-    const AREGEX = /** @type {any} */ (GEN).activityRegex || { CN: [], TW: [] };
-    const compiled = { CN: null, TW: null };
-    const getRegex = (lang) => {
-        if (!compiled[lang]) compiled[lang] = (AREGEX[lang] || []).map((x) => ({ re: new RegExp(x.p), r: x.r }));
-        return compiled[lang];
-    };
-    ChatHistoryTranslator.registerTranslationFunc((src) => {
-        const lang = activeLang();
-        if (!lang || typeof src !== "string") return undefined;
-        const s = src.trim();
-        const wrap = s.match(/^\((.*)\)$/); // 動作訊息常被 () 包住
-        const inner = wrap ? wrap[1] : s;
-        for (const { re, r } of getRegex(lang)) {
-            if (re.test(inner)) {
-                const t = inner.replace(re, r);
-                return wrap ? `(${t})` : t;
-            }
-        }
-        return undefined;
-    });
+    // 動作訊息由上面的 ActivityDictionaryText hook 翻模板、遊戲再自行 CommonStringSubstitute 填名字，
+    // 不需要在聊天記錄 DOM 上做 regex（那條已移除）。
 
     // BCX 在聊天記錄輸出的 HTML 說明
     ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src));
