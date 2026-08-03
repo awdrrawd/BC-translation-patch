@@ -93,6 +93,7 @@ export function generateDict() {
     const cnMap = {};
     // 動作字典（英文→中文），供 runtime hook ActivityDictionaryText 用，繞過時序
     const activity = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
+    const assetName = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
     let cnFiles = 0;
     let twFiles = 0;
 
@@ -111,6 +112,17 @@ export function generateDict() {
                 if (k && zh) {
                     activity.CN[k] = zh;
                     activity.TW[k] = overrideMap.has(k) ? overrideMap.get(k) : applyTerms(converter(zh));
+                }
+            }
+        }
+
+        // 道具/部位名（Female3DCG 描述）→ 供 DOM observer 在 dialog-inventory 顯示時翻
+        if (base === "Assets/Female3DCG/Female3DCG") {
+            for (const [en, zh] of merged) {
+                const k = en.trim();
+                if (k && zh) {
+                    assetName.CN[k] = zh;
+                    assetName.TW[k] = overrideMap.has(k) ? overrideMap.get(k) : applyTerms(converter(zh));
                 }
             }
         }
@@ -148,7 +160,7 @@ export function generateDict() {
         }
     }
 
-    return { paths, cnMap, activity, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
+    return { paths, cnMap, activity, assetName, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
 // 允許 `npm run gen` 直接執行

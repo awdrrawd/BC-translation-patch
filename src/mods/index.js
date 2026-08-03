@@ -5,6 +5,7 @@ import { LSCG } from "./bc/LSCG/index.js";
 import { BCXHelp } from "./html/BCX.js";
 import { ChatHistoryTranslator } from "./html/utils/chatObserver.js";
 import { supplement } from "./supplement.js";
+import { setupDomObserver } from "./domObserver.js";
 
 // BCX / LSCG 翻譯層（字典移植自 Echo 的动作拓展 https://github.com/SugarChain-Studio/echo-activity-ext ）。
 // 這些 mod 自己畫 HTML/canvas，不走遊戲 CSV 管線，所以用 hook + observer 攔截。
@@ -72,4 +73,7 @@ export function setupMods(mod) {
 
     // BCX 在聊天記錄輸出的 HTML 說明
     ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src));
+
+    // dialog-inventory(DOM) 的道具/動作名
+    setupDomObserver();
 }
