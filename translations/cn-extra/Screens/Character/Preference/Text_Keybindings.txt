@@ -1,15 +1,13 @@
-- Keybindings Settings -
-- 快捷键设置 -
-Keybindings
-快捷键
-Chat
-聊天
-Chat Room
-聊天室
-Map Chat Room
-地图房
-Navigation
-导航
+In Chat Room
+在聊天室
+Chat Focused
+聊天窗
+On Chat Room Screen
+聊天室界面
+Chat Not Focused
+聊天窗口未聚焦
+In Chat Room Map Mode
+聊天室地图模式
 Tries to complete the message to a command or print help about it.
 尝试将消息补全为命令，或显示其帮助。
 Auto Complete
