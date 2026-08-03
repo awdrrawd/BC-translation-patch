@@ -69,6 +69,8 @@ Current rules:
 当前规则：
 Curses module overview
 诅咒模块概览
+Item configuration cursed
+物品配置诅咒
 Data required
 需要数据
 Delete template

@@ -1,0 +1,37 @@
+### BCX GROUP_NAME_OVERRIDES（utilsClub.ts）— 詛咒/規則裡顯示的部位群組名。
+Character Height
+角色身高
+Collar Addon
+项圈附加件
+Collar Restraint
+项圈拘束
+Devices
+设备
+Ears Accessory
+耳部配件
+Feet
+脚
+General Addon
+通用附属物
+Hood
+头套
+Hood Addon
+头套附加件
+Lower Leg
+小腿
+Miscellaneous
+杂项
+Mouth (1)
+嘴巴 (1)
+Mouth (2)
+嘴巴 (2)
+Mouth (3)
+嘴巴 (3)
+Mouth Style
+嘴部样式
+Nipple Piercing
+乳头穿孔
+Pussy Style
+阴部样式
+Upper Leg
+大腿
