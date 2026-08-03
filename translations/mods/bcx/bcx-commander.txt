@@ -1,0 +1,79 @@
+### BCX 指令（抽自 command_definitions.ts / speech_commands.ts）。保留 PLAYER_NAME 佔位符。
+Eyes
+眼睛
+Control PLAYER_NAME's eyes
+控制 PLAYER_NAME 的眼睛
+This command forces PLAYER_NAME's eyes into the specified state, but they can still manually change it.
+此命令强制将 PLAYER_NAME 的眼睛设为指定状态，但對方仍可手动更改。
+Mouth
+嘴
+Control PLAYER_NAME's mouth
+控制 PLAYER_NAME 的嘴
+This command forces PLAYER_NAME's mouth into the specified state, but they can still manually change it.
+此命令强制将 PLAYER_NAME 的嘴设为指定状态，但對方仍可手动更改。
+Arms
+手臂
+Control PLAYER_NAME's arm poses
+控制 PLAYER_NAME 的手臂姿势
+This command forces PLAYER_NAME's arms into the specified pose, but they can still manually change it. Some may be unavailable, due to restricting items, etc.
+此命令强制将 PLAYER_NAME 的手臂设为指定姿势，但對方仍可手动更改。某些姿势可能因限制性物品等原因而无法使用。
+Legs
+腿
+Control PLAYER_NAME's leg poses
+控制 PLAYER_NAME 的腿部姿势
+This command forces PLAYER_NAME's legs into the specified pose, but they can still manually change it. Some may be unavailable, due to restricting items, etc.
+此命令强制将 PLAYER_NAME 的腿部设为指定姿势，但對方仍可手动更改。某些姿势可能因限制性物品等原因而无法使用。
+Allfours
+四肢着地
+Make PLAYER_NAME get on all fours
+让 PLAYER_NAME 四肢着地
+`This command forces PLAYER_NAME's to get on all fours, but they can still manually change their pose. This pose requires specific items to work.
+此命令强制 PLAYER_NAME 四肢着地，但她仍可手动更改姿势。此姿势需要特定物品才能生效。
+Makes PLAYER_NAME leave and wait in another chat room.
+让 PLAYER_NAME 离开并在另一个聊天室等待。
+This command forces PLAYER_NAME to leave the current room and join an existing chat room or otherwise create a new public or private one with the given background name and room name. PLAYER_NAME is not prevented from leaving that room, if she is able to. Tip: If you want to make PLAYER_NAME wait in a certain way, the pose command could for instance be used before this one.
+此命令强制 PLAYER_NAME 离开当前房间，并加入一个已有聊天室，或使用指定的背景名称和房间名称创建一个新的公共或私人房间。如果 PLAYER_NAME 有能力离开该房间，则不会被阻止。提示：若希望 PLAYER_NAME 以某种特定方式等待，可在此之前使用姿势命令。
+Lock PLAYER_NAME in a singleplayer isolation cell
+将 PLAYER_NAME 锁进单人隔离牢房
+This command sends PLAYER_NAME to the timer cell for up to 60 minutes. There is no way for you to get her out before the time is up.
+此命令将 PLAYER_NAME 送入定时隔离牢房，最长 60 分钟。时间结束前您无法将對方提前放出。
+Lock PLAYER_NAME into the aslyum
+将 PLAYER_NAME 锁进疯人院
+This command sends and locks PLAYER_NAME into the asylum for up to 1 week, where she can freely walk around, but cannot leave the area. You can free PLAYER_NAME early by visiting her in the aslyum and using '.asylum cancel'.
+此命令将 PLAYER_NAME 送入并锁进疯人院，最长 1 周。對方可以在院内自由走动，但不能离开该区域。您可以在疯人院中探望她并使用 .asylum cancel 提前释放 PLAYER_NAME。
+Store away PLAYER_NAME's keys
+收起 PLAYER_NAME 的钥匙
+This command removes all of PLAYER_NAME's keys for up to 1 week. You can give them back to her early by using '.keydeposit cancel'.
+此命令收起 PLAYER_NAME 的所有钥匙，最长 1 周。您可以使用 .keydeposit cancel 提前将钥匙归还给對方。
+Remaining time of keyhold, asylum stay, or GGTS training
+保管钥匙、疯人院停留或 GGTS 训练的剩余时间
+This command shows the remaining time of either having all of PLAYER_NAME's keys deposited, her being locked in the asylum, or having to do GGTS training sessions in the asylum.
+此命令显示 PLAYER_NAME 钥匙被保管、被锁在疯人院、或需要在疯人院进行 GGTS 训练的剩余时间。
+Force PLAYER_NAME to do bound maid work
+强制 PLAYER_NAME 做被束缚的女仆工作
+This command sends PLAYER_NAME to sell 5 drinks as a maid in multiplayer chat rooms. She must be a maid recognized by the maid sorority and be able to walk and talk, to be taken in by the maid.
+此命令将 PLAYER_NAME 派往多人聊天室，以女仆身份售卖 5 杯饮料。對方必须是被女仆姐妹会认可的女仆，并且能够行走和说话，才能被女仆组织接纳。
+<number from 1 to 100> | forced | ruined | stop
+<1 到 100 的数字> | forced | ruined | stop
+Controls PLAYER_NAME's orgasms directly
+直接控制 PLAYER_NAME 的高潮
+This command controls PLAYER_NAME's arousal meter directly, allowing four things:\n1. Setting the bar directly to a number from 1 to 100, whereas 100 triggers a normal orgasm.\n2. Triggering a forced orgasm that cannot be resisted.\n3. Triggering an orgasm that gets ruined.\n4. Stopping an orgasm already triggered (e.g. by a toy).
+此命令直接控制 PLAYER_NAME 的 欲望值，允许四种操作：\n1. 将数值直接设为 1 到 100 之间的数字，其中 100 会触发普通高潮。\n2. 触发无法抵抗的强制高潮。\n3. 触发被破坏的高潮（ruined orgasm）。\n4. 停止已触发的高潮（例如由玩具引发的）。
+Emoticon
+表情气泡
+Control PLAYER_NAME's emoticon
+控制 PLAYER_NAME 的表情气泡
+This command changes PLAYER_NAME's emoticon into the specified state, but the player can still manually change it.
+此命令将 PLAYER_NAME 的表情气泡改为指定状态，但對方仍可手动更改。
+This command forces PLAYER_NAME to directly say the given text loudly in the chat room, without any way to react to it. The command is intentionally not supporting emotes, whispers or OOC text.
+此命令强制 PLAYER_NAME 在聊天室中直接大声说出指定文本，且對方无法对此作出任何反应。该命令故意不支持表情动作、密语或 OOC 文本。
+This command makes PLAYER_NAME unable to say anything else than the given text loudly in the chat (she can still use emotes and whispers). The blocking lasts until the command giver cancels it with 'say cancel' command, leaves the room or until PLAYER_NAME leaves the room. The text is supposed to be typed out manually, otherwise the giver of the command will be notified of this. The command is intentionally not supporting emotes, whispers or OOC text.
+此命令使 PLAYER_NAME 在聊天中除了大声说出指定文本外无法说任何其他内容（對方仍可使用表情动作和密语）。此封锁状态持续至命令下达者使用 "say cancel" 取消、离开房间，或 PLAYER_NAME 离开房间为止。文本必须手动输入，否则命令下达者将收到通知。该命令故意不支持表情动作、密语或 OOC 文本。
+This command gives PLAYER_NAME the task to type the given text in a whisper to the task giver for the number of times defined in the command. This will block PLAYER_NAME from chatting or whispering to anyone other than the task giver (she can still use emotes). This state lasts until the task giver cancels it with 'typetask cancel' command, leaves the room or until PLAYER_NAME either makes a mistake or leaves the room. The command is intentionally not supporting emotes, whispers or OOC text.
+此命令给 PLAYER_NAME 分配任务，要求對方以密语方式向任务下达者输入指定文本，次数由命令中定义。此状态将阻止 PLAYER_NAME 与任务下达者之外的任何人进行聊天或密语（對方仍可使用表情动作）。此状态持续至任务下达者使用 "typetask cancel" 取消、离开房间，或 PLAYER_NAME 出错或离开房间为止。该命令故意不支持表情动作、密语或 OOC 文本。
+This command gives PLAYER_NAME the task to type the given text in a whisper to the task giver for the number of times defined in the command. This will block PLAYER_NAME from chatting or whispering to anyone other than the task giver (she can still use emotes). This state lasts until the task giver cancels it with 'typetask cancel' command, leaves the room or until PLAYER_NAME either finishes the whole task successfully or leaves the room. The command is intentionally not supporting emotes, whispers or OOC text.
+此命令给 PLAYER_NAME 分配任务，要求對方以密语方式向任务下达者输入指定文本，次数由命令中定义。此状态将阻止 PLAYER_NAME 与任务下达者之外的任何人进行聊天或密语（對方仍可使用表情动作）。此状态持续至任务下达者使用 "typetask cancel" 取消、离开房间，或 PLAYER_NAME 成功完成全部任务或离开房间为止。该命令故意不支持表情动作、密语或 OOC 文本。
+Usage
+用法
+IMPORTANT: The effects of this command is not going away if BCX is turned off or not activated after reloading. This is because this command uses a function present in the base game.
+重要提示：此命令的效果不会因 BCX 关闭或重载后未激活而消失。这是因为该命令使用了基础游戏本身存在的功能。

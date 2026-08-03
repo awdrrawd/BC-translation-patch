@@ -1,4 +1,6 @@
-### BCX 規則名/說明/指令（抽自 bc_blocks.ts / speech_control.ts / command_definitions.ts）。保留 PLAYER_NAME 佔位符。
+### BCX 規則名/說明（抽自 bc_blocks.ts / speech_control.ts）。保留 PLAYER_NAME 佔位符。
+Already applied
+已设置
 Forbid using remotes on self
 禁止对自己使用遥控器
 PLAYER_NAME using one on PLAYER_NAME
@@ -85,6 +87,14 @@ Still allow removing low difficulty items
 仍允许移除低难度物品
 This rule forbids PLAYER_NAME to remove any items from other characters. The rule has a toggle to optionally still allow to remove items which were given a low difficulty score by the original asset maker, such as hand-held items, plushies, etc. This means that custom crafted properties given to an item such as 'decoy' are not factored in. It also has a toggle to prevent swapping items.
 此规则禁止 PLAYER_NAME 从其他角色身上移除任何物品。规则有一个开关可选择仍允许移除原作者给予低难度分的物品（如手持物、毛绒玩具等）。这意味着物品的自定义制作属性（如「诱饵」）不计入。规则还有一个开关可阻止交换物品。
+Forbid freeing others
+禁止解放他人
+This rule forbids PLAYER_NAME to remove any items from other characters. The rule has a toggle to optionally still allow to remove items which were given a low difficulty score by the original asset maker, such as hand-held items, plushies, etc. This means that custom crafted properties given to an item such as 'decoy' are not factored in. It also has a toggle to prevent swapping items.
+这条规则禁止 PLAYER_NAME 移除其他角色的任何物品。该规则设有一个开关，可选择性允许移除原资产制作者评定为低难度分数的物品，例如手持物品、毛绒玩具等。这意味着给予物品的自定义属性（如“诱饵”）不会被纳入考量。该规则还有一个开关，用于阻止物品交换。
+Forbid tying up self
+禁止捆绑自己
+This rule forbids PLAYER_NAME to use any items on herself.
+这条规则禁止 PLAYER_NAME 对自己使用任何物品。
 This rule forbids PLAYER_NAME to use any items on herself.
 此规则禁止 PLAYER_NAME 对自己使用任何物品。
 Forbid tying up others
@@ -153,6 +163,18 @@ PLAYER_NAME accessing rules placed on herself by others
 PLAYER_NAME 访问他人对她施加的规则
 This rule forbids PLAYER_NAME from accessing (or removing) any rules that were placed on her by other BCX users. This additionally blocks bulk actions and editing the global config to prevent bypassing this rule. PLAYER_NAME can still access (and remove) rules she herself placed. This rule does not affect PLAYER_NAME's permissions to use another users' BCX.
 此规则禁止 PLAYER_NAME 访问（或移除）其他 BCX 用户对她施加的任何规则。这还会阻止批量操作和编辑全局配置，以防绕过此规则。PLAYER_NAME 仍可访问（并移除）她自己施加的规则。此规则不影响 PLAYER_NAME 使用他人 BCX 的权限。
+Prevent accessing curses by others
+这条规则防止他人施加的诅咒被获取
+ (PLAYER_NAME accessing curses placed on herself by others)
+（即 PLAYER_NAME 获取他人对自己施加的诅咒）
+This rule forbids PLAYER_NAME from accessing (or removing) any curses that were placed on her by other BCX users. This additionally blocks bulk actions and editing the global config to prevent bypassing this rule. PLAYER_NAME can still access (and remove) curses she herself placed. This rule does not affect PLAYER_NAME permissions to use another users' BCX.
+这条规则禁止 PLAYER_NAME 访问（或移除）任何由其他 BCX 用户对她施加的诅咒。此规则同时阻止批量操作和编辑全局配置，以防止绕过该规则。PLAYER_NAME 仍然可以访问（及移除）她自己施加的诅咒。此规则不影响 PLAYER_NAME 使用其他用户 BCX 的权限。
+Prevent accessing rules by others
+这条规则防止他人设定的规则被获取
+(PLAYER_NAME accessing rules placed on herself by others)
+（即 PLAYER_NAME 获取他人对自己设定的规则）
+This rule forbids PLAYER_NAME from accessing (or removing) any rules that were placed on her by other BCX users. This additionally blocks bulk actions and editing the global config to prevent bypassing this rule. PLAYER_NAME can still access (and remove) rules she herself placed. This rule does not affect PLAYER_NAME permissions to use another users' BCX.
+这条规则禁止 PLAYER_NAME 访问（或移除）任何由其他 BCX 用户对她设定的规则。此规则同时阻止批量操作和编辑全局配置，以防止绕过该规则。PLAYER_NAME 仍然可以访问（及移除）她自己设定的规则。此规则不影响 PLAYER_NAME 使用其他用户 BCX 的权限。
 Forbid looking at room admin UI
 禁止查看房间管理界面
 while blindfolded
@@ -397,43 +419,39 @@ force PLAYER_NAME to talk as if they were gagged
 强制 PLAYER_NAME 说话如同被塞口
 The level of forced garbling
 强制含糊的程度
-Eyes
-眼睛
-Control PLAYER_NAME's eyes
-控制 PLAYER_NAME 的眼睛
-Mouth
-嘴
-Control PLAYER_NAME's mouth
-控制 PLAYER_NAME 的嘴
-Arms
-手臂
-Control PLAYER_NAME's arm poses
-控制 PLAYER_NAME 的手臂姿势
-Legs
-腿
-Control PLAYER_NAME's leg poses
-控制 PLAYER_NAME 的腿部姿势
-Allfours
-四肢着地
-Make PLAYER_NAME get on all fours
-让 PLAYER_NAME 四肢着地
-Makes PLAYER_NAME leave and wait in another chat room.
-让 PLAYER_NAME 离开并在另一个聊天室等待。
-Lock PLAYER_NAME in a singleplayer isolation cell
-将 PLAYER_NAME 锁进单人隔离牢房
-Lock PLAYER_NAME into the aslyum
-将 PLAYER_NAME 锁进疯人院
-Store away PLAYER_NAME's keys
-收起 PLAYER_NAME 的钥匙
-Remaining time of keyhold, asylum stay, or GGTS training
-保管钥匙、疯人院停留或 GGTS 训练的剩余时间
-Force PLAYER_NAME to do bound maid work
-强制 PLAYER_NAME 做被束缚的女仆工作
-<number from 1 to 100> | forced | ruined | stop
-<1 到 100 的数字> | forced | ruined | stop
-Controls PLAYER_NAME's orgasms directly
-直接控制 PLAYER_NAME 的高潮
-Emoticon
-表情气泡
-Control PLAYER_NAME's emoticon
-控制 PLAYER_NAME 的表情气泡
+Field of vision for eyes
+眼睛的视野
+This rule forbids PLAYER_NAME from accessing (or removing) any rules that were placed on her by other BCX users. This additionally blocks bulk actions and editing the global config to prevent bypassing this rule. PLAYER_NAME can still access (and remove) rules she herself placed. This rule does not affect PLAYER_NAME permissions to use another users' BCX.
+这条规则禁止 PLAYER_NAME 访问（或移除）任何由其他 BCX 用户对她设定的规则。此规则同时阻止批量操作和编辑全局配置，以防止绕过该规则。PLAYER_NAME 仍然可以访问（及移除）她自己设定的规则。此规则不影响 PLAYER_NAME 使用其他用户 BCX 的权限。
+Fully blind when blindfolded
+蒙眼时完全看不见
+Always leave rooms slowly
+总是缓慢离开房间
+Set slowed leave time
+设置缓慢离开的时间
+Secret orgasm progress
+秘密性高潮进度
+Room admin transfer
+房间管理员转让
+Limit bound admin power
+限制被束缚玩家的管理员权限
+Control profile online description
+控制在线描述资料
+Replace spoken words
+替换词语
+(with others in all chat, whisper and OOC messages)
+(在所有聊天、私聊和OOC消息中替换词语)
+Automatically replaces specific words PLAYER_NAME uses in chat messages, whispers and OOC with another set word from a defineable a list of words with a special syntax (e.g. [Clare,Lily;Mistress],[Claudia;the maid],[I;this slut]).
+这条规则自动将 PLAYER_NAME 在聊天消息、密语和 OOC 中使用的特定词语，替换为来自可自定义单词列表中的另一个指定词，该列表使用特殊语法（例如 [Clare,Lily;Mistress],[Claudia;the maid],[I;this slut]）。
+Using honorifics
+使用敬语
+(in front of specific names in all chat, whisper and OOC messages)
+(这条规则要求在全部聊天、密语和OOC消息中，在特定名称前使用敬语)
+Define a listing of words (e.g. Miss, Mistress, ...) where one of them always needs to be typed before any one out of a listing of names (e.g. Julia, Eve, ...) in all chat, whisper and OOC messages. Needs a certain syntax (e.g. [Goddess,Mistress;Lily,Clare],[slut;Mona], ...)
+用户可定义一个词语列表（例如 Miss、Mistress……），在全部聊天、密语和OOC消息中，只要提及另一个名称列表中的任一名字（例如 Julia、Eve……），就必须在其前面加上其中某个敬语。该规则需使用特定语法（例如 [Goddess,Mistress;Lily,Clare],[slut;Mona],……）。
+Farewell on leave
+离开时告别
+(only when under slow leave)
+(仅当对方处于缓慢离开状态时)
+Forces PLAYER_NAME to say farewells to people leaving the room slowly. Only does it once per 10 minutes per room. Can start with * or ** for emote.
+强制 PLAYER_NAME 向缓慢离开房间的人道别。每个房间每10分钟仅执行一次。可以以 * 或 ** 开头来表示动作（表情）。

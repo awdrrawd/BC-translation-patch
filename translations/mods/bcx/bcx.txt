@@ -75,10 +75,6 @@ Exported to clipboard!
 已导出到剪贴板！
 Extra gag anti-cheat
 额外口塞防作弊
-Forbid freeing others
-禁止解放他人
-Forbid tying up self
-禁止捆绑自己
 Forced say
 强制发言
 Forced typing task
@@ -247,3 +243,7 @@ You need to be admin in this room to use a .room command
 你需要是此房间的管理员才能使用 .room 命令
 You need to greet this room like taught!
 你需要按教导问候此房间！
+Export/import works by converting the current configuration of the selected module feature into a long code word that is copied to your device's clipboard. You can then paste it anywhere you like, for instance a text file on your device. Functionality of this feature depends on the device you are using and if the clipboard can be used on it. This field will also show you status information while you try to export or import.
+导出/导入功能的工作原理是将所选模块功能的当前配置转换为一个长代码字，并将其复制到您设备的剪贴板。然后，您可以将其粘贴到任何位置，例如设备上的文本文件。此功能的可用性取决于您使用的设备以及该设备是否支持剪贴板。此字段还会显示您尝试导出或导入时的状态信息。
+Compressing the export will save you some space when storing it, as the text length will be shorter, although the exported string will no longer be human readable. 
+压缩导出内容可以节省存储空间，因为文本长度会缩短，但导出的字符串将不再易于阅读。
