@@ -7,9 +7,11 @@ export const supplement = {
         "High Five!": "击掌！",
         "Farewell on leave": "离开时告别",
     },
-    // 動作訊息
+    // 動作訊息（模板，替換名字前；保留 SourceCharacter/PronounPossessive 等 token）
     activity: {
-        // "English activity text": "中文",
+        "High Five!": "击掌！",
+        "SourceCharacter holds PronounPossessive hand in the air, slapping it with the other.":
+            "SourceCharacter 把手举在空中，用另一只手拍了上去。",
     },
     // 聊天記錄中的 HTML 說明
     html: {

@@ -1,0 +1,3 @@
+### 官方 CN 未翻的道具/部位名（英文→中文）。DOM observer 會在 dialog-inventory 套用。
+Cybertech Gas Mask
+赛博防毒面具
