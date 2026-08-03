@@ -1,0 +1,124 @@
+Tries to complete the message to a command or print help about it.
+尝试将消息补全为命令，或显示其帮助。
+Auto Complete
+自动补全
+Toggles the focus between the chat input and the main view.
+在聊天输入框和主视图之间切换焦点。
+Focus Change
+切换焦点
+Navigates to the next message in the chat history.
+跳到聊天记录中的下一条消息。
+Chat History Next
+聊天记录下一条
+Navigates to the previous message in the chat history.
+跳到聊天记录中的上一条消息。
+Chat History Previous
+聊天记录上一条
+Sends the message to the chatroom.
+将消息发送到聊天室。
+Send Message
+发送消息
+Sends the OOC message to the chatroom.
+将 OOC 消息发送到聊天室。
+Send OOC Message
+发送 OOC 消息
+Sends the message to the chatroom (virtual keyboard compatibility).
+将消息发送到聊天室（虚拟键盘兼容）。
+Send Message (mobile)
+发送消息（移动端）
+Tries to leave the chat room.
+尝试离开聊天室。
+Leave the Chat Room.
+离开聊天室。
+Opens the admin screen.
+打开管理界面。
+Open Admin Screen
+打开管理界面
+Opens your profile.
+打开你的资料。
+Open Your Profile
+打开你的资料
+Opens your wardrobe.
+打开你的衣橱。
+Open Your Wardrobe
+打开你的衣橱
+Go to previous page.
+转到上一页。
+Previous page.
+上一页。
+Go to next page.
+转到下一页。
+Next page.
+下一页。
+Toggles the kneeling state.
+切换跪下状态。
+Toggle Kneel
+切换跪下
+Change the focus to the chat input.
+将焦点切换到聊天输入框。
+Focus Chat
+聚焦聊天框
+Zoom the map view in.
+放大地图视图。
+Zoom In
+放大
+Zoom the map view out.
+缩小地图视图。
+Zoom Out
+缩小
+Undo the last map change made.
+撤销上一次地图更改。
+Undo
+撤销
+Moves the player left in the map chatroom.
+在地图聊天室中向左移动。
+Move Left
+向左移动
+Moves the player down in the map chatroom.
+在地图聊天室中向下移动。
+Move Down
+向下移动
+Moves the player right in the map chatroom.
+在地图聊天室中向右移动。
+Move Right
+向右移动
+Moves the player up in the map chatroom.
+在地图聊天室中向上移动。
+Move Up
+向上移动
+Scroll down the focused element.
+向下滚动当前焦点元素。
+Scroll Down
+向下滚动
+Scroll up the focused element.
+向上滚动当前焦点元素。
+Scroll Up
+向上滚动
+Scroll to the bottom of the focused element.
+滚动到当前焦点元素底部。
+Scroll to Bottom
+滚动到底部
+Scroll to the top of the focused element.
+滚动到当前焦点元素顶部。
+Scroll to Top
+滚动到顶部
+Chat Room
+聊天室
+Map Chat Room
+地图聊天室
+Navigation
+导航
+In Chat Room Character Mode
+在聊天室角色模式中
+Chat Focused
+聊天框已聚焦
+Chat Not Focused
+聊天框未聚焦
+In Chat Room Map Mode
+在聊天室地图模式中
+In Chat Room
+在聊天室中
+On Chat Room Screen
+在聊天室界面
+No Modifiers
+无修饰键

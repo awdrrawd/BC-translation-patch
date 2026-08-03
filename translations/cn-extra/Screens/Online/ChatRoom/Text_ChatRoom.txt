@@ -1,0 +1,70 @@
+Invalid Pandora activity, use `/pandora help` to get the list.
+无效的潘多拉活动，使用 `/pandora help` 获取列表。
+The supported activities are:
+支持的活动有：
+SourceCharacter has requested to be your friend. {buttons}
+SourceCharacter 请求成为你的好友。{buttons}
+SourceCharacter has accepted your friend request.
+SourceCharacter 接受了你的好友请求。
+SourceCharacter has removed you as a friend.
+SourceCharacter 已将你从好友中移除。
+Add back
+加回好友
+Added SourceCharacter as a friend.
+已将 SourceCharacter 加为好友。
+Ghost SourceCharacter
+鬼隐 SourceCharacter
+SourceCharacter is now Ghosted.
+SourceCharacter 现在已被鬼隐。
+Ignore request
+忽略请求
+Invalid number.
+无效的编号。
+Your Arousal Activation mode should be set to Manual or Hybrid to change your arousal.
+要更改兴奋度，你的兴奋度激活模式需设为手动或混合。
+Loaded mods
+已加载的模组
+$count registered mod
+$count 个已注册模组
+$count registered mods
+$count 个已注册模组
+v$version
+v$version
+Repository
+仓库
+Show Mod SDK mods loaded in your client in the chat log (name, version, optional repository link).
+在聊天记录中显示你客户端已加载的 Mod SDK 模组（名称、版本、可选的仓库链接）。
+Query mods installed on other players; optional argument targets one player in the room. Others must allow replies in Online preferences.
+查询其他玩家安装的模组；可选参数指定房间中的某位玩家。对方需在在线偏好中允许回应。
+Remote Mod SDK results
+远程 Mod SDK 结果
+Remote Mod SDK query results
+远程 Mod SDK 查询结果
+Responses $done / $total
+回应 $done / $total
+(No mods registered)
+（没有已注册的模组）
+Member $member
+会员 $member
+Responded
+已回应
+Declined
+已拒绝
+No response
+无回应
+This player declines remote Mod SDK queries (Online preference).
+该玩家拒绝远程 Mod SDK 查询（在线偏好设置）。
+Could not read mod list.
+无法读取模组列表。
+Timed out waiting for a reply (ghost list or connection can block replies).
+等待回应超时（鬼隐名单或连接可能会阻断回应）。
+You must be in a chat room to use this command.
+你必须在聊天室中才能使用此命令。
+No matching player in this room for that name or member number.
+本房间中没有与该名称或会员编号相符的玩家。
+Mod list copied to your clipboard.
+模组列表已复制到剪贴板。
+Could not copy mod list to clipboard.
+无法将模组列表复制到剪贴板。
+Copy mod list
+复制模组列表
