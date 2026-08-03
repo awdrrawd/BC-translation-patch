@@ -22,6 +22,6 @@
     "repository": "https://github.com/awdrrawd/BC-translation-patch",
     "pagesBaseUrl": "https://awdrrawd.github.io/BC-translation-patch/",
     "bundleName": "bc-translation-patch.js",
-    "loaderName": "bc-translation-patch.user.js"
+    "loaderName": "bc-translation-patch-Loader.user.js"
   }
 }

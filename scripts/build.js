@@ -71,5 +71,7 @@ const loader = `// ==UserScript==
     document.head.appendChild(s);
 })();
 `;
+// 同時輸出到 dist（供 Pages）與 repo 根目錄（方便在 repo 直接看到/連結）
 fs.writeFileSync(path.join(distDir, cfg.loaderName), loader, "utf8");
-console.log(`已產生載入器：dist/${cfg.loaderName}`);
+fs.writeFileSync(path.join(repoRoot, cfg.loaderName), loader, "utf8");
+console.log(`已產生載入器：dist/${cfg.loaderName} 與根目錄 ${cfg.loaderName}`);

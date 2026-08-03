@@ -20,7 +20,7 @@
 > 部署後，檔案會在 `https://awdrrawd.github.io/BC-translation-patch/` 下。
 
 **方式 A：Tampermonkey 載入器**
-安裝 [Tampermonkey](https://www.tampermonkey.net/) 後，開啟 [`bc-translation-patch.user.js`](https://awdrrawd.github.io/BC-translation-patch/bc-translation-patch.user.js) 安裝即可（會自動更新）。
+安裝 [Tampermonkey](https://www.tampermonkey.net/) 後，開啟 [`bc-translation-patch-Loader.user.js`](https://awdrrawd.github.io/BC-translation-patch/bc-translation-patch-Loader.user.js) 安裝即可（會自動更新）。
 
 **方式 B：主控台 / FUSAM 貼上**
 ```javascript
