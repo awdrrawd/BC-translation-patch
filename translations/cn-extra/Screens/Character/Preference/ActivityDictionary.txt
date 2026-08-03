@@ -1,0 +1,21 @@
+### 官方 CN 未翻的動作（名稱 + 訊息模板）。保留 SourceCharacter/TargetCharacter/ActivityAsset/PronounPossessive 等 token。
+Squeeze
+挤压
+Deep Throat
+深喉
+Finger Mouth
+手指插嘴
+Deepthroat
+深喉
+SourceCharacter squeezes TargetCharacter's ActivityAsset.
+SourceCharacter 挤压 TargetCharacter 的 ActivityAsset。
+SourceCharacter shoves PronounPossessive fingers in TargetCharacter's mouth.
+SourceCharacter 将 PronounPossessive 手指塞进 TargetCharacter 的嘴里。
+SourceCharacter deep throats TargetCharacter's ActivityAsset.
+SourceCharacter 深喉 TargetCharacter 的 ActivityAsset。
+SourceCharacter deepthroats TargetCharacter's ActivityAsset.
+SourceCharacter 深喉 TargetCharacter 的 ActivityAsset。
+SourceCharacter squeezes PronounPossessive ActivityAsset.
+SourceCharacter 挤压 PronounPossessive ActivityAsset。
+SourceCharacter fingers PronounPossessive mouth.
+SourceCharacter 用手指插弄 PronounPossessive 嘴。

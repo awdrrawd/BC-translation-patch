@@ -1,4 +1,5 @@
 import { activeLang } from "../lang.js";
+import GEN from "../generated/dict.json";
 import { BCX } from "./bc/BCX/index.js";
 import { LSCG } from "./bc/LSCG/index.js";
 import { BCXHelp } from "./html/BCX.js";
@@ -24,8 +25,14 @@ function tryMenu(key) {
     return undefined;
 }
 
+// 完整的 base 動作字典（英文→中文），繞過時序直接在存取時翻譯動作名/訊息
+const ACT = /** @type {any} */ (GEN).activity || { CN: {}, TW: {} };
+
 function tryActivity(key) {
     if (supplement.activity[key]) return supplement.activity[key];
+    const lang = activeLang();
+    const base = lang && ACT[lang] && ACT[lang][key];
+    if (base) return base;
     for (const u of units) {
         const t = u.translateActivityText?.(key);
         if (t) return t;

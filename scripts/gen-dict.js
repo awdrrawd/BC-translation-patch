@@ -91,6 +91,8 @@ export function generateDict() {
     const paths = {};
     /** @type {Record<string, string>} */
     const cnMap = {};
+    // 動作字典（英文→中文），供 runtime hook ActivityDictionaryText 用，繞過時序
+    const activity = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
     let cnFiles = 0;
     let twFiles = 0;
 
@@ -101,6 +103,16 @@ export function generateDict() {
         for (const [en, zh] of merged) {
             const k = en.trim();
             if (k && zh && cnMap[k] === undefined) cnMap[k] = zh;
+        }
+
+        if (base === "Screens/Character/Preference/ActivityDictionary") {
+            for (const [en, zh] of merged) {
+                const k = en.trim();
+                if (k && zh) {
+                    activity.CN[k] = zh;
+                    activity.TW[k] = overrideMap.has(k) ? overrideMap.get(k) : applyTerms(converter(zh));
+                }
+            }
         }
 
         const hasExtra = extraPairs.length > 0;
@@ -124,7 +136,7 @@ export function generateDict() {
         }
     }
 
-    return { paths, cnMap, stats: { cnFiles, twFiles } };
+    return { paths, cnMap, activity, stats: { cnFiles, twFiles } };
 }
 
 // 允許 `npm run gen` 直接執行
