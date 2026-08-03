@@ -1,1 +1,209 @@
-### LSCG 補譯（英文一行、中文一行）。
+### LSCG 補譯（英文一行、中文一行）。動作模板含 SourceCharacter/TargetCharacter/PronounPossessive/ActivityAsset token。
+LSCG activity
+LSCG动作
+Pet
+宠爱
+SourceCharacter baps TargetCharacter.
+SourceCharacter 轻拍了 TargetCharacter 一下。
+SourceCharacter chews on PronounPossessive ActivityAsset.
+SourceCharacter 咀嚼着 PronounPossessive ActivityAsset。
+SourceCharacter chews on TargetCharacter's ActivityAsset.
+SourceCharacter 咀嚼着 TargetCharacter 的 ActivityAsset。
+SourceCharacter chomps down on TargetCharacter's arm and doesn't let go.
+SourceCharacter 一口咬住 TargetCharacter 的手臂不放。
+SourceCharacter chomps down on TargetCharacter's butt and doesn't let go.
+SourceCharacter 一口咬住 TargetCharacter 的屁股不放。
+SourceCharacter chomps down on TargetCharacter's leg and doesn't let go.
+SourceCharacter 一口咬住 TargetCharacter 的腿不放。
+SourceCharacter chomps down on TargetCharacter's neck and doesn't let go.
+SourceCharacter 一口咬住 TargetCharacter 的脖子不放。
+SourceCharacter clamps PronounPossessive hand over PronounPossessive own eyes.
+SourceCharacter 用手捂住自己的眼睛。
+SourceCharacter clamps PronounPossessive hand over TargetCharacter's eyes.
+SourceCharacter 用手捂住 TargetCharacter 的眼睛。
+SourceCharacter flicks PronounPossessive own balls.
+SourceCharacter 弹了自己的蛋蛋一下。
+SourceCharacter flicks PronounPossessive own butt.
+SourceCharacter 弹了自己的屁股一下。
+SourceCharacter flicks PronounPossessive own clitoris.
+SourceCharacter 弹了自己的阴蒂一下。
+SourceCharacter flicks PronounPossessive own ear.
+SourceCharacter 弹了自己的耳朵一下。
+SourceCharacter flicks PronounPossessive own forehead.
+SourceCharacter 弹了自己的额头一下。
+SourceCharacter flicks PronounPossessive own leg.
+SourceCharacter 弹了自己的腿一下。
+SourceCharacter flicks PronounPossessive own neck.
+SourceCharacter 弹了自己的脖子一下。
+SourceCharacter flicks PronounPossessive own nipple.
+SourceCharacter 弹了自己的乳头一下。
+SourceCharacter flicks PronounPossessive own nose.
+SourceCharacter 弹了自己的鼻子一下。
+SourceCharacter flicks PronounPossessive own penis.
+SourceCharacter 弹了自己的阴茎一下。
+SourceCharacter flicks PronounPossessive own pussy.
+SourceCharacter 弹了自己的阴部一下。
+SourceCharacter flicks PronounPossessive own thigh.
+SourceCharacter 弹了自己的大腿一下。
+SourceCharacter flicks TargetCharacter's balls.
+SourceCharacter 弹了 TargetCharacter 的蛋蛋一下。
+SourceCharacter flicks TargetCharacter's butt.
+SourceCharacter 弹了 TargetCharacter 的屁股一下。
+SourceCharacter flicks TargetCharacter's clitoris.
+SourceCharacter 弹了 TargetCharacter 的阴蒂一下。
+SourceCharacter flicks TargetCharacter's ear.
+SourceCharacter 弹了 TargetCharacter 的耳朵一下。
+SourceCharacter flicks TargetCharacter's forehead.
+SourceCharacter 弹了 TargetCharacter 的额头一下。
+SourceCharacter flicks TargetCharacter's leg.
+SourceCharacter 弹了 TargetCharacter 的腿一下。
+SourceCharacter flicks TargetCharacter's neck.
+SourceCharacter 弹了 TargetCharacter 的脖子一下。
+SourceCharacter flicks TargetCharacter's nipple.
+SourceCharacter 弹了 TargetCharacter 的乳头一下。
+SourceCharacter flicks TargetCharacter's nose.
+SourceCharacter 弹了 TargetCharacter 的鼻子一下。
+SourceCharacter flicks TargetCharacter's penis.
+SourceCharacter 弹了 TargetCharacter 的阴茎一下。
+SourceCharacter flicks TargetCharacter's pussy.
+SourceCharacter 弹了 TargetCharacter 的阴部一下。
+SourceCharacter flicks TargetCharacter's thigh.
+SourceCharacter 弹了 TargetCharacter 的大腿一下。
+SourceCharacter flicks the bottom of PronounPossessive feet.
+SourceCharacter 弹了自己的脚底一下。
+SourceCharacter flicks the bottom of TargetCharacter's feet.
+SourceCharacter 弹了 TargetCharacter 的脚底一下。
+SourceCharacter flops on top of TargetCharacter.
+SourceCharacter 一下扑到 TargetCharacter 身上。
+SourceCharacter fucks TargetCharacter's penis with PronounPossessive ass.
+SourceCharacter 用 PronounPossessive 屁股套弄着 TargetCharacter 的阴茎。
+SourceCharacter fucks TargetCharacter's penis with PronounPossessive pussy, grinding up and down.
+SourceCharacter 用 PronounPossessive 阴部套弄着 TargetCharacter 的阴茎，上下摆动。
+SourceCharacter full body tackles TargetCharacter!
+SourceCharacter 全身扑向 TargetCharacter！
+SourceCharacter gently kisses over TargetCharacter's eyes.
+SourceCharacter 轻吻 TargetCharacter 的双眼。
+SourceCharacter grabs TargetCharacter's horn.
+SourceCharacter 抓住 TargetCharacter 的角。
+SourceCharacter grabs TargetCharacter's tail.
+SourceCharacter 抓住 TargetCharacter 的尾巴。
+SourceCharacter grinds PronounPossessive ass against TargetCharacter's vulva.
+SourceCharacter 用 PronounPossessive 屁股磨蹭 TargetCharacter 的外阴。
+SourceCharacter grinds PronounPossessive pussy against TargetCharacter's face.
+SourceCharacter 用 PronounPossessive 阴部磨蹭 TargetCharacter 的脸。
+SourceCharacter grinds PronounPossessive pussy against TargetCharacter's penis.
+SourceCharacter 用 PronounPossessive 阴部磨蹭 TargetCharacter 的阴茎。
+SourceCharacter grinds PronounPossessive pussy against TargetCharacter's.
+SourceCharacter 用 PronounPossessive 阴部磨蹭 TargetCharacter 的阴部。
+SourceCharacter gulps and swallows.
+SourceCharacter 咕嘟一声咽了下去。
+SourceCharacter headbutts TargetCharacter.
+SourceCharacter 用头撞了 TargetCharacter。
+SourceCharacter holds PronounPossessive hand in the air, slapping it with the other.
+SourceCharacter 把手举在空中，用另一只手拍了上去。
+SourceCharacter holds PronounPossessive hand up towards TargetCharacter expectantly...
+SourceCharacter 满怀期待地朝 TargetCharacter 举起手……
+SourceCharacter lets go of TargetCharacter's hair.
+SourceCharacter 松开 TargetCharacter 的头发。
+SourceCharacter lets go of TargetCharacter's hand.
+SourceCharacter 松开 TargetCharacter 的手。
+SourceCharacter lets go of TargetCharacter's tongue.
+SourceCharacter 松开 TargetCharacter 的舌头。
+SourceCharacter licks TargetCharacter's forehead.
+SourceCharacter 舔了 TargetCharacter 的额头。
+SourceCharacter nibbles on PronounPossessive own tail.
+SourceCharacter 轻咬自己的尾巴。
+SourceCharacter nibbles on PronounPossessive own wing.
+SourceCharacter 轻咬自己的翅膀。
+SourceCharacter nibbles on TargetCharacter's halo.
+SourceCharacter 轻咬 TargetCharacter 的光环。
+SourceCharacter nibbles on TargetCharacter's tail.
+SourceCharacter 轻咬 TargetCharacter 的尾巴。
+SourceCharacter nibbles on TargetCharacter's wing.
+SourceCharacter 轻咬 TargetCharacter 的翅膀。
+SourceCharacter penetrates PronounPossessive own mouth with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 插入自己的嘴。
+SourceCharacter pinches PronounPossessive own butt.
+SourceCharacter 捏了捏自己的屁股。
+SourceCharacter pinches PronounPossessive own cheek.
+SourceCharacter 捏了捏自己的脸颊。
+SourceCharacter pinches TargetCharacter's butt.
+SourceCharacter 捏了捏 TargetCharacter 的屁股。
+SourceCharacter pinches TargetCharacter's cheek.
+SourceCharacter 捏了捏 TargetCharacter 的脸颊。
+SourceCharacter pulls their hand away from PronounPossessive eyes.
+SourceCharacter 把手从 PronounPossessive 眼睛上移开。
+SourceCharacter reaches in and grabs hold of TargetCharacter's tongue with PronounPossessive fingers.
+SourceCharacter 伸手用 PronounPossessive 手指抓住 TargetCharacter 的舌头。
+SourceCharacter releases PronounPossessive chomp on TargetCharacter.
+SourceCharacter 松开咬住 TargetCharacter 的嘴。
+SourceCharacter releases PronounPossessive own collar.
+SourceCharacter 松开自己的项圈。
+SourceCharacter releases PronounPossessive own mouth.
+SourceCharacter 松开自己的嘴。
+SourceCharacter releases PronounPossessive own neck.
+SourceCharacter 松开自己的脖子。
+SourceCharacter releases TargetCharacter's arm.
+SourceCharacter 松开 TargetCharacter 的手臂。
+SourceCharacter releases TargetCharacter's collar.
+SourceCharacter 松开 TargetCharacter 的项圈。
+SourceCharacter releases TargetCharacter's ear.
+SourceCharacter 松开 TargetCharacter 的耳朵。
+SourceCharacter releases TargetCharacter's horn.
+SourceCharacter 松开 TargetCharacter 的角。
+SourceCharacter releases TargetCharacter's mouth.
+SourceCharacter 松开 TargetCharacter 的嘴。
+SourceCharacter releases TargetCharacter's neck.
+SourceCharacter 松开 TargetCharacter 的脖子。
+SourceCharacter releases TargetCharacter's nipples.
+SourceCharacter 松开 TargetCharacter 的乳头。
+SourceCharacter releases TargetCharacter's nose.
+SourceCharacter 松开 TargetCharacter 的鼻子。
+SourceCharacter releases TargetCharacter's tail.
+SourceCharacter 松开 TargetCharacter 的尾巴。
+SourceCharacter removes PronounPossessive foot from TargetCharacter's mouth.
+SourceCharacter 把 PronounPossessive 脚从 TargetCharacter 的嘴里移开。
+SourceCharacter removes their hand from TargetCharacter's eyes.
+SourceCharacter 把手从 TargetCharacter 的眼睛上移开。
+SourceCharacter roughly penetrates PronounPossessive own mouth with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 粗暴地插入自己的嘴。
+SourceCharacter shoves PronounPossessive foot into TargetCharacter's mouth, playing with and grabbing their tongue with PronounPossessive toes.
+SourceCharacter 把 PronounPossessive 脚塞进 TargetCharacter 的嘴里，用 PronounPossessive 脚趾玩弄并抓住其舌头。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's arm.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的手臂。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's breast.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的乳房。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's butt.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的屁股。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's calf.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的小腿。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's face.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的脸。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's feet.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的脚。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's hand.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的手。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's mouth.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的嘴。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's neck.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的脖子。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's penis.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的阴茎。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's pussy.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的阴部。
+SourceCharacter slaps PronounPossessive ActivityAsset against TargetCharacter's thigh.
+SourceCharacter 用 PronounPossessive ActivityAsset 拍打 TargetCharacter 的大腿。
+SourceCharacter takes TargetCharacter's hand.
+SourceCharacter 牵起 TargetCharacter 的手。
+SourceCharacter takes a big bite out of PronounPossessive ActivityAsset.
+SourceCharacter 大口咬向 PronounPossessive ActivityAsset。
+SourceCharacter takes a big bite out of TargetCharacter's ActivityAsset.
+SourceCharacter 大口咬向 TargetCharacter 的 ActivityAsset。
+SourceCharacter tugs lewdly on PronounPossessive own crotch rope.
+SourceCharacter 淫荡地拉扯自己的裆绳。
+SourceCharacter tugs on TargetCharacter's crotch rope.
+SourceCharacter 拉扯 TargetCharacter 的裆绳。
+SourceCharacter wraps PronounPossessive arms around TargetCharacter in a big warm hug.
+SourceCharacter 张开 PronounPossessive 双臂给 TargetCharacter 一个温暖的大拥抱。
+SourceCharacter wraps TargetCharacter in a therapeutic self-hug.
+SourceCharacter 把 TargetCharacter 裹进一个治愈的自我拥抱里。
