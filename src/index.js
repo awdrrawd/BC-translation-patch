@@ -1,7 +1,6 @@
 import { setupInjection } from "./inject.js";
-import { setupDiagnostics } from "./diagnostics.js";
 import { reapply } from "./reapply.js";
-import { setupMods } from "./mods/index.js";
+import { setupMods, getMissing } from "./mods/index.js";
 import { activeLang } from "./lang.js";
 
 // 由建置時的 esbuild define 注入
@@ -30,7 +29,6 @@ import { activeLang } from "./lang.js";
 
     const { count } = setupInjection(mod);
     setupMods(mod);
-    if (/** @type {any} */ (globalThis).BCTP_DEBUG) setupDiagnostics(mod);
     reapply();
 
     /** @type {any} */ (globalThis).BCTP = {
@@ -38,6 +36,7 @@ import { activeLang } from "./lang.js";
         lang: activeLang,
         pathCount: count,
         reapply,
+        missing: getMissing, // 匯出畫面上翻不到的英文
     };
 
     console.log(

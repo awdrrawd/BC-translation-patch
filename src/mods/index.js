@@ -9,6 +9,12 @@ import { supplement } from "./supplement.js";
 // 這些 mod 自己畫 HTML/canvas，不走遊戲 CSV 管線，所以用 hook + observer 攔截。
 const units = [BCX, LSCG];
 
+// 收集畫面上翻不到的英文（官方缺口 + ECHO 沒收錄的 mod 字串），供 BCTP.missing() 匯出。
+const missing = new Set();
+export function getMissing() {
+    return [...missing].sort();
+}
+
 function tryMenu(key) {
     if (supplement.menu[key]) return supplement.menu[key];
     for (const u of units) {
@@ -36,6 +42,7 @@ export function setupMods(mod) {
             if (on() && typeof args[0] === "string") {
                 const t = tryMenu(args[0]);
                 if (t) args[0] = t;
+                else if (/[A-Za-z]/.test(args[0])) missing.add(args[0].trim());
             }
             return next(args);
         });
