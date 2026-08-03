@@ -85,6 +85,14 @@ function translateAny(key) {
     return tryMenu(key) || tryActivity(key);
 }
 
+// 製作屬性(dfn)專用：優先 Text_Crafting 作用域字典，避開 base 撞名(Loose→松 vs 松弛)
+const CRAFT = /** @type {any} */ (GEN).crafting || { CN: {}, TW: {} };
+function translateDfn(key) {
+    const lang = activeLang();
+    if (lang && CRAFT[lang] && CRAFT[lang][key]) return CRAFT[lang][key];
+    return translateAny(key);
+}
+
 /** @param {any} mod bcModSdk 註冊物件 */
 export function setupMods(mod) {
     const on = () => !!activeLang();
@@ -140,8 +148,8 @@ export function setupMods(mod) {
     // BCX 在聊天記錄輸出的 HTML 說明
     ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src));
 
-    // dialog-inventory(DOM) 的道具/動作名
-    setupDomObserver(translateAny);
+    // dialog-inventory(DOM) 的道具/動作名；製作屬性(dfn)用作用域字典
+    setupDomObserver(translateAny, translateDfn);
 
     // BCX 匯出/匯入等 textarea.value 說明
     setupBcxHelp();
