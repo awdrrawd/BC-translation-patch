@@ -43,8 +43,11 @@ function setupDfnObserver(translate) {
         }
     });
     const start = () => {
-        if (document.body) obs.observe(document.body, { childList: true, subtree: true });
-        else requestAnimationFrame(start);
+        if (!document.body) return requestAnimationFrame(start);
+        obs.observe(document.body, { childList: true, subtree: true });
+        // 補掃：我們可能晚於既有 dfn 出現（Electron 載入較晚），observer 只收未來的 addedNodes。
+        const existing = document.body.querySelectorAll("dfn");
+        if (existing.length) handleDfns([...existing]);
     };
     start();
 }
@@ -68,8 +71,10 @@ export function setupDomObserver(translate, translateDfn) {
         for (const m of muts) m.addedNodes.forEach(handle);
     });
     const start = () => {
-        if (document.body) obs.observe(document.body, { childList: true, subtree: true });
-        else requestAnimationFrame(start);
+        if (!document.body) return requestAnimationFrame(start);
+        obs.observe(document.body, { childList: true, subtree: true });
+        // 補掃既有節點：observer 只收未來 addedNodes，晚載入時已開的 dialog-inventory/快捷鍵會被漏掉。
+        handle(document.body);
     };
     start();
 }
