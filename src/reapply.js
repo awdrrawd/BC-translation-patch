@@ -15,7 +15,7 @@ export function reapply() {
         const c = g.ActivityDictionaryLoad?.();
         c?.buildCache?.();
     } catch (e) {
-        console.debug("[BCTP] 動作字典重建失敗", e);
+        console.debug("🐈‍⬛ [BCTP] 動作字典重建失敗", e);
     }
 
     // 螢幕文字快取（Interface / InformationSheet 等）在第一次建置時就記憶化，之後只在語言
@@ -28,6 +28,6 @@ export function reapply() {
             TextAllScreenCache.forEach((c) => c?.buildCache?.());
         }
     } catch (e) {
-        console.debug("[BCTP] 螢幕文字快取重建失敗", e);
+        console.debug("🐈‍⬛ [BCTP] 螢幕文字快取重建失敗", e);
     }
 }
