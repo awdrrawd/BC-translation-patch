@@ -21,13 +21,13 @@ import { activeLang } from "./lang.js";
     try {
         await import("https://cdn.jsdelivr.net/npm/bondage-club-mod-sdk@1.2.0");
     } catch (e) {
-        console.error("[BCTP] 載入 bcModSdk 失敗", e);
+        console.error("🐈‍⬛ [BCTP] 載入 bcModSdk 失敗", e);
         g.Liko.__Sys_VanillaTranslation__ = undefined;
         return;
     }
     const sdk = g.bcModSdk;
     if (!sdk) {
-        console.error("[BCTP] 找不到 bcModSdk");
+        console.error("🐈‍⬛ [BCTP] 找不到 bcModSdk");
         g.Liko.__Sys_VanillaTranslation__ = undefined;
         return;
     }
@@ -56,7 +56,6 @@ import { activeLang } from "./lang.js";
     g.BCTP = api; // 相容別名
 
     console.log(
-        `[BCTP] ${__BCTP_FULLNAME__} v${__BCTP_VERSION__} 已載入：注入 ${count} 個翻譯路徑` +
-        `（目前語言：${activeLang() ?? "非CN/TW，未啟用"}）`
+        `🐈‍⬛ [BCTP] v${__BCTP_VERSION__} loaded...（now：${activeLang() ?? "非CN/TW，未啟用"}）`
     );
 })();
