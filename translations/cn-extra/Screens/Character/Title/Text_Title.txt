@@ -1,5 +1,11 @@
 Search for a title name
 搜索头衔名称
+Queen
+女王
+Goddess
+女神
+Matron
+主母
 King
 国王
 God

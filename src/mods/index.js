@@ -75,6 +75,9 @@ function tryActivity(key) {
         const t = u.translateActivityText?.(key);
         if (t) return t;
     }
+    // fallback：有人可能把動作標籤誤加進 supplement.menu（給 DrawText/DOM 選單用）而非
+    // supplement.activity（給 ActivityDictionaryText 用），這裡兜底查一次 menu，避免補了翻譯卻沒生效。
+    if (supplement.menu[key]) return supplement.menu[key];
     return undefined;
 }
 

@@ -13,6 +13,7 @@ export const supplement = {
     },
     // 動作訊息（模板，替換名字前；保留 SourceCharacter/PronounPossessive 等 token）
     activity: {
+        "Lick Forehead": "舔额头",
         "High Five!": "击掌！",
         "SourceCharacter holds PronounPossessive hand in the air, slapping it with the other.":
             "SourceCharacter 把手举在空中，用另一只手拍了上去。",
