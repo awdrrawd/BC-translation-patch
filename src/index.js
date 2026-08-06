@@ -1,4 +1,4 @@
-import { setupInjection } from "./inject.js";
+import { injectTranslationCache, setupInjection } from "./inject.js";
 import { reapply } from "./reapply.js";
 import { setupMods, getMissing } from "./mods/index.js";
 import { activeLang } from "./lang.js";
@@ -16,6 +16,10 @@ import { activeLang } from "./lang.js";
     }
     // 佔位，避免非同步載入期間被重複觸發
     g.Liko.__Sys_VanillaTranslation__ = { version: __BCTP_VERSION__, loading: true };
+
+    // 先同步注入 TranslationCache，務必搶在 TranslationAsset()（資產載入時就地翻譯道具/服裝描述）
+    // 之前完成 —— 這步不需 bcModSdk，不能等在下面的 CDN await 後面（那會輸掉時序競態）。
+    const { count } = injectTranslationCache();
 
     // 載入 Bondage Club Mod SDK（提供函式 hook 能力）
     try {
@@ -40,7 +44,7 @@ import { activeLang } from "./lang.js";
     });
 
     // 語系：非 CN/TW 時所有 hook 皆為 no-op（activeLang 回 null），切換語言即時生效
-    const { count } = setupInjection(mod);
+    setupInjection(mod);
     setupMods(mod);
     reapply();
 
