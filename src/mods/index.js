@@ -46,17 +46,28 @@ function lookupMenu(key) {
     return undefined;
 }
 
+// src/mods/index.js
 function tryMenu(key) {
     const direct = lookupMenu(key);
     if (direct) return direct;
-    // BCX 把「名稱 (副標)」合併成一句畫出（rules_add.ts / 詛咒列表）；拆開分別翻再合併。
-    // 任一半能翻就合併（另一半可能已是中文，如「口球 (Mouth (1))」）。
+
+    // BCX 把「名稱 (副標)」合併成一句畫出；拆開分別翻再合併。
     const combo = key.match(/^(.+?) \((.+)\)$/);
     if (combo) {
         const a = lookupMenu(combo[1]);
         const b = lookupMenu(combo[2]);
         if (a || b) return `${a || combo[1]}（${b || combo[2]}）`;
     }
+
+    // 衣柜/外观清单把「標籤: 值」合併成一句畫出（如 自由绘图1: None、称谓: They/Them）；
+    // 標籤通常已經是中文（走 CSV），值多半是這裡 supplement.menu 補的代名詞/None，拆開分別翻。
+    const kv = key.match(/^(.+?)([:：]\s*)(.+)$/);
+    if (kv) {
+        const a = lookupMenu(kv[1]);
+        const b = lookupMenu(kv[2]);
+        if (a || b) return `${a || kv[1]}${kv[2]}${b || kv[3]}`;
+    }
+
     return undefined;
 }
 
