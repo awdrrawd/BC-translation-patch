@@ -64,7 +64,7 @@ function tryMenu(key) {
     const kv = key.match(/^(.+?)([:：]\s*)(.+)$/);
     if (kv) {
         const a = lookupMenu(kv[1]);
-        const b = lookupMenu(kv[2]);
+        const b = lookupMenu(kv[3]);
         if (a || b) return `${a || kv[1]}${kv[2]}${b || kv[3]}`;
     }
 
