@@ -60,6 +60,6 @@ import { activeLang } from "./lang.js";
     g.BCTP = api; // 相容別名
 
     console.log(
-        `🐈‍⬛ [BCTP] v${__BCTP_VERSION__} loaded...（now：${activeLang() ?? "非CN/TW，未啟用"}）`
+        `🐈‍⬛ [BCTP] ✅ v${__BCTP_VERSION__} loaded...（now：${activeLang() ?? "非CN/TW，未啟用"}）`
     );
 })();
