@@ -2,7 +2,7 @@
 // @name         BC 補完翻譯 (CN/TW)
 // @name:zh-TW   BC 補完翻譯 (CN/TW)
 // @namespace    https://github.com/awdrrawd/BC-translation-patch
-// @version      0.1.0
+// @version      1.0
 // @description  Bondage Club 補完翻譯（簡中/繁中），補上官方尚未翻譯的字串
 // @author       awdrrawd
 // @match        https://bondageprojects.elementfx.com/*

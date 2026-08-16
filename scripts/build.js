@@ -11,6 +11,8 @@ import { generateDict } from "./gen-dict.js";
 
 const pkg = JSON.parse(fs.readFileSync(path.join(repoRoot, "package.json"), "utf8"));
 const cfg = pkg.bctp;
+// Independent from the app version; bump only when the loader mechanism changes.
+const loaderVersion = "1.0";
 const distDir = path.join(repoRoot, "dist");
 
 // 1) 字典
@@ -49,7 +51,7 @@ const loader = `// ==UserScript==
 // @name         ${cfg.modFullName}
 // @name:zh-TW   ${cfg.modFullName}
 // @namespace    ${cfg.repository}
-// @version      ${pkg.version}
+// @version      ${loaderVersion}
 // @description  Bondage Club 補完翻譯（簡中/繁中），補上官方尚未翻譯的字串
 // @author       ${pkg.author}
 // @match        https://bondageprojects.elementfx.com/*
