@@ -1,5 +1,7 @@
 node_modules/
-dist/
+# 追蹤 Loader 實際載入的發布 bundle，其他自動產物仍忽略。
+dist/*
+!dist/bc-translation-patch.js
 src/generated/
 .upstream/
 reports/
