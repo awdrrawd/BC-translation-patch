@@ -5,12 +5,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js",
+    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js",
     "seed": "node scripts/seed-from-upstream.js",
     "gen": "node scripts/gen-dict.js",
     "build": "node scripts/build.js",
     "diff": "node scripts/diff-upstream.js",
-    "extract": "node scripts/extract-mods.js"
+    "extract": "node scripts/extract-mods.js",
+    "check:translations": "node scripts/validate-translations.js",
+    "check": "npm run check:translations && npm test && npm run build && node scripts/check-generated.js"
   },
   "author": "awdrrawd",
   "license": "MIT",

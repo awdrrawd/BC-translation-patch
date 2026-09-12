@@ -222,3 +222,12 @@ LSCG 保留 Chaotic、Evolving、Magic 等效果名稱、詛咒選项與所有�
 測試涵蓋分層識別值、搜尋輸入、LSCGShare 選項值、英文效果名稱保留，以及分享文字與原始訊息不被改寫。尚未在實際連線遊戲中驗證。
 
 BCX 房间設定的「更多」與主題房間頁面使用獨立的 roomAdmin 字典，只在 ChatAdmin 畫面翻譯繪製文字（含按鈕與提示）。目前四個範本名稱的繪製位置會略過通用查表，只翻譯 BCX 固定的空白／未命名／自動套用提示，保留自訂名稱。房間分類、限制標籤的儲存值、介紹、歡迎詞與範本資料不變。
+
+### BCX 指令字典檢查
+
+執行 `node scripts/audit-bcx-commands.js`，以 `BCX_SRC` 或本機 BCX 原始碼比對指令名稱、簡述與長說明各行，輸出 `reports/bcx-command-audit.json`。目前本機 17 個指令的這些字典項目無缺漏；指令語法與動態執行回覆不在此統計內。BCX 詳細說明使用內部 `BCXDrawTextWrap` 直接呼叫 canvas，仍未接入現有文字 hook，因此字典完整不代表詳細頁已顯示中文。
+# 自動化設定
+
+PR 會執行字庫品質檢查、測試與建置；main 驗證成功後才部署 Pages。每週由 Dependabot 提出依賴更新 PR。本機可執行 `npm run check`。
+
+GitHub 必要設定、既有問題基準與檢查範圍見 [DOCS/automation.md](DOCS/automation.md)。

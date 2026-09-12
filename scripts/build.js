@@ -7,7 +7,7 @@ import path from "node:path";
 import esbuild from "esbuild";
 import { repoRoot } from "./lib/upstream.js";
 import { ensureDir } from "./lib/fsutil.js";
-import { generateDict } from "./gen-dict.js";
+import { generateDict, runtimeDictionary } from "./gen-dict.js";
 
 const pkg = JSON.parse(fs.readFileSync(path.join(repoRoot, "package.json"), "utf8"));
 const cfg = pkg.bctp;
@@ -16,10 +16,11 @@ const loaderVersion = "1.0";
 const distDir = path.join(repoRoot, "dist");
 
 // 1) 字典
-const { surfaces, paths, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats } = generateDict();
+const generated = generateDict();
+const { paths, stats } = generated;
 const dictOut = path.join(repoRoot, "src", "generated", "dict.json");
 ensureDir(dictOut);
-fs.writeFileSync(dictOut, JSON.stringify({ surfaces, paths, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu }), "utf8");
+fs.writeFileSync(dictOut, JSON.stringify(runtimeDictionary(generated)), "utf8");
 console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles} 檔（路徑鍵 ${Object.keys(paths).length}）`);
 
 // 2) 打包

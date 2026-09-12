@@ -1,0 +1,30 @@
+### BCX 指令補譯：對齊本機 command_definitions.ts / speech_commands.ts。
+### 只補显示名稱與說明；指令名稱、參數與傳送內容不變。
+This command forces PLAYER_NAME's to get on all fours, but they can still manually change their pose. This pose requires specific items to work.
+此命令强制 PLAYER_NAME 四肢着地，但对方仍可手动更改姿势。此姿势需要特定物品才能生效。
+Lock PLAYER_NAME into the asylum
+将 PLAYER_NAME 锁进疯人院
+This command sends and locks PLAYER_NAME into the asylum for up to 1 week, where she can freely walk around, but cannot leave the area. You can free PLAYER_NAME early by visiting her in the asylum and using '.asylum cancel'.
+此命令将 PLAYER_NAME 送入并锁在疯人院中，最长一周。对方可以在院内自由走动，但无法离开。你可以前往疯人院探望 PLAYER_NAME，并使用 '.asylum cancel' 提前释放对方。
+This command controls PLAYER_NAME's arousal meter directly, allowing four things:
+此命令直接控制 PLAYER_NAME 的兴奋值，提供四种操作：
+1. Setting the bar directly to a number from 1 to 100, whereas 100 triggers a normal orgasm.
+1. 将兴奋值设为 1 到 100 之间的数字；100 会触发普通高潮。
+2. Triggering a forced orgasm that cannot be resisted.
+2. 触发无法抵抗的强制高潮。
+3. Triggering an orgasm that gets ruined.
+3. 触发被破坏的高潮。
+4. Stopping an orgasm already triggered (e.g. by a toy).
+4. 停止已经触发的高潮（例如由玩具触发）。
+Makes PLAYER_NAME instantly say the text
+让 PLAYER_NAME 立即说出指定文字
+Say
+说话
+Blocks PLAYER_NAME until she typed the text
+限制 PLAYER_NAME 发言，直到对方输入指定文字
+Orders PLAYER_NAME to type a text several times or until she makes a mistake
+命令 PLAYER_NAME 反复输入指定文字，直到达到次数或输入错误
+Orders PLAYER_NAME to type a text a set number of times
+命令 PLAYER_NAME 输入指定文字达指定次数
+Usage:
+用法：

@@ -1,0 +1,464 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BCTP 架構與健壯性</title>
+<style>
+:root{color-scheme:dark;--bg:#0d0c12;--side:#121018;--panel:#18151f;--node:#201b2a;--line:#625578;--text:#f5f1fb;--muted:#aaa2b7;--accent:#9864ff;--ui:#45ddc7;--controller:#b991ff;--core:#70a7ff;--hook:#ffb15d;--storage:#e77fba}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,"Segoe UI",sans-serif}.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;padding:22px 14px;border-right:1px solid #352e42;background:var(--side);overflow:auto}.brand{padding:0 8px 18px}.brand h1{font-size:20px;margin:0 0 5px}.brand p{margin:0;color:var(--muted);font-size:12px}.search{width:100%;margin-bottom:12px;padding:10px 11px;border:1px solid #3b3348;border-radius:7px;background:#0e0c13;color:var(--text)}.group-label{margin:17px 8px 7px;color:var(--muted);font-size:11px;letter-spacing:.08em}.feature-btn{display:block;width:100%;margin:3px 0;padding:10px 11px;border:0;border-radius:7px;background:transparent;color:var(--text);text-align:left;cursor:pointer}.feature-btn:hover{background:#201b2a}.feature-btn[aria-current=true]{background:#2b2040;color:#cdb4ff;box-shadow:inset 3px 0 var(--accent)}.main{min-width:0;padding:24px 28px 46px}.top{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:16px}.top h2{margin:0 0 4px;font-size:22px}.top p{margin:0;color:var(--muted)}.legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--c)}.graph-wrap{position:relative;min-height:560px;border:1px solid #332c3e;border-radius:12px;background:radial-gradient(circle at 20% 20%,#1d1728 0,#121018 48%,#0f0d14 100%);overflow:auto}.graph{position:relative;width:1100px;min-width:1100px;min-height:560px}.edges{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.edge{fill:none;stroke:var(--line);stroke-width:2}.edge.trunk{stroke:var(--accent);stroke-width:3}.node{position:absolute;transform:translateY(-50%);width:190px;min-height:48px;padding:9px 11px;border:1px solid #443952;border-left:4px solid var(--node-color,var(--accent));border-radius:7px;background:var(--node);color:var(--text);text-align:left;cursor:pointer;box-shadow:0 5px 18px #0005}.node:hover,.node:focus-visible{border-color:var(--node-color);background:#2a2335}.node.root{width:165px;background:#342252;border-color:var(--accent);font-weight:650}.node .type{display:block;color:var(--node-color);font-size:10px;letter-spacing:.07em;text-transform:uppercase}.node .label{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.detail{display:grid;grid-template-columns:minmax(220px,.7fr) 1.3fr;gap:18px;margin-top:15px;padding:15px 17px;border-left:3px solid var(--detail-color,var(--accent));background:var(--panel)}.detail h3{margin:0 0 4px;font-size:16px}.detail p{margin:0;color:var(--muted)}.files{display:flex;flex-wrap:wrap;gap:7px}.files a{padding:5px 8px;border:1px solid #443952;border-radius:5px;color:#d8c9f4;text-decoration:none;font-family:ui-monospace,Consolas,monospace;font-size:12px}.files a:hover{border-color:var(--detail-color);color:var(--text)}.mobile-select{display:none;width:100%;padding:10px;background:var(--panel);border:1px solid #443952;color:var(--text);border-radius:7px}@media(max-width:760px){.app{display:block}.sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid #352e42}.sidebar nav,.group-label{display:none}.mobile-select{display:block}.main{padding:18px 12px}.top{display:block}.legend{margin-top:10px}.detail{grid-template-columns:1fr}}
+</style></head><body><div class="app"><aside class="sidebar"><div class="brand"><h1>BCTP 架構與健壯性</h1><p>2026-09-12 · 12 個功能分支 · 僅文件，未修改執行期</p></div><input id="search" class="search" type="search" placeholder="搜尋功能…" aria-label="搜尋功能"><select id="mobile-select" class="mobile-select" aria-label="選擇功能"></select><nav id="feature-list" aria-label="功能列表"></nav></aside><main class="main"><div class="top"><div><h2 id="title"></h2><p id="subtitle"></p></div><div class="legend"><span><i style="--c:var(--ui)"></i>UI</span><span><i style="--c:var(--controller)"></i>Controller</span><span><i style="--c:var(--core)"></i>Core</span><span><i style="--c:var(--hook)"></i>Hook</span><span><i style="--c:var(--storage)"></i>Storage</span><span><i style="--c:#ffd36b"></i>Audit</span></div></div><p style="color:var(--muted)">線條表示功能與檔案的關聯，非完整 import 或執行順序圖。<a style="color:#cdb4ff" href="architecture-review.md">閱讀完整檢視報告</a></p><section class="graph-wrap" aria-label="功能依賴束狀圖"><div id="graph" class="graph"><svg id="edges" class="edges" aria-hidden="true"></svg></div></section><section id="detail" class="detail" aria-live="polite"></section></main></div>
+<script>
+const features=[
+  {
+    "group": "基礎系統",
+    "id": "bootstrap",
+    "name": "啟動與失敗回收",
+    "desc": "先注入翻譯快取，再等待 SDK／遊戲；失敗可清理與重試。成功後尚無卸載 API。",
+    "branches": [
+      [
+        "Core",
+        "入口與單次初始化",
+        [
+          "src/index.js",
+          "src/lifecycle.js"
+        ]
+      ],
+      [
+        "Controller",
+        "SDK 與資源註冊",
+        [
+          "src/app.js"
+        ]
+      ],
+      [
+        "Hook",
+        "快取與可用性",
+        [
+          "src/inject.js"
+        ]
+      ],
+      [
+        "Audit",
+        "風險與改善順序",
+        [
+          "DOCS/architecture-review.md"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "基礎系統",
+    "id": "language",
+    "name": "語言切換與資產還原",
+    "desc": "依原始 CSV 與資產 ID 重套描述；250ms 比較資料參照，變動時才重建。",
+    "branches": [
+      [
+        "Core",
+        "支援語言",
+        [
+          "src/lang.js"
+        ]
+      ],
+      [
+        "Controller",
+        "重套與語言事件",
+        [
+          "src/reapply.js"
+        ]
+      ],
+      [
+        "Core",
+        "資產 ID／就緒偵測",
+        [
+          "src/assetDescriptions.js"
+        ]
+      ],
+      [
+        "Storage",
+        "路徑字典介面",
+        [
+          "src/data.js"
+        ]
+      ],
+      [
+        "Audit",
+        "還原與時序驗證",
+        [
+          "scripts/runtime.test.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "翻譯介面",
+    "id": "canvas",
+    "name": "Canvas 與模組查表",
+    "desc": "補充字典 → 生成字典 → 舊模組 fallback → PLAYER_NAME regex；TW fallback 尚可能回傳簡體。",
+    "branches": [
+      [
+        "Hook",
+        "全域文字攔截",
+        [
+          "src/mods/index.js"
+        ]
+      ],
+      [
+        "Storage",
+        "新翻譯資料",
+        [
+          "translations/mods/bcx/bcx-command-updates.txt",
+          "translations/ui/surfaces.json"
+        ]
+      ],
+      [
+        "Core",
+        "舊 BCX／LSCG adapter",
+        [
+          "src/mods/bc/BCX/index.js",
+          "src/mods/bc/LSCG/index.js"
+        ]
+      ],
+      [
+        "Storage",
+        "簡體固定補充",
+        [
+          "src/mods/supplement.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "翻譯介面",
+    "id": "dom",
+    "name": "道具 DOM 與批次翻譯",
+    "desc": "限定 inventory／快捷鍵範圍；WeakMap 保存來源，idle queue 去重及分批處理。dfn 延遲仍依賴上游時序。",
+    "branches": [
+      [
+        "UI",
+        "節點選取與來源保存",
+        [
+          "src/mods/domObserver.js"
+        ]
+      ],
+      [
+        "Controller",
+        "閒置排程與取消",
+        [
+          "src/mods/idleBatch.js"
+        ]
+      ],
+      [
+        "Core",
+        "共用查表",
+        [
+          "src/mods/index.js"
+        ]
+      ],
+      [
+        "Audit",
+        "排程與來源測試",
+        [
+          "scripts/runtime.test.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "翻譯介面",
+    "id": "surfaces",
+    "name": "分層、搜尋、Craft、LSCG",
+    "desc": "只改顯示文字、placeholder／option label；保留 LSCG 英文功能詞與表單 value。",
+    "branches": [
+      [
+        "UI",
+        "限定 surface adapter",
+        [
+          "src/mods/surfaces.js"
+        ]
+      ],
+      [
+        "Storage",
+        "CN 原文與譯文",
+        [
+          "translations/ui/surfaces.json"
+        ]
+      ],
+      [
+        "Core",
+        "TW 生成",
+        [
+          "scripts/gen-dict.js"
+        ]
+      ],
+      [
+        "Audit",
+        "值／點擊行為／箭頭保護",
+        [
+          "scripts/surfaces.test.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "翻譯介面",
+    "id": "bcx",
+    "name": "BCX 房間與指令說明",
+    "desc": "房間模板依座標保護自訂名稱；textarea 說明輪詢。指令詳細 canvas 路徑仍未接上。",
+    "branches": [
+      [
+        "UI",
+        "房間設定專用範圍",
+        [
+          "src/mods/roomAdmin.js"
+        ]
+      ],
+      [
+        "Controller",
+        "textarea 說明輪詢",
+        [
+          "src/mods/bcxHelp.js"
+        ]
+      ],
+      [
+        "Storage",
+        "指令補譯",
+        [
+          "translations/mods/bcx/bcx-command-updates.txt"
+        ]
+      ],
+      [
+        "Audit",
+        "指令字典檢查",
+        [
+          "scripts/audit-bcx-commands.js",
+          "DOCS/architecture-review.md"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "翻譯介面",
+    "id": "chat",
+    "name": "動作與聊天顯示",
+    "desc": "優先在名字替換前翻模板；分享使用訊息副本。HTML 歷史尚無語言還原與既有內容補掃。",
+    "branches": [
+      [
+        "Hook",
+        "動作與本地訊息",
+        [
+          "src/mods/index.js"
+        ]
+      ],
+      [
+        "Core",
+        "Craft 分享模板",
+        [
+          "src/mods/surfaces.js"
+        ]
+      ],
+      [
+        "Controller",
+        "聊天容器觀察",
+        [
+          "src/mods/html/utils/chatObserver.js"
+        ]
+      ],
+      [
+        "UI",
+        "HTML 精確翻譯",
+        [
+          "src/mods/html/utils/utils.js",
+          "src/mods/html/BCX.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "維護與發布",
+    "id": "data",
+    "name": "字庫生成與覆寫規則",
+    "desc": "CN 鏡像＋補譯 → OpenCC TW → scoped paths／執行期查表。gen 與 build schema 目前不一致。",
+    "branches": [
+      [
+        "Controller",
+        "上游鏡像與位置",
+        [
+          "scripts/seed-from-upstream.js",
+          "scripts/lib/upstream.js"
+        ]
+      ],
+      [
+        "Core",
+        "解析、合併與轉換",
+        [
+          "scripts/lib/parseTxt.js",
+          "scripts/gen-dict.js"
+        ]
+      ],
+      [
+        "Storage",
+        "繁體詞彙規則",
+        [
+          "translations/tw-terms.json",
+          "translations/tw-overrides.txt"
+        ]
+      ],
+      [
+        "Audit",
+        "作用域與 token 驗證",
+        [
+          "scripts/coverage.test.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "維護與發布",
+    "id": "audit",
+    "name": "缺漏、衝突與擷取",
+    "desc": "候選擷取不是畫面覆蓋率；舊 BCX 抽取器讀取不存在的單檔字庫，需要統一有效字典來源。",
+    "branches": [
+      [
+        "Audit",
+        "原生與 BCX 缺漏",
+        [
+          "scripts/diff-upstream.js",
+          "scripts/audit-bcx-commands.js"
+        ]
+      ],
+      [
+        "Controller",
+        "候選擷取",
+        [
+          "scripts/extract-mods.js",
+          "scripts/extract-bcx.js",
+          "scripts/extract-lscg.js"
+        ]
+      ],
+      [
+        "Audit",
+        "同文異義報告",
+        [
+          "scripts/find-collisions.js"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "維護與發布",
+    "id": "build",
+    "name": "建置與 Pages 發布",
+    "desc": "只依賴專案字庫，無需玩家下載上游。現行 CI 缺 npm test 發布閘門。",
+    "branches": [
+      [
+        "Controller",
+        "字典／IIFE／載入器生成",
+        [
+          "scripts/build.js"
+        ]
+      ],
+      [
+        "Storage",
+        "依賴與設定",
+        [
+          "package.json",
+          "package-lock.json"
+        ]
+      ],
+      [
+        "Controller",
+        "部署流程",
+        [
+          ".github/workflows/build.yml"
+        ]
+      ],
+      [
+        "UI",
+        "使用方式",
+        [
+          "README.md"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "架構檢視",
+    "id": "cleanup",
+    "name": "冗餘與死碼判定",
+    "desc": "ASSET 未引用；activityRegex 無消費端；assetName 未參與查表。舊模組、pronouns 與 enable 仍在使用。",
+    "branches": [
+      [
+        "Core",
+        "未使用常數",
+        [
+          "src/mods/index.js"
+        ]
+      ],
+      [
+        "Storage",
+        "未消費生成資料",
+        [
+          "scripts/gen-dict.js",
+          "scripts/build.js"
+        ]
+      ],
+      [
+        "Core",
+        "已確認仍有用途",
+        [
+          "src/mods/bc/pronouns.js",
+          "src/mods/bc/BCX/enable.js",
+          "src/mods/bc/LSCG/enable.js"
+        ]
+      ],
+      [
+        "Audit",
+        "判定依據與大小界線",
+        [
+          "DOCS/architecture-review.md"
+        ]
+      ]
+    ]
+  },
+  {
+    "group": "架構檢視",
+    "id": "roadmap",
+    "name": "整體評估與改善順序",
+    "desc": "先修 schema／CI，再統一字典與語言還原，最後補 adapter 相容性與診斷。19 項測試通過不等於完整 E2E。",
+    "branches": [
+      [
+        "Audit",
+        "完整檢視報告",
+        [
+          "DOCS/architecture-review.md"
+        ]
+      ],
+      [
+        "Audit",
+        "Runtime 與排程",
+        [
+          "scripts/runtime.test.js"
+        ]
+      ],
+      [
+        "Audit",
+        "資料範圍與 token",
+        [
+          "scripts/coverage.test.js"
+        ]
+      ],
+      [
+        "Audit",
+        "畫面功能保護",
+        [
+          "scripts/surfaces.test.js"
+        ]
+      ]
+    ]
+  }
+];
+const colors={UI:'var(--ui)',Controller:'var(--controller)',Core:'var(--core)',Hook:'var(--hook)',Storage:'var(--storage)',Audit:'#ffd36b'},list=document.getElementById('feature-list'),select=document.getElementById('mobile-select'),search=document.getElementById('search'),graph=document.getElementById('graph'),edges=document.getElementById('edges'),detail=document.getElementById('detail');let active=features.find(f=>f.id==='roadmap');
+function shortPath(path){const p=path.split('/');return p.length>2?p.slice(-2).join('/'):path}
+function renderList(query=''){list.innerHTML='';select.innerHTML='';let last='',optgroup;for(const feature of features.filter(f=>(f.name+' '+f.desc+' '+f.branches.flat(2).join(' ')).toLowerCase().includes(query.toLowerCase()))){if(feature.group!==last){const label=document.createElement('div');label.className='group-label';label.textContent=feature.group;list.append(label);optgroup=document.createElement('optgroup');optgroup.label=feature.group;select.append(optgroup);last=feature.group}const button=document.createElement('button');button.className='feature-btn';button.textContent=feature.name;button.setAttribute('aria-current',String(feature===active));button.onclick=()=>choose(feature);list.append(button);const option=document.createElement('option');option.value=feature.id;option.textContent=feature.name;option.selected=feature===active;optgroup.append(option)}}
+function choose(feature){active=feature;renderList(search.value);renderGraph();select.value=feature.id}
+function addNode(type,label,x,y,files,isRoot=false){const b=document.createElement('button');b.className='node'+(isRoot?' root':'');b.style.left=x+'px';b.style.top=y+'px';b.style.setProperty('--node-color',colors[type]||'var(--accent)');b.innerHTML='<span class="type">'+type+'</span><span class="label">'+label+'</span>';b.onclick=()=>showDetail(type,label,files);graph.append(b)}
+function addPath(x1,y1,x2,y2,trunk=false){const mid=x1+(x2-x1)*.48,p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',`M${x1},${y1} C${mid},${y1} ${mid},${y2} ${x2},${y2}`);p.setAttribute('class','edge'+(trunk?' trunk':''));edges.append(p)}
+function renderGraph(){document.getElementById('title').textContent=active.name;document.getElementById('subtitle').textContent=active.desc;graph.querySelectorAll('.node').forEach(n=>n.remove());edges.innerHTML='';const rows=active.branches.reduce((n,b)=>n+Math.max(1,b[2].length),0),height=Math.max(560,rows*66+70);graph.style.height=height+'px';edges.setAttribute('viewBox',`0 0 1100 ${height}`);const rootY=height/2;addNode('功能',active.name,35,rootY,[active.name],true);let cursor=45;for(const [type,label,files] of active.branches){const block=Math.max(1,files.length)*66,branchY=cursor+block/2;addNode(type,label,330,branchY,files);addPath(200,rootY,330,branchY,true);files.forEach((file,i)=>{const y=cursor+33+i*66;addNode(type,shortPath(file),660,y,[file]);addPath(520,branchY,660,y)});cursor+=block}showDetail('功能',active.name,active.branches.flatMap(b=>b[2]))}
+function showDetail(type,label,files){detail.style.setProperty('--detail-color',colors[type]||'var(--accent)');detail.innerHTML='<div><h3>'+label+'</h3><p>'+type+' · '+files.length+' 個相關檔案</p></div><div class="files">'+files.map(file=>file.includes('/') || file.endsWith('.json') || file.endsWith('.md')?`<a href="../${file}">${file}</a>`:`<span>${file}</span>`).join('')+'</div>'}
+search.addEventListener('input',()=>renderList(search.value));select.addEventListener('change',()=>{const feature=features.find(f=>f.id===select.value);if(feature)choose(feature)});renderList();renderGraph();
+</script></body></html>

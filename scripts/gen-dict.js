@@ -252,11 +252,17 @@ export function generateDict() {
     return { surfaces, paths, cnMap, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
+// Both CLI and release build serialize the same runtime schema.
+export function runtimeDictionary({ cnMap, stats, ...dictionary }) {
+    return dictionary;
+}
+
 // 允許 `npm run gen` 直接執行
 if (process.argv[1]?.endsWith("gen-dict.js")) {
-    const { paths, stats } = generateDict();
+    const generated = generateDict();
+    const { paths, stats } = generated;
     const out = path.join(repoRoot, "src", "generated", "dict.json");
     fs.mkdirSync(path.dirname(out), { recursive: true });
-    fs.writeFileSync(out, JSON.stringify({ paths }), "utf8");
+    fs.writeFileSync(out, JSON.stringify(runtimeDictionary(generated)), "utf8");
     console.log(`已產生字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles} 檔（路徑鍵 ${Object.keys(paths).length}）`);
 }

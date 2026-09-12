@@ -1,47 +1,65 @@
-name: Build & Deploy
+name: CI & Pages
 
 on:
+  pull_request:
   push:
     branches: [main]
+  merge_group:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  verify:
+    name: Verify translations and build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+    timeout-minutes: 15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
-      - name: Install deps
-        run: npm ci
-
-      # 建置完全依賴 repo 內的 translations/ 與 manifest，不需 clone 官方原始碼
-      - name: Build
-        run: npm run build
-
-      - name: Upload Pages artifact
+      - run: npm ci
+      - name: Validate translations, test and build
+        run: npm run check
+      - name: Upload quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: translation-quality
+          path: reports/translation-quality.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload verified Pages artifact
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
-      - name: Deploy to GitHub Pages
+  deploy:
+    name: Deploy Pages
+    needs: verify
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy verified artifact
         id: deploy
         uses: actions/deploy-pages@v4
