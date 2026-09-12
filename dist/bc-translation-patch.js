@@ -1,4 +1,4 @@
-/* BC 補完翻譯 (CN/TW) v0.1.0 | https://github.com/awdrrawd/BC-translation-patch | build 2026-09-12T12:07:04.316Z */
+/* BC 補完翻譯 (CN/TW) v0.1.0 | https://github.com/awdrrawd/BC-translation-patch | build 2026-09-12T12:10:51.475Z */
 (() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;

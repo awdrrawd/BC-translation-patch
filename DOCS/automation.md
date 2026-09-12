@@ -39,7 +39,7 @@ npm ci
 npm run check
 ```
 
-`check` 依序執行 TXT 品質檢查、所有測試與建置，任何步驟失敗就停止。`npm run check:translations` 可單獨產生 `reports/translation-quality.json`。gen/build 現在共用 runtimeDictionary serializer，修正先前 gen 只寫 paths 的問題。
+`check` 依序執行 TXT 品質檢查、所有測試與建置，任何步驟失敗就停止。`npm test` 會先透過 `pretest` 自動執行 `npm run gen`，確保全新 checkout 也有被 Git 忽略的 `src/generated/dict.json`，供 app 整合測試打包使用。`npm run check:translations` 可單獨產生 `reports/translation-quality.json`。gen/build 現在共用 runtimeDictionary serializer，修正先前 gen 只寫 paths 的問題。
 
 TXT 檢查包含奇數未配對行、空鍵／空譯文、同檔重複 key，以及已列舉的機器 token／命名 placeholder 差異。既有 surface 測試檢查 LSCG 功能詞、表單 value、事件與箭頭保留。這不是所有指令語法或任意 placeholder 的完整驗證，也未檢查 JSON 原始文字中的重複鍵、跨檔作用域衝突或真實遊戲畫面。
 
