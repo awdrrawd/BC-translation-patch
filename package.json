@@ -18,8 +18,8 @@
   "author": "awdrrawd",
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "^0.24.0",
-    "opencc-js": "^1.0.5"
+    "esbuild": "^0.28.2",
+    "opencc-js": "^1.4.2"
   },
   "bctp": {
     "modName": "BCTranslationPatch",
