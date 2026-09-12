@@ -82,3 +82,30 @@ test("room template names bypass menu translation, including names identical to 
         assert.equal(translateRoomTemplateName("DrawTextFit",args,dictionaries,"CN","ChatAdmin"),"- 空模板栏位 -");
     }
 });
+
+test("LSCG quick access preserves toggle arrows, click handlers and state while translating labels",()=>{
+    const click=()=>{};
+    const button=element("▼ Key Necklace","BUTTON");
+    button.onclick=click;
+    button.value="NecklaceKey";
+    button.dataset={typed:"0"};
+    translateSurface(button,"quickAccess",dictionaries,"TW");
+    assert.equal(button.childNodes[0].data,"▼ 鑰匙項鍊");
+    button.childNodes[0].data="▶ Key Necklace";
+    translateSurface(button,"quickAccess",dictionaries,"TW");
+    assert.equal(button.childNodes[0].data,"▶ 鑰匙項鍊");
+    translateSurface(button,"quickAccess",dictionaries,"EN");
+    assert.equal(button.childNodes[0].data,"▶ Key Necklace");
+    assert.equal(button.onclick,click);
+    assert.equal(button.value,"NecklaceKey");
+    assert.deepEqual(button.dataset,{typed:"0"});
+    for(const [en,zh] of [["Tuck In","藏入衣內"],["Pull Out","拉出衣外"]]){
+        button.childNodes[0].data=en;
+        translateSurface(button,"quickAccess",dictionaries,"TW");
+        assert.equal(button.childNodes[0].data,zh);
+    }
+    button.childNodes[0].data="▼ Custom mod item";
+    translateSurface(button,"quickAccess",dictionaries,"TW");
+    assert.equal(button.childNodes[0].data,"▼ Custom mod item");
+    assert.equal(SURFACES.find(([,scope])=>scope==="quickAccess")[0],"#lscg-quick-access > button");
+});

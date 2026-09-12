@@ -3,6 +3,7 @@ import { translateValue } from "./domObserver.js";
 
 // Only these display surfaces are writable. Never select effect labels or craft inputs.
 export const SURFACES = [
+    ["#lscg-quick-access > button", "quickAccess"],
     ["#layering .layering-tab-button, #layering legend, #layering .layering-pair-text", "layering"],
     ["#BCXSearch, [id*='BCX_Search'], [id*='BCX_Search'] .button-label, input[placeholder='Filter items'], input[placeholder='搜索道具'], input[placeholder='搜尋道具']", "search"],
     ["#crafting-slot-screen select[name='mode-select'] option[value='LSCGShare'], #crafting-slot-screen h1, #crafting-slot-screen [role='tooltip']", "craft"],
@@ -11,7 +12,14 @@ export const SURFACES = [
 const selector = SURFACES.map(([s]) => s).join(", ");
 
 export function translateSurface(element, scope, dictionaries, lang) {
-    const lookup = text => dictionaries[lang]?.[scope]?.[text];
+    const lookup = text => {
+        const map = dictionaries[lang]?.[scope];
+        if (scope === "quickAccess") {
+            const header = /^([▼▶]\s+)(.+)$/.exec(text);
+            if (header) return map?.[header[2]] ? header[1] + map[header[2]] : undefined;
+        }
+        return map?.[text];
+    };
     if (element.tagName === "INPUT") {
         translateValue(element, "placeholder", lookup);
         return; // Never touch the user's search text.
