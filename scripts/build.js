@@ -16,10 +16,10 @@ const loaderVersion = "1.0";
 const distDir = path.join(repoRoot, "dist");
 
 // 1) 字典
-const { paths, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats } = generateDict();
+const { surfaces, paths, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats } = generateDict();
 const dictOut = path.join(repoRoot, "src", "generated", "dict.json");
 ensureDir(dictOut);
-fs.writeFileSync(dictOut, JSON.stringify({ paths, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu }), "utf8");
+fs.writeFileSync(dictOut, JSON.stringify({ surfaces, paths, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu }), "utf8");
 console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles} 檔（路徑鍵 ${Object.keys(paths).length}）`);
 
 // 2) 打包

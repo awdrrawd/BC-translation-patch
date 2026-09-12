@@ -242,7 +242,14 @@ export function generateDict() {
         if (rt) modRegex.TW.push(rt);
     }
 
-    return { paths, cnMap, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
+    // Dedicated DOM dictionaries never enter the global menu/keyword lookup.
+    const surfaceRaw = readJsonOptional(path.join(trRoot, "ui", "surfaces.json"), {});
+    const surfaces = { CN: surfaceRaw, TW: {} };
+    for (const [scope, entries] of Object.entries(surfaceRaw)) {
+        surfaces.TW[scope] = Object.fromEntries(Object.entries(entries).map(([en, zh]) =>
+            [en, applyTerms(converter(zh))]));
+    }
+    return { surfaces, paths, cnMap, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
 // 允許 `npm run gen` 直接執行

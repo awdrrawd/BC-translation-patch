@@ -210,3 +210,15 @@ push 到 `main` 後，GitHub Actions 會自動 `build` 並部署 `dist/` 到 Pag
 ## 授權與致謝
 
 翻譯內容衍生自 Bondage Club 官方原始碼（含其社群中文翻譯）；BCX / LSCG 動作字典移植自 [Echo 的动作拓展](https://github.com/SugarChain-Studio/echo-activity-ext)。本專案程式碼採 MIT。
+
+### DOM 補譯：分層、搜尋、製作分享與 LSCG
+
+`translations/ui/surfaces.json` 存放不經 CSV 的介面文字，依用途分為 layering、search、craft、lscg，繁中於建置時產生。`src/mods/surfaces.js` 僅處理指定節點的顯示文字、搜尋提示及分享選項的 label；不修改分層 ID／data 屬性、數值、搜尋輸入或製作描述。
+
+LSCG 保留 Chaotic、Evolving、Magic 等效果名稱、詛咒選项與所有功能關鍵字，只翻標題及 17 條說明。Quick 的英文說明誤寫「與 Quick 不相容」，譯文依上游 condition 判斷修正為「與 Slow 不相容」。
+
+製作分享只在收到 Action/Beep 的 msg 時翻譯固定句型。人物名、道具名、使用者描述保持原樣，並複製訊息物件後交給本機顯示，不改動傳送或分享資料。一般 Chat 訊息不受此規則影響。
+
+測試涵蓋分層識別值、搜尋輸入、LSCGShare 選項值、英文效果名稱保留，以及分享文字與原始訊息不被改寫。尚未在實際連線遊戲中驗證。
+
+BCX 房间設定的「更多」與主題房間頁面使用獨立的 roomAdmin 字典，只在 ChatAdmin 畫面翻譯繪製文字（含按鈕與提示）。目前四個範本名稱的繪製位置會略過通用查表，只翻譯 BCX 固定的空白／未命名／自動套用提示，保留自訂名稱。房間分類、限制標籤的儲存值、介紹、歡迎詞與範本資料不變。

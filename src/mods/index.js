@@ -1,3 +1,5 @@
+import { roomAdminText, isRoomTemplateName, translateRoomTemplateName } from "./roomAdmin.js";
+import { setupSurfaceObserver, translateCraftShare } from "./surfaces.js";
 import { activeLang } from "../lang.js";
 import GEN from "../generated/dict.json";
 import { BCX } from "./bc/BCX/index.js";
@@ -32,6 +34,10 @@ function modRegexMatch(key, lang) {
 }
 
 function lookupMenu(key) {
+    const surface = GEN.surfaces?.[activeLang()];
+    const explicit = surface?.search?.[key] || surface?.craft?.[key] ||
+        (key === "LSCG Effects" ? surface?.lscg?.[key] : undefined);
+    if (explicit) return explicit;
     if (supplement.menu[key]) return supplement.menu[key];
     const lang = activeLang();
     if (lang && MOD[lang] && MOD[lang][key]) return MOD[lang][key];
@@ -117,7 +123,13 @@ export function setupMods(mod, addCleanup) {
     for (const fn of ["DrawText", "DrawTextFit", "DrawTextWrap", "DynamicDrawText"]) {
         mod.hookFunction(fn, 10, (args, next) => {
             if (on() && typeof args[0] === "string") {
-                const t = tryMenu(args[0]);
+                const screen = globalThis.CurrentScreen;
+                if (isRoomTemplateName(fn, args, screen)) {
+                    const name = translateRoomTemplateName(fn, args, GEN.surfaces || {}, activeLang(), screen);
+                    if (name) args[0] = name;
+                    return next(args);
+                }
+                const t = roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
                 if (t) args[0] = t;
                 else if (/[A-Za-z]/.test(args[0])) missing.add(args[0].trim());
             }
@@ -143,8 +155,14 @@ export function setupMods(mod, addCleanup) {
                 : data.Content === "Beep" ? "msg" : `MISSING TEXT IN "Interface.csv": ${data.Content}`;
             const target = data.Dictionary.find((it) => it && it.Tag === tag);
             if (target && typeof target.Text === "string") {
-                const t = tryActivity(target.Text);
-                if (t) target.Text = t;
+                const shared = data.Type === "Action" && data.Content === "Beep"
+                    ? translateCraftShare(target.Text, activeLang()) : undefined;
+                const t = shared || tryActivity(target.Text);
+                if (t) {
+                    args = [...args];
+                    args[0] = { ...data, Dictionary: data.Dictionary.map(entry =>
+                        entry === target ? { ...entry, Text: t } : entry) };
+                }
             }
         }
         return next(args);
@@ -170,4 +188,5 @@ export function setupMods(mod, addCleanup) {
 
     // BCX 匯出/匯入等 textarea.value 說明
     setupBcxHelp(addCleanup);
+    setupSurfaceObserver(GEN.surfaces || {}, activeLang, addCleanup);
 }

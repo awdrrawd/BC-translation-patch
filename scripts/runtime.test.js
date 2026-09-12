@@ -183,6 +183,18 @@ test("real app rolls back hooks and observers after partial setup, then initiali
     const count=timers.size;
     await startOnce(ctx,()=>assert.fail("duplicate"));
     assert.equal(timers.size,count);
+    ctx.CurrentScreen="ChatAdmin";
+    assert.equal(hooks.get("DrawText")(["Back",169,95],args=>args[0]),"返回");
+    assert.equal(hooks.get("DrawTextFit")(["    Save",449,868,146],args=>args[0]),"    儲存");
+    assert.equal(hooks.get("DrawTextFit")(["Load",294,734,325],args=>args[0]),"Load");
+    assert.equal(hooks.get("DrawTextFit")(["- empty template slot -",294,734,325],args=>args[0]),"- 空模板欄位 -");
+    ctx.CurrentScreen="ChatRoom";
+    const original={Type:"Action",Content:"Beep",Dictionary:[{Tag:"msg",Text:"LikoBot holds up her AV端子 to the room"}]};
+    const incoming=hooks.get("ChatRoomMessage")([original],args=>args[0]);
+    assert.equal(incoming.Dictionary[0].Text,"LikoBot 向房間裡的大家展示了自己的 AV端子");
+    assert.equal(original.Dictionary[0].Text,"LikoBot holds up her AV端子 to the room");
+    const chat={...original,Type:"Chat"};
+    assert.equal(hooks.get("ChatRoomMessage")([chat],args=>args[0]),chat);
 
     // Simulate a late official response corrupting an already translated description.
     const family="Female3DCG";
