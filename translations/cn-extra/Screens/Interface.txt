@@ -56,3 +56,42 @@ $value$ second(s)
 $value$ 秒
 Duration error
 时长错误
+### 2026-09：依本機上游補齊連線與共用內容
+Your appearance data has been copied to your clipboard.  Paste it somewhere else to save it.
+你的外观数据已复制到剪贴板。请将其粘贴到其他地方保存。
+Your appearance data cannot be copied.
+无法复制你的外观数据。
+Your pasted appearance is loaded.
+已载入你粘贴的外观。
+Your pasted appearance cannot be loaded.
+无法载入你粘贴的外观。
+You cannot change your appearance.
+你无法更改自己的外观。
+Random
+随机
+Configure {asset}
+设置 {asset}
+Item priority
+道具层级
+Item scale
+道具缩放
+Item rotation
+道具旋转
+Item translation
+道具位移
+Per-layer priority
+各图层层级
+Per-layer scale
+各图层缩放
+Per-layer rotation
+各图层旋转
+Per-layer translation
+各图层位移
+Transformations are disabled for this item.
+此道具已禁用变换功能。
+You said a forbidden word and are still muted for TIMEREMAINING.  You can use /forbiddenwords to review the words.
+你说了禁词，还需禁言 TIMEREMAINING。可使用 /forbiddenwords 查看禁词。
+Enter fullscreen
+进入全屏
+Exit fullscreen
+退出全屏

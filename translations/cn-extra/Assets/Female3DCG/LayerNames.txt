@@ -1,2 +1,959 @@
 Lock
 锁
+### 2026-09：依本機上游補齊連線與共用內容
+Baby Powder Layer 1
+爽身粉图层 1
+Baby Powder Layer 2
+爽身粉图层 2
+Left Bracelet
+左手镯
+Left Frill
+左褶边
+Right Bracelet
+右手镯
+Right Frill
+右褶边
+Shoulder Handles
+肩部提手
+Shoulder Highlights
+肩部高光
+Thigh Handles
+大腿提手
+Thigh Highlights
+大腿高光
+Cord
+饰绳
+Right Fringe
+右流苏
+Left Fringe
+左流苏
+Right Shoulder
+右肩
+Left Shoulder
+左肩
+Buckle Strap
+扣带
+Back Straps
+背部带子
+Front Straps
+前侧带子
+Fatigue
+作训服
+CamoPaint1
+迷彩涂装 1
+CamoPaint2
+迷彩涂装 2
+TigerStripe
+虎纹
+A2
+A2
+Base Color
+底色
+Detail Gloss
+细节光泽
+Detail Shadow
+细节阴影
+Lining Skirt
+衬裙
+Lining Skirt Edge
+衬裙边缘
+Lining Skirt Shadow
+衬裙阴影
+Qipao
+旗袍
+Qipao Edge
+旗袍边缘
+Qipao Pattern
+旗袍图案
+Qipao Shadow
+旗袍阴影
+base
+基底
+plain
+素色
+shadow
+阴影
+Clothes
+衣物
+Collar Button
+领扣
+Hem Knot
+衣摆打结
+Under Chest
+胸下
+Upper Chest
+上胸
+Waist String
+腰绳
+Bow Large
+大蝴蝶结
+Bow Small
+小蝴蝶结
+Bottom Lace
+底部蕾丝
+Bowknot
+蝴蝶结
+Shoulder Lace
+肩部蕾丝
+Bra Top
+胸罩上部
+Bra Base Shadow
+胸罩基底阴影
+Bra Center
+胸罩中央
+Bra Shadow
+胸罩阴影
+Hem Shadow
+衣摆阴影
+Collar Buckle
+领口搭扣
+L. Shoulder
+左肩
+L. Waist
+左腰
+R. Shoulder
+右肩
+R. Waist
+右腰
+Chest Strap
+胸带
+Collar Base
+领口基底
+Collar Pattern
+领口图案
+Dress Detail
+连衣裙细节
+Dress Shadow
+连衣裙阴影
+Edge A
+边缘 A
+Edge B
+边缘 B
+Edge C
+边缘 C
+Ruffle
+荷叶边
+Ruffle Shadow
+荷叶边阴影
+Side Bow
+侧面蝴蝶结
+Side Bow Shadow
+侧面蝴蝶结阴影
+Left Bow
+左蝴蝶结
+Right Bow
+右蝴蝶结
+Collar Bow
+领口蝴蝶结
+White line
+白线
+Bottom Center
+底部中央
+Bottom Line
+底部线条
+Bottom Pattern
+底部图案
+Top Center
+顶部中央
+Top Line
+顶部线条
+Top Pattern
+顶部图案
+Crotch Seam
+胯部接缝
+Dark Tone
+暗色调
+Detail Dark Tone
+细节暗色调
+Bottom Gloss
+底部光泽
+Bottom Highlight
+底部高光
+Bottom Skirt
+下层裙
+Bottom Zipper
+底部拉链
+Top Gloss
+顶部光泽
+Top Highlight
+顶部高光
+Top Skirt
+上层裙
+Top Zipper
+顶部拉链
+Left_A0
+左_A0
+Left_A1
+左_A1
+Left_B1
+左_B1
+Left_B2
+左_B2
+Left_C1
+左_C1
+Left_C2
+左_C2
+Left_C3
+左_C3
+Left_C4
+左_C4
+Right_A0
+右_A0
+Right_A1
+右_A1
+Right_B1
+右_B1
+Right_B2
+右_B2
+Right_C1
+右_C1
+Right_C2
+右_C2
+Right_C3
+右_C3
+Right_C4
+右_C4
+Inner strap
+内侧带子
+Outer strap
+外侧带子
+Top Edge
+顶部边缘
+Bottom Edge
+底部边缘
+Apron Dark Part
+围裙暗部
+Apron Tone
+围裙色调
+Back Bow
+背部蝴蝶结
+Shirt Bright Part
+衬衫亮部
+Shirt Collar
+衬衫领口
+Shirt Dark Part
+衬衫暗部
+Shirt Tone
+衬衫色调
+Waist Rope
+腰绳
+Coat
+外套
+Right Sleeve
+右袖
+Left Sleeve
+左袖
+Bodice
+上身衣片
+Upper Hem
+上衣摆
+Lower Hem
+下衣摆
+Corset Lacing
+束腰系带
+Corset Center
+束腰中央
+Corset Left
+束腰左侧
+Corset Right
+束腰右侧
+Lace Trim
+蕾丝饰边
+Top Laces
+顶部系带
+Bottom Laces
+底部系带
+Opaque Version
+不透明版本
+Transparent Version
+透明版本
+Floral Acc.
+花卉配饰
+Hip
+髋部
+Shoulder Strap
+肩带
+Border
+边框
+Corset Inner
+束腰内层
+Corset Outer
+束腰外层
+Dress Inner
+连衣裙内层
+Dress Outer
+连衣裙外层
+Hoodie Up
+戴上兜帽
+Pants Inner
+裤子内层
+Mermaid detail
+美人鱼细节
+Leggings
+紧身裤
+Special
+特殊
+Left Leg Bow
+左腿蝴蝶结
+Left Leg Lace
+左腿蕾丝
+Left Leg Ring
+左腿环
+Left Leg Shadow
+左腿阴影
+Right Leg Bow
+右腿蝴蝶结
+Right Leg Lace
+右腿蕾丝
+Right Leg Ring
+右腿环
+Right Leg Shadow
+右腿阴影
+Left Leg
+左腿
+Right Leg
+右腿
+Left Bow 1 (Bottom)
+左蝴蝶结 1（底部）
+Left Bow 2
+左蝴蝶结 2
+Left Bow 3
+左蝴蝶结 3
+Left Bow 4
+左蝴蝶结 4
+Right Bow 1 (Bottom)
+右蝴蝶结 1（底部）
+Right Bow 2
+右蝴蝶结 2
+Right Bow 3
+右蝴蝶结 3
+Right Bow 4
+右蝴蝶结 4
+Left leg
+左腿
+Right leg
+右腿
+Right Cushion
+右软垫
+Right Frame
+右框架
+Right Pole
+右支杆
+Right Glow
+右侧发光
+Left Cushion
+左软垫
+Left Frame
+左框架
+Left Pole
+左支杆
+Left Glow
+左侧发光
+InnerShort
+内层短裤
+OuterShort
+外层短裤
+Gem
+宝石
+Gem Base
+宝石底座
+Metal Ornament
+金属饰件
+Copper Coin
+铜钱
+Hairpin
+发簪
+Tether
+系绳
+Tethered Bead
+系绳珠饰
+Front Bang
+前刘海
+Side Bangs
+侧刘海
+Rear Base
+后部基底
+Lower Front Bang
+下方前刘海
+Lower Side Bangs
+下方侧刘海
+Streaks
+挑染
+Connection
+连接处
+Exclamation Mark
+感叹号
+Question Mark
+问号
+Hat Body (Left)
+帽身（左）
+Hat Body (Right)
+帽身（右）
+Hat Body (Top)
+帽身（上）
+Bell (Left)
+铃铛（左）
+Bell (Right)
+铃铛（右）
+Bell (Top)
+铃铛（上）
+Stripes (Left)
+条纹（左）
+Stripes (Right)
+条纹（右）
+Stripes (Top)
+条纹（上）
+Dots (Left)
+圆点（左）
+Dots (Right)
+圆点（右）
+Dots (Top)
+圆点（上）
+Hat Brim
+帽檐
+Hat Lining
+帽子内衬
+Hat Lining Decoration
+帽子内衬装饰
+Hat Tip
+帽尖
+Hat Tip 2
+帽尖 2
+Stars
+星星
+Rope cuffs link
+绳制腕铐连接绳
+Leash knot
+牵绳绳结
+Canister
+罐体
+Canister Highlight
+罐体高光
+Canister Hose
+罐体软管
+Clamp
+夹具
+Connector
+连接件
+Inflated
+充气
+Liquid
+液体
+Tube
+管子
+Long Bag
+长袋
+Transparent
+透明
+Burlap Mask
+麻布面罩
+Rim
+边沿
+Counterbalance
+配重
+Hinge
+铰链
+Stand
+支架
+Logo Background
+标志背景
+Brand
+品牌
+Potty
+便盆
+Inset
+嵌入部分
+Plastic Bag
+塑料袋
+Fixture
+固定装置
+Box
+盒子
+Box Reflection
+盒子反光
+Ribbon Reflection
+缎带反光
+Padding Reflection
+衬垫反光
+Box (edit Alpha)
+盒子（调整透明度）
+Box Reflection (edit Alpha)
+盒子反光（调整透明度）
+Ribbon (edit Alpha)
+缎带（调整透明度）
+Ribbon Reflection (edit Alpha)
+缎带反光（调整透明度）
+Padding (edit Alpha)
+衬垫（调整透明度）
+Padding Reflection (edit Alpha)
+衬垫反光（调整透明度）
+Backside Box
+后侧盒子
+Backside Box Reflection
+后侧盒子反光
+Backside Ribbon
+后侧缎带
+Backside Ribbon Reflection
+后侧缎带反光
+BacksidePadding
+后侧衬垫
+Backside Padding Reflection
+后侧衬垫反光
+Lid Box
+盒盖
+Lid Box Reflection
+盒盖反光
+Lid Ribbon
+盒盖缎带
+Lid Ribbon Reflection
+盒盖缎带反光
+Cuff Loops
+铐环
+Parts
+零件
+Hightlights
+高光
+Cushions
+软垫
+Earphones
+耳机
+Hinges
+铰链
+Microphone
+麦克风
+Cat ears
+猫耳
+Highlight glow
+高光发光
+Aluminum Foil
+铝箔
+Chocolate Bar
+巧克力棒
+Gold Ticket
+金票
+Wrapping Paper
+包装纸
+Main Color
+主色
+Secondary Color
+次色
+Details Color
+细节颜色
+Gems Color
+宝石颜色
+Eyes Main Color
+眼睛主色
+Eyes Glow Color
+眼睛发光颜色
+Strap Button
+背带扣
+Wood body
+木制琴身
+B2
+B2
+Plastic body
+塑料琴身
+Chords
+琴弦
+Pickups
+拾音器
+Borders
+边框
+Tuners
+调音旋钮
+Frets
+品丝
+B9
+B9
+Fan Edge
+扇缘
+Fan Surface
+扇面
+Folding Ribs
+收拢扇骨
+Open Ribs
+展开扇骨
+Open Ribs Back
+展开扇骨背面
+Open Shadow
+展开阴影
+Five Spices
+五香
+Smoky Honey
+烟熏蜂蜜
+Stick
+签子
+Dot
+圆点
+Umbrella Bamboo
+伞面竹子图案
+Umbrella Cartoon
+伞面卡通图案
+Umbrella Dark Side
+伞面暗部
+Umbrella Flower 1
+伞面花卉 1
+Umbrella Flower 2
+伞面花卉 2
+Umbrella Handle
+伞柄
+Umbrella Landscape
+伞面山水图案
+Umbrella No Pattern
+无图案伞面
+Umbrella Ribs
+伞骨
+Handle Color 1
+握柄颜色 1
+Handle Color 2
+握柄颜色 2
+Handle Metal
+握柄金属
+Bottle
+瓶子
+Package
+包装
+Inlet
+入口
+Doll
+人偶
+Right hand
+右手
+Right shine
+右侧光泽
+Left hand
+左手
+Left shine
+左侧光泽
+Side Attachment Points
+侧面连接点
+Main Attachment Point
+主连接点
+Attachments
+附件
+Exhalation Valve
+呼气阀
+Reflection
+反光
+Hypno pattern 1
+催眠图案 1
+Hypno pattern 2
+催眠图案 2
+Canteen
+水壶
+Rear wig
+后部假发
+Hole detail
+孔洞细节
+Rose
+玫瑰
+Rivet
+铆钉
+Leather parts
+皮革部分
+Metal parts
+金属部分
+Inner gag
+内层口塞
+Gag metal
+口塞金属
+Cover gag
+外盖口塞
+Spike collar
+尖刺项圈
+Collar main ring
+项圈主环
+Middle Ribbon
+中间缎带
+Side Ribbons
+侧面缎带
+Left Nipple
+左乳头
+Right Nipple
+右乳头
+Shackle Body
+镣铐主体
+Shackle Pins
+镣铐插销
+Metal Attachments
+金属附件
+Leash Handle
+牵绳握柄
+Gradient
+渐变
+Top Mask
+上部面罩
+Bottom Mask
+下部面罩
+Body Rings
+身体环扣
+Collar Strap
+项圈带
+Collar Shadow
+项圈阴影
+Collar Edge
+项圈边缘
+Collar Ring
+项圈环
+Body Straps
+身体绑带
+Body Shadows
+身体阴影
+Body Edges
+身体边缘
+Unity Right Thigh
+连体右大腿
+Unity Left Thigh
+连体左大腿
+Unity Right Side
+连体右侧
+Unity Left Side
+连体左侧
+Tunnels
+扩孔环
+Barbells
+杠铃穿环
+Condom
+避孕套
+Drip
+滴液
+Second Chain
+第二条链
+Diamond
+钻石
+Pearl
+珍珠
+Triskelion
+三曲腿纹
+Hypno visor 1
+催眠面罩 1
+Hypno visor 2
+催眠面罩 2
+Main Gem
+主宝石
+Small Gems
+小宝石
+Pendant
+吊坠
+Bead Shine
+珠饰光泽
+Pendant Link
+吊坠连接环
+Sclera
+眼白
+Pupil
+瞳孔
+Dragon
+龙
+Dragon Orb
+龙珠
+Vines
+藤蔓
+Flower Bud
+花苞
+Metal Ring
+金属环
+Pulled
+拉开
+Exposed
+露出
+Thighs
+大腿
+Knees
+膝盖
+Motiv
+图案
+Ring Finger Gem
+无名指宝石
+Ring Finger Shine
+无名指光泽
+Socks
+袜子
+Highlight
+高光
+Insole
+鞋垫
+Pattern Color
+图案颜色
+Plain Color
+素色
+Metal buckles
+金属搭扣
+Big Toe
+大脚趾
+Second Toe
+第二脚趾
+Third Toe
+第三脚趾
+Fourth Toe
+第四脚趾
+Little Toe
+小脚趾
+Base (Left)
+基底（左）
+Base (Right)
+基底（右）
+Open (Left)
+打开（左）
+Open (Right)
+打开（右）
+Lower Net
+下部网格
+Lower Pattern
+下部图案
+Lower Socks
+下部袜子
+Upper Net
+上部网格
+Upper Pattern
+上部图案
+Upper Socks
+上部袜子
+Waistline
+腰线
+Tummy
+肚子
+bmask
+身体遮罩
+Body Hue
+身体色调
+Neck
+颈部
+Torso
+躯干
+Breast Outer
+胸部外侧
+Breast Middle
+胸部中间
+Breast Inner
+胸部内侧
+Breast Under
+胸部下方
+Ribs
+肋部
+Breast
+胸部
+Cleavage
+乳沟
+Support
+支撑
+Edge Line
+边缘线条
+Edge Shade
+边缘阴影
+Hands Line
+手部线条
+Hands Main
+手部主色
+Gloves Line
+手套线条
+Gloves Main
+手套主色
+Wrapping
+包裹
+Under-Bra Inner Layer
+胸罩下部内层
+Under-Bra Structure
+胸罩下部结构
+Upper-Bra Structure
+胸罩上部结构
+Waist Inner Layer
+腰部内层
+Waist Structure
+腰部结构
+Middle Base
+中间基底
+Side Base
+侧面基底
+Tone Highlight
+色调高光
+Abdomen Highlight
+腹部高光
+Chest Reflection
+胸部反光
+Tail One
+尾巴一
+Tip One
+尾尖一
+Tail Two
+尾巴二
+Tip Two
+尾尖二
+Tail Three
+尾巴三
+Tip Three
+尾尖三
+Tail Four
+尾巴四
+Tip Four
+尾尖四
+Tail Five
+尾巴五
+Tip Five
+尾尖五
+Tail Six
+尾巴六
+Tip Six
+尾尖六
+Tail Seven
+尾巴七
+Tip Seven
+尾尖七
+Tail Eight
+尾巴八
+Tip Eight
+尾尖八
+Tail Nine
+尾巴九
+Tip Nine
+尾尖九
+Tail Ten
+尾巴十
+Tip Ten
+尾尖十
+Energy Base
+能量基底
+Energy Highlight
+能量高光
+Energy Shine
+能量光泽
+Mechanics
+机械结构
+Belly (Arachnid)
+腹部（蜘蛛形态）
+Belly Connection (Arachnid)
+腹部连接处（蜘蛛形态）
+Wing Bone
+翼骨
+Wing Membrane
+翼膜
+Base1
+基底 1
+Base2
+基底 2
+Base3
+基底 3
+Wing Base1
+翅膀基底 1
+Wing Base2
+翅膀基底 2
+Wing Base3
+翅膀基底 3
+Wing Base4
+翅膀基底 4
+Wing Base5
+翅膀基底 5
+Wing Base6
+翅膀基底 6
+Wing Tip1
+翼尖 1
+Wing Tip2
+翼尖 2
+Wing Tip3
+翼尖 3
+Wing Tip4
+翼尖 4
+Wing Tip5
+翼尖 5
+Wing Tip6
+翼尖 6

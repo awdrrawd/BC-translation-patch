@@ -19,3 +19,10 @@ SourceCharacter squeezes PronounPossessive ActivityAsset.
 SourceCharacter 挤压 PronounPossessive ActivityAsset。
 SourceCharacter fingers PronounPossessive mouth.
 SourceCharacter 用手指插弄 PronounPossessive 嘴。
+### 2026-09：依本機上游補齊連線與共用內容
+Chew
+咀嚼
+Chew on Item
+啃咬道具
+SourceCharacter chews on PronounPossessive ActivityAsset.
+SourceCharacter 啃咬着 PronounPossessive ActivityAsset。

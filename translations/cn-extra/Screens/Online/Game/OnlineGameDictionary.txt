@@ -1,0 +1,39 @@
+### 2026-09：依本機上游補齊連線與共用內容
+SourceName (SourceNumber) does nothing and passes SourcePronounPossessive turn.
+SourceName (SourceNumber) 什么也没做，跳过了 SourcePronounPossessive 回合。
+Strip TargetPronounObject (OptionOdds %)
+脱去 TargetPronounObject 的衣物 (OptionOdds %)
+Gag TargetPronounObject (OptionOdds %)
+堵住 TargetPronounObject 的嘴 (OptionOdds %)
+SourceName (SourceNumber) tightens TargetName (TargetNumber) bondage, resetting TargetPronounPossessive struggle progress.
+SourceName (SourceNumber) 收紧了 TargetName (TargetNumber) 的束缚，重置了 TargetPronounPossessive 挣脱进度。
+TargetName (TargetNumber) struggles out successfully and frees TargetPronounPossessive arms.  [ActionOdds >= ActionRNG]
+TargetName (TargetNumber) 成功挣脱，解放了 TargetPronounPossessive 手臂。[ActionOdds >= ActionRNG]
+SourceName (SourceNumber) charges with SourcePronounPossessive team, giving a 25% offensive bonus for a full cycle.
+SourceName (SourceNumber) 带领 SourcePronounPossessive 队伍冲锋，使全队在一整轮内获得 25% 的进攻加成。
+SourceName (SourceNumber) detains TargetName (TargetNumber) and restrains TargetPronounPossessive arms using: ItemDesc.
+SourceName (SourceNumber) 扣押了 TargetName (TargetNumber)，并用 ItemDesc 束缚了 TargetPronounPossessive 手臂。
+SourceName (SourceNumber) exposes TargetName (TargetNumber) and removes TargetPronounPossessive clothes.
+SourceName (SourceNumber) 脱下 TargetName (TargetNumber) 的衣物，让 TargetPronounPossessive 身体暴露出来。
+SourceName (SourceNumber) inspires TargetName (TargetNumber), allowing TargetPronounObject to use TargetPronounPossessive special abilities again.
+SourceName (SourceNumber) 激励了 TargetName (TargetNumber)，让 TargetPronounObject 能再次使用 TargetPronounPossessive 特殊能力。
+SourceName (SourceNumber) seduces TargetName (TargetNumber), preventing TargetPronounObject from acting in TargetPronounPossessive next turn.
+SourceName (SourceNumber) 诱惑了 TargetName (TargetNumber)，使 TargetPronounObject 在 TargetPronounPossessive 下个回合无法行动。
+SourceName (SourceNumber) confuses TargetName (TargetNumber), preventing TargetPronounObject from using special abilities for a full cycle.
+SourceName (SourceNumber) 扰乱了 TargetName (TargetNumber)，使 TargetPronounObject 在一整轮内无法使用特殊能力。
+SourceName (SourceNumber) hides in a corner, no opponent can target SourcePronounObject until SourcePronounPossessive next turn.
+SourceName (SourceNumber) 躲进角落，直到 SourcePronounPossessive 下个回合之前，对手都无法以 SourcePronounObject 为目标。
+SourceName (SourceNumber) immobilize TargetName (TargetNumber) and restrains TargetPronounPossessive legs using: ItemDesc.
+SourceName (SourceNumber) 限制了 TargetName (TargetNumber) 的行动，用 ItemDesc 束缚了 TargetPronounPossessive 双腿。
+SourceName (SourceNumber) cheers for TargetName (TargetNumber), giving TargetPronounObject a 25% offensive and defensive bonus for a full cycle.
+SourceName (SourceNumber) 为 TargetName (TargetNumber) 加油，使 TargetPronounObject 在一整轮内获得 25% 的进攻和防御加成。
+SourceName (SourceNumber) uses SourcePronounPossessive evasion abilities to remove SourcePronounPossessive restraint.
+SourceName (SourceNumber) 运用 SourcePronounPossessive 脱逃能力，解除了 SourcePronounPossessive 束缚。
+SourceName (SourceNumber) rescues TargetName (TargetNumber).  Removing TargetPronounPossessive restraint.
+SourceName (SourceNumber) 救援了 TargetName (TargetNumber)，解除了 TargetPronounPossessive 束缚。
+SourceName (SourceNumber) silences TargetName (TargetNumber) and gag TargetPronounObject using: ItemDesc.
+SourceName (SourceNumber) 让 TargetName (TargetNumber) 安静下来，用 ItemDesc 堵住了 TargetPronounObject 的嘴。
+SourceName (SourceNumber) covers TargetName (TargetNumber), no opponent can target TargetPronounObject for a full cycle.
+SourceName (SourceNumber) 掩护了 TargetName (TargetNumber)，使对手在一整轮内都无法以 TargetPronounObject 为目标。
+SourceName (SourceNumber) supports SourcePronounPossessive team, giving a 25% defensive bonus for a full cycle.
+SourceName (SourceNumber) 支援了 SourcePronounPossessive 队伍，使全队在一整轮内获得 25% 的防御加成。

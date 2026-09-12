@@ -1,0 +1,25 @@
+### 2026-09：依本機上游補齊連線與共用內容
+Reset to default
+恢复默认值
+Copy color
+复制颜色
+Failed to copy colors of item with {nColors} distinct colors
+无法复制含有 {nColors} 种不同颜色的道具颜色
+Browser does not support color copying
+浏览器不支持复制颜色
+Color {color} successfully copied
+已成功复制颜色 {color}
+Paste color
+粘贴颜色
+Browser does not support color pasting
+浏览器不支持粘贴颜色
+Failed to paste invalid color {color}
+无法粘贴无效颜色 {color}
+Color {color} successfully pasted
+已成功粘贴颜色 {color}
+Select {item} colors
+选择 {item} 的颜色
+Saved colors
+已保存的颜色
+Save color
+保存颜色

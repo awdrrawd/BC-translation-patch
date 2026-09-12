@@ -132,3 +132,8 @@ On Chat Room Screen
 在聊天室界面
 No Modifiers
 无修饰键
+### 2026-09：依本機上游補齊連線與共用內容
+Chat
+聊天
+Always
+始终

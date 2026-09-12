@@ -38,3 +38,8 @@ permanent
 永久
 shift
 Shift
+### 2026-09：依本機上游補齊連線與共用內容
+Delete
+删除
+Page
+页

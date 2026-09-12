@@ -56,3 +56,12 @@ Waiting for input for $action$...
 正在等待 $action$ 的输入……
 Filtering
 筛选中
+### 2026-09：依本機上游補齊連線與共用內容
+Use :/:: as alias for /me/*/action/**
+使用 :/:: 作为 /me/*/action/** 的别名
+Show fullscreen button
+显示全屏按钮
+Display a small button for entering fullscreen mode. On mobile is recommended; desktop browsers usually already provide a fullscreen shortcut.
+显示进入全屏模式的小按钮。建议在移动设备上启用；桌面浏览器通常已有全屏快捷键。
+On mobile
+仅移动设备

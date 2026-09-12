@@ -29,3 +29,6 @@ $inputName: contains invalid characters.\n$invalidCharacters
 $inputName：包含无效字符。\n$invalidCharacters
 $inputName: invalid email address.
 $inputName：无效的邮箱地址。
+### 2026-09：依本機上游補齊連線與共用內容
+Account name
+账号名称

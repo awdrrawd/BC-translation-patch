@@ -16,3 +16,28 @@ Smoking is not allowed in this room.
 本房间禁止吸烟。
 Club Card is active in this room.
 本房间启用了俱乐部卡牌。
+### 2026-09：依本機上游補齊連線與共用內容
+The leash has broken you're already in a room
+牵绳已断开，因为你已经在房间内
+The leash has broken because the room is locked
+牵绳已断开，因为房间已上锁
+The leash has broken because you're banned from the room
+牵绳已断开，因为你被该房间封禁
+The leash has broken because you're blocked from entering it
+牵绳已断开，因为你被禁止进入该房间
+The leash has broken because the room is full
+牵绳已断开，因为房间已满
+The leash has broken because that room doesn't exist
+牵绳已断开，因为该房间不存在
+The leash was broken because of an account error
+牵绳因账号错误而断开
+The leash was broken because the joined room is invalid
+牵绳已断开，因为加入的房间无效
+The leash was broken because you're ghosting the room owner
+牵绳已断开，因为你屏蔽了房主
+The leash was broken because you've hidden the room
+牵绳已断开，因为你隐藏了该房间
+The leash has broken because of a timeout error
+牵绳因超时错误而断开
+Smoking
+吸烟

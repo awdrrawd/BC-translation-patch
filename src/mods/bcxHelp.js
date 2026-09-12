@@ -6,9 +6,9 @@ import GEN from "../generated/dict.json";
 // 使用者匯出/匯入後 value 變成代碼→不再匹配，不受影響。
 const HELP = /** @type {any} */ (GEN).bcxHelp || { CN: {}, TW: {} };
 
-export function setupBcxHelp() {
+export function setupBcxHelp(addCleanup) {
     if (!Object.keys(HELP.CN || {}).length) return;
-    setInterval(() => {
+    const timer = setInterval(() => {
         const lang = activeLang();
         const map = lang && HELP[lang];
         if (!map) return;
@@ -17,4 +17,5 @@ export function setupBcxHelp() {
             if (t) ta.value = t;
         }
     }, 1000);
+    addCleanup(() => clearInterval(timer));
 }

@@ -1,0 +1,39 @@
+### 2026-09：依本機上游補齊連線與共用內容
+Wardrobe
+衣橱
+Exclude body parts
+不包含身体部位
+Previous page
+上一页
+Next page
+下一页
+Search outfits
+搜索服装
+Outfit name
+服装名称
+Outfit saved
+服装已保存
+Outfit names can only use letters, numbers, and spaces
+服装名称只能使用字母、数字和空格
+No outfits match your search
+没有符合搜索条件的服装
+Are you sure you want to load this outfit?
+确定要载入这套服装吗？
+Are you sure you want to save this outfit?
+确定要保存这套服装吗？
+Delete
+删除
+Rename
+重命名
+Are you sure you want to delete this outfit?
+确定要删除这套服装吗？
+Outfit deleted
+服装已删除
+Outfit renamed
+服装已重命名
+Close
+关闭
+Show character previews
+显示角色预览
+Empty
+空

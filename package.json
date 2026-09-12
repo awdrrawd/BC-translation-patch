@@ -5,6 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js",
     "seed": "node scripts/seed-from-upstream.js",
     "gen": "node scripts/gen-dict.js",
     "build": "node scripts/build.js",

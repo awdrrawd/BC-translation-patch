@@ -46,3 +46,8 @@ Drow
 卓尔
 Pixie
 皮克西
+### 2026-09：依本機上游補齊連線與共用內容
+Nickname
+昵称
+Dominatrix
+女主人

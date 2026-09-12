@@ -1,86 +1,81 @@
-// 對比官方最新英文原文 vs 我們的 CN 字典，列出「官方會顯示、但我們沒翻」的字串。
-// 用來追蹤官方新增內容 → 只翻譯增量。
-// 掃描官方 Text_*.csv / Interface.csv 的英文值（CSV 第 2 欄）。
+// 按遊戲實際翻譯作用域比對；預設只檢查連線及共用介面。
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { upstreamDir, repoRoot } from "./lib/upstream.js";
 import { walk, ensureDir } from "./lib/fsutil.js";
+import { parseTxtPairs } from "./lib/parseTxt.js";
 import { generateDict } from "./gen-dict.js";
 
-/** 極簡 CSV 解析（BC 用逗號分隔、值可含引號），只取每行前兩欄 */
-function parseCsvKeyValue(text) {
-    /** @type {[string, string][]} */
+export function parseCsv(text) {
+    text = text.replace(/\r\n/g, "\n").trim();
     const rows = [];
-    for (const raw of text.replace(/\r\n/g, "\n").split("\n")) {
-        if (!raw) continue;
-        // 支援簡單的引號包裹
-        const cells = [];
-        let cur = "", inQ = false;
-        for (let i = 0; i < raw.length; i++) {
-            const ch = raw[i];
-            if (inQ) {
-                if (ch === '"' && raw[i + 1] === '"') { cur += '"'; i++; }
-                else if (ch === '"') inQ = false;
-                else cur += ch;
-            } else if (ch === '"') inQ = true;
-            else if (ch === ",") { cells.push(cur); cur = ""; if (cells.length >= 2) { /* 已取夠 */ } }
-            else cur += ch;
-        }
-        cells.push(cur);
-        if (cells.length >= 2) rows.push([cells[0], cells[1]]);
+    let row = [], cell = "", quoted = false;
+    for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (ch === '"') {
+            if (quoted && text[i + 1] === '"') { cell += '"'; i++; }
+            else quoted = !quoted;
+        } else if (!quoted && (ch === "," || ch === "\n")) {
+            row.push(cell.replace(/\r$/, "")); cell = "";
+            if (ch === "\n") { rows.push(row); row = []; }
+        } else cell += ch;
     }
+    if (cell || row.length) { row.push(cell.replace(/\r$/, "")); rows.push(row); }
     return rows;
 }
 
-const src = upstreamDir();
-const { cnMap } = generateDict();
-const have = new Set(Object.keys(cnMap));
+export function isOnlineCsv(rel) {
+    return /^(Assets\/Female3DCG\/|Backgrounds\/|Screens\/(Online\/|Character\/|Interface\.csv|Room\/Crafting\/))/.test(rel);
+}
 
-const csvFiles = walk(src, (f) => /(?:Text_[^/\\]+|Interface)\.csv$/.test(f.split(path.sep).join("/")));
+export function missingStrings(base, rows, have) {
+    const strings = rows.flatMap(row => /\/Dialog_[^/]+$/.test(base) ? row.slice(2, 4) : [row[base === "Assets/Female3DCG/Female3DCG" ? 2 : 1]]);
+    return [...new Set(strings.map(s => (s || "").trim()).filter(s => /[A-Za-z]/.test(s) && !have.get(s)))];
+}
 
-/** @type {{file: string, missing: string[]}[]} */
-const report = [];
-let totalMissing = 0;
-const seen = new Set();
-
-for (const file of csvFiles) {
-    const rel = path.relative(src, file).split(path.sep).join("/");
-    const rows = parseCsvKeyValue(fs.readFileSync(file, "utf8"));
-    const missing = [];
-    for (const [, en] of rows) {
-        const key = (en || "").trim();
-        if (!key || !/[A-Za-z]/.test(key)) continue;
-        if (have.has(key)) continue;
-        if (seen.has(key)) continue; // 跨檔去重
-        seen.add(key);
-        missing.push(key);
+function main() {
+    const src = upstreamDir();
+    const all = process.argv.includes("--all");
+    const tw = process.argv.includes("--tw");
+    const lang = tw ? "tw" : "cn";
+    const generated = tw ? generateDict().paths : {};
+    const report = [];
+    let scanned = 0;
+    for (const file of walk(src, f => f.endsWith(".csv"))) {
+        const rel = path.relative(src, file).split(path.sep).join("/");
+        const online = isOnlineCsv(rel);
+        if (!all && !online) continue;
+        if (rel.includes("KinkyDungeon")) continue;
+        const base = rel.replace(/\.csv$/, "");
+        const have = new Map();
+        if (tw) {
+            const flat = generated[base + "_TW.txt"];
+            const official = path.join(src, base + "_TW.txt");
+            if (flat) {
+                for (let i = 0; i < flat.length; i += 2) have.set(flat[i], flat[i + 1]);
+            } else if (fs.existsSync(official)) {
+                for (const [en, zh] of parseTxtPairs(fs.readFileSync(official, "utf8"))) have.set(en, zh);
+            }
+        } else {
+            for (const root of ["cn", "cn-extra"]) {
+                const tr = path.join(repoRoot, "translations", root, base + ".txt");
+                if (fs.existsSync(tr)) for (const [en, zh] of parseTxtPairs(fs.readFileSync(tr, "utf8"))) have.set(en, zh);
+            }
+        }
+        const rows = parseCsv(fs.readFileSync(file, "utf8"));
+        const missing = missingStrings(base, rows, have);
+        scanned++;
+        if (missing.length) report.push({ file: rel, missing });
     }
-    if (missing.length) {
-        report.push({ file: rel, missing });
-        totalMissing += missing.length;
-    }
+    report.sort((a, b) => b.missing.length - a.missing.length || a.file.localeCompare(b.file));
+    const total = report.reduce((n, r) => n + r.missing.length, 0);
+    const out = path.join(repoRoot, `reports/missing-${lang}.md`);
+    ensureDir(out);
+    fs.writeFileSync(out, `# 未翻譯字串報告\n\n範圍：${all ? "全部（不含 KinkyDungeon）" : "連線、角色、道具、背景、製作及共用介面"}\n來源：${src}\n掃描 ${scanned} 個 CSV；缺少 ${total} 條（各檔案內去重）。\n\n` + report.map(r => `## ${r.file} （${r.missing.length}）\n\n${r.missing.map(s => `- ${JSON.stringify(s)}`).join("\n")}\n`).join("\n"));
+    fs.writeFileSync(path.join(repoRoot, `reports/missing-${lang}.json`), JSON.stringify(report, null, 2) + "\n");
+    console.log(`${lang.toUpperCase()}：掃描 ${scanned} 個 CSV；缺少 ${total} 條。`);
+    for (const r of report) console.log(`${r.missing.length.toString().padStart(5)}  ${r.file}`);
 }
 
-report.sort((a, b) => b.missing.length - a.missing.length);
-
-console.log(`官方 CSV 檔：${csvFiles.length}`);
-console.log(`未翻譯字串（去重後）：${totalMissing}`);
-console.log("");
-console.log("=== 缺口最多的前 25 個檔案 ===");
-for (const { file, missing } of report.slice(0, 25)) {
-    console.log(`  ${missing.length.toString().padStart(4)}  ${file}`);
-}
-
-// 輸出完整報告
-const outDir = path.join(repoRoot, "reports");
-const outFile = path.join(outDir, "missing-cn.md");
-ensureDir(outFile);
-let md = `# 未翻譯字串報告\n\n產生時間：${new Date().toISOString()}\n\n` +
-    `官方 CSV 檔：${csvFiles.length}，未翻譯字串（去重）：**${totalMissing}**\n\n`;
-for (const { file, missing } of report) {
-    md += `## ${file} （${missing.length}）\n\n`;
-    for (const m of missing) md += `- ${JSON.stringify(m)}\n`;
-    md += "\n";
-}
-fs.writeFileSync(outFile, md, "utf8");
-console.log(`\n完整報告：${path.relative(repoRoot, outFile)}`);
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) main();

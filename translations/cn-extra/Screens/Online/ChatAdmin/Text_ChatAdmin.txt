@@ -1,0 +1,27 @@
+### 2026-09：沿用官方 CN 補齊官方 TW 缺漏
+Description of the room
+房间描述
+Quick Add
+快速添加
+Quick Ban
+快速封禁
+Creating the chat room…
+创建聊天室中...
+Customization
+房间自定义
+Don't use maps
+不使用地图
+Never use the map exploration
+永不使用地图探索
+Allow on and off
+允许开关
+Hybrid map, can go on and off
+混合地图，能够开关
+Only use maps
+只使用地图
+Only use the map, no regular chat
+只使用地图，没有常规聊天
+Club Card
+俱乐部卡牌
+Pandora
+潘多拉

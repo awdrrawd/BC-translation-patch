@@ -1,0 +1,151 @@
+### 2026-09：依本機上游補齊連線與共用內容
+Accessory
+配饰
+Accessory Bead
+配饰珠子
+Accessory Ring
+配饰环
+Base Color
+底色
+Base
+基底
+Shadow
+阴影
+Coth
+布料
+Velvet
+天鹅绒
+Accessories
+配饰
+Chest Lace
+胸部蕾丝
+Petticoat
+衬裙
+Qipao Edge
+旗袍边缘
+Qipao Fabric
+旗袍布料
+Qipao Outline
+旗袍轮廓
+Qipao Shadow
+旗袍阴影
+Shirt
+衬衫
+Bow
+蝴蝶结
+Bow Shadow
+蝴蝶结阴影
+Flower
+花朵
+Flower Shadow
+花朵阴影
+Highlight
+高光
+Outline
+轮廓
+Shade
+阴影
+Trim
+饰边
+Bottom Skirt Lining
+下层裙内衬
+Butterfly Skirt Hem
+蝴蝶裙摆
+Front Skirt Hem
+前侧裙摆
+Waistband
+腰带
+String
+细绳
+Belt (Lower)
+腰带（下）
+Belt (Upper)
+腰带（上）
+Buckle (Lower)
+搭扣（下）
+Buckle (Upper)
+搭扣（上）
+Inner
+内侧
+Outer
+外侧
+Sleeves
+袖子
+Hem
+衣摆
+Corset
+束腰
+Lace
+蕾丝
+Lining
+内衬
+Chain
+链条
+Strap
+带子
+Fur
+毛皮
+Skirt
+裙子
+Skirt Edge
+裙子边缘
+Ring
+环
+Bead
+珠子
+Coin
+硬币
+Box Reflection
+盒子反光
+Ribbon
+缎带
+Ribbon Reflection
+缎带反光
+Inner Reflection
+内侧反光
+Canister
+罐体
+Tube
+管子
+Leather
+皮革
+Edge
+边缘
+Fastenings
+扣件
+Left
+左
+Right
+右
+Dragon
+龙
+Cursed Eye
+诅咒之眼
+Body Curve Shade
+身体曲线阴影
+Body Highlight Details
+身体高光细节
+Body Shade Details
+身体阴影细节
+Tails
+尾巴
+Tips
+尾尖
+Bases
+基底
+Wings
+翅膀
+Fabric
+布料
+Bell
+铃铛
+Dots
+圆点
+Main
+主体
+Streaks
+挑染
+Claw (Arachnid)
+爪（蜘蛛形态）
+Claw (Biped)
+爪（双足形态）

@@ -52,11 +52,15 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 [`src/index.js`](src/index.js) 載入後依序啟動下列各層（各層只翻自己負責的表面）：
 
 1. **`TranslationCache` 注入** — [`inject.js`](src/inject.js)：把 `paths` 塞進 `TranslationCache`，並 hook `TranslationAvailable` 讓遊戲對我方路徑回報「可翻」。**這一層涵蓋所有走 CSV/txt 的字串**（畫面文字、道具描述、InformationSheet、Interface 等），是覆蓋面最大的一層。
-2. **快取重建** — [`reapply.js`](src/reapply.js)：注入後**強制重建已建好的動作字典與螢幕文字快取**。BC 的 `TextCache` 第一次建置就記憶化、之後不自更新，若我們晚於遊戲注入（**Electron 尤其如此**），這步讓已烤成英文的快取重新吃到我們的翻譯，使結果與載入時序無關。
+2. **資產與快取重建** — [`reapply.js`](src/reapply.js)：依遊戲保留的英文 CSV，以資產 ID 重建名稱，避免對已翻譯文字反查。監聽官方資產翻譯完成，並每 250 ms 檢查語言、資產與文字快取是否改變；只有變動時才重建，涵蓋 Electron 晚載入、資產晚到與簡繁中切換。
 3. **canvas 選單文字** — `DrawText` / `DrawTextFit` / `DrawTextWrap` / `DynamicDrawText` hooks（[`mods/index.js`](src/mods/index.js)）：翻 mod 自己畫在畫布上的 BCX/LSCG 選單文字。
 4. **動作字典與聊天動作** — `ActivityDictionaryText` hook 翻動作名；`ChatRoomMessage` hook 翻聊天室裡的動作/活動訊息模板（替換名字前），再交給遊戲 `CommonStringSubstitute` 填名字。
 5. **DOM 選單** — [`domObserver.js`](src/mods/domObserver.js)：`MutationObserver` 翻 `dialog-inventory` 道具名、快捷鍵、製作屬性 `<dfn>`。**啟動時會補掃既有節點**（同樣為了 Electron 晚載入的情境）。
 6. **BCX 特殊表面** — [`bcxHelp.js`](src/mods/bcxHelp.js) 輪詢替換 `textarea.value` 的說明；`chatObserver` 翻聊天記錄輸出的 HTML 說明。
+
+載入狀態由 `src/lifecycle.js` 管理：`loading → ready / failed`。同時重複載入會共用同一個初始化 Promise；失敗後重新執行載入器會重試。`app.init()` 會等待遊戲函式就緒（最多 30 秒），並沿用已存在的 SDK。若中途失敗，已建立的 hook、observer、計時器與待處理 DOM 工作會清除；已注入的字庫仍保留。
+
+DOM 分批翻譯會持續排程到佇列清空，去除同一批重複節點，每批最多 24 個；閒置回呼逾時也會處理有限數量，避免忙碌時永遠不翻譯。已處理節點保留修改前文字，切換語言時可從來源重譯或還原。
 
 > **語系開關**：`activeLang()`（[`lang.js`](src/lang.js)）非 `CN`/`TW` 時所有 hook 皆為 no-op，遊戲內切語言即時生效。
 
@@ -155,8 +159,24 @@ TW 由 CN 機轉，出現不順的詞時：
 
 ### D. 找出還沒翻的字串
 
-- **官方缺口**：`npm run diff`（需官方原始碼）→ 產生 [`reports/missing-cn.md`](reports)。
+- **官方缺口**：`npm run diff`（需官方原始碼）→ 產生 `reports/missing-cn.md` 與 JSON。預設檢查連線、角色、道具、背景、製作及共用介面；依檔案作用域比對，不再跨檔去重。道具名稱讀取 CSV 第三欄，對話讀取選項及回應兩欄。
+- **繁中缺口**：`npm run diff -- --tw` → 產生 `reports/missing-tw.md` 與 JSON，檢查實際產出的 TW 字典；未覆寫的檔案則檢查上游官方 TW。
+- **包含單機範圍**：`npm run diff -- --all`（仍排除 KinkyDungeon 目錄）。只產生報告，不會自動翻譯。
 - **執行期缺口**：遊戲內 console 執行 `BCTP.missing()` 匯出「畫面上出現、但翻不到的英文」清單，逐條補進 A/B。
+
+### 2026-09 字庫補齊
+
+以本機 `../BCJS/Bondage-College-master/BondageClub` 的 **R131** 原始碼為基準，新增 **1,419 筆**補充字庫資料：
+
+- 道具設定與動作訊息 668 筆、染色圖層 478 筆、染色群組 75 筆、道具名稱 41 筆。
+- 背景 35 筆，其餘連線／共用介面 105 筆，包括衣櫃、外觀變換、重新著色、牽繩斷開原因及線上遊戲訊息。
+- 另沿用官方 CN 補入 17 筆官方 TW 缺譯，涵蓋重新登入、房間管理及幸運輪盤。
+
+其中 42 筆是保留原文的角色／品牌名稱或圖層代碼，不作音譯。簡中新增來源經 OpenCC 及既有覆寫規則輸出繁中。
+
+驗證結果：43 個 CSV 的 CN 缺口為 0；TW 僅剩角色對話中 2 句 Kinky Dungeon 啟動提示，依本次範圍暫不翻譯。未新增單機劇情翻譯。這是上述本機版本的 CSV 覆蓋檢查，不代表未來版本或未經 CSV 的硬編碼字串也已全部翻譯。
+
+`npm test` 檢查字庫與執行期行為：CSV 欄位解析、預設範圍、翻譯標記、簡繁中輸出、初始化失敗清理與重試、DOM 多批排程、資產晚到及語言切換；`npm run build` 重建發布 bundle。尚未進行實際連線遊戲的畫面驗證。
 
 ### E. 官方更新後刷新
 

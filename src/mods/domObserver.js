@@ -1,3 +1,5 @@
+import { createIdleBatchProcessor } from "./idleBatch.js";
+
 // dialog-inventory 的道具/動作是 DOM(ElementButton)，label = asset.Description，
 // 官方雖有翻譯卻常沒套用上。這裡在按鈕出現時，用傳入的翻譯函式把 label 文字節點翻掉。
 //
@@ -16,6 +18,20 @@
 // 幾十毫秒內文字才轉成中文——肉眼幾乎無感，但不再卡住畫面繪製。
 // ------------------------------------------------------------------------------------
 
+// Keep source text so switching CN/TW can retranslate existing nodes.
+const originals = new WeakMap();
+export function translateValue(node, property, translate) {
+    let record = originals.get(node);
+    const current = node[property];
+    if (!record || current !== record.last) record = { source: current, last: current };
+    const key = record.source.trim();
+    const result = key && translate(key);
+    const value = result ? record.source.replace(key, result) : record.source;
+    if (current !== value) node[property] = value;
+    record.last = value;
+    originals.set(node, record);
+}
+
 /** 只翻文字節點，保留按鈕內的圖片等結構。translate: (string) => string|undefined */
 function translateTextNodes(root, translate) {
     if (!root.isConnected) return; // 節點在排隊等待翻譯期間可能已被移除（例如使用者又切了一次部位）
@@ -25,26 +41,31 @@ function translateTextNodes(root, translate) {
     for (const n of nodes) {
         // 跳過 <dfn>：BC 會用其 textContent 組查表 key（如製作屬性 Description<n>），翻了會壞
         if (n.parentElement && n.parentElement.closest("dfn")) continue;
-        const key = n.data.trim();
-        if (!key) continue;
-        const t = translate(key);
-        if (t) n.data = n.data.replace(key, t);
+        translateValue(n, "data", translate);
     }
 }
 
 /** @param {(s: string) => (string | undefined)} translate */
 // <dfn> = 製作屬性名。BC 會先讀其 textContent 組 Description<n> key 並附上描述，
 // 所以延遲翻譯：等 BC 讀完英文名之後，再把顯示的名字翻成中文（key 已用英文組好，不受影響）。
-function setupDfnObserver(translate) {
+function setupDfnObserver(translate, addCleanup) {
+    let disposed = false, frame;
+    const timers = new Set();
+    addCleanup(() => {
+        disposed = true;
+        cancelAnimationFrame(frame);
+        for (const timer of timers) clearTimeout(timer);
+    });
     const handleDfns = (dfns) => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
+            timers.delete(timer);
+            if (disposed) return;
             for (const d of dfns) {
-                const key = (d.textContent || "").trim();
-                if (!key) continue;
-                const t = translate(key);
-                if (t) d.textContent = t;
+                if (!d.isConnected) continue;
+                translateValue(d, "textContent", translate);
             }
         }, 300);
+        timers.add(timer);
     };
     const obs = new MutationObserver((muts) => {
         for (const m of muts) {
@@ -58,58 +79,29 @@ function setupDfnObserver(translate) {
             });
         }
     });
+    addCleanup(() => obs.disconnect());
     const start = () => {
-        if (!document.body) return requestAnimationFrame(start);
+        if (disposed) return;
+        if (!document.body) { frame = requestAnimationFrame(start); return; }
         obs.observe(document.body, { childList: true, subtree: true });
         // 補掃：我們可能晚於既有 dfn 出現（Electron 載入較晚），observer 只收未來的 addedNodes。
         const existing = document.body.querySelectorAll("dfn");
         if (existing.length) handleDfns([...existing]);
     };
+    const refresh = () => {
+        if (document.body) handleDfns([...document.body.querySelectorAll("dfn")]);
+    };
+    document.addEventListener("bctp-language-change", refresh);
+    addCleanup(() => document.removeEventListener("bctp-language-change", refresh));
     start();
 }
 
 // 時間切片排程器：把一批節點的翻譯工作分散到多個閒置時段執行，
 // 避免道具格子一次很多時，單一個 idle callback 又整批卡住主執行緒。
-function createIdleBatchProcessor(processOne) {
-    const queue = [];
-    let scheduled = false;
-
-    function pump(deadline) {
-        // 沒有 requestIdleCallback 的環境（例如 Safari）：deadline 是 undefined，
-        // 每批固定處理一小段就讓出主執行緒，行為上退化但仍不會整批同步卡住。
-        const hasDeadline = !!deadline && typeof deadline.timeRemaining === "function";
-        let n = 0;
-        while (queue.length && (hasDeadline ? deadline.timeRemaining() > 1 : n < 24)) {
-            processOne(queue.shift());
-            n++;
-        }
-        if (queue.length) {
-            schedule(); // 還有剩，排下一段
-        } else {
-            scheduled = false;
-        }
-    }
-
-    function schedule() {
-        if (scheduled) return;
-        scheduled = true;
-        if (typeof requestIdleCallback === "function") {
-            requestIdleCallback(pump, { timeout: 200 });
-        } else {
-            requestAnimationFrame(() => setTimeout(pump, 0));
-        }
-    }
-
-    return {
-        push(item) {
-            queue.push(item);
-            schedule();
-        },
-    };
-}
-
-export function setupDomObserver(translate, translateDfn) {
-    setupDfnObserver(translateDfn || translate);
+export function setupDomObserver(translate, translateDfn, addCleanup) {
+    setupDfnObserver(translateDfn || translate, addCleanup);
+    let disposed = false, frame;
+    addCleanup(() => { disposed = true; cancelAnimationFrame(frame); });
 
     // 只翻道具名(dialog-inventory)與快捷鍵。動作選單改由 ActivityDictionaryText hook 處理，
     // 不再用寬鬆的 [id^="dialog-"]（會誤傷製作/詛咒等 BC 會讀回 textContent 的 UI）。
@@ -117,6 +109,7 @@ export function setupDomObserver(translate, translateDfn) {
     const match = (el) => el.matches?.(SEL);
 
     const processor = createIdleBatchProcessor((el) => translateTextNodes(el, translate));
+    addCleanup(() => processor.dispose());
 
     const handle = (node) => {
         if (!node || node.nodeType !== 1) return;
@@ -129,11 +122,16 @@ export function setupDomObserver(translate, translateDfn) {
     const obs = new MutationObserver((muts) => {
         for (const m of muts) m.addedNodes.forEach(handle);
     });
+    addCleanup(() => obs.disconnect());
     const start = () => {
-        if (!document.body) return requestAnimationFrame(start);
+        if (disposed) return;
+        if (!document.body) { frame = requestAnimationFrame(start); return; }
         obs.observe(document.body, { childList: true, subtree: true });
         // 補掃既有節點：observer 只收未來 addedNodes，晚載入時已開的 dialog-inventory/快捷鍵會被漏掉。
         handle(document.body);
     };
+    const refresh = () => { if (document.body) handle(document.body); };
+    document.addEventListener("bctp-language-change", refresh);
+    addCleanup(() => document.removeEventListener("bctp-language-change", refresh));
     start();
 }

@@ -1,44 +1,56 @@
 import { translateNode } from "./utils.js";
 
-class _ChatHistoryTranslator {
-    /** @type {(TranslationFunction) [] } */
-    translationFuncs = [];
+class ChatTranslator {
+    translationFuncs = new Set();
+    observer = null;
+    timer = null;
 
     translate(text) {
-        for (const func of this.translationFuncs) {
-            const translated = func(text);
+        for (const fn of this.translationFuncs) {
+            const translated = fn(text);
             if (translated) return translated;
         }
-        return undefined;
     }
 
-    constructor() {
-        this.observer = new MutationObserver((mutations) => {
+    start() {
+        this.observer = new MutationObserver(mutations => {
             for (const mutation of mutations) {
-                if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-                    mutation.addedNodes.forEach((node) => translateNode(node, (text) => this.translate(text))); // 翻译新添加的节点
+                if (mutation.type === "childList") {
+                    mutation.addedNodes.forEach(node => translateNode(node, text => this.translate(text)));
                 }
             }
         });
-
-        let oldChatLog = null;
-
-        setInterval(() => {
-            const chatLog = document.getElementById("TextAreaChatLog");
-            if (chatLog && chatLog !== oldChatLog) {
-                if (oldChatLog) {
-                    this.observer.disconnect(); // 断开旧的观察器
-                }
-                this.observer.observe(chatLog, { childList: true, subtree: true });
-                oldChatLog = chatLog; // 更新旧的聊天记录元素
-            }
-        }, 500); // 每隔 500 毫秒检查一次
+        let previous = null;
+        this.timer = setInterval(() => {
+            const current = document.getElementById("TextAreaChatLog");
+            if (current === previous) return;
+            this.observer.disconnect();
+            if (current) this.observer.observe(current, { childList: true, subtree: true });
+            previous = current;
+        }, 500);
     }
 
-    /** @param {TranslationFunction} func */
-    registerTranslationFunc(func) {
-        this.translationFuncs.push(func);
+    registerTranslationFunc(fn) {
+        this.translationFuncs.add(fn);
+        try {
+            if (!this.observer) this.start();
+        } catch (error) {
+            this.translationFuncs.delete(fn);
+            this.stop();
+            throw error;
+        }
+        return () => {
+            this.translationFuncs.delete(fn);
+            if (!this.translationFuncs.size) this.stop();
+        };
+    }
+
+    stop() {
+        this.observer?.disconnect();
+        clearInterval(this.timer);
+        this.observer = this.timer = null;
     }
 }
 
-export const ChatHistoryTranslator = new _ChatHistoryTranslator();
+// Importing this module must not start observers or timers before initialization.
+export const ChatHistoryTranslator = new ChatTranslator();

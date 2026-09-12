@@ -1,15 +1,7 @@
-// Keep this bootstrap free of static imports so duplicate detection runs first.
-const g = /** @type {any} */ (globalThis);
-g.Liko = g.Liko ?? {};
+// Static imports here must remain free of dictionaries and startup side effects.
+import { startOnce } from "./lifecycle.js";
 
-if (g.Liko.__Sys_VanillaTranslation__) {
-    console.log('[BCTP] Already loaded, skipping duplicate init.');
-} else {
-    const namespace = g.Liko.__Sys_VanillaTranslation__ = {};
-    import('./app.js').catch(error => {
-        if (g.Liko.__Sys_VanillaTranslation__ === namespace && !namespace.version) {
-            delete g.Liko.__Sys_VanillaTranslation__;
-        }
-        console.error('🐈‍⬛ [BCTP] Failed to load:', error);
-    });
-}
+startOnce(globalThis, async state => {
+    const { init } = await import("./app.js");
+    return init(state);
+}).catch(error => console.error("🐈‍⬛ [BCTP] Failed to load; loading again will retry:", error));

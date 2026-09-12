@@ -68,3 +68,8 @@ Could not copy mod list to clipboard.
 无法将模组列表复制到剪贴板。
 Copy mod list
 复制模组列表
+### 2026-09：依本機上游補齊連線與共用內容
+Error
+错误
+You
+你

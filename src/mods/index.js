@@ -96,6 +96,7 @@ function tryActivity(key) {
 const BASE = /** @type {any} */ (GEN).base || { CN: {}, TW: {} };
 function translateAny(key) {
     const lang = activeLang();
+    if (!lang) return undefined;
     if (lang && BASE[lang] && BASE[lang][key]) return BASE[lang][key];
     return tryMenu(key) || tryActivity(key);
 }
@@ -104,12 +105,13 @@ function translateAny(key) {
 const CRAFT = /** @type {any} */ (GEN).crafting || { CN: {}, TW: {} };
 function translateDfn(key) {
     const lang = activeLang();
+    if (!lang) return undefined;
     if (lang && CRAFT[lang] && CRAFT[lang][key]) return CRAFT[lang][key];
     return translateAny(key);
 }
 
 /** @param {any} mod bcModSdk 註冊物件 */
-export function setupMods(mod) {
+export function setupMods(mod, addCleanup) {
     const on = () => !!activeLang();
 
     for (const fn of ["DrawText", "DrawTextFit", "DrawTextWrap", "DynamicDrawText"]) {
@@ -161,11 +163,11 @@ export function setupMods(mod) {
     // 不需要在聊天記錄 DOM 上做 regex（那條已移除）。
 
     // BCX 在聊天記錄輸出的 HTML 說明
-    ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src));
+    addCleanup(ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src)));
 
     // dialog-inventory(DOM) 的道具/動作名；製作屬性(dfn)用作用域字典
-    setupDomObserver(translateAny, translateDfn);
+    setupDomObserver(translateAny, translateDfn, addCleanup);
 
     // BCX 匯出/匯入等 textarea.value 說明
-    setupBcxHelp();
+    setupBcxHelp(addCleanup);
 }
