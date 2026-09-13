@@ -1,4 +1,4 @@
-/* BC 補完翻譯 (CN/TW) v0.1.0 | https://github.com/awdrrawd/BC-translation-patch | build 2026-09-12T12:10:51.475Z */
+/* BC 補完翻譯 (CN/TW) v0.1.0 | https://github.com/awdrrawd/BC-translation-patch | build 2026-09-13T09:19:12.738Z */
 (() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
@@ -233,6 +233,27 @@
       init_inject();
       init_assetDescriptions();
       caches = () => typeof TextAllScreenCache === "undefined" ? void 0 : TextAllScreenCache;
+    }
+  });
+
+  // src/mods/necklaceActions.js
+  function translateNecklaceAction(text, lang) {
+    if (!["CN", "TW"].includes(lang)) return void 0;
+    const trimmed = text.trim();
+    const enclosed = trimmed.startsWith("(") && trimmed.endsWith(")");
+    const raw = enclosed ? trimmed.slice(1, -1) : trimmed;
+    const tuck = /^(.+?) tucks (.+?'s|his own|her own|their own|its own) (key|lock) necklace under (?:her|his|their|its) clothing\.$/.exec(raw);
+    const pull = /^(.+?) pulls (.+?'s|his own|her own|their own|its own) (key|lock) necklace out\.$/.exec(raw);
+    const match = tuck || pull;
+    if (!match) return void 0;
+    const owner = match[2].endsWith("'s") ? match[2].slice(0, -2) + "的" : "自己的";
+    const item = lang === "TW" ? match[3] === "key" ? "鑰匙項鍊" : "鎖頭項鍊" : match[3] === "key" ? "钥匙项链" : "锁头项链";
+    const result = tuck ? `${match[1]} 將${owner}${item}藏入衣服內。` : `${match[1]} 將${owner}${item}拉出衣服外。`;
+    const translated = lang === "CN" ? result.replace(" 將", " 将").replace("衣服內", "衣服内") : result;
+    return text.slice(0, text.indexOf(trimmed)) + (enclosed ? `(${translated})` : translated) + text.slice(text.indexOf(trimmed) + trimmed.length);
+  }
+  var init_necklaceActions = __esm({
+    "src/mods/necklaceActions.js"() {
     }
   });
 
@@ -4216,7 +4237,7 @@
         const tag = data.Type === "Activity" ? `MISSING ACTIVITY DESCRIPTION FOR KEYWORD ${data.Content}` : data.Content === "Beep" ? "msg" : `MISSING TEXT IN "Interface.csv": ${data.Content}`;
         const target = data.Dictionary.find((it) => it && it.Tag === tag);
         if (target && typeof target.Text === "string") {
-          const shared = data.Type === "Action" && data.Content === "Beep" ? translateCraftShare(target.Text, activeLang()) : void 0;
+          const shared = data.Type === "Action" && data.Content === "Beep" ? translateCraftShare(target.Text, activeLang()) || translateNecklaceAction(target.Text, activeLang()) : void 0;
           const t = shared || tryActivity(target.Text);
           if (t) {
             args = [...args];
@@ -4241,6 +4262,7 @@
   var units, missing, MOD, MREGEX, mrCompiled, ACT, ASSET, BASE, CRAFT;
   var init_mods = __esm({
     "src/mods/index.js"() {
+      init_necklaceActions();
       init_roomAdmin();
       init_surfaces();
       init_lang();

@@ -109,3 +109,14 @@ test("LSCG quick access preserves toggle arrows, click handlers and state while 
     assert.equal(button.childNodes[0].data,"▼ Custom mod item");
     assert.equal(SURFACES.find(([,scope])=>scope==="quickAccess")[0],"#lscg-quick-access > button");
 });
+
+
+ test("LSCG necklace actions support CN/TW, self and other names, without broad matching", async()=>{
+    const {translateNecklaceAction:t}=await import("../src/mods/necklaceActions.js");
+    assert.equal(t("莉柯莉絲 tucks 火龙果's key necklace under her clothing. ","TW"),"莉柯莉絲 將火龙果的鑰匙項鍊藏入衣服內。 ");
+    assert.equal(t("(Alice pulls Bob's key necklace out.)","CN"),"(Alice 将Bob的钥匙项链拉出衣服外。)");
+    assert.equal(t("Alice tucks his own lock necklace under his clothing.","TW"),"Alice 將自己的鎖頭項鍊藏入衣服內。");
+    assert.equal(t("Alice pulls O'Neil's lock necklace out.","TW"),"Alice 將O'Neil的鎖頭項鍊拉出衣服外。");
+    assert.equal(t("Alice pulls Bob's key necklace out.","EN"),undefined);
+    assert.equal(t("I said Alice pulls Bob's key necklace out. Really?","TW"),undefined);
+ });

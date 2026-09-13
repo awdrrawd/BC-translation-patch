@@ -193,6 +193,17 @@ test("real app rolls back hooks and observers after partial setup, then initiali
     const incoming=hooks.get("ChatRoomMessage")([original],args=>args[0]);
     assert.equal(incoming.Dictionary[0].Text,"LikoBot 向房間裡的大家展示了自己的 AV端子");
     assert.equal(original.Dictionary[0].Text,"LikoBot holds up her AV端子 to the room");
+    for (const [english, expectedText] of [
+        ["莉柯莉絲 tucks 火龙果's key necklace under her clothing.", "莉柯莉絲 將火龙果的鑰匙項鍊藏入衣服內。"],
+        ["Alice pulls her own lock necklace out.", "Alice 將自己的鎖頭項鍊拉出衣服外。"],
+    ]) {
+        const message={Type:"Action",Content:"Beep",Dictionary:[{Tag:"msg",Text:english}]};
+        const shown=hooks.get("ChatRoomMessage")([message],args=>args[0]);
+        assert.equal(shown.Dictionary[0].Text,expectedText);
+        assert.equal(message.Dictionary[0].Text,english);
+        const ordinary={...message,Type:"Chat"};
+        assert.equal(hooks.get("ChatRoomMessage")([ordinary],args=>args[0]),ordinary);
+    }
     const chat={...original,Type:"Chat"};
     assert.equal(hooks.get("ChatRoomMessage")([chat],args=>args[0]),chat);
 
