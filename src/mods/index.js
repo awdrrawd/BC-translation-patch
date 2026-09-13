@@ -80,7 +80,6 @@ function tryMenu(key) {
 
 // 完整的 base 動作字典 / 道具名字典（英文→中文），繞過時序直接在存取時翻譯
 const ACT = /** @type {any} */ (GEN).activity || { CN: {}, TW: {} };
-const ASSET = /** @type {any} */ (GEN).assetName || { CN: {}, TW: {} };
 
 function tryActivity(key) {
     if (supplement.activity[key]) return supplement.activity[key];

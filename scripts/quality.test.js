@@ -16,7 +16,7 @@ test("quality exceptions are specific to file, source and translation", () => {
 });
 test("runtime schema retains every consumer dictionary and omits build metadata", () => {
     const dict = runtimeDictionary(generateDict());
-    assert.deepEqual(Object.keys(dict).sort(), ["surfaces", "paths", "activity", "activityRegex", "modRegex", "bcxHelp", "assetName", "crafting", "base", "modMenu"].sort());
+    assert.deepEqual(Object.keys(dict).sort(), ["surfaces", "paths", "activity", "modRegex", "bcxHelp", "crafting", "base", "modMenu"].sort());
     for (const [key, value] of Object.entries(dict)) {
         if (key === "paths") assert.ok(Object.keys(value).length);
         else for (const lang of ["CN", "TW"]) assert.ok(Object.keys(value[lang]).length, `${key}.${lang}`);

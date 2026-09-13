@@ -253,7 +253,7 @@ export function generateDict() {
 }
 
 // Both CLI and release build serialize the same runtime schema.
-export function runtimeDictionary({ cnMap, stats, ...dictionary }) {
+export function runtimeDictionary({ cnMap, stats, activityRegex, assetName, ...dictionary }) {
     return dictionary;
 }
 

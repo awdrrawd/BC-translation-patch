@@ -29,6 +29,7 @@ await esbuild.build({
     entryPoints: [path.join(repoRoot, "src", "index.js")],
     outfile: path.join(distDir, cfg.bundleName),
     bundle: true,
+    minify: true,
     format: "iife",
     target: "es2020",
     charset: "utf8",
