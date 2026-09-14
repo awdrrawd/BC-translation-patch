@@ -32,7 +32,7 @@ jobs:
         run: npm run check
       - name: Upload quality report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: translation-quality
           path: reports/translation-quality.json
