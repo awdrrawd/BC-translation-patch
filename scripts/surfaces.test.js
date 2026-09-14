@@ -120,3 +120,22 @@ test("LSCG quick access preserves toggle arrows, click handlers and state while 
     assert.equal(t("Alice pulls Bob's key necklace out.","EN"),undefined);
     assert.equal(t("I said Alice pulls Bob's key necklace out. Really?","TW"),undefined);
  });
+
+
+test("LSCG substituted messages cover every added template and blank departure targets", async()=>{
+ const {translateLscgMessage:t}=await import("../src/mods/lscgMessages.js");
+ const all=generateDict().surfaces;
+ for(const lang of ["CN","TW"]) {
+  const dict=all[lang].lscgMessages;
+  for(const source of Object.keys(dict)) {
+   const input=source.replace(/%NAME%/g,()=>"Gaia$&").replace(/%OPP_NAME_POSSESSIVE%/g,"O'Neil's").replace(/%OPP_NAME%/g,"火龙果").replace(/%OPP_POSSESSIVE%/g,"her").replace(/%OPP_INTENSIVE%/g,"her");
+   const result=t(input,dict,lang);
+   assert.ok(result?.includes("Gaia$&"),source);
+   assert.ok(!/%[A-Z_]+%/.test(result),source);
+  }
+ }
+ assert.equal(t("Gaia leads  out of the room by the hand.",all.TW.lscgMessages),"Gaia 拉著對方的手離開了房間。");
+ assert.equal(t("Gaia leads  out of the room by the hand.",all.CN.lscgMessages,"CN"),"Gaia 拉着对方的手离开了房间。");
+ assert.equal(t("Gaia leads Bob out of the room by the hand. extra",all.TW.lscgMessages),undefined);
+ assert.equal(t("Gaia leads Bob out of the room by the hand.",all.TW.lscgMessages,"EN"),undefined);
+});

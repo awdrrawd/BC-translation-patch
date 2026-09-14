@@ -1,3 +1,4 @@
+import { translateLscgMessage } from "./lscgMessages.js";
 import { translateNecklaceAction } from "./necklaceActions.js";
 import { roomAdminText, isRoomTemplateName, translateRoomTemplateName } from "./roomAdmin.js";
 import { setupSurfaceObserver, translateCraftShare } from "./surfaces.js";
@@ -156,7 +157,7 @@ export function setupMods(mod, addCleanup) {
             const target = data.Dictionary.find((it) => it && it.Tag === tag);
             if (target && typeof target.Text === "string") {
                 const shared = data.Type === "Action" && data.Content === "Beep"
-                    ? translateCraftShare(target.Text, activeLang()) || translateNecklaceAction(target.Text, activeLang()) : undefined;
+                    ? translateCraftShare(target.Text, activeLang()) || translateNecklaceAction(target.Text, activeLang()) || translateLscgMessage(target.Text, GEN.surfaces?.[activeLang()]?.lscgMessages, activeLang()) : undefined;
                 const t = shared || tryActivity(target.Text);
                 if (t) {
                     args = [...args];
