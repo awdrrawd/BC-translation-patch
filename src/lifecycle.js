@@ -24,15 +24,16 @@ export function startOnce(g, initialize) {
     g.Liko ??= {};
     const old = g.Liko.__Sys_VanillaTranslation__;
     if (old && old.status !== "failed") return old.promise ?? Promise.resolve(old);
-    const state = { status: "loading", loading: true };
+    const state = { status: "loading", phase: "starting", loading: true,
+        retry: () => startOnce(g, initialize) };
     g.Liko.__Sys_VanillaTranslation__ = state;
+    g.BCTP = state;
     state.promise = Promise.resolve().then(() => initialize(state)).then(api => {
-        Object.assign(state, api, { status: "ready", loading: false });
+        Object.assign(state, api, { status: "ready", phase: "ready", loading: false });
         g.BCTP = state;
         return state;
     }).catch(error => {
         Object.assign(state, { status: "failed", loading: false, error });
-        if (g.BCTP === state) delete g.BCTP;
         throw error;
     });
     return state.promise;

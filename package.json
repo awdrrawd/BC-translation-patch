@@ -6,8 +6,9 @@
   "private": true,
   "scripts": {
     "pretest": "npm run gen",
-    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js",
+    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js",
     "seed": "node scripts/seed-from-upstream.js",
+    "upstream:fetch": "node scripts/fetch-upstream.js",
     "gen": "node scripts/gen-dict.js",
     "build": "node scripts/build.js",
     "diff": "node scripts/diff-upstream.js",

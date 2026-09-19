@@ -3,7 +3,7 @@ import { translateNecklaceAction } from "./necklaceActions.js";
 import { roomAdminText, isRoomTemplateName, translateRoomTemplateName } from "./roomAdmin.js";
 import { setupSurfaceObserver, translateCraftShare } from "./surfaces.js";
 import { activeLang } from "../lang.js";
-import GEN from "../generated/dict.json";
+import GEN from "../dictionary.js";
 import { BCX } from "./bc/BCX/index.js";
 import { LSCG } from "./bc/LSCG/index.js";
 import { BCXHelp } from "./html/BCX.js";
