@@ -1,2 +1,5 @@
 Smoking
 吸烟
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Location Sharing
+位置共享

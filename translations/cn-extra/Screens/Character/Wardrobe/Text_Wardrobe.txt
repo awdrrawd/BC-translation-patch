@@ -37,3 +37,6 @@ Show character previews
 显示角色预览
 Empty
 空
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Search
+搜索

@@ -31,7 +31,10 @@ export function isOnlineCsv(rel) {
 
 export function missingStrings(base, rows, have) {
     const strings = rows.flatMap(row => /\/Dialog_[^/]+$/.test(base) ? row.slice(2, 4) : [row[base === "Assets/Female3DCG/Female3DCG" ? 2 : 1]]);
-    return [...new Set(strings.map(s => (s || "").trim()).filter(s => /[A-Za-z]/.test(s) && !have.get(s)))];
+    // A standalone decorative image has no visible or accessible text to translate.
+    const decorativeImage = /^<img\b[^>]*\baria-hidden=['"]true['"][^>]*>$/i;
+    return [...new Set(strings.map(s => (s || "").trim()).filter(s =>
+        /[A-Za-z]/.test(s) && !decorativeImage.test(s) && !have.get(s)))];
 }
 
 function main() {
