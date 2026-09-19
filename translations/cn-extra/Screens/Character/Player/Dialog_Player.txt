@@ -1,0 +1,5 @@
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+(Room administrator actions.)
+（房间管理员操作。）
+(Don't use safeword.)
+（不使用安全词。）

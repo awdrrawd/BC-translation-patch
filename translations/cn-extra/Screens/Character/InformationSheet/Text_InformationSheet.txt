@@ -14,3 +14,10 @@ Engaged with
 已订婚
 Married with
 已结婚
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Dating
+交往对象
+Engaged to
+订婚对象
+Married to
+结婚对象

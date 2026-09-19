@@ -73,3 +73,72 @@ Error
 错误
 You
 你
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Recent Items
+最近使用
+Walls
+墙壁
+Floors
+地板
+Exterior Floors
+室外地面
+Water
+水域
+Living Room
+客厅
+Bathroom
+浴室
+Bedroom
+卧室
+School
+学校
+ABDL
+成人婴儿／尿布主题
+Themed
+主题场景
+Party
+派对
+Camping
+露营
+Expanding
+扩展
+Animals
+动物
+Items
+物品
+Obstacles
+障碍物
+Numbers
+数字
+Letters
+字母
+Icons
+图标
+Wall Decorations
+墙面装饰
+Doors
+门
+Banners
+横幅
+Foam Tiles
+泡沫地垫
+Functional
+功能性
+Effects
+效果
+Undo
+撤销
+Edit Range
+编辑范围
+Zoom In
+放大
+Zoom Out
+缩小
+Toggle Fog
+切换迷雾
+Tiles
+地块
+Objects
+物件
+Back
+返回

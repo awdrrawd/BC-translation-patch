@@ -366,3 +366,26 @@ Latex Bodysuit
 乳胶连体衣
 Diaper Suit
 尿布套装
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Upper Clothing
+上身服装
+Clothing Accessory
+服装配饰
+Lower Clothing
+下身服装
+Outerwear
+外套
+Decal
+贴花
+Bell Flower
+风铃花
+Velvet Bunny Cabaret
+天鹅绒兔歌舞厅
+LMF Ride or Die
+LMF 生死相随
+Body Ears
+耳朵
+Subtle
+不显眼
+Nipple Style
+乳头样式

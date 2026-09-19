@@ -1335,3 +1335,44 @@ SourceCharacter puts the AssetName on DestinationCharacter right nipple.
 SourceCharacter 将 AssetName 戴在 DestinationCharacter 的右乳头上。
 SourceCharacter puts the AssetName on DestinationCharacter left nipple.
 SourceCharacter 将 AssetName 戴在 DestinationCharacter 的左乳头上。
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+SourceCharacter chooses the classic look of the costume on DestinationCharacter.
+SourceCharacter将DestinationCharacter身上的服装设为经典外观。
+SourceCharacter closes up DestinationCharacter suit.
+SourceCharacter封闭了DestinationCharacter的套装。
+SourceCharacter wraps up DestinationCharacter arms in an asylum AssetName.
+SourceCharacter将DestinationCharacter的双臂包裹在收容所样式的AssetName里。
+SourceCharacter shackles DestinationCharacter wrists behind TargetPronounPossessive back.
+SourceCharacter将DestinationCharacter的双腕铐在TargetPronounPossessive背后。
+SourceCharacter shackles DestinationCharacter wrists in-front of TargetPronounPossessive body.
+SourceCharacter将DestinationCharacter的双腕铐在TargetPronounPossessive身前。
+SourceCharacter shackles DestinationCharacter wrists above TargetPronounPossessive head.
+SourceCharacter将DestinationCharacter的双腕铐在TargetPronounPossessive头顶上方。
+SourceCharacter changes DestinationCharacter AssetName to a standard size.
+SourceCharacter将DestinationCharacter的AssetName调整为标准尺寸。
+Motiv
+图案
+Plain White
+纯白
+ABU AlphaGatorz
+ABU AlphaGatorz 鳄鱼图案
+ABU BunnyHopps
+ABU BunnyHopps 兔子图案
+LilComforts LacyLove
+LilComforts LacyLove 蕾丝图案
+Your Diaper Options:
+你的尿布选项：
+Add Motiv
+添加图案
+SourceCharacter ties DestinationCharacterName mittens to the bar in yoke pose.
+SourceCharacter将DestinationCharacterName的连指手套绑在横杆上，摆成肩枷姿势。
+SourceCharacter ties DestinationCharacterName mittens to the bar with hands up.
+SourceCharacter将DestinationCharacterName的连指手套绑在横杆上，使双手高举。
+SourceCharacter tightens the Under Knee Overnighter belts a lot on DestinationCharacterName feet.
+SourceCharacter将DestinationCharacterName脚上的膝下过夜束缚器绑带收得很紧。
+Viola
+薇奥拉
+SourceCharacter places a cute Viola plushie in DestinationCharacter hands.
+SourceCharacter将一只可爱的薇奥拉毛绒玩偶放在DestinationCharacter手中。
+SourceCharacter tightens the Barrel corset on the DestinationCharacter body.
+SourceCharacter收紧了DestinationCharacter身上的桶式束身衣。

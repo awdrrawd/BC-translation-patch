@@ -65,3 +65,14 @@ Display a small button for entering fullscreen mode. On mobile is recommended; d
 显示进入全屏模式的小按钮。建议在移动设备上启用；桌面浏览器通常已有全屏快捷键。
 On mobile
 仅移动设备
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Allow safeword use (Cannot enable while bound)
+允许使用安全词（被束缚时无法启用）
+(Click to confirm) Allow safeword use (Cannot enable while bound)
+（点击确认）允许使用安全词（被束缚时无法启用）
+Show other characters' meters
+显示其他角色的计量条
+Replace the word with ***
+将该词替换为 ***
+Replace the phrase with ***
+将该短语替换为 ***

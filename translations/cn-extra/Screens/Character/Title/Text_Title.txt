@@ -51,3 +51,6 @@ Nickname
 昵称
 Dominatrix
 女主人
+### 2026-09：補齊連線與共用介面（上游 4a0f778）
+Search for a title
+搜索头衔
