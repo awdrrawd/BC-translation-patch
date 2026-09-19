@@ -3,8 +3,9 @@ import { reapply, setupReapply } from "./reapply.js";
 import { setupMods, getMissing } from "./mods/index.js";
 import { activeLang } from "./lang.js";
 import { createScope } from "./lifecycle.js";
+import { loadDictionary } from "./dictionary.js";
 
-/* global __BCTP_VERSION__, __BCTP_NAME__, __BCTP_FULLNAME__, __BCTP_REPO__ */
+/* global __BCTP_VERSION__, __BCTP_NAME__, __BCTP_FULLNAME__, __BCTP_REPO__, __BCTP_DATA_URL__ */
 
 async function waitForGame() {
     const required = ["TranslationAvailable", "TranslationAssetProcess", "DrawText",
@@ -21,6 +22,9 @@ export async function init(namespace) {
     const g = globalThis;
     const scope = createScope();
     namespace.version = __BCTP_VERSION__;
+    namespace.phase = "downloading";
+    await loadDictionary(__BCTP_DATA_URL__);
+    namespace.phase = "initializing";
     // Cache injection remains useful even if SDK initialization fails.
     const { count } = injectTranslationCache();
     try {

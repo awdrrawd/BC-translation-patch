@@ -6,15 +6,11 @@ import { PATHS } from "./data.js";
 // 之後畫面文字(CSV)、對話、物品/部位描述都由遊戲原生的 TranslationString 分檔查用，
 // 作用域天然正確，不會有全域字典的英文撞名污染。
 
-const KEYS = Object.keys(PATHS);
-const KEYSET_UPPER = new Set(KEYS.map((k) => k.toUpperCase()));
-
 // 注入快取（覆寫：我方內容為官方超集，需勝過官方）。
-// ⚠️ 必須在載入 bcModSdk（有 await 網路延遲）之前同步呼叫：TranslationAsset() 在資產載入時
-// 只讀一次 TranslationCache[路徑]，讀不到就去抓官方檔並就地翻譯，且不會再重來（見 reapply.js）。
-// 若晚於 TranslationAsset 才注入，道具/服裝描述會停在官方版（缺 cn-extra 新增字）→ 顯示英文。
-// TranslationCache 是 Translation.js 頂層 `var`（解析期就存在），document-end 注入必定安全。
+// 字庫背景下載完成後先注入，再初始化 SDK/hooks。
+// 遊戲可能已用官方資料完成翻譯；setupReapply 會依原始 CSV 補正既有資產及畫面快取。
 export function injectTranslationCache() {
+    const KEYS = Object.keys(PATHS);
     const cache = (/** @type {any} */ (globalThis).TranslationCache =
         /** @type {any} */ (globalThis).TranslationCache || {});
     for (const k of KEYS) cache[k] = PATHS[k];
@@ -23,6 +19,7 @@ export function injectTranslationCache() {
 
 /** 讓 TranslationAvailable 對我方路徑回 true（需 bcModSdk，故在載入後才掛）。 */
 export function setupInjection(mod) {
+    const KEYSET_UPPER = new Set(Object.keys(PATHS).map(k => k.toUpperCase()));
     mod.hookFunction("TranslationAvailable", 0, (args, next) => {
         const p = args[0];
         if (typeof p === "string" && KEYSET_UPPER.has(p.trim().toUpperCase())) return true;

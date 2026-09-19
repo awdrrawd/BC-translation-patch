@@ -58,7 +58,13 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 5. **DOM 選單** — [`domObserver.js`](src/mods/domObserver.js)：`MutationObserver` 翻 `dialog-inventory` 道具名、快捷鍵、製作屬性 `<dfn>`。**啟動時會補掃既有節點**（同樣為了 Electron 晚載入的情境）。
 6. **BCX 特殊表面** — [`bcxHelp.js`](src/mods/bcxHelp.js) 輪詢替換 `textarea.value` 的說明；`chatObserver` 翻聊天記錄輸出的 HTML 說明。
 
-載入狀態由 `src/lifecycle.js` 管理：`loading → ready / failed`。同時重複載入會共用同一個初始化 Promise；失敗後重新執行載入器會重試。`app.init()` 會等待遊戲函式就緒（最多 30 秒），並沿用已存在的 SDK。若中途失敗，已建立的 hook、observer、計時器與待處理 DOM 工作會清除；已注入的字庫仍保留。
+載入分為兩階段：原本網址的 `bc-translation-patch.js` 先建立 `BCTP` 狀態，再於背景下載獨立的 `translations-<內容雜湊>.json`。大型字庫不再包含於入口 JS，因此下載不受 PCM 主程式載入的 30 秒限制；不需修改 PCM 或插件網址。JSON 使用建置時的絕對 Pages 網址，支援 PCM 的內嵌執行與快取重放。
+
+載入狀態由 `src/lifecycle.js` 管理：`BCTP.status` 為 `loading → ready / failed`，`BCTP.phase` 為 `starting → downloading → initializing → ready`，失敗時保留出錯階段與 `BCTP.error`。PCM 顯示已載入表示入口已執行；`BCTP.status === "ready"` 才代表翻譯已就緒。字庫下載（含回應本文）有獨立的 180 秒逾時。下載失敗時遊戲繼續使用原翻譯，可執行 `BCTP.retry().catch(console.error)` 或重新執行載入器重試。同時重複載入共用初始化 Promise，成功下載的字庫在本次頁面中沿用。
+
+字庫完成後才注入快取、初始化翻譯 hooks，並重建既有畫面及資產名稱。`app.init()` 會等待遊戲函式就緒（最多 30 秒），並沿用已存在的 SDK。若中途失敗，已建立的 hook、observer、計時器與待處理 DOM 工作會清除；已注入的字庫仍保留。
+
+發布時必須一併提供入口 JS 與 `dist/translations-*.json`；現有 Pages 工作流程會發布整個 `dist`。字庫檔名含內容雜湊以避免新舊資料混用，舊字庫也需保留，讓 PCM 快取的舊入口仍可下載相應資料。
 
 DOM 分批翻譯會持續排程到佇列清空，去除同一批重複節點，每批最多 24 個；閒置回呼逾時也會處理有限數量，避免忙碌時永遠不翻譯。已處理節點保留修改前文字，切換語言時可從來源重譯或還原。
 
@@ -77,7 +83,8 @@ translations/
   tw-terms.json      ★ TW 全域詞彙替換（"信息":"訊息"）
   tw-overrides.txt   ★ TW 個別字串覆寫（英文一行、繁中一行）
 src/
-  index.js           進入點：載入 bcModSdk、啟動各層
+  index.js           輕量進入點：建立狀態並背景啟動
+  dictionary.js      獨立字庫下載、驗證、逾時與重試
   inject.js          TranslationCache 注入 + TranslationAvailable hook
   reapply.js         注入後重建動作字典 / 螢幕文字快取（解時序）
   lang.js            語系判斷
@@ -180,18 +187,31 @@ TW 由 CN 機轉，出現不順的詞時：
 
 ### E. 官方更新後刷新
 
-官方改版後重跑 `npm run seed`：會刷新 `translations/cn/` 與 `official-tw.json`。**未被 cn-extra 覆寫的檔會自動跟上官方**，你的 cn-extra 補充不受影響。
+在 GitHub 倉庫開啟 **Actions → Fetch upstream texts → Run workflow** 即可抓取，不必在本機執行。預設會抓取 GitHub 鏡像 `bondageclub` 分支的文本，比對目前簡中／繁中缺漏，並在執行摘要顯示來源 commit 與缺漏數量。
+
+- 下載執行結果的 **upstream-texts-and-reports** artifact，取得原始 CSV／TXT、來源記錄及簡繁中缺漏報告。
+- 勾選 **refresh_cn**，會另外產生 **refreshed-official-translations** artifact，包含更新後的 `translations/cn/` 及 `official-tw.json`。
+- 勾選 **all_texts** 可比對全部文本；預設只比對連線及共用介面。
+
+此 Action 僅抓取與產生下載檔，不直接提交翻譯或部署網站。工作流程檔需先推送到預設分支，才會顯示 **Run workflow** 按鈕。
+
+以下指令是本機維護的替代方式，也是 Action 使用的相同步驟：
+
+官方改版後先執行 `npm run upstream:fetch`，從 [GitHub 鏡像的 bondageclub 分支](https://github.com/awdrrawd/Bondage-College-Mirror/tree/bondageclub) 更新文本。需要 Git 與網路連線；採用淺層、稀疏抓取，只取 CSV、TXT 和翻譯辨識用的 `Translation.js`，不下載圖片與音訊。來源與 commit 記錄在 `.upstream/source.json`，不會隨插件發布，也不會執行抓回的程式碼。
+
+抓取不會修改現有翻譯。先用 `npm run diff` 檢查缺漏，再視需要執行 `npm run seed`，刷新 `translations/cn/` 與 `official-tw.json`。**未被 cn-extra 覆寫的檔會自動跟上官方**，你的 cn-extra 補充不受影響。這是手動維護指令，遊戲載入與一般建置不會連線抓取上游。
 
 ### F. 建置與部署
 
 ```bash
 npm install
+npm run upstream:fetch # 從 GitHub 鏡像抓取／更新文本
 npm run seed     # 從官方原始碼種入 CN 翻譯（首次 / 官方改版後）
 npm run build    # gen-dict + esbuild 打包 → dist/
 npm run diff     # 列出官方尚未翻譯的字串 → reports/missing-cn.md
 ```
 
-本機需要官方原始碼：用環境變數 `BC_UPSTREAM_DIR` 指向 `BondageClub` 目錄，或 clone 到 `.upstream/BondageClub`。（`build` / `gen` 只讀 `translations/`，不需要官方原始碼；只有 `seed` / `diff` 需要。）
+`seed` / `diff` 優先使用環境變數 `BC_UPSTREAM_DIR`，其次使用 `upstream:fetch` 的 checkout。也可自行從 [GitGud 官方倉庫](https://gitgud.io/BondageProjects/Bondage-College) 取得原始碼，再將 `BC_UPSTREAM_DIR` 指向其中含 `Scripts/Translation.js` 的 `BondageClub` 目錄。既有 `.upstream/BondageClub` 與本機舊目錄仍可使用。`build` / `gen` 只讀 `translations/`，不需要上游原始碼。
 
 push 到 `main` 後，GitHub Actions 會自動 `build` 並部署 `dist/` 到 Pages。首次啟用：repo **Settings → Pages → Source** 選 **GitHub Actions**，再手動跑一次 **Build & Deploy** workflow。
 
@@ -199,7 +219,7 @@ push 到 `main` 後，GitHub Actions 會自動 `build` 並部署 `dist/` 到 Pag
 
 ## 注意事項 / 疑難排解
 
-- **載入時序**：瀏覽器（Tampermonkey）早於遊戲注入所以穩；Electron 晚載入，靠 `reapply.js` 的快取重建補正。若新增了會在啟動前就被烤進快取的畫面，記得該畫面的翻譯也依賴這步。
+- **載入時序**：字庫在背景下載，瀏覽器與 Electron 都可能晚於遊戲完成翻譯，靠 `reapply.js` 的快取重建補正。若新增了會在啟動前就被烤進快取的畫面，記得該畫面的翻譯也依賴這步。
 - **別手改 `translations/cn/`**：那是 seed 的產物，會被沖掉。所有手改放 `cn-extra/` 或 `mods/`。
 - **`<dfn>` 陷阱**：BC 會讀製作屬性 `<dfn>` 的 `textContent` 去組查表 key，所以 dfn 是**延遲翻譯**（等 BC 讀完英文名再翻顯示），且用 `Text_Crafting` 作用域字典避免撞名。動 domObserver 時勿破壞這點。
 - **保留變數**：翻譯含 `$value$`、`SourceCharacter`、`{Expression}`、`\n` 等一律原樣保留，否則遊戲填值會壞。

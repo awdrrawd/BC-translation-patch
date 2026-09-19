@@ -1,5 +1,5 @@
 import { activeLang } from "../lang.js";
-import GEN from "../generated/dict.json";
+import GEN from "../dictionary.js";
 
 // BCX 匯出/匯入等說明是塞進 textarea.value（程式賦值，不觸發 MutationObserver）。
 // 用定時輪詢：值完全等於某已知說明時替換成中文。值固定、無 PLAYER_NAME，精確比對安全；

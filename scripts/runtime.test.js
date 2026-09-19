@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import vm from "node:vm";
+import fs from "node:fs";
 import { build } from "esbuild";
 import { createScope, startOnce } from "../src/lifecycle.js";
 import { createIdleBatchProcessor } from "../src/mods/idleBatch.js";
@@ -136,12 +137,13 @@ test("real app rolls back hooks and observers after partial setup, then initiali
     const output=await build({
         entryPoints:["src/app.js"],bundle:true,write:false,format:"iife",globalName:"App",
         define:{__BCTP_VERSION__:'"test"',__BCTP_NAME__:'"TestMod"',__BCTP_FULLNAME__:'"Test"',
-            __BCTP_REPO__:'"https://example.invalid"'},
+            __BCTP_REPO__:'"https://example.invalid"', __BCTP_DATA_URL__:'"https://example.invalid/translations.json"'},
     });
     const timers=new Set(),observers=new Set(),listeners=new Set(),hooks=new Map();
     let fail=true,registered=false,unloads=0,registrations=0;
     const ctx={
-        console, Event,
+        console, Event, AbortController,
+        fetch: async () => ({ ok: true, json: async () => JSON.parse(fs.readFileSync("src/generated/dict.json", "utf8")) }),
         setInterval:fn=>{timers.add(fn);return fn;},clearInterval:fn=>timers.delete(fn),
         setTimeout:fn=>{timers.add(fn);return fn;},clearTimeout:fn=>timers.delete(fn),
         requestAnimationFrame:fn=>{timers.add(fn);return fn;},cancelAnimationFrame:fn=>timers.delete(fn),

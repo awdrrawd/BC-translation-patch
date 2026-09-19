@@ -1,4 +1,4 @@
-import GEN from "./generated/dict.json";
+import GEN from "./dictionary.js";
 
 /**
  * 路徑 -> 攤平翻譯陣列 [en0, zh0, en1, zh1, ...]

@@ -1,0 +1,92 @@
+name: Fetch upstream texts
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh_cn:
+        description: "同時產生更新後的官方 CN 翻譯（供下載，不直接提交）"
+        type: boolean
+        default: false
+      all_texts:
+        description: "比對全部文本（預設只比對連線及共用介面）"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fetch-upstream-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fetch:
+    name: Fetch texts and compare translations
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Fetch GitHub mirror bondageclub branch
+        run: npm run upstream:fetch
+      - name: Prepare downloadable upstream texts
+        run: |
+          mkdir -p reports/upstream-texts
+          git -C .upstream/repository ls-files -z | while IFS= read -r -d '' file; do
+            if [ -f ".upstream/repository/$file" ]; then
+              mkdir -p "reports/upstream-texts/$(dirname "$file")"
+              cp ".upstream/repository/$file" "reports/upstream-texts/$file"
+            fi
+          done
+          cp .upstream/source.json reports/upstream-source.json
+      - name: Compare current CN and TW translations
+        env:
+          ALL_TEXTS: ${{ inputs.all_texts }}
+        run: |
+          args=()
+          if [ "$ALL_TEXTS" = "true" ]; then args+=(--all); fi
+          npm run diff -- "${args[@]}"
+          npm run diff -- --tw "${args[@]}"
+      - name: Summarize source and missing translations
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const source = JSON.parse(fs.readFileSync('reports/upstream-source.json', 'utf8'));
+          const lines = ['## Upstream texts', '', `Source: ${source.repository}`, `Branch: ${source.branch}`, `Commit: ${source.commit}`, ''];
+          for (const lang of ['cn', 'tw']) {
+            const report = JSON.parse(fs.readFileSync(`reports/missing-${lang}.json`, 'utf8'));
+            lines.push(`${lang.toUpperCase()}: ${report.reduce((total, row) => total + row.missing.length, 0)} missing strings across ${report.length} files.`);
+          }
+          lines.push('', 'Download upstream-texts-and-reports below for the source texts and detailed reports. Repository files are unchanged.');
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+          NODE
+      - name: Upload texts and reports
+        uses: actions/upload-artifact@v7
+        with:
+          name: upstream-texts-and-reports
+          path: |
+            reports/upstream-texts/
+            reports/upstream-source.json
+            reports/missing-*.md
+            reports/missing-*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Generate refreshed official CN translations
+        if: inputs.refresh_cn
+        run: npm run seed
+      - name: Upload refreshed translations
+        if: inputs.refresh_cn
+        uses: actions/upload-artifact@v7
+        with:
+          name: refreshed-official-translations
+          path: |
+            translations/cn/
+            translations/official-tw.json
+          if-no-files-found: error
+          retention-days: 30
