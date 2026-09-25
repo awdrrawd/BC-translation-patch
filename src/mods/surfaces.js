@@ -1,5 +1,5 @@
 import { createIdleBatchProcessor } from "./idleBatch.js";
-import { translateValue } from "./domObserver.js";
+import { translateValue } from "./displayText.js";
 
 // Only these display surfaces are writable. Never select effect labels or craft inputs.
 export const SURFACES = [
@@ -51,9 +51,20 @@ export function setupSurfaceObserver(dictionaries, getLang, addCleanup) {
         element.querySelectorAll(selector).forEach(el => processor.push(el));
     };
     const observer = new MutationObserver(records => {
+        const roots = new Set();
+        const add = node => {
+            const element = node?.nodeType === 1 ? node : node?.parentElement;
+            if (element) roots.add(element);
+        };
         for (const record of records) {
-            collect(record.target);
-            record.addedNodes?.forEach(collect);
+            add(record.target);
+            record.addedNodes?.forEach(add);
+        }
+        // One subtree walk per highest affected root, rather than per mutation.
+        for (const root of roots) {
+            let parent = root.parentElement;
+            while (parent && !roots.has(parent)) parent = parent.parentElement;
+            if (!parent) collect(root);
         }
     });
     addCleanup(() => observer.disconnect());

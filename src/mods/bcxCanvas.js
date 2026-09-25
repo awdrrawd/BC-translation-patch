@@ -6,6 +6,7 @@ const inBcx = () => globalThis.CurrentScreen === "InformationSheet" &&
 
 export function setupBcxCanvas(mod, translate, language) {
     let commandFrame = false;
+    let lastLayout, lastSignature, lastContext, lastMeasure;
     mod.hookFunction("InformationSheetRun", 1000, (args, next) => {
         commandFrame = false;
         // Game Drawing.js declares `let MainCanvas`: it is a global lexical
@@ -42,38 +43,47 @@ export function setupBcxCanvas(mod, translate, language) {
             if (ownMeasure) Object.defineProperty(ctx, "measureText", ownMeasure); else delete ctx.measureText;
             if (ownDraw) Object.defineProperty(ctx, "fillText", ownDraw); else delete ctx.fillText;
             commandFrame = false;
-            ctx.save();
-            try {
-                const output = [];
-                let changed = false;
-                for (let i = 0; i < rows.length; i++) {
-                    let joined = "", replacement, end = i;
-                    for (let j = i; j < rows.length; j++) {
-                        joined = normalize(joined + " " + rows[j].text);
-                        if (translations.has(joined)) { replacement = translations.get(joined); end = j; break; }
-                    }
-                    const row = rows[i];
-                    if (!replacement) { output.push(row); continue; }
-                    changed = true;
-                    Object.assign(ctx, { font: row.font });
-                    let line = "";
-                    for (const char of replacement) {
-                        if (line && measure.call(ctx, line + char).width > 1750) {
-                            output.push({ ...row, text: line }); line = "";
+            if (rows.length) {
+                ctx.save();
+                try {
+                    const signature = JSON.stringify([language(), globalThis.document?.fonts?.status, rows, [...translations]]);
+                    const cacheable = rows.every(row => typeof row.fillStyle === "string");
+                    const cached = cacheable && complete && ctx === lastContext && measure === lastMeasure && signature === lastSignature;
+                    const output = [];
+                    let changed = false;
+                    for (let i = 0; !cached && i < rows.length; i++) {
+                        let joined = "", replacement, end = i;
+                        for (let j = i; j < rows.length; j++) {
+                            joined = normalize(joined + " " + rows[j].text);
+                            if (translations.has(joined)) { replacement = translations.get(joined); end = j; break; }
                         }
-                        line += char;
+                        const row = rows[i];
+                        if (!replacement) { output.push(row); continue; }
+                        changed = true;
+                        Object.assign(ctx, { font: row.font });
+                        let line = "";
+                        for (const char of replacement) {
+                            if (line && measure.call(ctx, line + char).width > 1750) {
+                                output.push({ ...row, text: line }); line = "";
+                            }
+                            line += char;
+                        }
+                        output.push({ ...row, text: line });
+                        i = end;
                     }
-                    output.push({ ...row, text: line });
-                    i = end;
-                }
-                const rendered = complete && changed ? output : rows;
-                rendered.forEach((row, i) => {
-                    Object.assign(ctx, { font: row.font, fillStyle: row.fillStyle,
-                        textAlign: row.textAlign, textBaseline: row.textBaseline });
-                    const y = complete && changed ? 470 - (rendered.length - 1) * 23 + i * 46 : row.y;
-                    draw.call(ctx, row.text, row.x, y, ...row.rest);
-                });
-            } finally { ctx.restore(); }
+                    const rendered = cached ? lastLayout : complete && changed ? output.map((row, i) => ({
+                        ...row, y: 470 - (output.length - 1) * 23 + i * 46,
+                    })) : rows;
+                    if (cacheable && complete && !cached) {
+                        lastLayout = rendered; lastSignature = signature; lastContext = ctx; lastMeasure = measure;
+                    }
+                    rendered.forEach(row => {
+                        Object.assign(ctx, { font: row.font, fillStyle: row.fillStyle,
+                            textAlign: row.textAlign, textBaseline: row.textBaseline });
+                        draw.call(ctx, row.text, row.x, row.y, ...row.rest);
+                    });
+                } finally { ctx.restore(); }
+            }
         }
     });
     return (fn, args) => {

@@ -1,3 +1,4 @@
+import { runtimeDictionary } from "./gen-dict.js";
 import assert from "node:assert/strict";
 import test from "node:test";
 import vm from "node:vm";
@@ -6,7 +7,7 @@ import { build } from "esbuild";
 import { createScope, startOnce } from "../src/lifecycle.js";
 import { createIdleBatchProcessor } from "../src/mods/idleBatch.js";
 import { applyAssetDescriptions, watchReadiness } from "../src/assetDescriptions.js";
-import { translateValue } from "../src/mods/domObserver.js";
+import { translateValue } from "../src/mods/displayText.js";
 
 function scheduler(idle) {
     let id = 0;
@@ -137,14 +138,14 @@ test("real app rolls back hooks and observers after partial setup, then initiali
     const output=await build({
         entryPoints:["src/app.js"],bundle:true,write:false,format:"iife",globalName:"App",
         define:{__BCTP_VERSION__:'"test"',__BCTP_NAME__:'"TestMod"',__BCTP_FULLNAME__:'"Test"',
-            __BCTP_REPO__:'"https://example.invalid"', __BCTP_DATA_URL__:'"https://example.invalid/translations.json"'},
+            __BCTP_REPO__:'"https://example.invalid"', __BCTP_DATA_URLS__:JSON.stringify({CN:"https://example.invalid/CN.json",TW:"https://example.invalid/TW.json"})},
     });
-    const timers=new Set(),observers=new Set(),listeners=new Set(),hooks=new Map();
+    const timers=new Set(),intervals=new Set(),observers=new Set(),listeners=new Set(),hooks=new Map(),downloads=[];
     let fail=true,registered=false,unloads=0,registrations=0;
     const ctx={
         console, Event, AbortController,
-        fetch: async () => ({ ok: true, json: async () => JSON.parse(fs.readFileSync("src/generated/dict.json", "utf8")) }),
-        setInterval:fn=>{timers.add(fn);return fn;},clearInterval:fn=>timers.delete(fn),
+        fetch: async url => { downloads.push(url); return { ok: true, json: async () => runtimeDictionary(JSON.parse(fs.readFileSync("src/generated/dict.json", "utf8")), url.endsWith("CN.json") ? "CN" : "TW") }; },
+        setInterval:fn=>{timers.add(fn);intervals.add(fn);return fn;},clearInterval:fn=>{timers.delete(fn);intervals.delete(fn);},
         setTimeout:fn=>{timers.add(fn);return fn;},clearTimeout:fn=>timers.delete(fn),
         requestAnimationFrame:fn=>{timers.add(fn);return fn;},cancelAnimationFrame:fn=>timers.delete(fn),
         MutationObserver:class {
@@ -165,7 +166,7 @@ test("real app rolls back hooks and observers after partial setup, then initiali
         }},
     };
     for(const name of ["TranslationAvailable","TranslationAssetProcess","DrawText","DrawTextFit",
-        "DrawTextWrap","DynamicDrawText","ActivityDictionaryText","ChatRoomMessage","ChatRoomSendLocal"])
+        "DrawTextWrap","DynamicDrawText","ActivityDictionaryText","ChatRoomMessage","ChatRoomSendLocal","InformationSheetRun"])
         ctx[name]=()=>{};
     vm.createContext(ctx);
     vm.runInContext(output.outputFiles[0].text,ctx);
@@ -229,4 +230,17 @@ test("real app rolls back hooks and observers after partial setup, then initiali
     ctx.TranslationLanguage="EN";
     ctx.BCTP.reapply();
     assert.equal(ctx.Asset[0].Description,"Cybertech Headset");
+    assert.equal(downloads.length,1,"startup only downloads TW, including after SDK setup retry");
+    assert.equal(ctx.TranslationCache["Screens/Interface_CN.txt"],undefined);
+    ctx.TranslationLanguage="CN";
+    for(const tick of [...intervals]) tick();
+    await new Promise(resolve=>setImmediate(resolve));
+    assert.equal(downloads.length,2);
+    assert.ok(ctx.TranslationCache["Screens/Interface_CN.txt"]);
+    assert.equal(hooks.get("TranslationAvailable")(["Screens/Interface_CN.txt"],()=>false),true);
+    assert.equal(ctx.BCTP.loadingLanguage,null);
+    ctx.TranslationLanguage="TW";
+    for(const tick of [...intervals]) tick();
+    await new Promise(resolve=>setImmediate(resolve));
+    assert.equal(downloads.length,2,"switching back reuses the downloaded language");
 });

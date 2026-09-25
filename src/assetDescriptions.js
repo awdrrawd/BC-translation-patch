@@ -30,9 +30,15 @@ export function applyAssetDescriptions(g, paths, lang) {
 /** Cheap readiness signature: rebuild only after a language/data/cache change. */
 export function watchReadiness(g, getCaches, refresh, addCleanup) {
     let previous = [];
+    let groups, groupCount, families = [];
     const tick = () => {
+        if (g.document?.hidden) return;
         const caches = getCaches();
-        const families = [...new Set((g.AssetGroup || []).map(group => group.Family))];
+        if (groups !== g.AssetGroup || groupCount !== g.AssetGroup?.length) {
+            groups = g.AssetGroup;
+            groupCount = groups?.length;
+            families = [...new Set((groups || []).map(group => group.Family))];
+        }
         const current = [g.TranslationLanguage, g.Asset, g.Asset?.length, g.AssetGroup,
             g.AssetGroup?.length, ...families.flatMap(f => {
                 const csv = g.CommonCSVCache?.[`Assets/${f}/${f}.csv`];

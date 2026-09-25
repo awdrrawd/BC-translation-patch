@@ -1,8 +1,8 @@
 import { createIdleBatchProcessor } from "./idleBatch.js";
+import { updateDisplay } from "./displayText.js";
 
 const skip = "script, style, code, pre, [contenteditable]:not([contenteditable='false'])";
 const normalize = text => text.replace(/\s+/g, " ").trim();
-const originals = new WeakMap();
 const patterns = [
     [/^(\d+) selected\.\.\.$/, "{count} selected...", ["count"]],
     [/^Tandem with BCX v([\w.?+-]+)$/, "Tandem with BCX v{version}", ["version"]],
@@ -75,15 +75,7 @@ export function translateBcplusText(text, dictionaries, lang) {
 }
 
 function update(node, property, read, write, dictionaries, lang) {
-    let records = originals.get(node);
-    if (!records) { records = new Map(); originals.set(node, records); }
-    const current = read();
-    let record = records.get(property);
-    if (!record || current !== record.last) record = { source: current, last: current };
-    const next = record.source === null ? null : translateBcplusText(record.source, dictionaries, lang);
-    if (next !== current) write(next);
-    record.last = next;
-    records.set(property, record);
+    updateDisplay(node, property, read, write, source => source === null ? null : translateBcplusText(source, dictionaries, lang));
 }
 
 /** Only call on elements inside a verified BC+ window or standalone modal. */
@@ -98,20 +90,15 @@ export function translateBcplusElement(element, dictionaries, lang) {
     if (element.tagName === "OPTION") {
         // An option without value= derives its machine value from textContent.
         // Translate label= only, and remove our label again when restoring.
-        let records = originals.get(element);
-        const current = element.getAttribute("label");
-        let record = records.get("option");
-        if (!record || current !== record.last) record = { source: current, last: current };
-        const source = record.source ?? element.textContent;
-        const isTheme = normalize(source) === "Light" && [...element.parentElement.querySelectorAll("option")].some(option => option.textContent === "Dark");
-        const translated = isTheme && dictionaries[lang]?.bcplus["Light theme"] || translateBcplusText(source, dictionaries, lang);
-        const next = translated === source ? record.source : translated;
-        if (current !== next) {
+        updateDisplay(element, "option", () => element.getAttribute("label"), next => {
             if (next === null) element.removeAttribute("label");
             else element.setAttribute("label", next);
-        }
-        record.last = next;
-        records.set("option", record);
+        }, original => {
+            const source = original ?? element.textContent;
+            const isTheme = normalize(source) === "Light" && [...element.parentElement.querySelectorAll("option")].some(option => option.textContent === "Dark");
+            const translated = isTheme && dictionaries[lang]?.bcplus["Light theme"] || translateBcplusText(source, dictionaries, lang);
+            return translated === source ? original : translated;
+        });
         return;
     }
     if (element.tagName === "INPUT" || element.tagName === "TEXTAREA" || element.closest("textarea")) return;
@@ -133,7 +120,7 @@ export function setupBcplusObserver(dictionaries, getLang, addCleanup, env = glo
         node?.querySelectorAll?.("*").forEach(element => processor.push(element));
     };
     const discover = () => {
-        if (disposed) return;
+        if (disposed || document.hidden) return;
         const next = new Set();
         const shadow = document.getElementById("BCPUIWindow")?.shadowRoot;
         if (shadow) next.add(shadow);
@@ -153,7 +140,8 @@ export function setupBcplusObserver(dictionaries, getLang, addCleanup, env = glo
                         // Includes OPTION text replacement: refresh its label too.
                         if (record.target.nodeType === 1) processor.push(record.target);
                         record.addedNodes.forEach(collect);
-                    } else collect(record.target);
+                    } else if (record.type === "attributes") processor.push(record.target);
+                    else collect(record.target);
                 }
             });
             observer.observe(root, { subtree: true, childList: true, characterData: true,

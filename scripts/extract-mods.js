@@ -1,4 +1,6 @@
-// 從 BCX / LSCG 原始碼抽取 UI 字串候選，扣掉 ECHO 已翻的，產出待翻清單。
+import { generateDict } from "./gen-dict.js";
+import { createLookup } from "../src/mods/lookup.js";
+// 從 BCX / LSCG 原始碼抽取 UI 字串候選，扣掉有效字典已翻的，產出待翻清單。
 // 來源目錄可用環境變數覆蓋：BCX_SRC / LSCG_SRC，預設抓 BCJS 旁邊的 repo。
 import fs from "node:fs";
 import path from "node:path";
@@ -29,19 +31,10 @@ function extract(dir) {
     return [...set].sort();
 }
 
-// 載入 ECHO 字典（需要 stub 幾個全域）
-globalThis.CurrentScreen = "InformationSheet";
-globalThis.BCX_Loaded = true;
-globalThis.Player = { LSCG: true };
-globalThis.TranslationLanguage = "CN";
-const { BCX } = await import("../src/mods/bc/BCX/index.js");
-const { LSCG } = await import("../src/mods/bc/LSCG/index.js");
-const { supplement } = await import("../src/mods/supplement.js");
-
-function echoHas(s) {
-    if (supplement.menu[s]) return true;
-    return !!(BCX.translateMenuText?.(s) || LSCG.translateMenuText?.(s));
-}
+// Use the same effective dictionary and precedence as the runtime.
+const lookup = createLookup(generateDict(), () => "CN", {
+    CurrentScreen: "InformationSheet", BCX_Loaded: true, Player: { LSCG: true },
+});
 
 function report(name, dir) {
     if (!fs.existsSync(dir)) {
@@ -51,15 +44,15 @@ function report(name, dir) {
     const all = extract(dir);
     // 濾掉 debug/log/內部訊息（非 UI，不該翻）
     const DEBUG = /^BCX:|^(BCX init|BCX internal|BCX Debug|BCX Compatibility|BCX Developer|BCX Supporter)\b|\b(init|Init|handler|timeout|interval|Assertion|reseting|Unloaded|patchable|patched|subscreen|OnlineSettings|ExtensionSettings|MaidQuartersMaid|Dictionary|Bad data|not ready|not defined|already logged|LoginResponse)\b/;
-    const missing = all.filter((s) => !echoHas(s) && !DEBUG.test(s));
+    const missing = all.filter((s) => !lookup.menu(s) && !DEBUG.test(s));
     return { total: all.length, missing };
 }
 
 const bcx = report("BCX", BCX_SRC);
 const lscg = report("LSCG", LSCG_SRC);
 
-console.log(`BCX  候選 ${bcx.total}，ECHO 未翻 ${bcx.missing.length}`);
-console.log(`LSCG 候選 ${lscg.total}，ECHO 未翻 ${lscg.missing.length}`);
+console.log(`BCX  候選 ${bcx.total}，尚未命中 ${bcx.missing.length}`);
+console.log(`LSCG 候選 ${lscg.total}，尚未命中 ${lscg.missing.length}`);
 
 const out = path.join(repoRoot, "reports", "missing-mods.md");
 ensureDir(out);

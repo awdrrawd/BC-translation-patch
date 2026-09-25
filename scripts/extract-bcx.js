@@ -1,10 +1,11 @@
 // 從 BCX 指定原始檔抽出 UI 字串（name/description/longDescription/shortDescription/helpDescription）。
-// 扣掉 bcx.txt 已翻的，輸出待翻清單。
+// 扣掉有效字典已翻的，輸出待翻清單。
 import fs from "node:fs";
 import path from "node:path";
 import { repoRoot } from "./lib/upstream.js";
 import { ensureDir } from "./lib/fsutil.js";
-import { parseTxtPairs } from "./lib/parseTxt.js";
+import { generateDict } from "./gen-dict.js";
+import { createLookup } from "../src/mods/lookup.js";
 
 const BCX_SRC = process.env.BCX_SRC || path.resolve(repoRoot, "..", "BCJS", "bondage-club-extended-master", "src");
 const files = [
@@ -14,9 +15,9 @@ const files = [
 ];
 const FIELDS = /(?:name|shortDescription|description|longDescription|helpDescription):\s*"((?:[^"\\]|\\.)*)"/g;
 
-const done = new Set();
-const bcxTxt = path.join(repoRoot, "translations", "mods", "bcx.txt");
-if (fs.existsSync(bcxTxt)) for (const [en] of parseTxtPairs(fs.readFileSync(bcxTxt, "utf8"))) done.add(en.trim());
+const lookup = createLookup(generateDict(), () => "CN", {
+    CurrentScreen: "InformationSheet", BCX_Loaded: true,
+});
 
 const set = new Set();
 for (const rel of files) {
@@ -29,7 +30,7 @@ for (const rel of files) {
     let m;
     while ((m = FIELDS.exec(src))) {
         const s = m[1].replace(/\\"/g, '"').replace(/\\n/g, " ").trim();
-        if (s && /[A-Za-z]/.test(s) && !done.has(s)) set.add(s);
+        if (s && /[A-Za-z]/.test(s) && !lookup.menu(s)) set.add(s);
     }
 }
 const arr = [...set];

@@ -4,120 +4,20 @@ import { roomAdminText, isRoomTemplateName, translateRoomTemplateName } from "./
 import { setupSurfaceObserver, translateCraftShare } from "./surfaces.js";
 import { activeLang } from "../lang.js";
 import GEN from "../dictionary.js";
-import { BCX } from "./bc/BCX/index.js";
-import { LSCG } from "./bc/LSCG/index.js";
-import { BCXHelp } from "./html/BCX.js";
 import { ChatHistoryTranslator } from "./html/utils/chatObserver.js";
-import { supplement } from "./supplement.js";
 import { setupDomObserver } from "./domObserver.js";
 import { setupBcxHelp } from "./bcxHelp.js";
 import { setupBcplusObserver } from "./bcplus.js";
 import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
 
-// BCX / LSCG 翻譯層（字典移植自 Echo 的动作拓展 https://github.com/SugarChain-Studio/echo-activity-ext ）。
-// 這些 mod 自己畫 HTML/canvas，不走遊戲 CSV 管線，所以用 hook + observer 攔截。
-const units = [BCX, LSCG];
+import { createLookup } from "./lookup.js";
+import { createMissingCollector } from "./missing.js";
 
-// 收集畫面上翻不到的英文（官方缺口 + ECHO 沒收錄的 mod 字串），供 BCTP.missing() 匯出。
-const missing = new Set();
-export function getMissing() {
-    return [...missing].sort();
-}
-
-// 我們補譯的 BCX/LSCG 字典（translations/mods/*.txt），優先於 ECHO
-const MOD = /** @type {any} */ (GEN).modMenu || { CN: {}, TW: {} };
-
-// BCX PLAYER_NAME 動態字串的 regex（畫之前名字已替換）。只在 BCX 畫面試，避免每幀掃全部。
-const MREGEX = /** @type {any} */ (GEN).modRegex || { CN: [], TW: [] };
-const mrCompiled = { CN: null, TW: null };
-function modRegexMatch(key, lang) {
-    if (/** @type {any} */ (globalThis).CurrentScreen !== "InformationSheet") return undefined;
-    if (!mrCompiled[lang]) mrCompiled[lang] = (MREGEX[lang] || []).map((x) => ({ re: new RegExp(x.p), r: x.r }));
-    for (const { re, r } of mrCompiled[lang]) if (re.test(key)) return key.replace(re, r);
-    return undefined;
-}
-
-function lookupMenu(key) {
-    const surface = GEN.surfaces?.[activeLang()];
-    const explicit = surface?.search?.[key] || surface?.craft?.[key] ||
-        (key === "LSCG Effects" ? surface?.lscg?.[key] : undefined);
-    if (explicit) return explicit;
-    if (supplement.menu[key]) return supplement.menu[key];
-    const lang = activeLang();
-    if (lang && MOD[lang] && MOD[lang][key]) return MOD[lang][key];
-    for (const u of units) {
-        const t = u.translateMenuText?.(key);
-        if (t) return t;
-    }
-    if (lang) {
-        const m = modRegexMatch(key, lang);
-        if (m) return m;
-    }
-    return undefined;
-}
-
-// src/mods/index.js
-function tryMenu(key) {
-    const direct = lookupMenu(key);
-    if (direct) return direct;
-
-    // BCX 把「名稱 (副標)」合併成一句畫出；拆開分別翻再合併。
-    const combo = key.match(/^(.+?) \((.+)\)$/);
-    if (combo) {
-        const a = lookupMenu(combo[1]);
-        const b = lookupMenu(combo[2]);
-        if (a || b) return `${a || combo[1]}（${b || combo[2]}）`;
-    }
-
-    // 衣柜/外观清单把「標籤: 值」合併成一句畫出（如 自由绘图1: None、称谓: They/Them）；
-    // 標籤通常已經是中文（走 CSV），值多半是這裡 supplement.menu 補的代名詞/None，拆開分別翻。
-    const kv = key.match(/^(.+?)([:：]\s*)(.+)$/);
-    if (kv) {
-        const a = lookupMenu(kv[1]);
-        const b = lookupMenu(kv[3]);
-        if (a || b) return `${a || kv[1]}${kv[2]}${b || kv[3]}`;
-    }
-
-    return undefined;
-}
-
-// 完整的 base 動作字典 / 道具名字典（英文→中文），繞過時序直接在存取時翻譯
-const ACT = /** @type {any} */ (GEN).activity || { CN: {}, TW: {} };
-
-function tryActivity(key) {
-    if (supplement.activity[key]) return supplement.activity[key];
-    const lang = activeLang();
-    if (lang) {
-        if (ACT[lang] && ACT[lang][key]) return ACT[lang][key]; // base 動作字典
-        if (MOD[lang] && MOD[lang][key]) return MOD[lang][key]; // LSCG/BCX 動作模板(lscg.txt 等)
-    }
-    for (const u of units) {
-        const t = u.translateActivityText?.(key);
-        if (t) return t;
-    }
-    // fallback：有人可能把動作標籤誤加進 supplement.menu（給 DrawText/DOM 選單用）而非
-    // supplement.activity（給 ActivityDictionaryText 用），這裡兜底查一次 menu，避免補了翻譯卻沒生效。
-    if (supplement.menu[key]) return supplement.menu[key];
-    return undefined;
-}
-
-// DOM 選單用的統一翻譯：完整 base 字典(道具/動作/快捷鍵/所有 CSV) → mod
-const BASE = /** @type {any} */ (GEN).base || { CN: {}, TW: {} };
-function translateAny(key) {
-    const lang = activeLang();
-    if (!lang) return undefined;
-    if (lang && BASE[lang] && BASE[lang][key]) return BASE[lang][key];
-    return tryMenu(key) || tryActivity(key);
-}
-
-// 製作屬性(dfn)專用：優先 Text_Crafting 作用域字典，避開 base 撞名(Loose→松 vs 松弛)
-const CRAFT = /** @type {any} */ (GEN).crafting || { CN: {}, TW: {} };
-function translateDfn(key) {
-    const lang = activeLang();
-    if (!lang) return undefined;
-    if (lang && CRAFT[lang] && CRAFT[lang][key]) return CRAFT[lang][key];
-    return translateAny(key);
-}
+const lookup = createLookup(GEN, activeLang);
+const { menu: tryMenu, activity: tryActivity, any: translateAny, crafting: translateDfn } = lookup;
+const missing = createMissingCollector();
+export const getMissing = missing.list;
+export const clearMissing = missing.clear;
 
 /** @param {any} mod bcModSdk 註冊物件 */
 export function setupMods(mod, addCleanup) {
@@ -186,7 +86,7 @@ export function setupMods(mod, addCleanup) {
     // 不需要在聊天記錄 DOM 上做 regex（那條已移除）。
 
     // BCX 在聊天記錄輸出的 HTML 說明
-    addCleanup(ChatHistoryTranslator.registerTranslationFunc((src) => supplement.html[src] || BCXHelp(src)));
+    addCleanup(ChatHistoryTranslator.registerTranslationFunc((src) => lookup.html(src)));
 
     // dialog-inventory(DOM) 的道具/動作名；製作屬性(dfn)用作用域字典
     setupDomObserver(translateAny, translateDfn, addCleanup);

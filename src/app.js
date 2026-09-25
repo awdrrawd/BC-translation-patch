@@ -1,16 +1,16 @@
 import { injectTranslationCache, setupInjection } from "./inject.js";
 import { reapply, setupReapply } from "./reapply.js";
-import { setupMods, getMissing } from "./mods/index.js";
+import { setupMods, getMissing, clearMissing } from "./mods/index.js";
 import { activeLang } from "./lang.js";
 import { createScope } from "./lifecycle.js";
-import { loadDictionary } from "./dictionary.js";
+import { createLanguageLoader } from "./languageLoader.js";
 
-/* global __BCTP_VERSION__, __BCTP_NAME__, __BCTP_FULLNAME__, __BCTP_REPO__, __BCTP_DATA_URL__ */
+/* global __BCTP_VERSION__, __BCTP_NAME__, __BCTP_FULLNAME__, __BCTP_REPO__, __BCTP_DATA_URLS__ */
 
 async function waitForGame() {
     const required = ["TranslationAvailable", "TranslationAssetProcess", "DrawText",
         "DrawTextFit", "DrawTextWrap", "DynamicDrawText", "ActivityDictionaryText",
-        "ChatRoomMessage", "ChatRoomSendLocal"];
+        "ChatRoomMessage", "ChatRoomSendLocal", "InformationSheetRun"];
     const until = Date.now() + 30000;
     while (!required.every(name => typeof globalThis[name] === "function")) {
         if (Date.now() >= until) throw new Error("Game functions were not ready within 30 seconds");
@@ -23,7 +23,23 @@ export async function init(namespace) {
     const scope = createScope();
     namespace.version = __BCTP_VERSION__;
     namespace.phase = "downloading";
-    await loadDictionary(__BCTP_DATA_URL__);
+    let initialized = false;
+    const languages = createLanguageLoader(__BCTP_DATA_URLS__, activeLang, namespace, () => {
+        if (!initialized) return;
+        reapply();
+        namespace.pathCount = injectTranslationCache().count;
+        document.dispatchEvent(new Event("bctp-language-change"));
+    });
+    scope.add(languages.dispose);
+    namespace.retryLanguage = languages.ensure;
+    try {
+        let requested;
+        do {
+            requested = activeLang();
+            try { await languages.ensure(); }
+            catch (error) { if (requested === activeLang()) throw error; }
+        } while (requested !== activeLang());
+    } catch (error) { scope.dispose(); throw error; }
     namespace.phase = "initializing";
     // Cache injection remains useful even if SDK initialization fails.
     const { count } = injectTranslationCache();
@@ -38,11 +54,12 @@ export async function init(namespace) {
         scope.add(() => mod.unload());
         setupInjection(mod);
         setupMods(mod, scope.add);
-        setupReapply(mod, scope.add);
+        initialized = true;
+        setupReapply(mod, scope.add, () => languages.ensure().catch(error => console.debug("[BCTP] Language download failed", error)));
         console.log(`🐈‍⬛ [BCTP] v${__BCTP_VERSION__} ready (${activeLang() ?? "inactive"})`);
         return {
             version: __BCTP_VERSION__, lang: activeLang, pathCount: count,
-            reapply, missing: getMissing, loadTime: Date.now(),
+            reapply, missing: getMissing, clearMissing, loadTime: Date.now(),
         };
     } catch (error) {
         scope.dispose();
