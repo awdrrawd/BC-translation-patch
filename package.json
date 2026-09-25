@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "pretest": "npm run gen",
-    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js scripts/bcplus.test.js",
+    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js scripts/bcplus.test.js scripts/bcx.test.js",
     "seed": "node scripts/seed-from-upstream.js",
     "upstream:fetch": "node scripts/fetch-upstream.js",
     "upstream:bcplus": "node scripts/fetch-bcplus.js",

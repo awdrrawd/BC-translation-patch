@@ -25,7 +25,7 @@ for (const file of ["command_definitions.ts", "speech_commands.ts"]) {
 fs.mkdirSync(path.join(repoRoot, "reports"), { recursive: true });
 fs.writeFileSync(path.join(repoRoot, "reports/bcx-command-audit.json"), JSON.stringify({
     source, scope: "Display names, short descriptions, and description lines; excludes command syntax and runtime response messages",
-    runtimeLimitation: "BCXDrawTextWrap draws detailed descriptions via MainCanvas.fillText and bypasses the current hooks",
+    runtimeAdapter: "src/mods/bcxCanvas.js captures BCX command paragraphs before translating and reflowing Canvas text; regression coverage in scripts/bcx.test.js",
     commands: result,
 }, null, 2) + "\n");
 console.log(`BCX commands: ${result.length}; missing display entries: ${result.reduce((n,r) => n+r.missing.length,0)}`);
