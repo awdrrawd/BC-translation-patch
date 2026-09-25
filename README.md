@@ -151,6 +151,12 @@ $value$ 个月
 
 ### B. 補 BCX / LSCG 等 mod 翻譯
 
+**BC+ 主視窗翻譯**已接入獨立 Shadow DOM 翻譯層，簡中來源為
+`translations/mods/bcplus/ui.json`，繁中由建置流程生成。
+執行 `npm run upstream:bcplus` 從鏡像取得原始碼，再用 `npm run extract:bcplus`
+產生候選缺漏報告。此字庫不混入 BCX／LSCG 的全域字典。
+支援範圍、版本與測試限制見 [BC+ 翻譯維護](docs/bcplus-translation.md)。
+
 mod 自己畫 canvas/DOM，不走官方 CSV，字典放 `translations/mods/`：
 
 - **有明確英文原文的**：加到對應的 `translations/mods/bcx/*.txt` 或 `lscg/*.txt`（英文一行、中文一行）。
