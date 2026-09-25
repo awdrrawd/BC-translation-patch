@@ -139,3 +139,87 @@ test("BC+ dictionary stays scoped and preserves placeholders", () => {
     assert.equal(full.modMenu.CN["BC+ window theme"], undefined);
     assert.equal(full.surfaces.CN.bcplus["BC+ window theme"], "BC+ 窗口主题");
 });
+
+test("reported BC+ screenshot strings translate as rendered compositions in CN and TW", () => {
+    const texts = [
+        "Sort: Category", "Sort: Custom", "Rules in this contract (0)", "Rules (12)",
+        "until released", "Only the author may end it early", "Either side may end it", "Delete draft",
+        "Confirm delete", "Sign the contract", "Click again to SIGN", "End the contract",
+        "Kneel", "Stand up", "Close eyes", "Open eyes", "Set emoticon", "Forced say", "Go to room", "Write lines",
+        "Pick", "Your Lover", "Your BC Owner", "In this room", "3 rules - 1 h 30 min left - Either side may end it",
+        "Enforced - signer's global conditions", "Logged only - Always in effect",
+        ...["Rules", "Curses", "Punishments", "Contracts", "Commands", "Relationships", "Pet", "Statistics", "Log"].map(name => `${name} module enabled`),
+        ...[
+            "Shows an emoticon over the player's head (e.g. Afk, Sleep, Hearts, Confusion, Coffee).",
+            "The player says the given sentence in chat.",
+            "Sends the player to the named room: they leave their current room and join it. If the room is full or does not exist, they end up in the room search.",
+            'Assigns lines the player must type in chat, e.g. "10 I will behave" for ten repetitions (max 50). Progress is tracked, completion is announced in the room, and the task survives reloads. "stop" cancels it.',
+        ].map(text => `${text} (uses the argument field)`),
+    ];
+    for (const lang of ["CN", "TW"]) for (const text of texts) {
+        const result = translateBcplusText(text, dictionaries, lang);
+        assert.notEqual(result, text, `${lang}: ${text}`);
+        assert.ok(!result.includes("undefined"));
+        assert.ok(!result.includes("(uses the argument field)"));
+    }
+    assert.equal(translateBcplusText("General", dictionaries, "TW"), "設置");
+    assert.equal(translateBcplusText("Switch", dictionaries, "TW"), "轉換者");
+    assert.equal(translateBcplusText("General", dictionaries, "CN"), "设置");
+    assert.equal(translateBcplusText("Switch", dictionaries, "CN"), "转换者");
+    assert.equal(translateBcplusText("Draft - Alice $& 自訂標題", dictionaries, "TW"), "草稿 - Alice $& 自訂標題");
+    assert.equal(translateBcplusText("Contract - My Rules", dictionaries, "CN"), "契约 - My Rules");
+});
+
+test("contract textarea placeholder translates while editable title, terms and machine duration stay unchanged", () => {
+    const { root } = fixture();
+    root.innerHTML = `<input value="New contract"><textarea placeholder="Free-text terms, shown to the signer on the review screen">My own terms $&</textarea>
+        <select><option value="0">until released</option><option value="90">1 h 30 min</option></select>`;
+    for (const lang of ["CN", "TW", "EN"]) {
+        scan(root, lang);
+        const textarea = root.querySelector("textarea");
+        assert.equal(textarea.value, "My own terms $&");
+        assert.equal(root.querySelector("input").value, "New contract");
+        assert.equal(root.querySelector("option").value, "0");
+        assert.equal(textarea.getAttribute("placeholder"), dictionaries[lang]?.bcplus["Free-text terms, shown to the signer on the review screen"] || "Free-text terms, shown to the signer on the review screen");
+    }
+});
+
+test("standalone preset confirmation is discovered without a BC+ window and preserves Yes action", async () => {
+    const { window } = parseHTML("<html><body></body></html>");
+    let poll, lang = "CN", accepted;
+    const tasks = new Map(); let id = 0;
+    const cleanups = [];
+    const env = { document: window.document, MutationObserver: window.MutationObserver,
+        setInterval(fn) { poll = fn; }, clearInterval() { poll = undefined; },
+        requestIdleCallback(fn) { tasks.set(++id, fn); return id; }, cancelIdleCallback(key) { tasks.delete(key); } };
+    const flush = async () => {
+        for (let i = 0; i < 10; i++) {
+            await Promise.resolve();
+            for (const [key, fn] of [...tasks]) { tasks.delete(key); fn({ didTimeout: true }); }
+        }
+        assert.equal(tasks.size, 0);
+    };
+    setupBcplusObserver(dictionaries, () => lang, fn => cleanups.push(fn), env);
+    const overlay = window.document.createElement("div");
+    overlay.style.position = "fixed"; overlay.style.zIndex = "100000";
+    overlay.innerHTML = '<div tabindex="-1"><div>BC+</div><div id="message"></div><button>Yes</button><button>Cancel</button></div>';
+    const text = 'Set your preset to Switch?\nThis configures your permissions to match and locks the preset - only a factory reset clears it.';
+    overlay.querySelector("#message").textContent = text;
+    overlay.querySelector("button").addEventListener("click", () => { accepted = "Yes"; });
+    window.document.body.appendChild(overlay);
+    const unrelated = overlay.cloneNode(true);
+    unrelated.firstElementChild.firstElementChild.textContent = "Another mod";
+    window.document.body.appendChild(unrelated);
+    poll(); await flush();
+    assert.ok(overlay.querySelector("#message").textContent.includes("转换者"));
+    assert.equal(overlay.querySelector("button").textContent, "是");
+    overlay.querySelector("button").click(); assert.equal(accepted, "Yes");
+    assert.equal(unrelated.querySelector("button").textContent, "Yes");
+    lang = "TW"; window.document.dispatchEvent(new window.Event("bctp-language-change")); await flush();
+    assert.ok(overlay.querySelector("#message").textContent.includes("轉換者"));
+    lang = "EN"; window.document.dispatchEvent(new window.Event("bctp-language-change")); await flush();
+    assert.equal(overlay.querySelector("#message").textContent, text);
+    assert.equal(overlay.querySelector("button").textContent, "Yes");
+    cleanups.forEach(fn => fn());
+    assert.equal(poll, undefined);
+});
