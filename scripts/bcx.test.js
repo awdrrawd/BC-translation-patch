@@ -2,7 +2,41 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { setupBcxCanvas, translateBcxLog } from "../src/mods/bcxCanvas.js";
 import { generateDict } from "./gen-dict.js";
+import vm from "node:vm";
+import { build } from "esbuild";
 const GEN = generateDict();
+
+test("BCX uses the game's lexical canvas context rather than the window's named HTML element", async () => {
+    const bundle = await build({ entryPoints: ["src/mods/bcxCanvas.js"], bundle: true,
+        write: false, format: "iife", globalName: "BcxAdapter" });
+    const hooks = {}, drawn = [];
+    const element = { tagName: "CANVAS" };
+    const ctx = {
+        font: "36px Arial", fillStyle: "black", textAlign: "left", textBaseline: "middle",
+        save() {}, restore() {}, measureText(text) { return { width: text.length * 20 }; },
+        fillText(text) { drawn.push(text); },
+    };
+    const sandbox = vm.createContext({ MainCanvas: element, context: ctx,
+        CurrentScreen: "InformationSheet", BCX_Loaded: true, bcx: { inBcxSubscreen: () => true },
+        sdk: { hookFunction(name, priority, hook) { hooks[name] = hook; } } });
+    vm.runInContext("let MainCanvas = context;", sandbox);
+    vm.runInContext(bundle.outputFiles[0].text, sandbox);
+    vm.runInContext(`var observe = BcxAdapter.setupBcxCanvas(sdk,
+        text => text === "Usage:" ? "用法：" : undefined, () => "TW");`, sandbox);
+    hooks.InformationSheetRun([], () => vm.runInContext(`
+        observe("DrawText", ['- Commands: Description of the command: "Eyes" -', 125, 125]);
+        MainCanvas.measureText("Usage:"); MainCanvas.fillText("Usage:", 125, 470);
+    `, sandbox));
+    assert.deepEqual(drawn, ["用法："]);
+    assert.deepEqual(element, { tagName: "CANVAS" });
+    for (const value of [undefined, element, { measureText() {}, fillText() {} }]) {
+        sandbox.context = value;
+        vm.runInContext("MainCanvas = context;", sandbox);
+        let calls = 0;
+        assert.equal(hooks.InformationSheetRun([], () => { calls++; return "original"; }), "original");
+        assert.equal(calls, 1);
+    }
+});
 
 test("BCX command canvas translates wrapped paragraphs and preserves syntax", () => {
     globalThis.CurrentScreen = "InformationSheet";

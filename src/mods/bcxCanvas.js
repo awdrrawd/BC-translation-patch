@@ -7,9 +7,13 @@ const inBcx = () => globalThis.CurrentScreen === "InformationSheet" &&
 export function setupBcxCanvas(mod, translate, language) {
     let commandFrame = false;
     mod.hookFunction("InformationSheetRun", 1000, (args, next) => {
-        const ctx = globalThis.MainCanvas;
-        if (!language() || !inBcx() || !ctx) return next(args);
         commandFrame = false;
+        // Game Drawing.js declares `let MainCanvas`: it is a global lexical
+        // binding, not a window property. window.MainCanvas may instead be the
+        // HTML element exposed by its id, which has no Canvas 2D methods.
+        const ctx = typeof MainCanvas !== "undefined" ? MainCanvas : undefined;
+        if (!language() || !inBcx() || !ctx ||
+            !["measureText", "fillText", "save", "restore"].every(key => typeof ctx[key] === "function")) return next(args);
         const measure = ctx.measureText, draw = ctx.fillText;
         const ownMeasure = Object.getOwnPropertyDescriptor(ctx, "measureText");
         const ownDraw = Object.getOwnPropertyDescriptor(ctx, "fillText");
