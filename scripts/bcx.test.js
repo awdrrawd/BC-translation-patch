@@ -43,9 +43,10 @@ test("BCX command canvas translates wrapped paragraphs and preserves syntax", ()
     globalThis.BCX_Loaded = true;
     globalThis.bcx = { inBcxSubscreen: () => true };
     const drawn = [], hooks = {};
+    let measurements = 0;
     const ctx = globalThis.MainCanvas = {
         font: "36px Arial", fillStyle: "black", textAlign: "left", textBaseline: "middle",
-        save() {}, restore() {}, measureText(text) { return { width: text.length * 20 }; },
+        save() {}, restore() {}, measureText(text) { measurements++; return { width: text.length * 20 }; },
         fillText(...args) { drawn.push(args); },
     };
     const originalMeasure = ctx.measureText, originalDraw = ctx.fillText;
@@ -77,6 +78,17 @@ test("BCX command canvas translates wrapped paragraphs and preserves syntax", ()
         assert.ok(drawn.some(row => row[0] === "unrelated"));
         assert.equal(ctx.measureText, originalMeasure);
         assert.equal(ctx.fillText, originalDraw);
+        const before = measurements;
+        const firstFrame = drawn.slice();
+        drawn.length = 0;
+        hooks.InformationSheetRun([], run);
+        assert.equal(measurements - before, 2, "unchanged frame only performs BCX's two original paragraph measurements");
+        assert.deepEqual(drawn, firstFrame);
+        ctx.font = "40px Arial";
+        const beforeFont = measurements;
+        hooks.InformationSheetRun([], run);
+        assert.ok(measurements - beforeFont > 2, "font changes invalidate translated layout");
+        ctx.font = "36px Arial";
     }
     assert.throws(() => hooks.InformationSheetRun([], () => { run(); throw Error("render failed"); }), /render failed/);
     assert.equal(ctx.measureText, originalMeasure);

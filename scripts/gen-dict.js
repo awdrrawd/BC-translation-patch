@@ -17,6 +17,8 @@ import { repoRoot } from "./lib/upstream.js";
 import { walk } from "./lib/fsutil.js";
 import { parseTxtPairs } from "./lib/parseTxt.js";
 
+import { DICTIONARY_KEYS } from "../src/schema.js";
+
 const trRoot = path.join(repoRoot, "translations");
 const cnRoot = path.join(trRoot, "cn");
 const cnExtraRoot = path.join(trRoot, "cn-extra");
@@ -93,7 +95,6 @@ export function generateDict() {
     const cnMap = {};
     // 動作字典（英文→中文），供 runtime hook ActivityDictionaryText 用，繞過時序
     const activity = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
-    const assetName = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
     const crafting = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
     let cnFiles = 0;
     let twFiles = 0;
@@ -130,17 +131,6 @@ export function generateDict() {
             }
         }
 
-        // 道具/部位名（Female3DCG 描述）→ 供 DOM observer 在 dialog-inventory 顯示時翻
-        if (base === "Assets/Female3DCG/Female3DCG") {
-            for (const [en, zh] of merged) {
-                const k = en.trim();
-                if (k && zh) {
-                    assetName.CN[k] = zh;
-                    assetName.TW[k] = overrideMap.has(k) ? overrideMap.get(k) : applyTerms(converter(zh));
-                }
-            }
-        }
-
         const hasExtra = extraPairs.length > 0;
         const officialHasBase = basePairs.length > 0; // 官方 cn 鏡像有此檔
 
@@ -162,30 +152,7 @@ export function generateDict() {
         }
     }
 
-    // 從含 token 的動作訊息模板自動生成 regex（SourceCharacter→捕獲組），
-    // 翻「聊天記錄裡已組裝、名字已替換」的訊息。錨定整段，只在完全吻合時翻，保守不誤傷。
-    // ponytail: 線性掃 N 條 regex/訊息；訊息不頻繁尚可，若卡再加關鍵字索引。
-    const TOKENS = ["SourceCharacter", "DestinationCharacter", "TargetCharacter", "ActivityAsset", "ActivityGroup", "PronounPossessive", "PronounSubject", "PronounObject", "PronounSelf"];
     const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    function buildRegex(en, zh) {
-        const used = TOKENS.filter((t) => en.includes(t));
-        if (!used.length) return null;
-        used.sort((a, b) => en.indexOf(a) - en.indexOf(b));
-        const num = {};
-        used.forEach((t, i) => (num[t] = i + 1));
-        let e = en;
-        let z = zh;
-        for (const t of used) {
-            e = e.split(t).join(` ${t} `);
-            z = z.split(t).join(`$${num[t]}`);
-        }
-        let pat = escRe(e);
-        for (const t of used) {
-            let seen = false;
-            pat = pat.replaceAll(` ${t} `, () => (seen ? `\\${num[t]}` : ((seen = true), "(.+?)")));
-        }
-        return { p: `^${pat}$`, r: z };
-    }
     // BCX / LSCG 補充字典（translations/mods/*.txt，英文→中文），TW 由 OpenCC 轉
     const modMenu = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };
     for (const f of walk(path.join(trRoot, "mods"), (p) => p.endsWith(".txt"))) {
@@ -196,15 +163,6 @@ export function generateDict() {
                 modMenu.TW[k] = overrideMap.has(k) ? overrideMap.get(k) : applyTerms(converter(zh));
             }
         }
-    }
-
-    // 動作訊息 regex：涵蓋 base 動作字典 + mod（LSCG/BCX）含 token 的訊息模板
-    const activityRegex = { CN: /** @type {any[]} */ ([]), TW: /** @type {any[]} */ ([]) };
-    for (const [en, zh] of [...Object.entries(activity.CN), ...Object.entries(modMenu.CN)]) {
-        const rc = buildRegex(en, zh);
-        if (rc) activityRegex.CN.push(rc);
-        const rt = buildRegex(en, overrideMap.has(en) ? overrideMap.get(en) : applyTerms(converter(zh)));
-        if (rt) activityRegex.TW.push(rt);
     }
 
     // base 字典供 DOM observer 用（BC 越來越多選單是 DOM）。DOM 標籤都短，
@@ -251,12 +209,19 @@ export function generateDict() {
             [en, applyTerms(converter(zh))]));
     }
     Object.assign(surfaces.TW.bcplus, readJsonOptional(path.join(trRoot, "mods", "bcplus", "tw.json"), {}));
-    return { surfaces, paths, cnMap, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
+    const compatCN = readJsonOptional(path.join(trRoot, "compat.json"), {});
+    const convertCompat = value => typeof value === "string" ? applyTerms(converter(value)) :
+        Array.isArray(value) ? value.map(rule => ({ ...rule, r: applyTerms(converter(rule.r)) })) :
+        Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, convertCompat(entry)]));
+    const compat = { CN: compatCN, TW: convertCompat(compatCN) };
+    return { compat, surfaces, paths, cnMap, activity, modRegex, bcxHelp, crafting, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
 // Both CLI and release build serialize the same runtime schema.
-export function runtimeDictionary({ cnMap, stats, activityRegex, assetName, ...dictionary }) {
-    return dictionary;
+export function runtimeDictionary(generated, language) {
+    return Object.fromEntries(DICTIONARY_KEYS.map(key => [key, !language ? generated[key] :
+        key === "paths" ? Object.fromEntries(Object.entries(generated.paths).filter(([path]) => path.endsWith(`_${language}.txt`))) :
+            { [language]: generated[key][language] }]));
 }
 
 // 允許 `npm run gen` 直接執行

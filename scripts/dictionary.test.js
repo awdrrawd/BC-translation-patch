@@ -5,7 +5,7 @@ import { build } from "esbuild";
 import { startOnce } from "../src/lifecycle.js";
 
 const fixture = () => ({ paths: { "Test_CN.txt": ["Hello", "你好"] },
-    surfaces: {}, activity: {}, modRegex: {}, bcxHelp: {}, crafting: {}, base: {}, modMenu: {} });
+    surfaces: {}, activity: {}, modRegex: {}, bcxHelp: {}, crafting: {}, base: {}, modMenu: {}, compat: {} });
 let sequence = 0;
 const fresh = () => import(`../src/dictionary.js?test=${sequence++}`);
 
@@ -60,13 +60,13 @@ test("real entry returns before dictionary download and stays loading beyond PCM
     const output = await build({ entryPoints: ["src/index.js"], bundle: true, write: false,
         format: "iife", minify: true, metafile: true, define: {
             __BCTP_VERSION__: '"test"', __BCTP_NAME__: '"TestMod"', __BCTP_FULLNAME__: '"Test"',
-            __BCTP_REPO__: '"https://example.invalid"', __BCTP_DATA_URL__: '"https://example.invalid/data.json"',
+            __BCTP_REPO__: '"https://example.invalid"', __BCTP_DATA_URLS__: JSON.stringify({CN:"https://example.invalid/CN.json",TW:"https://example.invalid/TW.json"}),
         } });
     assert.ok(!Object.keys(output.metafile.inputs).some(file => file.endsWith("dict.json")));
     assert.ok(output.outputFiles[0].contents.length < 500000, "entry must remain small");
     let rejectDownload, signal;
     const timers = new Map();
-    const ctx = { console: { error() {} }, AbortController,
+    const ctx = { TranslationLanguage: "TW", console: { error() {} }, AbortController,
         setTimeout: (fn, delay) => { timers.set(fn, delay); return fn; },
         clearTimeout: fn => timers.delete(fn),
         fetch: (_, options) => { signal = options.signal; return new Promise((_, reject) => { rejectDownload = reject; }); },

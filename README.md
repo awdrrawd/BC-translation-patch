@@ -3,13 +3,13 @@
 為 [Bondage Club](https://gitlab.com/BondageProjects/Bondage-College) 補上官方尚未翻譯的字串，支援**簡體中文 (CN)** 與**繁體中文 (TW)**。以外掛（userscript）方式疊在官方遊戲上，不需修改遊戲檔案。
 
 - **CN 為單一維護來源**，**TW 由 [OpenCC](https://github.com/BYVoid/OpenCC)（`s2twp`）自動生成** + 詞彙/逐句覆寫。
-- 翻譯**按原始檔路徑餵回遊戲自己的翻譯管線**（`TranslationCache` + `TranslationAvailable`），因此**作用域正確、不會有全域字典的英文撞名污染**，也不會覆蓋官方既有的手工翻譯。
+- 翻譯**按原始檔路徑餵回遊戲自己的翻譯管線**（`TranslationCache` + `TranslationAvailable`），因此原生文字保留檔案作用域；補譯與指定資產資料會依生成規則覆寫。
 
 ---
 
 ## 設計原則
 
-BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己的 `.txt`，同一個英文在不同檔可以翻成不同中文（例如 `Loose` 在製作屬性是「鬆」、在別處是「鬆弛」）。所以本外掛**不做全域字典**，而是把翻譯**依原始路徑塞回遊戲的 `TranslationCache`**，讓遊戲原生的 `TranslationString` 去分檔查用 —— 作用域天然正確。
+BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己的 `.txt`，同一個英文在不同檔可以翻成不同中文（例如 `Loose` 的譯法依製作屬性或其他畫面而異）。原生文字會把翻譯**依原始路徑塞回遊戲的 `TranslationCache`**，讓遊戲原生的 `TranslationString` 去分檔查用 —— 作用域天然正確。
 
 只有**不走 CSV 管線的東西**（mod 自己畫的 canvas / DOM、動作字典、聊天訊息）才另外用 hook / observer 攔截翻譯。
 
@@ -17,9 +17,11 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 
 ## 架構總覽
 
-### 建置期：資料 → `dict.json` → bundle
+詳細流程與限制見 [架構檢視](DOCS/architecture-review.md) 和 [互動架構導覽](DOCS/architecture.html)。
 
-`npm run build` 會跑 [`scripts/gen-dict.js`](scripts/gen-dict.js) 把三個來源合併成 [`src/generated/dict.json`](src/generated)，再由 esbuild 打包成 `dist/bc-translation-patch.js`。
+### 建置期：資料 → 獨立 JSON 字庫 + 輕量 bundle
+
+`npm run build` 會跑 [`scripts/gen-dict.js`](scripts/gen-dict.js) 把翻譯來源合併成 [`src/generated/dict.json`](src/generated)，輸出 `dist/translations-<CN|TW>-<hash>.json`，再由 esbuild 打包不含字庫的 `dist/bc-translation-patch.js`。
 
 翻譯來源（依優先序，後者覆寫前者）：
 
@@ -41,10 +43,11 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 | `paths` | 路徑 → 攤平陣列 `[en,zh,...]`，塞進 `TranslationCache` | `inject.js` |
 | `base` | 全部 CSV 字典攤平（≤50 字），DOM 選單通用翻譯 | `mods/index.js` |
 | `activity` | 動作字典 英文→中文 | `ActivityDictionaryText` hook |
-| `assetName` | 道具/部位名（Female3DCG 描述） | DOM observer |
+| `surfaces` | 限定畫面／BC+ 字庫 | surface 和 BC+ adapter |
+| `compat` | 資料化的相容字典與補充項，CN/TW 共用生成流程 | `mods/lookup.js` |
 | `crafting` | 製作屬性名（Text_Crafting 作用域） | dfn observer |
 | `modMenu` | BCX/LSCG 選單字典 | DrawText hooks |
-| `modRegex` | BCX 帶 `PLAYER_NAME` 的動態字串 regex | `mods/index.js`（限 InformationSheet） |
+| `modRegex` | BCX 帶 `PLAYER_NAME` 的動態字串 regex | `mods/lookup.js`（限 InformationSheet） |
 | `bcxHelp` | BCX 塞進 `textarea.value` 的長說明 | `bcxHelp.js` 輪詢 |
 
 ### 執行期：翻譯分層
@@ -58,13 +61,15 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 5. **DOM 選單** — [`domObserver.js`](src/mods/domObserver.js)：`MutationObserver` 翻 `dialog-inventory` 道具名、快捷鍵、製作屬性 `<dfn>`。**啟動時會補掃既有節點**（同樣為了 Electron 晚載入的情境）。
 6. **BCX 特殊表面** — [`bcxHelp.js`](src/mods/bcxHelp.js) 輪詢替換 `textarea.value` 的說明；`chatObserver` 翻聊天記錄輸出的 HTML 說明。
 
-載入分為兩階段：原本網址的 `bc-translation-patch.js` 先建立 `BCTP` 狀態，再於背景下載獨立的 `translations-<內容雜湊>.json`。大型字庫不再包含於入口 JS，因此下載不受 PCM 主程式載入的 30 秒限制；不需修改 PCM 或插件網址。JSON 使用建置時的絕對 Pages 網址，支援 PCM 的內嵌執行與快取重放。
+載入分為兩階段：原本網址的 `bc-translation-patch.js` 先建立 `BCTP` 狀態，再依遊戲目前語言，於背景下載 `translations-CN-<內容雜湊>.json` 或 `translations-TW-<內容雜湊>.json`。非 CN/TW 不下載字庫；首次切換至另一語言才下載另一份，同一頁面切回時重用記憶體快取。大型字庫不再包含於入口 JS，因此下載不受 PCM 主程式載入的 30 秒限制；不需修改 PCM 或插件網址。JSON 使用建置時的絕對 Pages 網址，支援 PCM 的內嵌執行與快取重放。
 
 載入狀態由 `src/lifecycle.js` 管理：`BCTP.status` 為 `loading → ready / failed`，`BCTP.phase` 為 `starting → downloading → initializing → ready`，失敗時保留出錯階段與 `BCTP.error`。PCM 顯示已載入表示入口已執行；`BCTP.status === "ready"` 才代表翻譯已就緒。字庫下載（含回應本文）有獨立的 180 秒逾時。下載失敗時遊戲繼續使用原翻譯，可執行 `BCTP.retry().catch(console.error)` 或重新執行載入器重試。同時重複載入共用初始化 Promise，成功下載的字庫在本次頁面中沿用。
 
-字庫完成後才注入快取、初始化翻譯 hooks，並重建既有畫面及資產名稱。`app.init()` 會等待遊戲函式就緒（最多 30 秒），並沿用已存在的 SDK。若中途失敗，已建立的 hook、observer、計時器與待處理 DOM 工作會清除；已注入的字庫仍保留。
+初始所選語言的字庫完成後才注入快取、初始化翻譯 hooks，並重建既有畫面及資產名稱。非中文也會初始化接口，以便日後切換語言。執行期間切換語言時，`BCTP.loadingLanguage` 表示正在下載的語言；失敗保存在 `BCTP.languageError`，可呼叫 `BCTP.retryLanguage().catch(console.error)` 重試。較晚完成的旧語言請求只保留資料快取，不重畫目前語言。`app.init()` 會等待遊戲函式就緒（最多 30 秒），並沿用已存在的 SDK。若中途失敗，已建立的 hook、observer、計時器與待處理 DOM 工作會清除；已注入的字庫仍保留。
 
 發布時必須一併提供入口 JS 與 `dist/translations-*.json`；現有 Pages 工作流程會發布整個 `dist`。字庫檔名含內容雜湊以避免新舊資料混用，舊字庫也需保留，讓 PCM 快取的舊入口仍可下載相應資料。
+
+查表結果與未命中結果各使用有界快取（menu/activity 各最多 512 筆），在語言、畫面、模組啟用狀態或字庫改變時失效。BCX 指令詳情快取上一幀的翻譯排版；內容、樣式、語言或 context 改變才重新計算。背景頁面跳過 readiness、BC+ 視窗偵測、聊天容器偵測與 BCX 說明輪詢中的工作，並未宣稱遊戲本身停止繪圖。
 
 DOM 分批翻譯會持續排程到佇列清空，去除同一批重複節點，每批最多 24 個；閒置回呼逾時也會處理有限數量，避免忙碌時永遠不翻譯。已處理節點保留修改前文字，切換語言時可從來源重譯或還原。
 
@@ -79,25 +84,29 @@ translations/
   cn/                官方 CN 鏡像（seed 生成，勿手改）
   cn-extra/          ★ 補官方缺口/覆寫（鏡像官方路徑）
   mods/              ★ BCX / LSCG 等 mod 字典 + bcx-help.json
+  compat.json       舊 ECHO 相容資料與 supplement（建置時產生 CN/TW）
   official-tw.json   官方已有 _TW.txt 的路徑清單（seed 生成，避免機翻蓋官方繁中）
   tw-terms.json      ★ TW 全域詞彙替換（"信息":"訊息"）
   tw-overrides.txt   ★ TW 個別字串覆寫（英文一行、繁中一行）
 src/
   index.js           輕量進入點：建立狀態並背景啟動
-  dictionary.js      獨立字庫下載、驗證、逾時與重試
+  dictionary.js      各語言字庫下載、驗證、逾時與快取
+  languageLoader.js  語言切換、延遲載入與過時回應防護
   inject.js          TranslationCache 注入 + TranslationAvailable hook
   reapply.js         注入後重建動作字典 / 螢幕文字快取（解時序）
   lang.js            語系判斷
   mods/
-    index.js         DrawText/動作/聊天 hooks + 統一翻譯查表
+    index.js         DrawText/動作/聊天 hooks 註冊
+    lookup.js        統一查表優先序與相容規則
+    displayText.js   共用原文保存與語言還原
+    bcxCanvas.js     BCX 指令詳情與日誌
+    bcplus.js        BC+ 視窗／確認框 adapter
     domObserver.js   dialog-inventory / 快捷鍵 / dfn 的 DOM 翻譯
     bcxHelp.js       BCX textarea 說明輪詢替換
-    supplement.js    ★ 手寫零星補譯（ECHO 沒收錄的 mod 字串、代名詞…）
-    bc/BCX, bc/LSCG  mod 字典查表層
     html/            聊天記錄 HTML 翻譯
 scripts/
   seed-from-upstream.js  從官方原始碼種入 cn/ 與 official-tw.json
-  gen-dict.js            合併三來源 → dict.json
+  gen-dict.js            合併翻譯來源 → dict.json
   build.js               gen-dict + esbuild 打包 + 產生載入器
   diff-upstream.js       列出官方有英文、我方還沒翻的字串
 ```
@@ -131,7 +140,7 @@ scripts/
 
 ## 維護指南
 
-日常維護只會動到上面標 ★ 的檔，改完 `npm run build` 測試、push 後由 GitHub Actions 自動部署。
+日常維護只會動到上面標 ★ 的檔，改完執行 `npm run check` 驗證、push 後由 GitHub Actions 自動部署。
 
 ### A. 補官方缺口翻譯（最常見）
 
@@ -160,7 +169,7 @@ $value$ 个月
 mod 自己畫 canvas/DOM，不走官方 CSV，字典放 `translations/mods/`：
 
 - **有明確英文原文的**：加到對應的 `translations/mods/bcx/*.txt` 或 `lscg/*.txt`（英文一行、中文一行）。
-- **零星、或 ECHO 沒收錄的**：直接寫在 [`src/mods/supplement.js`](src/mods/supplement.js)（`menu` = canvas 文字、`activity` = 動作訊息模板、`html` = 聊天 HTML）。`supplement` 優先於字典，可用來覆寫。
+- **零星補譯**：優先放對應 `translations/mods` 字典；既有 ECHO 相容資料與優先覆寫位於 [`translations/compat.json`](translations/compat.json)，由同一建置流程產生 CN/TW。
 - **BCX 匯出/匯入等長說明**（塞進 `textarea`）：加到 `translations/mods/bcx-help.json`（`"英文": "中文"`）。
 
 ### C. 繁中用語修正
@@ -175,7 +184,7 @@ TW 由 CN 機轉，出現不順的詞時：
 - **官方缺口**：`npm run diff`（需官方原始碼）→ 產生 `reports/missing-cn.md` 與 JSON。預設檢查連線、角色、道具、背景、製作及共用介面；依檔案作用域比對，不再跨檔去重。道具名稱讀取 CSV 第三欄，對話讀取選項及回應兩欄。
 - **繁中缺口**：`npm run diff -- --tw` → 產生 `reports/missing-tw.md` 與 JSON，檢查實際產出的 TW 字典；未覆寫的檔案則檢查上游官方 TW。
 - **包含單機範圍**：`npm run diff -- --all`（仍排除 KinkyDungeon 目錄）。只產生報告，不會自動翻譯。
-- **執行期缺口**：遊戲內 console 執行 `BCTP.missing()` 匯出「畫面上出現、但翻不到的英文」清單，逐條補進 A/B。
+- **執行期缺口**：遊戲內 console 執行 `BCTP.missing()` 匯出「畫面上出現、但翻不到的英文」清單，逐條補進 A/B。最多保留 500 筆，`BCTP.clearMissing()` 清除後可重新收集。
 
 ### 2026-09 字庫補齊
 

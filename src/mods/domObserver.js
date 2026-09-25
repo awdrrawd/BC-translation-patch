@@ -1,37 +1,8 @@
 import { createIdleBatchProcessor } from "./idleBatch.js";
 
-// dialog-inventory 的道具/動作是 DOM(ElementButton)，label = asset.Description，
-// 官方雖有翻譯卻常沒套用上。這裡在按鈕出現時，用傳入的翻譯函式把 label 文字節點翻掉。
-//
-// ------------------------------------------------------------------------------------
-// 效能修補說明（相對原版的改動）：
-// 原版在 MutationObserver 的回呼裡「同步」對每一個新增節點呼叫 translateTextNodes()
-// （內含 document.createTreeWalker 掃全部文字節點）。當道具選單一次重建大量按鈕格子
-// （例如某個部位有 100+ 種可用/自製道具）時，MutationObserver 會在同一個微任務裡收到
-// 全部新增節點，逐一同步翻譯，這段工作發生在瀏覽器「繪製下一幀」之前，會直接卡住畫面，
-// 而且範圍越大（該角色該部位道具越多）卡越久，導致「特定角色/特定部位才明顯卡頓」。
-//
-// 修補作法：MutationObserver 回呼裡只做「收集要翻譯的候選節點」這種便宜的比對(querySelectorAll)，
-// 真正昂貴的 TreeWalker 逐字翻譯，改成排到瀏覽器閒置時間（requestIdleCallback，不支援時退回
-// rAF+setTimeout）才執行，並且用時間切片(time-slicing)分批處理，避免單次處理量太大時
-// 又整批卡在同一個 idle callback 裡。使用者會先看到英文/未翻譯的格子快速跳出來，
-// 幾十毫秒內文字才轉成中文——肉眼幾乎無感，但不再卡住畫面繪製。
-// ------------------------------------------------------------------------------------
+import { translateValue } from "./displayText.js";
 
-// Keep source text so switching CN/TW can retranslate existing nodes.
-const originals = new WeakMap();
-export function translateValue(node, property, translate) {
-    let record = originals.get(node);
-    const current = node[property];
-    if (!record || current !== record.last) record = { source: current, last: current };
-    const key = record.source.trim();
-    const result = key && translate(key);
-    const value = result ? record.source.replace(key, result) : record.source;
-    if (current !== value) node[property] = value;
-    record.last = value;
-    originals.set(node, record);
-}
-
+// Inventory text is processed in idle batches; dfn waits until BC has read its lookup key.
 /** 只翻文字節點，保留按鈕內的圖片等結構。translate: (string) => string|undefined */
 function translateTextNodes(root, translate) {
     if (!root.isConnected) return; // 節點在排隊等待翻譯期間可能已被移除（例如使用者又切了一次部位）

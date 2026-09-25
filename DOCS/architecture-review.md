@@ -1,69 +1,95 @@
 # BC Translation Patch 架構檢視
 
-檢視日期：2026-09-12。範圍：本機工作樹的 src、scripts、translations 結構、建置與發布設定；包含尚未提交的 BCX 指令補譯。互動導覽見 [architecture.html](architecture.html)。本次只新增文件，不修改執行期程式或刪除資料。
+更新日期：2026-09-25。本文描述目前實作與本次收斂結果，取代 2026-09-12 的建議清單。互動導覽見 [architecture.html](architecture.html)。
 
-## 整體判斷
+## 執行與資料流程
 
-架構已有可維護的基礎，但尚不能視為全面健壯。原生翻譯以路徑隔離、資產依穩定 ID 還原、初始化失敗回收與重試、DOM 分批排程、LSCG 顯示與功能詞彙分離，都是應保留的設計。主要弱點是新舊翻譯來源並存、部分語言切換無法還原、產物 schema 不一致，以及相容性高度依賴上游 DOM／canvas 細節。
+```mermaid
+flowchart TD
+    Sources[translations：CN / cn-extra / mods / ui / compat] --> Gen[gen-dict.js：合併、OpenCC、覆寫]
+    Schema[src/schema.js] --> Gen
+    Schema --> Loader[dictionary.js：驗證與下載]
+    Gen --> Data[dist/translations-CN/TW-hash.json]
+    Entry[index.js → startOnce → app.init] --> Language[languageLoader：按需載入與切換]
+    Language --> Loader
+    Data --> Loader
+    Loader --> Native[inject / reapply：原生快取與資產]
+    Loader --> Lookup[mods/lookup.js：統一查表]
+    Lookup --> Hooks[mods/index.js：Canvas / 動作 / 訊息 hooks]
+    Lookup --> Canvas[bcxCanvas：BCX 詳情與日誌]
+    Lookup --> DOM[DOM / surface / BC+ / 說明欄位]
+    State[displayText：每節點每屬性 source / last] --> DOM
+    Batch[idleBatch：有界分批排程] --> DOM
+```
 
-以下「確認」指可以由程式碼或本次命令重現；「風險」表示路徑存在，但未在實際遊戲證實發生。沒有把未被 npm scripts 列出的維護腳本直接當成死碼。
+入口 JS 先建立 BCTP 狀態，再按遊戲選擇只下載 CN 或 TW 字庫；非中文不下載。執行期間切換語言由既有 readiness watcher 通知 languageLoader，不新增輪詢器。同一語言合併並行請求，成功後保留記憶體快取；過時回應不觸發重畫。下載本文有 180 秒預算，遊戲函式就緒另有 30 秒預算；成功下載後才注入快取與註冊 hooks。初始化失敗由 scope 清除已註冊資源；快取注入保留，重試可沿用字庫。
 
-## 資料與執行流程
+建置與執行期共同使用 `src/schema.js` 的欄位契約：paths、surfaces、activity、modRegex、bcxHelp、crafting、base、modMenu、compat。gen 與 build 共用 serializer；開發用 dict.json 保留完整雙語資料；發布分別輸出 CN/TW，建置後檢查每份 JSON 內容、hash 與入口網址一致，並測試兩份合併可還原完整字庫。舊 hash JSON 必須保留，供 PCM 快取舊入口使用。
 
-1. 維護端：seed 從本機上游更新 cn 鏡像；cn-extra 存補譯，mods 存模組文字，ui/surfaces.json 存限定畫面的標籤。
-2. generateDict 合併資料，OpenCC 與詞彙覆寫產生 TW；輸出 paths 與多個執行期查表字典。
-3. build 產生 dict.json，以 esbuild 打包 IIFE，產生使用者腳本載入器；Pages 目前只部署 dist。
-4. index → startOnce → app.init：先注入快取，再載入 SDK、等待遊戲函式、註冊 hooks／observers。
-5. 原生文字走 TranslationCache；資產與 TextCache 由 reapply 修復；模組 canvas／訊息走 setupMods；DOM 走 inventory、dfn、surfaces、chat 四條 observer 路徑。
+## 本次完成的收斂
 
-## 已確認問題與改善優先序
+| 項目 | 處理與證據 |
+| --- | --- |
+| 舊字典與執行碼混在一起 | 原 BCX／LSCG 字典、supplement、HTML 說明遷到 `translations/compat.json`；移除 11 個舊 JS 字典／wrapper／啟用判斷檔。保留 ECHO 來源與原有匹配順序，資料在建置時產生 CN/TW。 |
+| 多套查表 | `mods/lookup.js` 集中 menu、activity、DOM、crafting、HTML 查表；`mods/index.js` 只負責 hook 註冊與顯示路由。抽取器也使用同一策略，不再 stub 全域變數或讀取不存在的 bcx.txt。 |
+| 死生成資料 | 移除沒有執行期消費端的 activityRegex、assetName 及其生成迴圈。保留仍使用的 PLAYER_NAME modRegex；移除前後既有八個 runtime 字典深度比對一致。 |
+| 重複相容資料 | 移除 197 個被 modMenu 優先命中、永不使用的 fallback 條目，以及 6 條同一 scope 內重複 regex。不同 scope／不同規則不因文字相近而合併。 |
+| DOM 原文保存重複 | `displayText.js` 共用每節點、每屬性的 source/last；BC+、inventory、surface、BCX textarea 都使用它。修正原本同節點不同屬性共用單筆記錄的風險，以及 `$&` 等字面內容被 String.replace 再解讀的問題。 |
+| BCX 說明值的補丁 | 保留必需的 value 輪詢，但共用語言還原機制；CN/TW/英文可切換，外部修改及匯入碼保留。 |
+| 診斷無界增長 | missing 收集最多 500 個唯一字串；保持 `BCTP.missing()` 陣列介面，新增 `BCTP.clearMissing()`。 |
+| 架構資料過時 | 更新本文件、互動圖與 README；新增入口 import graph 可達性及架構導覽／連結回歸測試。 |
 
-| ID | 優先序 | 發現／證據 | 影響與建議 |
-| --- | --- | --- | --- |
-| A01 | 高 | scripts/gen-dict.js 的 CLI 只寫 `{ paths }`；scripts/build.js 寫完整字典。 | `npm run gen` 後，dict.json 缺少 modMenu、surfaces 等資料；直接打包或開發使用它會失去功能。正常 `npm run build` 會重新補全。統一 serializer 與 schema，測試兩個入口的結構一致。 |
-| A02 | 高 | src/mods/supplement.js、bc/BCX、bc/LSCG 與 html/BCX.js 的舊字典直接回傳簡體；外層只判斷 CN/TW 是否啟用。 | TW 查不到新字典而走 fallback 時仍顯示簡體。將舊字典納入同一 CN→TW 建置管線；regex replacement 也需要處理。不要直接移除 fallback。 |
-| A03 | 高 | .github/workflows/build.yml 安裝後直接 build、deploy，未執行 npm test。 | 測試失敗仍可能發布。先加測試閘門，再加 schema／格式驗證；不需每次發布下載上游。 |
-| A04 | 中 | src/mods/bcxHelp.js 每秒直接改 textarea.value，只查英文 key；未保存來源。 | 同一 textarea 已變中文後，CN→TW 或切回英文不會再匹配。限定 BCX 說明欄位並保存 source/last；外部修改後必須放棄舊來源，避免覆蓋匯入碼。 |
-| A05 | 中 | scripts/extract-bcx.js 只讀 translations/mods/bcx.txt；該路徑本次確認不存在。extract-mods.js 只扣舊字典與 supplement。 | 維護報告會重複列出已補的文字。統一讀 generateDict 的有效字典，並將候選擷取與缺漏判定分開。extract-lscg 本來就是候選擷取，不應宣稱其結果是缺漏。 |
-| A06 | 中 | src/mods/index.js 的 missing Set 無上限，所有未命中的 canvas 英文都加入。 | 動態名稱、數值或時間文字可持續累積；並非每筆都是翻譯缺口。增加容量、清除介面與畫面來源；以 opt-in 診斷模式採樣。 |
-| A07 | 中 | scripts/gen-dict.js 的 BASE 扁平合併採首筆勝出。find-collisions 本次在 cn 短字串中找到 526 個多譯義 key。 | 不等於 526 個畫面錯譯，但證實全域查表不能表示作用域。inventory 改用資產／動作字典優先，其餘按 surface 查表；保留路徑式注入。 |
-| A08 | 中 | scripts/lib/parseTxt.js 奇數尾行會略過，空行可能改變配對；gen-dict.js 同名 mod key 後寫覆蓋。 | 維護者可能不知資料遺失或覆蓋。新增帶檔名／行號的嚴格驗證及衝突報告，合法覆寫使用明確規則。此項是容錯缺口，不代表現有檔案已損壞。 |
+相容資料源自原有 SugarChain-Studio/echo-activity-ext 移植字典，並非重新翻譯其內容。`compat.json` 的 regex 記錄以 `p` 保存原始 pattern、`f` 保存 flags、`r` 保存 replacement；TW 只轉換譯文，不修改 pattern、flags 或捕獲參照。
 
-## 死碼、未消費資料與合理重複
+遷移時先對照舊函式，1,516 個舊字典條目的 CN 查表結果一致；去重後又比較 CN/TW、BCX/LSCG 啟用與停用組合。繁中 fallback 現在會走 OpenCC，而非直接回傳簡中。
 
-| 項目 | 判定 | 處理建議 |
-| --- | --- | --- |
-| src/mods/index.js 的 ASSET 常數 | 確認宣告後未再引用。 | 可移除宣告；但是否改用 assetName 解決 A07，應先決定。 |
-| generateDict 的 activityRegex／buildRegex／TOKENS | 確認產生並輸出，但 src 沒有 activityRegex 消費端；現行聊天翻譯走模板 hook。 | 可一起停止生成、序列化；保留 modRegex，後者確實供 PLAYER_NAME 比對使用。 |
-| generateDict 的 assetName | 目前只有上述未使用 ASSET 讀取，未參與實際查表。 | 選擇接到 inventory 專用查表，或移除生成；不要僅刪常數而留下資料。 |
-| 舊 BCX/LSCG menu 與 activities | 有被 units fallback 呼叫，並非死碼。 | 與 translations/mods 有多來源維護成本；先遷移並比較命中結果，再刪重複條目。 |
-| enable.js、pronouns.js、html/utils 的型別判斷函式 | 已追蹤到實際呼叫，並非死碼。 | 保留；不要以「未在入口直接 import」判斷。 |
-| DOM 與 canvas 的翻譯路徑 | 不同渲染介面需要不同 adapter，不能直接合併。 | 共用語言／查表／來源保存機制，但保留各自選取範圍。 |
+上一輪將資料移出入口後，入口約 28 KB、双語字庫 6.42 MB。本輪入口約 31 KB，發布字庫拆為 **CN 2,307,106 bytes／TW 4,112,172 bytes**；首次下載只取所選語言，相對雙語 JSON 分別減少約 **64%／36%**。TW 較大是因為 TW 覆寫 184 個原生檔案，而 CN 多數沿用官方翻譯，只覆寫 37 個。舊 hash 產物仍保留，但不會全部下載。未量測 heap、FPS 或實際耗電。
 
-generateDict 本次量測：activityRegex 737 筆 CN 規則，CN+TW JSON 為 126,203 bytes；assetName 1,856 個 CN key，CN+TW 為 118,642 bytes。合計 244,845 bytes 是生成資料的 UTF-8 JSON 大小，**不是已證明的最終 bundle／壓縮傳輸節省量**。BASE 為 17,387 個 CN key、1,847,276 bytes；paths 217 個路徑、3,460,641 bytes。未做 heap 或遊戲效能量測。
+## 查表優先序與作用域
 
-## 需要實測的健壯性風險
+| 用途 | 優先序 |
+| --- | --- |
+| Canvas menu | 明確 surface → compat.supplement.menu → modMenu → BCX/LSCG compat → PLAYER_NAME regex；最後才拆組合標籤。 |
+| 動作模板 | compat.supplement.activity → 原生 activity → modMenu → BCX/LSCG compat → supplement.menu。 |
+| 一般 DOM 標籤 | base → menu → activity。base 仍是 ≤50 字的扁平字庫，不適用所有同文異義情況。 |
+| 製作屬性 | crafting → 一般 DOM。 |
+| BC+ | surfaces.bcplus 專用查表與動態模板，TW 可由 mods/bcplus/tw.json 覆寫。 |
+| 聊天 HTML | compat.supplement.html → compat.html，精確匹配。 |
 
-- **DOM 重掃成本**：surfaces observer 對每筆 mutation 的 target 查詢整個子樹，之後才進 Set 去重。同一大容器的多筆 mutation 仍會重複選取；inventory 每批限制 24 個根節點，但單根的 TreeWalker 沒有時間上限。先量測大型衣櫃、連續切換部位，再將候選根節點收集也批次化。
-- **讀回文字的 UI**：dfn 以固定 300ms 延遲假設上游已用英文組好 key，且目前掃全頁 dfn。應改為明確製作畫面範圍及可驗證的完成時機，測試重開 tooltip 和重建屬性。
-- **原地變更漏偵測**：watchReadiness 比較參照與長度，不能偵測相同陣列內等長替換或 CSV 儲存格原地更新。正常載入已覆蓋，外掛熱更新需驗證；必要時加明確事件／版本，不建議每 250ms 深比較全部資料。
-- **聊天歷史與語言切換**：chat observer 每 500ms 才接上新容器，沒有補掃既有歷史或來源還原。可能漏掉容器出現到接上的訊息；既有 HTML 翻譯也不會 CN/TW 重套。需明確決定是否支援歷史回譯。
-- **成功後卸載**：scope.dispose 僅用於初始化失敗；成功 API 沒有 stop/unload。這不等於一般遊玩必然洩漏，但不支援安全熱換版本。若提供卸載，需同時定義快取／已改 DOM 是否還原，不能只停止 timers。
-- **上游畫面耦合**：roomAdmin 以固定座標識別模板名稱；surfaces 依 DOM ID；BCX 詳細指令使用自有 BCXDrawTextWrap，繞過現有全域 hook。上游變更後需 adapter fixture 與實際顯示測試，字典存在不代表畫面有翻譯。
-- **ECHO 共存**：多個模組攔截同一畫布與訊息函式，可能受順序影響。本次未測兩種載入順序，不建議直接接管 ECHO。保留功能詞彙與輸入值是相容性底線。
+BCX 舊 menu fallback 限 InformationSheet 且 BCX 已載入；LSCG fallback 需 Player.LSCG。PLAYER_NAME regex 保留既有 InformationSheet 限制。非 CN/TW 不進行翻譯，保存原文的 DOM 可還原。
 
-## 建議演進架構
+Canvas、DOM、聊天模板不能合成同一個攔截器：它們可修改的值與時機不同。新 adapter 應重用查表和 source/last 機制，保持清楚的畫面選取範圍。
 
-維持「維護端產生資料、玩家端只查表」；不要引入不必要的框架或在遊戲中跑 OpenCC。
+BCX 詳情使用私有 BCXDrawTextWrap：一般 DrawText hook 無法處理。bcxCanvas 只在 BCX InformationSheet 的同步渲染內包裝 context 的 measureText/fillText，記錄完整段落、翻譯後重新換行，finally 還原方法。直接讀取遊戲 `let MainCanvas`，不可改用 `globalThis.MainCanvas`，後者可能只是同名 HTML 元素；接口不完整時放行原流程。
 
-1. **第一批：一致性與發布保障**。統一 gen/build schema、CI 加測試、修正舊抽取器的字庫路徑、移除確定無消費端的 activityRegex。
-2. **第二批：翻譯來源整合**。舊字典與 supplement 遷到可生成 CN/TW 的資料層；定義 `lookup(scope, language, text)` 的優先序及來源資訊，處理同文異義。
-3. **第三批：adapter 與生命週期**。BC 原生、BCX canvas、LSCG DOM、聊天顯示各有 adapter；統一 cleanup、來源保存與語言事件，補語言切換／UI 重建測試。
-4. **第四批：可觀測性與相容性**。有界 missing 報告記錄 scope 和版本；維護端記錄上游 commit；測試 ECHO 載入順序和新版本 DOM fixture。全面接管翻譯留作使用者選項。
+## 維護與品質
 
-## 本次驗證與界線
+- `npm run check`：翻譯品質驗證 → 生成字庫 → 測試 → 建置 → gen/build/hash 一致性檢查。
+- 本次 **55/55 測試通過**，包含 lexical Canvas、初始化回收、下載重試、BC+ Shadow DOM、option machine value、事件與輸入保留、CN/TW/英文切換、compat 規則、原文記錄隔離及架構導覽。
+- 翻譯品質檢查 **0 個新增問題，1,679 個既有 baseline 問題**；本次未擴大 baseline，也不將既有翻譯品質問題當成死碼刪除。
+- CI 的 verify 成功後才可 deploy；不是本次新增的功能，已存在於工作流程。
+- 測試證實每個 src JavaScript 檔案都可從入口 import graph 到達。這是檔案層級檢查，不能證明每個分支都在實際遊戲執行。
+- 抽取器產出的是候選；字典命中不等於 UI 已驗證。上游版本更新仍需實際打開相應畫面。
 
-- `npm test`：19/19 通過，包含 token 保留、初始化失敗回收與重試、資產 CN/TW/EN 還原、idle 分批，以及指定 surface 的值／事件保留。
-- 靜態追蹤 src imports／exports 與 activityRegex、assetName、ASSET 引用；generateDict 直接量測資料大小；執行 find-collisions。
-- 測試使用 Node 與模擬遊戲環境，**不是瀏覽器端完整 E2E**。未驗證真實遊戲、遠端最新原始碼、ECHO 同時安裝或長時間效能。
-- 本文件的建議尚未套用；19 項通過只代表現有測試範圍，不能消除上述未覆蓋問題。
+## 本輪效能與下載改善
+
+- menu/activity 各快取最多 512 個結果，包含未命中；語言、畫面、模組開關與字庫參照變更會失效。測試同一未命中文字重複 1,000 次不再讀取來源字典。
+- BCX 詳情只保留上一個翻譯排版；相同畫面下一幀不再做中文字寬量測，保留 BCX 自身必要的量測與繪圖。字型、内容、語言、字庫譯文、context 或量測函式改變後重算。
+- surfaces 同批 100 筆重複 mutation 只查詢一次最高共同子樹；BC+ 屬性變更只排入該元素，不重掃子樹。
+- readiness 的 AssetGroup family 清單依參照／長度快取。頁面隱藏時略過 readiness 與三個 UI 輪詢工作的主體；計時器仍存在，未承諾零耗電。
+- BCX textarea 僅在 BCX InformationSheet 且字庫就緒時查詢；離開畫面／非中文會還原已處理說明。
+- 初始化失敗使用 BCTP.retry()；運行中另一語言下載失敗不拆除已工作的 hooks，使用 BCTP.retryLanguage() 重試。TranslationAvailable 的路徑快取依字庫 revision 更新，支援後載入語言。
+
+以上證據是請求數、掃描數與量測呼叫數的回歸測試，不是遊戲 FPS、CPU 或耗電 benchmark。
+
+## 保留的限制與後續驗證
+
+1. Canvas 座標、BCX 標題、DOM selector 與 BC+ Shadow DOM 都依賴上游結構；模擬測試無法取代真實遊戲與多插件載入順序驗證。
+2. compat 仍保留原有寬鬆 regex、翻譯品質與優先序。這次只移除相同 pattern 的後續重複規則，沒有重寫每條語意。
+3. base 扁平查表仍可能遇到同文異義；逐步把已確認問題移到專用 surface，而非擴大全域替換。
+4. surfaces 已先合併同批變動的祖先根節點，避免重複子樹掃描；單一大型 TreeWalker 與 dfn 的 300ms 延遲仍需實測。
+5. watchReadiness 以參照／長度偵測，無法涵蓋所有等長原地資料更新。
+6. chat HTML observer 尚未提供歷史訊息的完整語言回復；成功初始化後尚無完整 stop/unload API。不要以停掉 timers 代替快取、DOM 和 hook 的完整還原。
+7. BCX 長日誌收合時會被上游截斷；完整句型未必可命中，展開後才能處理完整文字。未宣稱涵蓋所有日誌類型。
+
+本次未在真實遊戲進行 E2E、長時間效能或 ECHO／其他插件共存測試，未推送或部署。

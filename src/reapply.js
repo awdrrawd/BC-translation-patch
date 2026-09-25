@@ -22,7 +22,7 @@ export function reapply() {
     }
 }
 
-export function setupReapply(mod, addCleanup) {
+export function setupReapply(mod, addCleanup, languageChanged = () => {}) {
     // Also repair a late official translation response which was already in flight.
     mod.hookFunction("TranslationAssetProcess", 10, (args, next) => {
         const result = next(args);
@@ -46,6 +46,7 @@ export function setupReapply(mod, addCleanup) {
                 }
             }
             lastLanguage = globalThis.TranslationLanguage;
+            languageChanged();
             document.dispatchEvent(new Event("bctp-language-change"));
         }
     }, addCleanup);

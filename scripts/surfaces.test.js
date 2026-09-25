@@ -1,7 +1,32 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { generateDict } from "./gen-dict.js";
-import { translateSurface, translateCraftShare, SURFACES } from "../src/mods/surfaces.js";
+import { translateSurface, translateCraftShare, SURFACES, setupSurfaceObserver } from "../src/mods/surfaces.js";
+import { parseHTML } from "linkedom";
+
+test("surface mutation batches scan each highest affected subtree once", t => {
+    const { document } = parseHTML('<html><body><div id="layering"><div><legend>ArmMask</legend></div></div></body></html>');
+    const root = document.getElementById("layering"), child = root.firstElementChild;
+    let notify, scans = 0;
+    const work = [], cleanups = [];
+    const globals = { document,
+        MutationObserver: class { constructor(fn) { notify = fn; } observe() {} disconnect() {} },
+        requestIdleCallback: fn => { work.push(fn); return 1; }, cancelIdleCallback() {}, cancelAnimationFrame() {} };
+    const previous = Object.fromEntries(Object.keys(globals).map(key => [key, Object.getOwnPropertyDescriptor(globalThis, key)]));
+    Object.assign(globalThis, globals);
+    t.after(() => { for (const [key, descriptor] of Object.entries(previous)) {
+        if (descriptor) Object.defineProperty(globalThis, key, descriptor); else delete globalThis[key];
+    } });
+    setupSurfaceObserver(dictionaries, () => "TW", fn => cleanups.push(fn));
+    const original = root.querySelectorAll.bind(root);
+    t.mock.method(root, "querySelectorAll", selector => { scans++; return original(selector); });
+    t.mock.method(child, "querySelectorAll", () => assert.fail("nested root must not be rescanned"));
+    notify(Array.from({ length: 100 }, () => ({ target: root, addedNodes: [child] })));
+    assert.equal(scans, 1);
+    while (work.length) work.shift()({ didTimeout: true });
+    assert.equal(root.querySelector("legend").textContent, "手臂遮罩");
+    cleanups.forEach(fn => fn());
+});
 
 const dictionaries = generateDict().surfaces;
 const element = (text, tagName="SPAN") => ({tagName, childNodes:[{nodeType:3,data:text}]});

@@ -22,6 +22,7 @@ class ChatTranslator {
         });
         let previous = null;
         this.timer = setInterval(() => {
+            if (document.hidden) return;
             const current = document.getElementById("TextAreaChatLog");
             if (current === previous) return;
             this.observer.disconnect();

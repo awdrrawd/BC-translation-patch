@@ -27,9 +27,13 @@ console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles
 // 2) 打包
 ensureDir(path.join(distDir, "x"));
 // Content-address the data so a cached entry never silently uses another build's dictionary.
-const dictionaryText = JSON.stringify(runtimeDictionary(generated));
-const dictionaryName = `translations-${createHash("sha256").update(dictionaryText).digest("hex").slice(0, 16)}.json`;
-fs.writeFileSync(path.join(distDir, dictionaryName), dictionaryText, "utf8");
+const dictionaryUrls = {};
+for (const language of ["CN", "TW"]) {
+    const text = JSON.stringify(runtimeDictionary(generated, language));
+    const name = `translations-${language}-${createHash("sha256").update(text).digest("hex").slice(0, 16)}.json`;
+    fs.writeFileSync(path.join(distDir, name), text, "utf8");
+    dictionaryUrls[language] = new URL(name, cfg.pagesBaseUrl).href;
+}
 await esbuild.build({
     entryPoints: [path.join(repoRoot, "src", "index.js")],
     outfile: path.join(distDir, cfg.bundleName),
@@ -44,7 +48,7 @@ await esbuild.build({
         __BCTP_NAME__: JSON.stringify(cfg.modName),
         __BCTP_FULLNAME__: JSON.stringify(cfg.modFullName),
         __BCTP_REPO__: JSON.stringify(cfg.repository),
-        __BCTP_DATA_URL__: JSON.stringify(new URL(dictionaryName, cfg.pagesBaseUrl).href),
+        __BCTP_DATA_URLS__: JSON.stringify(dictionaryUrls),
     },
     banner: {
         js: `/* ${cfg.modFullName} v${pkg.version} | ${cfg.repository} | build ${new Date().toISOString()} */`,

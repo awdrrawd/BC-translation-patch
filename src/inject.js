@@ -1,4 +1,5 @@
 import { PATHS } from "./data.js";
+import { dictionaryRevision } from "./dictionary.js";
 
 // 把翻譯按「原始檔路徑」餵回遊戲自己的翻譯管線：
 //   1. 預先塞進 TranslationCache[路徑]（遊戲會優先用快取，不再去抓官方檔）。
@@ -19,10 +20,14 @@ export function injectTranslationCache() {
 
 /** 讓 TranslationAvailable 對我方路徑回 true（需 bcModSdk，故在載入後才掛）。 */
 export function setupInjection(mod) {
-    const KEYSET_UPPER = new Set(Object.keys(PATHS).map(k => k.toUpperCase()));
+    let revision = -1, keys = new Set();
     mod.hookFunction("TranslationAvailable", 0, (args, next) => {
         const p = args[0];
-        if (typeof p === "string" && KEYSET_UPPER.has(p.trim().toUpperCase())) return true;
+        if (dictionaryRevision !== revision) {
+            keys = new Set(Object.keys(PATHS).map(key => key.toUpperCase()));
+            revision = dictionaryRevision;
+        }
+        if (typeof p === "string" && keys.has(p.trim().toUpperCase())) return true;
         return next(args);
     });
 }
