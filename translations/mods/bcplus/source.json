@@ -1,0 +1,9 @@
+{
+  "mirror": "https://github.com/awdrrawd/Bondage-College-Mirror.git",
+  "branch": "bcplus",
+  "reviewedMirrorCommit": "ec6eeacb2985fda9126e331bb8c6e1346eb451a2",
+  "upstream": "https://github.com/Seles84/bc-plus",
+  "upstreamCommitPrefixFromMirrorMessage": "6afab1697d4b",
+  "uiHost": "BCPUIWindow",
+  "scope": "BC+ open Shadow DOM display strings; no upstream execution, data changes or translated commands"
+}
