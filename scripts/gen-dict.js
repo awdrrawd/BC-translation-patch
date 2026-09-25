@@ -250,6 +250,7 @@ export function generateDict() {
         surfaces.TW[scope] = Object.fromEntries(Object.entries(entries).map(([en, zh]) =>
             [en, applyTerms(converter(zh))]));
     }
+    Object.assign(surfaces.TW.bcplus, readJsonOptional(path.join(trRoot, "mods", "bcplus", "tw.json"), {}));
     return { surfaces, paths, cnMap, activity, activityRegex, modRegex, bcxHelp, assetName, crafting, base, modMenu, stats: { cnFiles, twFiles, mod: Object.keys(modMenu.CN).length } };
 }
 
