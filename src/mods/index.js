@@ -12,6 +12,7 @@ import { supplement } from "./supplement.js";
 import { setupDomObserver } from "./domObserver.js";
 import { setupBcxHelp } from "./bcxHelp.js";
 import { setupBcplusObserver } from "./bcplus.js";
+import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
 
 // BCX / LSCG 翻譯層（字典移植自 Echo 的动作拓展 https://github.com/SugarChain-Studio/echo-activity-ext ）。
 // 這些 mod 自己畫 HTML/canvas，不走遊戲 CSV 管線，所以用 hook + observer 攔截。
@@ -121,9 +122,11 @@ function translateDfn(key) {
 /** @param {any} mod bcModSdk 註冊物件 */
 export function setupMods(mod, addCleanup) {
     const on = () => !!activeLang();
+    const observeBcxCanvas = setupBcxCanvas(mod, tryMenu, activeLang);
 
     for (const fn of ["DrawText", "DrawTextFit", "DrawTextWrap", "DynamicDrawText"]) {
         mod.hookFunction(fn, 10, (args, next) => {
+            observeBcxCanvas(fn, args);
             if (on() && typeof args[0] === "string") {
                 const screen = globalThis.CurrentScreen;
                 if (isRoomTemplateName(fn, args, screen)) {
@@ -131,7 +134,7 @@ export function setupMods(mod, addCleanup) {
                     if (name) args[0] = name;
                     return next(args);
                 }
-                const t = roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
+                const t = translateBcxLog(fn, args, activeLang(), tryMenu) || roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
                 if (t) args[0] = t;
                 else if (/[A-Za-z]/.test(args[0])) missing.add(args[0].trim());
             }
