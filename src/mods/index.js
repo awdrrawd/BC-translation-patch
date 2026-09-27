@@ -8,6 +8,7 @@ import { ChatHistoryTranslator } from "./html/utils/chatObserver.js";
 import { setupDomObserver } from "./domObserver.js";
 import { setupBcxHelp } from "./bcxHelp.js";
 import { setupBcplusObserver } from "./bcplus.js";
+import { translateBcplusRoomNotice } from "./bcplusRooms.js";
 import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
 
 import { createLookup } from "./lookup.js";
@@ -76,7 +77,7 @@ export function setupMods(mod, addCleanup) {
     // 本地訊息（部分 mod 的提示/動作）
     mod.hookFunction("ChatRoomSendLocal", 0, (args, next) => {
         if (on() && typeof args[0] === "string") {
-            const t = tryMenu(args[0]);
+            const t = translateBcplusRoomNotice(args[0], GEN.surfaces, activeLang()) || tryMenu(args[0]);
             if (t) args[0] = t;
         }
         return next(args);

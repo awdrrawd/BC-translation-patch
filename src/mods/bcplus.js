@@ -10,6 +10,7 @@ const patterns = [
     [/^Rules in this contract \((\d+)\)$/, "Rules in this contract ({count})", ["count"]],
     [/^Rules \((\d+)\)$/, "Rules ({count})", ["count"]],
     [/^(\d+) rules$/, "{count} rules", ["count"]],
+    [/^Template limit reached \((\d+)\)\.$/, "Template limit reached ({count}).", ["count"]],
     [/^(\d+) min$/, "{count} min", ["count"]],
     [/^(\d+) h$/, "{count} h", ["count"]],
     [/^(\d+) d$/, "{count} d", ["count"]],
@@ -29,8 +30,18 @@ export function translateBcplusText(text, dictionaries, lang) {
     if (!map || !key) return text;
     let translated = Object.hasOwn(map, key) ? map[key] : undefined;
     const render = (template, values) => map[template]?.replace(/\{(\w+)\}/g, (token, name) => values[name] ?? token);
-    const module = /^(Rules|Curses|Punishments|Contracts|Commands|Relationships|Pet|Statistics|Log) module enabled$/.exec(key);
+    const module = /^(Rules|Curses|Punishments|Contracts|Commands|Relationships|Pet|Statistics|Log|Rooms) module enabled$/.exec(key);
     if (!translated && module) translated = render("{module} module enabled", { module: map[module[1]] || module[1] });
+    // RoomsView.metaLine: preserve the locale-formatted date and fixed part order.
+    const roomMeta = /^((?:\d+ slots · )?(?:hidden · )?(?:locked · )?(?:map · )?)saved (.+)$/.exec(key);
+    if (!translated && roomMeta) {
+        const parts = roomMeta[1].split(" · ").filter(Boolean).map(part => {
+            const slots = /^(\d+) slots$/.exec(part);
+            return slots ? render("{count} slots", { count: slots[1] }) : map[part] || part;
+        });
+        parts.push(render("saved {date}", { date: roomMeta[2] }));
+        if (parts.every(Boolean)) translated = parts.join(" · ");
+    }
     const sort = /^Sort: (Category|Custom)$/.exec(key);
     if (!translated && sort) translated = render("Sort: {mode}", { mode: map[sort[1]] || sort[1] });
     const argument = /^(.*) \(uses the argument field\)$/.exec(key);
@@ -81,6 +92,10 @@ function update(node, property, read, write, dictionaries, lang) {
 /** Only call on elements inside a verified BC+ window or standalone modal. */
 export function translateBcplusElement(element, dictionaries, lang) {
     if (element.closest(skip)) return;
+    // RoomsView renders a user-owned room name directly above its metadata.
+    // Names such as "Go", "Rooms" or "saved 2026" must remain literal.
+    if (element.matches("div.truncate.font-semibold") &&
+        element.nextElementSibling?.matches("div.truncate.text-sm.text-fg-dim")) return;
     for (const attr of ["title", "placeholder", "aria-label"]) {
         update(element, attr, () => element.getAttribute(attr), value => {
             if (value === null) element.removeAttribute(attr);
