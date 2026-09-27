@@ -5,6 +5,62 @@ import { parseHTML } from "linkedom";
 import { generateDict } from "./gen-dict.js";
 import { translateBcplusElement, translateBcplusText, setupBcplusObserver } from "../src/mods/bcplus.js";
 import { tokens } from "./validate-translations.js";
+import { translateBcplusRoomNotice } from "../src/mods/bcplusRooms.js";
+
+test("BC+ Rooms templates translate display and dynamic metadata without modifying names, commands or actions", () => {
+    const { root } = fixture();
+    root.innerHTML = `<p>Templates snapshot a room's full setup. <strong>Go</strong> joins the room when it
+        exists and recreates it from the snapshot when it does not - also available as
+        <code>/bcp room &lt;name&gt;</code>. On BC's room creation screen, the BC+ button
+        on the background preview opens this page and <strong>Fill form</strong> loads a
+        template into the form instead.</p>
+        <button title="Snapshot the room you are in as a new template">Save current room</button>
+        <div class="row"><div><div class="truncate font-semibold">Go</div>
+        <div class="truncate text-sm text-fg-dim">10 slots · hidden · locked · map · saved 2026/9/27</div></div>
+        <button title="Overwrite this template with the room you are in">Update</button>
+        <button title="Fill the room form behind this window from this template">Fill form</button>
+        <button title="Join this room, or recreate it if it does not exist">Go</button></div>
+        <p id="limit">Template limit reached (20).</p><label>Rooms module enabled</label>`;
+    const go = root.querySelector('.row button:last-child');
+    let clicks = 0; go.addEventListener("click", () => clicks++);
+    for (const lang of ["CN", "TW"]) {
+        scan(root, lang);
+        assert.equal(root.querySelector('.font-semibold').textContent, "Go");
+        assert.equal(root.querySelector('code').textContent, "/bcp room <name>");
+        assert.ok(root.querySelector('.text-sm').textContent.includes("2026/9/27"));
+        assert.ok(!root.querySelector('.text-sm').textContent.includes("slots"));
+        assert.equal(go.textContent, dictionaries[lang].bcplus.Go);
+        assert.ok(!root.querySelector('p').textContent.includes("joins the room"));
+        assert.ok(!root.querySelector('label').textContent.includes("module enabled"));
+        assert.ok(!root.querySelector('#limit').textContent.includes("Template limit"));
+        go.click();
+    }
+    assert.equal(clicks, 2);
+    root.querySelector('.font-semibold').textContent = "Rooms";
+    scan(root, "TW"); assert.equal(root.querySelector('.font-semibold').textContent, "Rooms");
+    go.textContent = "Overwrite?"; scan(root, "TW"); assert.equal(go.textContent, dictionaries.TW.bcplus["Overwrite?"]);
+    scan(root, null);
+    assert.equal(root.querySelector('.text-sm').textContent, "10 slots · hidden · locked · map · saved 2026/9/27");
+    assert.equal(root.querySelector('button').textContent, "Save current room");
+    for (const text of ["saved 9/27/2026", "20 slots · saved 2026年9月27日", "hidden · saved 27.9.2026"]) {
+        assert.notEqual(translateBcplusText(text, dictionaries, "TW"), text);
+    }
+});
+
+test("BC+ room notices only translate the local prefixed wrapper and preserve room names and server codes", () => {
+    const wrap = text => `<p style='background-color:#3b2e52;color:#f2eefa;border-left:3px solid #8469b6;padding:2px 6px;margin-bottom:0.25em;margin-top:0'>BC+: ${text}</p>`;
+    for (const lang of ["CN", "TW"]) {
+        const translated = translateBcplusRoomNotice(wrap('Joined "Rooms $& &lt;test&gt;".'), dictionaries, lang);
+        assert.ok(translated.includes("Rooms $& &lt;test&gt;"));
+        assert.ok(!translated.includes("Joined"));
+        const rejected = translateBcplusRoomNotice(wrap('Could not enter "Go" (RoomFull).'), dictionaries, lang);
+        assert.ok(rejected.includes("Go") && rejected.includes("RoomFull"));
+        assert.ok(!translateBcplusRoomNotice(wrap('Cannot go to "X" - a rule does not allow you to enter that room.'), dictionaries, lang).includes("a rule"));
+    }
+    assert.equal(translateBcplusRoomNotice('Joined "Room".', dictionaries, "TW"), undefined);
+    assert.equal(translateBcplusRoomNotice(wrap('Joined "Room".'), dictionaries, null), undefined);
+    assert.equal(translateBcplusRoomNotice(wrap('Joined "<img>".'), dictionaries, "TW"), undefined);
+});
 
 const dictionaries = generateDict().surfaces;
 function fixture() {

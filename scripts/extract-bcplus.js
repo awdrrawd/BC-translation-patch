@@ -14,7 +14,7 @@ const normalize = text => text.replace(/\s+/g, " ").trim();
 function add(text, file) {
     const key = normalize(text);
     if (!/[A-Za-z]/.test(key) || key.includes("{{") || key.includes("}}") || key.includes("${") || key.includes('class="')) return;
-    if (["BC+", "ID", "/bcp help"].includes(key)) return; // product names and commands stay unchanged
+    if (["BC+", "ID"].includes(key) || key.startsWith("/bcp ")) return; // product names and commands stay unchanged
     if (!entries.has(key)) entries.set(key, new Set());
     entries.get(key).add(path.relative(root, file).replaceAll("\\", "/"));
 }
@@ -48,6 +48,13 @@ for (const file of walk(root, f => /\.(ts|vue)$/.test(f))) {
             add(match[1].replaceAll("&amp;", "&").replaceAll("&middot;", "·"), file);
         }
         for (const match of template.matchAll(/(?<![:\w-])(?:title|placeholder|aria-label)="([^"{}]+)"/g)) add(match[1], file);
+        // Vue bound tooltip branches (RoomsView uses single-quoted literals).
+        for (const match of template.matchAll(/:(?:title|placeholder|aria-label)="([^"]+)"/g)) {
+            for (const literal of match[1].matchAll(/'([^'\\]*(?:\\.[^'\\]*)*)'/g)) {
+                const text = literal[1].replace(/\\'/g, "'");
+                if (/^[A-Z]/.test(text)) add(text, file); // exclude action IDs in conditions, e.g. isArmed('delete', ...)
+            }
+        }
         for (const match of template.matchAll(/\{\{([\s\S]*?)\}\}/g)) {
             dynamicCandidates.push({ expression: normalize(match[1]), file: path.relative(root, file).replaceAll("\\", "/"), review: "Must verify rendered composition, not only component literals" });
             for (const literalMatch of match[1].matchAll(new RegExp(`${literal}(?:\\s*\\+\\s*${literal})*`, "g"))) {
