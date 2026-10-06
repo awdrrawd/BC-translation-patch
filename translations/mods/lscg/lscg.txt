@@ -356,7 +356,7 @@ SourceCharacter 将液体喷满 TargetCharacter 的肚子。
 SourceCharacter sprays all over TargetCharacter.
 SourceCharacter 将液体喷满 TargetCharacter。
 SourceCharacter takes PronounPossessive own ActivityAsset from around PronounPossessive neck.
-SourceCharacter 从 PronounPossessive 自己的脖子上取下自己的 ActivityAsset。
+SourceCharacter 从 PronounPossessive 自己的脖子上取下 PronounPossessive 自己的 ActivityAsset。
 SourceCharacter takes TargetCharacter's ActivityAsset from around TargetPronounPossessive neck.
 SourceCharacter 从 TargetPronounPossessive 脖子上取下 TargetCharacter 的 ActivityAsset。
 SourceCharacter takes a selfie.

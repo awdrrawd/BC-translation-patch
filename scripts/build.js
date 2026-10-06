@@ -27,6 +27,10 @@ console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles
 // 2) 打包
 ensureDir(path.join(distDir, "x"));
 // Content-address the data so a cached entry never silently uses another build's dictionary.
+// Drop stale content-addressed dictionaries (including legacy unprefixed ones) so dist never accumulates old builds.
+for (const file of fs.readdirSync(distDir)) {
+    if (/^translations-.*\.json$/.test(file)) fs.rmSync(path.join(distDir, file));
+}
 const dictionaryUrls = {};
 for (const language of ["CN", "TW"]) {
     const text = JSON.stringify(runtimeDictionary(generated, language));
