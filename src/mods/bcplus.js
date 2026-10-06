@@ -30,7 +30,7 @@ export function translateBcplusText(text, dictionaries, lang) {
     if (!map || !key) return text;
     let translated = Object.hasOwn(map, key) ? map[key] : undefined;
     const render = (template, values) => map[template]?.replace(/\{(\w+)\}/g, (token, name) => values[name] ?? token);
-    const module = /^(Rules|Curses|Punishments|Contracts|Commands|Relationships|Pet|Statistics|Log|Rooms) module enabled$/.exec(key);
+    const module = /^(Rules|Curses|Punishments|Contracts|Commands|Relationships|Pet|Statistics|Log|Rooms|Typing indicator) module enabled$/.exec(key);
     if (!translated && module) translated = render("{module} module enabled", { module: map[module[1]] || module[1] });
     // RoomsView.metaLine: preserve the locale-formatted date and fixed part order.
     const roomMeta = /^((?:\d+ slots · )?(?:hidden · )?(?:locked · )?(?:map · )?)saved (.+)$/.exec(key);

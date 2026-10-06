@@ -204,7 +204,8 @@ test("reported BC+ screenshot strings translate as rendered compositions in CN a
         "Kneel", "Stand up", "Close eyes", "Open eyes", "Set emoticon", "Forced say", "Go to room", "Write lines",
         "Pick", "Your Lover", "Your BC Owner", "In this room", "3 rules - 1 h 30 min left - Either side may end it",
         "Enforced - signer's global conditions", "Logged only - Always in effect",
-        ...["Rules", "Curses", "Punishments", "Contracts", "Commands", "Relationships", "Pet", "Statistics", "Log"].map(name => `${name} module enabled`),
+        ...["Rules", "Curses", "Punishments", "Contracts", "Commands", "Relationships", "Pet", "Statistics", "Log", "Rooms", "Typing indicator"].map(name => `${name} module enabled`),
+        "Typing indicator", "Broadcast my typing status", "Show a bubble over people who are typing",
         ...[
             "Shows an emoticon over the player's head (e.g. Afk, Sleep, Hearts, Confusion, Coffee).",
             "The player says the given sentence in chat.",
