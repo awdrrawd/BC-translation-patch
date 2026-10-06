@@ -207,3 +207,187 @@ SourceCharacter wraps PronounPossessive arms around TargetCharacter in a big war
 SourceCharacter 张开 PronounPossessive 双臂给 TargetCharacter 一个温暖的大拥抱。
 SourceCharacter wraps TargetCharacter in a therapeutic self-hug.
 SourceCharacter 把 TargetCharacter 裹进一个治愈的自我拥抱里。
+
+### LSCG 0.9.8 新增活動名稱
+Bap
+轻拍
+Headbutt
+撞头
+Nuzzle
+蹭蹭
+Hug
+拥抱
+Tackle
+扑倒
+Flop
+扑上去
+KissEyes
+亲吻双眼
+RubPussy
+摩擦阴部
+SlapPenis
+拍打阴茎
+FuckWithPussy
+用阴部插弄
+FuckWithAss
+用屁股插弄
+Eat
+吃掉
+GrabTongue
+抓住舌头
+ReleaseTongue
+松开舌头
+HoldHand
+牵手
+ReleaseHand
+松开手
+ReleaseEar
+松开耳朵
+Grab
+抓住
+Release
+松开
+ReleaseNeck
+松开脖颈
+ReleaseCollar
+松开项圈
+HoldLeash
+握住牵绳
+LetGoOfLeash
+放开牵绳
+ClaspLeash
+扣上牵绳
+UnclaspLeash
+解开牵绳
+ReleaseMouth
+松开嘴巴
+GrabTongueWithFoot
+用脚抓住舌头
+ReleaseFootGrabbedTongue
+松开脚抓住的舌头
+Tug
+拉扯
+Flick
+弹
+Chomp
+咬住
+ReleaseChomp
+松开咬住
+SwallowLoad
+吞咽
+
+### LSCG 0.9.8 新增動作模板／互動文字
+Can't...
+不能……
+Grab!
+抓住！
+Ignore
+忽略
+Nah
+不要
+Slap it!
+拍下去！
+SourceCharacter boops TargetCharacter's nose with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 轻轻碰了 TargetCharacter 的鼻子。
+SourceCharacter gags PronounSelf with PronounPossessive own ActivityAsset.
+SourceCharacter 用 PronounPossessive 自己的 ActivityAsset 塞住了 PronounSelf 的嘴。
+SourceCharacter gags TargetCharacter with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 塞住了 TargetCharacter 的嘴。
+SourceCharacter gives PronounPossessive ActivityAsset to TargetCharacter.
+SourceCharacter 把 PronounPossessive ActivityAsset 交给了 TargetCharacter。
+SourceCharacter grabs at TargetCharacters hands, trying to steal TargetPronounPossessive item.
+SourceCharacter 抓住 TargetCharacters 的手，试图抢走 TargetPronounPossessive 物品。
+SourceCharacter hugs PronounPossessive ActivityAsset tightly.
+SourceCharacter 紧紧抱住 PronounPossessive ActivityAsset。
+SourceCharacter moves PronounPossessive own ActivityAsset up to PronounPossessive mouth.
+SourceCharacter 将 PronounPossessive 自己的 ActivityAsset 移到 PronounPossessive 嘴边。
+SourceCharacter moves TargetCharacter's ActivityAsset up to TargetPronounPossessive mouth.
+SourceCharacter 将 TargetCharacter 的 ActivityAsset 移到 TargetPronounPossessive 嘴边。
+SourceCharacter nuzzles against TargetCharacter's thigh.
+SourceCharacter 轻轻蹭着 TargetCharacter 的大腿。
+SourceCharacter nuzzles against the side of TargetCharacter's head.
+SourceCharacter 轻轻蹭着 TargetCharacter 的头侧。
+SourceCharacter nuzzles along TargetCharacter's leg.
+SourceCharacter 沿着 TargetCharacter 的腿轻轻蹭动。
+SourceCharacter nuzzles into TargetCharacter's arms.
+SourceCharacter 轻轻蹭进 TargetCharacter 的怀里。
+SourceCharacter nuzzles into TargetCharacter's breasts.
+SourceCharacter 轻轻蹭着 TargetCharacter 的乳房。
+SourceCharacter nuzzles into TargetCharacter's neck.
+SourceCharacter 轻轻蹭着 TargetCharacter 的脖颈。
+SourceCharacter nuzzles snugly into TargetCharacter.
+SourceCharacter 紧紧依偎着 TargetCharacter。
+SourceCharacter nuzzles under TargetCharacter's feet.
+SourceCharacter 轻轻蹭到 TargetCharacter 的脚下。
+SourceCharacter nuzzles underneath TargetCharacter's hand.
+SourceCharacter 轻轻蹭到 TargetCharacter 的手下。
+SourceCharacter places PronounPossessive ActivityAsset around PronounPossessive own neck.
+SourceCharacter 将 PronounPossessive ActivityAsset 戴在自己的脖子上。
+SourceCharacter places PronounPossessive ActivityAsset around TargetCharacter's neck.
+SourceCharacter 将 PronounPossessive ActivityAsset 戴在 TargetCharacter 的脖子上。
+SourceCharacter pours PronounPossessive ActivityAsset into PronounPossessive own funnel.
+SourceCharacter 将 PronounPossessive ActivityAsset 倒入自己的漏斗。
+SourceCharacter pours PronounPossessive ActivityAsset into TargetCharacter's funnel.
+SourceCharacter 将 PronounPossessive ActivityAsset 倒入 TargetCharacter 的漏斗。
+SourceCharacter pulls the ActivityAsset from PronounPossessive mouth.
+SourceCharacter 将 ActivityAsset 从 PronounPossessive 嘴里拉了出来。
+SourceCharacter removes TargetCharacter's ActivityAsset, letting it hang around their neck.
+SourceCharacter 取下 TargetCharacter 的 ActivityAsset，让它挂在其脖子上。
+SourceCharacter removes TargetCharacter's ActivityAsset.
+SourceCharacter 取下 TargetCharacter 的 ActivityAsset。
+SourceCharacter removes the ActivityAsset from PronounPossessive mouth and lets it hang around PronounPossessive neck.
+SourceCharacter 将 ActivityAsset 从 PronounPossessive 嘴里取出，让它挂在 PronounPossessive 脖子上。
+SourceCharacter slowly penetrates PronounPossessive own mouth with PronounPossessive ActivityAsset.
+SourceCharacter 缓缓用 PronounPossessive ActivityAsset 插入自己的嘴。
+SourceCharacter snaps a photo of TargetCharacter.
+SourceCharacter 给 TargetCharacter 拍了张照片。
+SourceCharacter sprays all over TargetCharacter's ass.
+SourceCharacter 将液体喷满 TargetCharacter 的屁股。
+SourceCharacter sprays all over TargetCharacter's chest.
+SourceCharacter 将液体喷满 TargetCharacter 的胸部。
+SourceCharacter sprays all over TargetCharacter's crotch.
+SourceCharacter 将液体喷满 TargetCharacter 的胯部。
+SourceCharacter sprays all over TargetCharacter's face.
+SourceCharacter 将液体喷满 TargetCharacter 的脸。
+SourceCharacter sprays all over TargetCharacter's mouth.
+SourceCharacter 将液体喷满 TargetCharacter 的嘴。
+SourceCharacter sprays all over TargetCharacter's nipples.
+SourceCharacter 将液体喷满 TargetCharacter 的乳头。
+SourceCharacter sprays all over TargetCharacter's tummy.
+SourceCharacter 将液体喷满 TargetCharacter 的肚子。
+SourceCharacter sprays all over TargetCharacter.
+SourceCharacter 将液体喷满 TargetCharacter。
+SourceCharacter takes PronounPossessive own ActivityAsset from around PronounPossessive neck.
+SourceCharacter 从 PronounPossessive 脖子上取下自己的 ActivityAsset。
+SourceCharacter takes TargetCharacter's ActivityAsset from around TargetPronounPossessive neck.
+SourceCharacter 从 TargetPronounPossessive 脖子上取下 TargetCharacter 的 ActivityAsset。
+SourceCharacter takes a selfie.
+SourceCharacter 自拍了一张。
+SourceCharacter takes aim at TargetCharacter with PronounPossessive net gun.
+SourceCharacter 用 PronounPossessive 网枪瞄准 TargetCharacter。
+SourceCharacter trades with TargetCharacter, taking TargetPronounPossessive item.
+SourceCharacter 与 TargetCharacter 交换，拿走了 TargetPronounPossessive 物品。
+SourceCharacter turns PronounPossessive net gun on PronounSelf.
+SourceCharacter 将 PronounPossessive 网枪对准了 PronounSelf。
+SourceCharacter's ActivityAsset bites TargetCharacter in the thigh.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的大腿。
+SourceCharacter's ActivityAsset bites TargetCharacter on the hand.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的手。
+SourceCharacter's ActivityAsset bites TargetCharacter on the neck.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的脖子。
+SourceCharacter's ActivityAsset bites TargetCharacter's arm.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的手臂。
+SourceCharacter's ActivityAsset bites TargetCharacter's breast.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的乳房。
+SourceCharacter's ActivityAsset bites TargetCharacter's butt.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的屁股。
+SourceCharacter's ActivityAsset bites TargetCharacter's ear.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的耳朵。
+SourceCharacter's ActivityAsset bites TargetCharacter's foot.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的脚。
+SourceCharacter's ActivityAsset bites TargetCharacter's leg.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的腿。
+SourceCharacter's ActivityAsset bites TargetCharacter's nipple.
+SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的乳头。
+SourceCharacter's ActivityAsset chomps on TargetCharacter.
+SourceCharacter 的 ActivityAsset 咬住了 TargetCharacter。
