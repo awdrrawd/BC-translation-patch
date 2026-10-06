@@ -389,7 +389,6 @@ SourceCharacter's ActivityAsset bites TargetCharacter's nipple.
 SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的乳头。
 SourceCharacter's ActivityAsset chomps on TargetCharacter.
 SourceCharacter 的 ActivityAsset 咬住了 TargetCharacter。
-
 ### LSCG 偏好設定／介面補譯
 Setting is deactivated
 设置已停用
@@ -1575,7 +1574,6 @@ Exclusive
 专属
 Installed by:
 安装者：
-
 ### LSCG 偏好設定補充
 ** Speech Analysis settings are locked remotely **
 ** 语音分析设置已被远程锁定 **
