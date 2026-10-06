@@ -103,3 +103,27 @@ test("missing diagnostic collection has a fixed bound and can be cleared", () =>
     assert.deepEqual(collector.list(), ["A", "B"]);
     collector.clear(); collector.add("C"); assert.deepEqual(collector.list(), ["C"]);
 });
+
+test("regex literal prefilter never rejects a string the regex would match", async () => {
+    const { requiredLiteral } = await import("../src/mods/lookup.js");
+    const dict = generateDict();
+    const patterns = [];
+    for (const lang of Object.keys(dict.compat)) {
+        for (const id of ["BCX", "LSCG"]) for (const scope of ["menu", "activities"]) patterns.push(...(dict.compat[lang][id]?.[scope]?.regex || []));
+        patterns.push(...(dict.modRegex[lang] || []));
+    }
+    assert.ok(patterns.length > 500);
+    let filtered = 0;
+    for (const { p, f } of patterns) {
+        const literal = requiredLiteral(p, f), regex = new RegExp(p, f);
+        if (literal) filtered++;
+        // Build a string the rule matches: every capture group becomes a filler, every escape its literal.
+        const sample = p.replace(/^\^|\$$/g, "").replace(/\((?:[^()\\]|\\.)*\)/g, "Zed").replace(/\\n/g, "\n").replace(/\\(.)/g, "$1");
+        if (regex.test(sample)) assert.ok(!literal || sample.includes(literal), `${p} -> ${JSON.stringify(literal)}`);
+    }
+    assert.ok(filtered / patterns.length > 0.95, "almost every dictionary rule should have a prefilter");
+    assert.equal(requiredLiteral("a|b"), "");
+    assert.equal(requiredLiteral("[ab]c"), "");
+    assert.equal(requiredLiteral("ab?c"), "");
+    assert.equal(requiredLiteral("(.+) gags (.+?)'s mouth"), "'s mouth");
+});

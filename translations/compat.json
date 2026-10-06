@@ -2119,11 +2119,6 @@
           "r": "$1尝试使用反盲指令."
         },
         {
-          "p": "(.+) 牵着她的手走出房间\\.",
-          "f": "",
-          "r": "$1尝试使用反盲指令."
-        },
-        {
           "p": "A magical shield on (.+) repelled the suspiciously magical changes attempted by (.+)! \\[WCE Anti\\-Cheat\\]",
           "f": "",
           "r": "$1 身上出现了一道神奇的护盾, 挡下了 $2 试图施展的可疑魔法! [WCE 反作弊系统]"

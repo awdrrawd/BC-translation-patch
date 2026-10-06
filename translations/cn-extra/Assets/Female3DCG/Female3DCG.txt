@@ -283,6 +283,9 @@ They/Them
 他(非二元)
 It/It
 它
+### 修正官方 CN 的繁體殘留（袖標→袖标）
+Lace Armbands
+蕾丝袖标
 ### 2026-09：依本機上游補齊連線與共用內容
 Pasties Star
 星形乳贴
