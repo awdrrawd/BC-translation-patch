@@ -69,8 +69,48 @@ function setupDfnObserver(translate, addCleanup) {
 
 // 時間切片排程器：把一批節點的翻譯工作分散到多個閒置時段執行，
 // 避免道具格子一次很多時，單一個 idle callback 又整批卡住主執行緒。
+function setupLscgSettingsObserver(translate, addCleanup) {
+    let disposed = false, frame;
+    const selector = '[id^="lscg-"][id$="-settings"], #lscg-outfit-edit, #lscg-outfits';
+    const processor = createIdleBatchProcessor(root => {
+        if (!root.isConnected) return;
+        translateTextNodes(root, translate);
+        const elements = [root, ...root.querySelectorAll?.('*') ?? []];
+        for (const el of elements) {
+            if (!(el instanceof Element)) continue;
+            // Labels/tooltips belong to the settings UI. Never translate input values.
+            for (const property of ['title', 'ariaLabel', 'placeholder']) {
+                if (property in el) translateValue(el, property, translate);
+            }
+        }
+    });
+    addCleanup(() => { disposed = true; processor.dispose(); cancelAnimationFrame(frame); });
+    const collect = node => {
+        if (!node || node.nodeType !== 1) return;
+        const el = /** @type {Element} */ (node);
+        if (el.matches(selector)) processor.push(el);
+        el.querySelectorAll?.(selector).forEach(root => processor.push(root));
+    };
+    const obs = new MutationObserver(muts => muts.forEach(m => {
+        collect(m.target);
+        m.addedNodes?.forEach(collect);
+    }));
+    addCleanup(() => obs.disconnect());
+    const start = () => {
+        if (disposed) return;
+        if (!document.body) { frame = requestAnimationFrame(start); return; }
+        obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['title', 'aria-label', 'placeholder'] });
+        collect(document.body);
+    };
+    const refresh = () => collect(document.body);
+    document.addEventListener('bctp-language-change', refresh);
+    addCleanup(() => document.removeEventListener('bctp-language-change', refresh));
+    start();
+}
+
 export function setupDomObserver(translate, translateDfn, addCleanup) {
     setupDfnObserver(translateDfn || translate, addCleanup);
+    setupLscgSettingsObserver(translate, addCleanup);
     let disposed = false, frame;
     addCleanup(() => { disposed = true; cancelAnimationFrame(frame); });
 

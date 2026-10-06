@@ -65,6 +65,17 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
             const a = exactMenu(pair[1], lang), b = exactMenu(pair[3], lang);
             if (a || b) return `${a || pair[1]}${pair[2]}${b || pair[3]}`;
         }
+        // A few LSCG settings labels contain live values, so they cannot be exact dictionary keys.
+        let dynamic = /^Page (\d+\/\d+)$/.exec(key);
+        if (dynamic) return `${lang === "CN" ? "页面" : "頁面"} ${dynamic[1]}`;
+        dynamic = /^Purchase - (\$[\d,]+)$/.exec(key);
+        if (dynamic) return `${lang === "CN" ? "购买" : "購買"} - ${dynamic[1]}`;
+        dynamic = /^Instruction #(\d+)$/.exec(key);
+        if (dynamic) return `${lang === "CN" ? "指令" : "指令"} #${dynamic[1]}`;
+        dynamic = /^Cursed Item No\. (\d+)$/.exec(key);
+        if (dynamic) return `${lang === "CN" ? "诅咒物品" : "詛咒物品"} No. ${dynamic[1]}`;
+        dynamic = /^Suggestion No\. (\d+)$/.exec(key);
+        if (dynamic) return `${lang === "CN" ? "暗示" : "暗示"} No. ${dynamic[1]}`;
     }
     function activity(key) {
         const lang = getLanguage();

@@ -389,3 +389,1255 @@ SourceCharacter's ActivityAsset bites TargetCharacter's nipple.
 SourceCharacter 的 ActivityAsset 咬了 TargetCharacter 的乳头。
 SourceCharacter's ActivityAsset chomps on TargetCharacter.
 SourceCharacter 的 ActivityAsset 咬住了 TargetCharacter。
+### LSCG 偏好設定／介面補譯
+Setting is deactivated
+设置已停用
+Settings disabled while restrained
+被束缚时无法打开设置
+Settings disabled while incapacitated and immersive
+在昏迷且沉浸模式下无法打开设置
+Emergency reset of LSCG
+LSCG 紧急重置
+Reset
+重置
+Export LSCG Settings
+导出 LSCG 设置
+Export
+导出
+Import LSCG Settings
+导入 LSCG 设置
+Import
+导入
+Latest Changes
+最新变更
+Open Help
+打开帮助
+Open LSCG Latest Release on Github.
+在 GitHub 打开 LSCG 最新版本
+LSCG settings imported
+LSCG 设置已导入
+Reset all LSCG Data
+重置所有 LSCG 数据
+- Permanent reset of ALL LSCG data -
+- 永久重置所有 LSCG 数据 -
+- Warning -
+- 警告 -
+If you confirm, all LSCG data (including settings, overrides, and current states) will be permanently reset!
+确认后，所有 LSCG 数据（包括设置、覆盖项和当前状态）都将被永久重置！
+You will be able to continue using LSCG, but all of your configuration will be reset to default!
+你仍可继续使用 LSCG，但所有配置都会恢复为默认值！
+This action cannot be undone!
+此操作无法撤销！
+Resetting...
+正在重置……
+Confirm
+确认
+Cancel
+取消
+Page
+页面
+Main Menu
+主菜单
+Open LSCG Wiki on GitHub
+在 GitHub 打开 LSCG Wiki
+UNKNOWN
+未知
+UNDEFINED SETTING SCREEN
+未定义的设置页面
+Setting is unavailable.
+设置不可用。
+LSCG Settings
+LSCG 设置
+General
+通用
+Activities
+动作
+Breathplay
+窒息玩法
+Control collar
+控制项圈
+Triggered Hypnosis
+触发式催眠
+Cursed Items
+诅咒物品
+Drug Enhancements
+药物强化效果
+Magic™
+魔法™
+Map Enhancements
+地图增强
+Outfit Collection
+套装收藏夹
+Speech Analysis
+语音分析
+Splatters
+飞溅效果
+Conditions
+状态
+Extensions
+扩展
+Preference
+偏好设置
+MainMenu
+主菜单
+Enabled
+启用
+Locked
+已锁定
+Lockable
+可锁定
+Update
+更新
+Update collar
+更新项圈
+Clear
+清除
+Clear entry
+清除配置
+Edit…
+编辑…
+Delete Outfit
+删除套装
+Clone Outfit
+克隆套装
+Apply outfit
+应用套装
+Take off first
+先脱下
+Item options
+物品选项
+No lock
+无锁
+Choose item
+选择物品
+Description
+说明
+Details
+详情
+On
+启用
+When
+触发条件
+Do
+执行
+Block
+阻止
+Name
+名称
+Speed
+速度
+Effect
+效果
+Effects
+效果
+Voice
+语音
+Potion
+药剂
+Duration
+持续时间
+Cooldown
+冷却
+Other
+其他
+Appearance
+外观
+Items
+物品
+Interactions
+互动
+Display
+显示
+Defense
+防御
+Remote
+远程
+State
+状态
+Configure
+配置
+Configure…
+配置…
+Instruction
+指令
+Group name
+组名
+Phrases
+短语
+Phrase lists
+短语列表
+Reaction rules
+反应规则
+Reactions
+反应
+Detectors
+检测器
+Vocabulary
+词汇
+Affirmations
+肯定语句
+Profanity
+粗俗用语
+Reading level
+阅读难度
+Tone
+语气
+Try a line
+试试一句话
+Tune
+调校
+Save
+保存
+Search
+搜索
+Search…
+搜索……
+New group
+新建组
+Delete group
+删除组
++ Add group
++ 添加组
++ New cursed item
++ 新建诅咒物品
+Delete cursed item
+删除诅咒物品
++ New spell
++ 新建法术
+New Outfit
+新建套装
+Outfit
+套装
+Outfit name
+套装名称
+Outfit key
+套装键
+Filter Options
+筛选选项
+All Body Items
+所有身体物品
+Cosplay Items
+Cosplay 物品
+Clothing
+服装
+Underwear
+内衣
+Cosplay
+Cosplay
+Color
+颜色
+Combination
+组合
+Whole body
+全身
+Other outfit
+其他套装
+Item group
+物品组
+Edit in Wardrobe
+在衣柜中编辑
+LSCG scripts enabled
+启用 LSCG 脚本
+Enable LSCG Features.
+启用 LSCG 功能。
+Block settings while restrained
+被束缚时禁止打开设置
+Prevents LSCG settings access while restrained.
+防止在被束缚时访问 LSCG 设置。
+Immersive conditions
+沉浸式状态
+Applies a more restrictive set of conditional states while incapacitated by LSCG.
+在因 LSCG 而失去行动能力时，使用更严格的状态限制。
+Show check rolls
+显示检定骰点
+If enabled, will display the attacker/defender roll values for activity checks.
+启用后，会显示动作检定中攻击者和防御者的骰点。
+Allow LSCG leashing
+允许 LSCG 牵绳
+Allow custom leashing from LSCG activities such as hand-holding, hypnosis, etc.
+允许使用 LSCG 动作提供的自定义牵绳，例如牵手、催眠等。
+Enable clothed erection detection
+启用衣物下勃起检测
+If checked, you will get a private message if you can feel an erection during certain activities.
+启用后，在某些动作中若能感觉到勃起，会收到私密提示。
+Enable lipstick marks
+启用口红印
+Apply kiss marks when lipstick-wearing people kiss you on the cheek/forehead/neck.
+佩戴口红的人亲吻你的脸颊、额头或脖子时留下吻痕。
+Dry lipstick
+干口红
+Never apply kissmarks when you are the kisser.
+当你主动亲吻别人时，不留下吻痕。
+Enable boop reactions
+启用戳鼻反应
+Auto-react when booped.
+被戳鼻子时自动回应。
+Share public craftings
+分享公开制作物
+If enabled, other LSCG users in the room will be able to use your crafted items on other people.
+启用后，房间内其他 LSCG 用户可以将你制作的物品用于其他人。
+Enable tamperproof items
+启用防篡改物品
+Enable tamperproof features on crafted items you wear.
+启用你所穿戴制作物的防篡改功能。
+Enable chaotic/evolving items
+启用混沌/进化物品
+Enable chaotic/evolving features on crafted items you wear.
+启用你所穿戴制作物的混沌/进化功能。
+Block DOGS devious padlocks
+阻止 DOGS 邪恶挂锁
+If checked, LSCG item applier (magic, cursed item, etc) will turn Devious Padlocks into regular Exclusive Padlocks on apply.
+启用后，LSCG 物品施加器（魔法、诅咒物品等）在应用时会将邪恶挂锁转换为普通独占挂锁。
+Blur while edged
+边缘状态时模糊
+Apply extra blurring to the screen while edging.
+处于边缘状态时增加屏幕模糊。
+Hide resizing effects
+隐藏缩放效果
+If checked, you will not see any LSCG resizing effects. (eg. from magic)
+启用后不会显示任何 LSCG 缩放效果（例如魔法造成的效果）。
+Hide all opacity overrides
+隐藏所有透明度覆盖
+If checked, will skip any opacity override effects. (includes x-ray vision)
+启用后会跳过所有透明度覆盖效果（包括 X 光视觉）。
+Prevent remote opacity changes
+禁止远程修改透明度
+If checked, other players will not be able to directly modify the opacity settings on your wardrobe items.
+启用后，其他玩家无法直接修改你衣柜物品的透明度设置。
+Activity
+动作
+Please Select a Zone
+请选择一个区域
+Configure what this activity does when done to you on the selected zone.
+配置在所选区域对你执行此动作时会产生的效果。
+Remove this activity's configuration for this zone.
+移除该区域对此动作的配置。
+Can induce trance
+可触发恍惚
+Using this activity on this location can trigger hypnosis.
+在此区域执行该动作可以触发催眠。
+Can induce sleep
+可触发睡眠
+Using this activity on this location can put them to sleep.
+在此区域执行该动作可以使其入睡。
+Repeats required
+所需重复次数
+Number times within 5 minutes this activity must be done before hypnosis or sleep is triggered.
+5 分钟内需要执行此动作多少次后才会触发催眠或睡眠。
+Trance arousal threshold
+恍惚兴奋度阈值
+Arousal threshold required for this activity to trigger hypnosis. If both trance and sleep are checked, lower arousal triggers sleep.
+触发催眠所需的兴奋度阈值。如果同时启用恍惚和睡眠，较低的兴奋度会触发睡眠。
+Can awaken
+可唤醒
+Using this activity on this location will awaken you from trance or deep sleep.
+在此区域执行该动作会让你从恍惚或深度睡眠中醒来。
+Can cause orgasm
+可导致高潮
+Using this activity on this location can cause an orgasm.
+在此区域执行该动作可以导致高潮。
+Orgasm arousal threshold
+高潮兴奋度阈值
+Arousal threshold required for this activity to cause an orgasm.
+使此动作导致高潮所需的兴奋度阈值。
+Allowed member IDs
+允许的成员 ID
+Member IDs who can trance/sleep/awaken/orgasm with this activity. Leave empty to use BC item permissions
+可以通过此动作使你进入恍惚/睡眠、唤醒你或让你高潮的成员 ID。留空则使用 BC 物品权限。
+Enabled the Choking Collar Features.
+启用窒息项圈功能。
+Allow self-tightening
+允许自行收紧
+Allow the wearer to tighten their own collar.
+允许佩戴者自行收紧项圈。
+Allow self-loosening
+允许自行放松
+Allow the wearer to loosen their own collar.
+允许佩戴者自行放松项圈。
+Comma separated list of member IDs who can activate the collar. Leave empty for item permissions.
+可以激活项圈的成员 ID，使用逗号分隔。留空则使用物品权限。
+Limit to crafted user
+限制为制作者
+Limits collar activation to crafted user and allowed list. If no crafted user will use item permissions.
+将项圈激活限制为制作者及允许列表。若没有制作者，则使用物品权限。
+Tighten trigger
+收紧触发词
+Word or phrase that, if spoken, will tighten the collar.
+说出此单词或短语后会收紧项圈。
+Loosen trigger
+放松触发词
+Word or phrase that, if spoken, will loosen the collar.
+说出此单词或短语后会放松项圈。
+Immersive
+沉浸模式
+Prevents the wearer from viewing triggers via show-triggers.
+防止佩戴者通过 show-triggers 查看触发词。
+Enable buttons
+启用按钮
+Allows activation of the collar features via buttons (activities & commands).
+允许通过按钮（动作和指令）激活项圈功能。
+Any collar
+任意项圈
+If enabled, any collar can trigger and activate.
+启用后，任何项圈都可以触发并激活。
+Use the collar currently worn as the control collar.
+使用当前佩戴的项圈作为控制项圈。
+No collar equipped
+未装备项圈
+Collar updated.
+项圈已更新。
+Open Breathplay Wiki on GitHub
+在 GitHub 打开窒息玩法 Wiki
+Enable hand choking
+启用手部窒息
+Enables breathplay using "Choke Neck" activity. If done repeatedly will cause blackout.
+启用使用“Choke Neck”动作进行窒息。反复执行会导致昏厥。
+Enable gag suffocation
+启用口塞窒息
+Enabled breathplay using nose plugs and sufficient gags.
+启用使用鼻塞和足够的口塞进行窒息。
+Enable chain choking
+启用锁链窒息
+Enabled breathplay using choke chain neck restraint.
+启用使用窒息链颈部束缚进行窒息。
+Sleep on passout
+昏厥后睡眠
+Will force sleep on passout.
+昏厥后强制进入睡眠。
+Sleep time (minutes)
+睡眠时间（分钟）
+How long you will sleep after passout if enabled.
+启用后，昏厥后将睡眠多久。
+Has your owner sent you shopping for a more controlling collar?
+你的主人让你购买一条控制力更强的项圈吗？
+Are you looking for some extra motivation for good behavior?
+你是否需要一些额外的动力来保持良好表现？
+Act now and secure your Control Module now for the low low price of $500!
+现在就以超低价 500 美元购买你的控制模块！
+Attach this revolutionary new device to your existing collar and it will
+将这个革命性的新设备安装到现有项圈上，它将
+enhance it with the ability to tighten and loosen on command!
+赋予项圈按指令收紧和放松的能力！
+Let your dom quiet down those bratty moments and reward good behavior!
+让你的主导者平息那些顽皮时刻，并奖励你的良好表现！
+Unlock Andrew's Collar Module
+解锁 Andrew 的项圈模块
+Cannot afford...
+负担不起……
+Too expensive? Ask your owner for help!
+太贵了？向你的主人求助吧！
+Now available:
+现已推出：
+Andrew's Collar Control Module!!
+Andrew 的项圈控制模块！！
+** Collar Settings Locked **
+** 项圈设置已锁定 **
+Allow remote access
+允许远程访问
+Enables Remote Access to Collar Settings.
+启用远程访问项圈设置。
+Allowes Remote Access Users to lock you out of these settings.
+允许远程访问用户将你锁定在这些设置之外。
+Open Hypnosis Wiki on GitHub
+在 GitHub 打开催眠 Wiki
+** Hypnosis Settings Locked **
+** 催眠设置已锁定 **
+Triggers
+触发器
+Enabled the Triggered Hypnosis Features.
+启用触发式催眠功能。
+Random trigger
+随机触发
+If enabled, your trigger word will be selected from a list of random english words.
+启用后，将从随机英文单词列表中选择触发词。
+Trigger words
+触发词
+Custom list of words and/or phrases as hypnisis triggers. Separated by a comma.
+自定义催眠触发词或短语列表，用逗号分隔。
+Awaken words
+唤醒词
+Custom list of words and/or phrases as awakener triggers. Separated by a comma.
+自定义唤醒词或短语列表，用逗号分隔。
+Silence trigger words
+禁言触发词
+When spoken while hypnotized, will prevent speech. Separated by a comma.
+催眠状态下说出这些词会阻止说话，用逗号分隔。
+Allow speech trigger words
+允许说话触发词
+When spoken while hypnotized, will allow speech. Separated by a comma.
+催眠状态下说出这些词会允许说话，用逗号分隔。
+Whitelist member IDs
+白名单成员 ID
+Comma separated list of member IDs exclusive allowed to access your hypno settings and triggers. If empty will use standard Item Permissions.
+允许访问你的催眠设置和触发器的成员 ID，使用逗号分隔。留空则使用标准物品权限。
+Hypnosis length (min.)
+催眠时长（分钟）
+Length of hypnosis time (in minutes) before automatically recovering. Set to 0 for indefinite.
+自动恢复前的催眠时间（分钟）。设为 0 表示无限时长。
+Cooldown (sec.)
+冷却时间（秒）
+Cooldown time (in seconds) before you can be hypnotized again.
+再次被催眠前的冷却时间（秒）。
+Enable cycle
+启用循环
+If checked, only one trigger will be active at a time and will cycle after use.
+启用后，一次只会激活一个触发词，使用后会循环到下一个。
+Trigger cycle time (min.)
+触发循环时间（分钟）
+Number of minutes after activation to wait before cycling to a new trigger.
+激活后等待多少分钟再切换到新的触发词。
+Trance & remote
+恍惚与远程
+Remote access
+远程访问
+If checked, allowed users can modify these settings.
+启用后，允许的用户可以修改这些设置。
+Remote access requires trance
+远程访问需要恍惚状态
+If checked, remote access is only possible while actively hypnotized.
+启用后，只有处于催眠状态时才能远程访问。
+Remote access limited to hypnotizer
+远程访问仅限催眠者
+If checked, only the user who hypnotized you can access your settings (after matching other conditions).
+启用后，只有催眠你的人可以访问你的设置（还需满足其他条件）。
+Allow remote override member modification
+允许远程修改覆盖成员
+If checked, any remote users can change your Override Member Id list (otherwise, only owner can).
+启用后，任何远程用户都可以修改你的覆盖成员 ID 列表（否则只有主人可以修改）。
+If checked, allowed users can lock you out of these settings.
+启用后，允许的用户可以将你锁定在这些设置之外。
+While hypnotized
+催眠期间
+Build arousal while hypnotized
+催眠时增加兴奋度
+If checked being hypnotized will increase arousal.
+启用后，被催眠时会增加兴奋度。
+Enable spirals
+启用螺旋
+If checked headsets and other spirals can cause trance.
+启用后，耳机和其他螺旋装置可以导致恍惚。
+Enable wake-up on snaps
+启用打响指唤醒
+If checked you exit the trance when you hear someone snapping.
+启用后，听到别人打响指时会退出恍惚。
+Hypnotized eye color
+催眠眼睛颜色
+Hex code of your eye color while hypnotized (default: #A2A2A2).
+催眠时眼睛颜色的十六进制代码（默认：#A2A2A2）。
+Hypnotized eye type
+催眠眼睛样式
+Eye type # to use while under hypnosis (default: 9).
+催眠时使用的眼睛样式编号（默认：9）。
+Suggestions
+暗示
+Enable suggestion programming
+启用暗示编程
+If checked, hypnotic suggestions may be induced within you while under trance.
+启用后，恍惚状态下可以向你植入催眠暗示。
+Programming limited to hypnotizer
+暗示编程仅限催眠者
+If checked, only your hypnotizer may induce hypnotic suggestions within you.
+启用后，只有催眠你的人可以向你植入催眠暗示。
+Limit suggestion removal
+限制暗示移除
+If checked, only your owner or whoever added the suggestion can change/remove it.
+启用后，只有你的主人或暗示添加者可以修改/移除暗示。
+Allow suggestion removal
+允许移除暗示
+If checked, you can remove suggestions installed in you with '/lscg remove-suggestion' if you are not immersive and not on extreme difficulty.
+启用后，只要你未处于沉浸模式且不是极端难度，就可以使用“/lscg remove-suggestion”移除体内的暗示。
+Always submit to suggestions
+总是接受暗示
+If checked, you will always submit to suggestions.
+启用后，你将始终接受暗示。
+Always submit to member IDs
+始终接受指定成员 ID 的暗示
+Comma separated list of member IDs. If empty will use standard Item Permissions. You will always submit to their suggestions.
+成员 ID 列表，用逗号分隔。留空则使用标准物品权限。你将始终接受这些成员的暗示。
+Blocked instructions
+阻止的指令
+Toggle which suggestion instructions you want to block on yourself.
+选择要阻止自己接受的暗示指令。
+Suggestions can't give you this instruction.
+暗示无法对你执行此指令。
+Speaker only
+仅说话者
+Subject will always target the speaker
+目标始终为说话者
+Self
+自己
+Subject will always target themselves
+目标始终为自己
+Nothing chosen yet.
+尚未选择。
+Select an activity for this instruction
+为此指令选择一个动作
+Zone
+区域
+Click a zone on the character, or pick it here.
+点击角色身上的区域，或在此选择。
+— choose zone —
+— 选择区域 —
+Full pose
+完整姿势
+Overrides the upper and lower pose.
+覆盖上半身和下半身姿势。
+Upper pose
+上半身姿势
+Lower pose
+下半身姿势
+All slots
+所有槽位
+Random
+随机
+Select clothing slots
+选择服装槽位
+Select instructions to forget
+选择要遗忘的指令
+All instructions
+所有指令
+Open Cursed Items Wiki on GitHub
+在 GitHub 打开诅咒物品 Wiki
+Enable cursed items
+启用诅咒物品
+Enable Cursed Items.
+启用诅咒物品。
+Vulnerable
+易受影响
+If checked, you are vulnerable to cursed items and susceptable to their effects when worn...
+启用后，你会容易受到诅咒物品影响，并在穿戴时受到其效果……
+Allowed crafter
+允许的制作者
+Who's cursed items can can activate on you. (based on: Public < Friend < Whitelist < Lover < Owner < Self)
+谁制作的诅咒物品可以对你生效（权限依次为：公开 < 好友 < 白名单 < 恋人 < 主人 < 自己）。
+Suppress emotes
+禁止表情
+If true, no cursed items on you will publically emote as they grow item by item. They will still inform locally.
+启用后，你身上的诅咒物品逐件生效时不会公开发送表情，但仍会本地提示。
+Always exhaust
+总是耗尽
+If true, All cursed items on you will exhaust after applying their outfit regardless of item settings.
+启用后，你身上的所有诅咒物品应用套装后都会耗尽，无视物品自身设置。
+Prevent impossible curse items
+阻止不可能的诅咒物品
+If true, a cursed set will not add items to groups that are blocked at the time of curse application (ie: a curse will not add a vibrator under locked chastity).
+启用后，诅咒套装不会向应用时被阻止的组添加物品（例如不会在锁定的贞操装置下添加振动器）。
+Cursed items
+诅咒物品
+Create a cursed item that can spread. Its name is the trigger phrase a crafted item needs. Use Edit… for its speed and stripping.
+创建可以传播的诅咒物品。其名称就是制作物品需要使用的触发短语。使用“编辑…”设置传播速度和脱衣效果。
+Trigger phrase required.
+需要触发短语。
+Applied outfit
+应用套装
+Outfit name that will be applied by the cursed item.
+诅咒物品将应用的套装名称。
+Inexhaustable
+不会耗尽
+If checked, this cursed item will continue to enforce its outfit until removed.
+启用后，该诅咒物品会持续强制应用套装，直到被移除。
+Suppress emote
+禁止表情
+If checked, this item will not publically emote as it grows item by item. They will still inform locally.
+启用后，该物品逐件生效时不会公开发送表情，但仍会本地提示。
+Strip level
+脱衣等级
+Determines what type of non-outfit appearance items will also be removed.
+决定还会移除哪些非套装外观物品。
+Insta-strip
+立即脱衣
+If true, the victim will be stripped instantly regardless of apply speed.
+启用后，无论应用速度如何，目标都会立即脱衣。
+Apply speed
+应用速度
+Determines how fast the cursed item applies its outfit.
+决定诅咒物品应用套装的速度。
+Custom speed (seconds)
+自定义速度（秒）
+Determines the speed (in seconds). Must be between 1 and 3600 (1 hour)
+决定速度（秒）。必须介于 1 和 3600（1 小时）之间。
+Slow (15 minutes per item)
+慢速（每件 15 分钟）
+Medium (1 minute per item)
+中速（每件 1 分钟）
+Fast (10 seconds per item)
+快速（每件 10 秒）
+Instant
+立即
+Custom (seconds)
+自定义（秒）
+None
+无
+Everyone (except blacklisted)
+所有人（黑名单除外）
+Friends and above
+好友及以上
+Whitelisted and above
+白名单及以上
+Lovers and above
+恋人及以上
+Owners or Self
+主人或自己
+Self Only
+仅自己
+Open Drug Enhancements Wiki on GitHub
+在 GitHub 打开药物强化 Wiki
+Enable Enhanced Drinks, Injectors and Net Gun.
+启用强化饮品、注射器和网枪。
+Filled glass sip limit
+装满的杯子饮用次数上限
+Number of sips before your filled glasses empty. (0 for no limit)
+装满的杯子在多少次饮用后会变空。（0 表示无限制）
+Show drug levels
+显示药物等级
+Displays bars showing the level of each drug type.
+显示各类药物的等级条。
+Heartbeat sound
+心跳声
+An occasional heartbeat sound while under the influence of aphrodisiac.
+受催情剂影响时偶尔播放心跳声。
+Chaotic net gun
+混沌网枪
+Your net gun fires wildly and has a 50/50 chance to net a random character instead of your target.
+你的网枪会随机射击，并有 50% 的概率捕获随机角色而非目标。
+Drugs
+药物
+LSCG's drugs
+LSCG 的药物
+Each activates for any injector or drink with one of its keywords in its crafted name or description.
+任何注射器或饮品的制作名称或描述中包含其关键词时，该药物都会生效。
+Sedative
+镇静剂
+Activates for "sedative" or "tranquilizer".
+在制作名称或描述包含“sedative”或“tranquilizer”时生效。
+Brainwash drug
+洗脑药物
+Activates for "mind control," "hypnotizing," or "brainwashing".
+在制作名称或描述包含“mind control”、“hypnotizing”或“brainwashing”时生效。
+Aphrodisiac
+催情剂
+Activates for "horny" or "aphrodisiac".
+在制作名称或描述包含“horny”或“aphrodisiac”时生效。
+How fast they wear off
+消退速度
+Minutes for one dose to wear off while you're online. Leave at 0 for LSCG's default.
+在线时一剂药物消退所需的分钟数。设为 0 使用 LSCG 默认值。
+Extension drugs
+扩展药物
+Drugs added by extensions. Each one only affects you once you enable it.
+由扩展添加的药物。启用后才会对你生效。
+Extension
+扩展
+Added by an extension.
+由扩展添加。
+Drug
+药物
+Activates for
+生效条件
+Lets this drug affect you.
+允许该药物影响你。
+No installed extension adds a drug.
+没有已安装的扩展添加药物。
+Gases & chloroform
+气体与氯仿
+Gases
+气体
+Respirators can deliver a continuous supply of drugged gas.
+呼吸器可以持续供应含药气体。
+Allow continuous delivery
+允许持续供给
+Allows respirators to deliver a continuous supply of drugged gas.
+允许呼吸器持续供应含药气体。
+Inexhaustible gases
+无限气体
+Any continuous delivery (e.g. a respirator) on you never runs out of gas.
+你身上的持续供给装置（例如呼吸器）永远不会耗尽气体。
+Chloroform
+氯仿
+Enable chloroform
+启用氯仿
+Fall asleep if chloroformed.
+被氯仿迷晕后入睡。
+Chloroform never fades
+氯仿永不消退
+One rag over your mouth lasts forever until removed; otherwise its potency fades after an hour.
+嘴上的一块浸氯仿布在移除前会永远生效，否则药效会在一小时后消退。
+Open Enhanced Lighting Wiki on GitHub
+在 GitHub 打开增强照明 Wiki
+Enhance map lighting
+增强地图照明
+If checked, map lighting will become more dynamic based on light sources [EXPERIMENTAL].
+启用后，地图照明会根据光源动态变化【实验性】。
+Disable lighting animation
+禁用照明动画
+If checked, lighting animations will be disabled (Enable if maps running slow).
+启用后会禁用照明动画（地图运行缓慢时可启用）。
+Use room's ambient darkness
+使用房间环境黑暗
+If checked, will use the room customization filter as ambient darkness (Recommended).
+启用后，使用房间自定义滤镜作为环境黑暗效果（推荐）。
+Use alternate blinding effect
+使用替代致盲效果
+If checked, you will use an alternate blinding effect while in maps.
+启用后，在地图中使用替代的致盲效果。
+Hide vanilla fog squares
+隐藏原版迷雾方块
+If checked, the vanilla fog squares will be hidden leaving just the enhanced vision lines.
+启用后隐藏原版迷雾方块，只保留增强视野线。
+Hide dark lights
+隐藏黑暗光源
+If checked, lights that emit 'darkness' will not be used.
+启用后，不会使用会产生“黑暗”的光源。
+General settings for LSCG Conditions.
+LSCG 状态的通用设置。
+Immersive:
+沉浸模式：
+If true, will apply more restrictions while incapacitated by LSCG.
+启用后，在因 LSCG 失去行动能力时会施加更多限制。
+Hypnotized
+催眠
+Settings to control your hypnosis.
+控制催眠状态的设置。
+Sleep
+睡眠
+Settings to control your unconsciousness.
+控制昏迷状态的设置。
+Open Splatter Wiki on GitHub
+在 GitHub 打开飞溅效果 Wiki
+Enable splatter integration.
+启用飞溅效果整合。
+Enable splatters
+启用飞溅效果
+Allow splattering on others.
+允许对他人施加飞溅效果。
+Give splatters
+施加飞溅效果
+Receive splatters
+接受飞溅效果
+Allow others to splatter you.
+允许他人对你施加飞溅效果。
+Auto splatter
+自动飞溅
+If enabled, will prompt for splatter on orgasm.
+启用后，在高潮时会提示施加飞溅效果。
+Minimum required arousal
+最低所需兴奋度
+Minimum arousal required to do give splatter.
+施加飞溅效果所需的最低兴奋度。
+Who can splatter you
+谁可以对你施加飞溅效果
+Uncontrollable when bound
+被束缚时不可控
+If enabled, the user will only be able to control where splatter is applied if unrestrained.
+启用后，只有未被束缚时才能控制飞溅效果施加的位置。
+Lovers only
+仅恋人
+If enabled, only your lovers and whitelist will be able to apply splatters to you.
+启用后，只有你的恋人和白名单成员可以对你施加飞溅效果。
+Splatter whitelist
+飞溅白名单
+Set member numbers who are explicitly allowed to splatter on you. Comma separated list of member IDs.
+设置明确允许对你施加飞溅效果的成员编号，用逗号分隔。
+Splatter blacklist
+飞溅黑名单
+Set member numbers who are explicitly blocked from splattering on you. Comma separated list of member IDs.
+设置明确禁止对你施加飞溅效果的成员编号，用逗号分隔。
+Splatter color override
+飞溅颜色覆盖
+Override color [hex code] for splatter application. Can comma separate possible values (eg: #FFF, #F0F0F0).
+覆盖飞溅效果的颜色【十六进制代码】。可用逗号分隔多个候选值（例如：#FFF、#F0F0F0）。
+Splatter opacity % override
+飞溅透明度覆盖 %
+Override opacity for splatter application. Can comma separate possible values and provide range (eg: 20, 60-70).
+覆盖飞溅效果的透明度。可用逗号分隔多个候选值并指定范围（例如：20、60-70）。
+Speech analysis
+语音分析
+Master switch: analyze your own chat lines and run the reaction rules.
+总开关：分析你自己的聊天内容并运行反应规则。
+Debug log
+调试日志
+Print each line's analysis to the browser console.
+将每句话的分析结果输出到浏览器控制台。
+Negative threshold
+负面阈值
+Sentiment score (per word) below which self-talk counts as negative.
+每词情感分数低于此值时，你自己的发言会被视为负面。
+Positive threshold
+正面阈值
+Sentiment score (per word) above which self-talk counts as a positive affirmation.
+每词情感分数高于此值时，你自己的发言会被视为正面肯定。
+Context sensitivity
+上下文敏感度
+How clearly positive or negative someone else's message must be before a reply to it counts.
+他人的消息需要多明显地呈现正面或负面，你的回复才会被计入。
+Context window (seconds)
+上下文窗口（秒）
+How long a message said to you can still be answered.
+一条对你说的消息在多久内仍会被视为可回应。
+Maximum grade level
+最高年级
+Flesch-Kincaid grade. Lines of 5+ words at or above this count as too complex.
+Flesch-Kincaid 年级。包含至少 5 个单词且达到此等级的句子会被视为过于复杂。
+Tone thresholds & reading level
+语气阈值与阅读难度
+Puts the negative/positive thresholds, context settings, and reading-level grade back to default.
+将负面/正面阈值、上下文设置和阅读等级恢复为默认值。
+Reset to default
+恢复默认
+Entire speech analysis config
+完整语音分析配置
+Puts detectors, thresholds, vocabulary, phrase groups and reaction rules back to default. Doesn't change whether the module or remote access is enabled. This can't be undone.
+将检测器、阈值、词汇、短语组和反应规则恢复为默认值。不会改变模块或远程访问是否启用。此操作无法撤销。
+Reset everything…
+全部重置……
+Reset speech analysis?
+重置语音分析？
+Any of these phrases always counts as a positive affirmation. Comma separated; use quotes for phrases containing commas.
+这些短语中的任意一个都会始终被视为正面肯定。用逗号分隔；包含逗号的短语请使用引号。
+Affirmation phrases
+肯定短语
+Vocabulary overrides
+词汇覆盖
+Adjust how words score, from -5 (very negative) to 5 (very positive). Format: word:score, e.g. bratty:0, failure:-3
+调整单词评分，范围为 -5（非常负面）到 5（非常正面）。格式：word:score，例如 bratty:0、failure:-3。
+Word scores
+单词评分
+Adjust what counts as profanity. Comma separated, exact words or phrases, whole words only, ignoring case.
+调整哪些内容算作粗俗用语。用逗号分隔，必须是完整单词或短语，不区分大小写。
+Also profane
+也视为粗俗
+Never profane
+从不视为粗俗
+Groups of words or phrases to listen for, such as release phrases or banned words. Pick a group under Reactions ('Says: …') to decide what happens when one is spoken. Comma separated; quote phrases that contain commas. Matches whole words, ignoring case.
+要监听的单词或短语组，例如解除短语或禁用词。可在“反应”中选择组（“说出：……”）决定说出后发生什么。用逗号分隔；包含逗号的短语请加引号。匹配完整单词，不区分大小写。
+Add group
++ 添加组
+Each enabled rule runs when its detection fires. 'Remove state' rules only clear a state; they never apply anything.
+每条启用的规则会在对应检测触发时运行。“移除状态”规则只会清除状态，不会应用任何效果。
+How long the effect lasts, in seconds. 0 = until removed (by a rule, its own timer, or safeword).
+效果持续时间（秒）。0 = 直到被移除（由规则、自身计时器或安全词移除）。
+Seconds before this rule can fire again, so repeated lines don't stack the effect.
+该规则再次触发前的等待秒数，避免重复发言叠加效果。
+Remote configuration
+远程配置
+Let other players change these settings through LSCG remote settings.
+允许其他玩家通过 LSCG 远程设置修改这些选项。
+Allow remote configuration
+允许远程配置
+Who can configure
+谁可以配置
+Requires trance
+需要恍惚
+Remote configuration only works while you are hypnotized, in addition to the permission level above.
+除上述权限等级外，只有你处于催眠状态时才能进行远程配置。
+Allow lockout
+允许锁定
+Remote configurers may lock you out of changing these settings. Safeword releases the lock.
+远程配置者可以禁止你修改这些设置。安全词可以解除锁定。
+Prevent the wearer from changing these settings. Only available if they allowed lockout.
+禁止佩戴者修改这些设置。仅在其允许锁定时可用。
+Line
+句子
+I'm so stupid
+我真蠢
+Show tune buttons in chat
+在聊天中显示调校按钮
+Adds a small ≈ button beside your own chat lines (on hover) that shows how the line read and offers quick fixes. Saved with your account.
+将一个小型 ≈ 按钮添加到你自己的聊天内容旁（悬停时显示），用于查看分析结果并提供快速修正。设置会随账号保存。
+Your recent lines (in memory only, cleared on reload). Click one to try it.
+你最近说过的话（仅保存在内存中，重载后清除）。点击一条来试试。
+Lines you speak while speech analysis is on show up here until you reload.
+启用语音分析期间你说过的话会显示在这里，直到重新加载。
+Try this line
+试试这句话
+Reading level too high
+阅读难度过高
+Too short to assess (under 5 words)
+太短，无法评估（少于 5 个单词）
+not about you
+与你无关
+about you
+与你有关
+from how you answered
+根据你的回复
+Negative tone
+负面语气
+Positive affirmation
+正面肯定
+First worn shock device
+第一个穿戴的电击装置
+Trance (hypnotized)
+恍惚（催眠）
+Shock (worn device)
+电击（穿戴装置）
+Outfit (restore clothes)
+套装（恢复衣物）
+Nothing (add only)
+无（仅添加）
+⚠ No outfit chosen
+⚠ 未选择套装
+Open Magic Wiki on GitHub
+在 GitHub 打开魔法 Wiki
+** Magic™ settings are locked remotely **
+** 魔法™ 设置已被远程锁定 **
+Wild magic
+混沌魔法
+Enable wild magic
+启用混沌魔法
+Cast a random spell from the spell list, with a chance of a truly random spell.
+从法术列表中随机施放一个法术，并有概率施放完全随机的法术。
+Force wild magic
+强制混沌魔法
+Prevents choosing which spell to cast.
+禁止选择要施放的法术。
+True wild magic
+真正的混沌魔法
+Always generates a truly random spell.
+始终生成完全随机的法术。
+Prevent X-ray vision
+防止 X 光视觉
+Blocked effects
+阻止的效果
+Blocked effects never apply to you. "Allow self" still lets your own spells apply them.
+被阻止的效果永远不会对你生效。“允许自己”仍会让你自己的法术对其生效。
+Blocked effects never apply to them. "Allow self" still lets their own spells apply them.
+被阻止的效果永远不会对其生效。“允许自己”仍会让其自己的法术对其生效。
+Allow self
+允许自己
+Your own spells still apply this blocked effect.
+你自己的法术仍会应用此被阻止的效果。
+Their own spells still apply this blocked effect.
+其自己的法术仍会应用此被阻止的效果。
+Spells can't apply this effect to you.
+法术无法对你应用此效果。
+Spells can't apply this effect to them.
+法术无法对其应用此效果。
+Known spells
+已知法术
+Create your arcane sorceries and potions. Use Edit… to choose a spell's effects.
+创建你的奥术法术和药剂。使用“编辑…”选择法术效果。
+Spells
+法术
+Can be cast by typing its name (or casting phrase) and a target.
+可以输入法术名称（或施法短语）和目标来施放。
+Can be brewed into a crafted drink named after it. Not possible with a paired effect.
+可以酿造成以该法术命名的制作饮品。具有配对效果时无法使用。
+Can be brewed into crafted bottles, glasses or mugs named after the spell. Not possible for spells with a paired effect.
+可以酿造成以该法术命名的制作瓶、杯或马克杯。具有配对效果的法术无法使用。
+Casting phrase
+施法短语
+Optional phrase to use instead of the spell's name when voice casting.
+语音施法时可选用此短语代替法术名称。
+Cast by typing the spell's name, or its casting phrase, followed by the target's name.
+输入法术名称或施法短语，再输入目标名称即可施法。
+Damage type
+伤害类型
+What kind of damage the spell does.
+法术造成的伤害类型。
+On a successful save
+成功豁免时
+The target rolls to save, even if they never resist other spells.
+目标仍需进行豁免检定，即使他们从不抵抗其他法术。
+Damage roll
+伤害骰
+Dissolves
+溶解
+Which layers the spell takes off. Cosplay, the body and restraints are never touched.
+法术会脱去哪些层。不会影响 Cosplay、身体或束缚物。
+Fewest pieces
+最少件数
+Each casting puts on at least this many pieces.
+每次施法至少穿上这么多件物品。
+Most pieces
+最多件数
+...and at most this many, rolled each casting.
+每次施法随机穿上不超过此数量的物品。
+Crafted item
+制作物品
+Use one of your own crafted items instead of the plain one.
+使用你自己制作的物品代替普通物品。
+Command
+指令
+The word commanded. Also the fallback when the caster isn't asked, or a voice cast names none.
+要执行的指令词。当未询问施法者或语音施法未指定时也会作为默认值。
+Ask the caster
+询问施法者
+The caster picks from the choices below, or names one after the target in a voice cast.
+施法者从下方选项中选择，或在语音施法中于目标后指定一个选项。
+Choose:
+选择：
+Open
+打开
+Remove Curse
+移除诅咒
+Never defend
+从不防御
+Defenseless against
+防御豁免对象
+Member numbers, comma separated
+成员编号，用逗号分隔
+Maximum duration (minutes)
+最长持续时间（分钟）
+Longest any spell effect lasts. 0 means no maximum.
+任何法术效果的最长持续时间。0 表示无上限。
+Limited spell duration
+限制法术持续时间
+Harmful spell effects wear off eventually; the worse you fail the roll against the caster, the longer they last.
+有害法术效果最终会消退；你对抗施法者的检定失败得越严重，效果持续越久。
+Require whitelist
+要求白名单
+Only people on your whitelist can cast spells on you or teach you spells.
+只有白名单中的人可以对你施放法术或教你法术。
+Outfits and polymorph
+套装与变形
+Outfits may change neck items
+套装可以更换颈部物品
+Polymorph may change genitals
+变形可以更改生殖器
+Polymorph may change pronouns
+变形可以更改代词
+Allowed players can change these settings.
+允许的玩家可以修改这些设置。
+Allowed players can lock you out of these settings.
+允许的玩家可以将你锁定在这些设置之外。
+Allowed members
+允许的成员
+If empty, normal item permissions decide.
+留空则由普通物品权限决定。
+Remote access only works while you are hypnotized.
+只有你处于催眠状态时才能远程访问。
+Only the hypnotizer
+仅催眠者
+Only whoever hypnotized you gets remote access.
+只有催眠你的人可以获得远程访问权限。
+Astral projection
+星界投射
+Spirit form
+灵体形态
+How you look and sound while projected.
+投射期间的外观和声音。
+Spirit speech
+灵体语音
+Spirit color
+灵体颜色
+Tint for your projection.
+投射时使用的颜色。
+Spirit outfit
+灵体套装
+Outfit used for your spirit form. Best if it includes all body, cosplay and clothing.
+灵体形态使用的套装。最好包含全身、Cosplay 和服装。
+Hide corporeal form
+隐藏肉身
+Your body vanishes while you're projected.
+投射期间你的肉身会消失。
+Disable soul bindings
+禁用灵魂束缚
+Soul-bound restraints can't bind your spirit form.
+灵魂绑定的束缚无法束缚你的灵体形态。
+— none —
+— 无 —
+— no saved outfits —
+— 没有已保存的套装 —
+Enhanced Lighting
+增强照明
+Control Collar
+控制项圈
+Section is Unavailable
+此区域不可用
+You must be the owner to purchase this module for %OPP_NAME%...
+你必须是 %OPP_NAME% 的主人才能购买此模块……
+You do not have access to %OPP_POSSESSIVE% collar...
+你无权访问 %OPP_POSSESSIVE% 的项圈……
+Locks the user out of these settings.
+将用户锁定在这些设置之外。
+Does your sub need a more 'gripping' approach to training?
+你的奴隶需要更强力的训练方式吗？
+Act now and secure your Control Module now for the owner-discounted price of $200!
+现在就以主人的折扣价 200 美元购买控制模块！
+Attach this revolutionary new device to your sub's existing collar and it will
+将这个革命性的新设备安装到你奴隶现有的项圈上，它将
+enhance it with the ability to 'tighten' and 'loosen' on command!
+赋予它按指令“收紧”和“放松”的能力！
+Quiet down those bratty moments and reward good behavior!
+平息那些顽皮时刻，并奖励良好表现！
+Override trigger words
+覆盖触发词
+Override awaken words
+覆盖唤醒词
+Override allowed member IDs
+覆盖允许的成员 ID
+Access & suggestions
+访问与暗示
+Suggestable
+可被暗示
+Exclusive
+专属
+Installed by:
+安装者：
+### LSCG 偏好設定補充
+** Speech Analysis settings are locked remotely **
+** 语音分析设置已被远程锁定 **
+A key from the wearer's own outfit collection.
+来自佩戴者自己套装收藏夹的键。
+Allow potion
+允许制作药剂
+Allow voice casting
+允许语音施法
+An outfit name from your MBS wheel, a wardrobe slot number, or a pasted outfit code.
+输入 MBS 转盘中的套装名称、衣柜槽位编号或粘贴的套装代码。
+Applies cosplay items from the outfit.
+应用套装中的 Cosplay 物品。
+Changes the whole body: hair, skin, jewelry, makeup and genitals.
+改变整个身体：头发、皮肤、饰品、妆容和生殖器。
+Clothes, restraints, or both. Items of these kinds already worn are taken off first.
+服装、束缚或两者。已穿戴的同类物品会先被脱下。
+Comes from an extension this client doesn't have.
+来自此客户端未安装的扩展。
+Forget spell
+遗忘法术
+Hint
+提示
+If checked, this cursed item is active and can spread.
+启用后，该诅咒物品处于激活状态并可以传播。
+Items from the outfit replace whatever is in the same slot; nothing else is removed unless chosen here. The previous outfit is restored when the effect ends.
+套装中的物品会替换同一槽位的现有物品；除非在此选择，否则不会移除其他物品。效果结束后会恢复之前的套装。
+Keys (member numbers, comma separated)
+密钥（成员编号，用逗号分隔）
+Lock
+锁定
+Locks them out of their own Magic™ settings. Only possible if they allow it.
+禁止其修改自己的魔法™ 设置，仅在对方允许时可用。
+Name, slot number or pasted code
+名称、槽位编号或粘贴的代码
+No installed extension has settings here.
+没有已安装的扩展在此提供设置。
+Open Activity Wiki on GitHub
+在 GitHub 打开动作 Wiki
+Open Outfit Collection Wiki on GitHub
+在 GitHub 打开套装收藏夹 Wiki
+Open Speech Analysis Wiki on GitHub
+在 GitHub 打开语音分析 Wiki
+Parse the outfit code
+解析套装代码
+Parse ✅
+解析 ✅
+Parts to put on
+要穿上的部位
+Password
+密码
+Remove from outfit
+从套装中移除
+Save Outfit:\nMissing outfit
+保存套装：\n缺少套装
+Says: (deleted group)
+说出：（已删除的组）
+Strip first
+先脱衣
+Use Magic™ and let spells affect you.
+使用魔法™，让法术对你生效。
+— none, or typed below —
+— 无，或在下方输入 —
+— the plain item —
+— 普通物品 —
+Added by an extension
+由扩展添加
