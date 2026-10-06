@@ -6,8 +6,9 @@
   "upstreamCommitPrefixFromMirrorMessage": "bf122d2ae7cd",
   "uiHost": "BCPUIWindow",
   "scope": "BC+ open Shadow DOM display strings; no upstream execution, data changes or translated commands",
-  "reviewedVersion": "0.13.0",
+  "reviewedVersion": "0.14.0",
   "reviewedFeatures": [
-    "Room templates UI, module toggle, creation-screen tooltip and prefixed local room notices"
+    "Room templates UI, module toggle, creation-screen tooltip and prefixed local room notices",
+    "0.14.0: Typing indicator module, Require detailed speech rule, floating BC+ button, sex-pet option, body-curse and migration/stat hover texts (mirror snapshot of 2026-09-29; commit hash not recorded)"
   ]
 }
