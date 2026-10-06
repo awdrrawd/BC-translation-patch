@@ -207,7 +207,6 @@ SourceCharacter wraps PronounPossessive arms around TargetCharacter in a big war
 SourceCharacter 张开 PronounPossessive 双臂给 TargetCharacter 一个温暖的大拥抱。
 SourceCharacter wraps TargetCharacter in a therapeutic self-hug.
 SourceCharacter 把 TargetCharacter 裹进一个治愈的自我拥抱里。
-
 ### LSCG 0.9.8 新增活動名稱
 Bap
 轻拍
@@ -275,7 +274,6 @@ ReleaseChomp
 松开咬住
 SwallowLoad
 吞咽
-
 ### LSCG 0.9.8 新增動作模板／互動文字
 Can't...
 不能……
@@ -322,11 +320,11 @@ SourceCharacter 轻轻蹭到 TargetCharacter 的脚下。
 SourceCharacter nuzzles underneath TargetCharacter's hand.
 SourceCharacter 轻轻蹭到 TargetCharacter 的手下。
 SourceCharacter places PronounPossessive ActivityAsset around PronounPossessive own neck.
-SourceCharacter 将 PronounPossessive ActivityAsset 戴在自己的脖子上。
+SourceCharacter 将 PronounPossessive ActivityAsset 戴在 PronounPossessive 自己的脖子上。
 SourceCharacter places PronounPossessive ActivityAsset around TargetCharacter's neck.
 SourceCharacter 将 PronounPossessive ActivityAsset 戴在 TargetCharacter 的脖子上。
 SourceCharacter pours PronounPossessive ActivityAsset into PronounPossessive own funnel.
-SourceCharacter 将 PronounPossessive ActivityAsset 倒入自己的漏斗。
+SourceCharacter 将 PronounPossessive ActivityAsset 倒入 PronounPossessive 自己的漏斗。
 SourceCharacter pours PronounPossessive ActivityAsset into TargetCharacter's funnel.
 SourceCharacter 将 PronounPossessive ActivityAsset 倒入 TargetCharacter 的漏斗。
 SourceCharacter pulls the ActivityAsset from PronounPossessive mouth.
@@ -338,7 +336,7 @@ SourceCharacter 取下 TargetCharacter 的 ActivityAsset。
 SourceCharacter removes the ActivityAsset from PronounPossessive mouth and lets it hang around PronounPossessive neck.
 SourceCharacter 将 ActivityAsset 从 PronounPossessive 嘴里取出，让它挂在 PronounPossessive 脖子上。
 SourceCharacter slowly penetrates PronounPossessive own mouth with PronounPossessive ActivityAsset.
-SourceCharacter 缓缓用 PronounPossessive ActivityAsset 插入自己的嘴。
+SourceCharacter 缓缓用 PronounPossessive 自己的嘴插入 PronounPossessive ActivityAsset。
 SourceCharacter snaps a photo of TargetCharacter.
 SourceCharacter 给 TargetCharacter 拍了张照片。
 SourceCharacter sprays all over TargetCharacter's ass.
@@ -358,7 +356,7 @@ SourceCharacter 将液体喷满 TargetCharacter 的肚子。
 SourceCharacter sprays all over TargetCharacter.
 SourceCharacter 将液体喷满 TargetCharacter。
 SourceCharacter takes PronounPossessive own ActivityAsset from around PronounPossessive neck.
-SourceCharacter 从 PronounPossessive 脖子上取下自己的 ActivityAsset。
+SourceCharacter 从 PronounPossessive 自己的脖子上取下自己的 ActivityAsset。
 SourceCharacter takes TargetCharacter's ActivityAsset from around TargetPronounPossessive neck.
 SourceCharacter 从 TargetPronounPossessive 脖子上取下 TargetCharacter 的 ActivityAsset。
 SourceCharacter takes a selfie.
