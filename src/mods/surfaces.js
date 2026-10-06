@@ -50,21 +50,21 @@ export function setupSurfaceObserver(dictionaries, getLang, addCleanup) {
         if (parent) processor.push(parent);
         element.querySelectorAll(selector).forEach(el => processor.push(el));
     };
+    // Shallow for what changed (its own surface), deep only inside newly added subtrees. Walking the whole subtree
+    // of every mutation target (chat log, <body>, ...) made text-heavy screens stutter.
     const observer = new MutationObserver(records => {
-        const roots = new Set();
-        const add = node => {
-            const element = node?.nodeType === 1 ? node : node?.parentElement;
-            if (element) roots.add(element);
-        };
+        const added = new Set();
         for (const record of records) {
-            add(record.target);
-            record.addedNodes?.forEach(add);
+            const target = record.target?.nodeType === 1 ? record.target : record.target?.parentElement;
+            const owner = target?.closest(selector);
+            if (owner) processor.push(owner);
+            record.addedNodes?.forEach(node => added.add(node));
         }
-        // One subtree walk per highest affected root, rather than per mutation.
-        for (const root of roots) {
-            let parent = root.parentElement;
-            while (parent && !roots.has(parent)) parent = parent.parentElement;
-            if (!parent) collect(root);
+        // Each highest added subtree is scanned once, however many records mention it.
+        for (const node of added) {
+            let parent = node.parentElement;
+            while (parent && !added.has(parent)) parent = parent.parentElement;
+            if (!parent) collect(node);
         }
     });
     addCleanup(() => observer.disconnect());

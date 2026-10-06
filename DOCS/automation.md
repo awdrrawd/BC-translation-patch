@@ -24,6 +24,8 @@ Workflow：`.github/workflows/build.yml`。依賴更新：`.github/dependabot.ym
 4. **保護 main（建議）**：先讓 workflow 成功跑一次，再到 Settings → Rules → Rulesets 建立啟用中的 main 分支規則；要求 PR 與通過 status checks。選擇 **Verify translations and build**，來源選 GitHub Actions。不要選 Deploy Pages，因為 PR 不執行部署。可再要求分支與 main 保持最新；單人維護不必設定自己無法完成的他人審核要求。
 5. **確認 Dependabot PR**：設定合併至預設分支後，查看依賴更新 PR。更新不會自動合併；請確認 CI 與 OpenCC 翻譯結果後合併。若組織停用 Dependabot，需管理員啟用。
 
+`dist/` 不進版控：commit 只含原始碼與翻譯來源，字庫（含雜湊檔名）與入口 bundle 由 `main` 推送後的 CI 建置並部署，避免 PR 之間在產物上衝突。根目錄的 `bc-translation-patch-Loader.user.js` 內容固定（只含網址），仍保留在版控中。
+
 Pages Base URL 已沿用 package.json 的 `https://awdrrawd.github.io/BC-translation-patch/`。若日後 fork 或更名，要更新 bctp.repository／pagesBaseUrl，重新建置。DOCS 不在 dist 中，因此本次不會把架構文件一起發布到 Pages。
 
 官方設定說明：

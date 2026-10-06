@@ -3,6 +3,8 @@ import { createIdleBatchProcessor } from "./idleBatch.js";
 import { translateValue } from "./displayText.js";
 
 // Inventory text is processed in idle batches; dfn waits until BC has read its lookup key.
+const NON_DISPLAY = new Set(["STYLE", "SCRIPT", "NOSCRIPT", "TEXTAREA"]);
+
 /** 只翻文字節點，保留按鈕內的圖片等結構。translate: (string) => string|undefined */
 function translateTextNodes(root, translate) {
     if (!root.isConnected) return; // 節點在排隊等待翻譯期間可能已被移除（例如使用者又切了一次部位）
@@ -10,8 +12,13 @@ function translateTextNodes(root, translate) {
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     for (const n of nodes) {
+        const parent = n.parentElement;
+        // <style>/<script> 的內容不是顯示文字。LSCG 的 DomOverlayHost 每次開啟設定頁都會塞一份 ~14KB 的 kit CSS，
+        // 把它送進查表會讓整個畫面卡數百毫秒。
+        if (parent && NON_DISPLAY.has(parent.tagName)) continue;
+        if (!n.data.trim()) continue; // 純空白節點不需要翻譯，也不必替它建立紀錄
         // 跳過 <dfn>：BC 會用其 textContent 組查表 key（如製作屬性 Description<n>），翻了會壞
-        if (n.parentElement && n.parentElement.closest("dfn")) continue;
+        if (parent && parent.closest("dfn")) continue;
         translateValue(n, "data", translate);
     }
 }
@@ -69,19 +76,22 @@ function setupDfnObserver(translate, addCleanup) {
 
 // 時間切片排程器：把一批節點的翻譯工作分散到多個閒置時段執行，
 // 避免道具格子一次很多時，單一個 idle callback 又整批卡住主執行緒。
+const ATTRIBUTES = [['title', 'title'], ['aria-label', 'ariaLabel'], ['placeholder', 'placeholder']];
 function setupLscgSettingsObserver(translate, addCleanup) {
     let disposed = false, frame;
     const selector = '[id^="lscg-"][id$="-settings"], #lscg-outfit-edit, #lscg-outfits';
     const processor = createIdleBatchProcessor(root => {
         if (!root.isConnected) return;
         translateTextNodes(root, translate);
-        const elements = [root, ...root.querySelectorAll?.('*') ?? []];
-        for (const el of elements) {
-            if (!(el instanceof Element)) continue;
-            // Labels/tooltips belong to the settings UI. Never translate input values.
-            for (const property of ['title', 'ariaLabel', 'placeholder']) {
-                if (property in el) translateValue(el, property, translate);
+        // Labels/tooltips belong to the settings UI. Never translate input values.
+        // Only elements that actually carry the attribute need a record (every Element has the ariaLabel property).
+        for (const el of root.querySelectorAll('[title], [aria-label], [placeholder]')) {
+            for (const [attribute, property] of ATTRIBUTES) {
+                if (el.hasAttribute(attribute)) translateValue(el, property, translate);
             }
+        }
+        for (const [attribute, property] of ATTRIBUTES) {
+            if (root.hasAttribute(attribute)) translateValue(root, property, translate);
         }
     });
     addCleanup(() => { disposed = true; processor.dispose(); cancelAnimationFrame(frame); });
@@ -91,8 +101,10 @@ function setupLscgSettingsObserver(translate, addCleanup) {
         if (el.matches(selector)) processor.push(el);
         el.querySelectorAll?.(selector).forEach(root => processor.push(root));
     };
+    // Only look at what changed. Scanning m.target's whole subtree (e.g. the chat log, or <body>) on every mutation
+    // is what made busy rooms stutter; new roots always arrive through addedNodes.
     const obs = new MutationObserver(muts => muts.forEach(m => {
-        collect(m.target);
+        if (m.target.nodeType === 1 && m.target.matches(selector)) processor.push(m.target);
         m.addedNodes?.forEach(collect);
     }));
     addCleanup(() => obs.disconnect());

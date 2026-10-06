@@ -1,10 +1,47 @@
 // Lookup policy lives here; rendering adapters only supply text and scope.
+
+/** Longest literal run every match must contain ("" when unsure). The dictionary regexes are unanchored
+ *  (`(.+) moans ...`), so a miss otherwise costs O(n^2) backtracking per rule; `includes` rejects it in O(n). */
+export function requiredLiteral(pattern, flags = "") {
+    if (flags.includes("i")) return "";
+    let best = "", run = "";
+    const flush = () => { if (run.length > best.length) best = run; run = ""; };
+    for (let i = 0; i < pattern.length; i++) {
+        const c = pattern[i], next = pattern[i + 1];
+        if (c === "\\") {
+            if (next === undefined || /[kpPuxc]/.test(next)) return "";
+            if (/[dDwWsSbB0-9]/.test(next)) { flush(); i++; continue; } // class, boundary or backreference
+            if (/[?*{]/.test(pattern[i + 2] ?? "")) return "";
+            run += next === "n" ? "\n" : next === "t" ? "\t" : next; i++;
+        } else if (c === "(") {
+            if (next === "?" && !/^\(\?:/.test(pattern.slice(i))) return "";
+            flush();
+            for (let depth = 1; depth && ++i < pattern.length;) {
+                if (pattern[i] === "\\") i++;
+                else if (pattern[i] === "(") depth++;
+                else if (pattern[i] === ")") depth--;
+            }
+        } else if (c === ".") { flush(); }
+        else if (c === "[" || c === "|" || c === "{" || c === "*" || c === "?" || c === "+") {
+            // Quantifiers after `.`/groups are harmless (we already flushed); anything else is out of our depth.
+            if (c === "+" || c === "?" || c === "*") { if (run) return ""; continue; }
+            return "";
+        } else if (c === "^" || c === "$") { flush(); }
+        else {
+            if (/[?*{]/.test(pattern[i + 1] ?? "")) return "";
+            run += c;
+        }
+    }
+    flush();
+    return best;
+}
+
 export function createLookup(dictionary, getLanguage, env = globalThis) {
     let context = [];
     const results = { menu: new Map(), activity: new Map() };
     const memo = (scope, translate) => key => {
         const lang = getLanguage();
-        const current = [lang, env.CurrentScreen, !!env.BCX_Loaded, !!env.Player?.LSCG,
+        const current = [lang, env.CurrentScreen === "InformationSheet", !!env.BCX_Loaded, !!env.Player?.LSCG,
             dictionary.modMenu[lang], dictionary.compat[lang], dictionary.surfaces[lang], dictionary.activity[lang], dictionary.modRegex[lang]];
         if (current.some((value, i) => value !== context[i])) {
             Object.values(results).forEach(map => map.clear()); context = current;
@@ -12,6 +49,7 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
         const map = results[scope];
         if (map.has(key)) return map.get(key);
         const value = translate(key);
+        if (key.length > 400) return value; // Long one-off text (CSS, pasted notes) would only evict useful entries.
         if (map.size >= 512) map.delete(map.keys().next().value);
         map.set(key, value); // Cache misses too: dynamic screens repeatedly draw identical labels.
         return value;
@@ -19,7 +57,7 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
     const cache = new WeakMap();
     const rules = entries => {
         if (!entries) return [];
-        if (!cache.has(entries)) cache.set(entries, entries.map(entry => ({ ...entry, regex: new RegExp(entry.p, entry.f) })));
+        if (!cache.has(entries)) cache.set(entries, entries.map(entry => ({ ...entry, regex: new RegExp(entry.p, entry.f), literal: requiredLiteral(entry.p, entry.f) })));
         return cache.get(entries);
     };
     const legacy = (scope, key, lang) => {
@@ -27,7 +65,8 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
             if (id === "BCX" ? !env.BCX_Loaded || (scope === "menu" && env.CurrentScreen !== "InformationSheet") : !env.Player?.LSCG) continue;
             const data = dictionary.compat[lang]?.[id]?.[scope];
             if (data?.text[key]) return data.text[key];
-            for (const { regex, r } of rules(data?.regex)) {
+            for (const { regex, r, literal } of rules(data?.regex)) {
+                if (literal && !key.includes(literal)) continue;
                 const match = regex.exec(key);
                 if (!match) continue;
                 // The original LSCG activity rules replace the whole message and translate pronoun captures.
@@ -46,7 +85,8 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
         const exact = explicit || dictionary.compat[lang]?.supplement.menu[key] ||
             dictionary.modMenu[lang]?.[key] || legacy("menu", key, lang);
         if (exact) return exact;
-        if (env.CurrentScreen === "InformationSheet") for (const { regex, r } of rules(dictionary.modRegex[lang])) {
+        if (env.CurrentScreen === "InformationSheet") for (const { regex, r, literal } of rules(dictionary.modRegex[lang])) {
+            if (literal && !key.includes(literal)) continue;
             if (regex.test(key)) return key.replace(regex, r);
         }
     }

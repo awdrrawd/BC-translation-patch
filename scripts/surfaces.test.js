@@ -4,7 +4,7 @@ import { generateDict } from "./gen-dict.js";
 import { translateSurface, translateCraftShare, SURFACES, setupSurfaceObserver } from "../src/mods/surfaces.js";
 import { parseHTML } from "linkedom";
 
-test("surface mutation batches scan each highest affected subtree once", t => {
+test("surface mutation batches scan each highest added subtree once, never the whole mutation target", t => {
     const { document } = parseHTML('<html><body><div id="layering"><div><legend>ArmMask</legend></div></div></body></html>');
     const root = document.getElementById("layering"), child = root.firstElementChild;
     let notify, scans = 0;
@@ -18,9 +18,9 @@ test("surface mutation batches scan each highest affected subtree once", t => {
         if (descriptor) Object.defineProperty(globalThis, key, descriptor); else delete globalThis[key];
     } });
     setupSurfaceObserver(dictionaries, () => "TW", fn => cleanups.push(fn));
-    const original = root.querySelectorAll.bind(root);
-    t.mock.method(root, "querySelectorAll", selector => { scans++; return original(selector); });
-    t.mock.method(child, "querySelectorAll", () => assert.fail("nested root must not be rescanned"));
+    const original = child.querySelectorAll.bind(child);
+    t.mock.method(root, "querySelectorAll", () => assert.fail("a mutation target's subtree must not be scanned"));
+    t.mock.method(child, "querySelectorAll", selector => { scans++; return original(selector); });
     notify(Array.from({ length: 100 }, () => ({ target: root, addedNodes: [child] })));
     assert.equal(scans, 1);
     while (work.length) work.shift()({ didTimeout: true });

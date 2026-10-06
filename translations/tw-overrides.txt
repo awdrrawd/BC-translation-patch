@@ -3,3 +3,8 @@
 ### 範例（可刪除）：
 ### Slave
 ### 奴隸
+### 修正 OpenCC 對「后」「里」的歧義轉換（單句覆寫）
+The Bondage Club is pleased to announce that SourceCharacter is starting a 7 days minimum trial period as a submissive.
+束縛俱樂部很榮幸的宣佈SourceCharacter開始了從僕試任期，試任至少7天後才能轉正。
+I win. You don't need those arms to roll the dice.
+我贏了。你接下來擲骰子不需要手了。
