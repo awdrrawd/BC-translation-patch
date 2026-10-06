@@ -1641,3 +1641,244 @@ Use Magic™ and let spells affect you.
 — 普通物品 —
 Added by an extension
 由扩展添加
+### LSCG 漏翻補齊：互動／套裝／藥物／魔法／詛咒物品／語音分析
+Pulldown Panties
+拉下式内裤
+Aside
+拨开
+Restore
+恢复
+Up
+上拉
+Down
+下拉
+Business Trousers
+商务长裤
+Zipped
+拉上拉链
+Unzip
+拉开拉链
+Hoodie
+连帽衫
+Full
+全长
+Cropped
+短款
+Bolero
+短外套
+Hood Up
+拉起兜帽
+Ears Up
+竖起兜帽耳朵
+Hood Down
+放下兜帽
+Demonique Bikini
+魅魔比基尼
+Cute Bikini
+可爱比基尼
+Close
+合上
+Jacket Hoodie
+夹克连帽衫
+PVC Hobble Skirt
+PVC 瘸行裙
+Zip Legs
+拉上腿部拉链
+Scarf
+围巾
+Let Down
+放下
+Cover Mouth
+遮住嘴巴
+Key Necklace
+钥匙项链
+Lock Necklace
+锁头项链
+Tuck In
+藏入衣内
+Pull Out
+拉出
+Latex Tank Top
+乳胶背心
+Hood Pulled Up
+完全拉起兜帽
+Front Loose
+放松前侧
+Front Pulled Up
+完全拉起前侧
+Hooded Cloak
+连帽斗篷
+Over Eyes
+遮住眼睛
+Hood Back
+向后推兜帽
+Latex Hobble Dress
+乳胶瘸行裙
+Knee Strap
+膝部绑带
+Ankle Strap
+脚踝绑带
+Both Straps
+两条绑带
+Remove Straps
+移除绑带
+Share
+分享
+LSCG: Share craft in chat
+LSCG：在聊天中分享制作物
+Click on a craft to share it in the chat
+点击制作物即可在聊天中分享
+Accept
+接受
+Deny
+拒绝
+Theft!
+抢夺！
+Leave it
+算了
+Drink
+喝下
+Refuse
+拒绝
+Apply LSCG Outfit
+应用 LSCG 套装
+Outfit [key] not found.
+找不到套装 [key]。
+Wearing outfit
+正在穿戴套装
+Your current outfit keys are:
+你当前的套装键为：
+Invalid outfit arguments.
+套装参数无效。
+already exists.
+已存在。
+saved.
+已保存。
+Not enough space to save outfit
+没有足够空间保存套装
+removed.
+已移除。
+List all available outfit keys
+列出所有可用的套装键
+Add new outfit to collection.
+将新套装添加到收藏。
+Remove outfit from collection.
+从收藏中移除套装。
+Removes all outfits from collection.
+移除收藏中的所有套装。
+Injector module is not enabled.
+注射器模块未启用。
+Sedative boosted. Level:
+镇静剂已增强。等级：
+Mind-control boosted. Level:
+精神控制已增强。等级：
+Aphrodisiac boosted. Level:
+催情剂已增强。等级：
+Usage: /lscg drug-boost &lt;sleepy|hypno|horny&gt;
+用法：/lscg drug-boost &lt;sleepy|hypno|horny&gt;
+LSCG: Cursed Item
+LSCG：诅咒物品
+hypnotizing
+催眠
+slumber
+沉睡
+horny
+兴奋
+blindness
+失明
+deafened
+失聪
+muted
+禁声
+frozen
+冻结
+enlarge
+放大
+bless
+祝福
+bane
+灾厄
+paired_arousal
+兴奋联结
+orgasm_siphon
+高潮虹吸
+outfit
+套装
+polymorph
+变形
+dispel
+驱散
+xray
+X 光视觉
+barrier
+魔法屏障
+disarm
+缴械
+denial
+高潮剥夺
+orgasm
+强制高潮
+project
+灵魂投射
+tighten
+收紧
+loosen
+放松
+Hypnotizes the target.
+催眠目标。
+Induces a deep slumber in the target.
+使目标陷入深度睡眠。
+Arouses the target.
+使目标兴奋。
+Prevents the target from seeing.
+使目标无法视物。
+Prevents the target from hearing.
+使目标无法听见声音。
+Gags the target.
+使目标被堵住嘴巴。
+Petrifies the target.
+使目标身体僵硬。
+Enlarges the target to twice their size.
+将目标放大至两倍大小。
+Applies a +5 buff to all the target's skills for 15 minutes
+使目标所有技能获得 +5 增益，持续 15 分钟。
+Applies a -5 debuff to all the target's skills for 15 minutes
+使目标所有技能获得 -5 减益，持续 15 分钟。
+Pair two targets, such that when one feels arousal the other also does.
+连接两个目标，使其中一人的兴奋也传递给另一人。
+Redirect all of the target's orgasmic pleasure to another.
+将目标的所有高潮快感转移给另一人。
+Magically change the target's clothing and equipment.
+用魔法改变目标的服装和装备。
+Polymorph the target's body and/or cosplay items
+改变目标的身体和／或 Cosplay 物品。
+Dispels any existing effects on the target (including anything drug induced).
+驱散目标身上现有的所有效果（包括药物造成的效果）。
+Grants the target X-Ray vision
+赋予目标 X 光视觉。
+Create a magic barrier that protect and reflect incoming spell
+创造能够防护并反弹来袭法术的魔法屏障。
+Disarm the target
+解除目标的手持物品。
+Denies the target any orgasms.
+禁止目标达到高潮。
+Forced an orgasm upon the target.
+强制目标达到高潮。
+Project the target's soul into the Astral Plane
+将目标的灵魂投射到星界。
+Tightens every unlocked restraint on the target.
+收紧目标身上所有未锁定的束缚。
+Loosens every unlocked restraint on the target.
+放松目标身上所有未锁定的束缚。
+Context window
+上下文窗口
+Says a phrase from
+说出短语组中的短语
+Apply state
+应用状态
+Remove state
+移除状态
+Shock
+电击
+Force orgasm
+强制高潮
