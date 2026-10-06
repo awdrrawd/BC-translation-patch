@@ -29,6 +29,10 @@ export function translateLscgMessage(text, dictionary, lang = "TW") {
         if (!match) continue;
         const values = Object.fromEntries(rule.tokens.map((token, i) => {
             let value = match[i + 1];
+            // Some incoming messages leave an optional departure target as the
+            // literal placeholder (for example "%ITEM%"). Treat that as a
+            // blank capture instead of leaking the placeholder into the UI.
+            if (value === token) value = "";
             if (token === "%OPP_NAME_POSSESSIVE%") value = value.endsWith("'s") ? value.slice(0, -2) : "自己";
             if (token === "%OPP_INTENSIVE%") value = /self|selves/.test(value) ? "自己" : "對方";
             if (token === "%OPP_NAME%" && !value) value = "對方";
