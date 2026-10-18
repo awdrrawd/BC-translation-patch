@@ -4,10 +4,10 @@ export function applyAssetDescriptions(g, paths, lang) {
     const groups = g.AssetGroup || [];
     const assets = g.Asset || [];
     for (const family of new Set(groups.map(group => group.Family))) {
-        if (!paths[`Assets/${family}/${family}_CN.txt`] &&
-            !paths[`Assets/${family}/${family}_TW.txt`]) continue;
-        const csv = g.CommonCSVCache?.[`Assets/${family}/${family}.csv`];
-        const flat = paths[`Assets/${family}/${family}_${lang}.txt`];
+        const bases = [`Assets/${family}`, `Assets/${family}/${family}`];
+        if (!bases.some(base => paths[`${base}_CN.txt`] || paths[`${base}_TW.txt`])) continue;
+        const csv = bases.map(base => g.CommonCSVCache?.[`${base}.csv`]).find(Array.isArray);
+        const flat = bases.map(base => paths[`${base}_${lang}.txt`]).find(Array.isArray);
         if (!Array.isArray(csv) || !csv.length || (lang !== "EN" && !flat)) continue;
         const translations = new Map();
         for (let i = 0; i < (flat?.length || 0); i += 2) {
@@ -41,8 +41,10 @@ export function watchReadiness(g, getCaches, refresh, addCleanup) {
         }
         const current = [g.TranslationLanguage, g.Asset, g.Asset?.length, g.AssetGroup,
             g.AssetGroup?.length, ...families.flatMap(f => {
-                const csv = g.CommonCSVCache?.[`Assets/${f}/${f}.csv`];
-                return [f, csv, csv?.length];
+                return [f, ...[`Assets/${f}.csv`, `Assets/${f}/${f}.csv`].flatMap(path => {
+                    const csv = g.CommonCSVCache?.[path];
+                    return [csv, csv?.length];
+                })];
             }), ...Array.from(caches?.values?.() || [])];
         if (current.length === previous.length && current.every((value, i) => value === previous[i])) return;
         refresh();

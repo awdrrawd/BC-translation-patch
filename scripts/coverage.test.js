@@ -8,6 +8,33 @@ import { walk } from "./lib/fsutil.js";
 import { generateDict } from "./gen-dict.js";
 import { withTextKeys, textKeyRows } from "./lib/textKeys.js";
 
+test("text CSV keys tolerate empty rows and trailing columns without treating assets as text", () => {
+ assert.deepEqual(textKeyRows(parseCsv('ColorChangeDisabled,No permission,,\n\nMenuDress,Dress\nMenuDress,Change clothes,'), true),
+  [["ColorChangeDisabled", "No permission"], ["MenuDress", "Change clothes"]]);
+ assert.equal(textKeyRows([["Group", "Asset", "Description"]]), null);
+});
+
+test("R133 chat-room-menu and Appearance identifiers resolve in both languages", () => {
+ const keys = JSON.parse(fs.readFileSync("translations/text-keys.json", "utf8"));
+ const { paths } = generateDict();
+ for (const base of ["Screens/Online/ChatRoom/Text_ChatRoom", "Screens/Character/Appearance/Text_Appearance"]) {
+  const rows = keys[base].filter(([key]) => base.includes("Appearance") || key.startsWith("Menu"));
+  assert.equal(rows.length, base.includes("Appearance") ? 31 : 22);
+  for (const lang of ["CN", "TW"]) {
+   const flat = paths[`${base}_${lang}.txt`];
+   for (const [key] of rows) {
+    const i = flat.indexOf(key);
+    assert.ok(i >= 0 && /[\u3400-\u9fff]/.test(flat[i + 1]), `${lang} ${key}`);
+   }
+   if (base.includes("Appearance")) assert.match(flat[flat.indexOf("SelectSomeoneAppearance") + 1], /TargetCharacterName/);
+  }
+ }
+ for (const lang of ["CN", "TW"]) {
+  assert.deepEqual(paths[`Assets/Female3DCG_${lang}.txt`], paths[`Assets/Female3DCG/Female3DCG_${lang}.txt`]);
+  assert.ok(paths[`Assets/LayerNames_${lang}.txt`].length > 0);
+ }
+});
+
 test("MainHall trailing CSV fields and duplicate tips follow TextCache semantics", () => {
  assert.deepEqual(textKeyRows(parseCsv('Tip25,Old tip,\nTip25,New tip,\nExit,Leave,')), [["Tip25", "New tip"], ["Exit", "Leave"]]);
  assert.equal(textKeyRows([["Group", "Item", "Description"]]), null);

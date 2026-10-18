@@ -33,3 +33,13 @@ npm run diff -- --tw
 
 驗證涵蓋 InformationSheet 的簡繁中識別鍵查表、英文項保留、跨檔作用域與缺漏檢查。
 尚未在實際連線遊戲中驗證畫面。
+
+## ChatRoom 選單與 Appearance
+
+`chat-room-menu-*` 的提示由 `ChatRoomMenuButtonVisualState()` 從 ChatRoom 的 `Menu*` 鍵取得，並由遊戲同步到 DOM；不需要額外攔截 DOM。
+ChatRoom CSV 的空白列及 Appearance 的尾端空欄曾讓整份對照表被跳過。
+匯入器現在忽略空白列，Text CSV 取前兩欄，重複鍵採最後一列，與 TextCache 一致。
+回歸測試檢查 22 個選單提示及 31 個 Appearance 識別鍵的 CN/TW 輸出。
+
+R133 也將資產文字搬到 `Assets/`。建置保留舊路徑並新增 Female3DCG、AssetStrings、LayerNames、ColorGroups 的新路徑字庫；識別鍵依新檔案作用域產生。
+資產名稱重建及晚載入偵測支援新舊 CSV 路徑，涵蓋 Appearance 的物品與部位名稱、簡繁中切換及英文還原。自訂資產名稱保持原樣。

@@ -124,6 +124,21 @@ test("readiness refreshes only on data, language or text-cache changes",t=>{
     scope.dispose();assert.ok(stopped);
 });
 
+test("R133 asset paths restore Appearance names after late loading and language changes", t => {
+    let tick, count = 0;
+    t.mock.method(globalThis, "setInterval", fn => { tick = fn; return 1; });
+    t.mock.method(globalThis, "clearInterval", () => {});
+    const g = assets(), scope = createScope();
+    const modern = Object.fromEntries(Object.entries(paths).map(([key, value]) => [key.replace("Female3DCG/Female3DCG", "Female3DCG"), value]));
+    watchReadiness(g, () => new Map(), () => { count++; applyAssetDescriptions(g, modern, g.TranslationLanguage); }, scope.add);
+    g.CommonCSVCache["Assets/Female3DCG.csv"] = [["Hat", "", "Hats"], ["Hat", "New", "New hat"]];
+    tick(); assert.equal(count, 2); assert.equal(g.Asset[0].Description, "新帽子");
+    g.TranslationLanguage = "TW"; tick(); assert.equal(g.Asset[0].Description, "新帽飾");
+    g.TranslationLanguage = "EN"; tick(); assert.equal(g.Asset[0].Description, "New hat");
+    assert.equal(g.Asset[1].Description, "Custom mod name");
+    scope.dispose();
+});
+
 test("existing DOM text switches language from saved source and accepts external edits",()=>{
     const node={data:"  Hat  "};
     translateValue(node,"data",()=> "帽子");assert.equal(node.data,"  帽子  ");

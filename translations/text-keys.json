@@ -75185,6 +75185,696 @@
       "Return"
     ]
   ],
+  "Screens/Online/ChatRoom/Text_ChatRoom": [
+    [
+      "ActionGrabbedToServeDrinksIntro",
+      "(Two maids grab you and escort you to their quarters.  Another maid addresses you.)  Your owner sent you here to work."
+    ],
+    [
+      "PublicChat",
+      "Talk to everyone"
+    ],
+    [
+      "WhisperTo",
+      "Whisper to"
+    ],
+    [
+      "WhisperFrom",
+      "Whisper from"
+    ],
+    [
+      "WhisperTargetGone",
+      "The character you were whispering to has left."
+    ],
+    [
+      "WhisperTargetOutOfRange",
+      "Whisper target is out of range.  Returning to normal chat."
+    ],
+    [
+      "MenuCut",
+      "Keep 20- or all current-room messages"
+    ],
+    [
+      "MenuProfile",
+      "Your character profile"
+    ],
+    [
+      "MenuRoomAdmin",
+      "Room administration"
+    ],
+    [
+      "MenuCustomizationOn",
+      "Turn room customization on"
+    ],
+    [
+      "MenuCustomizationOff",
+      "Turn room customization off"
+    ],
+    [
+      "MenuNextCharacters",
+      "View next 10 characters"
+    ],
+    [
+      "MenuPreviousCharacters",
+      "View previous 10 characters"
+    ],
+    [
+      "MenuCharacterView",
+      "Go to character view"
+    ],
+    [
+      "MenuMapView",
+      "Go to map view"
+    ],
+    [
+      "MenuKneel",
+      "Kneel down / Stand up"
+    ],
+    [
+      "MenuIcons",
+      "Show / hide character icons"
+    ],
+    [
+      "MenuCamera",
+      "Take a picture"
+    ],
+    [
+      "MenuDress",
+      "Dress your character"
+    ],
+    [
+      "MenuExit",
+      "Leave this chat room"
+    ],
+    [
+      "MenuCancel",
+      "Stop leaving"
+    ],
+    [
+      "MenuGameOption",
+      "Game options"
+    ],
+    [
+      "PandoraInvalidSource",
+      "You must be a Pandora's guard to use this command."
+    ],
+    [
+      "PandoraInvalidTarget",
+      "Your target is not a Pandora's inmate."
+    ],
+    [
+      "PandoraInvalidActivity",
+      "Invalid Pandora activity, use `/pandora help` to get the list."
+    ],
+    [
+      "PandoraActivityHelp",
+      "The supported activities are:"
+    ],
+    [
+      "PandoraInvalidActivityForTarget",
+      "This activity cannot be performed on this target."
+    ],
+    [
+      "OrgasmComing",
+      "An orgasm is coming!"
+    ],
+    [
+      "OrgasmResist",
+      "Resist!"
+    ],
+    [
+      "OrgasmTryResist",
+      "Try to resist"
+    ],
+    [
+      "OrgasmSurrender",
+      "Surrender"
+    ],
+    [
+      "OrgasmRecovering",
+      "Recovering from an orgasm..."
+    ],
+    [
+      "ChatRoomStruggleStruggling",
+      "Struggling..."
+    ],
+    [
+      "ChatRoomStruggleLoosening",
+      "Loosening..."
+    ],
+    [
+      "ChatRoomStruggleImpossible",
+      "Impossible!"
+    ],
+    [
+      "ChatRoomStruggleLoosen",
+      "Loosen"
+    ],
+    [
+      "ChatRoomStruggleGiveUp",
+      "Give up"
+    ],
+    [
+      "ChatRoomReply",
+      "Replying to"
+    ],
+    [
+      "ChatRoomNoMessageFound",
+      "Message could not be found."
+    ],
+    [
+      "CommandBeepInvalidTarget",
+      "Invalid member number for target: $target."
+    ],
+    [
+      "CommandBeepLink",
+      "(Beep to {NAME} ({NUMBER}): {MESSAGE})"
+    ],
+    [
+      "CommandBeepNotFriend",
+      "We're not friend with member $target."
+    ],
+    [
+      "CommandBeepEmptyMessage",
+      "Please enter a beep message."
+    ],
+    [
+      "CommandHelp",
+      "<strong>Help: KeyWord</strong>"
+    ],
+    [
+      "CommandNoSuchCommand",
+      "command: no such command"
+    ],
+    [
+      "CommandPrerequisiteFailed",
+      "command: prerequisite check failed"
+    ],
+    [
+      "CommandHelpMissing",
+      "HELP IS MISSING"
+    ],
+    [
+      "CommandFriendlist",
+      "Friendlist:"
+    ],
+    [
+      "CommandGhostlist",
+      "Ghostlist:"
+    ],
+    [
+      "CommandWhitelist",
+      "Whitelist:"
+    ],
+    [
+      "CommandBlacklist",
+      "Blacklist:"
+    ],
+    [
+      "FocusEnabledWarningIcon",
+      "<img src='Icons/FocusEnabledWarning.png' style='display: inline-block; height: 1em; vertical-align: middle; transform: translateY(-0.15em);' aria-hidden='true'>"
+    ],
+    [
+      "FocusEnabled",
+      "<strong>NOTICE</strong>: The FocusEnabledWarningIcon <strong>focus list</strong> FocusEnabledWarningIcon is now <strong>enabled</strong>. <i>Only characters on your focus list will be visible to you in the chatroom</i>. To disable this, use <code>/focus clear</code> or the button in the menu bar."
+    ],
+    [
+      "CommandFocusTargeterAmbiguous",
+      "IGNORING 'Targeter': multiple matches found."
+    ],
+    [
+      "CommandFocusTargeterDuplicate",
+      "IGNORING 'Targeter': result was previously matched."
+    ],
+    [
+      "CommandFocusTargeterNoMatch",
+      "IGNORING 'Targeter': no match was found."
+    ],
+    [
+      "CommandFocusNoTargets",
+      "<strong>FAIL</strong>: no targets were found (targeters did not match or were not provided) -- no changes were made."
+    ],
+    [
+      "CommandFocusSuccessAdd",
+      "<strong>SUCCESS</strong>: The following targets were added to your focus list: Changed."
+    ],
+    [
+      "CommandFocusSuccessRemove",
+      "<strong>SUCCESS</strong>: The following targets were removed from your focus list: Changed."
+    ],
+    [
+      "CommandFocusSuccessClear",
+      "<strong>SUCCESS</strong>: Your focus list was cleared."
+    ],
+    [
+      "CommandFocusList",
+      "Focus List:"
+    ],
+    [
+      "CommandFocusHelpSyntax",
+      "/focus add/remove/list/clear/help [targeter(s)]"
+    ],
+    [
+      "CommandFocusHelpSummary",
+      "Modifies your focus list. When you have users on your focus list, the characters you can visually see in the chatroom are filtered to only those on your focus list. When your focus list is enabled, you will see the FocusEnabledWarningIcon icon on all characters. To go back to viewing all characters, use <code>/focus clear</code> or the button in the menu bar."
+    ],
+    [
+      "CommandFocusHelpNotesHeader",
+      "Notes:"
+    ],
+    [
+      "CommandFocusHelpNotes",
+      "<li>If you normally would not be able to see a character on your focus list (e.g. sensory deprivation), they still will not be visible to you.</li><li>Neither chat messages nor map rooms are affected by the focus list.</li><li>If a player on your focus list leaves the room, they are removed from the list.</li>"
+    ],
+    [
+      "CommandFocusHelpSubcommandsHeader",
+      "Subcommands:"
+    ],
+    [
+      "CommandFocusHelpAdd",
+      "Add the members to your focus list"
+    ],
+    [
+      "CommandFocusHelpRemove",
+      "Removes the members from your focus list"
+    ],
+    [
+      "CommandFocusHelpList",
+      "Shows the members on your focus list"
+    ],
+    [
+      "CommandFocusHelpClear",
+      "Clears your focus list (returns to viewing all members)"
+    ],
+    [
+      "CommandFocusHelpHelp",
+      "Display this help message"
+    ],
+    [
+      "CommandFocusHelpTargeters",
+      "Targeters: A list of names or member numbers to target in a subcommand, separated by spaces. Names can be partial, but must be unique. Exact name matches will take precedence over partial matches."
+    ],
+    [
+      "CommandChangeLogClear",
+      "Clear changelog"
+    ],
+    [
+      "CommandChangeLogCollapse",
+      "Collapse section"
+    ],
+    [
+      "CommandChangeLogCollapseShift",
+      "{shift} to collapse all"
+    ],
+    [
+      "CommandNoWhisperTarget",
+      "Whisper target was not found:"
+    ],
+    [
+      "CommandNoMessage",
+      "No message provided."
+    ],
+    [
+      "CommandMultipleWhisperTargets",
+      "You can whisper to: $TargetsClick on the name or use the member number."
+    ],
+    [
+      "CommandWhisperTargetSuccess",
+      "Whispering to"
+    ],
+    [
+      "CommandWhisperStopSuccess",
+      "You're no longer whispering."
+    ],
+    [
+      "CommandNoWhisperTargetSelected",
+      "Specify the member number or name to whisper to."
+    ],
+    [
+      "CommandHelpEscape",
+      "Send a message starting with \\ and it will escape any message. Example: \\/message will send /message. \\*emote will send *emote."
+    ],
+    [
+      "GGTSIntro",
+      "(Two nurses wearing futuristic gear grab you and carry you to the Asylum.  Another nurse is waiting for you there.)  Welcome.  Don't be scared."
+    ],
+    [
+      "OwnerPresenceBlockTalk",
+      "Talking is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockEmote",
+      "Emoting is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockWhisper",
+      "Whispering to others is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockChangePose",
+      "Changing pose is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockAccessSelf",
+      "Accessing yourself is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockAccessOther",
+      "Accessing others is forbidden when your owner is present."
+    ],
+    [
+      "MapCopyDone",
+      "The current map data has been copied to your clipboard.  Paste it somewhere else to save it."
+    ],
+    [
+      "MapCopyError",
+      "There's no map data to copy."
+    ],
+    [
+      "MapPasteDone",
+      "Your pasted map data is loaded."
+    ],
+    [
+      "MapPasteError",
+      "Your pasted map data cannot be loaded."
+    ],
+    [
+      "MapPasteAdmin",
+      "Only room administrators can paste the map."
+    ],
+    [
+      "MenuDressIsRestrained",
+      "You are restrained"
+    ],
+    [
+      "MenuDressIsClubSlave",
+      "You are a club slave"
+    ],
+    [
+      "MenuDressGameBlocked",
+      "The game blocks it"
+    ],
+    [
+      "MenuDressGGTSBlocked",
+      "GGTS blocks it"
+    ],
+    [
+      "MenuDressRuleBlocked",
+      "A rule blocks it"
+    ],
+    [
+      "MenuDressOwnerBlocked",
+      "Your owner forbids it"
+    ],
+    [
+      "PonyNotJoin",
+      "You have not joined the Ponies"
+    ],
+    [
+      "PonyInvalidActivity",
+      "Invalid Pony activity, type /help to get the list."
+    ],
+    [
+      "FriendRequestMessage",
+      "SourceCharacter has requested to be your friend. {buttons} "
+    ],
+    [
+      "FriendAcceptMessage",
+      "SourceCharacter has accepted your friend request."
+    ],
+    [
+      "FriendRemoveMessage",
+      "SourceCharacter has removed you as a friend."
+    ],
+    [
+      "FriendAddback",
+      "Add back"
+    ],
+    [
+      "FriendAddbackMessage",
+      "Added SourceCharacter as a friend."
+    ],
+    [
+      "FriendGhost",
+      "Ghost SourceCharacter"
+    ],
+    [
+      "FriendGhostMessage",
+      "SourceCharacter is now Ghosted."
+    ],
+    [
+      "FriendIgnore",
+      "Ignore request"
+    ],
+    [
+      "InvalidNumber",
+      "Invalid number."
+    ],
+    [
+      "ArousalNotChangeable",
+      "Your Arousal Activation mode should be set to Manual or Hybrid to change your arousal."
+    ],
+    [
+      "CommandModsListTitle",
+      "Loaded mods"
+    ],
+    [
+      "CommandModsListSummaryOne",
+      "$count registered mod"
+    ],
+    [
+      "CommandModsListSummaryMany",
+      "$count registered mods"
+    ],
+    [
+      "CommandModsVersionFormat",
+      "v$version"
+    ],
+    [
+      "CommandModsRepositoryLink",
+      "Repository"
+    ],
+    [
+      "CommandModsHelpList",
+      "Show Mod SDK mods loaded in your client in the chat log (name, version, optional repository link)."
+    ],
+    [
+      "CommandModsHelpRemote",
+      "Query mods installed on other players; optional argument targets one player in the room. Others must allow replies in Online preferences."
+    ],
+    [
+      "CommandModsRemoteTitle",
+      "Remote Mod SDK results"
+    ],
+    [
+      "CommandModsRemoteAriaLabel",
+      "Remote Mod SDK query results"
+    ],
+    [
+      "CommandModsRemoteProgress",
+      "Responses $done / $total"
+    ],
+    [
+      "CommandModsRemoteNoMods",
+      "(No mods registered)"
+    ],
+    [
+      "CommandModsRemoteUnknownMember",
+      "Member $member"
+    ],
+    [
+      "CommandModsRemoteStatusOk",
+      "Responded"
+    ],
+    [
+      "CommandModsRemoteStatusDeclined",
+      "Declined"
+    ],
+    [
+      "CommandModsRemoteStatusError",
+      "Error"
+    ],
+    [
+      "CommandModsRemoteStatusYou",
+      "You"
+    ],
+    [
+      "CommandModsRemoteStatusTimeout",
+      "No response"
+    ],
+    [
+      "CommandModsRemoteDeclinedBody",
+      "This player declines remote Mod SDK queries (Online preference)."
+    ],
+    [
+      "CommandModsRemoteErrorBody",
+      "Could not read mod list."
+    ],
+    [
+      "CommandModsRemoteTimeoutBody",
+      "Timed out waiting for a reply (ghost list or connection can block replies)."
+    ],
+    [
+      "CommandModsRemoteNotInRoom",
+      "You must be in a chat room to use this command."
+    ],
+    [
+      "CommandModsRemoteInvalidTarget",
+      "No matching player in this room for that name or member number."
+    ],
+    [
+      "CommandModsListCopyDone",
+      "Mod list copied to your clipboard."
+    ],
+    [
+      "CommandModsListCopyError",
+      "Could not copy mod list to clipboard."
+    ],
+    [
+      "CommandModsListCopyTooltip",
+      "Copy mod list"
+    ],
+    [
+      "ChatRoomMapViewRecentItemsLabel",
+      "Recent Items"
+    ],
+    [
+      "TileTypeNameWall",
+      "Walls"
+    ],
+    [
+      "TileTypeNameFloor",
+      "Floors"
+    ],
+    [
+      "TileTypeNameFloorExterior",
+      "Exterior Floors "
+    ],
+    [
+      "TileTypeNameWater",
+      "Water"
+    ],
+    [
+      "ObjectTypeNameLivingRoom",
+      "Living Room"
+    ],
+    [
+      "ObjectTypeNameBathroom",
+      "Bathroom"
+    ],
+    [
+      "ObjectTypeNameBedroom",
+      "Bedroom"
+    ],
+    [
+      "ObjectTypeNameSchool",
+      "School"
+    ],
+    [
+      "ObjectTypeNameABDL",
+      "ABDL"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationThemed",
+      "Themed"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationParty",
+      "Party"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationCamping",
+      "Camping"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationExpanding",
+      "Expanding"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationAnimal",
+      "Animals"
+    ],
+    [
+      "ObjectTypeNameFloorItem",
+      "Items"
+    ],
+    [
+      "ObjectTypeNameFloorObstacle",
+      "Obstacles"
+    ],
+    [
+      "ObjectTypeNameFloorNumber",
+      "Numbers"
+    ],
+    [
+      "ObjectTypeNameFloorLetter",
+      "Letters"
+    ],
+    [
+      "ObjectTypeNameFloorIcon",
+      "Icons"
+    ],
+    [
+      "ObjectTypeNameWallDecoration",
+      "Wall Decorations"
+    ],
+    [
+      "ObjectTypeNameWallPath",
+      "Doors"
+    ],
+    [
+      "ObjectTypeNameBanners",
+      "Banners"
+    ],
+    [
+      "ObjectTypeNameFloorFoamTiles",
+      "Foam Tiles"
+    ],
+    [
+      "ObjectTypeNameFunctional",
+      "Functional"
+    ],
+    [
+      "EffectTypeNameStaticLighting",
+      "Effects"
+    ],
+    [
+      "EditorButtonTextUndo",
+      "Undo"
+    ],
+    [
+      "EditorButtonTextEditRange",
+      "Edit Range"
+    ],
+    [
+      "EditorButtonTextZoomIn",
+      "Zoom In"
+    ],
+    [
+      "EditorButtonTextZoomOut",
+      "Zoom Out"
+    ],
+    [
+      "EditorButtonTextToggleFog",
+      "Toggle Fog"
+    ],
+    [
+      "EditorButtonTextEditTiles",
+      "Tiles"
+    ],
+    [
+      "EditorButtonTextEditObjects",
+      "Objects"
+    ],
+    [
+      "EditorButtonTextEditEffects",
+      "Effects"
+    ],
+    [
+      "EditorButtonTextBack",
+      "Back"
+    ]
+  ],
   "Screens/Online/ChatRoom/Text_Commands": [
     [
       "action",

@@ -154,6 +154,19 @@ export function generateDict() {
         }
     }
 
+    // R133 moved these text files out of Assets/Female3DCG/.
+    // Keep legacy paths for older clients; translate identifiers only on the new scope.
+    for (const [file, values] of Object.entries(paths)) {
+        const match = /^Assets\/Female3DCG\/(Female3DCG|AssetStrings|LayerNames|ColorGroups)_(CN|TW)\.txt$/.exec(file);
+        if (!match) continue;
+        const base = `Assets/${match[1]}`;
+        const target = `${base}_${match[2]}.txt`;
+        if (paths[target]) continue;
+        const pairs = [];
+        for (let i = 0; i < values.length; i += 2) pairs.push([values[i], values[i + 1]]);
+        paths[target] = flat(withTextKeys(pairs, textKeys[base]));
+    }
+
     const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // BCX / LSCG 補充字典（translations/mods/*.txt，英文→中文），TW 由 OpenCC 轉
     const modMenu = { CN: /** @type {Record<string,string>} */ ({}), TW: /** @type {Record<string,string>} */ ({}) };

@@ -1,9 +1,11 @@
 // R133 TextCache translates CSV identifiers; maintained dictionaries use English.
 // Keep this conversion scoped to each CSV, never the global mod dictionaries.
 export function textKeyRows(rows, textFile = false) {
-    if (!rows.length || !rows.every(row => row.length >= 2 && (textFile || row.slice(2).every(value => !value.trim())))) return null;
-    // TextCache.cacheLines assigns rows in order: the last duplicate wins.
-    return [...new Map(rows.map(([key, english]) => [key, english]))];
+    const content = rows.filter(row => row.some(value => value.trim()));
+    if (!content.length || !content.every(row => row.length >= 2 &&
+        (textFile || row.slice(2).every(value => !value.trim())))) return null;
+    // TextCache uses the first two columns and the last occurrence of a key.
+    return [...new Map(content.map(([key, english]) => [key, english]))];
 }
 
 export function withTextKeys(pairs, rows = []) {
