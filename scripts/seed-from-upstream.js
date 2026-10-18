@@ -7,6 +7,7 @@ import { upstreamDir, repoRoot } from "./lib/upstream.js";
 import { walk, ensureDir } from "./lib/fsutil.js";
 import { parseTxtPairs } from "./lib/parseTxt.js";
 import { parseCsv } from "./diff-upstream.js";
+import { textKeyRows } from "./lib/textKeys.js";
 
 const src = upstreamDir();
 const trRoot = path.join(repoRoot, "translations");
@@ -22,8 +23,8 @@ for (const file of files) {
     let body = fs.readFileSync(file, "utf8");
     const csv = file.replace(/_CN\.txt$/, ".csv");
     if (!/\/Dialog_/.test(rel) && fs.existsSync(csv)) {
-        const rows = parseCsv(fs.readFileSync(csv, "utf8"));
-        if (rows.every(row => row.length === 2)) {
+        const rows = textKeyRows(parseCsv(fs.readFileSync(csv, "utf8")), /\/Text_[^/]+$/.test(rel));
+        if (rows) {
             const keys = new Map(rows);
             const english = new Set(rows.map(([, value]) => value.trim()));
             const pairs = parseTxtPairs(body);

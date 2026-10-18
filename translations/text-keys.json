@@ -238,10 +238,6 @@
     ],
     [
       "AutoPunish",
-      "Auto-inflation sensitivity:"
-    ],
-    [
-      "AutoPunish",
       "Sensitivity:"
     ],
     [
@@ -3963,10 +3959,6 @@
     [
       "ClothHoodieSelectPouch",
       "Hands in or out of the Pouch?"
-    ],
-    [
-      "ClothHoodieSetHood",
-      "SourceCharacter adjusts the hood of DestinationCharacter hoodie."
     ],
     [
       "ClothHoodieSetHood",
@@ -10865,10 +10857,6 @@
       "Right Only"
     ],
     [
-      "HairBackHairBack61RightOnly",
-      "Right Only"
-    ],
-    [
       "HairBackHairBack61bSelect",
       "Select Type."
     ],
@@ -11623,10 +11611,6 @@
     [
       "HandAccessoryLeftRingsModuleFingernails",
       "Nails/Claws"
-    ],
-    [
-      "HandAccessoryLeftRingsModuleRing",
-      "Ring finger"
     ],
     [
       "HandAccessoryLeftRingsOptioni0",
@@ -13934,23 +13918,11 @@
     ],
     [
       "ItemArmsSlimeSetp1",
-      ""
-    ],
-    [
-      "ItemArmsSlimeSetp1",
       "The slime around DestinationCharacter arms expands to encase TargetPronounPossessive whole body."
     ],
     [
       "ItemArmsSlimeSett0",
-      ""
-    ],
-    [
-      "ItemArmsSlimeSett0",
       "The slime girl recedes back into the slime on TargetCharacter."
-    ],
-    [
-      "ItemArmsSlimeSett1",
-      ""
     ],
     [
       "ItemArmsSlimeSett1",
@@ -20814,10 +20786,6 @@
     ],
     [
       "ItemMiscPetPostOptionx0",
-      "Sign text"
-    ],
-    [
-      "ItemMiscPetPostOptionx0",
       "Sign text."
     ],
     [
@@ -23798,10 +23766,6 @@
     ],
     [
       "ItemNeckRestraintsPetPostOptionx0",
-      "Sign text"
-    ],
-    [
-      "ItemNeckRestraintsPetPostOptionx0",
       "Sign text."
     ],
     [
@@ -25067,10 +25031,6 @@
     [
       "ItemPelvisPortalPantiesSelect",
       "Select Cover"
-    ],
-    [
-      "ItemPelvisPortalPantiesSelectBase",
-      "Select options"
     ],
     [
       "ItemPelvisPortalPantiesSelectBase",
@@ -38285,26 +38245,6 @@
       "lowest priority"
     ],
     [
-      "ClothAccessoryLargeBeltClassicModuleBelt",
-      "Belt mode"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicSelectBelt",
-      "Choose your belt style:"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicOptionb0",
-      "Loose"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicOptionb1",
-      "Fit"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicOptionb2",
-      "Lower loose"
-    ],
-    [
       "ItemNeckSteampunkCollarSelectBase",
       "Steampunk collar customization menu:"
     ],
@@ -39325,10 +39265,6 @@
     [
       "ItemHoodHalloIIIDetail1",
       "Mask 1st detail"
-    ],
-    [
-      "ItemHoodHalloIIIDetail2",
-      "Mask 2nd detail"
     ],
     [
       "ItemHoodHalloIIIDetail2",
@@ -40499,10 +40435,6 @@
     [
       "ClothAccessoryXmasLongShawlVelvetRight",
       "Right"
-    ],
-    [
-      "ClothAdmiralTopJacket",
-      "Jacket"
     ],
     [
       "ClothAdmiralTopJacket",
@@ -42723,14 +42655,6 @@
     [
       "GartersButterflyGarterGarterL",
       "Left leg garter"
-    ],
-    [
-      "GartersGarterBeltLeft",
-      "Left"
-    ],
-    [
-      "GartersGarterBeltRight",
-      "Right"
     ],
     [
       "GartersGarterBeltLeft",
@@ -49961,28 +49885,12 @@
       "Hood"
     ],
     [
-      "ItemHoodVacHoodBase",
-      "Hood"
-    ],
-    [
-      "ItemHoodVacHoodClipHose",
-      "Clipped Hose"
-    ],
-    [
       "ItemHoodVacHoodClipHose",
       "Clipped Hose"
     ],
     [
       "ItemHoodVacHoodHandPump",
       "Pump"
-    ],
-    [
-      "ItemHoodVacHoodHandPump",
-      "Pump"
-    ],
-    [
-      "ItemHoodVacHoodLenses",
-      "Lens"
     ],
     [
       "ItemHoodVacHoodLenses",
@@ -49993,20 +49901,8 @@
       "Clip"
     ],
     [
-      "ItemHoodVacHoodPlasticClip",
-      "Clip"
-    ],
-    [
       "ItemHoodVacHoodRebreather",
       "Rebreather Bag"
-    ],
-    [
-      "ItemHoodVacHoodRebreather",
-      "Rebreather Bag"
-    ],
-    [
-      "ItemHoodVacHoodTube",
-      "Breathing Tube"
     ],
     [
       "ItemHoodVacHoodTube",
@@ -54741,10 +54637,6 @@
       "Logo"
     ],
     [
-      "ItemHoodCybertechMaskliquid",
-      "Liquid"
-    ],
-    [
       "MaskFaceVeilFabric",
       "Fabric"
     ],
@@ -56066,10 +55958,6 @@
     ],
     [
       "SocksYuletideVelvetWarmthSock",
-      "Sock"
-    ],
-    [
-      "SocksYuletideVelvetWarmthSock",
       "Fuzz"
     ],
     [
@@ -56699,14 +56587,6 @@
     [
       "TailStrapsDragonTailStrap2RightSecondary",
       "Secondary"
-    ],
-    [
-      "TailStrapsWolfTailStrap3TL",
-      "Tail"
-    ],
-    [
-      "TailStrapsKittenTailStrap1TL",
-      "Tail"
     ],
     [
       "TailStrapsWolfTailStrap3TL",
@@ -58017,6 +57897,132 @@
     [
       "ClubCardPlayBoard1",
       "Wooden Board"
+    ]
+  ],
+  "Screens/Character/Appearance/Text_Appearance": [
+    [
+      "SelectYourAppearance",
+      "Select your appearance"
+    ],
+    [
+      "SelectSomeoneAppearance",
+      " Select TargetCharacterName's appearance"
+    ],
+    [
+      "MustPickItem",
+      "You must pick an item of type:"
+    ],
+    [
+      "WardrobeNameInfo",
+      "Set wardrobe character name:"
+    ],
+    [
+      "WardrobeNameError",
+      "Invalid name for character."
+    ],
+    [
+      "ResetClothes",
+      "Reset character"
+    ],
+    [
+      "WearRandom",
+      "Randomize clothes"
+    ],
+    [
+      "Random",
+      "Randomize character"
+    ],
+    [
+      "Naked",
+      "Strip clothes"
+    ],
+    [
+      "Copy",
+      "Copy to clipboard"
+    ],
+    [
+      "Paste",
+      "Import from clipboard"
+    ],
+    [
+      "Character",
+      "Show character in previews"
+    ],
+    [
+      "StripItem",
+      "Strip item"
+    ],
+    [
+      "Swap",
+      "Reorder Items"
+    ],
+    [
+      "Next",
+      "Next"
+    ],
+    [
+      "Prev",
+      "Previous"
+    ],
+    [
+      "Cancel",
+      "Cancel changes"
+    ],
+    [
+      "Accept",
+      "Accept changes"
+    ],
+    [
+      "Wardrobe",
+      "Wardrobe"
+    ],
+    [
+      "WardrobeDisabled",
+      "Wardrobe can be bought in your private room."
+    ],
+    [
+      "PermissionMode",
+      "Edit item permissions"
+    ],
+    [
+      "Use",
+      "Use this item"
+    ],
+    [
+      "UseDisabled",
+      "Unable to use due to player permissions"
+    ],
+    [
+      "Reset",
+      "Reset character"
+    ],
+    [
+      "ColorChange",
+      "Select a color"
+    ],
+    [
+      "ColorChangeDisabled",
+      "Unable to change color due to player permissions"
+    ],
+    [
+      "ColorChangeMulti",
+      "Select colors"
+    ],
+    [
+      "ColorChangeMultiDisabled",
+      "Unable to change color due to player permissions"
+    ],
+    [
+      "OwnerBlock",
+      "blocked by owner"
+    ],
+    [
+      "Layering",
+      "Change item layering"
+    ],
+    [
+      "None",
+      "None"
     ]
   ],
   "Screens/Character/BackgroundSelection/Text_BackgroundSelection": [
@@ -69278,7 +69284,7 @@
     ],
     [
       "ReceivedBeep",
-      "Received at"
+      "Received Beep"
     ],
     [
       "RemoveItemWithTimer",
@@ -69399,10 +69405,6 @@
     [
       "SendBeep",
       "Send Beep"
-    ],
-    [
-      "ReceivedBeep",
-      "Received Beep"
     ],
     [
       "Close",
@@ -69855,10 +69857,6 @@
     [
       "WontRemoveItemWithTimer",
       "The item will stay when the lock timer runs out"
-    ],
-    [
-      "YourRoom",
-      "Your private room"
     ],
     [
       "ZoneBlocked",
@@ -78141,6 +78139,356 @@
     [
       "Dress",
       "Wear Maid Uniform"
+    ]
+  ],
+  "Screens/Room/MainHall/Text_MainHall": [
+    [
+      "SyncWithServer",
+      "Synchronizing with server, please wait..."
+    ],
+    [
+      "RescueIsComing",
+      "A rescue maid is coming..."
+    ],
+    [
+      "OnlinePlayers",
+      "Online Members:"
+    ],
+    [
+      "IntroductionClass",
+      "Introduction Class"
+    ],
+    [
+      "MaidQuarters",
+      "Maid Quarters"
+    ],
+    [
+      "ShibariDojo",
+      "Shibari Dojo"
+    ],
+    [
+      "KidnapLeague",
+      "Kidnappers League"
+    ],
+    [
+      "PrivateRoom",
+      "Private Room"
+    ],
+    [
+      "ClubManagement",
+      "Club Management"
+    ],
+    [
+      "SearchSarah",
+      "Search for Sarah"
+    ],
+    [
+      "ExploreClub",
+      "Explore the Club"
+    ],
+    [
+      "ChatRooms",
+      "Online Chat Rooms"
+    ],
+    [
+      "Shop",
+      "Club Shop"
+    ],
+    [
+      "Profile",
+      "Your Profile"
+    ],
+    [
+      "Appearance",
+      "Change Appearance"
+    ],
+    [
+      "Cell",
+      "Timer Cell"
+    ],
+    [
+      "SlaveMarket",
+      "Slave Market"
+    ],
+    [
+      "LookForTrouble",
+      "Look for Trouble"
+    ],
+    [
+      "Asylum",
+      "Asylum"
+    ],
+    [
+      "College",
+      "Visit the College"
+    ],
+    [
+      "LARPBattle",
+      "LARP Battles"
+    ],
+    [
+      "MovieStudio",
+      "Movie Studio"
+    ],
+    [
+      "Infiltration",
+      "Infiltration"
+    ],
+    [
+      "Poker",
+      "Bondage Poker"
+    ],
+    [
+      "MagicSchool",
+      "Magic School"
+    ],
+    [
+      "Platform",
+      "Bondage Brawl"
+    ],
+    [
+      "Crafting",
+      "Item Crafting"
+    ],
+    [
+      "ClubCard",
+      "Club Card Lounge"
+    ],
+    [
+      "Exit",
+      "Leave the Club"
+    ],
+    [
+      "ExitConfirm",
+      "Do you want to leave the club?"
+    ],
+    [
+      "SarahBedroom",
+      "Sarah's Bedroom"
+    ],
+    [
+      "Gambling",
+      "Gambling by git4nick"
+    ],
+    [
+      "Prison",
+      "Prison by git4nick"
+    ],
+    [
+      "Photographic",
+      "Photographic by git4nick"
+    ],
+    [
+      "Stable",
+      "Stable by git4nick"
+    ],
+    [
+      "Nursery",
+      "The Nursery by wildsj"
+    ],
+    [
+      "Magic",
+      "Houdini's Theater by git4nick"
+    ],
+    [
+      "Cafe",
+      "Cafe by wildsj"
+    ],
+    [
+      "Arcade",
+      "Arcade by Ada18980"
+    ],
+    [
+      "RequestMaid",
+      "Request maid service"
+    ],
+    [
+      "OpenChangelog",
+      "Open the changelog"
+    ],
+    [
+      "Tip0",
+      "This game is for adults only.  Minors must leave immediately."
+    ],
+    [
+      "Tip1",
+      "All game characters are considered adults, no exceptions."
+    ],
+    [
+      "Tip2",
+      "Please be courteous and polite.  Help new members to get started."
+    ],
+    [
+      "Tip3",
+      "Console cheating can break your account forever.  Please be careful."
+    ],
+    [
+      "Tip4",
+      "Have an open mind, your fetishes might be different from others."
+    ],
+    [
+      "Tip5",
+      "Following a player web link can get you a virus or steal your account."
+    ],
+    [
+      "Tip6",
+      "Please respect other players limits.  Enforce your own limits."
+    ],
+    [
+      "Tip7",
+      "Do not attempt anything that could harm you in your real life."
+    ],
+    [
+      "Tip8",
+      "Remember your friends in your private room or they will leave."
+    ],
+    [
+      "Tip9",
+      "If you find bugs or exploits, please report them and give details."
+    ],
+    [
+      "Tip10",
+      "Take good care of each other's feelings and your submissives."
+    ],
+    [
+      "Tip11",
+      "If you give any real-life information, it might be used against you."
+    ],
+    [
+      "Tip12",
+      "A collared college girl can be convinced to give you her uniform."
+    ],
+    [
+      "Tip13",
+      "It's easier to destroy a reputation than to build one."
+    ],
+    [
+      "Tip14",
+      "There's no best way to make money.  Simply find a job you enjoy."
+    ],
+    [
+      "Tip15",
+      "Please do not use console commands to grief other players."
+    ],
+    [
+      "Tip16",
+      "Beta items will be lost if you go back to the regular version."
+    ],
+    [
+      "Tip17",
+      "You can protect yourself by blocking items and blacklisting players."
+    ],
+    [
+      "Tip18",
+      "Reach us on Discord, DeviantArt or Patreon if you need help."
+    ],
+    [
+      "Tip19",
+      "Type /help in a chatroom to know the available chat commands."
+    ],
+    [
+      "Tip20",
+      "Try changing your graphics preferences if you get performance issues."
+    ],
+    [
+      "Tip21",
+      "Don't forget to do the daily job in the Introduction Room."
+    ],
+    [
+      "Tip22",
+      "Corsets can be worn both as clothing and a restraint."
+    ],
+    [
+      "Tip23",
+      "Chat rooms are where you can interact with other people, stay safe."
+    ],
+    [
+      "Tip24",
+      "Locks makes it harder to struggle out of restraints."
+    ],
+    [
+      "Tip25",
+      "The Maid Quarters is always looking to pay those that help out."
+    ],
+    [
+      "Tip26",
+      "The Kidnapper's League pays quite a bit for those that can catch others."
+    ],
+    [
+      "Tip27",
+      "The Asylum also has its own chat room, along with payment as a Nurse."
+    ],
+    [
+      "Tip28",
+      "Your profile has a LOT of settings, feel free to take a look."
+    ],
+    [
+      "Tip29",
+      "Need a stat boost? The Cafe might have something to help."
+    ],
+    [
+      "Tip30",
+      "Your account works on all servers, switch to another if you get errors."
+    ],
+    [
+      "Tip31",
+      "The Good Girl Training System is hiring test subjects in the Asylum."
+    ],
+    [
+      "Tip32",
+      "There's a card trading game that can be played everywhere in the Club."
+    ],
+    [
+      "Tip33",
+      "Keeping politics and religion out of the Bondage Club is a good idea."
+    ],
+    [
+      "Tip34",
+      "Your best protection against trolls is to block and ghost them."
+    ],
+    [
+      "Tip35",
+      "There's no shame in using a safeword in online chat rooms."
+    ],
+    [
+      "PandoraKidnapperIntro0",
+      "(A woman blocks your path.)  DialogPlayerName!  You've been a nuisance for Pandora's Box for far too long.  Surrender now or you will get hurt."
+    ],
+    [
+      "PandoraKidnapperIntro1",
+      "(A girl taps on your shoulder.)  Here you are!  Pandora's Box sent me to get you.  Get on your knees right now or there will be trouble."
+    ],
+    [
+      "PandoraKidnapperIntro2",
+      "(Someone springs from behind you.)  No offense DialogPlayerName, but Pandora's Box as put a bounty on you.  Come with me quietly."
+    ],
+    [
+      "PandoraKidnapperIntro3",
+      "(A girl jumps in front of you.)  Your days of causing trouble are over DialogPlayerName.  I'm bringing you bound and gagged to Pandora's Box."
+    ],
+    [
+      "PandoraKidnapperIntro4",
+      "(A woman chases you down.)  You won't be running away this time girl.  Pandora's Box has a special cell ready for your ass."
+    ],
+    [
+      "PandoraDominatrixIntro0",
+      "(A Dominatrix from Pandora's Box jumps in front of you.)  DialogPlayerName!  You've stolen our technology"
+    ],
+    [
+      "PandoraDominatrixIntro1",
+      "(A Dominatrix from Pandora's Box taps on your shoulder.)  Here you are!  The Box sent me to recover the lock and key that you've stolen."
+    ],
+    [
+      "PandoraDominatrixIntro2",
+      "(Someone springs from behind you.)  No offense DialogPlayerName, but Pandora's Box wants to recover their lock and key."
+    ],
+    [
+      "PandoraDominatrixIntro3",
+      "(A girl jumps in front of you.)  Your days of causing trouble are over DialogPlayerName.  I'm bringing back what you've stolen."
+    ],
+    [
+      "PandoraDominatrixIntro4",
+      "(A Dominatrix chases you down.)  You won't be running away this time girl.  Give us back our technology or there will be trouble."
     ]
   ],
   "Screens/Room/Management/Text_Management": [
