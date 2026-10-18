@@ -238,10 +238,6 @@
     ],
     [
       "AutoPunish",
-      "Auto-inflation sensitivity:"
-    ],
-    [
-      "AutoPunish",
       "Sensitivity:"
     ],
     [
@@ -3963,10 +3959,6 @@
     [
       "ClothHoodieSelectPouch",
       "Hands in or out of the Pouch?"
-    ],
-    [
-      "ClothHoodieSetHood",
-      "SourceCharacter adjusts the hood of DestinationCharacter hoodie."
     ],
     [
       "ClothHoodieSetHood",
@@ -10865,10 +10857,6 @@
       "Right Only"
     ],
     [
-      "HairBackHairBack61RightOnly",
-      "Right Only"
-    ],
-    [
       "HairBackHairBack61bSelect",
       "Select Type."
     ],
@@ -11623,10 +11611,6 @@
     [
       "HandAccessoryLeftRingsModuleFingernails",
       "Nails/Claws"
-    ],
-    [
-      "HandAccessoryLeftRingsModuleRing",
-      "Ring finger"
     ],
     [
       "HandAccessoryLeftRingsOptioni0",
@@ -13934,23 +13918,11 @@
     ],
     [
       "ItemArmsSlimeSetp1",
-      ""
-    ],
-    [
-      "ItemArmsSlimeSetp1",
       "The slime around DestinationCharacter arms expands to encase TargetPronounPossessive whole body."
     ],
     [
       "ItemArmsSlimeSett0",
-      ""
-    ],
-    [
-      "ItemArmsSlimeSett0",
       "The slime girl recedes back into the slime on TargetCharacter."
-    ],
-    [
-      "ItemArmsSlimeSett1",
-      ""
     ],
     [
       "ItemArmsSlimeSett1",
@@ -20814,10 +20786,6 @@
     ],
     [
       "ItemMiscPetPostOptionx0",
-      "Sign text"
-    ],
-    [
-      "ItemMiscPetPostOptionx0",
       "Sign text."
     ],
     [
@@ -23798,10 +23766,6 @@
     ],
     [
       "ItemNeckRestraintsPetPostOptionx0",
-      "Sign text"
-    ],
-    [
-      "ItemNeckRestraintsPetPostOptionx0",
       "Sign text."
     ],
     [
@@ -25067,10 +25031,6 @@
     [
       "ItemPelvisPortalPantiesSelect",
       "Select Cover"
-    ],
-    [
-      "ItemPelvisPortalPantiesSelectBase",
-      "Select options"
     ],
     [
       "ItemPelvisPortalPantiesSelectBase",
@@ -38285,26 +38245,6 @@
       "lowest priority"
     ],
     [
-      "ClothAccessoryLargeBeltClassicModuleBelt",
-      "Belt mode"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicSelectBelt",
-      "Choose your belt style:"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicOptionb0",
-      "Loose"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicOptionb1",
-      "Fit"
-    ],
-    [
-      "ClothAccessoryLargeBeltClassicOptionb2",
-      "Lower loose"
-    ],
-    [
       "ItemNeckSteampunkCollarSelectBase",
       "Steampunk collar customization menu:"
     ],
@@ -39325,10 +39265,6 @@
     [
       "ItemHoodHalloIIIDetail1",
       "Mask 1st detail"
-    ],
-    [
-      "ItemHoodHalloIIIDetail2",
-      "Mask 2nd detail"
     ],
     [
       "ItemHoodHalloIIIDetail2",
@@ -40499,10 +40435,6 @@
     [
       "ClothAccessoryXmasLongShawlVelvetRight",
       "Right"
-    ],
-    [
-      "ClothAdmiralTopJacket",
-      "Jacket"
     ],
     [
       "ClothAdmiralTopJacket",
@@ -42723,14 +42655,6 @@
     [
       "GartersButterflyGarterGarterL",
       "Left leg garter"
-    ],
-    [
-      "GartersGarterBeltLeft",
-      "Left"
-    ],
-    [
-      "GartersGarterBeltRight",
-      "Right"
     ],
     [
       "GartersGarterBeltLeft",
@@ -49961,28 +49885,12 @@
       "Hood"
     ],
     [
-      "ItemHoodVacHoodBase",
-      "Hood"
-    ],
-    [
-      "ItemHoodVacHoodClipHose",
-      "Clipped Hose"
-    ],
-    [
       "ItemHoodVacHoodClipHose",
       "Clipped Hose"
     ],
     [
       "ItemHoodVacHoodHandPump",
       "Pump"
-    ],
-    [
-      "ItemHoodVacHoodHandPump",
-      "Pump"
-    ],
-    [
-      "ItemHoodVacHoodLenses",
-      "Lens"
     ],
     [
       "ItemHoodVacHoodLenses",
@@ -49993,20 +49901,8 @@
       "Clip"
     ],
     [
-      "ItemHoodVacHoodPlasticClip",
-      "Clip"
-    ],
-    [
       "ItemHoodVacHoodRebreather",
       "Rebreather Bag"
-    ],
-    [
-      "ItemHoodVacHoodRebreather",
-      "Rebreather Bag"
-    ],
-    [
-      "ItemHoodVacHoodTube",
-      "Breathing Tube"
     ],
     [
       "ItemHoodVacHoodTube",
@@ -54741,10 +54637,6 @@
       "Logo"
     ],
     [
-      "ItemHoodCybertechMaskliquid",
-      "Liquid"
-    ],
-    [
       "MaskFaceVeilFabric",
       "Fabric"
     ],
@@ -56066,10 +55958,6 @@
     ],
     [
       "SocksYuletideVelvetWarmthSock",
-      "Sock"
-    ],
-    [
-      "SocksYuletideVelvetWarmthSock",
       "Fuzz"
     ],
     [
@@ -56699,14 +56587,6 @@
     [
       "TailStrapsDragonTailStrap2RightSecondary",
       "Secondary"
-    ],
-    [
-      "TailStrapsWolfTailStrap3TL",
-      "Tail"
-    ],
-    [
-      "TailStrapsKittenTailStrap1TL",
-      "Tail"
     ],
     [
       "TailStrapsWolfTailStrap3TL",
@@ -58017,6 +57897,132 @@
     [
       "ClubCardPlayBoard1",
       "Wooden Board"
+    ]
+  ],
+  "Screens/Character/Appearance/Text_Appearance": [
+    [
+      "SelectYourAppearance",
+      "Select your appearance"
+    ],
+    [
+      "SelectSomeoneAppearance",
+      " Select TargetCharacterName's appearance"
+    ],
+    [
+      "MustPickItem",
+      "You must pick an item of type:"
+    ],
+    [
+      "WardrobeNameInfo",
+      "Set wardrobe character name:"
+    ],
+    [
+      "WardrobeNameError",
+      "Invalid name for character."
+    ],
+    [
+      "ResetClothes",
+      "Reset character"
+    ],
+    [
+      "WearRandom",
+      "Randomize clothes"
+    ],
+    [
+      "Random",
+      "Randomize character"
+    ],
+    [
+      "Naked",
+      "Strip clothes"
+    ],
+    [
+      "Copy",
+      "Copy to clipboard"
+    ],
+    [
+      "Paste",
+      "Import from clipboard"
+    ],
+    [
+      "Character",
+      "Show character in previews"
+    ],
+    [
+      "StripItem",
+      "Strip item"
+    ],
+    [
+      "Swap",
+      "Reorder Items"
+    ],
+    [
+      "Next",
+      "Next"
+    ],
+    [
+      "Prev",
+      "Previous"
+    ],
+    [
+      "Cancel",
+      "Cancel changes"
+    ],
+    [
+      "Accept",
+      "Accept changes"
+    ],
+    [
+      "Wardrobe",
+      "Wardrobe"
+    ],
+    [
+      "WardrobeDisabled",
+      "Wardrobe can be bought in your private room."
+    ],
+    [
+      "PermissionMode",
+      "Edit item permissions"
+    ],
+    [
+      "Use",
+      "Use this item"
+    ],
+    [
+      "UseDisabled",
+      "Unable to use due to player permissions"
+    ],
+    [
+      "Reset",
+      "Reset character"
+    ],
+    [
+      "ColorChange",
+      "Select a color"
+    ],
+    [
+      "ColorChangeDisabled",
+      "Unable to change color due to player permissions"
+    ],
+    [
+      "ColorChangeMulti",
+      "Select colors"
+    ],
+    [
+      "ColorChangeMultiDisabled",
+      "Unable to change color due to player permissions"
+    ],
+    [
+      "OwnerBlock",
+      "blocked by owner"
+    ],
+    [
+      "Layering",
+      "Change item layering"
+    ],
+    [
+      "None",
+      "None"
     ]
   ],
   "Screens/Character/BackgroundSelection/Text_BackgroundSelection": [
@@ -69278,7 +69284,7 @@
     ],
     [
       "ReceivedBeep",
-      "Received at"
+      "Received Beep"
     ],
     [
       "RemoveItemWithTimer",
@@ -69399,10 +69405,6 @@
     [
       "SendBeep",
       "Send Beep"
-    ],
-    [
-      "ReceivedBeep",
-      "Received Beep"
     ],
     [
       "Close",
@@ -69855,10 +69857,6 @@
     [
       "WontRemoveItemWithTimer",
       "The item will stay when the lock timer runs out"
-    ],
-    [
-      "YourRoom",
-      "Your private room"
     ],
     [
       "ZoneBlocked",
@@ -75187,6 +75185,696 @@
       "Return"
     ]
   ],
+  "Screens/Online/ChatRoom/Text_ChatRoom": [
+    [
+      "ActionGrabbedToServeDrinksIntro",
+      "(Two maids grab you and escort you to their quarters.  Another maid addresses you.)  Your owner sent you here to work."
+    ],
+    [
+      "PublicChat",
+      "Talk to everyone"
+    ],
+    [
+      "WhisperTo",
+      "Whisper to"
+    ],
+    [
+      "WhisperFrom",
+      "Whisper from"
+    ],
+    [
+      "WhisperTargetGone",
+      "The character you were whispering to has left."
+    ],
+    [
+      "WhisperTargetOutOfRange",
+      "Whisper target is out of range.  Returning to normal chat."
+    ],
+    [
+      "MenuCut",
+      "Keep 20- or all current-room messages"
+    ],
+    [
+      "MenuProfile",
+      "Your character profile"
+    ],
+    [
+      "MenuRoomAdmin",
+      "Room administration"
+    ],
+    [
+      "MenuCustomizationOn",
+      "Turn room customization on"
+    ],
+    [
+      "MenuCustomizationOff",
+      "Turn room customization off"
+    ],
+    [
+      "MenuNextCharacters",
+      "View next 10 characters"
+    ],
+    [
+      "MenuPreviousCharacters",
+      "View previous 10 characters"
+    ],
+    [
+      "MenuCharacterView",
+      "Go to character view"
+    ],
+    [
+      "MenuMapView",
+      "Go to map view"
+    ],
+    [
+      "MenuKneel",
+      "Kneel down / Stand up"
+    ],
+    [
+      "MenuIcons",
+      "Show / hide character icons"
+    ],
+    [
+      "MenuCamera",
+      "Take a picture"
+    ],
+    [
+      "MenuDress",
+      "Dress your character"
+    ],
+    [
+      "MenuExit",
+      "Leave this chat room"
+    ],
+    [
+      "MenuCancel",
+      "Stop leaving"
+    ],
+    [
+      "MenuGameOption",
+      "Game options"
+    ],
+    [
+      "PandoraInvalidSource",
+      "You must be a Pandora's guard to use this command."
+    ],
+    [
+      "PandoraInvalidTarget",
+      "Your target is not a Pandora's inmate."
+    ],
+    [
+      "PandoraInvalidActivity",
+      "Invalid Pandora activity, use `/pandora help` to get the list."
+    ],
+    [
+      "PandoraActivityHelp",
+      "The supported activities are:"
+    ],
+    [
+      "PandoraInvalidActivityForTarget",
+      "This activity cannot be performed on this target."
+    ],
+    [
+      "OrgasmComing",
+      "An orgasm is coming!"
+    ],
+    [
+      "OrgasmResist",
+      "Resist!"
+    ],
+    [
+      "OrgasmTryResist",
+      "Try to resist"
+    ],
+    [
+      "OrgasmSurrender",
+      "Surrender"
+    ],
+    [
+      "OrgasmRecovering",
+      "Recovering from an orgasm..."
+    ],
+    [
+      "ChatRoomStruggleStruggling",
+      "Struggling..."
+    ],
+    [
+      "ChatRoomStruggleLoosening",
+      "Loosening..."
+    ],
+    [
+      "ChatRoomStruggleImpossible",
+      "Impossible!"
+    ],
+    [
+      "ChatRoomStruggleLoosen",
+      "Loosen"
+    ],
+    [
+      "ChatRoomStruggleGiveUp",
+      "Give up"
+    ],
+    [
+      "ChatRoomReply",
+      "Replying to"
+    ],
+    [
+      "ChatRoomNoMessageFound",
+      "Message could not be found."
+    ],
+    [
+      "CommandBeepInvalidTarget",
+      "Invalid member number for target: $target."
+    ],
+    [
+      "CommandBeepLink",
+      "(Beep to {NAME} ({NUMBER}): {MESSAGE})"
+    ],
+    [
+      "CommandBeepNotFriend",
+      "We're not friend with member $target."
+    ],
+    [
+      "CommandBeepEmptyMessage",
+      "Please enter a beep message."
+    ],
+    [
+      "CommandHelp",
+      "<strong>Help: KeyWord</strong>"
+    ],
+    [
+      "CommandNoSuchCommand",
+      "command: no such command"
+    ],
+    [
+      "CommandPrerequisiteFailed",
+      "command: prerequisite check failed"
+    ],
+    [
+      "CommandHelpMissing",
+      "HELP IS MISSING"
+    ],
+    [
+      "CommandFriendlist",
+      "Friendlist:"
+    ],
+    [
+      "CommandGhostlist",
+      "Ghostlist:"
+    ],
+    [
+      "CommandWhitelist",
+      "Whitelist:"
+    ],
+    [
+      "CommandBlacklist",
+      "Blacklist:"
+    ],
+    [
+      "FocusEnabledWarningIcon",
+      "<img src='Icons/FocusEnabledWarning.png' style='display: inline-block; height: 1em; vertical-align: middle; transform: translateY(-0.15em);' aria-hidden='true'>"
+    ],
+    [
+      "FocusEnabled",
+      "<strong>NOTICE</strong>: The FocusEnabledWarningIcon <strong>focus list</strong> FocusEnabledWarningIcon is now <strong>enabled</strong>. <i>Only characters on your focus list will be visible to you in the chatroom</i>. To disable this, use <code>/focus clear</code> or the button in the menu bar."
+    ],
+    [
+      "CommandFocusTargeterAmbiguous",
+      "IGNORING 'Targeter': multiple matches found."
+    ],
+    [
+      "CommandFocusTargeterDuplicate",
+      "IGNORING 'Targeter': result was previously matched."
+    ],
+    [
+      "CommandFocusTargeterNoMatch",
+      "IGNORING 'Targeter': no match was found."
+    ],
+    [
+      "CommandFocusNoTargets",
+      "<strong>FAIL</strong>: no targets were found (targeters did not match or were not provided) -- no changes were made."
+    ],
+    [
+      "CommandFocusSuccessAdd",
+      "<strong>SUCCESS</strong>: The following targets were added to your focus list: Changed."
+    ],
+    [
+      "CommandFocusSuccessRemove",
+      "<strong>SUCCESS</strong>: The following targets were removed from your focus list: Changed."
+    ],
+    [
+      "CommandFocusSuccessClear",
+      "<strong>SUCCESS</strong>: Your focus list was cleared."
+    ],
+    [
+      "CommandFocusList",
+      "Focus List:"
+    ],
+    [
+      "CommandFocusHelpSyntax",
+      "/focus add/remove/list/clear/help [targeter(s)]"
+    ],
+    [
+      "CommandFocusHelpSummary",
+      "Modifies your focus list. When you have users on your focus list, the characters you can visually see in the chatroom are filtered to only those on your focus list. When your focus list is enabled, you will see the FocusEnabledWarningIcon icon on all characters. To go back to viewing all characters, use <code>/focus clear</code> or the button in the menu bar."
+    ],
+    [
+      "CommandFocusHelpNotesHeader",
+      "Notes:"
+    ],
+    [
+      "CommandFocusHelpNotes",
+      "<li>If you normally would not be able to see a character on your focus list (e.g. sensory deprivation), they still will not be visible to you.</li><li>Neither chat messages nor map rooms are affected by the focus list.</li><li>If a player on your focus list leaves the room, they are removed from the list.</li>"
+    ],
+    [
+      "CommandFocusHelpSubcommandsHeader",
+      "Subcommands:"
+    ],
+    [
+      "CommandFocusHelpAdd",
+      "Add the members to your focus list"
+    ],
+    [
+      "CommandFocusHelpRemove",
+      "Removes the members from your focus list"
+    ],
+    [
+      "CommandFocusHelpList",
+      "Shows the members on your focus list"
+    ],
+    [
+      "CommandFocusHelpClear",
+      "Clears your focus list (returns to viewing all members)"
+    ],
+    [
+      "CommandFocusHelpHelp",
+      "Display this help message"
+    ],
+    [
+      "CommandFocusHelpTargeters",
+      "Targeters: A list of names or member numbers to target in a subcommand, separated by spaces. Names can be partial, but must be unique. Exact name matches will take precedence over partial matches."
+    ],
+    [
+      "CommandChangeLogClear",
+      "Clear changelog"
+    ],
+    [
+      "CommandChangeLogCollapse",
+      "Collapse section"
+    ],
+    [
+      "CommandChangeLogCollapseShift",
+      "{shift} to collapse all"
+    ],
+    [
+      "CommandNoWhisperTarget",
+      "Whisper target was not found:"
+    ],
+    [
+      "CommandNoMessage",
+      "No message provided."
+    ],
+    [
+      "CommandMultipleWhisperTargets",
+      "You can whisper to: $TargetsClick on the name or use the member number."
+    ],
+    [
+      "CommandWhisperTargetSuccess",
+      "Whispering to"
+    ],
+    [
+      "CommandWhisperStopSuccess",
+      "You're no longer whispering."
+    ],
+    [
+      "CommandNoWhisperTargetSelected",
+      "Specify the member number or name to whisper to."
+    ],
+    [
+      "CommandHelpEscape",
+      "Send a message starting with \\ and it will escape any message. Example: \\/message will send /message. \\*emote will send *emote."
+    ],
+    [
+      "GGTSIntro",
+      "(Two nurses wearing futuristic gear grab you and carry you to the Asylum.  Another nurse is waiting for you there.)  Welcome.  Don't be scared."
+    ],
+    [
+      "OwnerPresenceBlockTalk",
+      "Talking is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockEmote",
+      "Emoting is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockWhisper",
+      "Whispering to others is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockChangePose",
+      "Changing pose is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockAccessSelf",
+      "Accessing yourself is forbidden when your owner is present."
+    ],
+    [
+      "OwnerPresenceBlockAccessOther",
+      "Accessing others is forbidden when your owner is present."
+    ],
+    [
+      "MapCopyDone",
+      "The current map data has been copied to your clipboard.  Paste it somewhere else to save it."
+    ],
+    [
+      "MapCopyError",
+      "There's no map data to copy."
+    ],
+    [
+      "MapPasteDone",
+      "Your pasted map data is loaded."
+    ],
+    [
+      "MapPasteError",
+      "Your pasted map data cannot be loaded."
+    ],
+    [
+      "MapPasteAdmin",
+      "Only room administrators can paste the map."
+    ],
+    [
+      "MenuDressIsRestrained",
+      "You are restrained"
+    ],
+    [
+      "MenuDressIsClubSlave",
+      "You are a club slave"
+    ],
+    [
+      "MenuDressGameBlocked",
+      "The game blocks it"
+    ],
+    [
+      "MenuDressGGTSBlocked",
+      "GGTS blocks it"
+    ],
+    [
+      "MenuDressRuleBlocked",
+      "A rule blocks it"
+    ],
+    [
+      "MenuDressOwnerBlocked",
+      "Your owner forbids it"
+    ],
+    [
+      "PonyNotJoin",
+      "You have not joined the Ponies"
+    ],
+    [
+      "PonyInvalidActivity",
+      "Invalid Pony activity, type /help to get the list."
+    ],
+    [
+      "FriendRequestMessage",
+      "SourceCharacter has requested to be your friend. {buttons} "
+    ],
+    [
+      "FriendAcceptMessage",
+      "SourceCharacter has accepted your friend request."
+    ],
+    [
+      "FriendRemoveMessage",
+      "SourceCharacter has removed you as a friend."
+    ],
+    [
+      "FriendAddback",
+      "Add back"
+    ],
+    [
+      "FriendAddbackMessage",
+      "Added SourceCharacter as a friend."
+    ],
+    [
+      "FriendGhost",
+      "Ghost SourceCharacter"
+    ],
+    [
+      "FriendGhostMessage",
+      "SourceCharacter is now Ghosted."
+    ],
+    [
+      "FriendIgnore",
+      "Ignore request"
+    ],
+    [
+      "InvalidNumber",
+      "Invalid number."
+    ],
+    [
+      "ArousalNotChangeable",
+      "Your Arousal Activation mode should be set to Manual or Hybrid to change your arousal."
+    ],
+    [
+      "CommandModsListTitle",
+      "Loaded mods"
+    ],
+    [
+      "CommandModsListSummaryOne",
+      "$count registered mod"
+    ],
+    [
+      "CommandModsListSummaryMany",
+      "$count registered mods"
+    ],
+    [
+      "CommandModsVersionFormat",
+      "v$version"
+    ],
+    [
+      "CommandModsRepositoryLink",
+      "Repository"
+    ],
+    [
+      "CommandModsHelpList",
+      "Show Mod SDK mods loaded in your client in the chat log (name, version, optional repository link)."
+    ],
+    [
+      "CommandModsHelpRemote",
+      "Query mods installed on other players; optional argument targets one player in the room. Others must allow replies in Online preferences."
+    ],
+    [
+      "CommandModsRemoteTitle",
+      "Remote Mod SDK results"
+    ],
+    [
+      "CommandModsRemoteAriaLabel",
+      "Remote Mod SDK query results"
+    ],
+    [
+      "CommandModsRemoteProgress",
+      "Responses $done / $total"
+    ],
+    [
+      "CommandModsRemoteNoMods",
+      "(No mods registered)"
+    ],
+    [
+      "CommandModsRemoteUnknownMember",
+      "Member $member"
+    ],
+    [
+      "CommandModsRemoteStatusOk",
+      "Responded"
+    ],
+    [
+      "CommandModsRemoteStatusDeclined",
+      "Declined"
+    ],
+    [
+      "CommandModsRemoteStatusError",
+      "Error"
+    ],
+    [
+      "CommandModsRemoteStatusYou",
+      "You"
+    ],
+    [
+      "CommandModsRemoteStatusTimeout",
+      "No response"
+    ],
+    [
+      "CommandModsRemoteDeclinedBody",
+      "This player declines remote Mod SDK queries (Online preference)."
+    ],
+    [
+      "CommandModsRemoteErrorBody",
+      "Could not read mod list."
+    ],
+    [
+      "CommandModsRemoteTimeoutBody",
+      "Timed out waiting for a reply (ghost list or connection can block replies)."
+    ],
+    [
+      "CommandModsRemoteNotInRoom",
+      "You must be in a chat room to use this command."
+    ],
+    [
+      "CommandModsRemoteInvalidTarget",
+      "No matching player in this room for that name or member number."
+    ],
+    [
+      "CommandModsListCopyDone",
+      "Mod list copied to your clipboard."
+    ],
+    [
+      "CommandModsListCopyError",
+      "Could not copy mod list to clipboard."
+    ],
+    [
+      "CommandModsListCopyTooltip",
+      "Copy mod list"
+    ],
+    [
+      "ChatRoomMapViewRecentItemsLabel",
+      "Recent Items"
+    ],
+    [
+      "TileTypeNameWall",
+      "Walls"
+    ],
+    [
+      "TileTypeNameFloor",
+      "Floors"
+    ],
+    [
+      "TileTypeNameFloorExterior",
+      "Exterior Floors "
+    ],
+    [
+      "TileTypeNameWater",
+      "Water"
+    ],
+    [
+      "ObjectTypeNameLivingRoom",
+      "Living Room"
+    ],
+    [
+      "ObjectTypeNameBathroom",
+      "Bathroom"
+    ],
+    [
+      "ObjectTypeNameBedroom",
+      "Bedroom"
+    ],
+    [
+      "ObjectTypeNameSchool",
+      "School"
+    ],
+    [
+      "ObjectTypeNameABDL",
+      "ABDL"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationThemed",
+      "Themed"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationParty",
+      "Party"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationCamping",
+      "Camping"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationExpanding",
+      "Expanding"
+    ],
+    [
+      "ObjectTypeNameFloorDecorationAnimal",
+      "Animals"
+    ],
+    [
+      "ObjectTypeNameFloorItem",
+      "Items"
+    ],
+    [
+      "ObjectTypeNameFloorObstacle",
+      "Obstacles"
+    ],
+    [
+      "ObjectTypeNameFloorNumber",
+      "Numbers"
+    ],
+    [
+      "ObjectTypeNameFloorLetter",
+      "Letters"
+    ],
+    [
+      "ObjectTypeNameFloorIcon",
+      "Icons"
+    ],
+    [
+      "ObjectTypeNameWallDecoration",
+      "Wall Decorations"
+    ],
+    [
+      "ObjectTypeNameWallPath",
+      "Doors"
+    ],
+    [
+      "ObjectTypeNameBanners",
+      "Banners"
+    ],
+    [
+      "ObjectTypeNameFloorFoamTiles",
+      "Foam Tiles"
+    ],
+    [
+      "ObjectTypeNameFunctional",
+      "Functional"
+    ],
+    [
+      "EffectTypeNameStaticLighting",
+      "Effects"
+    ],
+    [
+      "EditorButtonTextUndo",
+      "Undo"
+    ],
+    [
+      "EditorButtonTextEditRange",
+      "Edit Range"
+    ],
+    [
+      "EditorButtonTextZoomIn",
+      "Zoom In"
+    ],
+    [
+      "EditorButtonTextZoomOut",
+      "Zoom Out"
+    ],
+    [
+      "EditorButtonTextToggleFog",
+      "Toggle Fog"
+    ],
+    [
+      "EditorButtonTextEditTiles",
+      "Tiles"
+    ],
+    [
+      "EditorButtonTextEditObjects",
+      "Objects"
+    ],
+    [
+      "EditorButtonTextEditEffects",
+      "Effects"
+    ],
+    [
+      "EditorButtonTextBack",
+      "Back"
+    ]
+  ],
   "Screens/Online/ChatRoom/Text_Commands": [
     [
       "action",
@@ -78141,6 +78829,356 @@
     [
       "Dress",
       "Wear Maid Uniform"
+    ]
+  ],
+  "Screens/Room/MainHall/Text_MainHall": [
+    [
+      "SyncWithServer",
+      "Synchronizing with server, please wait..."
+    ],
+    [
+      "RescueIsComing",
+      "A rescue maid is coming..."
+    ],
+    [
+      "OnlinePlayers",
+      "Online Members:"
+    ],
+    [
+      "IntroductionClass",
+      "Introduction Class"
+    ],
+    [
+      "MaidQuarters",
+      "Maid Quarters"
+    ],
+    [
+      "ShibariDojo",
+      "Shibari Dojo"
+    ],
+    [
+      "KidnapLeague",
+      "Kidnappers League"
+    ],
+    [
+      "PrivateRoom",
+      "Private Room"
+    ],
+    [
+      "ClubManagement",
+      "Club Management"
+    ],
+    [
+      "SearchSarah",
+      "Search for Sarah"
+    ],
+    [
+      "ExploreClub",
+      "Explore the Club"
+    ],
+    [
+      "ChatRooms",
+      "Online Chat Rooms"
+    ],
+    [
+      "Shop",
+      "Club Shop"
+    ],
+    [
+      "Profile",
+      "Your Profile"
+    ],
+    [
+      "Appearance",
+      "Change Appearance"
+    ],
+    [
+      "Cell",
+      "Timer Cell"
+    ],
+    [
+      "SlaveMarket",
+      "Slave Market"
+    ],
+    [
+      "LookForTrouble",
+      "Look for Trouble"
+    ],
+    [
+      "Asylum",
+      "Asylum"
+    ],
+    [
+      "College",
+      "Visit the College"
+    ],
+    [
+      "LARPBattle",
+      "LARP Battles"
+    ],
+    [
+      "MovieStudio",
+      "Movie Studio"
+    ],
+    [
+      "Infiltration",
+      "Infiltration"
+    ],
+    [
+      "Poker",
+      "Bondage Poker"
+    ],
+    [
+      "MagicSchool",
+      "Magic School"
+    ],
+    [
+      "Platform",
+      "Bondage Brawl"
+    ],
+    [
+      "Crafting",
+      "Item Crafting"
+    ],
+    [
+      "ClubCard",
+      "Club Card Lounge"
+    ],
+    [
+      "Exit",
+      "Leave the Club"
+    ],
+    [
+      "ExitConfirm",
+      "Do you want to leave the club?"
+    ],
+    [
+      "SarahBedroom",
+      "Sarah's Bedroom"
+    ],
+    [
+      "Gambling",
+      "Gambling by git4nick"
+    ],
+    [
+      "Prison",
+      "Prison by git4nick"
+    ],
+    [
+      "Photographic",
+      "Photographic by git4nick"
+    ],
+    [
+      "Stable",
+      "Stable by git4nick"
+    ],
+    [
+      "Nursery",
+      "The Nursery by wildsj"
+    ],
+    [
+      "Magic",
+      "Houdini's Theater by git4nick"
+    ],
+    [
+      "Cafe",
+      "Cafe by wildsj"
+    ],
+    [
+      "Arcade",
+      "Arcade by Ada18980"
+    ],
+    [
+      "RequestMaid",
+      "Request maid service"
+    ],
+    [
+      "OpenChangelog",
+      "Open the changelog"
+    ],
+    [
+      "Tip0",
+      "This game is for adults only.  Minors must leave immediately."
+    ],
+    [
+      "Tip1",
+      "All game characters are considered adults, no exceptions."
+    ],
+    [
+      "Tip2",
+      "Please be courteous and polite.  Help new members to get started."
+    ],
+    [
+      "Tip3",
+      "Console cheating can break your account forever.  Please be careful."
+    ],
+    [
+      "Tip4",
+      "Have an open mind, your fetishes might be different from others."
+    ],
+    [
+      "Tip5",
+      "Following a player web link can get you a virus or steal your account."
+    ],
+    [
+      "Tip6",
+      "Please respect other players limits.  Enforce your own limits."
+    ],
+    [
+      "Tip7",
+      "Do not attempt anything that could harm you in your real life."
+    ],
+    [
+      "Tip8",
+      "Remember your friends in your private room or they will leave."
+    ],
+    [
+      "Tip9",
+      "If you find bugs or exploits, please report them and give details."
+    ],
+    [
+      "Tip10",
+      "Take good care of each other's feelings and your submissives."
+    ],
+    [
+      "Tip11",
+      "If you give any real-life information, it might be used against you."
+    ],
+    [
+      "Tip12",
+      "A collared college girl can be convinced to give you her uniform."
+    ],
+    [
+      "Tip13",
+      "It's easier to destroy a reputation than to build one."
+    ],
+    [
+      "Tip14",
+      "There's no best way to make money.  Simply find a job you enjoy."
+    ],
+    [
+      "Tip15",
+      "Please do not use console commands to grief other players."
+    ],
+    [
+      "Tip16",
+      "Beta items will be lost if you go back to the regular version."
+    ],
+    [
+      "Tip17",
+      "You can protect yourself by blocking items and blacklisting players."
+    ],
+    [
+      "Tip18",
+      "Reach us on Discord, DeviantArt or Patreon if you need help."
+    ],
+    [
+      "Tip19",
+      "Type /help in a chatroom to know the available chat commands."
+    ],
+    [
+      "Tip20",
+      "Try changing your graphics preferences if you get performance issues."
+    ],
+    [
+      "Tip21",
+      "Don't forget to do the daily job in the Introduction Room."
+    ],
+    [
+      "Tip22",
+      "Corsets can be worn both as clothing and a restraint."
+    ],
+    [
+      "Tip23",
+      "Chat rooms are where you can interact with other people, stay safe."
+    ],
+    [
+      "Tip24",
+      "Locks makes it harder to struggle out of restraints."
+    ],
+    [
+      "Tip25",
+      "The Maid Quarters is always looking to pay those that help out."
+    ],
+    [
+      "Tip26",
+      "The Kidnapper's League pays quite a bit for those that can catch others."
+    ],
+    [
+      "Tip27",
+      "The Asylum also has its own chat room, along with payment as a Nurse."
+    ],
+    [
+      "Tip28",
+      "Your profile has a LOT of settings, feel free to take a look."
+    ],
+    [
+      "Tip29",
+      "Need a stat boost? The Cafe might have something to help."
+    ],
+    [
+      "Tip30",
+      "Your account works on all servers, switch to another if you get errors."
+    ],
+    [
+      "Tip31",
+      "The Good Girl Training System is hiring test subjects in the Asylum."
+    ],
+    [
+      "Tip32",
+      "There's a card trading game that can be played everywhere in the Club."
+    ],
+    [
+      "Tip33",
+      "Keeping politics and religion out of the Bondage Club is a good idea."
+    ],
+    [
+      "Tip34",
+      "Your best protection against trolls is to block and ghost them."
+    ],
+    [
+      "Tip35",
+      "There's no shame in using a safeword in online chat rooms."
+    ],
+    [
+      "PandoraKidnapperIntro0",
+      "(A woman blocks your path.)  DialogPlayerName!  You've been a nuisance for Pandora's Box for far too long.  Surrender now or you will get hurt."
+    ],
+    [
+      "PandoraKidnapperIntro1",
+      "(A girl taps on your shoulder.)  Here you are!  Pandora's Box sent me to get you.  Get on your knees right now or there will be trouble."
+    ],
+    [
+      "PandoraKidnapperIntro2",
+      "(Someone springs from behind you.)  No offense DialogPlayerName, but Pandora's Box as put a bounty on you.  Come with me quietly."
+    ],
+    [
+      "PandoraKidnapperIntro3",
+      "(A girl jumps in front of you.)  Your days of causing trouble are over DialogPlayerName.  I'm bringing you bound and gagged to Pandora's Box."
+    ],
+    [
+      "PandoraKidnapperIntro4",
+      "(A woman chases you down.)  You won't be running away this time girl.  Pandora's Box has a special cell ready for your ass."
+    ],
+    [
+      "PandoraDominatrixIntro0",
+      "(A Dominatrix from Pandora's Box jumps in front of you.)  DialogPlayerName!  You've stolen our technology"
+    ],
+    [
+      "PandoraDominatrixIntro1",
+      "(A Dominatrix from Pandora's Box taps on your shoulder.)  Here you are!  The Box sent me to recover the lock and key that you've stolen."
+    ],
+    [
+      "PandoraDominatrixIntro2",
+      "(Someone springs from behind you.)  No offense DialogPlayerName, but Pandora's Box wants to recover their lock and key."
+    ],
+    [
+      "PandoraDominatrixIntro3",
+      "(A girl jumps in front of you.)  Your days of causing trouble are over DialogPlayerName.  I'm bringing back what you've stolen."
+    ],
+    [
+      "PandoraDominatrixIntro4",
+      "(A Dominatrix chases you down.)  You won't be running away this time girl.  Give us back our technology or there will be trouble."
     ]
   ],
   "Screens/Room/Management/Text_Management": [
