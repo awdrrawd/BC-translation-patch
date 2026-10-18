@@ -6,6 +6,29 @@ import { parseCsv, missingStrings, isOnlineCsv } from "./diff-upstream.js";
 import { parseTxtPairs } from "./lib/parseTxt.js";
 import { walk } from "./lib/fsutil.js";
 import { generateDict } from "./gen-dict.js";
+import { withTextKeys } from "./lib/textKeys.js";
+
+test("R133 InformationSheet identifiers resolve in the generated CN and TW dictionaries", () => {
+ const { paths } = generateDict();
+ for (const lang of ["CN", "TW"]) {
+  const flat = paths[`Screens/Character/InformationSheet/Text_InformationSheet_${lang}.txt`];
+  // R133 TranslationString searches the flat array, including translated values.
+  const translate = key => flat[flat.indexOf(key) + 1];
+  for (const [key, english] of [["MemberNumber", "Member Number:"], ["TrialBy", "On trial by"], ["CollaredBy", "Collared by"], ["DatingWith", "Dating"], ["SkillSelfBondage", "Self-bondage:"]]) {
+   assert.ok(flat.includes(key), key);
+   assert.equal(translate(key), translate(english));
+   assert.match(translate(key), /[\u3400-\u9fff]/);
+  }
+ }
+});
+
+test("key conversion respects scopes, repeated English, and keyed coverage", () => {
+ const rows = [["First", "Same"], ["Second", "Same"], ["Missing", "New text"]];
+ const pairs = withTextKeys([["Same", "相同"]], rows);
+ assert.deepEqual(missingStrings("Screens/Interface", rows, new Map(pairs), true), ["New text"]);
+ assert.deepEqual(missingStrings("Screens/Interface", rows, new Map([["Same", "相同"]]), true), ["Same", "New text"]);
+ assert.deepEqual(withTextKeys([["Same", "不同"]], [["First", "Same"]])[0], ["First", "不同"]);
+});
 
 test("CSV handles quoted commas, escaped quotes, CRLF and multiline fields", () => {
  assert.deepEqual(parseCsv('key,"Hello, ""world"""\r\nnext,"line 1\r\nline 2"\r\n'), [
@@ -75,5 +98,5 @@ test("new translations preserve substitution tokens and reach both language bund
    count++;
   }
  }
- assert.equal(count,1500);
+ assert.equal(count,1503);
 });

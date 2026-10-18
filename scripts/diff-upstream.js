@@ -29,7 +29,10 @@ export function isOnlineCsv(rel) {
     return /^(Assets\/Female3DCG\/|Backgrounds\/|Screens\/(Online\/|Character\/|Interface\.csv|Room\/Crafting\/))/.test(rel);
 }
 
-export function missingStrings(base, rows, have) {
+export function missingStrings(base, rows, have, keyed = false) {
+    if (keyed) return [...new Set(rows.filter(([key, value]) =>
+        /[A-Za-z]/.test(value || "") && !/^<img\b[^>]*\baria-hidden=['"]true['"][^>]*>$/i.test(value) && !have.get(key)
+    ).map(([, value]) => value.trim()))];
     const strings = rows.flatMap(row => /\/Dialog_[^/]+$/.test(base) ? row.slice(2, 4) : [row[base === "Assets/Female3DCG/Female3DCG" ? 2 : 1]]);
     // A standalone decorative image has no visible or accessible text to translate.
     const decorativeImage = /^<img\b[^>]*\baria-hidden=['"]true['"][^>]*>$/i;
@@ -42,7 +45,9 @@ function main() {
     const all = process.argv.includes("--all");
     const tw = process.argv.includes("--tw");
     const lang = tw ? "tw" : "cn";
-    const generated = tw ? generateDict().paths : {};
+    const generated = generateDict().paths;
+    const keysFile = path.join(repoRoot, "translations/text-keys.json");
+    const textKeys = fs.existsSync(keysFile) ? JSON.parse(fs.readFileSync(keysFile, "utf8")) : {};
     const report = [];
     let scanned = 0;
     for (const file of walk(src, f => f.endsWith(".csv"))) {
@@ -52,22 +57,17 @@ function main() {
         if (rel.includes("KinkyDungeon")) continue;
         const base = rel.replace(/\.csv$/, "");
         const have = new Map();
-        if (tw) {
-            const flat = generated[base + "_TW.txt"];
-            const official = path.join(src, base + "_TW.txt");
+        {
+            const flat = generated[base + `_${lang.toUpperCase()}.txt`];
+            const official = path.join(src, base + `_${lang.toUpperCase()}.txt`);
             if (flat) {
                 for (let i = 0; i < flat.length; i += 2) have.set(flat[i], flat[i + 1]);
             } else if (fs.existsSync(official)) {
                 for (const [en, zh] of parseTxtPairs(fs.readFileSync(official, "utf8"))) have.set(en, zh);
             }
-        } else {
-            for (const root of ["cn", "cn-extra"]) {
-                const tr = path.join(repoRoot, "translations", root, base + ".txt");
-                if (fs.existsSync(tr)) for (const [en, zh] of parseTxtPairs(fs.readFileSync(tr, "utf8"))) have.set(en, zh);
-            }
         }
         const rows = parseCsv(fs.readFileSync(file, "utf8"));
-        const missing = missingStrings(base, rows, have);
+        const missing = missingStrings(base, rows, have, !!textKeys[base]);
         scanned++;
         if (missing.length) report.push({ file: rel, missing });
     }

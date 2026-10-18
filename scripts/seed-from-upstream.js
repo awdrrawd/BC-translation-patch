@@ -5,6 +5,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { upstreamDir, repoRoot } from "./lib/upstream.js";
 import { walk, ensureDir } from "./lib/fsutil.js";
+import { parseTxtPairs } from "./lib/parseTxt.js";
+import { parseCsv } from "./diff-upstream.js";
 
 const src = upstreamDir();
 const trRoot = path.join(repoRoot, "translations");
@@ -17,8 +19,22 @@ for (const file of files) {
     const rel = path.relative(src, file).split(path.sep).join("/");
     const target = path.join(dstRoot, rel.replace(/_CN\.txt$/, ".txt"));
     ensureDir(target);
-    const body = fs.readFileSync(file, "utf8");
-    const header = `### seeded from upstream: ${rel}\n### 此檔由 scripts/seed-from-upstream.js 產生，可直接編輯補充缺漏行\n`;
+    let body = fs.readFileSync(file, "utf8");
+    const csv = file.replace(/_CN\.txt$/, ".csv");
+    if (!/\/Dialog_/.test(rel) && fs.existsSync(csv)) {
+        const rows = parseCsv(fs.readFileSync(csv, "utf8"));
+        if (rows.every(row => row.length === 2)) {
+            const keys = new Map(rows);
+            const english = new Set(rows.map(([, value]) => value.trim()));
+            const pairs = parseTxtPairs(body);
+            // Detect identifier-based files; retain the English maintenance format.
+            if (pairs.filter(([key]) => keys.has(key)).length > pairs.filter(([key]) => english.has(key)).length) {
+                const normalized = new Map(pairs.map(([key, value]) => [(keys.get(key) || key).trim(), value]));
+                body = [...normalized].map(([key, value]) => `${key}\n${value}`).join("\n") + "\n";
+            }
+        }
+    }
+    const header = `### seeded from upstream: ${rel}\n### 此檔由 scripts/seed-from-upstream.js 產生；補充請放 cn-extra\n`;
     fs.writeFileSync(target, header + body, "utf8");
     copied++;
 }
