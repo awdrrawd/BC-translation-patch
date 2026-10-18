@@ -54,3 +54,10 @@ Dominatrix
 ### 2026-09：補齊連線與共用介面（上游 4a0f778）
 Search for a title
 搜索头衔
+### R133：InformationSheet 共用称号
+Puddle Maker
+水洼制造者
+Diaper Princess
+尿布公主
+Diaper Prince
+尿布王子

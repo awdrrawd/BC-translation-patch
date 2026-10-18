@@ -16,6 +16,7 @@ import * as OpenCC from "opencc-js";
 import { repoRoot } from "./lib/upstream.js";
 import { walk } from "./lib/fsutil.js";
 import { parseTxtPairs } from "./lib/parseTxt.js";
+import { withTextKeys } from "./lib/textKeys.js";
 
 import { DICTIONARY_KEYS } from "../src/schema.js";
 
@@ -64,6 +65,7 @@ const TW_FORCE_PREFIXES = [
 const twForced = (base) => TW_FORCE_PREFIXES.some((p) => base === p || base.startsWith(p));
 
 export function generateDict() {
+    const textKeys = readJsonOptional(path.join(trRoot, "text-keys.json"), {});
     const officialTW = new Set(readJsonOptional(path.join(trRoot, "official-tw.json"), []));
 
     const converter = OpenCC.Converter({ from: "cn", to: "twp" });
@@ -136,7 +138,7 @@ export function generateDict() {
 
         // CN：有補充、或官方沒有此檔 → 輸出覆寫；否則交給官方
         if (hasExtra || !officialHasBase) {
-            paths[base + "_CN.txt"] = flat(merged);
+            paths[base + "_CN.txt"] = flat(withTextKeys(merged, textKeys[base]));
             cnFiles++;
         }
 
@@ -147,7 +149,7 @@ export function generateDict() {
                 if (overrideMap.has(k)) return [en, overrideMap.get(k)];
                 return [en, applyTerms(converter(zh))];
             });
-            paths[base + "_TW.txt"] = flat(twPairs);
+            paths[base + "_TW.txt"] = flat(withTextKeys(twPairs, textKeys[base]));
             twFiles++;
         }
     }

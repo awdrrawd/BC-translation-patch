@@ -140,6 +140,9 @@ scripts/
 
 ## 維護指南
 
+R133 已改用 CSV 識別鍵查詢 TextCache 翻譯；本專案在建置時產生逐檔識別鍵對照。
+抓取新版上游後請執行 `npm run upstream:keys`，再檢查缺漏。詳見 [R133 相容性修正](docs/r133-translation.md)。
+
 日常維護只會動到上面標 ★ 的檔，改完執行 `npm run check` 驗證、push 後由 GitHub Actions 自動部署。
 
 ### A. 補官方缺口翻譯（最常見）
