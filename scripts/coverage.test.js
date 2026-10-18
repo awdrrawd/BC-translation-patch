@@ -6,7 +6,25 @@ import { parseCsv, missingStrings, isOnlineCsv } from "./diff-upstream.js";
 import { parseTxtPairs } from "./lib/parseTxt.js";
 import { walk } from "./lib/fsutil.js";
 import { generateDict } from "./gen-dict.js";
-import { withTextKeys } from "./lib/textKeys.js";
+import { withTextKeys, textKeyRows } from "./lib/textKeys.js";
+
+test("MainHall trailing CSV fields and duplicate tips follow TextCache semantics", () => {
+ assert.deepEqual(textKeyRows(parseCsv('Tip25,Old tip,\nTip25,New tip,\nExit,Leave,')), [["Tip25", "New tip"], ["Exit", "Leave"]]);
+ assert.equal(textKeyRows([["Group", "Item", "Description"]]), null);
+ const keys = JSON.parse(fs.readFileSync("translations/text-keys.json", "utf8"));
+ const base = "Screens/Room/MainHall/Text_MainHall";
+ const rows = keys[base];
+ assert.ok(rows?.length);
+ const { paths } = generateDict();
+ for (const lang of ["CN", "TW"]) {
+  const flat = paths[`${base}_${lang}.txt`];
+  for (const [key] of rows) {
+   const index = flat.indexOf(key);
+   assert.ok(index >= 0 && /[\u3400-\u9fff]/.test(flat[index + 1]), `${lang}: ${key}`);
+  }
+  assert.match(flat[flat.indexOf("Tip25") + 1], /女[仆僕]/);
+ }
+});
 
 test("R133 InformationSheet identifiers resolve in the generated CN and TW dictionaries", () => {
  const { paths } = generateDict();
