@@ -8,7 +8,7 @@ const caches = () => typeof TextAllScreenCache === "undefined" ? undefined : Tex
 export function reapply() {
     const lang = globalThis.TranslationLanguage;
     if (!["CN", "TW", "EN"].includes(lang)) return;
-    injectTranslationCache();
+    const injected = injectTranslationCache();
     applyAssetDescriptions(globalThis, PATHS, lang);
     const all = new Set(caches()?.values?.() || []);
     if (lang !== "EN") {
@@ -20,6 +20,7 @@ export function reapply() {
         try { cache?.buildCache?.(); }
         catch (error) { console.debug("[BCTP] Cache rebuild failed", error); }
     }
+    return injected;
 }
 
 export function setupReapply(mod, addCleanup, languageChanged = () => {}) {

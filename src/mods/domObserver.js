@@ -3,23 +3,16 @@ import { createIdleBatchProcessor } from "./idleBatch.js";
 import { translateValue } from "./displayText.js";
 
 // Inventory text is processed in idle batches; dfn waits until BC has read its lookup key.
-const NON_DISPLAY = new Set(["STYLE", "SCRIPT", "NOSCRIPT", "TEXTAREA"]);
+const NON_DISPLAY = "style, script, noscript, textarea, dfn";
 
-/** 只翻文字節點，保留按鈕內的圖片等結構。translate: (string) => string|undefined */
+// Preserve markup and leave dfn lookup keys untouched until BC has read them.
 function translateTextNodes(root, translate) {
-    if (!root.isConnected) return; // 節點在排隊等待翻譯期間可能已被移除（例如使用者又切了一次部位）
+    if (!root.isConnected) return;
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-    const nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
-    for (const n of nodes) {
-        const parent = n.parentElement;
-        // <style>/<script> 的內容不是顯示文字。LSCG 的 DomOverlayHost 每次開啟設定頁都會塞一份 ~14KB 的 kit CSS，
-        // 把它送進查表會讓整個畫面卡數百毫秒。
-        if (parent && NON_DISPLAY.has(parent.tagName)) continue;
-        if (!n.data.trim()) continue; // 純空白節點不需要翻譯，也不必替它建立紀錄
-        // 跳過 <dfn>：BC 會用其 textContent 組查表 key（如製作屬性 Description<n>），翻了會壞
-        if (parent && parent.closest("dfn")) continue;
-        translateValue(n, "data", translate);
+    while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (!node.data.trim() || node.parentElement?.closest(NON_DISPLAY)) continue;
+        translateValue(node, "data", translate);
     }
 }
 
@@ -98,15 +91,25 @@ function setupLscgSettingsObserver(translate, addCleanup) {
     const collect = node => {
         if (!node || node.nodeType !== 1) return;
         const el = /** @type {Element} */ (node);
-        if (el.matches(selector)) processor.push(el);
-        el.querySelectorAll?.(selector).forEach(root => processor.push(root));
+        if (el.closest(selector)) processor.push(el);
+        else el.querySelectorAll(selector).forEach(root => processor.push(root));
     };
     // Only look at what changed. Scanning m.target's whole subtree (e.g. the chat log, or <body>) on every mutation
     // is what made busy rooms stutter; new roots always arrive through addedNodes.
-    const obs = new MutationObserver(muts => muts.forEach(m => {
-        if (m.target.nodeType === 1 && m.target.matches(selector)) processor.push(m.target);
-        m.addedNodes?.forEach(collect);
-    }));
+    const obs = new MutationObserver(muts => {
+        for (const m of muts) {
+            if (m.type !== "childList") {
+                const el = m.target.nodeType === 1 ? m.target : m.target.parentElement;
+                if (el?.closest(selector)) processor.push(el);
+                continue;
+            }
+            for (const node of m.addedNodes) {
+                if (node.nodeType === 3) {
+                    if (node.parentElement?.closest(selector)) processor.push(node.parentElement);
+                } else collect(node);
+            }
+        }
+    });
     addCleanup(() => obs.disconnect());
     const start = () => {
         if (disposed) return;

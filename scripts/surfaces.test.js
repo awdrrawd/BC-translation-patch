@@ -164,3 +164,58 @@ test("LSCG substituted messages cover every added template and blank departure t
  assert.equal(t("Gaia leads Bob out of the room by the hand. extra",all.TW.lscgMessages),undefined);
  assert.equal(t("Gaia leads Bob out of the room by the hand.",all.TW.lscgMessages,"EN"),undefined);
 });
+import { setupDomObserver } from "../src/mods/domObserver.js";
+
+test("settings mutations translate only changed descendants and preserve non-display text", t => {
+    const { document } = parseHTML('<html><body><section id="lscg-test-settings"><div><span>Label</span></div><script>Label</script><textarea>Label</textarea><dfn>Label</dfn></section><aside>Label</aside></body></html>');
+    const callbacks = [], work = [], cleanups = [];
+    const globals = { document, NodeFilter: { SHOW_TEXT: 4 },
+        MutationObserver: class { constructor(fn) { callbacks.push(fn); } observe() {} disconnect() {} },
+        requestIdleCallback: fn => { work.push(fn); return 1; }, cancelIdleCallback() {}, cancelAnimationFrame() {},
+        setTimeout: () => 1, clearTimeout() {} };
+    const previous = Object.fromEntries(Object.keys(globals).map(key => [key, Object.getOwnPropertyDescriptor(globalThis, key)]));
+    Object.assign(globalThis, globals);
+    t.after(() => {
+        cleanups.forEach(fn => fn());
+        for (const [key, descriptor] of Object.entries(previous)) {
+            if (descriptor) Object.defineProperty(globalThis, key, descriptor); else delete globalThis[key];
+        }
+    });
+    let active = true;
+    setupDomObserver(text => active && text === "Label" ? "Translated" : undefined, undefined, fn => cleanups.push(fn));
+    const flush = () => { while (work.length) work.shift()({ didTimeout: true }); };
+    flush();
+    const root = document.querySelector("section"), span = root.querySelector("span");
+    assert.equal(span.textContent, "Translated");
+    for (const tag of ["script", "textarea", "dfn"]) assert.equal(root.querySelector(tag).textContent, "Label");
+    assert.equal(document.querySelector("aside").textContent, "Label");
+    const notify = callbacks[1];
+    let scans = 0;
+    const query = root.querySelectorAll.bind(root);
+    t.mock.method(root, "querySelectorAll", selector => { scans++; return query(selector); });
+    span.firstChild.data = "Label";
+    notify([{ type: "characterData", target: span.firstChild }]);
+    flush();
+    assert.equal(span.textContent, "Translated");
+    span.setAttribute("title", "Label");
+    notify([{ type: "attributes", target: span }]);
+    flush();
+    assert.equal(span.title, "Translated");
+    const child = document.createElement("button");
+    child.textContent = "Label";
+    span.parentElement.append(child);
+    notify([{ type: "childList", target: span.parentElement, addedNodes: [child] }]);
+    flush();
+    assert.equal(child.textContent, "Translated");
+    child.textContent = "Label";
+    notify([{ type: "childList", target: child, addedNodes: [child.firstChild] }]);
+    flush();
+    assert.equal(child.textContent, "Translated");
+    assert.equal(scans, 0, "descendant edits must not rescan the settings root");
+    active = false;
+    document.dispatchEvent(new document.defaultView.Event("bctp-language-change"));
+    flush();
+    assert.equal(span.textContent, "Label");
+    assert.equal(span.title, "Label");
+    assert.equal(child.textContent, "Label");
+});
