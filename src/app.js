@@ -26,8 +26,7 @@ export async function init(namespace) {
     let initialized = false;
     const languages = createLanguageLoader(__BCTP_DATA_URLS__, activeLang, namespace, () => {
         if (!initialized) return;
-        reapply();
-        namespace.pathCount = injectTranslationCache().count;
+        namespace.pathCount = reapply().count;
         document.dispatchEvent(new Event("bctp-language-change"));
     });
     scope.add(languages.dispose);

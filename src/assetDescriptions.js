@@ -3,6 +3,7 @@ export function applyAssetDescriptions(g, paths, lang) {
     if (!["CN", "TW", "EN"].includes(lang)) return;
     const groups = g.AssetGroup || [];
     const assets = g.Asset || [];
+    const descriptions = new Map();
     for (const family of new Set(groups.map(group => group.Family))) {
         const bases = [`Assets/${family}`, `Assets/${family}/${family}`];
         if (!bases.some(base => paths[`${base}_CN.txt`] || paths[`${base}_TW.txt`])) continue;
@@ -15,15 +16,17 @@ export function applyAssetDescriptions(g, paths, lang) {
         }
         const english = new Map(csv.filter(row => row.length === 3)
             .map(row => [`${row[0]}:${row[1]}`, row[2].trim()]));
-        const set = (object, key) => {
-            const source = english.get(key);
-            // Custom assets absent from the official CSV retain their own descriptions.
-            if (source !== undefined) object.Description = translations.get(source) || source;
-        };
-        for (const group of groups) if (group.Family === family) set(group, `${group.Name}:`);
-        for (const asset of assets) if (asset.Group?.Family === family) {
-            set(asset, `${asset.DynamicGroupName ?? asset.Group.Name}:${asset.Name}`);
-        }
+        descriptions.set(family, { english, translations });
+    }
+    const set = (object, family, key) => {
+        const data = descriptions.get(family);
+        const source = data?.english.get(key);
+        // Custom assets absent from the official CSV retain their own descriptions.
+        if (source !== undefined) object.Description = data.translations.get(source) || source;
+    };
+    for (const group of groups) set(group, group.Family, `${group.Name}:`);
+    for (const asset of assets) if (asset.Group) {
+        set(asset, asset.Group.Family, `${asset.DynamicGroupName ?? asset.Group.Name}:${asset.Name}`);
     }
 }
 
