@@ -21,3 +21,99 @@ Engaged to
 订婚对象
 Married to
 结婚对象
+Your relations
+你的人际关系
+Max
+最大值
+Using RATIO% of your bondage skill, so restraints you apply are easier to escape.
+使用 RATIO% 的捆绑技能，你施加的束缚更容易被挣脱。
+Using RATIO% of your evasion skill, so struggling free is harder.
+使用 RATIO% 的逃脱技能，你会更难挣脱束缚。
+Using RATIO% of this skill.
+使用此技能的 RATIO%。
+Exit
+退出
+Title & Nickname
+头衔与昵称
+Preferences
+偏好设置
+Friend List
+好友列表
+Profile
+个人资料
+Owner's Notes
+主人的笔记
+Significant others
+- 关系 -
+Owner
+主人:
+Reputation
+- 声望 -
+Dungeoneer
+地下城探险家：
+Dominant
+支配者：
+Submissive
+顺从者：
+Maid Sorority
+女仆社团：
+Kidnappers League
+绑匪联盟：
+Asylum Nurse
+收容所护士：
+Asylum Patient
+收容所病员：
+LARP Battles
+体感对战：
+Gambling Hall
+赌场：
+ABDL
+恋尿布：
+House Maiestas
+麦斯塔威法社：
+House Vincula
+温库拉束限社：
+House Amplector
+安派托怀围社：
+House Corporis
+科泼里躯形社：
+Skills
+- 技能 -
+Bondage
+捆绑：
+Self-bondage
+自缚：
+Lockpicking
+开锁：
+Evasion
+逃脱：
+Willpower
+意志：
+Infiltration
+潜入：
+Dressage
+马术：
+Traits
+- 特点 -
+Violent
+暴力：
+Peaceful
+和平：
+Horny
+饥渴：
+Frigid
+冰冷：
+Rude
+粗鲁：
+Polite
+礼貌：
+Wise
+明智：
+Dumb
+愚蠢：
+Serious
+严肃：
+Playful
+贪玩：
+— Can change again in NumberOfDays day(s)
+— NumberOfDays 天后可再次更改

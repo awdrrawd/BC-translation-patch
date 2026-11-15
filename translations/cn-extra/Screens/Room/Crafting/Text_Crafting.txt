@@ -43,3 +43,13 @@ Delete
 删除
 Page
 页
+Harder to hear through.
+戴上后更难听清声音。
+Easier to hear through.
+戴上后更容易听清声音。
+Change item positioning
+调整物品位置
+Sound amplifying
+扩音
+Deafening
+隔音

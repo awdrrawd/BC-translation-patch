@@ -957,3 +957,321 @@ Wing Tip5
 翼尖 5
 Wing Tip6
 翼尖 6
+Wolf
+狼
+OD
+OD
+:D
+大笑脸
+Eye Whites
+眼白
+Sides Shine
+侧面高光
+Crystal Nob
+水晶顶饰
+Crystal Nob Shine
+水晶顶饰高光
+Tongue Shine
+舌头高光
+Leotard
+连体衣
+Leg Chains
+腿链
+Mittens Highlight
+连指手套高光
+Arm Chains
+臂链
+SleepSac
+睡袋
+Link
+链环
+Photo Frame
+相框
+Sack With Photo
+带照片的袋子
+Photo Tape
+照片胶带
+Back Mask
+背面遮罩
+Front Mask
+正面遮罩
+Bag Bands
+袋子束带
+Bear
+熊
+Scarf
+围巾
+Arm Restraint
+手臂束具
+Body Connector
+躯干连接件
+Ceiling Chain
+天花板吊链
+Glass Closed
+闭合玻璃
+Glass Outer Layer
+外层玻璃
+Jar Liquid Back
+罐内液体后层
+Jar Liquid Front
+罐内液体前层
+Leg Restraint
+腿部束具
+Liquid Back
+液体后层
+Liquid Front
+液体前层
+Pipe Back
+管道后层
+Pipe Connector
+管道接头
+Pipe Front
+管道前层
+Closed Cover
+闭合的盖子
+Open Lower
+打开下部
+Open Upper
+打开上部
+Cover
+盖子
+OpenCover
+打开的盖子
+Body Restraint
+躯干束具
+Frame - Hand Lift
+框架－抬手位
+Genital Prop
+生殖器支架
+Hand Restraint
+手部束具
+Lower Body(Leg Spread)
+下半身（双腿张开）
+Mouth Restraint
+口部束具
+Neck Restraint
+颈部束具
+Ankle
+脚踝
+Thigh
+大腿
+Piston
+活塞
+Flap
+翻盖
+Outer Frame
+外框
+Trash Can
+垃圾桶
+Trash Can Mask
+垃圾桶遮罩
+Lid Mask
+桶盖遮罩
+Body Mask
+身体遮罩
+Eyelash
+睫毛
+Head Mask
+头部遮罩
+Foot Ring
+脚环
+Duct Tape
+布基胶带
+Foot Bar
+脚杆
+Front Glass
+前玻璃
+Front Glass Reflection
+前玻璃反光
+Back Glass
+后玻璃
+Back Glass Reflection
+后玻璃反光
+Lid Reflection
+盖子反光
+Back Liquid
+后层液体
+Back Liquid Reflection
+后层液体反光
+Front Liquid
+前层液体
+Front Liquid Reflection
+前层液体反光
+Back Bubbles
+后层气泡
+Back Bubbles Reflection
+后层气泡反光
+Front Bubbles
+前层气泡
+Front Bubbles Reflection
+前层气泡反光
+Label 1
+标签 1
+Label Reflection
+标签反光
+Label 2
+标签 2
+Extra Label Reflection
+附加标签反光
+hold out
+伸出
+Text Fill
+文字填充
+Text Stroke
+文字描边
+Bubbles
+气泡
+Spreader
+分腿器
+DildoBar
+假阳具杆
+Ribbon & Head
+丝带与头部
+Head detail
+头部细节
+Detail 1
+细节 1
+etail 2
+细节 2
+Detail 3
+细节 3
+Detail 4
+细节 4
+Glint
+闪光
+Linework
+线条
+Handle Reflection
+手柄反光
+Hammer
+锤子
+Hammer Reflection
+锤子反光
+Bubble edge
+气泡边缘
+Inner Bubble
+内层气泡
+BlindFold
+眼罩
+Anal
+肛门
+Inner Thigh
+大腿内侧
+Lower Abdomen
+下腹
+Vaginal
+阴道
+Candies
+糖果
+Eyes & Mouth
+眼睛与嘴巴
+Primary fur
+主色毛皮
+Secondary fur
+副色毛皮
+Pads
+肉垫
+Skin
+皮肤
+Eye colour
+眼睛颜色
+Eye shine
+眼睛高光
+Nose colour
+鼻子颜色
+Nose shine
+鼻子高光
+Pupils
+瞳孔
+Inner ears
+耳内
+Claws
+爪子
+Eye whites
+眼白
+Dark feathers
+深色羽毛
+Light feathers
+浅色羽毛
+Beak
+喙
+Beak shine
+喙部高光
+Primary coat
+主色皮毛
+Chest fur
+胸毛
+Horn shine
+角部高光
+Retractor
+牵开器
+Nipple Clamps
+乳夹
+Nostril
+鼻孔
+Gradient Back
+后层渐变
+Reflect
+反光
+Divider
+分隔件
+Leg Pad
+腿垫
+Neck Pad
+颈垫
+Bodysuit
+连体衣
+Latex Suit
+乳胶服
+Lower Body
+下半身
+Lower Body Strap
+下身绑带
+Sheer Bodysuit
+透明连体衣
+Upper Body
+上半身
+Upper Body Strap
+上身绑带
+Tentacle
+触手
+Mouth Cover
+口罩
+Vibrator 1
+振动器 1
+Vibrator 2
+振动器 2
+Vibrator 3
+振动器 3
+Vibrator 4
+振动器 4
+Vibrator 5
+振动器 5
+Locket face
+吊坠盒正面
+Face shine
+正面高光
+Locket gem
+吊坠宝石
+Gem shine
+宝石高光
+Body shine
+主体高光
+Locket body
+吊坠盒主体
+Text colour
+文字颜色
+Phoenix metal
+凤凰金属部分
+Metal shine
+金属高光
+Wing gems
+翼部宝石
+Wing shine
+翼部高光
+Tail gems
+尾部宝石
+Tail shine
+尾部高光
+Gradient Front
+前层渐变

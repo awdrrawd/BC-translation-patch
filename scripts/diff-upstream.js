@@ -26,14 +26,14 @@ export function parseCsv(text) {
 }
 
 export function isOnlineCsv(rel) {
-    return /^(Assets\/Female3DCG\/|Backgrounds\/|Screens\/(Online\/|Character\/|Interface\.csv|Room\/Crafting\/))/.test(rel);
+    return /^(Assets\/(?:Female3DCG\/|(?:Female3DCG|AssetStrings|ColorGroups|LayerNames)\.csv$)|Backgrounds\/|Screens\/(Online\/|Character\/|Interface\.csv|Room\/Crafting\/))/.test(rel);
 }
 
 export function missingStrings(base, rows, have, keyed = false) {
     if (keyed) return [...new Set(rows.filter(([key, value]) =>
         /[A-Za-z]/.test(value || "") && !/^<img\b[^>]*\baria-hidden=['"]true['"][^>]*>$/i.test(value) && !have.get(key)
     ).map(([, value]) => value.trim()))];
-    const strings = rows.flatMap(row => /\/Dialog_[^/]+$/.test(base) ? row.slice(2, 4) : [row[base === "Assets/Female3DCG/Female3DCG" ? 2 : 1]]);
+    const strings = rows.flatMap(row => /\/Dialog_[^/]+$/.test(base) ? row.slice(2, 4) : [row[/^Assets\/(?:Female3DCG\/)?Female3DCG$/.test(base) ? 2 : 1]]);
     // A standalone decorative image has no visible or accessible text to translate.
     const decorativeImage = /^<img\b[^>]*\baria-hidden=['"]true['"][^>]*>$/i;
     return [...new Set(strings.map(s => (s || "").trim()).filter(s =>

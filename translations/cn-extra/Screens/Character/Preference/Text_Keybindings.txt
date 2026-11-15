@@ -137,3 +137,11 @@ Chat
 聊天
 Always
 始终
+Sends the message in the beep chat.
+发送呼叫聊天中的消息。
+Send Beep
+发送呼叫
+Beep
+呼叫
+Beep Message Focused
+呼叫消息输入框已聚焦

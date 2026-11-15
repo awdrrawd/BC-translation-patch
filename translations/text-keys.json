@@ -2341,6 +2341,10 @@
       "Style 2"
     ],
     [
+      "NecklaceInitialLocketTextLabel",
+      "Engrave up to two characters"
+    ],
+    [
       "chains",
       "chains"
     ],
@@ -12257,6 +12261,798 @@
       "Hair Masking"
     ],
     [
+      "ItemArmsPetUpperSuitSelectBase",
+      "Configure the mittens"
+    ],
+    [
+      "ItemArmsPetUpperSuitModuleHandCuffs",
+      "Arm Chains"
+    ],
+    [
+      "ItemArmsPetUpperSuitModuleLegCuffs",
+      "Leg Chains"
+    ],
+    [
+      "ItemArmsPetUpperSuitModuleAdjustHeight",
+      "Set Height"
+    ],
+    [
+      "ItemArmsPetUpperSuitSelectHandCuffs",
+      "Configure the arm chains"
+    ],
+    [
+      "ItemArmsPetUpperSuitSelectLegCuffs",
+      "Configure the leg chains"
+    ],
+    [
+      "ItemArmsPetUpperSuitSelectAdjustHeight",
+      "Configure the height"
+    ],
+    [
+      "ItemArmsPetUpperSuitOptionl0",
+      "None"
+    ],
+    [
+      "ItemArmsPetUpperSuitOptionl1",
+      "Chain"
+    ],
+    [
+      "ItemArmsPetUpperSuitOptionll0",
+      "None"
+    ],
+    [
+      "ItemArmsPetUpperSuitOptionll1",
+      "Chain"
+    ],
+    [
+      "ItemArmsPetUpperSuitOptionlll0",
+      "No Height"
+    ],
+    [
+      "ItemArmsPetUpperSuitOptionlll1",
+      "Set Height"
+    ],
+    [
+      "ItemArmsPetUpperSuitSetl0",
+      "SourceCharacter unchains DestinationCharacter arms."
+    ],
+    [
+      "ItemArmsPetUpperSuitSetl1",
+      "SourceCharacter chains DestinationCharacter arms."
+    ],
+    [
+      "ItemArmsPetUpperSuitSetll0",
+      "SourceCharacter unchains DestinationCharacter legs."
+    ],
+    [
+      "ItemArmsPetUpperSuitSetll1",
+      "SourceCharacter chains DestinationCharacter legs."
+    ],
+    [
+      "ItemArmsPetUpperSuitSetlll0",
+      "SourceCharacter restored DestinationCharacter height."
+    ],
+    [
+      "ItemArmsPetUpperSuitSetlll1",
+      "SourceCharacter adjusted DestinationCharacter height."
+    ],
+    [
+      "ItemArmsRestraintPillowSelectBase",
+      "Configure the pillow"
+    ],
+    [
+      "ItemArmsRestraintPillowSelectStrapStatus",
+      "Configure the restraints"
+    ],
+    [
+      "ItemArmsRestraintPillowSelectClitorisVibrator",
+      "Configure the clitoris vibrator"
+    ],
+    [
+      "ItemArmsRestraintPillowSelectNippleVibrator",
+      "Configure the nipples vibrator"
+    ],
+    [
+      "ItemArmsRestraintPillowModuleStrapStatus",
+      "Restraints"
+    ],
+    [
+      "ItemArmsRestraintPillowModuleClitorisVibrator",
+      "Clitoris Vib."
+    ],
+    [
+      "ItemArmsRestraintPillowModuleNippleVibrator",
+      "Nipples Vib."
+    ],
+    [
+      "ItemArmsRestraintPillowOptions0",
+      "None"
+    ],
+    [
+      "ItemArmsRestraintPillowOptions1",
+      "Wrist Straps"
+    ],
+    [
+      "ItemArmsRestraintPillowOptions2",
+      "Invisible Straps"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionc0",
+      "None"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionc1",
+      "Low"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionc2",
+      "Medium"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionc3",
+      "High"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionc4",
+      "Maximum"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionn0",
+      "None"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionn1",
+      "Low"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionn2",
+      "Medium"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionn3",
+      "High"
+    ],
+    [
+      "ItemArmsRestraintPillowOptionn4",
+      "Maximum"
+    ],
+    [
+      "ItemArmsRestraintPillowSets0",
+      "SourceCharacter removes the wrist straps on DestinationCharacter pillow."
+    ],
+    [
+      "ItemArmsRestraintPillowSets1",
+      "SourceCharacter ties the wrist straps on DestinationCharacter pillow."
+    ],
+    [
+      "ItemArmsRestraintPillowSets2",
+      "SourceCharacter ties the invisible wrist straps on DestinationCharacter pillow."
+    ],
+    [
+      "ItemArmsRestraintPillowSetc0",
+      "SourceCharacter stops the clitoris vibrator on DestinationCharacter pillow."
+    ],
+    [
+      "ItemArmsRestraintPillowSetc1",
+      "SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to low."
+    ],
+    [
+      "ItemArmsRestraintPillowSetc2",
+      "SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to medium."
+    ],
+    [
+      "ItemArmsRestraintPillowSetc3",
+      "SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to high."
+    ],
+    [
+      "ItemArmsRestraintPillowSetc4",
+      "SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to maximum."
+    ],
+    [
+      "ItemArmsRestraintPillowSetn0",
+      "SourceCharacter stops the nipples vibrator on DestinationCharacter pillow."
+    ],
+    [
+      "ItemArmsRestraintPillowSetn1",
+      "SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to low."
+    ],
+    [
+      "ItemArmsRestraintPillowSetn2",
+      "SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to medium."
+    ],
+    [
+      "ItemArmsRestraintPillowSetn3",
+      "SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to high."
+    ],
+    [
+      "ItemArmsRestraintPillowSetn4",
+      "SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to maximum."
+    ],
+    [
+      "ItemDevicesBoxingBagSelect",
+      "Configure the punching bag"
+    ],
+    [
+      "ItemDevicesBoxingBagAttachPhoto",
+      "Attach Photo"
+    ],
+    [
+      "ItemDevicesBoxingBagRemovePhoto",
+      "No Photo"
+    ],
+    [
+      "ItemDevicesBoxingBagSetAttachPhoto",
+      "SourceCharacter attaches a photo on DestinationCharacter punching bag."
+    ],
+    [
+      "ItemDevicesBoxingBagSetRemovePhoto",
+      "SourceCharacter removes the photo on DestinationCharacter punching bag."
+    ],
+    [
+      "ItemDevicesGiantStuffedToySelect",
+      "Configure the stuffed bear"
+    ],
+    [
+      "ItemDevicesGiantStuffedToyBear",
+      "Opacity"
+    ],
+    [
+      "ItemDevicesGiantStuffedToySetBear",
+      "Bear"
+    ],
+    [
+      "ItemDevicesGlassJarSelectBase",
+      "Configure the glass tube"
+    ],
+    [
+      "ItemDevicesGlassJarSelectWindow",
+      "Set the window"
+    ],
+    [
+      "ItemDevicesGlassJarSelectLegRestraint",
+      "Set the leg restraint"
+    ],
+    [
+      "ItemDevicesGlassJarSelectArmRestraint",
+      "Set the arm restraint"
+    ],
+    [
+      "ItemDevicesGlassJarSelectTube",
+      "Set the tube"
+    ],
+    [
+      "ItemDevicesGlassJarSelectLiquid",
+      "Set the liquid"
+    ],
+    [
+      "ItemDevicesGlassJarSelectPleasureModule",
+      "Set the pleasure module"
+    ],
+    [
+      "ItemDevicesGlassJarSelectElectroModule",
+      "Set the electro module"
+    ],
+    [
+      "ItemDevicesGlassJarSelectOrgasmLock",
+      "Set the orgasm control"
+    ],
+    [
+      "ItemDevicesGlassJarModuleWindow",
+      "Window"
+    ],
+    [
+      "ItemDevicesGlassJarModuleLegRestraint",
+      "Leg Restraint"
+    ],
+    [
+      "ItemDevicesGlassJarModuleArmRestraint",
+      "Arm Restraint"
+    ],
+    [
+      "ItemDevicesGlassJarModuleTube",
+      "Tubes"
+    ],
+    [
+      "ItemDevicesGlassJarModuleLiquid",
+      "Liquid"
+    ],
+    [
+      "ItemDevicesGlassJarModulePleasureModule",
+      "Pleasure"
+    ],
+    [
+      "ItemDevicesGlassJarModuleElectroModule",
+      "Electro"
+    ],
+    [
+      "ItemDevicesGlassJarModuleOrgasmLock",
+      "Orgasm"
+    ],
+    [
+      "ItemDevicesGlassJarOptionc0",
+      "Glass"
+    ],
+    [
+      "ItemDevicesGlassJarOptionc1",
+      "Sealed"
+    ],
+    [
+      "ItemDevicesGlassJarOptiont0",
+      "None"
+    ],
+    [
+      "ItemDevicesGlassJarOptiont1",
+      "Belts"
+    ],
+    [
+      "ItemDevicesGlassJarOptions0",
+      "None"
+    ],
+    [
+      "ItemDevicesGlassJarOptions1",
+      "Harness"
+    ],
+    [
+      "ItemDevicesGlassJarOptiongz0",
+      "None"
+    ],
+    [
+      "ItemDevicesGlassJarOptiongz1",
+      "Attach"
+    ],
+    [
+      "ItemDevicesGlassJarOptionyt0",
+      "None"
+    ],
+    [
+      "ItemDevicesGlassJarOptionyt1",
+      "Fill"
+    ],
+    [
+      "ItemDevicesGlassJarOptionk0",
+      "Off"
+    ],
+    [
+      "ItemDevicesGlassJarOptionk1",
+      "Low"
+    ],
+    [
+      "ItemDevicesGlassJarOptionk2",
+      "Medium"
+    ],
+    [
+      "ItemDevicesGlassJarOptionk3",
+      "High"
+    ],
+    [
+      "ItemDevicesGlassJarOptionk4",
+      "Maxium"
+    ],
+    [
+      "ItemDevicesGlassJarOptiond0",
+      "Off"
+    ],
+    [
+      "ItemDevicesGlassJarOptiond1",
+      "Low"
+    ],
+    [
+      "ItemDevicesGlassJarOptiond2",
+      "Medium"
+    ],
+    [
+      "ItemDevicesGlassJarOptiond3",
+      "High"
+    ],
+    [
+      "ItemDevicesGlassJarOptiong0",
+      "Allow"
+    ],
+    [
+      "ItemDevicesGlassJarOptiong1",
+      "Deny"
+    ],
+    [
+      "ItemDevicesGlassJarOptiong2",
+      "Edge"
+    ],
+    [
+      "ItemDevicesGlassJarSetc0",
+      "SourceCharacter uses a glass window on DestinationCharacter tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetc1",
+      "SourceCharacter seals the window on DestinationCharacter tube."
+    ],
+    [
+      "ItemDevicesGlassJarSett0",
+      "SourceCharacter removes the leg belts from DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSett1",
+      "SourceCharacter adds the leg belts in DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSets0",
+      "SourceCharacter removes the body harness from DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSets1",
+      "SourceCharacter adds the body harness in DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetgz0",
+      "SourceCharacter removes the inner tubes from DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetgz1",
+      "SourceCharacter attaches the inner tubes in DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetyt0",
+      "SourceCharacter drains the liquid from DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetyt1",
+      "SourceCharacter fills DestinationCharacter glass tube with liquid."
+    ],
+    [
+      "ItemDevicesGlassJarSetk0",
+      "SourceCharacter stops the pleasure module on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetk1",
+      "SourceCharacter sets the pleasure module to low on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetk2",
+      "SourceCharacter sets the pleasure module to medium on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetk3",
+      "SourceCharacter sets the pleasure module to high on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetk4",
+      "SourceCharacter sets the pleasure module to maximum on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetd0",
+      "SourceCharacter stops the electro module on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetd1",
+      "SourceCharacter sets the electro module to low on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetd2",
+      "SourceCharacter sets the electro module to medium on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetd3",
+      "SourceCharacter sets the electro module to high on DestinationCharacter glass tube."
+    ],
+    [
+      "ItemDevicesGlassJarSetg0",
+      "SourceCharacter configures DestinationCharacter glass tube to allow orgasms."
+    ],
+    [
+      "ItemDevicesGlassJarSetg1",
+      "SourceCharacter configures DestinationCharacter glass tube to deny orgasms."
+    ],
+    [
+      "ItemDevicesGlassJarSetg2",
+      "SourceCharacter configures DestinationCharacter glass tube to edge orgasms."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSelectBase",
+      "Configure the case"
+    ],
+    [
+      "ItemDevicesLatexbeltBedSelectCover",
+      "Configure the cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedSelectLatexSleepBag",
+      "Configure the latex bag"
+    ],
+    [
+      "ItemDevicesLatexbeltBedModuleCover",
+      "Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedModuleLatexSleepBag",
+      "Latex Bag"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptiong0",
+      "No Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptiong1",
+      "Open Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptiong2",
+      "Close Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptiong3",
+      "Expose Belly"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptiong4",
+      "Expose Head"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptionl0",
+      "Use"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOptionl1",
+      "Don't Use"
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetg0",
+      "SourceCharacter removes the cover on DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetg1",
+      "SourceCharacter opens the cover on DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetg2",
+      "SourceCharacter closes the cover on DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetg3",
+      "SourceCharacter exposes the belly on DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetg4",
+      "SourceCharacter exposes the head on DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetl0",
+      "SourceCharacter uses a latex bag in DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLatexbeltBedSetl1",
+      "SourceCharacter removes the latex bag in DestinationCharacter case."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSelectBase",
+      "Configure the stand"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSelectPose",
+      "Configure the arms pose"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSelectMouthRestraint",
+      "Configure the mouth bar"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSelectGenitalProp",
+      "Configure the genital prop"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSelectAdjustHeight",
+      "Configure the height"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandModulePose",
+      "Arms Pose"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandModuleMouthRestraint",
+      "Mouth Bar"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandModuleGenitalProp",
+      "Genital Prop"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandModuleAdjustHeight",
+      "Set Height"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptiono0",
+      "Behind Back"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptiono1",
+      "Over Head"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptiong0",
+      "None"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptiong1",
+      "Metal Bar"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptionv0",
+      "None"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptionv1",
+      "Metal Prop"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptiond0",
+      "Reset Height"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandOptiond1",
+      "Customize"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSeto0",
+      "SourceCharacter adjusts DestinationCharacter arms in the stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSeto1",
+      "SourceCharacter adjusts DestinationCharacter arms in the stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSetg0",
+      "SourceCharacter removes the mouth bar on DestinationCharacter stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSetg1",
+      "SourceCharacter adds a mouth bar on DestinationCharacter stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSetv0",
+      "SourceCharacter removes the genital prop on DestinationCharacter stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSetv1",
+      "SourceCharacter adds a genital prop on DestinationCharacter stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSetd0",
+      "SourceCharacter resets the height on DestinationCharacter stand."
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandSetd1",
+      "SourceCharacter changes the height on DestinationCharacter stand."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSelectBase",
+      "Configure the device"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSelectLegPose",
+      "Set the leg pose"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSelectPistonMovement",
+      "Set the dildo insertion speed or position"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonModuleLegPose",
+      "Leg Pose"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonModulePistonMovement",
+      "Dildo Speed"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiono0",
+      "Opened"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiono1",
+      "Closed"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiono2",
+      "Spread"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiond0",
+      "Stop Lowest"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiond1",
+      "Stop Highest"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiond2",
+      "Slow"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiond3",
+      "Medium"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonOptiond4",
+      "Fast"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSeto0",
+      "SourceCharacter opens the legs on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSeto1",
+      "SourceCharacter closes the legs on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSeto2",
+      "SourceCharacter spreads the legs on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSetd0",
+      "SourceCharacter stops the dildo at the lowest position on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSetd1",
+      "SourceCharacter stops the dildo at the highest position on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSetd2",
+      "SourceCharacter sets the dildo insertion to slow speed on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSetd3",
+      "SourceCharacter sets the dildo insertion to medium speed on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonSetd4",
+      "SourceCharacter sets the dildo insertion to fast speed on DestinationCharacter one bar prison."
+    ],
+    [
+      "ItemDevicesTrashCanSelect",
+      "Configure the trash can"
+    ],
+    [
+      "ItemDevicesTrashCanCloseLid",
+      "Close Lid"
+    ],
+    [
+      "ItemDevicesTrashCanOpenFlap",
+      "Open Flap"
+    ],
+    [
+      "ItemDevicesTrashCanOpenLid",
+      "Open Lid"
+    ],
+    [
+      "ItemDevicesTrashCanSetOpenLid",
+      "SourceCharacter opened DestinationCharacter trash can lid"
+    ],
+    [
+      "ItemDevicesTrashCanSetOpenFlap",
+      "SourceCharacter opened DestinationCharacter trash can flap"
+    ],
+    [
+      "ItemDevicesTrashCanSetCloseLid",
+      "SourceCharacter closed DestinationCharacter trash can lid"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyPutonHeadgear",
+      "Wear Head"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyRemoveHeadgear",
+      "Remove Head"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToySelect",
+      "Configure the stuffed unicorn"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToySetPutonHeadgear",
+      "SourceCharacter puts the head on TargetCharacter stuffed unicorn."
+    ],
+    [
+      "ItemDevicesUnicornStuffedToySetRemoveHeadgear",
+      "SourceCharacter removes the head on TargetCharacter stuffed unicorn."
+    ],
+    [
       "ItemEarsCTHeadsetModuleGlow",
       "Glow"
     ],
@@ -12371,6 +13167,62 @@
     [
       "ItemEarsCTHeadsetSetnc3",
       "SourceCharacter turns the noise cancelling from DestinationCharacter headset on fully."
+    ],
+    [
+      "HatFrogHat",
+      "Frog Hat"
+    ],
+    [
+      "HatFrogHatModuleNob",
+      "Nob"
+    ],
+    [
+      "HatFrogHatModuleSides",
+      "Sides"
+    ],
+    [
+      "HatFrogHatModuleTongue",
+      "Tongue"
+    ],
+    [
+      "HatFrogHatOptionn0",
+      "Default Nob"
+    ],
+    [
+      "HatFrogHatOptionn1",
+      "Crystal Nob"
+    ],
+    [
+      "HatFrogHatOptions0",
+      "Empty Sides"
+    ],
+    [
+      "HatFrogHatOptions1",
+      "Crystal Balls"
+    ],
+    [
+      "HatFrogHatOptiont0",
+      "Hidden"
+    ],
+    [
+      "HatFrogHatOptiont1",
+      "Shown"
+    ],
+    [
+      "HatFrogHatSelectBase",
+      "Customise your Frog Hat"
+    ],
+    [
+      "HatFrogHatSelectNob",
+      "Select Nob Style"
+    ],
+    [
+      "HatFrogHatSelectSides",
+      "Select Side Decoration"
+    ],
+    [
+      "HatFrogHatSelectTongue",
+      "Select Tongue"
     ],
     [
       "HeadphoneEarPlugsPoseHeavy",
@@ -14182,23 +15034,23 @@
     ],
     [
       "ItemArmsThinLeatherStrapsSetBoxtie",
-      "SourceCharacter uses the straps on DestinationCharacter to do a boxtie harness."
+      "SourceCharacter uses the straps on TargetCharacter to do a boxtie harness."
     ],
     [
       "ItemArmsThinLeatherStrapsSetHogtie",
-      "SourceCharacter uses the straps on DestinationCharacter to do a hogtie harness."
+      "SourceCharacter uses the straps on TargetCharacter to do a hogtie harness."
     ],
     [
       "ItemArmsThinLeatherStrapsSetWrist",
-      "SourceCharacter uses the straps on DestinationCharacter to do a wrist strap."
+      "SourceCharacter uses the straps on TargetCharacter to do a wrist strap."
     ],
     [
       "ItemArmsThinLeatherStrapsSetWristElbow",
-      "SourceCharacter uses the straps on DestinationCharacter to do a wrist and elbow straps."
+      "SourceCharacter uses the straps on TargetCharacter to do a wrist and elbow straps."
     ],
     [
       "ItemArmsThinLeatherStrapsSetWristElbowHarness",
-      "SourceCharacter uses the straps on DestinationCharacter to do a wrist and elbow harness."
+      "SourceCharacter uses the straps on TargetCharacter to do a wrist and elbow harness."
     ],
     [
       "ItemArmsThinLeatherStrapsWrist",
@@ -14354,7 +15206,7 @@
     ],
     [
       "ItemArmsWoodenCuffsSetHogtied",
-      "SourceCharacter uses wooden cuffs to lock DestinationCharacter in a rigid hogtie."
+      "SourceCharacter uses wooden cuffs to lock TargetCharacter in a rigid hogtie."
     ],
     [
       "ItemArmsWrappedBlanketFeetWrapped",
@@ -16734,7 +17586,7 @@
     ],
     [
       "ItemDevicesCardBoardBoxSeth0",
-      "SoureCharacter plugs the handle hole on DestinationCharacter box."
+      "SourceCharacter plugs the handle hole on DestinationCharacter box."
     ],
     [
       "ItemDevicesCardBoardBoxSeth1",
@@ -16759,6 +17611,70 @@
     [
       "ItemDevicesCardBoardBoxSetx1",
       "SourceCharacter writes something down on DestinationCharacter box."
+    ],
+    [
+      "ItemDevicesBarStoolSelectBase",
+      "Select an option"
+    ],
+    [
+      "ItemDevicesBarStoolModuleStyle",
+      "Style"
+    ],
+    [
+      "ItemDevicesBarStoolSelectStyle",
+      "Select the style"
+    ],
+    [
+      "ItemDevicesBarStoolOptions0",
+      "Modern"
+    ],
+    [
+      "ItemDevicesBarStoolOptions1",
+      "Dirty"
+    ],
+    [
+      "ItemDevicesBarStoolOptions2",
+      "Wooden"
+    ],
+    [
+      "ItemDevicesBarStoolSetStyle",
+      "SourceCharacter changes the style of DestinationCharacter bar stool."
+    ],
+    [
+      "ItemDevicesBarStoolModuleSeat",
+      "Seat"
+    ],
+    [
+      "ItemDevicesBarStoolSelectSeat",
+      "Sit on the stool or hop off"
+    ],
+    [
+      "ItemDevicesBarStoolOptionp0",
+      "Sitting"
+    ],
+    [
+      "ItemDevicesBarStoolOptionp1",
+      "Hopped Off"
+    ],
+    [
+      "ItemDevicesBarStoolSetSeat",
+      "SourceCharacter moves DestinationCharacter bar stool."
+    ],
+    [
+      "ItemDevicesBarStoolModuleDecal",
+      "Decal"
+    ],
+    [
+      "ItemDevicesBarStoolSelectDecal",
+      "Select a decal for the seat"
+    ],
+    [
+      "ItemDevicesBarStoolOptiond0",
+      "None"
+    ],
+    [
+      "ItemDevicesBarStoolSetDecal",
+      "SourceCharacter changes the decal on DestinationCharacter bar stool."
     ],
     [
       "ItemFeetSteelAnkleCuffsChained",
@@ -20901,6 +21817,26 @@
       "\"Accidents hurts… Safety First!\""
     ],
     [
+      "ItemMiscPumpkinPotChain",
+      "Nipples"
+    ],
+    [
+      "ItemMiscPumpkinPotNone",
+      "No Chain"
+    ],
+    [
+      "ItemMiscPumpkinPotSelect",
+      "Configure the candy bucket chains"
+    ],
+    [
+      "ItemMiscPumpkinPotSetNone",
+      "SourceCharacter removes the nipple chains from DestinationCharacter pumpkin candy bucket."
+    ],
+    [
+      "ItemMiscPumpkinPotSetChain",
+      "SourceCharacter adds nipple chains to DestinationCharacter pumpkin candy bucket."
+    ],
+    [
       "ItemMiscServingTrayCake",
       "Cake"
     ],
@@ -24129,6 +25065,82 @@
       "SourceCharacter sets DestinationCharacter AssetName to high intensity."
     ],
     [
+      "ItemPelvisFortuneChastityBeltSelectBase",
+      "Configure the belt"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSelectShield",
+      "Configure the shield"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSelectOrgasmPrevention",
+      "Configure the orgasm module"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltModuleShield",
+      "Shield"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltModuleOrgasmPrevention",
+      "Orgasm"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptions0",
+      "Open All"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptions1",
+      "Close Front"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptions2",
+      "Close Rear"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptions3",
+      "Close All"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptiono0",
+      "Allow"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptiono1",
+      "Deny"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltOptiono2",
+      "Edge"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSets0",
+      "SourceCharacter opens the shield on DestinationCharacter AssetName."
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSets1",
+      "SourceCharacter closes the front shield on DestinationCharacter AssetName."
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSets2",
+      "SourceCharacter closes the rear shield on DestinationCharacter AssetName."
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSets3",
+      "SourceCharacter closes all shields on DestinationCharacter AssetName."
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSeto0",
+      "SourceCharacter configures DestinationCharacter AssetName to allow orgasms."
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSeto1",
+      "SourceCharacter configures DestinationCharacter AssetName to deny orgasms."
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltSeto2",
+      "SourceCharacter configures DestinationCharacter AssetName to edge orgasms."
+    ],
+    [
       "ItemPelvisFuturisticChastityBeltModuleBack",
       "Rear Shield"
     ],
@@ -24850,11 +25862,11 @@
     ],
     [
       "ItemPelvisModularChastityBeltSetp1",
-      "DestinationCharacterName AssetName plug(s) are slightly inflated and are teasing DestinationCharacter with every move."
+      "DestinationCharacterName AssetName plug(s) are slightly inflated and are teasing TargetCharacter with every move."
     ],
     [
       "ItemPelvisModularChastityBeltSetp2",
-      "DestinationCharacterName AssetName plug(s) are inflated and are heavily teasing DestinationCharacter with every move."
+      "DestinationCharacterName AssetName plug(s) are inflated and are heavily teasing TargetCharacter with every move."
     ],
     [
       "ItemPelvisModularChastityBeltSetp3",
@@ -25298,15 +26310,15 @@
     ],
     [
       "ItemTorso2ThinLeatherStrapsSetCrotch",
-      "SourceCharacter uses the straps on DestinationCharacter to create a crotch strap."
+      "SourceCharacter uses the straps on TargetCharacter to create a crotch strap."
     ],
     [
       "ItemTorso2ThinLeatherStrapsSetHarness",
-      "SourceCharacter uses the straps on DestinationCharacter to create a harness."
+      "SourceCharacter uses the straps on TargetCharacter to create a harness."
     ],
     [
       "ItemTorso2ThinLeatherStrapsSetWaist",
-      "SourceCharacter uses the straps on DestinationCharacter to create a waist strap."
+      "SourceCharacter uses the straps on TargetCharacter to create a waist strap."
     ],
     [
       "ItemTorso2ThinLeatherStrapsWaist",
@@ -25578,11 +26590,11 @@
     ],
     [
       "ItemTorsoTentacleSuitOptiond0",
-      "Expose"
+      "Seal"
     ],
     [
       "ItemTorsoTentacleSuitOptiond1",
-      "Seal"
+      "Expose"
     ],
     [
       "ItemTorsoTentacleSuitOptiond2",
@@ -25686,15 +26698,15 @@
     ],
     [
       "ItemTorsoThinLeatherStrapsSetCrotch",
-      "SourceCharacter uses the straps on DestinationCharacter to create a crotch strap."
+      "SourceCharacter uses the straps on TargetCharacter to create a crotch strap."
     ],
     [
       "ItemTorsoThinLeatherStrapsSetHarness",
-      "SourceCharacter uses the straps on DestinationCharacter to create a harness."
+      "SourceCharacter uses the straps on TargetCharacter to create a harness."
     ],
     [
       "ItemTorsoThinLeatherStrapsSetWaist",
-      "SourceCharacter uses the straps on DestinationCharacter to create a waist strap."
+      "SourceCharacter uses the straps on TargetCharacter to create a waist strap."
     ],
     [
       "ItemTorsoThinLeatherStrapsWaist",
@@ -27177,6 +28189,18 @@
       "SourceCharacter buys a glass of Whiskey from TargetCharacter."
     ],
     [
+      "MapViewTetherSlip",
+      "SourceCharacter's leash slips off the post, with nobody left to keep it there."
+    ],
+    [
+      "MapViewTetherTie",
+      "SourceCharacter ties DestinationCharacter leash to the post."
+    ],
+    [
+      "MapViewTetherUntie",
+      "SourceCharacter unties DestinationCharacter leash from the post."
+    ],
+    [
       "MaskDroneMaskModuleEyes",
       "Eyes"
     ],
@@ -28530,11 +29554,11 @@
     ],
     [
       "PersonalCageHeightSetLowered",
-      "SourceCharacter returns DestinationCharacterName to the floor."
+      "SourceCharacter returns TargetCharacterName to the floor."
     ],
     [
       "PersonalCageHeightSetSuspended",
-      "SourceCharacter pulls the level and DestinationCharacterName is lifted."
+      "SourceCharacter pulls the level and TargetCharacterName is lifted."
     ],
     [
       "PersonalCageHeightSuspended",
@@ -31494,7 +32518,7 @@
     ],
     [
       "ItemArmsArmbinderSuitSetb5",
-      "SourceCharacter shortens the chain to force DestinationCharacterName to TargetPronounPossessive knees."
+      "SourceCharacter shortens the chain to force TargetCharacterName to TargetPronounPossessive knees."
     ],
     [
       "ItemArmsArmbinderSuitSetp0",
@@ -31990,11 +33014,11 @@
     ],
     [
       "ItemHoodRubberMaskSeta1",
-      "SourceCharacter gags DestinationCharacter with a single piece of duct tape."
+      "SourceCharacter gags TargetCharacter with a single piece of duct tape."
     ],
     [
       "ItemHoodRubberMaskSeta2",
-      "SourceCharacter gags DestinationCharacter totally locking TargetPronounObject mouth with the Horror Gag."
+      "SourceCharacter gags DestinationCharacter totally locking TargetPronounPossessive mouth with the Horror Gag."
     ],
     [
       "MaskRubberMaskSelectBase",
@@ -33146,7 +34170,7 @@
     ],
     [
       "ItemFeetHeelBindersSetr6",
-      "SourceCharacter suspends the spread bar and DestinationCharacterName is suspended upside down."
+      "SourceCharacter suspends the spread bar and TargetCharacterName is suspended upside down."
     ],
     [
       "ItemFeetHeelBindersSetr7",
@@ -34106,11 +35130,11 @@
     ],
     [
       "ItemDevicesExclusiveWaitressSetc0",
-      "SourceCharacter exposes the DestinationCharacter legs opening the EW's hatch."
+      "SourceCharacter exposes DestinationCharacter legs opening the EW's hatch."
     ],
     [
       "ItemDevicesExclusiveWaitressSetc1",
-      "SourceCharacter closes the EW's with window glass leaving the DestinationCharacter legs visible."
+      "SourceCharacter closes the EW's with window glass leaving DestinationCharacter legs visible."
     ],
     [
       "ItemDevicesExclusiveWaitressSetc2",
@@ -34118,323 +35142,323 @@
     ],
     [
       "ItemDevicesExclusiveWaitressSetb0",
-      "SourceCharacter removes the EW's sunshade behind DestinationCharacter."
+      "SourceCharacter removes the EW's sunshade behind TargetCharacter."
     ],
     [
       "ItemDevicesExclusiveWaitressSetb1",
-      "SourceCharacter installs the EW's sunshade behind DestinationCharacter."
+      "SourceCharacter installs the EW's sunshade behind TargetCharacter."
     ],
     [
       "ItemDevicesExclusiveWaitressSetf0",
-      "SourceCharacter allows DestinationCharacter operate EW device in the autonomous mode (LED ON)."
+      "SourceCharacter allows TargetCharacter to operate EW device in the autonomous mode (LED ON)."
     ],
     [
       "ItemDevicesExclusiveWaitressSetf1",
-      "SourceCharacter set EW device in follow mode. Now DestinationCharacter can be leashed and dragged anywhere (LED ON)."
+      "SourceCharacter sets EW device in follow mode. Now TargetCharacter can be leashed and dragged anywhere (LED ON)."
     ],
     [
       "ItemDevicesExclusiveWaitressSetf2",
-      "SourceCharacter disables the EW's levitate system. DestinationCharacter is grounded now (LED ON)."
+      "SourceCharacter disables the EW's levitate system. TargetCharacter is grounded now (LED ON)."
     ],
     [
       "ItemDevicesExclusiveWaitressSetf3",
-      "SourceCharacter allows DestinationCharacter operate EW device in the autonomous mode (LED OFF)."
+      "SourceCharacter allows TargetCharacter to operate EW device in the autonomous mode (LED OFF)."
     ],
     [
       "ItemDevicesExclusiveWaitressSetf4",
-      "SourceCharacter set EW device in follow mode. Now DestinationCharacter can be leashed and dragged anywhere (LED OFF)."
+      "SourceCharacter sets EW device in follow mode. Now TargetCharacter can be leashed and dragged anywhere (LED OFF)."
     ],
     [
       "ItemDevicesExclusiveWaitressSetf5",
-      "SourceCharacter disables the EW's levitate system. DestinationCharacter is grounded now (LED OFF)."
+      "SourceCharacter disables the EW's levitate system. TargetCharacter is grounded now (LED OFF)."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl0",
-      "DestinationCharacterName is clearing the table on TargetPronounPossessive right side."
+      "TargetCharacterName is clearing the table on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl1",
-      "DestinationCharacterName puts a menu on the table on TargetPronounPossessive right side."
+      "TargetCharacterName puts a menu on the table on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl2",
-      "DestinationCharacterName puts some poker cards and chips on the table on TargetPronounPossessive right side."
+      "TargetCharacterName puts some poker cards and chips on the table on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl3",
-      "DestinationCharacterName puts a Club Card deck on the table on TargetPronounPossessive right side."
+      "TargetCharacterName puts a Club Card deck on the table on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl4",
-      "DestinationCharacterName serves a coffee cup on TargetPronounPossessive right side."
+      "TargetCharacterName serves a coffee cup on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl5",
-      "DestinationCharacterName serves a iced tea glass on TargetPronounPossessive right side."
+      "TargetCharacterName serves a iced tea glass on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl6",
-      "DestinationCharacterName serves a juice glass on TargetPronounPossessive right side."
+      "TargetCharacterName serves a juice glass on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl7",
-      "DestinationCharacterName serves a soda on on TargetPronounPossessive right side."
+      "TargetCharacterName serves a soda on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl8",
-      "DestinationCharacterName serves a whiskey glass on TargetPronounPossessive right side."
+      "TargetCharacterName serves a whiskey glass on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl9",
-      "DestinationCharacterName serves a long neck beer on TargetPronounPossessive right side."
+      "TargetCharacterName serves a long neck beer on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl10",
-      "DestinationCharacterName serves a beer glass on TargetPronounPossessive right side."
+      "TargetCharacterName serves a beer glass on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl11",
-      "DestinationCharacterName serves a marguerita glass on TargetPronounPossessive right side."
+      "TargetCharacterName serves a marguerita glass on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl12",
-      "DestinationCharacterName serves a champagne glass on TargetPronounPossessive right side."
+      "TargetCharacterName serves a champagne glass on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl13",
-      "DestinationCharacterName serves a sake cup on TargetPronounPossessive right side."
+      "TargetCharacterName serves a sake cup on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl14",
-      "DestinationCharacterName serves a penauts pot on TargetPronounPossessive right side."
+      "TargetCharacterName serves a penauts pot on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl15",
-      "DestinationCharacterName serves a banana split on TargetPronounPossessive right side."
+      "TargetCharacterName serves a banana split on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl16",
-      "DestinationCharacterName serves a sundae on TargetPronounPossessive right side."
+      "TargetCharacterName serves a sundae on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl17",
-      "DestinationCharacterName serves a plate of fries on TargetPronounPossessive right side."
+      "TargetCharacterName serves a plate of fries on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl18",
-      "DestinationCharacterName serves a burguer on TargetPronounPossessive right side."
+      "TargetCharacterName serves a burguer on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl19",
-      "DestinationCharacterName serves a origiri on TargetPronounPossessive right side."
+      "TargetCharacterName serves a origiri on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl20",
-      "DestinationCharacterName serves a hot dog on TargetPronounPossessive right side."
+      "TargetCharacterName serves a hot dog on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl21",
-      "DestinationCharacterName serves a taco on TargetPronounPossessive right side."
+      "TargetCharacterName serves a taco on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl22",
-      "DestinationCharacterName puts the bill and some changes on TargetPronounPossessive right side."
+      "TargetCharacterName puts the bill and some changes on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetl23",
-      "DestinationCharacterName puts a ashtray on TargetPronounPossessive right side."
+      "TargetCharacterName puts a ashtray on TargetPronounPossessive right side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm0",
-      "DestinationCharacterName is clearing the table on TargetPronounPossessive front."
+      "TargetCharacterName is clearing the table on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm1",
-      "DestinationCharacterName puts a menu on the table on TargetPronounPossessive front."
+      "TargetCharacterName puts a menu on the table on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm2",
-      "DestinationCharacterName puts some poker card decks and chips on the table on TargetPronounPossessive front."
+      "TargetCharacterName puts some poker card decks and chips on the table on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm3",
-      "DestinationCharacterName puts some Club Card decks on the table on TargetPronounPossessive front."
+      "TargetCharacterName puts some Club Card decks on the table on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm4",
-      "DestinationCharacterName puts a old coffee pot on TargetPronounPossessive front."
+      "TargetCharacterName puts a old coffee pot on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm5",
-      "DestinationCharacterName serves two iced tea cups on TargetPronounPossessive front."
+      "TargetCharacterName serves two iced tea cups on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm6",
-      "DestinationCharacterName serves two juice glasses on TargetPronounPossessive front."
+      "TargetCharacterName serves two juice glasses on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm7",
-      "DestinationCharacterName serves a bunch of sodas on on TargetPronounPossessive front."
+      "TargetCharacterName serves a bunch of sodas on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm8",
-      "DestinationCharacterName serves a whiskey bottle on TargetPronounPossessive front."
+      "TargetCharacterName serves a whiskey bottle on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm9",
-      "DestinationCharacterName serves a lot of long neck beer on TargetPronounPossessive front."
+      "TargetCharacterName serves a lot of long neck beer on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm10",
-      "DestinationCharacterName serves two beer bottles on TargetPronounPossessive front."
+      "TargetCharacterName serves two beer bottles on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm11",
-      "DestinationCharacterName serves two marguerita glasses on TargetPronounPossessive front."
+      "TargetCharacterName serves two marguerita glasses on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm12",
-      "DestinationCharacterName serves a champagne bucket on TargetPronounPossessive front."
+      "TargetCharacterName serves a champagne bucket on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm13",
-      "DestinationCharacterName serves a sake bottle on TargetPronounPossessive front."
+      "TargetCharacterName serves a sake bottle on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm14",
-      "DestinationCharacterName serves a bigger penauts pot on TargetPronounPossessive front."
+      "TargetCharacterName serves a bigger penauts pot on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm15",
-      "DestinationCharacterName serves a banana split on TargetPronounPossessive front."
+      "TargetCharacterName serves a banana split on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm16",
-      "DestinationCharacterName serves two sundaes on TargetPronounPossessive front."
+      "TargetCharacterName serves two sundaes on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm17",
-      "DestinationCharacterName serves a bigger plate of fries on TargetPronounPossessive front."
+      "TargetCharacterName serves a bigger plate of fries on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm18",
-      "DestinationCharacterName serves two burguers on TargetPronounPossessive front."
+      "TargetCharacterName serves two burguers on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm19",
-      "DestinationCharacterName serves two origiri on TargetPronounPossessive front."
+      "TargetCharacterName serves two origiri on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm20",
-      "DestinationCharacterName serves two hot dogs on TargetPronounPossessive front."
+      "TargetCharacterName serves two hot dogs on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm21",
-      "DestinationCharacterName serves a bunch of tacos on TargetPronounPossessive front."
+      "TargetCharacterName serves a bunch of tacos on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetm22",
-      "DestinationCharacterName puts a TargetPronounPossessive tips pot on TargetPronounPossessive front: Tips for good service!"
+      "TargetCharacterName puts a TargetPronounPossessive tips pot on TargetPronounPossessive front: Tips for good service!"
     ],
     [
       "ItemDevicesExclusiveWaitressSetm23",
-      "DestinationCharacterName puts no smoking sign on TargetPronounPossessive front."
+      "TargetCharacterName puts no smoking sign on TargetPronounPossessive front."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr0",
-      "DestinationCharacterName is clearing the table on TargetPronounPossessive left side."
+      "TargetCharacterName is clearing the table on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr1",
-      "DestinationCharacterName puts a menu on the table on TargetPronounPossessive left side."
+      "TargetCharacterName puts a menu on the table on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr2",
-      "DestinationCharacterName puts some poker cards and chips on the table on TargetPronounPossessive left side."
+      "TargetCharacterName puts some poker cards and chips on the table on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr3",
-      "DestinationCharacterName puts a Club Card deck on the table on TargetPronounPossessive left side."
+      "TargetCharacterName puts a Club Card deck on the table on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr4",
-      "DestinationCharacterName serves a coffee cup on TargetPronounPossessive left side."
+      "TargetCharacterName serves a coffee cup on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr5",
-      "DestinationCharacterName serves a iced tea glass on TargetPronounPossessive left side."
+      "TargetCharacterName serves a iced tea glass on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr6",
-      "DestinationCharacterName serves a juice glass on TargetPronounPossessive left side."
+      "TargetCharacterName serves a juice glass on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr7",
-      "DestinationCharacterName serves a soda on on TargetPronounPossessive left side."
+      "TargetCharacterName serves a soda on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr8",
-      "DestinationCharacterName serves a whiskey glass on TargetPronounPossessive left side."
+      "TargetCharacterName serves a whiskey glass on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr9",
-      "DestinationCharacterName serves a long neck beer on TargetPronounPossessive left side."
+      "TargetCharacterName serves a long neck beer on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr10",
-      "DestinationCharacterName serves a beer glass on TargetPronounPossessive left side."
+      "TargetCharacterName serves a beer glass on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr11",
-      "DestinationCharacterName serves a marguerita glass on TargetPronounPossessive left side."
+      "TargetCharacterName serves a marguerita glass on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr12",
-      "DestinationCharacterName serves a champagne glass on TargetPronounPossessive left side."
+      "TargetCharacterName serves a champagne glass on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr13",
-      "DestinationCharacterName serves a sake cup on TargetPronounPossessive left side."
+      "TargetCharacterName serves a sake cup on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr14",
-      "DestinationCharacterName serves a penauts pot on TargetPronounPossessive left side."
+      "TargetCharacterName serves a penauts pot on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr15",
-      "DestinationCharacterName serves a banana split on TargetPronounPossessive left side."
+      "TargetCharacterName serves a banana split on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr16",
-      "DestinationCharacterName serves a sundae on TargetPronounPossessive left side."
+      "TargetCharacterName serves a sundae on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr17",
-      "DestinationCharacterName serves a plate of fries on TargetPronounPossessive left side."
+      "TargetCharacterName serves a plate of fries on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr18",
-      "DestinationCharacterName serves a burguer on TargetPronounPossessive left side."
+      "TargetCharacterName serves a burguer on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr19",
-      "DestinationCharacterName serves a origiri on TargetPronounPossessive left side."
+      "TargetCharacterName serves a origiri on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr20",
-      "DestinationCharacterName serves a hot dog on TargetPronounPossessive left side."
+      "TargetCharacterName serves a hot dog on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr21",
-      "DestinationCharacterName serves a taco on TargetPronounPossessive left side."
+      "TargetCharacterName serves a taco on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr22",
-      "DestinationCharacterName puts the bill and some changes on TargetPronounPossessive left side."
+      "TargetCharacterName puts the bill and some changes on TargetPronounPossessive left side."
     ],
     [
       "ItemDevicesExclusiveWaitressSetr23",
-      "DestinationCharacterName puts a ashtray on TargetPronounPossessive left side."
+      "TargetCharacterName puts a ashtray on TargetPronounPossessive left side."
     ],
     [
       "ItemMouthAOMGagSelect",
@@ -34839,6 +35863,14 @@
     [
       "ItemHandheldPlushie",
       "Plushies"
+    ],
+    [
+      "ItemHandheldPlushieSelectMenu",
+      "Choose what to change:"
+    ],
+    [
+      "ItemHandheldPlushieModuleBase",
+      "Plushie"
     ],
     [
       "ItemHandheldPlushieSelectBase",
@@ -35897,6 +36929,118 @@
       "SourceCharacter places a cute Samantha plushie in DestinationCharacter hands."
     ],
     [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret9",
+      "Mini"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret9",
+      "SourceCharacter places a cute Mini plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret10",
+      "Ruby"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret10",
+      "SourceCharacter places a cute Ruby plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret11",
+      "Viper"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret11",
+      "SourceCharacter places a cute Viper plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret12",
+      "Ayato"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret12",
+      "SourceCharacter places a cute Ayato plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret13",
+      "Lisa Hem"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret13",
+      "SourceCharacter places a cute Lisa Hem plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret14",
+      "Yu Fantôme"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret14",
+      "SourceCharacter places a cute Yu Fantôme plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret15",
+      "Clara"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret15",
+      "SourceCharacter places a cute Clara plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret16",
+      "Evelia"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret16",
+      "SourceCharacter places a cute Evelia plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret17",
+      "Carina"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret17",
+      "SourceCharacter places a cute Carina plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret18",
+      "Princess Vamparina"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret18",
+      "SourceCharacter places a cute Princess Vamparina plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret19",
+      "Shyy"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret19",
+      "SourceCharacter places a cute Shyy plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret20",
+      "Hajime"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret20",
+      "SourceCharacter places a cute Hajime plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret21",
+      "Lilly"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret21",
+      "SourceCharacter places a cute Lilly plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionVelvetBunnyCabaret22",
+      "Chris"
+    ],
+    [
+      "ItemHandheldPlushieSetVelvetBunnyCabaret22",
+      "SourceCharacter places a cute Chris plushie in DestinationCharacter hands."
+    ],
+    [
       "ItemHandheldPlushieModuleSubbycatsPlace",
       "Subbycat's Place"
     ],
@@ -35923,6 +37067,442 @@
     [
       "ItemHandheldPlushieSetSubbycatsPlace1",
       "SourceCharacter places a cute Shadow plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModuleSADollhouse",
+      "SA Dollhouse"
+    ],
+    [
+      "ItemHandheldPlushieSelectSADollhouse",
+      "SA Dollhouse"
+    ],
+    [
+      "ItemHandheldPlushieSADollhouseSelect",
+      "Choose the plushie:"
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse0",
+      "None"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse0",
+      "SourceCharacter removes a plushie from DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse1",
+      "Alex"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse1",
+      "SourceCharacter places a cute Alex plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse2",
+      "Yeani"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse2",
+      "SourceCharacter places a cute Yeani plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse3",
+      "Coconut"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse3",
+      "SourceCharacter places a cute Coconut plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse4",
+      "Vvavv"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse4",
+      "SourceCharacter places a cute Vvavv plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse5",
+      "Hana"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse5",
+      "SourceCharacter places a cute Hana plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse6",
+      "Cholate"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse6",
+      "SourceCharacter places a cute Cholate plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse7",
+      "Silvia"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse7",
+      "SourceCharacter places a cute Silvia plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionSADollhouse8",
+      "Rouge"
+    ],
+    [
+      "ItemHandheldPlushieSetSADollhouse8",
+      "SourceCharacter places a cute Rouge plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModuleFoxworthManor",
+      "Foxworth Manor"
+    ],
+    [
+      "ItemHandheldPlushieSelectFoxworthManor",
+      "Foxworth Manor"
+    ],
+    [
+      "ItemHandheldPlushieFoxworthManorSelect",
+      "Choose the plushie:"
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor0",
+      "None"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor0",
+      "SourceCharacter removes a plushie from DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor1",
+      "Alice"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor1",
+      "SourceCharacter places a cute Alice plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor2",
+      "Misao"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor2",
+      "SourceCharacter places a cute Misao plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor3",
+      "Yvette"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor3",
+      "SourceCharacter places a cute Yvette plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor4",
+      "Serena"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor4",
+      "SourceCharacter places a cute Serena plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor5",
+      "Elli"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor5",
+      "SourceCharacter places a cute Elli plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxworthManor6",
+      "Dahlia"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxworthManor6",
+      "SourceCharacter places a cute Dahlia plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModuleMansionValentine",
+      "Mansion Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSelectMansionValentine",
+      "Mansion Valentine"
+    ],
+    [
+      "ItemHandheldPlushieMansionValentineSelect",
+      "Choose the plushie:"
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine0",
+      "None"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine0",
+      "SourceCharacter removes a plushie from DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine1",
+      "Julia Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine1",
+      "SourceCharacter places a cute Julia Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine2",
+      "Luminas Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine2",
+      "SourceCharacter places a cute Luminas Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine3",
+      "Nina Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine3",
+      "SourceCharacter places a cute Nina Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine4",
+      "Marsy Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine4",
+      "SourceCharacter places a cute Marsy Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine5",
+      "Audriana Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine5",
+      "SourceCharacter places a cute Audriana Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine6",
+      "Xiaohuahuo Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine6",
+      "SourceCharacter places a cute Xiaohuahuo Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine7",
+      "Lucy Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine7",
+      "SourceCharacter places a cute Lucy Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine8",
+      "Kaede Valentine"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine8",
+      "SourceCharacter places a cute Kaede Valentine plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionMansionValentine9",
+      "Alena Brenhines"
+    ],
+    [
+      "ItemHandheldPlushieSetMansionValentine9",
+      "SourceCharacter places a cute Alena Brenhines plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModuleAybesSuite",
+      "Aybes Suite"
+    ],
+    [
+      "ItemHandheldPlushieSelectAybesSuite",
+      "Aybes Suite"
+    ],
+    [
+      "ItemHandheldPlushieOptionAybesSuite0",
+      "None"
+    ],
+    [
+      "ItemHandheldPlushieSetAybesSuite0",
+      "SourceCharacter removes a plushie from DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionAybesSuite1",
+      "Aybes"
+    ],
+    [
+      "ItemHandheldPlushieSetAybesSuite1",
+      "SourceCharacter places a cute Aybes plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionAybesSuite2",
+      "Ash The cute"
+    ],
+    [
+      "ItemHandheldPlushieSetAybesSuite2",
+      "SourceCharacter places a cute Ash plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionAybesSuite3",
+      "Domi"
+    ],
+    [
+      "ItemHandheldPlushieSetAybesSuite3",
+      "SourceCharacter places a cute Domi plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionAybesSuite4",
+      "Elaina"
+    ],
+    [
+      "ItemHandheldPlushieSetAybesSuite4",
+      "SourceCharacter places a cute Elaina plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModuleFaircloughManor",
+      "Fairclough Manor"
+    ],
+    [
+      "ItemHandheldPlushieSelectFaircloughManor",
+      "Fairclough Manor"
+    ],
+    [
+      "ItemHandheldPlushieFaircloughManorSelect",
+      "Choose the plushie:"
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor0",
+      "None"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor0",
+      "SourceCharacter removes a plushie from DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor1",
+      "Gaige Fairclough"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor1",
+      "SourceCharacter places a cute Gaige Fairclough plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor2",
+      "Miku Fairclough"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor2",
+      "SourceCharacter places a cute Miku Fairclough plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor3",
+      "Vanessa Fairclough"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor3",
+      "SourceCharacter places a cute Vanessa Fairclough plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor4",
+      "Runa Fairclough"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor4",
+      "SourceCharacter places a cute Runa Fairclough plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor5",
+      "Bianca Fairclough"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor5",
+      "SourceCharacter places a cute Bianca Fairclough plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFaircloughManor6",
+      "Bella Fairclough"
+    ],
+    [
+      "ItemHandheldPlushieSetFaircloughManor6",
+      "SourceCharacter places a cute Bella Fairclough plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModuleFoxDen",
+      "Fox Den"
+    ],
+    [
+      "ItemHandheldPlushieSelectFoxDen",
+      "Fox Den"
+    ],
+    [
+      "ItemHandheldPlushieFoxDenSelect",
+      "Choose the plushie:"
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxDen0",
+      "None"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxDen0",
+      "SourceCharacter removes a plushie from DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxDen1",
+      "Nicole"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxDen1",
+      "SourceCharacter places a cute Nicole plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxDen2",
+      "Tifa"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxDen2",
+      "SourceCharacter places a cute Tifa plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionFoxDen3",
+      "Felix"
+    ],
+    [
+      "ItemHandheldPlushieSetFoxDen3",
+      "SourceCharacter places a cute Felix plushie in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieModulePosition",
+      "Position"
+    ],
+    [
+      "ItemHandheldPlushieSelectPosition",
+      "Where the plushie is:"
+    ],
+    [
+      "ItemHandheldPlushieOptionPosition0",
+      "In hands"
+    ],
+    [
+      "ItemHandheldPlushieSetPosition0",
+      "SourceCharacter puts the plushie back in DestinationCharacter hands."
+    ],
+    [
+      "ItemHandheldPlushieOptionPosition1",
+      "On head"
+    ],
+    [
+      "ItemHandheldPlushieSetPosition1",
+      "SourceCharacter sits the plushie on top of DestinationCharacter head."
+    ],
+    [
+      "ItemHandheldPlushieOptionPosition2",
+      "On the floor"
+    ],
+    [
+      "ItemHandheldPlushieSetPosition2",
+      "SourceCharacter sets the plushie down at DestinationCharacter feet."
     ],
     [
       "ItemHandheldCigaretteSelect",
@@ -36274,7 +37854,7 @@
     ],
     [
       "ItemTorsoSteelBeltSeth0",
-      "SourceCharacter unlocks DestinationCharacter from the Steel Belt handcuffs."
+      "SourceCharacter unlocks TargetCharacter from the Steel Belt handcuffs."
     ],
     [
       "ItemTorsoSteelBeltSeth1",
@@ -36342,7 +37922,7 @@
     ],
     [
       "ItemTorso2SteelBeltSeth0",
-      "SourceCharacter unlocks DestinationCharacter from the Steel Belt handcuffs."
+      "SourceCharacter unlocks TargetCharacter from the Steel Belt handcuffs."
     ],
     [
       "ItemTorso2SteelBeltSeth1",
@@ -36410,7 +37990,7 @@
     ],
     [
       "ItemArmsSteelBeltSeth0",
-      "SourceCharacter unlocks DestinationCharacter from the Steel Belt handcuffs."
+      "SourceCharacter unlocks TargetCharacter from the Steel Belt handcuffs."
     ],
     [
       "ItemArmsSteelBeltSeth1",
@@ -37965,24 +39545,32 @@
       "SourceCharacter uses this foam roll to wrap DestinationCharacter hands."
     ],
     [
-      "ItemHandheldToyHammerSelect",
-      "Select Bonk or No Bonk"
+      "ItemHandheldToyHammerSelectBase",
+      "Select the Option"
     ],
     [
-      "ItemHandheldToyHammerNoBonk!",
-      "No Bonk!"
+      "ItemHandheldToyHammerModuleText",
+      "Text"
     ],
     [
-      "ItemHandheldToyHammerSetNoBonk!",
-      "SourceCharacter turns DestinationCharacter AssetName from bonk into no bonk."
+      "ItemHandheldToyHammerSelectText",
+      "Choose if you want a text bubble"
     ],
     [
-      "ItemHandheldToyHammerBONK!",
-      "BONK!"
+      "ItemHandheldToyHammerOptiona0",
+      "No Text"
     ],
     [
-      "ItemHandheldToyHammerSetBONK!",
-      "SourceCharacter turns DestinationCharacter AssetName from no bonk into bonk."
+      "ItemHandheldToyHammerSeta0",
+      "SourceCharacter removes the Text Bubble from DestinationCharacter AssetName."
+    ],
+    [
+      "ItemHandheldToyHammerOptiona1",
+      "Text Bubble"
+    ],
+    [
+      "ItemHandheldToyHammerSeta1",
+      "SourceCharacter adds a Text Bubble to DestinationCharacter AssetName."
     ],
     [
       "ClothLowerPVCHobbleSkirtSelectBase",
@@ -38745,6 +40333,194 @@
       "SourceCharacter made DestinationCharacter sack translucent."
     ],
     [
+      "ItemDevicesGiantJarSelectBase",
+      "Change the Jar"
+    ],
+    [
+      "ItemDevicesGiantJarModuleOpenClose",
+      "Open/Close"
+    ],
+    [
+      "ItemDevicesGiantJarSelectOpenClose",
+      "Open or close the jar"
+    ],
+    [
+      "ItemDevicesGiantJarModuleFillState",
+      "Fill State"
+    ],
+    [
+      "ItemDevicesGiantJarSelectFillState",
+      "Fill the Jar"
+    ],
+    [
+      "ItemDevicesGiantJarModuleBubbles",
+      "Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarSelectBubbles",
+      "Add some Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarModuleTextLabel",
+      "Text Label"
+    ],
+    [
+      "ItemDevicesGiantJarSelectTextLabel",
+      "Choose the Text Label"
+    ],
+    [
+      "ItemDevicesGiantJarOptiona0",
+      "No Lid"
+    ],
+    [
+      "ItemDevicesGiantJarSeta0",
+      "SourceCharacter removes the lid from DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptiond0",
+      "No Text Label"
+    ],
+    [
+      "ItemDevicesGiantJarSetd0",
+      "DestinationCharacter adds text labels to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptionc0",
+      "No Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarSetc0",
+      "SourceCharacter removes the bubbles from DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb0",
+      "Empty"
+    ],
+    [
+      "ItemDevicesGiantJarSetb0",
+      "SourceCharacter removes the liquid from DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptiona1",
+      "Lid"
+    ],
+    [
+      "ItemDevicesGiantJarSeta1",
+      "SourceCharacter adds a lid to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb1",
+      "Foot Deep"
+    ],
+    [
+      "ItemDevicesGiantJarSetb1",
+      "SourceCharacter fills the AssetName to DestinationCharacter feet."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb2",
+      "Knee Deep"
+    ],
+    [
+      "ItemDevicesGiantJarSetb2",
+      "SourceCharacter fills the AssetName to DestinationCharacter knees."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb3",
+      "Leg Deep"
+    ],
+    [
+      "ItemDevicesGiantJarSetb3",
+      "SourceCharacter fills the AssetName to DestinationCharacter legs."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb4",
+      "Waist Deep"
+    ],
+    [
+      "ItemDevicesGiantJarSetb4",
+      "SourceCharacter fills the AssetName to DestinationCharacter waist."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb5",
+      "Chest Deep"
+    ],
+    [
+      "ItemDevicesGiantJarSetb5",
+      "SourceCharacter fills the AssetName to DestinationCharacter chest."
+    ],
+    [
+      "ItemDevicesGiantJarOptionb6",
+      "Head Deep"
+    ],
+    [
+      "ItemDevicesGiantJarSetb6",
+      "SourceCharacter fills the AssetName to DestinationCharacter head."
+    ],
+    [
+      "ItemDevicesGiantJarOptionc1",
+      "Tiny Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarSetc1",
+      "SourceCharacter adds tiny bubbles to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptionc2",
+      "Medium"
+    ],
+    [
+      "ItemDevicesGiantJarSetc2",
+      "SourceCharacter adds medium bubbles to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptionc3",
+      "Large Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarSetc3",
+      "SourceCharacter adds large bubbles to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptionc4",
+      "XLarge Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarSetc4",
+      "SourceCharacter adds extra large bubbles to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptiond1",
+      "Text Label"
+    ],
+    [
+      "ItemDevicesGiantJarSetd1",
+      "SourceCharacter adds a text label to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptiond2",
+      "Diagonal Text Label"
+    ],
+    [
+      "ItemDevicesGiantJarSetd2",
+      "SourceCharacter adds a diagonal text label to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptiond3",
+      "Text Labels"
+    ],
+    [
+      "ItemDevicesGiantJarSetd3",
+      "SourceCharacter adds text labels to DestinationCharacter AssetName."
+    ],
+    [
+      "ItemDevicesGiantJarOptiond4",
+      "Diagonal Text Labels"
+    ],
+    [
+      "ItemDevicesGiantJarSetd4",
+      "SourceCharacter adds diagonal text labels to DestinationCharacter AssetName."
+    ],
+    [
       "ItemNipplesPiercingsPiercingNameBadgeSetRightNipple",
       "SourceCharacter puts the AssetName on DestinationCharacter right nipple."
     ],
@@ -39071,6 +40847,14 @@
       "Belts"
     ],
     [
+      "ItemDevicesBoxingBagChain",
+      "Chain"
+    ],
+    [
+      "ItemDevicesBoxingBagSack",
+      "Sack"
+    ],
+    [
       "ItemDevicesBrickWallBrick",
       "Brick sector"
     ],
@@ -39151,6 +40935,22 @@
       " Inner Reflection"
     ],
     [
+      "ItemDevicesGlassJarBase",
+      "Base"
+    ],
+    [
+      "ItemDevicesGlassJarJarLiquid",
+      "Tube Liquid"
+    ],
+    [
+      "ItemDevicesGlassJarPipe",
+      "Pipe"
+    ],
+    [
+      "ItemDevicesGlassJarTopLid",
+      "Top Lid"
+    ],
+    [
       "ItemDevicesInflatableRestraintBagBase",
       "Base"
     ],
@@ -39179,6 +40979,38 @@
       "Wall"
     ],
     [
+      "ItemDevicesLatexbeltBedBagBase",
+      "Bag Base"
+    ],
+    [
+      "ItemDevicesLatexbeltBedBagClosure",
+      "Bag Laces"
+    ],
+    [
+      "ItemDevicesLatexbeltBedBagHighlight",
+      "Bag Highlight"
+    ],
+    [
+      "ItemDevicesLatexbeltBedBagShadow",
+      "Bag Shadow"
+    ],
+    [
+      "ItemDevicesLatexbeltBedBedRings",
+      "Case Rings"
+    ],
+    [
+      "ItemDevicesLatexbeltBedBedStraps",
+      "Case Straps"
+    ],
+    [
+      "ItemDevicesLatexbeltBedCover",
+      "Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedRestraintStraps",
+      "Restraint Straps"
+    ],
+    [
       "ItemDevicesLuckyWheelMisc",
       "Misc"
     ],
@@ -39189,6 +41021,30 @@
     [
       "ItemDevicesLuckyWheelStand",
       "Stand"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonMetalCalf",
+      "Ankle Shackles"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonMetalMain",
+      "Metal Frame"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonMetalThigh",
+      "Thigh Shackles"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyBack2",
+      "Back"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyFront2",
+      "Front"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyHair",
+      "Hair"
     ],
     [
       "ItemDevicesVacBedDeluxeBody",
@@ -39209,6 +41065,38 @@
     [
       "ItemDevicesXFrameMetal",
       " Metal"
+    ],
+    [
+      "ItemDevicesBarStoolModern",
+      "Modern"
+    ],
+    [
+      "ItemDevicesBarStoolDirty",
+      "Dirty"
+    ],
+    [
+      "ItemDevicesBarStoolWooden",
+      "Wooden"
+    ],
+    [
+      "ItemDevicesGiantJarGlass",
+      "Glass"
+    ],
+    [
+      "ItemDevicesGiantJarReflection",
+      "Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLiquid",
+      "Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBubbles",
+      "Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarLabel",
+      "Label"
     ],
     [
       "ItemFeetSturdyLeatherBeltsBelts",
@@ -39251,12 +41139,32 @@
       "Fan paper 3rd color"
     ],
     [
-      "ItemHandheldToyHammerReflection",
-      "Reflection"
+      "ItemHandsLatexBondageMittsMittBase",
+      "Mitt Base"
     ],
     [
-      "ItemHandheldToyHammerBubble",
-      "Bubble"
+      "ItemHandsLatexBondageMittsMittShine",
+      "Mitt Shine"
+    ],
+    [
+      "ItemHandsLatexBondageMittsWristBase",
+      "Wrist Base"
+    ],
+    [
+      "ItemHandsLatexBondageMittsWristShine",
+      "Wrist Shine"
+    ],
+    [
+      "ItemHandsLatexBondageMittsNozzle",
+      "Nozzle"
+    ],
+    [
+      "ItemHandsLatexBondageMittsPattern",
+      "Pattern"
+    ],
+    [
+      "ItemHandsLatexBondageMittsPatternShine",
+      "Pattern Shine"
     ],
     [
       "ItemHoodHalloIIIMask",
@@ -39715,6 +41623,10 @@
       "Ribbon"
     ],
     [
+      "ItemHandheldToyHammerReflection",
+      "Reflection"
+    ],
+    [
       "PantiesBulkyDiaperGradients",
       "Gradients"
     ],
@@ -39975,14 +41887,6 @@
     [
       "BraLeatherVestSuitSilk",
       "Silk"
-    ],
-    [
-      "BraStuddedHarnessHarness",
-      "Harness"
-    ],
-    [
-      "BraStuddedHarnessMetal",
-      "Metal"
     ],
     [
       "BraOrnateMetalBraBra",
@@ -42519,6 +44423,26 @@
     [
       "DecalsCTSimplified2",
       "Color"
+    ],
+    [
+      "DecalsDisciplineCorner1",
+      "Base"
+    ],
+    [
+      "DecalsDisciplineCorner2",
+      "Text"
+    ],
+    [
+      "DecalsDisciplineCorner3",
+      "Wolf"
+    ],
+    [
+      "DecalsTheOddRoom1",
+      "OD"
+    ],
+    [
+      "DecalsTheOddRoom2",
+      ":D"
     ],
     [
       "EyebrowsEyebrows2EyebrowBarRight",
@@ -45301,28 +47225,48 @@
       "Petals"
     ],
     [
+      "HatFrogHatEyeWhites",
+      "Eye Whites"
+    ],
+    [
+      "HatFrogHatBase",
+      "Base"
+    ],
+    [
+      "HatFrogHatEye",
+      "Eye"
+    ],
+    [
+      "HatFrogHatSides",
+      "Sides"
+    ],
+    [
+      "HatFrogHatSides_Shine",
+      "Sides Shine"
+    ],
+    [
+      "HatFrogHatCrystalNob",
+      "Crystal Nob"
+    ],
+    [
+      "HatFrogHatCrystalNob_Shine",
+      "Crystal Nob Shine"
+    ],
+    [
+      "HatFrogHatTongue",
+      "Tongue"
+    ],
+    [
+      "HatFrogHatTongue_Shine",
+      "Tongue Shine"
+    ],
+    [
       "HatGatTop",
       "Top"
     ],
     [
       "HatGatBeads",
       "Beads"
-    ],
-    [
-      "HatLatexHabitBase",
-      "Shawl"
-    ],
-    [
-      "HatLatexHabitCape",
-      "Shoulders"
-    ],
-    [
-      "HatLatexHabitCollar",
-      "Collar"
-    ],
-    [
-      "HatLatexHabitCowl",
-      "Cowl"
     ],
     [
       "HatMaidLatexHairbandDetail",
@@ -45781,6 +47725,126 @@
       "Suit"
     ],
     [
+      "ItemArmsFullLatexSuitLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsHandraisedbarBar",
+      "Bar"
+    ],
+    [
+      "ItemArmsHandraisedbarBelt",
+      "Cuffs"
+    ],
+    [
+      "ItemArmsHandraisedbarLock",
+      "Locks"
+    ],
+    [
+      "ItemArmsHandraisedbarNeck",
+      "Collar"
+    ],
+    [
+      "ItemArmsInflatableStraightLeotard",
+      "Leotard"
+    ],
+    [
+      "ItemArmsInflatableStraightLeotardLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsLatexBoxtieLeotardLatex",
+      "Latex"
+    ],
+    [
+      "ItemArmsLatexBoxtieLeotardHighlights",
+      "Highlights"
+    ],
+    [
+      "ItemArmsLatexBoxtieLeotardLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsLatexButterflyLeotardLatex",
+      "Latex"
+    ],
+    [
+      "ItemArmsLatexButterflyLeotardHighlights",
+      "Highlights"
+    ],
+    [
+      "ItemArmsLatexButterflyLeotardLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsMermaidSuitLatex",
+      "Suit"
+    ],
+    [
+      "ItemArmsMermaidSuitLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsPetUpperSuitAnkleChain",
+      "Leg Chains"
+    ],
+    [
+      "ItemArmsPetUpperSuitArmColor",
+      "Arms"
+    ],
+    [
+      "ItemArmsPetUpperSuitBelt",
+      "Belts"
+    ],
+    [
+      "ItemArmsPetUpperSuitBondage",
+      "Mittens"
+    ],
+    [
+      "ItemArmsPetUpperSuitBondageHighlight",
+      "Mittens Highlight"
+    ],
+    [
+      "ItemArmsPetUpperSuitBuckle",
+      "Buckles"
+    ],
+    [
+      "ItemArmsPetUpperSuitWristChain",
+      "Arm Chains"
+    ],
+    [
+      "ItemArmsRestraintPillowPillow",
+      "Pillow"
+    ],
+    [
+      "ItemArmsRestraintPillowStraps",
+      "Straps"
+    ],
+    [
+      "ItemArmsSeamlessStraitDress",
+      "Dress"
+    ],
+    [
+      "ItemArmsSeamlessStraitDressLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsSeamlessStraitDressOpen",
+      "Dress"
+    ],
+    [
+      "ItemArmsSeamlessStraitDressOpenLock",
+      "Lock"
+    ],
+    [
+      "ItemArmsSleepSac",
+      "SleepSac"
+    ],
+    [
+      "ItemArmsSleepSacLock",
+      "Lock"
+    ],
+    [
       "ItemArmsFuturisticArmbinderBand",
       "Band"
     ],
@@ -46129,12 +48193,20 @@
       "Dress"
     ],
     [
+      "ItemArmsStraitDressLock",
+      "Lock"
+    ],
+    [
       "ItemArmsStraitDressOpenBelts",
       "Straps"
     ],
     [
       "ItemArmsStraitDressOpenLatex",
       "Dress"
+    ],
+    [
+      "ItemArmsStraitDressOpenLock",
+      "Lock"
     ],
     [
       "ItemArmsStraitLeotardGloves",
@@ -46745,6 +48817,50 @@
       "Straps"
     ],
     [
+      "ItemDevicesBoxingBagBack1",
+      "Back"
+    ],
+    [
+      "ItemDevicesBoxingBagBack2",
+      "Back"
+    ],
+    [
+      "ItemDevicesBoxingBagFront1",
+      "Front"
+    ],
+    [
+      "ItemDevicesBoxingBagFront2",
+      "Front"
+    ],
+    [
+      "ItemDevicesBoxingBagLink",
+      "Link"
+    ],
+    [
+      "ItemDevicesBoxingBagPhotoFrame",
+      "Photo Frame"
+    ],
+    [
+      "ItemDevicesBoxingBagSackFrontFrame",
+      "Sack With Photo"
+    ],
+    [
+      "ItemDevicesBoxingBagTape",
+      "Photo Tape"
+    ],
+    [
+      "ItemDevicesBoxingBagBackMask",
+      "Back Mask"
+    ],
+    [
+      "ItemDevicesBoxingBagFrontMask",
+      "Front Mask"
+    ],
+    [
+      "ItemDevicesBoxingBagBand",
+      "Bag Bands"
+    ],
+    [
       "ItemDevicesExclusiveWaitressFront",
       "Structure"
     ],
@@ -47025,6 +49141,102 @@
       "Harness Straps"
     ],
     [
+      "ItemDevicesGiantStuffedToyBack",
+      "Background"
+    ],
+    [
+      "ItemDevicesGiantStuffedToyDoll",
+      "Bear"
+    ],
+    [
+      "ItemDevicesGiantStuffedToyScarf",
+      "Scarf"
+    ],
+    [
+      "ItemDevicesGiantStuffedToyMask",
+      "Mask"
+    ],
+    [
+      "ItemDevicesGlassJarArmRestraint",
+      "Arm Restraint"
+    ],
+    [
+      "ItemDevicesGlassJarBodyConnector",
+      "Body Connector"
+    ],
+    [
+      "ItemDevicesGlassJarCeilingChain",
+      "Ceiling Chain"
+    ],
+    [
+      "ItemDevicesGlassJarGlassClosed",
+      "Glass Closed"
+    ],
+    [
+      "ItemDevicesGlassJarGlassOuterLayer",
+      "Glass Outer Layer"
+    ],
+    [
+      "ItemDevicesGlassJarGlow",
+      "Glow"
+    ],
+    [
+      "ItemDevicesGlassJarInner1",
+      "Inner"
+    ],
+    [
+      "ItemDevicesGlassJarInner2",
+      "Inner"
+    ],
+    [
+      "ItemDevicesGlassJarJarLiquidBack",
+      "Jar Liquid Back"
+    ],
+    [
+      "ItemDevicesGlassJarJarLiquidFront",
+      "Jar Liquid Front"
+    ],
+    [
+      "ItemDevicesGlassJarLegRestraint",
+      "Leg Restraint"
+    ],
+    [
+      "ItemDevicesGlassJarLiquidBack",
+      "Liquid Back"
+    ],
+    [
+      "ItemDevicesGlassJarLiquidFront",
+      "Liquid Front"
+    ],
+    [
+      "ItemDevicesGlassJarOuter1",
+      "Outer"
+    ],
+    [
+      "ItemDevicesGlassJarOuter2",
+      "Outer"
+    ],
+    [
+      "ItemDevicesGlassJarPanel",
+      "Panel"
+    ],
+    [
+      "ItemDevicesGlassJarPipeBack",
+      "Pipe Back"
+    ],
+    [
+      "ItemDevicesGlassJarPipeConnector",
+      "Pipe Connector"
+    ],
+    [
+      "ItemDevicesGlassJarPipeFront",
+      "Pipe Front"
+    ],
+    [
+      "ItemDevicesGlassJarTongue",
+      "Tongue"
+    ],
+    [
       "ItemDevicesInflatableRestraintBagCanister",
       "Canister"
     ],
@@ -47145,6 +49357,98 @@
       "Padding"
     ],
     [
+      "ItemDevicesLatexbeltBedClosedCover",
+      "Closed Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedEdge",
+      "Edge"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLining",
+      "Lining"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLower1",
+      "Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLower2",
+      "Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLower3",
+      "Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLower4",
+      "Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLower5",
+      "Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedLower6",
+      "Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedMattress",
+      "Mattress"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOpenLower",
+      "Open Lower"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOpenUpper",
+      "Open Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedRing",
+      "Ring"
+    ],
+    [
+      "ItemDevicesLatexbeltBedRope",
+      "Rope"
+    ],
+    [
+      "ItemDevicesLatexbeltBedUpper1",
+      "Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedUpper2",
+      "Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedUpper3",
+      "Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedUpper4",
+      "Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedUpper5",
+      "Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedUpper6",
+      "Upper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedZipper",
+      "Zipper"
+    ],
+    [
+      "ItemDevicesLatexbeltBedCover",
+      "Cover"
+    ],
+    [
+      "ItemDevicesLatexbeltBedOpenCover",
+      "OpenCover"
+    ],
+    [
       "ItemDevicesLeatherCageFront",
       "Cage"
     ],
@@ -47167,6 +49471,46 @@
     [
       "ItemDevicesLeatherCageLock",
       "Padlocks"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandBodyRestraint",
+      "Body Restraint"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandChain",
+      "Chain"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandFrame",
+      "Frame"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandFrameHandLift",
+      "Frame - Hand Lift"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandGenitalProp",
+      "Genital Prop"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandHandRestraint",
+      "Hand Restraint"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandLegRestraint",
+      "Leg Restraint"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandLowerBodyLegSpread",
+      "Lower Body(Leg Spread)"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandMouthRestraint",
+      "Mouth Restraint"
+    ],
+    [
+      "ItemDevicesLegSpreadDisplayStandNeckRestraint",
+      "Neck Restraint"
     ],
     [
       "ItemDevicesLongBagBack",
@@ -47385,6 +49729,66 @@
       "Ankle rubber"
     ],
     [
+      "ItemDevicesSeizaisuChair",
+      "Legs"
+    ],
+    [
+      "ItemDevicesSeizaisuCushion",
+      "Cushion"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonBar1",
+      "Bar"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonBar2",
+      "Bar"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonBase",
+      "Base"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonColumn1",
+      "Bar"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonColumn2",
+      "Ankle"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonColumn3",
+      "Thigh"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonCuffLeft1",
+      "Left"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonCuffLeft2",
+      "Left"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonCuffRight1",
+      "Right"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonCuffRight2",
+      "Right"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonMask",
+      "Mask"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonPhallus",
+      "Dildo"
+    ],
+    [
+      "ItemDevicesShackledOneBarPrisonPiston",
+      "Piston"
+    ],
+    [
       "ItemDevicesSnowmanButtons",
       "Buttons"
     ],
@@ -47435,6 +49839,110 @@
     [
       "ItemDevicesThroneThrone",
       "Throne"
+    ],
+    [
+      "ItemDevicesTrashCanBackground",
+      "Background"
+    ],
+    [
+      "ItemDevicesTrashCanBaffle",
+      "Flap"
+    ],
+    [
+      "ItemDevicesTrashCanLid",
+      "Lid"
+    ],
+    [
+      "ItemDevicesTrashCanOuterFrame",
+      "Outer Frame"
+    ],
+    [
+      "ItemDevicesTrashCanPattern",
+      "Pattern"
+    ],
+    [
+      "ItemDevicesTrashCanTrashCan",
+      "Trash Can"
+    ],
+    [
+      "ItemDevicesTrashCanWheels",
+      "Wheels"
+    ],
+    [
+      "ItemDevicesTrashCanTrashCanMask",
+      "Trash Can Mask"
+    ],
+    [
+      "ItemDevicesTrashCanLidMask",
+      "Lid Mask"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyBack1",
+      "Back"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyBody1",
+      "Body"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyBody2",
+      "Body"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyBodyMask",
+      "Body Mask"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyEarInner",
+      "Inner Ear"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyEarOuter",
+      "Outer Ear"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyEyebrow",
+      "Eyebrow"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyEyelash",
+      "Eyelash"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyFeet",
+      "Feet"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyFront1",
+      "Front"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyHead1",
+      "Head"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyHead2",
+      "Head"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyHeadMask",
+      "Head Mask"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyHighlight",
+      "Highlight"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyHorn",
+      "Horn"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToyPupil",
+      "Pupil"
+    ],
+    [
+      "ItemDevicesUnicornStuffedToySclera",
+      "Sclera"
     ],
     [
       "ItemDevicesVacBedDeluxeArmsDown",
@@ -47797,6 +50305,326 @@
       "Text"
     ],
     [
+      "ItemDevicesBarStoolModernCushion",
+      "Cushion"
+    ],
+    [
+      "ItemDevicesBarStoolModernRim",
+      "Rim"
+    ],
+    [
+      "ItemDevicesBarStoolModernPole",
+      "Pole"
+    ],
+    [
+      "ItemDevicesBarStoolModernFootRing",
+      "Foot Ring"
+    ],
+    [
+      "ItemDevicesBarStoolModernBase",
+      "Base"
+    ],
+    [
+      "ItemDevicesBarStoolDirtySeat",
+      "Seat"
+    ],
+    [
+      "ItemDevicesBarStoolDirtyTape",
+      "Duct Tape"
+    ],
+    [
+      "ItemDevicesBarStoolDirtyBand",
+      "Band"
+    ],
+    [
+      "ItemDevicesBarStoolDirtyLegs",
+      "Legs"
+    ],
+    [
+      "ItemDevicesBarStoolDirtyFootRing",
+      "Foot Ring"
+    ],
+    [
+      "ItemDevicesBarStoolWoodenSeat",
+      "Seat"
+    ],
+    [
+      "ItemDevicesBarStoolWoodenLegs",
+      "Legs"
+    ],
+    [
+      "ItemDevicesBarStoolWoodenFootBar",
+      "Foot Bar"
+    ],
+    [
+      "ItemDevicesBarStoolDecal",
+      "Decal"
+    ],
+    [
+      "ItemDevicesGiantJarFrontGlass",
+      "Front Glass"
+    ],
+    [
+      "ItemDevicesGiantJarFrontGlassReflection",
+      "Front Glass Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackGlass",
+      "Back Glass"
+    ],
+    [
+      "ItemDevicesGiantJarBackGlassReflection",
+      "Back Glass Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLid",
+      "Lid"
+    ],
+    [
+      "ItemDevicesGiantJarLidReflection",
+      "Lid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquid",
+      "Back Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquid2",
+      "Back Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquid3",
+      "Back Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquid4",
+      "Back Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquid5",
+      "Back Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquid6",
+      "Back Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquidReflection",
+      "Back Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquidReflection2",
+      "Back Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquidReflection3",
+      "Back Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquidReflection4",
+      "Back Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquidReflection5",
+      "Back Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackLiquidReflection6",
+      "Back Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquid",
+      "Front Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquid2",
+      "Front Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquid3",
+      "Front Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquid4",
+      "Front Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquid5",
+      "Front Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquid6",
+      "Front Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquidReflection",
+      "Front Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquidReflection2",
+      "Front Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquidReflection3",
+      "Front Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquidReflection4",
+      "Front Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquidReflection5",
+      "Front Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontLiquidReflection6",
+      "Front Liquid Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubbles",
+      "Back Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubbles2",
+      "Back Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubbles3",
+      "Back Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubbles4",
+      "Back Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubblesReflection",
+      "Back Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubblesReflection2",
+      "Back Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubblesReflection3",
+      "Back Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarBackBubblesReflection4",
+      "Back Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubbles",
+      "Front Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubbles2",
+      "Front Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubbles3",
+      "Front Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubbles4",
+      "Front Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubblesReflection",
+      "Front Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubblesReflection2",
+      "Front Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubblesReflection3",
+      "Front Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarFrontBubblesReflection4",
+      "Front Bubbles Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLabel1",
+      "Label 1"
+    ],
+    [
+      "ItemDevicesGiantJarLabel12",
+      "Label 1"
+    ],
+    [
+      "ItemDevicesGiantJarLabel13",
+      "Label 1"
+    ],
+    [
+      "ItemDevicesGiantJarLabel14",
+      "Label 1"
+    ],
+    [
+      "ItemDevicesGiantJarLabelReflection",
+      "Label Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLabelReflection2",
+      "Label Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLabelReflection3",
+      "Label Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLabelReflection4",
+      "Label Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLabel2",
+      "Label 2"
+    ],
+    [
+      "ItemDevicesGiantJarLabel22",
+      "Label 2"
+    ],
+    [
+      "ItemDevicesGiantJarExtraLabelReflection",
+      "Extra Label Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarExtraLabelReflection2",
+      "Extra Label Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarholdout",
+      "hold out"
+    ],
+    [
+      "ItemDevicesGiantJarText Fill",
+      "Text Fill"
+    ],
+    [
+      "ItemDevicesGiantJarText Stroke",
+      "Text Stroke"
+    ],
+    [
+      "ItemDevicesGiantJarGlass",
+      "Glass"
+    ],
+    [
+      "ItemDevicesGiantJarReflection",
+      "Reflection"
+    ],
+    [
+      "ItemDevicesGiantJarLiquid",
+      "Liquid"
+    ],
+    [
+      "ItemDevicesGiantJarBubbles",
+      "Bubbles"
+    ],
+    [
+      "ItemDevicesGiantJarLabel",
+      "Label"
+    ],
+    [
       "ItemEarsCTHeadsetearHighlight",
       "Hightlights"
     ],
@@ -48053,6 +50881,30 @@
       "Suckers"
     ],
     [
+      "ItemFeetIrish8Cuffs",
+      "Cuffs"
+    ],
+    [
+      "ItemFeetIrish8CuffsLock",
+      "Lock"
+    ],
+    [
+      "ItemFeetSpreaderMetal",
+      "Spreader"
+    ],
+    [
+      "ItemFeetSpreaderMetalLock",
+      "Lock"
+    ],
+    [
+      "ItemFeetSpreaderVibratingDildoBarDildoBar",
+      "DildoBar"
+    ],
+    [
+      "ItemFeetSpreaderVibratingDildoBarLock",
+      "Lock"
+    ],
+    [
       "ItemHandheldAnimeGirlWandMain",
       "Body"
     ],
@@ -48087,14 +50939,6 @@
     [
       "ItemHandheldBookPaper",
       "Paper"
-    ],
-    [
-      "ItemHandheldBunPlushBase1",
-      "Base"
-    ],
-    [
-      "ItemHandheldBunPlushBase2",
-      "Accent"
     ],
     [
       "ItemHandheldCandyCaneBase",
@@ -48251,14 +51095,6 @@
     [
       "ItemHandheldFoldingfanOpenShadow",
       "Open Shadow"
-    ],
-    [
-      "ItemHandheldFoxPlushBase1",
-      "Base"
-    ],
-    [
-      "ItemHandheldFoxPlushBase2",
-      "Accent"
     ],
     [
       "ItemHandheldGiftBoxBox",
@@ -48661,28 +51497,32 @@
       "Handle"
     ],
     [
-      "ItemHandheldToyHammerHammer",
-      "Hammer"
-    ],
-    [
       "ItemHandheldToyHammerHandleReflection",
       "Handle Reflection"
+    ],
+    [
+      "ItemHandheldToyHammerHammer",
+      "Hammer"
     ],
     [
       "ItemHandheldToyHammerHammerReflection",
       "Hammer Reflection"
     ],
     [
-      "ItemHandheldToyHammerBubbleEdge",
-      "Bubble Edge"
+      "ItemHandheldToyHammerBubbleedge",
+      "Bubble edge"
     ],
     [
       "ItemHandheldToyHammerInnerBubble",
       "Inner Bubble"
     ],
     [
-      "ItemHandheldToyHammerBonk!",
-      "Bonk!"
+      "ItemHandheldToyHammerTextA1Fill",
+      "Text"
+    ],
+    [
+      "ItemHandheldToyHammerReflection",
+      "Reflection"
     ],
     [
       "ItemHandsBalletBootsMittensRight",
@@ -48937,6 +51777,14 @@
       "Right Lens"
     ],
     [
+      "ItemHeadLeatherBlindfold",
+      "BlindFold"
+    ],
+    [
+      "ItemHeadLeatherBlindfoldLock",
+      "Lock"
+    ],
+    [
       "ItemHeadAsylumBlindfoldMain",
       "Blindfold"
     ],
@@ -48951,26 +51799,6 @@
     [
       "ItemHeadAsylumBlindfoldLock",
       "Padlocks"
-    ],
-    [
-      "ItemHeadBigMouthHoodCollar",
-      "Collar"
-    ],
-    [
-      "ItemHeadBigMouthHoodDetail",
-      "Detail"
-    ],
-    [
-      "ItemHeadBigMouthHoodEyes",
-      "Eyes"
-    ],
-    [
-      "ItemHeadBigMouthHoodMain",
-      "Head"
-    ],
-    [
-      "ItemHeadBigMouthHoodMouth",
-      "Mouth"
     ],
     [
       "ItemHeadBlackoutLensesLeft",
@@ -49029,6 +51857,10 @@
       "Display"
     ],
     [
+      "ItemHeadInteractiveVRHeadsetLock",
+      "Lock"
+    ],
+    [
       "ItemHeadKittyBlindfoldBase",
       "Base"
     ],
@@ -49039,6 +51871,42 @@
     [
       "ItemHeadKittyBlindfoldEyes",
       "Eyes"
+    ],
+    [
+      "ItemHeadKittyBlindfoldLock",
+      "Lock"
+    ],
+    [
+      "ItemHeadSmallBlindfold",
+      "Blindfold"
+    ],
+    [
+      "ItemHeadSmallBlindfoldLock",
+      "Lock"
+    ],
+    [
+      "ItemHeadFullBlindfold",
+      "Blindfold"
+    ],
+    [
+      "ItemHeadFullBlindfoldLock",
+      "Lock"
+    ],
+    [
+      "ItemHeadLewdBlindfold",
+      "Blindfold"
+    ],
+    [
+      "ItemHeadLewdBlindfoldLock",
+      "Lock"
+    ],
+    [
+      "ItemHeadLatexBlindfold",
+      "Blindfold"
+    ],
+    [
+      "ItemHeadLatexBlindfoldLock",
+      "Lock"
     ],
     [
       "ItemHeadMedicalPatchLeft",
@@ -49063,6 +51931,18 @@
     [
       "ItemHeadPaddedBlindfoldTrim",
       "Trim"
+    ],
+    [
+      "ItemHeadPaddedBlindfoldLock",
+      "Lock"
+    ],
+    [
+      "ItemHeadInteractiveVisor",
+      "Visor"
+    ],
+    [
+      "ItemHeadInteractiveVisorLock",
+      "Lock"
     ],
     [
       "ItemHeadStitchesStraight",
@@ -49097,12 +51977,124 @@
       "Text"
     ],
     [
+      "ItemHeadStuddedBlindfold",
+      "Blindfold"
+    ],
+    [
+      "ItemHeadStuddedBlindfoldLock",
+      "Lock"
+    ],
+    [
       "ItemHoodBalloonHead",
       "Rubber balloon"
     ],
     [
       "ItemHoodBalloonShine",
       "Balloon shine"
+    ],
+    [
+      "ItemHoodLeatherHoodSealed",
+      "Hood"
+    ],
+    [
+      "ItemHoodLeatherHoodSealedLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodPolishedSteelHood",
+      "Hood"
+    ],
+    [
+      "ItemHoodPolishedSteelHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodInflatedBallHood",
+      "Hood"
+    ],
+    [
+      "ItemHoodInflatedBallHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodLeatherHoodSensDep",
+      "Hood"
+    ],
+    [
+      "ItemHoodLeatherHoodSensDepLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodLeatherHoodOpenEyes",
+      "Hood"
+    ],
+    [
+      "ItemHoodLeatherHoodOpenEyesLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodGasMask",
+      "Mask"
+    ],
+    [
+      "ItemHoodGasMaskLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodDogHood",
+      "Mask"
+    ],
+    [
+      "ItemHoodDogHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodLeatherHoodOpenMouth",
+      "Hood"
+    ],
+    [
+      "ItemHoodLeatherHoodOpenMouthLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodOpenFaceHood",
+      "Hood"
+    ],
+    [
+      "ItemHoodOpenFaceHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodGwenHoodOriginal",
+      "Hood"
+    ],
+    [
+      "ItemHoodGwenHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodZipperHood",
+      "Hood"
+    ],
+    [
+      "ItemHoodZipperHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodLatexDogHoodThick",
+      "Hood"
+    ],
+    [
+      "ItemHoodLatexDogHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodLatexHood",
+      "Hood"
+    ],
+    [
+      "ItemHoodLatexHoodLock",
+      "Lock"
     ],
     [
       "ItemHoodBalloonRope",
@@ -49129,6 +52121,10 @@
       "Mouth"
     ],
     [
+      "ItemHoodBigMouthHoodLock",
+      "Lock"
+    ],
+    [
       "ItemHoodCanvasHoodHood",
       "Canvas"
     ],
@@ -49137,12 +52133,20 @@
       "Text"
     ],
     [
+      "ItemHoodCanvasHoodLock",
+      "Lock"
+    ],
+    [
       "ItemHoodCollarHoodCollar",
       "Collar"
     ],
     [
       "ItemHoodCollarHoodHood",
       "Hood"
+    ],
+    [
+      "ItemHoodCollarHoodLock",
+      "Lock"
     ],
     [
       "ItemHoodCorsetHoodLace",
@@ -49155,6 +52159,10 @@
     [
       "ItemHoodCorsetHoodLines",
       "Outline"
+    ],
+    [
+      "ItemHoodCorsetHoodLock",
+      "Lock"
     ],
     [
       "ItemHoodCowHoodBase",
@@ -49207,6 +52215,10 @@
     [
       "ItemHoodCustomBallHoodPumpkinShine2",
       "Pattern 2 Shine"
+    ],
+    [
+      "ItemHoodCustomBallHoodLock",
+      "Lock"
     ],
     [
       "ItemHoodCustomLatexHoodFillRoundEye",
@@ -49273,6 +52285,10 @@
       "Shine"
     ],
     [
+      "ItemHoodDobermanMaskLock",
+      "Lock"
+    ],
+    [
       "ItemHoodDroneMaskBarcode",
       "Pattern"
     ],
@@ -49331,6 +52347,10 @@
     [
       "ItemHoodFoxHoodOuterEar",
       "Ear"
+    ],
+    [
+      "ItemHoodFoxHoodLock",
+      "Lock"
     ],
     [
       "ItemHoodFoxyMaskLower",
@@ -49405,6 +52425,10 @@
       "Mouthpiece"
     ],
     [
+      "ItemHoodGP9GasMaskLock",
+      "Lock"
+    ],
+    [
       "ItemHoodHalloIIIMask",
       "Mask"
     ],
@@ -49453,12 +52477,20 @@
       "Metal"
     ],
     [
+      "ItemHoodHarnessCatMaskLock",
+      "Lock"
+    ],
+    [
       "ItemHoodHeadboxSeethroughFrame",
       "Outside"
     ],
     [
       "ItemHoodHeadboxSeethroughGlassInside",
       "Inside"
+    ],
+    [
+      "ItemHoodHeadboxSeethroughLock",
+      "Lock"
     ],
     [
       "ItemHoodInflatableGagMaskBase",
@@ -49471,6 +52503,10 @@
     [
       "ItemHoodInflatableGagMaskMetal",
       "Metal"
+    ],
+    [
+      "ItemHoodInflatableGagMaskLock",
+      "Lock"
     ],
     [
       "ItemHoodKigu2HoodMain",
@@ -49577,6 +52613,10 @@
       "Outer Ear"
     ],
     [
+      "ItemHoodLatexBunnyLock",
+      "Lock"
+    ],
+    [
       "ItemHoodLatexDogMaskBase",
       "Hood"
     ],
@@ -49609,6 +52649,10 @@
       "Muzzle"
     ],
     [
+      "ItemHoodLatexDogMaskLock",
+      "Lock"
+    ],
+    [
       "ItemHoodLatexHabitBase",
       "Shawl"
     ],
@@ -49625,12 +52669,20 @@
       "Cowl"
     ],
     [
+      "ItemHoodLatexHabitLock",
+      "Lock"
+    ],
+    [
       "ItemHoodLatexHoodOpenHairHair",
       "Hair"
     ],
     [
       "ItemHoodLatexHoodOpenHairHood",
       "Hood"
+    ],
+    [
+      "ItemHoodLatexHoodOpenHairLock",
+      "Lock"
     ],
     [
       "ItemHoodLeatherHoodCollar",
@@ -49645,6 +52697,10 @@
       "Snaps"
     ],
     [
+      "ItemHoodLeatherHoodLock",
+      "Lock"
+    ],
+    [
       "ItemHoodOldGasMaskLenses",
       "Blinding Lenses"
     ],
@@ -49655,6 +52711,10 @@
     [
       "ItemHoodOldGasMaskTubeA",
       "Breathing Attachment"
+    ],
+    [
+      "ItemHoodOldGasMaskLock",
+      "Lock"
     ],
     [
       "ItemHoodCybertechMaskbase",
@@ -49731,6 +52791,10 @@
     [
       "ItemHoodOpenMouthPlugHoodPlug",
       "Plug"
+    ],
+    [
+      "ItemHoodOpenMouthPlugHoodLock",
+      "Lock"
     ],
     [
       "ItemHoodPantyHoodBase",
@@ -49825,6 +52889,10 @@
       "Lips"
     ],
     [
+      "ItemHoodSensoryDeprivationHoodLock",
+      "Lock"
+    ],
+    [
       "ItemHoodSlimeOne",
       "Color 1"
     ],
@@ -49909,6 +52977,18 @@
       "Breathing Tube"
     ],
     [
+      "ItemHoodVacHoodLock",
+      "Lock"
+    ],
+    [
+      "ItemHoodAccentHood",
+      "Hood"
+    ],
+    [
+      "ItemHoodAccentHoodLock",
+      "Lock"
+    ],
+    [
       "ItemLegsFrogtieMetalCuffsChain",
       "Chain"
     ],
@@ -49991,6 +53071,10 @@
     [
       "ItemLegsLegBinderLatex",
       "Binder"
+    ],
+    [
+      "ItemLegsLegBinderLock",
+      "Lock"
     ],
     [
       "ItemLegsMedicalBedRestraintsBase",
@@ -50221,6 +53305,22 @@
       "Text"
     ],
     [
+      "ItemMiscPumpkinPotCandy",
+      "Candies"
+    ],
+    [
+      "ItemMiscPumpkinPotChain",
+      "Chains"
+    ],
+    [
+      "ItemMiscPumpkinPotEyes",
+      "Eyes & Mouth"
+    ],
+    [
+      "ItemMiscPumpkinPotPumpkin",
+      "Pumpkin"
+    ],
+    [
       "ItemMiscServingTrayDetails",
       "Details"
     ],
@@ -50245,1228 +53345,212 @@
       "Text"
     ],
     [
-      "ItemMouth2AOMGagLips",
-      "Lips"
+      "ItemMiscCatFur",
+      "Primary fur"
     ],
     [
-      "ItemMouth2AOMGagStraps",
-      "Straps"
+      "ItemMiscCatPatches",
+      "Secondary fur"
     ],
     [
-      "ItemMouth2AOMGagMetalStraps",
-      "Metal straps"
+      "ItemMiscCatPawPads",
+      "Pads"
     ],
     [
-      "ItemMouth2AOMGagLock",
-      "Padlocks"
+      "ItemMiscCatSkin",
+      "Skin"
     ],
     [
-      "ItemMouth2AsylumMuzzleMain",
+      "ItemMiscCatEye",
+      "Eye colour"
+    ],
+    [
+      "ItemMiscCatEyeShine",
+      "Eye shine"
+    ],
+    [
+      "ItemMiscCatNose",
+      "Nose colour"
+    ],
+    [
+      "ItemMiscCatNoseShine",
+      "Nose shine"
+    ],
+    [
+      "ItemMiscCatPupils",
+      "Pupils"
+    ],
+    [
+      "ItemMiscDogFur",
+      "Primary fur"
+    ],
+    [
+      "ItemMiscDogPatches",
+      "Secondary fur"
+    ],
+    [
+      "ItemMiscDogPawPads",
+      "Pads"
+    ],
+    [
+      "ItemMiscDogSkin",
+      "Inner ears"
+    ],
+    [
+      "ItemMiscDogEye",
+      "Eye colour"
+    ],
+    [
+      "ItemMiscDogEyeShine",
+      "Eye shine"
+    ],
+    [
+      "ItemMiscDogNose",
+      "Nose colour"
+    ],
+    [
+      "ItemMiscDogNoseShine",
+      "Nose shine"
+    ],
+    [
+      "ItemMiscDogClaws",
+      "Claws"
+    ],
+    [
+      "ItemMiscDogEyeWhites",
+      "Eye whites"
+    ],
+    [
+      "ItemMiscDogPupils",
+      "Pupils"
+    ],
+    [
+      "ItemMiscPandaFur",
+      "Primary fur"
+    ],
+    [
+      "ItemMiscPandaPatches",
+      "Secondary fur"
+    ],
+    [
+      "ItemMiscPandaPawPads",
+      "Pads"
+    ],
+    [
+      "ItemMiscPandaSkin",
+      "Inner ears"
+    ],
+    [
+      "ItemMiscPandaEye",
+      "Eye colour"
+    ],
+    [
+      "ItemMiscPandaEyeShine",
+      "Eye shine"
+    ],
+    [
+      "ItemMiscPandaNose",
+      "Nose colour"
+    ],
+    [
+      "ItemMiscPandaNoseShine",
+      "Nose shine"
+    ],
+    [
+      "ItemMiscPandaEyeWhites",
+      "Eye whites"
+    ],
+    [
+      "ItemMiscPandaPupils",
+      "Pupils"
+    ],
+    [
+      "ItemMiscPenguinFur",
+      "Dark feathers"
+    ],
+    [
+      "ItemMiscPenguinPatches",
+      "Light feathers"
+    ],
+    [
+      "ItemMiscPenguinBeak",
+      "Beak"
+    ],
+    [
+      "ItemMiscPenguinFeet",
+      "Feet"
+    ],
+    [
+      "ItemMiscPenguinEye",
+      "Eye colour"
+    ],
+    [
+      "ItemMiscPenguinEyeShine",
+      "Eye shine"
+    ],
+    [
+      "ItemMiscPenguinBeakShine",
+      "Beak shine"
+    ],
+    [
+      "ItemMiscPenguinEyeWhites",
+      "Eye whites"
+    ],
+    [
+      "ItemMiscPenguinPupils",
+      "Pupils"
+    ],
+    [
+      "ItemMiscUnicornFur",
+      "Primary coat"
+    ],
+    [
+      "ItemMiscUnicornPatches",
+      "Chest fur"
+    ],
+    [
+      "ItemMiscUnicornMuzzle",
       "Muzzle"
     ],
     [
-      "ItemMouth2AsylumMuzzlePad",
-      "Padded layer"
-    ],
-    [
-      "ItemMouth2AsylumMuzzleMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth2AsylumMuzzleLock",
-      "Padlocks"
-    ],
-    [
-      "ItemMouth2BallGagBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth2BallGagMaskBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth2BallGagMaskStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth2BallGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth2BitGagBit",
-      "Bit"
-    ],
-    [
-      "ItemMouth2BitGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2BoneGagBone",
-      "Bone"
-    ],
-    [
-      "ItemMouth2BoneGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2CageMuzzleMuzzle",
-      "Cage"
-    ],
-    [
-      "ItemMouth2CageMuzzleStrap",
-      "Straps"
-    ],
-    [
-      "ItemMouth2CarrotGagCarrot",
-      "Carrot"
-    ],
-    [
-      "ItemMouth2CarrotGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2CupholderGagCup",
-      "Cup"
-    ],
-    [
-      "ItemMouth2CupholderGagGag",
-      "Gag"
-    ],
-    [
-      "ItemMouth2CupholderGagHolder",
-      "Holder"
-    ],
-    [
-      "ItemMouth2DildoGagDildo",
-      "Dildo"
-    ],
-    [
-      "ItemMouth2DildoGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth2DusterGagDuster",
-      "Duster"
-    ],
-    [
-      "ItemMouth2DusterGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth2FoxyHarnessPanelGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth2FoxyHarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessBallGagBall",
-      "Display"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessBallGagLight",
-      "Light"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessBallGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessBallGagMask",
-      "Ball"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessBallGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessPanelGagBall",
-      "Display"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessPanelGagLight",
-      "Light"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessPanelGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessPanelGagMask",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth2FuturisticHarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2FuturisticMuzzleIconLock",
-      "Icon"
-    ],
-    [
-      "ItemMouth2FuturisticMuzzleMask",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth2FuturisticMuzzleNose",
-      "Nose"
-    ],
-    [
-      "ItemMouth2FuturisticMuzzleStraps",
-      "Harness"
-    ],
-    [
-      "ItemMouth2FuturisticPanelGagBall",
-      "Display"
-    ],
-    [
-      "ItemMouth2FuturisticPanelGagLight",
-      "Light"
-    ],
-    [
-      "ItemMouth2FuturisticPanelGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth2FuturisticPanelGagMask",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth2GasMaskGagHighlights",
-      "Highlights"
-    ],
-    [
-      "ItemMouth2GasMaskGagMask",
-      "Mask"
-    ],
-    [
-      "ItemMouth2GasMaskGagSides",
-      "Sides"
-    ],
-    [
-      "ItemMouth2GenitalGagGag",
-      "Gag"
-    ],
-    [
-      "ItemMouth2GenitalGagDetail",
-      "Inside"
-    ],
-    [
-      "ItemMouth2GenitalGagHarness",
-      "Harness"
-    ],
-    [
-      "ItemMouth2GenitalGagRivets",
-      "Rivets"
-    ],
-    [
-      "ItemMouth2GlueGagGlue",
-      "Glue"
-    ],
-    [
-      "ItemMouth2GlueGagLips",
-      "Lips"
-    ],
-    [
-      "ItemMouth2HarnessBallGag1Ball",
-      "Ball"
-    ],
-    [
-      "ItemMouth2HarnessBallGag1Metal",
-      "Metal"
-    ],
-    [
-      "ItemMouth2HarnessBallGag1Strap",
-      "Strap"
-    ],
-    [
-      "ItemMouth2HarnessBallGagBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth2HarnessBallGagHarness",
-      "Harness"
-    ],
-    [
-      "ItemMouth2HarnessPacifierGagHarness",
-      "Harness Straps"
-    ],
-    [
-      "ItemMouth2HarnessPacifierGagMetal",
-      "Metal Parts"
-    ],
-    [
-      "ItemMouth2HarnessPacifierGagPacifierInner",
-      "Pacifier Ring"
-    ],
-    [
-      "ItemMouth2HarnessPacifierGagPacifierOuter",
-      "Pacifier"
-    ],
-    [
-      "ItemMouth2HarnessPanelGagMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth2HarnessPanelGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth2HarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2HarnessPonyBitsBobble",
-      "Bobble"
-    ],
-    [
-      "ItemMouth2HarnessPonyBitsMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth2HarnessPonyBitsStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2HorrorMuzzleMuzzle",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth2HorrorMuzzleRivets",
-      "Rivets"
-    ],
-    [
-      "ItemMouth2KittyGagBase",
-      "Base"
-    ],
-    [
-      "ItemMouth2KittyGagLines",
-      "Lines"
-    ],
-    [
-      "ItemMouth2KittyGagMouth",
-      "Mouth"
-    ],
-    [
-      "ItemMouth2KittyHarnessPanelGagLines",
-      "Lines"
-    ],
-    [
-      "ItemMouth2KittyHarnessPanelGagMouth",
-      "Mouth"
-    ],
-    [
-      "ItemMouth2KittyHarnessPanelGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth2KittyHarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2KittyMuzzleGagLines",
-      "Lines"
-    ],
-    [
-      "ItemMouth2KittyMuzzleGagMouth",
-      "Mouth"
-    ],
-    [
-      "ItemMouth2KittyMuzzleGagMuzzle",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth2KittyMuzzleGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskBase",
-      "Mask"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskBaseLoose",
-      "Mask Loose"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskBaseShine",
-      "Mask Shine"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskPanelShine",
-      "Panel Shine"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2LatexMuzzleMaskStrapsBuckles",
-      "Straps Buckles"
-    ],
-    [
-      "ItemMouth2LatexRespiratorBase",
-      "Base"
-    ],
-    [
-      "ItemMouth2LatexRespiratorFilter",
-      "Tubes"
-    ],
-    [
-      "ItemMouth2LatexRespiratorFilterFixing",
-      "Fixing"
-    ],
-    [
-      "ItemMouth2LatexRespiratorFilterGlow",
-      "Glow"
-    ],
-    [
-      "ItemMouth2LatexRespiratorRoundedShine",
-      "Shine"
-    ],
-    [
-      "ItemMouth2LatexRespiratorStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2LipGagLips",
-      "Lips"
-    ],
-    [
-      "ItemMouth2LipGagRings",
-      "Rings"
-    ],
-    [
-      "ItemMouth2LipGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2MedicalMaskInner",
-      "Inner"
-    ],
-    [
-      "ItemMouth2MedicalMaskOuter",
-      "Outer"
-    ],
-    [
-      "ItemMouth2ModularGagGBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth2ModularGagGBit",
-      "Bit"
-    ],
-    [
-      "ItemMouth2ModularGagGRing",
-      "Ring"
-    ],
-    [
-      "ItemMouth2ModularGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth2ModularGagMBase",
-      "Metal"
-    ],
-    [
-      "ItemMouth2ModularGagSBase",
-      "Straps"
-    ],
-    [
-      "ItemMouth2ModularGagEPony",
-      "Pony"
-    ],
-    [
-      "ItemMouth2MouthFeatureGagBase",
-      "Mouth"
-    ],
-    [
-      "ItemMouth2MouthFeatureGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth2MouthFeatureGagPanelShine",
-      "Panel Shine"
-    ],
-    [
-      "ItemMouth2MouthFeatureGagShine",
-      "Mouth Shine"
-    ],
-    [
-      "ItemMouth2MuzzleGagMuzzle",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth2MuzzleGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2PaciGagBase",
-      "Pacifier"
-    ],
-    [
-      "ItemMouth2PaciGagMetal",
-      "Buckles"
-    ],
-    [
-      "ItemMouth2PaciGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2PaddedFaceMaskBaseThin",
-      "Mask"
-    ],
-    [
-      "ItemMouth2PaddedFaceMaskHeart",
-      "Pattern"
-    ],
-    [
-      "ItemMouth2PaddedFaceMaskTrimThin",
-      "Trim"
-    ],
-    [
-      "ItemMouth2PantiesMaskDarkStripes",
-      "Dark Stripes"
-    ],
-    [
-      "ItemMouth2PantiesMaskLightStripes",
-      "Light Stripes"
-    ],
-    [
-      "ItemMouth2PonyGagBallgag",
-      "Ballgag"
-    ],
-    [
-      "ItemMouth2PonyGagBaseMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth2PonyGagBaseStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2PonyGagBitLarge",
-      "Rubber Bit"
-    ],
-    [
-      "ItemMouth2PonyGagBlinders",
-      "Blinders"
-    ],
-    [
-      "ItemMouth2PonyGagDildo",
-      "Dildo"
-    ],
-    [
-      "ItemMouth2PonyGagFlags",
-      "Flags"
-    ],
-    [
-      "ItemMouth2PonyGagHorn",
-      "Horn"
-    ],
-    [
-      "ItemMouth2PonyGagManeB",
-      "ManeBase"
-    ],
-    [
-      "ItemMouth2PonyGagManeL",
+      "ItemMiscUnicornMane",
       "Mane"
     ],
     [
-      "ItemMouth2PonyGagPanelBase",
-      "Panel"
+      "ItemMiscUnicornTail",
+      "Tail"
     ],
     [
-      "ItemMouth2PonyGagPanelHex",
-      "Ornament"
+      "ItemMiscUnicornSkin",
+      "Inner ears"
     ],
     [
-      "ItemMouth2PonyGagPlume",
-      "Plume"
+      "ItemMiscUnicornHooves",
+      "Hooves"
     ],
     [
-      "ItemMouth2PonyGagPost",
-      "Post"
-    ],
-    [
-      "ItemMouth2PonyGagReins",
-      "Reins"
-    ],
-    [
-      "ItemMouth2PonyGagRope",
-      "Rope"
-    ],
-    [
-      "ItemMouth2PrisonLockdownGagBelts",
-      "Belts"
-    ],
-    [
-      "ItemMouth2PrisonLockdownGagMask",
-      "Mask"
-    ],
-    [
-      "ItemMouth2PrisonLockdownGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2PumpkinGagPumpkin",
-      "Pumpkin"
-    ],
-    [
-      "ItemMouth2PumpkinGagRings",
-      "Rings"
-    ],
-    [
-      "ItemMouth2PumpkinGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2ShoeGagShoe",
-      "Shoe"
-    ],
-    [
-      "ItemMouth2ShoeGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth2StitchesFakeMouth",
-      "Lips"
-    ],
-    [
-      "ItemMouth2StitchesStraight",
-      "Thread"
-    ],
-    [
-      "ItemMouth2WiffleGagBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth2WiffleGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth2XLBoneGagBone",
-      "Bone"
-    ],
-    [
-      "ItemMouth2XLBoneGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth2XmasStickerGagMain",
-      "Main sticker"
-    ],
-    [
-      "ItemMouth2XmasStickerGagText",
-      "Sticker text"
-    ],
-    [
-      "ItemMouth2XmasStickerGagBorder",
-      "Sticker border"
-    ],
-    [
-      "ItemMouth3AOMGagLips",
-      "Lips"
-    ],
-    [
-      "ItemMouth3AOMGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3AOMGagMetalStraps",
-      "Metal straps"
-    ],
-    [
-      "ItemMouth3AOMGagLock",
-      "Padlocks"
-    ],
-    [
-      "ItemMouth3AsylumMuzzleMain",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3AsylumMuzzlePad",
-      "Padded layer"
-    ],
-    [
-      "ItemMouth3AsylumMuzzleMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth3AsylumMuzzleLock",
-      "Padlocks"
-    ],
-    [
-      "ItemMouth3BallGagBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth3BallGagMaskBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth3BallGagMaskStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth3BallGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth3BitGagBit",
-      "Bit"
-    ],
-    [
-      "ItemMouth3BitGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3BoneGagBone",
-      "Bone"
-    ],
-    [
-      "ItemMouth3BoneGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3CageMuzzleMuzzle",
-      "Cage"
-    ],
-    [
-      "ItemMouth3CageMuzzleStrap",
-      "Straps"
-    ],
-    [
-      "ItemMouth3CarrotGagCarrot",
-      "Carrot"
-    ],
-    [
-      "ItemMouth3CarrotGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3CupholderGagCup",
-      "Cup"
-    ],
-    [
-      "ItemMouth3CupholderGagGag",
-      "Gag"
-    ],
-    [
-      "ItemMouth3CupholderGagHolder",
-      "Holder"
-    ],
-    [
-      "ItemMouth3DildoGagDildo",
-      "Dildo"
-    ],
-    [
-      "ItemMouth3DildoGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth3DusterGagDuster",
-      "Duster"
-    ],
-    [
-      "ItemMouth3DusterGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth3FoxyHarnessPanelGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth3FoxyHarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessBallGagBall",
-      "Display"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessBallGagLight",
-      "Light"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessBallGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessBallGagMask",
-      "Ball"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessBallGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessPanelGagBall",
-      "Display"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessPanelGagLight",
-      "Light"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessPanelGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessPanelGagMask",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3FuturisticHarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3FuturisticMuzzleIconLock",
-      "Icon"
-    ],
-    [
-      "ItemMouth3FuturisticMuzzleMask",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3FuturisticMuzzleNose",
-      "Nose"
-    ],
-    [
-      "ItemMouth3FuturisticMuzzleStraps",
-      "Harness"
-    ],
-    [
-      "ItemMouth3FuturisticPanelGagBall",
-      "Display"
-    ],
-    [
-      "ItemMouth3FuturisticPanelGagLight",
-      "Light"
-    ],
-    [
-      "ItemMouth3FuturisticPanelGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth3FuturisticPanelGagMask",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3GasMaskGagHighlights",
-      "Highlights"
-    ],
-    [
-      "ItemMouth3GasMaskGagMask",
-      "Mask"
-    ],
-    [
-      "ItemMouth3GasMaskGagSides",
-      "Sides"
-    ],
-    [
-      "ItemMouth3HarnessBallGag1Ball",
-      "Ball"
-    ],
-    [
-      "ItemMouth3HarnessBallGag1Metal",
-      "Metal"
-    ],
-    [
-      "ItemMouth3HarnessBallGag1Strap",
-      "Strap"
-    ],
-    [
-      "ItemMouth3HarnessBallGagBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth3HarnessBallGagHarness",
-      "Harness"
-    ],
-    [
-      "ItemMouth3HarnessPacifierGagHarness",
-      "Harness Straps"
-    ],
-    [
-      "ItemMouth3HarnessPacifierGagMetal",
-      "Metal Parts"
-    ],
-    [
-      "ItemMouth3HarnessPacifierGagPacifierInner",
-      "Pacifier Ring"
-    ],
-    [
-      "ItemMouth3HarnessPacifierGagPacifierOuter",
-      "Pacifier"
-    ],
-    [
-      "ItemMouth3HarnessPanelGagMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth3HarnessPanelGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth3HarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3HarnessPonyBitsBobble",
-      "Bobble"
-    ],
-    [
-      "ItemMouth3HarnessPonyBitsMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth3HarnessPonyBitsStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3HorrorMuzzleMuzzle",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3HorrorMuzzleRivets",
-      "Rivets"
-    ],
-    [
-      "ItemMouth3KittyGagBase",
-      "Base"
-    ],
-    [
-      "ItemMouth3KittyGagLines",
-      "Lines"
-    ],
-    [
-      "ItemMouth3KittyGagMouth",
-      "Mouth"
-    ],
-    [
-      "ItemMouth3KittyHarnessPanelGagLines",
-      "Lines"
-    ],
-    [
-      "ItemMouth3KittyHarnessPanelGagMouth",
-      "Mouth"
-    ],
-    [
-      "ItemMouth3KittyHarnessPanelGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth3KittyHarnessPanelGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3KittyMuzzleGagLines",
-      "Lines"
-    ],
-    [
-      "ItemMouth3KittyMuzzleGagMouth",
-      "Mouth"
-    ],
-    [
-      "ItemMouth3KittyMuzzleGagMuzzle",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3KittyMuzzleGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskBase",
-      "Mask"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskBaseLoose",
-      "Mask Loose"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskBaseShine",
-      "Mask Shine"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskPanelShine",
-      "Panel Shine"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3LatexMuzzleMaskStrapsBuckles",
-      "Straps Buckles"
-    ],
-    [
-      "ItemMouth3LatexRespiratorBase",
-      "Base"
-    ],
-    [
-      "ItemMouth3LatexRespiratorFilter",
-      "Tubes"
-    ],
-    [
-      "ItemMouth3LatexRespiratorFilterFixing",
-      "Fixing"
-    ],
-    [
-      "ItemMouth3LatexRespiratorFilterGlow",
-      "Glow"
-    ],
-    [
-      "ItemMouth3LatexRespiratorRoundedShine",
-      "Shine"
-    ],
-    [
-      "ItemMouth3LatexRespiratorStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3LipGagLips",
-      "Lips"
-    ],
-    [
-      "ItemMouth3LipGagRings",
-      "Rings"
-    ],
-    [
-      "ItemMouth3LipGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3MedicalMaskInner",
-      "Inner"
-    ],
-    [
-      "ItemMouth3MedicalMaskOuter",
-      "Outer"
-    ],
-    [
-      "ItemMouth3ModularGagGBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth3ModularGagGBit",
-      "Bit"
-    ],
-    [
-      "ItemMouth3ModularGagGRing",
-      "Ring"
-    ],
-    [
-      "ItemMouth3ModularGagLock",
-      "Lock"
-    ],
-    [
-      "ItemMouth3ModularGagMBase",
-      "Metal"
-    ],
-    [
-      "ItemMouth3ModularGagSBase",
-      "Straps"
-    ],
-    [
-      "ItemMouth3ModularGagEPony",
-      "Pony"
-    ],
-    [
-      "ItemMouth3MouthFeatureGagBase",
-      "Mouth"
-    ],
-    [
-      "ItemMouth3MouthFeatureGagPanel",
-      "Panel"
-    ],
-    [
-      "ItemMouth3MouthFeatureGagPanelShine",
-      "Panel Shine"
-    ],
-    [
-      "ItemMouth3MouthFeatureGagShine",
-      "Mouth Shine"
-    ],
-    [
-      "ItemMouth3MuzzleGagMuzzle",
-      "Muzzle"
-    ],
-    [
-      "ItemMouth3MuzzleGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3PaciGagBase",
-      "Pacifier"
-    ],
-    [
-      "ItemMouth3PaciGagMetal",
-      "Buckles"
-    ],
-    [
-      "ItemMouth3PaciGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3PaddedFaceMaskBaseThin",
-      "Mask"
-    ],
-    [
-      "ItemMouth3PaddedFaceMaskHeart",
-      "Pattern"
-    ],
-    [
-      "ItemMouth3PaddedFaceMaskTrimThin",
-      "Trim"
-    ],
-    [
-      "ItemMouth3PantiesMaskDarkStripes",
-      "Dark Stripes"
-    ],
-    [
-      "ItemMouth3PantiesMaskLightStripes",
-      "Light Stripes"
-    ],
-    [
-      "ItemMouth3PonyGagBallgag",
-      "Ballgag"
-    ],
-    [
-      "ItemMouth3PonyGagBaseMetal",
-      "Metal"
-    ],
-    [
-      "ItemMouth3PonyGagBaseStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3PonyGagBitLarge",
-      "Rubber Bit"
-    ],
-    [
-      "ItemMouth3PonyGagBlinders",
-      "Blinders"
-    ],
-    [
-      "ItemMouth3PonyGagDildo",
-      "Dildo"
-    ],
-    [
-      "ItemMouth3PonyGagFlags",
-      "Flags"
-    ],
-    [
-      "ItemMouth3PonyGagHorn",
+      "ItemMiscUnicornHorn",
       "Horn"
     ],
     [
-      "ItemMouth3PonyGagManeB",
-      "ManeBase"
+      "ItemMiscUnicornEye",
+      "Eye colour"
     ],
     [
-      "ItemMouth3PonyGagManeL",
-      "Mane"
+      "ItemMiscUnicornEyeShine",
+      "Eye shine"
     ],
     [
-      "ItemMouth3PonyGagPanelBase",
-      "Panel"
+      "ItemMiscUnicornHornShine",
+      "Horn shine"
     ],
     [
-      "ItemMouth3PonyGagPanelHex",
-      "Ornament"
+      "ItemMiscUnicornEyeWhites",
+      "Eye whites"
     ],
     [
-      "ItemMouth3PonyGagPlume",
-      "Plume"
-    ],
-    [
-      "ItemMouth3PonyGagPost",
-      "Post"
-    ],
-    [
-      "ItemMouth3PonyGagReins",
-      "Reins"
-    ],
-    [
-      "ItemMouth3PonyGagRope",
-      "Rope"
-    ],
-    [
-      "ItemMouth3PrisonLockdownGagBelts",
-      "Belts"
-    ],
-    [
-      "ItemMouth3PrisonLockdownGagMask",
-      "Mask"
-    ],
-    [
-      "ItemMouth3PrisonLockdownGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3PumpkinGagPumpkin",
-      "Pumpkin"
-    ],
-    [
-      "ItemMouth3PumpkinGagRings",
-      "Rings"
-    ],
-    [
-      "ItemMouth3PumpkinGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3ShoeGagShoe",
-      "Shoe"
-    ],
-    [
-      "ItemMouth3ShoeGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth3StitchesFakeMouth",
-      "Lips"
-    ],
-    [
-      "ItemMouth3StitchesStraight",
-      "Thread"
-    ],
-    [
-      "ItemMouth3WiffleGagBall",
-      "Ball"
-    ],
-    [
-      "ItemMouth3WiffleGagStrap",
-      "Strap"
-    ],
-    [
-      "ItemMouth3XLBoneGagBone",
-      "Bone"
-    ],
-    [
-      "ItemMouth3XLBoneGagStraps",
-      "Straps"
-    ],
-    [
-      "ItemMouth3XmasStickerGagMain",
-      "Main sticker"
-    ],
-    [
-      "ItemMouth3XmasStickerGagText",
-      "Sticker text"
-    ],
-    [
-      "ItemMouth3XmasStickerGagBorder",
-      "Sticker border"
+      "ItemMiscUnicornPupils",
+      "Pupils"
     ],
     [
       "ItemMouthAOMGagLips",
@@ -51509,6 +53593,22 @@
       "Ball"
     ],
     [
+      "ItemMouthBallGagStrap",
+      "Strap"
+    ],
+    [
+      "ItemMouthBallGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthTongueStrapGagGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthTongueStrapGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthBallGagMaskBall",
       "Ball"
     ],
@@ -51517,8 +53617,16 @@
       "Strap"
     ],
     [
-      "ItemMouthBallGagStrap",
-      "Strap"
+      "ItemMouthBallGagMaskLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthHookGagMaskGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthHookGagMaskLock",
+      "Lock"
     ],
     [
       "ItemMouthBallStripes",
@@ -51557,6 +53665,10 @@
       "Straps"
     ],
     [
+      "ItemMouthBitGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthBishopGagBall",
       "Ball"
     ],
@@ -51585,6 +53697,10 @@
       "Straps"
     ],
     [
+      "ItemMouthBoneGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthCageMuzzleMuzzle",
       "Cage"
     ],
@@ -51593,12 +53709,28 @@
       "Straps"
     ],
     [
+      "ItemMouthCageMuzzleLock",
+      "Lock"
+    ],
+    [
       "ItemMouthCarrotGagCarrot",
       "Carrot"
     ],
     [
       "ItemMouthCarrotGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthCarrotGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthDentalGagGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthDentalGagLock",
+      "Lock"
     ],
     [
       "ItemMouthCheekRetractorLips",
@@ -51673,12 +53805,20 @@
       "Holder"
     ],
     [
+      "ItemMouthCupholderGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthDildoGagDildo",
       "Dildo"
     ],
     [
       "ItemMouthDildoGagStrap",
       "Strap"
+    ],
+    [
+      "ItemMouthDildoGagLock",
+      "Lock"
     ],
     [
       "ItemMouthDildoPlugGagClose",
@@ -51689,6 +53829,46 @@
       "Strap"
     ],
     [
+      "ItemMouthDildoPlugGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthSteelMuzzleGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthSteelMuzzleGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthPlugGagClose",
+      "Close"
+    ],
+    [
+      "ItemMouthPlugGagStrap",
+      "Strap"
+    ],
+    [
+      "ItemMouthPlugGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthLatexBallMuzzleGag",
+      "Muzzle"
+    ],
+    [
+      "ItemMouthLatexBallMuzzleGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthStitchedMuzzleGag",
+      "Muzzle"
+    ],
+    [
+      "ItemMouthStitchedMuzzleGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthDusterGagDuster",
       "Duster"
     ],
@@ -51697,12 +53877,20 @@
       "Panel"
     ],
     [
+      "ItemMouthDusterGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthFoxyHarnessPanelGagPanel",
       "Panel"
     ],
     [
       "ItemMouthFoxyHarnessPanelGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthFoxyHarnessPanelGagLock",
+      "Lock"
     ],
     [
       "ItemMouthFuturisticHarnessBallGagBall",
@@ -51789,6 +53977,10 @@
       "Sides"
     ],
     [
+      "ItemMouthGasMaskGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthGenitalGagGag",
       "Gag"
     ],
@@ -51803,6 +53995,10 @@
     [
       "ItemMouthGenitalGagRivets",
       "Rivets"
+    ],
+    [
+      "ItemMouthGenitalGagLock",
+      "Lock"
     ],
     [
       "ItemMouthGlueGagGlue",
@@ -51825,12 +54021,20 @@
       "Strap"
     ],
     [
+      "ItemMouthHarnessBallGag1Lock",
+      "Lock"
+    ],
+    [
       "ItemMouthHarnessBallGagBall",
       "Ball"
     ],
     [
       "ItemMouthHarnessBallGagHarness",
       "Harness"
+    ],
+    [
+      "ItemMouthHarnessBallGagLock",
+      "Lock"
     ],
     [
       "ItemMouthHarnessPacifierGagHarness",
@@ -51849,6 +54053,10 @@
       "Pacifier"
     ],
     [
+      "ItemMouthHarnessPacifierGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthHarnessPanelGagMetal",
       "Metal"
     ],
@@ -51859,6 +54067,10 @@
     [
       "ItemMouthHarnessPanelGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthHarnessPanelGagLock",
+      "Lock"
     ],
     [
       "ItemMouthHarnessPonyBitsBobble",
@@ -51873,12 +54085,28 @@
       "Straps"
     ],
     [
+      "ItemMouthHarnessPonyBitsLock",
+      "Lock"
+    ],
+    [
       "ItemMouthHorrorMuzzleMuzzle",
       "Muzzle"
     ],
     [
       "ItemMouthHorrorMuzzleRivets",
       "Rivets"
+    ],
+    [
+      "ItemMouthHorrorMuzzleLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthPumpGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthPumpGagLock",
+      "Lock"
     ],
     [
       "ItemMouthKittyGagBase",
@@ -51909,6 +54137,10 @@
       "Straps"
     ],
     [
+      "ItemMouthKittyHarnessPanelGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthKittyMuzzleGagLines",
       "Lines"
     ],
@@ -51923,6 +54155,10 @@
     [
       "ItemMouthKittyMuzzleGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthKittyMuzzleGagLock",
+      "Lock"
     ],
     [
       "ItemMouthLatexMuzzleMaskBase",
@@ -51951,6 +54187,10 @@
     [
       "ItemMouthLatexMuzzleMaskStrapsBuckles",
       "Straps Buckles"
+    ],
+    [
+      "ItemMouthLatexMuzzleMaskLock",
+      "Lock"
     ],
     [
       "ItemMouthLatexRespiratorBase",
@@ -51995,6 +54235,50 @@
     [
       "ItemMouthLipGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthLipGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthSpiderGagGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthSpiderGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthLewdGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthLewdGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthDeepthroatGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthDeepthroatGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthLeatherCorsetCollar",
+      "Collar"
+    ],
+    [
+      "ItemMouthLeatherCorsetCollarLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthLatexPostureCollar",
+      "Collar"
+    ],
+    [
+      "ItemMouthLatexPostureCollarLock",
+      "Lock"
     ],
     [
       "ItemMouthMedicalMaskInner",
@@ -52049,12 +54333,20 @@
       "Mouth Shine"
     ],
     [
+      "ItemMouthMouthFeatureGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthMuzzleGagMuzzle",
       "Muzzle"
     ],
     [
       "ItemMouthMuzzleGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthMuzzleGagLock",
+      "Lock"
     ],
     [
       "ItemMouthOTNPlugGagBase",
@@ -52073,6 +54365,10 @@
       "Metal"
     ],
     [
+      "ItemMouthOTNPlugGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthPaciGagBase",
       "Pacifier"
     ],
@@ -52083,6 +54379,10 @@
     [
       "ItemMouthPaciGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthPaciGagLock",
+      "Lock"
     ],
     [
       "ItemMouthPaddedFaceMaskBaseThin",
@@ -52169,6 +54469,10 @@
       "Rope"
     ],
     [
+      "ItemMouthPonyGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthPrisonLockdownGagBelts",
       "Belts"
     ],
@@ -52181,6 +54485,10 @@
       "Straps"
     ],
     [
+      "ItemMouthPrisonLockdownGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthPumpkinGagPumpkin",
       "Pumpkin"
     ],
@@ -52191,6 +54499,10 @@
     [
       "ItemMouthPumpkinGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthPumpkinGagLock",
+      "Lock"
     ],
     [
       "ItemMouthPumpkinHarnessGagEyes",
@@ -52207,6 +54519,10 @@
     [
       "ItemMouthPumpkinHarnessGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthPumpkinHarnessGagLock",
+      "Lock"
     ],
     [
       "ItemMouthQualityHarnessGagBall",
@@ -52229,6 +54545,10 @@
       "Metal"
     ],
     [
+      "ItemMouthQualityHarnessGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthRoseBallGagRose",
       "Rose"
     ],
@@ -52239,6 +54559,10 @@
     [
       "ItemMouthRoseBallGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthRoseBallGagLock",
+      "Lock"
     ],
     [
       "ItemMouthShapedMouthCageBuckle",
@@ -52263,6 +54587,10 @@
     [
       "ItemMouthShapedMouthCageStrap",
       "Strap"
+    ],
+    [
+      "ItemMouthShapedMouthCageLock",
+      "Lock"
     ],
     [
       "ItemMouthShoeGagShoe",
@@ -52353,6 +54681,10 @@
       "Tongue"
     ],
     [
+      "ItemMouthTonguePiercingGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthWiffleGagBall",
       "Ball"
     ],
@@ -52361,12 +54693,28 @@
       "Strap"
     ],
     [
+      "ItemMouthWiffleGagLock",
+      "Lock"
+    ],
+    [
       "ItemMouthXLBoneGagBone",
       "Bone"
     ],
     [
       "ItemMouthXLBoneGagStraps",
       "Straps"
+    ],
+    [
+      "ItemMouthXLBoneGagLock",
+      "Lock"
+    ],
+    [
+      "ItemMouthDogMuzzleExposed",
+      "Muzzle"
+    ],
+    [
+      "ItemMouthDogMuzzleExposedLock",
+      "Lock"
     ],
     [
       "ItemMouthXmasStickerGagMain",
@@ -52409,6 +54757,10 @@
       "Extra Muzzle Straps"
     ],
     [
+      "ItemMouthPremiumMuzzleCrossStrapsLocks",
+      "Locks"
+    ],
+    [
       "ItemMouthOverfilledGagClothmask",
       "Cloth mask"
     ],
@@ -52429,12 +54781,24 @@
       "Ball"
     ],
     [
+      "ItemMouthBallGag2Lock",
+      "Lock"
+    ],
+    [
       "ItemMouthPacifierClipHarness",
       "Harness"
     ],
     [
       "ItemMouthPacifierClipPacifier",
       "Pacifier"
+    ],
+    [
+      "ItemMouthRingGagGag",
+      "Gag"
+    ],
+    [
+      "ItemMouthRingGagLock",
+      "Lock"
     ],
     [
       "ItemNeckAccessoriesCollarButterflyMetal",
@@ -53173,6 +55537,14 @@
       "Strap"
     ],
     [
+      "ItemNoseNoseRing",
+      "Ring"
+    ],
+    [
+      "ItemNoseNoseRingLock",
+      "Lock"
+    ],
+    [
       "ItemPelvisBulkyDiaperBase",
       "Diaper"
     ],
@@ -53219,6 +55591,22 @@
     [
       "ItemPelvisForbiddenChastityBeltMetal",
       "Metal"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltBase",
+      "Base"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltReflect",
+      "Reflect"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltShine",
+      "Shine"
+    ],
+    [
+      "ItemPelvisFortuneChastityBeltTone",
+      "Tone"
     ],
     [
       "ItemPelvisFuturisticChastityBeltBand_2",
@@ -53645,6 +56033,22 @@
       "Indicator"
     ],
     [
+      "ItemPelvisDiaperHarness",
+      "Harness"
+    ],
+    [
+      "ItemPelvisDiaperHarnessLock",
+      "Lock"
+    ],
+    [
+      "ItemPelvisHarnessPanties1",
+      "Harness"
+    ],
+    [
+      "ItemPelvisHarnessPanties1Lock",
+      "Lock"
+    ],
+    [
       "ItemTorso2ClassicLatexCorsetBelt",
       "Belt"
     ],
@@ -53949,6 +56353,10 @@
       "Upper Body Strap"
     ],
     [
+      "ItemTorsoRestraintSetLock",
+      "Lock"
+    ],
+    [
       "ItemTorsoSteelBeltBelt",
       "Belt"
     ],
@@ -53975,6 +56383,10 @@
     [
       "ItemTorsoStuddedHarnessMetal",
       "Metal"
+    ],
+    [
+      "ItemTorsoStuddedHarnessLock",
+      "Lock"
     ],
     [
       "ItemTorsoTentacleSuitBreastCover",
@@ -54063,6 +56475,22 @@
     [
       "ItemTorsoNylonRopeHarnessLeft",
       "Unity Left Side"
+    ],
+    [
+      "ItemTorsoLeatherHarness",
+      "Harness"
+    ],
+    [
+      "ItemTorsoLeatherHarnessLock",
+      "Lock"
+    ],
+    [
+      "ItemTorsoLeatherStrapHarness",
+      "Harness"
+    ],
+    [
+      "ItemTorsoLeatherStrapHarnessLock",
+      "Lock"
     ],
     [
       "ItemVulvaBasicCockringCockRing",
@@ -54941,12 +57369,72 @@
       "Lanyard"
     ],
     [
+      "NecklaceInitialLocketChain",
+      "Necklace"
+    ],
+    [
+      "NecklaceInitialLocketFace",
+      "Locket face"
+    ],
+    [
+      "NecklaceInitialLocketFaceShine",
+      "Face shine"
+    ],
+    [
+      "NecklaceInitialLocketGem",
+      "Locket gem"
+    ],
+    [
+      "NecklaceInitialLocketGemShine",
+      "Gem shine"
+    ],
+    [
+      "NecklaceInitialLocketMetalShine",
+      "Body shine"
+    ],
+    [
+      "NecklaceInitialLocketPendantMetal",
+      "Locket body"
+    ],
+    [
+      "NecklaceInitialLocketText",
+      "Text colour"
+    ],
+    [
       "NecklaceNecklaceBallGagBall",
       "Ball"
     ],
     [
       "NecklaceNecklaceBallGagStrap",
       "Strap"
+    ],
+    [
+      "NecklacePhoenixNecklaceChain",
+      "Necklace"
+    ],
+    [
+      "NecklacePhoenixNecklacePendantMetal",
+      "Phoenix metal"
+    ],
+    [
+      "NecklacePhoenixNecklaceMetalShine",
+      "Metal shine"
+    ],
+    [
+      "NecklacePhoenixNecklaceWingGem",
+      "Wing gems"
+    ],
+    [
+      "NecklacePhoenixNecklaceWingShine",
+      "Wing shine"
+    ],
+    [
+      "NecklacePhoenixNecklaceTailGem",
+      "Tail gems"
+    ],
+    [
+      "NecklacePhoenixNecklaceTailShine",
+      "Tail shine"
     ],
     [
       "NecklaceNecklaceButterflyMetal",
@@ -55958,7 +58446,7 @@
     ],
     [
       "SocksYuletideVelvetWarmthSock",
-      "Fuzz"
+      "Sock"
     ],
     [
       "SocksRippedPantyhoseBaseUpper",
@@ -58023,6 +60511,14 @@
     [
       "None",
       "None"
+    ],
+    [
+      "Search",
+      "Filter Items"
+    ],
+    [
+      "Remove",
+      "Close"
     ]
   ],
   "Screens/Character/BackgroundSelection/Text_BackgroundSelection": [
@@ -58522,11 +61018,15 @@
     ],
     [
       "NoMemberNumber",
-      "-"
+      "—"
     ],
     [
       "Relationships",
-      "- Relationships -"
+      "Significant others"
+    ],
+    [
+      "YourRelations",
+      "Your relations"
     ],
     [
       "Lover",
@@ -58534,7 +61034,7 @@
     ],
     [
       "Owner",
-      "Owner:"
+      "Owner"
     ],
     [
       "None",
@@ -58602,7 +61102,7 @@
     ],
     [
       "Reputation",
-      "- Reputation -"
+      "Reputation"
     ],
     [
       "ReputationNone",
@@ -58610,59 +61110,59 @@
     ],
     [
       "ReputationGamingPositive",
-      "Dungeoneer:"
+      "Dungeoneer"
     ],
     [
       "ReputationDominantPositive",
-      "Dominant:"
+      "Dominant"
     ],
     [
       "ReputationDominantNegative",
-      "Submissive:"
+      "Submissive"
     ],
     [
       "ReputationMaidPositive",
-      "Maid Sorority:"
+      "Maid Sorority"
     ],
     [
       "ReputationKidnapPositive",
-      "Kidnappers League:"
+      "Kidnappers League"
     ],
     [
       "ReputationAsylumPositive",
-      "Asylum Nurse:"
+      "Asylum Nurse"
     ],
     [
       "ReputationAsylumNegative",
-      "Asylum Patient:"
+      "Asylum Patient"
     ],
     [
       "ReputationLARPPositive",
-      "LARP Battles:"
+      "LARP Battles"
     ],
     [
       "ReputationGamblingPositive",
-      "Gambling Hall:"
+      "Gambling Hall"
     ],
     [
       "ReputationABDLPositive",
-      "ABDL:"
+      "ABDL"
     ],
     [
       "ReputationHouseMaiestasPositive",
-      "House Maiestas:"
+      "House Maiestas"
     ],
     [
       "ReputationHouseVinculaPositive",
-      "House Vincula:"
+      "House Vincula"
     ],
     [
       "ReputationHouseAmplectorPositive",
-      "House Amplector:"
+      "House Amplector"
     ],
     [
       "ReputationHouseCorporisPositive",
-      "House Corporis:"
+      "House Corporis"
     ],
     [
       "DifficultyTitle",
@@ -58670,7 +61170,7 @@
     ],
     [
       "DifficultyDaysTillCanChange",
-      " - Can change again in NumberOfDays day(s)"
+      " — Can change again in NumberOfDays day(s)"
     ],
     [
       "DifficultyLevel0",
@@ -58690,7 +61190,7 @@
     ],
     [
       "Skill",
-      "- Skills -"
+      "Skills"
     ],
     [
       "SkillNone",
@@ -58698,39 +61198,55 @@
     ],
     [
       "SkillBondage",
-      "Bondage:"
+      "Bondage"
     ],
     [
       "SkillSelfBondage",
-      "Self-bondage:"
+      "Self-bondage"
     ],
     [
       "SkillLockPicking",
-      "Lockpicking:"
+      "Lockpicking"
     ],
     [
       "SkillEvasion",
-      "Evasion:"
+      "Evasion"
     ],
     [
       "SkillWillpower",
-      "Willpower:"
+      "Willpower"
     ],
     [
       "SkillInfiltration",
-      "Infiltration:"
+      "Infiltration"
     ],
     [
       "SkillDressage",
-      "Dressage:"
+      "Dressage"
+    ],
+    [
+      "SkillLevelMaximum",
+      "Max"
     ],
     [
       "SkillModifier",
       "ABSVAL for DURATION"
     ],
     [
+      "SkillRatioBondage",
+      "Using RATIO% of your bondage skill, so restraints you apply are easier to escape."
+    ],
+    [
+      "SkillRatioEvasion",
+      "Using RATIO% of your evasion skill, so struggling free is harder."
+    ],
+    [
+      "SkillRatio",
+      "Using RATIO% of this skill."
+    ],
+    [
       "Trait",
-      "- Traits -"
+      "Traits"
     ],
     [
       "TraitUnknown",
@@ -58738,51 +61254,51 @@
     ],
     [
       "TraitDominant",
-      "Dominant:"
+      "Dominant"
     ],
     [
       "TraitSubmissive",
-      "Submissive:"
+      "Submissive"
     ],
     [
       "TraitViolent",
-      "Violent:"
+      "Violent"
     ],
     [
       "TraitPeaceful",
-      "Peaceful:"
+      "Peaceful"
     ],
     [
       "TraitHorny",
-      "Horny:"
+      "Horny"
     ],
     [
       "TraitFrigid",
-      "Frigid:"
+      "Frigid"
     ],
     [
       "TraitRude",
-      "Rude:"
+      "Rude"
     ],
     [
       "TraitPolite",
-      "Polite:"
+      "Polite"
     ],
     [
       "TraitWise",
-      "Wise:"
+      "Wise"
     ],
     [
       "TraitDumb",
-      "Dumb:"
+      "Dumb"
     ],
     [
       "TraitSerious",
-      "Serious:"
+      "Serious"
     ],
     [
       "TraitPlayful",
-      "Playful:"
+      "Playful"
     ],
     [
       "Relationship",
@@ -58851,6 +61367,30 @@
     [
       "AllowedInteraction5",
       "Owner only"
+    ],
+    [
+      "MenuExit",
+      "Exit"
+    ],
+    [
+      "MenuTitle",
+      "Title & Nickname"
+    ],
+    [
+      "MenuPreference",
+      "Preferences"
+    ],
+    [
+      "MenuFriendList",
+      "Friend List"
+    ],
+    [
+      "MenuProfile",
+      "Profile"
+    ],
+    [
+      "MenuOwnersNotes",
+      "Owner's Notes"
     ]
   ],
   "Screens/Character/ItemColor/ItemColor": [
@@ -59444,7 +61984,7 @@
     ],
     [
       "OrgasmFailResist1",
-      "SourceCharacter struggles against the intense vibrations, hardly able to control PronounPossessiveself."
+      "SourceCharacter struggles against the intense vibrations, hardly able to control PronounSelf."
     ],
     [
       "OrgasmFailResist2",
@@ -60783,6 +63323,10 @@
       "Rub on Penis"
     ],
     [
+      "Label-ChatOther-ItemPenis-Scratch",
+      "Scratch"
+    ],
+    [
       "Label-ChatOther-ItemPenis-ShockItem",
       "Shock Penis"
     ],
@@ -61997,6 +64541,10 @@
     [
       "Label-ChatSelf-ItemPenis-RubItem",
       "Rub on Penis"
+    ],
+    [
+      "Label-ChatSelf-ItemPenis-Scratch",
+      "Scratch"
     ],
     [
       "Label-ChatSelf-ItemPenis-ShockItem",
@@ -63367,6 +65915,10 @@
       "SourceCharacter rubs TargetCharacter's penis with PronounPossessive ActivityAsset."
     ],
     [
+      "ChatOther-ItemPenis-Scratch",
+      "SourceCharacter scratches over TargetCharacter's penis."
+    ],
+    [
       "ChatOther-ItemPenis-ShockItem",
       "SourceCharacter shocks TargetCharacter's penis with PronounPossessive ActivityAsset."
     ],
@@ -64571,6 +67123,10 @@
       "SourceCharacter rubs PronounPossessive penis with PronounPossessive ActivityAsset."
     ],
     [
+      "ChatSelf-ItemPenis-Scratch",
+      "SourceCharacter scratches PronounPossessive penis."
+    ],
+    [
       "ChatSelf-ItemPenis-ShockItem",
       "SourceCharacter shocks PronounPossessive penis with PronounPossessive ActivityAsset."
     ],
@@ -64732,6 +67288,14 @@
     ]
   ],
   "Screens/Character/Preference/Text_Keybindings": [
+    [
+      "action:beep_send_message:desc",
+      "Sends the message in the beep chat."
+    ],
+    [
+      "action:beep_send_message:name",
+      "Send Beep"
+    ],
     [
       "action:chat_autocomplete:desc",
       "Tries to complete the message to a command or print help about it."
@@ -64989,6 +67553,10 @@
       "Scroll Up"
     ],
     [
+      "category:beep",
+      "Beep"
+    ],
+    [
       "category:chat",
       "Chat"
     ],
@@ -65007,6 +67575,10 @@
     [
       "context:always",
       "Always"
+    ],
+    [
+      "context:isBeepMessageFocused",
+      "Beep Message Focused"
     ],
     [
       "context:isChatRoomCharacterMode",
@@ -65087,10 +67659,6 @@
       "- Immersion Preferences -"
     ],
     [
-      "ControllerPreferences",
-      "- Controller Preferences -"
-    ],
-    [
       "NotificationsPreferences",
       "- Notification Preferences -"
     ],
@@ -65161,10 +67729,6 @@
     [
       "HomepageGraphics",
       "Graphics"
-    ],
-    [
-      "HomepageController",
-      "Controller"
     ],
     [
       "HomepageNotifications",
@@ -65576,19 +68140,19 @@
     ],
     [
       "LockTimerLimitDay",
-      "Day"
+      "1 Day"
     ],
     [
       "LockTimerLimitWeek",
-      "Week"
+      "1 Week"
     ],
     [
       "LockTimerLimitMonth",
-      "Month"
+      "1 Month"
     ],
     [
       "LockTimerLimitYear",
-      "Year"
+      "1 Year"
     ],
     [
       "LockTimerLimitUnlimited",
@@ -65777,6 +68341,10 @@
     [
       "ArousalAffectExpression",
       "Affect your facial expressions"
+    ],
+    [
+      "ArousalAffectErection",
+      "Affect your erection"
     ],
     [
       "ArousalActive",
@@ -66269,110 +68837,6 @@
     [
       "PowerModehigh-performance",
       "High consumption, faster rendering"
-    ],
-    [
-      "Sensitivity",
-      "Sensitivity"
-    ],
-    [
-      "ControllerActive",
-      "Controller Active"
-    ],
-    [
-      "MapButtons",
-      "Map Buttons"
-    ],
-    [
-      "MapSticks",
-      "Map Sticks"
-    ],
-    [
-      "MoveLeftStickUp",
-      "Move left stick up"
-    ],
-    [
-      "MoveLeftStickRight",
-      "Move left stick right"
-    ],
-    [
-      "MoveRightStickUp",
-      "Move right stick up"
-    ],
-    [
-      "MoveRightStickRight",
-      "Move right stick right"
-    ],
-    [
-      "PressA",
-      "Press A button"
-    ],
-    [
-      "PressB",
-      "Press B button"
-    ],
-    [
-      "PressX",
-      "Press X button"
-    ],
-    [
-      "PressY",
-      "Press Y button"
-    ],
-    [
-      "PressLeftBumper",
-      "Press left bumper"
-    ],
-    [
-      "PressRightBumper",
-      "Press right bumper"
-    ],
-    [
-      "PressLeftTrigger",
-      "Press left trigger"
-    ],
-    [
-      "PressRightTrigger",
-      "Press right trigger"
-    ],
-    [
-      "PressSelect",
-      "Press Select button"
-    ],
-    [
-      "PressStart",
-      "Press Start button"
-    ],
-    [
-      "PressLeftStick",
-      "Press left stick button"
-    ],
-    [
-      "PressRightStick",
-      "Press right stick button"
-    ],
-    [
-      "PressUpOnDpad",
-      "Press Up on Dpad"
-    ],
-    [
-      "PressDownOnDpad",
-      "Press Down on Dpad"
-    ],
-    [
-      "PressLeftOnDpad",
-      "Press Left on Dpad"
-    ],
-    [
-      "PressRightOnDpad",
-      "Press Right on Dpad"
-    ],
-    [
-      "PressHome",
-      "Press Home button"
-    ],
-    [
-      "DeadZone",
-      "Dead Zone"
     ],
     [
       "NotificationsAlertType0",
@@ -68079,6 +70543,14 @@
       "Cancel"
     ],
     [
+      "DialogMenuFilterItems",
+      "Filter Items"
+    ],
+    [
+      "DialogMenuFilterItemsExit",
+      "Close"
+    ],
+    [
       "DialogMenuColorSelect",
       "Use this color"
     ],
@@ -69215,10 +71687,6 @@
       "Alternate keys A (Q on AZERTY) and D to speed up"
     ],
     [
-      "ProgressKeysController",
-      "Alternate keys A and S or X and Y on a controller"
-    ],
-    [
       "PronounObjectHeHim",
       "him"
     ],
@@ -69293,6 +71761,62 @@
     [
       "Removing",
       "Removing..."
+    ],
+    [
+      "ReputationABDL",
+      "ABDL"
+    ],
+    [
+      "ReputationAsylumNegative",
+      "Asylum — Patient"
+    ],
+    [
+      "ReputationAsylumPositive",
+      "Asylum — Nurse"
+    ],
+    [
+      "ReputationDominantNegative",
+      "D/s — Submissive"
+    ],
+    [
+      "ReputationDominantPositive",
+      "D/s — Dominant"
+    ],
+    [
+      "ReputationGambling",
+      "Gambling Hall"
+    ],
+    [
+      "ReputationGaming",
+      "Dungeoneer"
+    ],
+    [
+      "ReputationKidnap",
+      "Kidnappers League"
+    ],
+    [
+      "ReputationLARP",
+      "LARP Battles"
+    ],
+    [
+      "ReputationMaid",
+      "Maid Sorority"
+    ],
+    [
+      "ReputationHouseAmplector",
+      "House Amplector"
+    ],
+    [
+      "ReputationHouseCorporis",
+      "House Corporis"
+    ],
+    [
+      "ReputationHouseMaiestas",
+      "House Maiestas"
+    ],
+    [
+      "ReputationHouseVincula",
+      "House Vincula"
     ],
     [
       "RequireBondageLevel",
@@ -74813,8 +77337,12 @@
       "Library"
     ],
     [
-      "PreviewButtonTooltip",
-      "Preview"
+      "MusicPlay",
+      "Play"
+    ],
+    [
+      "MusicPause",
+      "Pause"
     ],
     [
       "ClearButtonTooltip",
@@ -74879,12 +77407,36 @@
     [
       "MusicLibraryDarkTechno",
       "Dark Techno"
+    ],
+    [
+      "SectionBackground",
+      "Background"
+    ],
+    [
+      "SectionMusic",
+      "Music"
+    ],
+    [
+      "FillModeShort",
+      "Fill mode"
+    ],
+    [
+      "PreviewEmpty",
+      "No background image"
+    ],
+    [
+      "MusicSource",
+      "Source"
     ]
   ],
   "Screens/Online/ChatAdmin/Text_ChatAdmin": [
     [
       "RoomName",
       "Room Name"
+    ],
+    [
+      "RoomNamePlaceholder",
+      "The name of the chat room"
     ],
     [
       "RoomLanguage",
@@ -75047,6 +77599,14 @@
       "Save"
     ],
     [
+      "TitleCreate",
+      "Create Room"
+    ],
+    [
+      "TitleEdit",
+      "Room Settings"
+    ],
+    [
       "Exit",
       "Exit"
     ],
@@ -75088,7 +77648,19 @@
     ],
     [
       "ReturnMenu",
-      "(Click anywhere to return)"
+      "Click anywhere to exit"
+    ],
+    [
+      "BackgroundPrevious",
+      "Previous background"
+    ],
+    [
+      "BackgroundNext",
+      "Next background"
+    ],
+    [
+      "MapModeHeader",
+      "Map"
     ],
     [
       "MapNever",
@@ -75113,6 +77685,10 @@
     [
       "MapAlwaysTooltip",
       "Only use the map, no regular chat"
+    ],
+    [
+      "GameModeHeader",
+      "Game"
     ],
     [
       "Game",
@@ -75146,6 +77722,10 @@
   "Screens/Online/ChatBlockItem/Text_ChatBlockItem": [
     [
       "Title",
+      "Block Categories"
+    ],
+    [
+      "Hint",
       "Select item categories or activities to block in your chat room.  They won't be visible or usable by players."
     ],
     [
@@ -75739,6 +78319,34 @@
       "Recent Items"
     ],
     [
+      "MapViewTetherPoint",
+      "Tether point"
+    ],
+    [
+      "MapViewTetherPointToggle",
+      "Leashes can be tied to it"
+    ],
+    [
+      "MapViewTetherTieSelf",
+      "Tie your leash here"
+    ],
+    [
+      "MapViewTetherTieOther",
+      "Tie TargetCharacterName's leash here"
+    ],
+    [
+      "MapViewTetherUntieSelf",
+      "Untie your leash"
+    ],
+    [
+      "MapViewTetherUntieOther",
+      "Untie TargetCharacterName's leash"
+    ],
+    [
+      "MapViewTetherNobody",
+      "No leash within reach can be tied here."
+    ],
+    [
       "TileTypeNameWall",
       "Walls"
     ],
@@ -75755,6 +78363,10 @@
       "Water"
     ],
     [
+      "ObjectTypeNameEmptySpace",
+      "Empty Space"
+    ],
+    [
       "ObjectTypeNameLivingRoom",
       "Living Room"
     ],
@@ -75765,6 +78377,14 @@
     [
       "ObjectTypeNameBedroom",
       "Bedroom"
+    ],
+    [
+      "ObjectTypeNameKitchen",
+      "Kitchen"
+    ],
+    [
+      "ObjectTypeNameOffice",
+      "Office"
     ],
     [
       "ObjectTypeNameSchool",
@@ -75871,8 +78491,104 @@
       "Effects"
     ],
     [
+      "EditorButtonTextObjectSettings",
+      "Object settings"
+    ],
+    [
+      "EditorColorReset",
+      "Reset"
+    ],
+    [
+      "EditorColorPasteFormat",
+      "Paste format"
+    ],
+    [
+      "EditorColorStopPaste",
+      "Stop pasting"
+    ],
+    [
+      "EditorColorPasteTitle",
+      "Paste format:"
+    ],
+    [
       "EditorButtonTextBack",
       "Back"
+    ],
+    [
+      "EditorButtonTextEraser",
+      "Eraser"
+    ],
+    [
+      "EditorButtonTextEraserAlt",
+      "Eraser. Hold Alt to paint an impassable empty space"
+    ],
+    [
+      "TeleportPadTitle",
+      "Teleport Pad"
+    ],
+    [
+      "TeleportPadNoDestination",
+      "Doesn't send anywhere yet"
+    ],
+    [
+      "TeleportPadSendsTo",
+      "Sends to the outlined tile"
+    ],
+    [
+      "TeleportPadSendsBothWays",
+      "Sends to the outlined pad and back"
+    ],
+    [
+      "TeleportPadPick",
+      "Pick on the map"
+    ],
+    [
+      "TeleportPadPicking",
+      "Click the tile it should send to"
+    ],
+    [
+      "TeleportPadCancel",
+      "Cancel"
+    ],
+    [
+      "TeleportPadTwoWay",
+      "Two way"
+    ],
+    [
+      "TeleportPadRemove",
+      "Remove"
+    ],
+    [
+      "TeleportPadColor",
+      "Color"
+    ],
+    [
+      "TeleportPadInvalid",
+      "It can't send to itself or to a wall"
+    ],
+    [
+      "ObjectSettingsRotation",
+      "Turn"
+    ],
+    [
+      "ObjectSettingsSize",
+      "Size"
+    ],
+    [
+      "ObjectSettingsReset",
+      "Reset"
+    ],
+    [
+      "ObjectSettingsColor",
+      "Color"
+    ],
+    [
+      "ObjectSettingsDecal",
+      "Decal"
+    ],
+    [
+      "ObjectSettingsDecalNone",
+      "None"
     ]
   ],
   "Screens/Online/ChatRoom/Text_Commands": [
@@ -76947,6 +79663,380 @@
     [
       "PlayTypeHouseCorporis",
       "Representing House Corporis"
+    ]
+  ],
+  "Screens/Online/Game/OnlineGameDictionary": [
+    [
+      "LARPItemSelect",
+      "Select the item to use"
+    ],
+    [
+      "LARPItemNext",
+      "Next"
+    ],
+    [
+      "LARPItemCancel",
+      "Cancel"
+    ],
+    [
+      "LARPTeamRed",
+      "Red"
+    ],
+    [
+      "LARPTeamGreen",
+      "Green"
+    ],
+    [
+      "LARPTeamBlue",
+      "Blue"
+    ],
+    [
+      "LARPTeamYellow",
+      "Yellow"
+    ],
+    [
+      "LARPTeamCyan",
+      "Cyan"
+    ],
+    [
+      "LARPTeamPurple",
+      "Purple"
+    ],
+    [
+      "LARPTeamOrange",
+      "Orange"
+    ],
+    [
+      "LARPTeamWhite",
+      "White"
+    ],
+    [
+      "LARPTeamGray",
+      "Gray"
+    ],
+    [
+      "LARPTeamBlack",
+      "Black"
+    ],
+    [
+      "LARPTimerNA",
+      "0"
+    ],
+    [
+      "LARPEndGame",
+      "The game is over!  TeamName team wins.  Enjoy your spoils of war."
+    ],
+    [
+      "LARPTurnStart",
+      "TargetName (TargetNumber) plays first and starts the game."
+    ],
+    [
+      "LARPTurnSkip",
+      "The turn is skipped.  TargetName (TargetNumber) plays."
+    ],
+    [
+      "LARPTurnNext",
+      "TargetName (TargetNumber) plays."
+    ],
+    [
+      "LARPBackToCharacters",
+      "Back to characters"
+    ],
+    [
+      "LARPOptionPass",
+      "Pass your turn"
+    ],
+    [
+      "LARPOptionPassSuccess",
+      "SourceName (SourceNumber) does nothing and passes SourcePronounPossessive turn."
+    ],
+    [
+      "LARPOptionStrip",
+      "Strip TargetPronounObject (OptionOdds %)"
+    ],
+    [
+      "LARPOptionStripSuccess",
+      "SourceName (SourceNumber) successfully strips TargetName (TargetNumber).  [ActionOdds >= ActionRNG]"
+    ],
+    [
+      "LARPOptionStripFail",
+      "SourceName (SourceNumber) fails to strip TargetName (TargetNumber).  [ActionOdds < ActionRNG]"
+    ],
+    [
+      "LARPOptionRestrainArms",
+      "Restrain arms (OptionOdds %)"
+    ],
+    [
+      "LARPOptionRestrainArmsSuccess",
+      "SourceName (SourceNumber) successfully restrains TargetName (TargetNumber) arms using: ItemDesc.  [ActionOdds >= ActionRNG]"
+    ],
+    [
+      "LARPOptionRestrainArmsFail",
+      "SourceName (SourceNumber) fails to restrain TargetName (TargetNumber) arms using: ItemDesc.  [ActionOdds < ActionRNG]"
+    ],
+    [
+      "LARPOptionRestrainLegs",
+      "Restrain legs (OptionOdds %)"
+    ],
+    [
+      "LARPOptionRestrainLegsSuccess",
+      "SourceName (SourceNumber) successfully restrains TargetName (TargetNumber) legs using: ItemDesc.  [ActionOdds >= ActionRNG]"
+    ],
+    [
+      "LARPOptionRestrainLegsFail",
+      "SourceName (SourceNumber) fails to restrain TargetName (TargetNumber) legs using: ItemDesc.  [ActionOdds < ActionRNG]"
+    ],
+    [
+      "LARPOptionRestrainMouth",
+      "Gag TargetPronounObject (OptionOdds %)"
+    ],
+    [
+      "LARPOptionRestrainMouthSuccess",
+      "SourceName (SourceNumber) successfully gags TargetName (TargetNumber) using: ItemDesc.  [ActionOdds >= ActionRNG]"
+    ],
+    [
+      "LARPOptionRestrainMouthFail",
+      "SourceName (SourceNumber) fails to gag TargetName (TargetNumber) using: ItemDesc.  [ActionOdds < ActionRNG]"
+    ],
+    [
+      "LARPOptionTighten",
+      "Tighten (OptionOdds %)"
+    ],
+    [
+      "LARPOptionTightenSuccess",
+      "SourceName (SourceNumber) tightens TargetName (TargetNumber) bondage, resetting TargetPronounPossessive struggle progress."
+    ],
+    [
+      "LARPOptionStruggle",
+      "Struggle (OptionOdds %)"
+    ],
+    [
+      "LARPOptionStruggleSuccess",
+      "TargetName (TargetNumber) struggles out successfully and frees TargetPronounPossessive arms.  [ActionOdds >= ActionRNG]"
+    ],
+    [
+      "LARPOptionStruggleFail",
+      "TargetName (TargetNumber) tries to struggle out but fails.  [ActionOdds < ActionRNG]"
+    ],
+    [
+      "LARPOptionCharge",
+      "Charge (OptionOdds %)"
+    ],
+    [
+      "LARPOptionChargeSuccess",
+      "SourceName (SourceNumber) charges with SourcePronounPossessive team, giving a 25% offensive bonus for a full cycle."
+    ],
+    [
+      "LARPOptionControl",
+      "Control (OptionOdds %)"
+    ],
+    [
+      "LARPOptionControlSuccess",
+      "SourceName (SourceNumber) controls the room, preventing everyone from using special abilities for a full cycle."
+    ],
+    [
+      "LARPOptionDetain",
+      "Detain (OptionOdds %)"
+    ],
+    [
+      "LARPOptionDetainSuccess",
+      "SourceName (SourceNumber) detains TargetName (TargetNumber) and restrains TargetPronounPossessive arms using: ItemDesc."
+    ],
+    [
+      "LARPOptionExpose",
+      "Expose (OptionOdds %)"
+    ],
+    [
+      "LARPOptionExposeSuccess",
+      "SourceName (SourceNumber) exposes TargetName (TargetNumber) and removes TargetPronounPossessive clothes."
+    ],
+    [
+      "LARPOptionInspire",
+      "Inspire (OptionOdds %)"
+    ],
+    [
+      "LARPOptionInspireSuccess",
+      "SourceName (SourceNumber) inspires TargetName (TargetNumber), allowing TargetPronounObject to use TargetPronounPossessive special abilities again."
+    ],
+    [
+      "LARPOptionSeduce",
+      "Seduce (OptionOdds %)"
+    ],
+    [
+      "LARPOptionSeduceSuccess",
+      "SourceName (SourceNumber) seduces TargetName (TargetNumber), preventing TargetPronounObject from acting in TargetPronounPossessive next turn."
+    ],
+    [
+      "LARPOptionConfuse",
+      "Confuse (OptionOdds %)"
+    ],
+    [
+      "LARPOptionConfuseSuccess",
+      "SourceName (SourceNumber) confuses TargetName (TargetNumber), preventing TargetPronounObject from using special abilities for a full cycle."
+    ],
+    [
+      "LARPOptionHide",
+      "Hide (OptionOdds %)"
+    ],
+    [
+      "LARPOptionHideSuccess",
+      "SourceName (SourceNumber) hides in a corner, no opponent can target SourcePronounObject until SourcePronounPossessive next turn."
+    ],
+    [
+      "LARPOptionImmobilize",
+      "Immobilize (OptionOdds %)"
+    ],
+    [
+      "LARPOptionImmobilizeSuccess",
+      "SourceName (SourceNumber) immobilize TargetName (TargetNumber) and restrains TargetPronounPossessive legs using: ItemDesc."
+    ],
+    [
+      "LARPOptionCheer",
+      "Cheer (OptionOdds %)"
+    ],
+    [
+      "LARPOptionCheerSuccess",
+      "SourceName (SourceNumber) cheers for TargetName (TargetNumber), giving TargetPronounObject a 25% offensive and defensive bonus for a full cycle."
+    ],
+    [
+      "LARPOptionCostume",
+      "Costume (OptionOdds %)"
+    ],
+    [
+      "LARPOptionCostumeSuccess",
+      "SourceName (SourceNumber) costumes TargetName (TargetNumber) using: ItemDesc."
+    ],
+    [
+      "LARPOptionEvasion",
+      "Evasion (OptionOdds %)"
+    ],
+    [
+      "LARPOptionEvasionSuccess",
+      "SourceName (SourceNumber) uses SourcePronounPossessive evasion abilities to remove SourcePronounPossessive restraint."
+    ],
+    [
+      "LARPOptionRescue",
+      "Rescue (OptionOdds %)"
+    ],
+    [
+      "LARPOptionRescueSuccess",
+      "SourceName (SourceNumber) rescues TargetName (TargetNumber).  Removing TargetPronounPossessive restraint."
+    ],
+    [
+      "LARPOptionSilence",
+      "Silence (OptionOdds %)"
+    ],
+    [
+      "LARPOptionSilenceSuccess",
+      "SourceName (SourceNumber) silences TargetName (TargetNumber) and gag TargetPronounObject using: ItemDesc."
+    ],
+    [
+      "LARPOptionUngag",
+      "Ungag (OptionOdds %)"
+    ],
+    [
+      "LARPOptionUngagSuccess",
+      "SourceName (SourceNumber) ungags TargetName (TargetNumber)."
+    ],
+    [
+      "LARPOptionCover",
+      "Cover (OptionOdds %)"
+    ],
+    [
+      "LARPOptionCoverSuccess",
+      "SourceName (SourceNumber) covers TargetName (TargetNumber), no opponent can target TargetPronounObject for a full cycle."
+    ],
+    [
+      "LARPOptionDress",
+      "Dress (OptionOdds %)"
+    ],
+    [
+      "LARPOptionDressSuccess",
+      "SourceName (SourceNumber) dresses back using: ItemDesc."
+    ],
+    [
+      "LARPOptionSupport",
+      "Support (OptionOdds %)"
+    ],
+    [
+      "LARPOptionSupportSuccess",
+      "SourceName (SourceNumber) supports SourcePronounPossessive team, giving a 25% defensive bonus for a full cycle."
+    ],
+    [
+      "MagicBattleGameStartFreeForAll",
+      "A free for all magic battle has begun.  To win, gag all other magicians using your spells.  Select your first target."
+    ],
+    [
+      "MagicBattleGameStartHouse",
+      "A team magic battle has begun.  To win, gag all magicians from other houses using your spells.  Select your first target."
+    ],
+    [
+      "MagicBattleGameStop",
+      "Administrator SourceName (SourceNumber) ended the magic battle manually."
+    ],
+    [
+      "MagicBattleTurnNext",
+      "The turn is over, pick your next target."
+    ],
+    [
+      "MagicBattleTimerNA",
+      "0"
+    ],
+    [
+      "MagicBattleSpell0Name",
+      "Pallium Exuere"
+    ],
+    [
+      "MagicBattleSpell1Name",
+      "Animatus Funem"
+    ],
+    [
+      "MagicBattleSpell2Name",
+      "Funem Tensis"
+    ],
+    [
+      "MagicBattleSpell3Name",
+      "Oratio Angustos"
+    ],
+    [
+      "MagicBattleSpell4Name",
+      "Animatus Ferrum"
+    ],
+    [
+      "MagicBattleSpell5Name",
+      "Ferrum Tensis"
+    ],
+    [
+      "MagicBattleSpell6Name",
+      "Nuda Caro"
+    ],
+    [
+      "MagicBattleSpell7Name",
+      "Stricta Lorum"
+    ],
+    [
+      "MagicBattleSpellSuccess",
+      "SourceName (SourceNumber) successfully cast SpellDesc on TargetName (TargetNumber) in SpellTime seconds."
+    ],
+    [
+      "MagicBattleSpellFail",
+      "SourceName (SourceNumber) fails to cast SpellDesc on TargetName (TargetNumber) in SpellTime seconds."
+    ],
+    [
+      "MagicBattleNoWinner",
+      "Nobody was able to cast a spell successfully."
+    ],
+    [
+      "MagicBattleTieRound",
+      "Two spells were cast at the same time, there's no winner."
+    ],
+    [
+      "MagicBattleRoundWinner",
+      "SpellDesc from SourceName (SourceNumber) affects TargetName (TargetNumber)."
+    ],
+    [
+      "MagicBattleGameOver",
+      "The battle is over!  Enjoy your spoils of war."
     ]
   ],
   "Screens/Online/NicknameManagement/Text_NicknameManagement": [
@@ -79098,10 +82188,18 @@
     ],
     [
       "Tip25",
-      "The Maid Quarters is always looking to pay those that help out."
+      "Ring the bell if you get stuck, a maid will be with you shortly."
     ],
     [
       "Tip26",
+      "Certain actions train different skills, making you better with restraints."
+    ],
+    [
+      "Tip36",
+      "The Maid Quarters is always looking to pay those that help out."
+    ],
+    [
+      "Tip37",
       "The Kidnapper's League pays quite a bit for those that can catch others."
     ],
     [
@@ -79162,7 +82260,7 @@
     ],
     [
       "PandoraDominatrixIntro0",
-      "(A Dominatrix from Pandora's Box jumps in front of you.)  DialogPlayerName!  You've stolen our technology"
+      "(A Dominatrix from Pandora's Box jumps in front of you.)  DialogPlayerName!  You've stolen our technology, I'm here to get it back."
     ],
     [
       "PandoraDominatrixIntro1",
@@ -79570,22 +82668,18 @@
     ],
     [
       "Text5",
-      "You can also use a controller, set it up in your preferences."
-    ],
-    [
-      "Text6",
       "Your health and experience are on the top left of the screen."
     ],
     [
-      "Text7",
+      "Text6",
       "Restrain wounded girls to get experience before they get up."
     ],
     [
-      "Text8",
+      "Text7",
       "Go to any bedroom to heal and save, using keys from 0 to 9."
     ],
     [
-      "Text9",
+      "Text8",
       "The models might blink if you don't wait for all assets to load."
     ]
   ],

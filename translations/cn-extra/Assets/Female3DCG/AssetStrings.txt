@@ -1376,3 +1376,1395 @@ SourceCharacter places a cute Viola plushie in DestinationCharacter hands.
 SourceCharacter将一只可爱的薇奥拉毛绒玩偶放在DestinationCharacter手中。
 SourceCharacter tightens the Barrel corset on the DestinationCharacter body.
 SourceCharacter收紧了DestinationCharacter身上的桶式束身衣。
+SourceCharacter Action the webbing on TargetCharacter, forming a cocoon.
+SourceCharacter用网把TargetCharacter包成了茧状
+SourceCharacter wraps TargetCharacter in webbing, forming a hogtie.
+SourceCharacter用网把TargetCharacter包成了驷马
+SourceCharacter cocoons TargetCharacter in webbing and hangs TargetPronounObject from the ceiling.
+SourceCharacter用网把TargetCharacter包成了茧状，顺手把TargetPronounObject挂了起来
+SourceCharacter fully wraps TargetCharacter in webbing and uses it to suspend TargetPronounObject.
+SourceCharacter用网把TargetCharacter包成了一团，顺手把TargetPronounObject挂了起来
+SourceCharacter hogties TargetCharacter with the webbing and uses it to suspend TargetPronounObject.
+SourceCharacter用网把TargetCharacter包成了驷马，顺手把TargetPronounObject挂了起来
+SourceCharacter Action the webbing on TargetCharacter, tangling them.
+SourceCharacter用网把TargetCharacter包了起来
+SourceCharacter Action the webbing on TargetCharacter, leaving them fully wrapped.
+SourceCharacter用网把TargetCharacter包成了一团
+SourceCharacter pulls out the dildo plug from DestinationCharacter gag.
+SourceCharacter从DestinationCharacter口塞里拔出了假阳具塞子。
+SourceCharacter adjusts the strap on DestinationCharacter collar cuffs to normal.
+SourceCharacter普通地调整DestinationCharacter项圈手铐上的束带。
+SourceCharacter adjusts the chain on DestinationCharacter metal collar cuffs to normal.
+SourceCharacter将DestinationCharacter金属项圈铐的链条调整为普通紧。
+SourceCharacter uses the straps on TargetCharacter to do a boxtie harness.
+SourceCharacter用束带给TargetCharacter绑了一个后手缚束缚带。
+SourceCharacter uses the straps on TargetCharacter to do a hogtie harness.
+SourceCharacter用束带给TargetCharacter绑了一个驷马缚。
+SourceCharacter uses wooden cuffs to lock TargetCharacter in a rigid hogtie.
+SourceCharacter用木质铐将TargetCharacter锁成结实的驷马缚。
+SourceCharacter puts a pair of Torment Shoes on DestinationCharacter feet.
+SourceCharacter给DestinationCharacter脚上穿上了折磨鞋子
+SourceCharacter puts a pair of Torment Boots on DestinationCharacter feet.
+SourceCharacter给DestinationCharacter脚上穿上了折磨靴子
+SourceCharacter turns off the Torment Heels vibration feature on DestinationCharacter feet.
+SourceCharacter关闭了DestinationCharacter脚上的折磨高跟鞋的振动功能
+SourceCharacter sets the Torment Heels vibration feature to Low on DestinationCharacter feet.
+SourceCharacter将DestinationCharacter脚上的折磨高跟鞋的振动功能设置为：低
+SourceCharacter sets the Torment Heels vibration feature to Mid on DestinationCharacter feet.
+SourceCharacter将DestinationCharacter脚上的折磨高跟鞋的振动功能设置为：中
+SourceCharacter sets the Torment Heels vibration feature to Hi on DestinationCharacter feet.
+SourceCharacter将DestinationCharacter脚上的折磨高跟鞋的振动功能设置为：高
+SourceCharacter sets the Torment Heels vibration feature to Max on DestinationCharacter feet.
+SourceCharacter将DestinationCharacter脚上的折磨高跟鞋的振动功能设置为：最大
+SourceCharacter changes the medical patches on DestinationCharacter eyes.
+SourceCharacter改变了DestinationCharacter双眼上的医用胶布
+SourceCharacter changes the sticker on DestinationCharacter left eye.
+SourceCharacter改变了DestinationCharacter左眼上的医用胶布
+SourceCharacter changes the sticker on DestinationCharacter right eye.
+SourceCharacter改变了DestinationCharacter右眼上的医用胶布
+SourceCharacter creates a blindfold out of web for TargetCharacter.
+SourceCharacter用网给TargetCharacter织了一副眼罩
+SourceCharacter creates a cocoon out of web for TargetCharacter.
+SourceCharacter把TargetCharacter的头完全裹在了茧里
+SourceCharacter put a gag on DestinationCharacter gag.
+SourceCharacter改变DestinationCharacter面罩为口塞。
+SourceCharacter put a mask on DestinationCharacter gag.
+SourceCharacter改变DestinationCharacter口塞为面罩。
+SourceCharacter uses the straps on TargetCharacter to create a crotch strap.
+SourceCharacter使用束带给TargetCharacter绑上了胯部束带。
+SourceCharacter uses the straps on TargetCharacter to create a harness.
+SourceCharacter使用束带给TargetCharacter绑了一个身体束带。
+SourceCharacter uses the straps on TargetCharacter to create a waist strap.
+SourceCharacter使用束带给TargetCharacter绑了一个腰部束带。
+You find confidential club secrets worth $MONEYAMOUNT on the black market.
+你找到了俱乐部的机密，在黑市上价值 MONEYAMOUNT$ 。
+SourceCharacter pulls out the plug from DestinationCharacter gag.
+SourceCharacter从DestinationCharacter口塞中拔出塞子。
+SourceCharacter attaches a ball gag to DestinationCharacter gag harness.
+SourceCharacter将口球连接到DestinationCharacter口球带上。
+SourceCharacter attaches a ring gag to DestinationCharacter gag harness.
+SourceCharacter将环形口塞附加到DestinationCharacter口塞线束上。
+SourceCharacter buckles the suit collar on DestinationCharacterName neck.
+SourceCharacter将单手套服项圈从DestinationCharacterName扣在了脖子上。
+SourceCharacter adds harness straps around DestinationCharacterName shoulders.
+SourceCharacter在DestinationCharacterName肩部添加了一些安全带。
+SourceCharacter closes DestinationCharacterName suit zipper.
+SourceCharacter拉上了DestinationCharacterName拉链。
+SourceCharacter completely binds DestinationCharacterName upper legs with more belts.
+SourceCharacter使用更多皮带将DestinationCharacterName 的大腿完全绑住。
+SourceCharacter puts a single heel boot on DestinationCharacterName feet.
+SourceCharacter为DestinationCharacterName脚穿上单跟靴。
+SourceCharacter tightens DestinationCharacterName single heel boot with another belt.
+SourceCharacter用另一条腰带将DestinationCharacterName单跟靴紧身。
+SourceCharacter chains DestinationCharacterName single heel boot to the ground.
+SourceCharacter将DestinationCharacterName单跟靴拴在地面上。
+SourceCharacter gags TargetCharacter with a single piece of duct tape.
+SourceCharacter用一条胶带将TargetCharacter堵住。
+SourceCharacter exposes DestinationCharacter legs opening the EW's hatch.
+SourceCharacter打开专属女仆的舱口，暴露DestinationCharacter腿。
+SourceCharacter closes the EW's with window glass leaving DestinationCharacter legs visible.
+SourceCharacter用关闭了专属女仆的窗户玻璃，使DestinationCharacter腿可见。
+SourceCharacter removes the EW's sunshade behind TargetCharacter.
+SourceCharacter从TargetCharacter后面移除了专属女仆的遮阳伞。
+SourceCharacter installs the EW's sunshade behind TargetCharacter.
+SourceCharacter在TargetCharacter后面安装了专属女仆的遮阳伞。
+SourceCharacter allows TargetCharacter to operate EW device in the autonomous mode (LED ON).
+SourceCharacter允许TargetCharacter在自动模式下操作专属女仆设备（LED开启）。
+SourceCharacter sets EW device in follow mode. Now TargetCharacter can be leashed and dragged anywhere (LED ON).
+SourceCharacter设置专属女仆设备为跟随模式。现在TargetCharacter可以被拴住并拖到任何地方（LED开启）。
+SourceCharacter disables the EW's levitate system. TargetCharacter is grounded now (LED ON).
+SourceCharacter禁用了专属女仆设备的悬浮系统。TargetCharacter现在无法移动了（LED开启）。
+SourceCharacter allows TargetCharacter to operate EW device in the autonomous mode (LED OFF).
+SourceCharacter允许TargetCharacter在自动模式下操作专属女仆设备（LED关闭）。
+SourceCharacter sets EW device in follow mode. Now TargetCharacter can be leashed and dragged anywhere (LED OFF).
+SourceCharacter设置专属女仆设备为跟随模式。现在TargetCharacter可以被拴住并拖到任何地方（LED关闭）。
+SourceCharacter disables the EW's levitate system. TargetCharacter is grounded now (LED OFF).
+SourceCharacter禁用了专属女仆设备的悬浮系统。TargetCharacter现在无法移动了（LED关闭）。
+SourceCharacter removes the padded layer under DestinationCharacter Asylum Muzzle.
+SourceCharacter移除了DestinationCharacter收容所口罩下的垫层。
+SourceCharacter adds a padded layer under DestinationCharacter Asylum Muzzle.
+SourceCharacter在DestinationCharacter收容所口罩下添加了垫层。
+Engrave up to two characters
+最多可刻两个字符
+Configure the mittens
+设置连指手套
+Arm Chains
+臂链
+Leg Chains
+腿链
+Set Height
+设置高度
+Configure the arm chains
+设置臂链
+Configure the leg chains
+设置腿链
+Configure the height
+调整高度
+No Height
+无高度偏移
+SourceCharacter unchains DestinationCharacter arms.
+SourceCharacter解开了DestinationCharacter手臂上的链条。
+SourceCharacter chains DestinationCharacter arms.
+SourceCharacter用链条锁住了DestinationCharacter的手臂。
+SourceCharacter unchains DestinationCharacter legs.
+SourceCharacter解开了DestinationCharacter腿上的链条。
+SourceCharacter chains DestinationCharacter legs.
+SourceCharacter用链条锁住了DestinationCharacter的双腿。
+SourceCharacter restored DestinationCharacter height.
+SourceCharacter恢复了DestinationCharacter原来的高度。
+SourceCharacter adjusted DestinationCharacter height.
+SourceCharacter调整了DestinationCharacter的高度。
+Configure the pillow
+设置束缚枕
+Configure the restraints
+设置束具
+Configure the clitoris vibrator
+设置阴蒂振动器
+Configure the nipples vibrator
+设置乳头振动器
+Clitoris Vib.
+阴蒂振动
+Nipples Vib.
+乳头振动
+Wrist Straps
+腕带
+Invisible Straps
+隐形绑带
+SourceCharacter removes the wrist straps on DestinationCharacter pillow.
+SourceCharacter解开了DestinationCharacter束缚枕上的腕带。
+SourceCharacter ties the wrist straps on DestinationCharacter pillow.
+SourceCharacter系紧了DestinationCharacter束缚枕上的腕带。
+SourceCharacter ties the invisible wrist straps on DestinationCharacter pillow.
+SourceCharacter系紧了DestinationCharacter束缚枕上的隐形腕带。
+SourceCharacter stops the clitoris vibrator on DestinationCharacter pillow.
+SourceCharacter关闭了DestinationCharacter束缚枕上的阴蒂振动器。
+SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to low.
+SourceCharacter把DestinationCharacter束缚枕上的阴蒂振动器调到了低档。
+SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to medium.
+SourceCharacter把DestinationCharacter束缚枕上的阴蒂振动器调到了中档。
+SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to high.
+SourceCharacter把DestinationCharacter束缚枕上的阴蒂振动器调到了高档。
+SourceCharacter sets the clitoris vibrator on DestinationCharacter pillow to maximum.
+SourceCharacter把DestinationCharacter束缚枕上的阴蒂振动器调到了最高档。
+SourceCharacter stops the nipples vibrator on DestinationCharacter pillow.
+SourceCharacter关闭了DestinationCharacter束缚枕上的乳头振动器。
+SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to low.
+SourceCharacter把DestinationCharacter束缚枕上的乳头振动器调到了低档。
+SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to medium.
+SourceCharacter把DestinationCharacter束缚枕上的乳头振动器调到了中档。
+SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to high.
+SourceCharacter把DestinationCharacter束缚枕上的乳头振动器调到了高档。
+SourceCharacter sets the nipples vibrator on DestinationCharacter pillow to maximum.
+SourceCharacter把DestinationCharacter束缚枕上的乳头振动器调到了最高档。
+Configure the punching bag
+设置拳击沙袋
+Attach Photo
+贴上照片
+No Photo
+无照片
+SourceCharacter attaches a photo on DestinationCharacter punching bag.
+SourceCharacter在DestinationCharacter的拳击沙袋上贴了一张照片。
+SourceCharacter removes the photo on DestinationCharacter punching bag.
+SourceCharacter取下了DestinationCharacter拳击沙袋上的照片。
+Configure the stuffed bear
+设置毛绒熊
+Configure the glass tube
+设置玻璃管
+Set the window
+设置观察窗
+Set the leg restraint
+设置腿部束具
+Set the arm restraint
+设置手臂束具
+Set the tube
+设置管道
+Set the liquid
+设置液体
+Set the pleasure module
+设置快感模块
+Set the electro module
+设置电刺激模块
+Set the orgasm control
+设置高潮控制
+Window
+观察窗
+Leg Restraint
+腿部束具
+Arm Restraint
+手臂束具
+Liquid
+液体
+Pleasure
+快感
+Electro
+电刺激
+Orgasm
+高潮
+Glass
+玻璃
+Attach
+连接
+Fill
+注满
+Maxium
+最大
+SourceCharacter uses a glass window on DestinationCharacter tube.
+SourceCharacter为DestinationCharacter的管舱装上玻璃观察窗。
+SourceCharacter seals the window on DestinationCharacter tube.
+SourceCharacter封住了DestinationCharacter管舱的观察窗。
+SourceCharacter removes the leg belts from DestinationCharacter glass tube.
+SourceCharacter拆下了DestinationCharacter玻璃管内的腿带。
+SourceCharacter adds the leg belts in DestinationCharacter glass tube.
+SourceCharacter装上了DestinationCharacter玻璃管内的腿带。
+SourceCharacter removes the body harness from DestinationCharacter glass tube.
+SourceCharacter拆下了DestinationCharacter玻璃管内的身体束带。
+SourceCharacter adds the body harness in DestinationCharacter glass tube.
+SourceCharacter装上了DestinationCharacter玻璃管内的身体束带。
+SourceCharacter removes the inner tubes from DestinationCharacter glass tube.
+SourceCharacter拆下了DestinationCharacter玻璃管内的内管。
+SourceCharacter attaches the inner tubes in DestinationCharacter glass tube.
+SourceCharacter装上了DestinationCharacter玻璃管内的内管。
+SourceCharacter drains the liquid from DestinationCharacter glass tube.
+SourceCharacter排空了DestinationCharacter玻璃管内的液体。
+SourceCharacter fills DestinationCharacter glass tube with liquid.
+SourceCharacter把DestinationCharacter的玻璃管注满液体。
+SourceCharacter stops the pleasure module on DestinationCharacter glass tube.
+SourceCharacter关闭了DestinationCharacter玻璃管上的快感模块。
+SourceCharacter sets the pleasure module to low on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的快感模块调到低档。
+SourceCharacter sets the pleasure module to medium on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的快感模块调到中档。
+SourceCharacter sets the pleasure module to high on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的快感模块调到高档。
+SourceCharacter sets the pleasure module to maximum on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的快感模块调到最高档。
+SourceCharacter stops the electro module on DestinationCharacter glass tube.
+SourceCharacter关闭了DestinationCharacter玻璃管上的电刺激模块。
+SourceCharacter sets the electro module to low on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的电刺激模块调到低档。
+SourceCharacter sets the electro module to medium on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的电刺激模块调到中档。
+SourceCharacter sets the electro module to high on DestinationCharacter glass tube.
+SourceCharacter把DestinationCharacter玻璃管的电刺激模块调到高档。
+SourceCharacter configures DestinationCharacter glass tube to allow orgasms.
+SourceCharacter将DestinationCharacter的玻璃管设为允许高潮。
+SourceCharacter configures DestinationCharacter glass tube to deny orgasms.
+SourceCharacter将DestinationCharacter的玻璃管设为禁止高潮。
+SourceCharacter configures DestinationCharacter glass tube to edge orgasms.
+SourceCharacter将DestinationCharacter的玻璃管设为维持高潮边缘。
+Configure the case
+设置箱体
+Configure the cover
+设置箱盖
+Configure the latex bag
+设置乳胶袋
+Cover
+盖子
+Latex Bag
+乳胶袋
+No Cover
+无盖
+Open Cover
+打开箱盖
+Close Cover
+关闭箱盖
+Expose Belly
+露出腹部
+Expose Head
+露出头部
+Use
+使用
+Don't Use
+不使用
+SourceCharacter removes the cover on DestinationCharacter case.
+SourceCharacter移除了DestinationCharacter的箱盖。
+SourceCharacter opens the cover on DestinationCharacter case.
+SourceCharacter打开了DestinationCharacter的箱盖。
+SourceCharacter closes the cover on DestinationCharacter case.
+SourceCharacter关上了DestinationCharacter的箱盖。
+SourceCharacter exposes the belly on DestinationCharacter case.
+SourceCharacter打开箱体，让DestinationCharacter露出腹部。
+SourceCharacter exposes the head on DestinationCharacter case.
+SourceCharacter打开箱体，让DestinationCharacter露出头部。
+SourceCharacter uses a latex bag in DestinationCharacter case.
+SourceCharacter在DestinationCharacter的箱内装上乳胶袋。
+SourceCharacter removes the latex bag in DestinationCharacter case.
+SourceCharacter取出了DestinationCharacter箱内的乳胶袋。
+Configure the stand
+设置展示架
+Configure the arms pose
+设置手臂姿势
+Configure the mouth bar
+设置口杆
+Configure the genital prop
+设置生殖器支架
+Arms Pose
+手臂姿势
+Mouth Bar
+口杆
+Genital Prop
+生殖器支架
+Behind Back
+背在身后
+Metal Bar
+金属杆
+Metal Prop
+金属支架
+Reset Height
+重置高度
+Customize
+自定义
+SourceCharacter adjusts DestinationCharacter arms in the stand.
+SourceCharacter调整了DestinationCharacter在展示架上的手臂姿势。
+SourceCharacter removes the mouth bar on DestinationCharacter stand.
+SourceCharacter拆下了DestinationCharacter展示架上的口杆。
+SourceCharacter adds a mouth bar on DestinationCharacter stand.
+SourceCharacter装上了DestinationCharacter展示架上的口杆。
+SourceCharacter removes the genital prop on DestinationCharacter stand.
+SourceCharacter拆下了DestinationCharacter展示架上的生殖器支架。
+SourceCharacter adds a genital prop on DestinationCharacter stand.
+SourceCharacter装上了DestinationCharacter展示架上的生殖器支架。
+SourceCharacter resets the height on DestinationCharacter stand.
+SourceCharacter重置了DestinationCharacter展示架的高度。
+SourceCharacter changes the height on DestinationCharacter stand.
+SourceCharacter调整了DestinationCharacter展示架的高度。
+Configure the device
+设置装置
+Set the leg pose
+设置腿部姿势
+Set the dildo insertion speed or position
+设置假阳具的插入速度或位置
+Leg Pose
+腿部姿势
+Dildo Speed
+假阳具速度
+Stop Lowest
+停在最低处
+Stop Highest
+停在最高处
+Slow
+慢速
+Fast
+快速
+SourceCharacter opens the legs on DestinationCharacter one bar prison.
+SourceCharacter调整了单杆牢笼，让DestinationCharacter张开双腿。
+SourceCharacter closes the legs on DestinationCharacter one bar prison.
+SourceCharacter调整了单杆牢笼，让DestinationCharacter合拢双腿。
+SourceCharacter spreads the legs on DestinationCharacter one bar prison.
+SourceCharacter调整了单杆牢笼，让DestinationCharacter大幅分开双腿。
+SourceCharacter stops the dildo at the lowest position on DestinationCharacter one bar prison.
+SourceCharacter让DestinationCharacter单杆牢笼上的假阳具停在最低处。
+SourceCharacter stops the dildo at the highest position on DestinationCharacter one bar prison.
+SourceCharacter让DestinationCharacter单杆牢笼上的假阳具停在最高处。
+SourceCharacter sets the dildo insertion to slow speed on DestinationCharacter one bar prison.
+SourceCharacter让DestinationCharacter单杆牢笼上的假阳具以低速插入。
+SourceCharacter sets the dildo insertion to medium speed on DestinationCharacter one bar prison.
+SourceCharacter让DestinationCharacter单杆牢笼上的假阳具以中速插入。
+SourceCharacter sets the dildo insertion to fast speed on DestinationCharacter one bar prison.
+SourceCharacter让DestinationCharacter单杆牢笼上的假阳具以高速插入。
+Configure the trash can
+设置垃圾桶
+Close Lid
+关闭桶盖
+Open Flap
+打开翻盖
+Open Lid
+打开桶盖
+SourceCharacter opened DestinationCharacter trash can lid
+SourceCharacter打开了DestinationCharacter的垃圾桶盖。
+SourceCharacter opened DestinationCharacter trash can flap
+SourceCharacter打开了DestinationCharacter垃圾桶的翻盖。
+SourceCharacter closed DestinationCharacter trash can lid
+SourceCharacter关上了DestinationCharacter的垃圾桶盖。
+Wear Head
+戴上头套
+Remove Head
+摘下头套
+Configure the stuffed unicorn
+设置毛绒独角兽
+SourceCharacter puts the head on TargetCharacter stuffed unicorn.
+SourceCharacter为TargetCharacter的毛绒独角兽装上头套。
+SourceCharacter removes the head on TargetCharacter stuffed unicorn.
+SourceCharacter取下了TargetCharacter毛绒独角兽的头套。
+Frog Hat
+青蛙帽
+Nob
+顶饰
+Sides
+两侧
+Default Nob
+默认顶饰
+Crystal Nob
+水晶顶饰
+Empty Sides
+两侧无装饰
+Crystal Balls
+水晶球
+Shown
+显示
+Customise your Frog Hat
+自定义青蛙帽
+Select Nob Style
+选择顶饰样式
+Select Side Decoration
+选择侧面装饰
+Select Tongue
+选择舌头
+SourceCharacter uses the straps on TargetCharacter to do a wrist strap.
+SourceCharacter用绑带绑住TargetCharacter的手腕。
+SourceCharacter uses the straps on TargetCharacter to do a wrist and elbow straps.
+SourceCharacter用绑带绑住TargetCharacter的手腕和手肘。
+SourceCharacter uses the straps on TargetCharacter to do a wrist and elbow harness.
+SourceCharacter用绑带为TargetCharacter系上腕肘束具。
+SourceCharacter attaches shorts to DestinationCharacter AssetName.
+SourceCharacter为DestinationCharacter的AssetName装上短裤。
+SourceCharacter attaches shorts and reinforcing straps to DestinationCharacter AssetName.
+SourceCharacter为DestinationCharacter的AssetName装上短裤和加固带。
+SourceCharacter removes the shorts from DestinationCharacter AssetName.
+SourceCharacter从DestinationCharacter的AssetName上拆下短裤。
+SourceCharacter removes the reinforcing straps from DestinationCharacter AssetName.
+SourceCharacter从DestinationCharacter的AssetName上拆下加固带。
+SourceCharacter reinforces DestinationCharacter AssetName with sturdy straps.
+SourceCharacter用结实的绑带加固了DestinationCharacter的AssetName。
+SourceCharacter changes the text orientation of DestinationCharacter AssetName.
+SourceCharacter更改了DestinationCharacter的AssetName上的文字方向。
+Handle hole
+提手孔
+Flaps
+箱盖折片
+Configure the box.
+设置纸箱
+Toggle the handle hole on the box.
+切换纸箱提手孔
+Select the box tabs' position.
+选择纸箱折片的位置
+Write something on the box.
+在纸箱上写字
+No hole
+无提手孔
+Handle on
+启用提手孔
+Taped down
+用胶带封住
+Nothing written
+无字
+SourceCharacter plugs the handle hole on DestinationCharacter box.
+SourceCharacter堵住了DestinationCharacter纸箱上的提手孔。
+SourceCharacter opens the handle hole on DestinationCharacter box.
+SourceCharacter打开了DestinationCharacter纸箱上的提手孔。
+SourceCharacter opens DestinationCharacter box.
+SourceCharacter打开了DestinationCharacter的纸箱。
+SourceCharacter closes DestinationCharacter box up.
+SourceCharacter合上了DestinationCharacter的纸箱。
+SourceCharacter tapes DestinationCharacter box shut.
+SourceCharacter用胶带封住了DestinationCharacter的纸箱。
+SourceCharacter erases everything written down on DestinationCharacter box.
+SourceCharacter擦去了DestinationCharacter纸箱上的所有文字。
+SourceCharacter writes something down on DestinationCharacter box.
+SourceCharacter在DestinationCharacter的纸箱上写了些字。
+Modern
+现代
+Wooden
+木质
+SourceCharacter changes the style of DestinationCharacter bar stool.
+SourceCharacter更改了DestinationCharacter吧台凳的样式。
+Seat
+座位
+Sit on the stool or hop off
+坐上或跳下凳子
+Sitting
+坐在凳上
+Hopped Off
+已跳下
+SourceCharacter moves DestinationCharacter bar stool.
+SourceCharacter移动了DestinationCharacter的吧台凳。
+Decal
+贴花
+Select a decal for the seat
+选择座位贴花
+SourceCharacter changes the decal on DestinationCharacter bar stool.
+SourceCharacter更换了DestinationCharacter吧台凳上的贴花。
+SourceCharacter gives TargetCharacter a plain fan.
+SourceCharacter递给TargetCharacter素面折扇。
+SourceCharacter gives TargetCharacter a plum fan.
+SourceCharacter递给TargetCharacter梅花扇。
+SourceCharacter gives TargetCharacter an orchid fan.
+SourceCharacter递给TargetCharacter兰花扇。
+SourceCharacter gives TargetCharacter a bamboo fan.
+SourceCharacter递给TargetCharacter竹纹扇。
+SourceCharacter gives TargetCharacter a chrysanthemum fan.
+SourceCharacter递给TargetCharacter菊花扇。
+SourceCharacter gives TargetCharacter a scenery fan.
+SourceCharacter递给TargetCharacter山水扇。
+SourceCharacter gives TargetCharacter a text fan.
+SourceCharacter递给TargetCharacter题字扇。
+SourceCharacter gives TargetCharacter a five spices sausage.
+SourceCharacter递给TargetCharacter五香香肠。
+SourceCharacter gives TargetCharacter a smoky honey sausage.
+SourceCharacter递给TargetCharacter烟熏蜂蜜香肠。
+SourceCharacter opens DestinationCharacter AssetName and finds a gold ticket inside!
+SourceCharacter打开DestinationCharacter的AssetName，在里面发现了一张金券！
+SourceCharacter gives TargetCharacter an AssetName with a bamboo pattern.
+SourceCharacter递给TargetCharacter一件竹纹的AssetName。
+SourceCharacter gives TargetCharacter an AssetName with a cartoon pattern.
+SourceCharacter递给TargetCharacter一件卡通图案的AssetName。
+SourceCharacter gives TargetCharacter an AssetName with a flower pattern.
+SourceCharacter递给TargetCharacter一件花卉图案的AssetName。
+SourceCharacter gives TargetCharacter an AssetName with a landscape pattern.
+SourceCharacter递给TargetCharacter一件山水图案的AssetName。
+SourceCharacter gives TargetCharacter an AssetName with no pattern.
+SourceCharacter递给TargetCharacter一件无图案的AssetName。
+SourceCharacter changes the case on DestinationCharacter phone.
+SourceCharacter更换了DestinationCharacter的手机壳。
+Configure the latex hood
+设置乳胶头套
+Vision
+视野
+Front Hair
+前发
+Back Hair
+后发
+Acc. & Ears
+饰品和耳朵
+Allow or block vision
+允许或遮挡视线
+Block
+遮挡
+Show or hide front hair
+显示或隐藏前发
+Show or hide back hair
+显示或隐藏后发
+Show or hide accessories & ears
+显示或隐藏饰品和耳朵
+Wearing position
+佩戴位置
+SourceCharacter changes DestinationCharacter latex hood to allow vision.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其允许看见外面。
+SourceCharacter changes DestinationCharacter latex hood to block vision.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其遮挡视线。
+SourceCharacter changes DestinationCharacter latex hood to show front hair.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其露出前发。
+SourceCharacter changes DestinationCharacter latex hood to hide front hair.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其遮住前发。
+SourceCharacter changes DestinationCharacter latex hood to show back hair.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其露出后发。
+SourceCharacter changes DestinationCharacter latex hood to hide back hair.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其遮住后发。
+SourceCharacter changes DestinationCharacter latex hood to show ears and accessories.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其露出耳朵和饰品。
+SourceCharacter changes DestinationCharacter latex hood to hide ears and accessories.
+SourceCharacter调整了DestinationCharacter的乳胶头套，使其遮住耳朵和饰品。
+SourceCharacter changes DestinationCharacter latex hood wearing position.
+SourceCharacter调整了DestinationCharacter乳胶头套的佩戴位置。
+Front attachment
+前部配件
+Select a cap for the front attachment point.
+选择前部连接点的端盖
+SourceCharacter removes DestinationCharacter front cap.
+SourceCharacter拆下了DestinationCharacter的前端盖。
+SourceCharacter adds a Cybertech Corporation cap to DestinationCharacter mask.
+SourceCharacter为DestinationCharacter的面罩装上赛博科技公司端盖。
+SourceCharacter adds a Bellflower Consortium cap to DestinationCharacter mask.
+SourceCharacter为DestinationCharacter的面罩装上风铃草联盟端盖。
+Cybertech
+赛博科技
+Bellflower
+风铃草
+Configure your shock device
+设置电击装置
+Anal Plug
+肛塞
+Vaginal Plug
+阴道塞
+Thigh Patch
+大腿贴片
+Abdomen Patch
+下腹贴片
+Configure the anal shock plug
+设置电击肛塞
+Configure the vaginal shock plug
+设置电击阴道塞
+Configure the inner thigh patch
+设置大腿内侧贴片
+Configure the lower abdomen patch
+设置下腹贴片
+Plug
+塞子
+Patch
+贴片
+SourceCharacter removes the anal plug from DestinationCharacter AssetName.
+SourceCharacter取下了DestinationCharacter的AssetName上的肛塞。
+SourceCharacter inserts the anal plug from DestinationCharacter AssetName.
+SourceCharacter装上了DestinationCharacter的AssetName上的肛塞。
+SourceCharacter removes the vaginal plug from DestinationCharacter AssetName.
+SourceCharacter取下了DestinationCharacter的AssetName上的阴道塞。
+SourceCharacter inserts the vaginal plug from DestinationCharacter AssetName.
+SourceCharacter装上了DestinationCharacter的AssetName上的阴道塞。
+SourceCharacter removes the inner thigh patch from DestinationCharacter AssetName.
+SourceCharacter取下了DestinationCharacter的AssetName上的大腿内侧贴片。
+SourceCharacter installs the inner thigh patch from DestinationCharacter AssetName.
+SourceCharacter装上了DestinationCharacter的AssetName上的大腿内侧贴片。
+SourceCharacter removes the lower abdomen patch from DestinationCharacter AssetName.
+SourceCharacter取下了DestinationCharacter的AssetName上的下腹贴片。
+SourceCharacter installs the lower abdomen patch from DestinationCharacter AssetName.
+SourceCharacter装上了DestinationCharacter的AssetName上的下腹贴片。
+No Chain
+无链条
+Configure the candy bucket chains
+设置糖果桶的链条
+SourceCharacter removes the nipple chains from DestinationCharacter pumpkin candy bucket.
+SourceCharacter从DestinationCharacter的南瓜糖果桶上拆下乳头链。
+SourceCharacter adds nipple chains to DestinationCharacter pumpkin candy bucket.
+SourceCharacter为DestinationCharacter的南瓜糖果桶装上乳头链。
+Configure the belt
+设置腰带
+Configure the shield
+设置护板
+Configure the orgasm module
+设置高潮模块
+Open All
+全部打开
+Close Rear
+关闭后部
+Close All
+全部关闭
+SourceCharacter opens the shield on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上打开了护板。
+SourceCharacter closes the front shield on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上关闭了前护板。
+SourceCharacter closes the rear shield on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上关闭了后护板。
+SourceCharacter closes all shields on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上关闭了所有护板。
+SourceCharacter configures DestinationCharacter AssetName to allow orgasms.
+SourceCharacter把DestinationCharacter的AssetName设为允许高潮。
+SourceCharacter configures DestinationCharacter AssetName to deny orgasms.
+SourceCharacter把DestinationCharacter的AssetName设为禁止高潮。
+SourceCharacter configures DestinationCharacter AssetName to edge orgasms.
+SourceCharacter把DestinationCharacter的AssetName设为维持高潮边缘。
+DestinationCharacterName AssetName plug(s) are slightly inflated and are teasing TargetCharacter with every move.
+DestinationCharacterName的AssetName内的塞子微微膨胀，TargetCharacter每次活动都会受到挑逗。
+DestinationCharacterName AssetName plug(s) are inflated and are heavily teasing TargetCharacter with every move.
+DestinationCharacterName的AssetName内的塞子已经膨胀，TargetCharacter每次活动都会受到强烈刺激。
+Lower Door
+下门
+Upper Door
+上门
+Glass Type
+玻璃类型
+Configure the glass cabinet
+设置玻璃柜
+Select the glass type
+选择玻璃类型
+Upper glass door
+上层玻璃门
+Lower glass door
+下层玻璃门
+SourceCharacter replaced DestinationCharacter AssetName with a transparent glass.
+SourceCharacter为DestinationCharacter的AssetName换上透明玻璃。
+SourceCharacter replaced DestinationCharacter AssetName with an opaque glass.
+SourceCharacter为DestinationCharacter的AssetName换上不透明玻璃。
+SourceCharacter closed the upper glass door on DestinationCharacter.
+SourceCharacter关上了DestinationCharacter的上层玻璃门。
+SourceCharacter opened the glass door on DestinationCharacter.
+SourceCharacter打开了DestinationCharacter的玻璃门。
+SourceCharacter closed the lower glass door on DestinationCharacter.
+SourceCharacter关上了DestinationCharacter的下层玻璃门。
+SourceCharacter opened the lower glass door on DestinationCharacter.
+SourceCharacter打开了DestinationCharacter的下层玻璃门。
+Nylon
+尼龙
+Arms fabric configuration
+设置手臂面料
+Sheer
+薄纱
+SourceCharacter sets DestinationCharacter AssetName to no arms fabric.
+SourceCharacter把DestinationCharacter的AssetName的手臂部分设为无面料。
+SourceCharacter sets DestinationCharacter AssetName to sheer arms fabric.
+SourceCharacter把DestinationCharacter的AssetName的手臂部分设为薄纱。
+SourceCharacter sets DestinationCharacter AssetName to latex arms fabric.
+SourceCharacter把DestinationCharacter的AssetName的手臂部分设为乳胶。
+SourceCharacter sets DestinationCharacter AssetName to nylon arms fabric.
+SourceCharacter把DestinationCharacter的AssetName的手臂部分设为尼龙。
+Configure the tentacle suit
+设置触手装
+Configure the suit top
+设置上衣
+Configure the suit mouth cover
+设置口罩
+Configure the suit arms
+设置手臂部分
+Configure the suit legs
+设置腿部
+Configure the suit genitals
+设置生殖器部分
+Genitals
+生殖器
+Seal
+封闭
+Expose
+露出
+Tentacle
+触手
+Bind
+束缚
+SourceCharacter sets DestinationCharacter AssetName to expose the genitals.
+SourceCharacter调整了DestinationCharacter的AssetName，使其露出生殖器。
+SourceCharacter sets DestinationCharacter AssetName to seal the genitals.
+SourceCharacter调整了DestinationCharacter的AssetName，使其封住生殖器。
+SourceCharacter sets DestinationCharacter AssetName to plug the genitals with a tentacle.
+SourceCharacter调整了DestinationCharacter的AssetName，使其用触手塞住生殖器。
+SourceCharacter sets DestinationCharacter AssetName to hide the top.
+SourceCharacter调整了DestinationCharacter的AssetName，使其隐藏上衣。
+SourceCharacter sets DestinationCharacter AssetName to display the top.
+SourceCharacter调整了DestinationCharacter的AssetName，使其显示上衣。
+SourceCharacter sets DestinationCharacter AssetName to hide the arms.
+SourceCharacter调整了DestinationCharacter的AssetName，使其隐藏手臂部分。
+SourceCharacter sets DestinationCharacter AssetName to display the arms.
+SourceCharacter调整了DestinationCharacter的AssetName，使其显示手臂部分。
+SourceCharacter sets DestinationCharacter AssetName to bind the arms.
+SourceCharacter调整了DestinationCharacter的AssetName，使其束缚双臂。
+SourceCharacter sets DestinationCharacter AssetName to uncover the mouth.
+SourceCharacter调整了DestinationCharacter的AssetName，使其露出嘴巴。
+SourceCharacter sets DestinationCharacter AssetName to cover the mouth.
+SourceCharacter调整了DestinationCharacter的AssetName，使其遮住嘴巴。
+SourceCharacter sets DestinationCharacter AssetName to hide the legs.
+SourceCharacter调整了DestinationCharacter的AssetName，使其隐藏腿部。
+SourceCharacter sets DestinationCharacter AssetName to display the legs.
+SourceCharacter调整了DestinationCharacter的AssetName，使其显示腿部。
+Configure the vibrators
+设置振动器
+Set the number of vibrators
+设置振动器数量
+Set the vibration speed
+设置振动速度
+Speed
+速度
+Quantity
+数量
+1 Vibrator
+1 个振动器
+2 Vibrators
+2 个振动器
+3 Vibrators
+3 个振动器
+4 Vibrators
+4 个振动器
+5 Vibrators
+5 个振动器
+SourceCharacter sets DestinationCharacter AssetName vibration to: Off.
+SourceCharacter把DestinationCharacter的AssetName的振动设为关闭。
+SourceCharacter sets DestinationCharacter AssetName vibration to: Low.
+SourceCharacter把DestinationCharacter的AssetName的振动设为低档。
+SourceCharacter sets DestinationCharacter AssetName vibration to: Medium.
+SourceCharacter把DestinationCharacter的AssetName的振动设为中档。
+SourceCharacter sets DestinationCharacter AssetName vibration to: High.
+SourceCharacter把DestinationCharacter的AssetName的振动设为高档。
+SourceCharacter sets DestinationCharacter AssetName vibration to: Maximum.
+SourceCharacter把DestinationCharacter的AssetName的振动设为最高档。
+SourceCharacter uses 1 vibrator on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上使用了 1 个振动器。
+SourceCharacter uses 2 vibrators on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上使用了 2 个振动器。
+SourceCharacter uses 3 vibrators on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上使用了 3 个振动器。
+SourceCharacter uses 4 vibrators on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上使用了 4 个振动器。
+SourceCharacter uses 5 vibrators on DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上使用了 5 个振动器。
+SourceCharacter turns off arousal punishment mode on DestinationCharacter AssetName.
+SourceCharacter关闭了DestinationCharacter的AssetName的兴奋惩罚模式。
+SourceCharacter turns on arousal punishment mode on DestinationCharacter AssetName.
+SourceCharacter开启了DestinationCharacter的AssetName的兴奋惩罚模式。
+DestinationCharacterName AssetName detects arousal and warns SourceCharacter to calm down within the next 5 minutes.
+DestinationCharacterName的AssetName检测到兴奋反应，警告SourceCharacter在五分钟内冷静下来。
+SourceCharacter's leash slips off the post, with nobody left to keep it there.
+无人看管，SourceCharacter的牵绳从柱子上滑落。
+SourceCharacter ties DestinationCharacter leash to the post.
+SourceCharacter把DestinationCharacter的牵绳系在柱子上。
+SourceCharacter unties DestinationCharacter leash from the post.
+SourceCharacter把DestinationCharacter的牵绳从柱子上解开。
+SourceCharacter returns TargetCharacterName to the floor.
+SourceCharacter把TargetCharacterName放回地面。
+SourceCharacter pulls the level and TargetCharacterName is lifted.
+SourceCharacter拉动操纵杆，将TargetCharacterName升起。
+SourceCharacter changes the text on DestinationCharacter AssetName to read "NewText".
+SourceCharacter把DestinationCharacter的AssetName上的文字改为「NewText」。
+SourceCharacter removes the text from DestinationCharacter AssetName.
+SourceCharacter擦去了DestinationCharacter的AssetName上的文字。
+SourceCharacter attaches a large ball gag to DestinationCharacter gag harness.
+SourceCharacter为DestinationCharacter的口部束带装上大号球形口塞。
+SourceCharacter attaches a large ring gag to DestinationCharacter gag harness.
+SourceCharacter为DestinationCharacter的口部束带装上大号环形口塞。
+SourceCharacter attaches a wiffle gag to DestinationCharacter gag harness.
+SourceCharacter为DestinationCharacter的口部束带装上镂空球形口塞。
+SourceCharacter attaches a bit gag to DestinationCharacter gag harness.
+SourceCharacter为DestinationCharacter的口部束带装上马衔口塞。
+SourceCharacter binds DestinationCharacterName arms on their left side.
+SourceCharacter把DestinationCharacterName的双臂绑在身体左侧。
+SourceCharacter binds DestinationCharacterName arms on their right side.
+SourceCharacter把DestinationCharacterName的双臂绑在身体右侧。
+SourceCharacter binds DestinationCharacterName arms behind their back.
+SourceCharacter把DestinationCharacterName的双臂绑在背后。
+SourceCharacter links DestinationCharacterName armbinder to TargetPronounPossessive feet with chains and cuffs.
+SourceCharacter用链条和镣铐将DestinationCharacterName的束臂套连到TargetPronounPossessive双脚。
+SourceCharacter shortens the chain to force TargetCharacterName to TargetPronounPossessive knees.
+SourceCharacter缩短了链条，迫使TargetCharacterName用TargetPronounPossessive双膝跪下。
+SourceCharacter opens DestinationCharacterName suit zipper and exposes TargetPronounPossessive genitals.
+SourceCharacter拉开DestinationCharacterName的连体衣拉链，露出TargetPronounPossessive生殖器。
+SourceCharacter chooses a short suit model for DestinationCharacter.
+SourceCharacter为DestinationCharacter选择短款连体衣。
+SourceCharacter chooses a long suit model for DestinationCharacter.
+SourceCharacter为DestinationCharacter选择长款连体衣。
+SourceCharacter removes the rubber skirt from DestinationCharacter.
+SourceCharacter脱下了DestinationCharacter的橡胶裙。
+SourceCharacter puts a short rubber skirt on DestinationCharacter.
+SourceCharacter为DestinationCharacter穿上橡胶短裙。
+SourceCharacter gags DestinationCharacter totally locking TargetPronounPossessive mouth with the Horror Gag.
+SourceCharacter用恐怖口塞堵住DestinationCharacter的嘴，将TargetPronounPossessive嘴巴完全锁住。
+SourceCharacter removes all front bricks from TargetCharacter.
+SourceCharacter移除了TargetCharacter面前所有的砖。
+SourceCharacter builds a brick wall that reaches DestinationCharacter hips.
+SourceCharacter砌起一道高至DestinationCharacter髋部的砖墙。
+SourceCharacter builds a brick wall that reaches DestinationCharacter chest.
+SourceCharacter砌起一道高至DestinationCharacter胸口的砖墙。
+SourceCharacter builds a brick wall that reaches DestinationCharacter neck.
+SourceCharacter砌起一道高至DestinationCharacter脖子的砖墙。
+SourceCharacter builds a full brick wall except a single hole at DestinationCharacter eye height.
+SourceCharacter砌起整面砖墙，只在DestinationCharacter眼前留了一个孔。
+SourceCharacter builds a full brick wall with a small grid at DestinationCharacter eye height.
+SourceCharacter砌起整面砖墙，只在DestinationCharacter眼前留了一小块格栅。
+SourceCharacter builds a full brick wall and puts the last brick at DestinationCharacter eye height.
+SourceCharacter砌起整面砖墙，将最后一块砖放在DestinationCharacter眼前。
+SourceCharacter suspends the spread bar and TargetCharacterName is suspended upside down.
+SourceCharacter吊起分腿杆，将TargetCharacterName倒吊起来。
+TargetCharacterName is clearing the table on TargetPronounPossessive right side.
+TargetCharacterName清理了TargetPronounPossessive右侧的桌面。
+TargetCharacterName puts a menu on the table on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了菜单。
+TargetCharacterName puts some poker cards and chips on the table on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了扑克牌和筹码。
+TargetCharacterName puts a Club Card deck on the table on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一副俱乐部卡牌。
+TargetCharacterName serves a coffee cup on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯咖啡。
+TargetCharacterName serves a iced tea glass on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯冰茶。
+TargetCharacterName serves a juice glass on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯果汁。
+TargetCharacterName serves a soda on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一瓶汽水。
+TargetCharacterName serves a whiskey glass on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯威士忌。
+TargetCharacterName serves a long neck beer on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一瓶长颈啤酒。
+TargetCharacterName serves a beer glass on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯啤酒。
+TargetCharacterName serves a marguerita glass on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯玛格丽特。
+TargetCharacterName serves a champagne glass on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯香槟。
+TargetCharacterName serves a sake cup on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一杯清酒。
+TargetCharacterName serves a penauts pot on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一罐花生。
+TargetCharacterName serves a banana split on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一份香蕉船。
+TargetCharacterName serves a sundae on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一份圣代。
+TargetCharacterName serves a plate of fries on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一盘薯条。
+TargetCharacterName serves a burguer on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一个汉堡。
+TargetCharacterName serves a origiri on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一个饭团。
+TargetCharacterName serves a hot dog on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一个热狗。
+TargetCharacterName serves a taco on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了一个塔可。
+TargetCharacterName puts the bill and some changes on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了账单和零钱。
+TargetCharacterName puts a ashtray on TargetPronounPossessive right side.
+TargetCharacterName在TargetPronounPossessive右侧的桌上放了烟灰缸。
+TargetCharacterName is clearing the table on TargetPronounPossessive front.
+TargetCharacterName清理了TargetPronounPossessive面前的桌面。
+TargetCharacterName puts a menu on the table on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了菜单。
+TargetCharacterName puts some poker card decks and chips on the table on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了几副扑克牌和筹码。
+TargetCharacterName puts some Club Card decks on the table on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了几副俱乐部卡牌。
+TargetCharacterName puts a old coffee pot on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一把旧咖啡壶。
+TargetCharacterName serves two iced tea cups on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两杯冰茶。
+TargetCharacterName serves two juice glasses on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两杯果汁。
+TargetCharacterName serves a bunch of sodas on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了几瓶汽水。
+TargetCharacterName serves a whiskey bottle on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一瓶威士忌。
+TargetCharacterName serves a lot of long neck beer on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了多瓶长颈啤酒。
+TargetCharacterName serves two beer bottles on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两瓶啤酒。
+TargetCharacterName serves two marguerita glasses on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两杯玛格丽特。
+TargetCharacterName serves a champagne bucket on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一桶香槟。
+TargetCharacterName serves a sake bottle on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一瓶清酒。
+TargetCharacterName serves a bigger penauts pot on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一大罐花生。
+TargetCharacterName serves a banana split on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一份香蕉船。
+TargetCharacterName serves two sundaes on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两份圣代。
+TargetCharacterName serves a bigger plate of fries on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了一大盘薯条。
+TargetCharacterName serves two burguers on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两个汉堡。
+TargetCharacterName serves two origiri on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两个饭团。
+TargetCharacterName serves two hot dogs on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了两个热狗。
+TargetCharacterName serves a bunch of tacos on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了几份塔可。
+TargetCharacterName puts a TargetPronounPossessive tips pot on TargetPronounPossessive front: Tips for good service!
+TargetCharacterName在TargetPronounPossessive面前的桌上放了TargetPronounPossessive小费罐，上面写着「服务满意请给小费！」。
+TargetCharacterName puts no smoking sign on TargetPronounPossessive front.
+TargetCharacterName在TargetPronounPossessive面前的桌上放了禁烟标志。
+TargetCharacterName is clearing the table on TargetPronounPossessive left side.
+TargetCharacterName清理了TargetPronounPossessive左侧的桌面。
+TargetCharacterName puts a menu on the table on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了菜单。
+TargetCharacterName puts some poker cards and chips on the table on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了扑克牌和筹码。
+TargetCharacterName puts a Club Card deck on the table on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一副俱乐部卡牌。
+TargetCharacterName serves a coffee cup on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯咖啡。
+TargetCharacterName serves a iced tea glass on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯冰茶。
+TargetCharacterName serves a juice glass on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯果汁。
+TargetCharacterName serves a soda on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一瓶汽水。
+TargetCharacterName serves a whiskey glass on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯威士忌。
+TargetCharacterName serves a long neck beer on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一瓶长颈啤酒。
+TargetCharacterName serves a beer glass on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯啤酒。
+TargetCharacterName serves a marguerita glass on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯玛格丽特。
+TargetCharacterName serves a champagne glass on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯香槟。
+TargetCharacterName serves a sake cup on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一杯清酒。
+TargetCharacterName serves a penauts pot on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一罐花生。
+TargetCharacterName serves a banana split on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一份香蕉船。
+TargetCharacterName serves a sundae on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一份圣代。
+TargetCharacterName serves a plate of fries on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一盘薯条。
+TargetCharacterName serves a burguer on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一个汉堡。
+TargetCharacterName serves a origiri on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一个饭团。
+TargetCharacterName serves a hot dog on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一个热狗。
+TargetCharacterName serves a taco on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了一个塔可。
+TargetCharacterName puts the bill and some changes on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了账单和零钱。
+TargetCharacterName puts a ashtray on TargetPronounPossessive left side.
+TargetCharacterName在TargetPronounPossessive左侧的桌上放了烟灰缸。
+Choose what to change:
+选择要更改的项目：
+Plushie
+毛绒玩偶
+Velvet Bunny Cabaret
+天鹅绒兔歌舞厅
+Slime Queen Samantha
+史莱姆女王萨曼莎
+SourceCharacter places a cute Slime Queen Samantha plushie in DestinationCharacter hands.
+SourceCharacter把可爱的史莱姆女王萨曼莎毛绒玩偶放进DestinationCharacter手里。
+Snow
+Snow
+SourceCharacter places a cute Snow plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Snow毛绒玩偶放进DestinationCharacter手里。
+Roxhuo
+Roxhuo
+SourceCharacter places a cute Roxhuo plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Roxhuo毛绒玩偶放进DestinationCharacter手里。
+Alice
+Alice
+SourceCharacter places a cute Alice plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Alice毛绒玩偶放进DestinationCharacter手里。
+Cali
+Cali
+SourceCharacter places a cute Cali plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Cali毛绒玩偶放进DestinationCharacter手里。
+Yvain
+Yvain
+SourceCharacter places a cute Yvain plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Yvain毛绒玩偶放进DestinationCharacter手里。
+SourceCharacter places a cute Samantha plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Samantha毛绒玩偶放进DestinationCharacter手里。
+Mini
+Mini
+SourceCharacter places a cute Mini plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Mini毛绒玩偶放进DestinationCharacter手里。
+Ruby
+Ruby
+SourceCharacter places a cute Ruby plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Ruby毛绒玩偶放进DestinationCharacter手里。
+SourceCharacter places a cute Viper plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Viper毛绒玩偶放进DestinationCharacter手里。
+Ayato
+Ayato
+SourceCharacter places a cute Ayato plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Ayato毛绒玩偶放进DestinationCharacter手里。
+Lisa Hem
+Lisa Hem
+SourceCharacter places a cute Lisa Hem plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Lisa Hem毛绒玩偶放进DestinationCharacter手里。
+Yu Fantôme
+Yu Fantôme
+SourceCharacter places a cute Yu Fantôme plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Yu Fantôme毛绒玩偶放进DestinationCharacter手里。
+Clara
+Clara
+SourceCharacter places a cute Clara plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Clara毛绒玩偶放进DestinationCharacter手里。
+Evelia
+Evelia
+SourceCharacter places a cute Evelia plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Evelia毛绒玩偶放进DestinationCharacter手里。
+Carina
+Carina
+SourceCharacter places a cute Carina plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Carina毛绒玩偶放进DestinationCharacter手里。
+Princess Vamparina
+Princess Vamparina
+SourceCharacter places a cute Princess Vamparina plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Princess Vamparina毛绒玩偶放进DestinationCharacter手里。
+Shyy
+Shyy
+SourceCharacter places a cute Shyy plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Shyy毛绒玩偶放进DestinationCharacter手里。
+Hajime
+Hajime
+SourceCharacter places a cute Hajime plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Hajime毛绒玩偶放进DestinationCharacter手里。
+Lilly
+Lilly
+SourceCharacter places a cute Lilly plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Lilly毛绒玩偶放进DestinationCharacter手里。
+Chris
+Chris
+SourceCharacter places a cute Chris plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Chris毛绒玩偶放进DestinationCharacter手里。
+Subbycat's Place
+Subbycat 的小屋
+SourceCharacter places a cute Shadow plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Shadow毛绒玩偶放进DestinationCharacter手里。
+SA Dollhouse
+SA 娃娃屋
+Alex
+Alex
+SourceCharacter places a cute Alex plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Alex毛绒玩偶放进DestinationCharacter手里。
+Yeani
+Yeani
+SourceCharacter places a cute Yeani plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Yeani毛绒玩偶放进DestinationCharacter手里。
+Coconut
+Coconut
+SourceCharacter places a cute Coconut plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Coconut毛绒玩偶放进DestinationCharacter手里。
+Vvavv
+Vvavv
+SourceCharacter places a cute Vvavv plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Vvavv毛绒玩偶放进DestinationCharacter手里。
+Hana
+Hana
+SourceCharacter places a cute Hana plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Hana毛绒玩偶放进DestinationCharacter手里。
+Cholate
+Cholate
+SourceCharacter places a cute Cholate plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Cholate毛绒玩偶放进DestinationCharacter手里。
+Silvia
+Silvia
+SourceCharacter places a cute Silvia plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Silvia毛绒玩偶放进DestinationCharacter手里。
+Rouge
+Rouge
+SourceCharacter places a cute Rouge plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Rouge毛绒玩偶放进DestinationCharacter手里。
+Foxworth Manor
+福克斯沃思庄园
+Misao
+Misao
+SourceCharacter places a cute Misao plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Misao毛绒玩偶放进DestinationCharacter手里。
+Yvette
+Yvette
+SourceCharacter places a cute Yvette plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Yvette毛绒玩偶放进DestinationCharacter手里。
+Serena
+Serena
+SourceCharacter places a cute Serena plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Serena毛绒玩偶放进DestinationCharacter手里。
+Elli
+Elli
+SourceCharacter places a cute Elli plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Elli毛绒玩偶放进DestinationCharacter手里。
+Dahlia
+Dahlia
+SourceCharacter places a cute Dahlia plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Dahlia毛绒玩偶放进DestinationCharacter手里。
+Mansion Valentine
+瓦伦丁公馆
+Julia Valentine
+Julia Valentine
+SourceCharacter places a cute Julia Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Julia Valentine毛绒玩偶放进DestinationCharacter手里。
+Luminas Valentine
+Luminas Valentine
+SourceCharacter places a cute Luminas Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Luminas Valentine毛绒玩偶放进DestinationCharacter手里。
+Nina Valentine
+Nina Valentine
+SourceCharacter places a cute Nina Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Nina Valentine毛绒玩偶放进DestinationCharacter手里。
+Marsy Valentine
+Marsy Valentine
+SourceCharacter places a cute Marsy Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Marsy Valentine毛绒玩偶放进DestinationCharacter手里。
+Audriana Valentine
+Audriana Valentine
+SourceCharacter places a cute Audriana Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Audriana Valentine毛绒玩偶放进DestinationCharacter手里。
+Xiaohuahuo Valentine
+Xiaohuahuo Valentine
+SourceCharacter places a cute Xiaohuahuo Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Xiaohuahuo Valentine毛绒玩偶放进DestinationCharacter手里。
+Lucy Valentine
+Lucy Valentine
+SourceCharacter places a cute Lucy Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Lucy Valentine毛绒玩偶放进DestinationCharacter手里。
+Kaede Valentine
+Kaede Valentine
+SourceCharacter places a cute Kaede Valentine plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Kaede Valentine毛绒玩偶放进DestinationCharacter手里。
+Alena Brenhines
+Alena Brenhines
+SourceCharacter places a cute Alena Brenhines plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Alena Brenhines毛绒玩偶放进DestinationCharacter手里。
+Aybes Suite
+Aybes 套房
+Aybes
+Aybes
+SourceCharacter places a cute Aybes plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Aybes毛绒玩偶放进DestinationCharacter手里。
+Ash The cute
+可爱的 Ash
+SourceCharacter places a cute Ash plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Ash毛绒玩偶放进DestinationCharacter手里。
+Domi
+Domi
+SourceCharacter places a cute Domi plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Domi毛绒玩偶放进DestinationCharacter手里。
+Elaina
+Elaina
+SourceCharacter places a cute Elaina plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Elaina毛绒玩偶放进DestinationCharacter手里。
+Fairclough Manor
+费尔克拉夫庄园
+Gaige Fairclough
+Gaige Fairclough
+SourceCharacter places a cute Gaige Fairclough plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Gaige Fairclough毛绒玩偶放进DestinationCharacter手里。
+Miku Fairclough
+Miku Fairclough
+SourceCharacter places a cute Miku Fairclough plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Miku Fairclough毛绒玩偶放进DestinationCharacter手里。
+Vanessa Fairclough
+Vanessa Fairclough
+SourceCharacter places a cute Vanessa Fairclough plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Vanessa Fairclough毛绒玩偶放进DestinationCharacter手里。
+Runa Fairclough
+Runa Fairclough
+SourceCharacter places a cute Runa Fairclough plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Runa Fairclough毛绒玩偶放进DestinationCharacter手里。
+Bianca Fairclough
+Bianca Fairclough
+SourceCharacter places a cute Bianca Fairclough plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Bianca Fairclough毛绒玩偶放进DestinationCharacter手里。
+Bella Fairclough
+Bella Fairclough
+SourceCharacter places a cute Bella Fairclough plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Bella Fairclough毛绒玩偶放进DestinationCharacter手里。
+Fox Den
+狐狸窝
+Nicole
+Nicole
+SourceCharacter places a cute Nicole plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Nicole毛绒玩偶放进DestinationCharacter手里。
+Tifa
+Tifa
+SourceCharacter places a cute Tifa plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Tifa毛绒玩偶放进DestinationCharacter手里。
+SourceCharacter places a cute Felix plushie in DestinationCharacter hands.
+SourceCharacter把可爱的Felix毛绒玩偶放进DestinationCharacter手里。
+Where the plushie is:
+玩偶位置
+In hands
+手中
+SourceCharacter puts the plushie back in DestinationCharacter hands.
+SourceCharacter把毛绒玩偶放回DestinationCharacter手中。
+On head
+头上
+SourceCharacter sits the plushie on top of DestinationCharacter head.
+SourceCharacter把毛绒玩偶放在DestinationCharacter头顶。
+On the floor
+地上
+SourceCharacter sets the plushie down at DestinationCharacter feet.
+SourceCharacter把毛绒玩偶放在DestinationCharacter脚边。
+SourceCharacter puts the cigarette in DestinationCharacter mouth.
+SourceCharacter把香烟放进DestinationCharacter嘴里。
+SourceCharacter keeps the cigarette in DestinationCharacter hand.
+SourceCharacter将香烟留在DestinationCharacter手中。
+SourceCharacter shakes PronounPossessive rattle and it makes a jingle.
+SourceCharacter摇了摇PronounPossessive拨浪鼓，发出叮当声。
+SourceCharacter unlocks TargetCharacter from the Steel Belt handcuffs.
+SourceCharacter解开了TargetCharacter的钢带手铐。
+Select the Option
+选择选项
+Choose if you want a text bubble
+选择是否显示对话气泡
+No Text
+无文字
+SourceCharacter removes the Text Bubble from DestinationCharacter AssetName.
+SourceCharacter移除了DestinationCharacter的AssetName上的对话气泡。
+Text Bubble
+对话气泡
+SourceCharacter adds a Text Bubble to DestinationCharacter AssetName.
+SourceCharacter为DestinationCharacter的AssetName添加了对话气泡。
+Single
+单钩
+Single Exp.
+扩张单钩
+Double Exp.
+扩张双钩
+Triple
+三钩
+Triple Exp.
+扩张三钩
+Select the expanded nose hook style
+选择扩张鼻钩样式
+SourceCharacter uses a single hook on DestinationCharacter nose.
+SourceCharacter为DestinationCharacter的鼻子装上单钩。
+SourceCharacter uses a single expanded hook on DestinationCharacter nose.
+SourceCharacter为DestinationCharacter的鼻子装上扩张单钩。
+SourceCharacter uses a double hook on DestinationCharacter nose.
+SourceCharacter为DestinationCharacter的鼻子装上双钩。
+SourceCharacter uses a double expanded hook on DestinationCharacter nose.
+SourceCharacter为DestinationCharacter的鼻子装上扩张双钩。
+SourceCharacter uses a triple hook on DestinationCharacter nose.
+SourceCharacter为DestinationCharacter的鼻子装上三钩。
+SourceCharacter uses a triple expanded hook on DestinationCharacter nose.
+SourceCharacter为DestinationCharacter的鼻子装上扩张三钩。
+Change the Jar
+更改罐子
+Open/Close
+开／关
+Open or close the jar
+打开或关闭罐子
+Fill State
+填充状态
+Fill the Jar
+填充罐子
+Bubbles
+气泡
+Add some Bubbles
+添加气泡
+Text Label
+文字标签
+Choose the Text Label
+选择文字标签
+No Lid
+无盖
+SourceCharacter removes the lid from DestinationCharacter AssetName.
+SourceCharacter取下了DestinationCharacter的AssetName的盖子。
+No Text Label
+无文字标签
+DestinationCharacter adds text labels to DestinationCharacter AssetName.
+DestinationCharacter给DestinationCharacter的AssetName添加了文字标签。
+No Bubbles
+无气泡
+SourceCharacter removes the bubbles from DestinationCharacter AssetName.
+SourceCharacter清除了DestinationCharacter的AssetName中的气泡。
+SourceCharacter removes the liquid from DestinationCharacter AssetName.
+SourceCharacter排空了DestinationCharacter的AssetName中的液体。
+Lid
+盖子
+SourceCharacter adds a lid to DestinationCharacter AssetName.
+SourceCharacter为DestinationCharacter的AssetName装上盖子。
+Foot Deep
+深至脚部
+SourceCharacter fills the AssetName to DestinationCharacter feet.
+SourceCharacter向AssetName注入液体，直至DestinationCharacter的脚部。
+Knee Deep
+深至膝部
+SourceCharacter fills the AssetName to DestinationCharacter knees.
+SourceCharacter向AssetName注入液体，直至DestinationCharacter的膝部。
+Leg Deep
+深至腿部
+SourceCharacter fills the AssetName to DestinationCharacter legs.
+SourceCharacter向AssetName注入液体，直至DestinationCharacter的腿部。
+Waist Deep
+深至腰部
+SourceCharacter fills the AssetName to DestinationCharacter waist.
+SourceCharacter向AssetName注入液体，直至DestinationCharacter的腰部。
+Chest Deep
+深至胸部
+SourceCharacter fills the AssetName to DestinationCharacter chest.
+SourceCharacter向AssetName注入液体，直至DestinationCharacter的胸部。
+Head Deep
+深至头部
+SourceCharacter fills the AssetName to DestinationCharacter head.
+SourceCharacter向AssetName注入液体，直至DestinationCharacter的头部。
+Tiny Bubbles
+小气泡
+SourceCharacter adds tiny bubbles to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName中加入了小气泡。
+SourceCharacter adds medium bubbles to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName中加入了中等气泡。
+Large Bubbles
+大气泡
+SourceCharacter adds large bubbles to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName中加入了大气泡。
+XLarge Bubbles
+超大气泡
+SourceCharacter adds extra large bubbles to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName中加入了超大气泡。
+SourceCharacter adds a text label to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上贴了一张文字标签。
+Diagonal Text Label
+斜向文字标签
+SourceCharacter adds a diagonal text label to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上斜贴了一张文字标签。
+Text Labels
+文字标签
+SourceCharacter adds text labels to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上贴了多张文字标签。
+Diagonal Text Labels
+斜向文字标签组
+SourceCharacter adds diagonal text labels to DestinationCharacter AssetName.
+SourceCharacter在DestinationCharacter的AssetName上斜贴了多张文字标签。

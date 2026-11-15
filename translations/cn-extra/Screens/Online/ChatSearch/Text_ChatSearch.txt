@@ -41,3 +41,5 @@ The leash has broken because of a timeout error
 牵绳因超时错误而断开
 Smoking
 吸烟
+Hide unwanted rooms
+移除不需要的房间

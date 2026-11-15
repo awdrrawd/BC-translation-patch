@@ -7,3 +7,33 @@
 ### 2026-09：補齊連線與共用介面（上游 4a0f778）
 (Room administrator actions.)
 （房间管理员操作。）
+(There's a ${money=-100} fee to prepare the ceremony and get DialogCharacterObject a slave collar.  Will you pay now?)
+（筹备仪式并为 DialogCharacterObject 准备奴隶项圈需支付 ${money=-100}。现在付款吗？）
+(There's a ${money=-100} fee asked of both sides for the wedding.  Will you pay now?)
+（婚礼双方各需支付 ${money=-100}。现在付款吗？）
+(Pay ${money=-100} for the collaring ceremony.)
+（支付 ${money=-100} 举行授环仪式。）
+(Pay ${money=-100} for the wedding.)
+（支付 ${money=-100} 举行婚礼。）
+(Get a ${money=-5} Virgin Mojito.)
+（花 ${money=-5} 买一杯无酒精莫吉托。）
+(Get a ${money=-5} Margarita.)
+（花 ${money=-5} 买一杯玛格丽特。）
+(Get a ${money=-5} glass of Whiskey.)
+（花 ${money=-5} 买一杯威士忌。）
+(Get a ${money=-5} glass of Champagne.)
+（花 ${money=-5} 买一杯香槟。）
+(Get a ${money=-10} jug of Sicilian Lemonade for everyone.)
+（花 ${money=-10} 为大家买一壶西西里柠檬水。）
+(Get a ${money=-10} round of shooters for everyone.)
+（花 ${money=-10} 为大家买一轮烈酒小杯。）
+(Get a ${money=-10} jug of Sex on the Beach for everyone.)
+（花 ${money=-10} 为大家买一壶「性感海滩」鸡尾酒。）
+(Get a ${money=-10} beer pitcher for everyone.)
+（花 ${money=-10} 为大家买一扎啤酒。）
+(Get a ${money=-5} hot chocolate.)
+（花 ${money=-5} 买一杯热巧克力。）
+(Get a ${money=-5} espresso.)
+（花 ${money=-5} 买一杯浓缩咖啡。）
+(Get a ${money=-5} cappuccino.)
+（花 ${money=-5} 买一杯卡布奇诺。）

@@ -8,3 +8,7 @@ The Bondage Club is pleased to announce that SourceCharacter is starting a 7 day
 束縛俱樂部很榮幸的宣佈SourceCharacter開始了從僕試任期，試任至少7天後才能轉正。
 I win. You don't need those arms to roll the dice.
 我贏了。你接下來擲骰子不需要手了。
+House Corporis
+科爾波利斯家族
+— Can change again in NumberOfDays day(s)
+— 須等 NumberOfDays 天才能再次更改

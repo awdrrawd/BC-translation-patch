@@ -149,3 +149,83 @@ Claw (Arachnid)
 爪（蜘蛛形态）
 Claw (Biped)
 爪（双足形态）
+Sack
+袋子
+Tube Liquid
+管内液体
+Pipe
+管道
+Top Lid
+顶盖
+Bag Base
+袋体
+Bag Laces
+袋子系带
+Bag Highlight
+袋子高光
+Bag Shadow
+袋子阴影
+Case Rings
+箱体固定环
+Case Straps
+箱体绑带
+Cover
+盖子
+Restraint Straps
+束缚带
+Ankle Shackles
+脚镣
+Metal Frame
+金属框架
+Thigh Shackles
+腿镣
+Back
+背面
+Front
+正面
+Hair
+头发
+Modern
+现代
+Dirty
+污渍
+Wooden
+木质
+Glass
+玻璃
+Reflection
+反光
+Liquid
+液体
+Bubbles
+气泡
+Label
+标签
+Mitt Base
+手套主体
+Mitt Shine
+手套高光
+Wrist Base
+腕部主体
+Wrist Shine
+腕部高光
+Nozzle
+喷嘴
+Pattern Shine
+图案高光
+Hinge
+铰链
+Opaque Glass
+不透明玻璃
+Transparent Glass
+透明玻璃
+Belt
+腰带
+Vibrators
+振动器
+Details
+细节
+Gradients
+渐变
+Diaper
+尿布

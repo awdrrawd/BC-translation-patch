@@ -142,3 +142,67 @@ Objects
 物件
 Back
 返回
+Tether point
+牵绳固定点
+Leashes can be tied to it
+可以把牵绳系在这里
+Tie your leash here
+把你的牵绳系在这里
+Tie TargetCharacterName's leash here
+把TargetCharacterName的牵绳系在这里
+Untie your leash
+解开你的牵绳
+Untie TargetCharacterName's leash
+解开TargetCharacterName的牵绳
+No leash within reach can be tied here.
+附近没有可以系在这里的牵绳。
+Empty Space
+空地
+Kitchen
+厨房
+Office
+办公室
+Object settings
+物件设置
+Reset
+重置
+Paste format
+粘贴格式
+Stop pasting
+停止粘贴
+Paste format:
+粘贴格式：
+Eraser
+橡皮擦
+Eraser. Hold Alt to paint an impassable empty space
+橡皮擦。按住 Alt 可绘制无法通行的空地
+Teleport Pad
+传送板
+Doesn't send anywhere yet
+尚未设置目的地
+Sends to the outlined tile
+传送到标出的格子
+Sends to the outlined pad and back
+与标出的传送板双向传送
+Pick on the map
+在地图上选择
+Click the tile it should send to
+点击要传送到的格子
+Cancel
+取消
+Two way
+双向
+Remove
+移除
+Color
+颜色
+It can't send to itself or to a wall
+不能传送到自身或墙壁
+Turn
+转向
+Size
+大小
+Decal
+贴花
+None
+无

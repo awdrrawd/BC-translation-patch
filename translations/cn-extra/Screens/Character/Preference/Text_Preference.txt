@@ -76,3 +76,15 @@ Replace the word with ***
 将该词替换为 ***
 Replace the phrase with ***
 将该短语替换为 ***
+Lock timer limits setting
+定时锁时限设置
+1 Day
+1 天
+1 Week
+1 周
+1 Month
+1 个月
+1 Year
+1 年
+Affect your erection
+影响你的勃起
