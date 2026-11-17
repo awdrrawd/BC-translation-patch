@@ -26,3 +26,141 @@ Chew on Item
 啃咬道具
 SourceCharacter chews on PronounPossessive ActivityAsset.
 SourceCharacter 啃咬着 PronounPossessive ActivityAsset。
+Shake
+摇动
+Spit out Item
+吐出物品
+Siblings Hug
+手足拥抱
+SourceCharacter struggles against the intense vibrations, hardly able to control PronounSelf.
+SourceCharacter 在强烈的振动中挣扎，几乎无法控制 PronounSelf。
+Using all of PronounPossessive strength, SourceCharacter is able to resist PronounPossessive building orgasm.
+SourceCharacter 用尽 PronounPossessive 力气，才忍住 PronounPossessive 即将到来的高潮。
+Powder Arm
+给手臂扑粉
+Powder Feet
+给双脚扑粉
+Powder Breast
+给乳房扑粉
+Powder Butt
+给臀部扑粉
+Powder Legs
+给双腿扑粉
+Powder Glans
+给龟头扑粉
+Powder Hands
+给双手扑粉
+Powder Nipples
+给乳头扑粉
+Powder Tummy
+给小腹扑粉
+Powder Penis
+给阴茎扑粉
+Powder Back
+给背部扑粉
+Powder Pussy
+给阴部扑粉
+Powder Clitoris
+给阴蒂扑粉
+Powder Breasts
+给双乳扑粉
+Powder Leg
+给腿扑粉
+Powder Ribs
+给肋部扑粉
+SourceCharacter rubs PronounPossessive ActivityAsset on TargetCharacter's arm.
+SourceCharacter 用 PronounPossessive ActivityAsset 摩擦 TargetCharacter 的手臂。
+SourceCharacter powders TargetCharacter's arm with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的手臂扑粉。
+SourceCharacter shares a warm sibling hug with TargetCharacter.
+SourceCharacter 给了 TargetCharacter 一个温暖的手足拥抱。
+SourceCharacter touches TargetCharacter's feet with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 触碰 TargetCharacter 的双脚。
+SourceCharacter powders TargetCharacter's feet with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的双脚扑粉。
+SourceCharacter presses PronounPossessive ActivityAsset to TargetCharacter's breast.
+SourceCharacter 用 PronounPossessive ActivityAsset 按压 TargetCharacter 的乳房。
+SourceCharacter powders TargetCharacter's breast with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的乳房扑粉。
+SourceCharacter rubs PronounPossessive ActivityAsset on TargetCharacter's butt.
+SourceCharacter 用 PronounPossessive ActivityAsset 摩擦 TargetCharacter 的臀部。
+SourceCharacter touches PronounPossessive ActivityAsset to TargetCharacter's leg.
+SourceCharacter 用 PronounPossessive ActivityAsset 触碰 TargetCharacter 的腿。
+SourceCharacter gives TargetCharacter's glans a kiss with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 轻吻 TargetCharacter 的龟头。
+SourceCharacter powders TargetCharacter's glans with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的龟头扑粉。
+SourceCharacter touches PronounPossessive ActivityAsset to TargetCharacter's hand.
+SourceCharacter 用 PronounPossessive ActivityAsset 触碰 TargetCharacter 的手。
+SourceCharacter rubs PronounPossessive ActivityAsset on TargetCharacter's thigh.
+SourceCharacter 用 PronounPossessive ActivityAsset 摩擦 TargetCharacter 的大腿。
+SourceCharacter powders TargetCharacter's thigh with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的大腿扑粉。
+SourceCharacter gives TargetCharacter a kiss on TargetPronounPossessive ActivityAsset.
+SourceCharacter 在 TargetPronounPossessive ActivityAsset 上亲了 TargetCharacter 一下。
+SourceCharacter touches PronounPossessive ActivityAsset to TargetCharacter's neck.
+SourceCharacter 用 PronounPossessive ActivityAsset 触碰 TargetCharacter 的颈部。
+SourceCharacter presses PronounPossessive ActivityAsset to TargetCharacter's nipple.
+SourceCharacter 用 PronounPossessive ActivityAsset 按压 TargetCharacter 的乳头。
+SourceCharacter powders TargetCharacter's nipple with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的乳头扑粉。
+SourceCharacter bumps PronounPossessive ActivityAsset on TargetCharacter's nose.
+SourceCharacter 用 PronounPossessive ActivityAsset 轻碰 TargetCharacter 的鼻子。
+SourceCharacter powders TargetCharacter's tummy with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的小腹扑粉。
+SourceCharacter presses PronounPossessive ActivityAsset into TargetCharacter's penis base.
+SourceCharacter 用 PronounPossessive ActivityAsset 按压 TargetCharacter 的阴茎根部。
+SourceCharacter scratches over TargetCharacter's penis.
+SourceCharacter 抓挠 TargetCharacter 的阴茎。
+SourceCharacter powders TargetCharacter's penis with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的阴茎扑粉。
+SourceCharacter powders TargetCharacter's back with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的背部扑粉。
+SourceCharacter pushes PronounPossessive ActivityAsset into TargetCharacter's vagina.
+SourceCharacter 用 PronounPossessive ActivityAsset 探入 TargetCharacter 的阴道。
+SourceCharacter powders TargetCharacter's pussy with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的阴部扑粉。
+SourceCharacter gives TargetCharacter's clitoris a kiss with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 轻吻 TargetCharacter 的阴蒂。
+SourceCharacter powders TargetCharacter's clitoris with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 TargetCharacter 的阴蒂扑粉。
+SourceCharacter powders PronounPossessive arm with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 手臂扑粉。
+SourceCharacter powders PronounPossessive feet with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 双脚扑粉。
+SourceCharacter powders PronounPossessive breast with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 乳房扑粉。
+SourceCharacter powders PronounPossessive butt with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 臀部扑粉。
+SourceCharacter powders PronounPossessive leg with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 腿扑粉。
+SourceCharacter powders PronounPossessive glans with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 龟头扑粉。
+SourceCharacter powders PronounPossessive thigh with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 大腿扑粉。
+SourceCharacter screams furiously into PronounPossessive ActivityAsset.
+SourceCharacter 对着 PronounPossessive ActivityAsset 愤怒地尖叫。
+SourceCharacter giggles into PronounPossessive ActivityAsset.
+SourceCharacter 对着 PronounPossessive ActivityAsset 咯咯笑。
+SourceCharacter groans desperately into PronounPossessive ActivityAsset.
+SourceCharacter 对着 PronounPossessive ActivityAsset 绝望地呻吟。
+SourceCharacter mumbles incoherently into PronounPossessive ActivityAsset.
+SourceCharacter 对着 PronounPossessive ActivityAsset 含混地嘟囔。
+SourceCharacter whimpers pleadingly into PronounPossessive ActivityAsset.
+SourceCharacter 对着 PronounPossessive ActivityAsset 哀求般地呜咽。
+SourceCharacter spits out PronounPossessive ActivityAsset.
+SourceCharacter 吐出 PronounPossessive ActivityAsset。
+SourceCharacter powders PronounPossessive own nipple with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 乳头扑粉。
+SourceCharacter powders PronounPossessive tummy with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 小腹扑粉。
+SourceCharacter scratches PronounPossessive penis.
+SourceCharacter 抓挠 PronounPossessive 阴茎。
+SourceCharacter powders PronounPossessive penis with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 阴茎扑粉。
+SourceCharacter powders PronounPossessive ribs with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 肋部扑粉。
+SourceCharacter powders PronounPossessive pussy with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 阴部扑粉。
+SourceCharacter powders PronounPossessive clitoris with PronounPossessive ActivityAsset.
+SourceCharacter 用 PronounPossessive ActivityAsset 给 PronounPossessive 阴蒂扑粉。

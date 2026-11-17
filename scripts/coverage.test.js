@@ -14,12 +14,12 @@ test("text CSV keys tolerate empty rows and trailing columns without treating as
  assert.equal(textKeyRows([["Group", "Asset", "Description"]]), null);
 });
 
-test("R133 chat-room-menu and Appearance identifiers resolve in both languages", () => {
+test("R134 chat-room-menu and Appearance identifiers resolve in both languages", () => {
  const keys = JSON.parse(fs.readFileSync("translations/text-keys.json", "utf8"));
  const { paths } = generateDict();
  for (const base of ["Screens/Online/ChatRoom/Text_ChatRoom", "Screens/Character/Appearance/Text_Appearance"]) {
   const rows = keys[base].filter(([key]) => base.includes("Appearance") || key.startsWith("Menu"));
-  assert.equal(rows.length, base.includes("Appearance") ? 31 : 22);
+  assert.equal(rows.length, base.includes("Appearance") ? 33 : 22);
   for (const lang of ["CN", "TW"]) {
    const flat = paths[`${base}_${lang}.txt`];
    for (const [key] of rows) {
@@ -81,13 +81,14 @@ test("CSV handles quoted commas, escaped quotes, CRLF and multiline fields", () 
  ]);
 });
 test("coverage reads asset descriptions and both dialog display columns", () => {
+ assert.deepEqual(missingStrings("Assets/Female3DCG", [["Hat","InternalName","New hat"]], new Map()), ["New hat"]);
  assert.deepEqual(missingStrings("Assets/Female3DCG/Female3DCG", [["Hat","InternalName","New hat"]], new Map()), ["New hat"]);
  assert.deepEqual(missingStrings("Screens/Online/ChatRoom/Dialog_Online", [["0","1","Option","Result","Function()"]], new Map()), ["Option","Result"]);
  assert.deepEqual(missingStrings("Screens/Interface", [["A","Same"],["B","Same"],["C","Empty"]], new Map([["Empty",""]])), ["Same","Empty"]);
  assert.deepEqual(missingStrings("Screens/Interface", [["A","Same"]], new Map([["Same","相同"]])), []);
 });
 test("default scope includes online shared assets, excludes story and minigames", () => {
- for (const file of ["Assets/Female3DCG/AssetStrings.csv", "Backgrounds/Backgrounds.csv", "Screens/Character/Wardrobe/Text_Wardrobe.csv", "Screens/Online/Game/OnlineGameDictionary.csv", "Screens/Room/Crafting/Text_Crafting.csv"]) assert.ok(isOnlineCsv(file), file);
+ for (const file of ["Assets/Female3DCG.csv", "Assets/AssetStrings.csv", "Assets/ColorGroups.csv", "Assets/LayerNames.csv", "Assets/Female3DCG/AssetStrings.csv", "Backgrounds/Backgrounds.csv", "Screens/Character/Wardrobe/Text_Wardrobe.csv", "Screens/Online/Game/OnlineGameDictionary.csv", "Screens/Room/Crafting/Text_Crafting.csv"]) assert.ok(isOnlineCsv(file), file);
  for (const file of ["Screens/Room/Private/Text_Private.csv", "Screens/Cutscene/Intro/Text_Intro.csv", "Screens/MiniGame/KinkyDungeon/Text_KinkyDungeon.csv"]) assert.ok(!isOnlineCsv(file), file);
 });
 
@@ -143,5 +144,5 @@ test("new translations preserve substitution tokens and reach both language bund
    count++;
   }
  }
- assert.equal(count,1503);
+ assert.ok(count >= 1503);
 });

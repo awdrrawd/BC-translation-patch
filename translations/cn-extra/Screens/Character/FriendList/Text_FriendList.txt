@@ -21,3 +21,27 @@ Are you sure you want to delete $memberName ($memberNumber)?
 ### 2026-09：依本機上游補齊連線與共用內容
 Unknown
 未知
+Scroll to bottom
+滚动到底部
+Include room name
+包含房间名称
+New messages
+新消息
+Reply
+回复
+Copy
+复制
+Message copied to clipboard
+消息已复制到剪贴板
+Failed to copy message to clipboard
+无法将消息复制到剪贴板
+Add reaction
+添加表情回应
+Reply to $memberName
+回复 $memberName
+Cancel reply
+取消回复
+Choose a reaction
+选择表情回应
+Jump to quoted message
+跳转到引用的消息

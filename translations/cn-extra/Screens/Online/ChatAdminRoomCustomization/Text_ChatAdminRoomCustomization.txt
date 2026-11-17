@@ -20,3 +20,17 @@ Synchronize music track across the room
 在房间内同步音乐
 Reset
 重置
+Play
+播放
+Pause
+暂停
+Background
+背景
+Music
+音乐
+Fill mode
+填充模式
+No background image
+无背景图片
+Source
+来源

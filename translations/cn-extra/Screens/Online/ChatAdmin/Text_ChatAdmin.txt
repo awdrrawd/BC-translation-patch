@@ -25,3 +25,19 @@ Club Card
 俱乐部卡牌
 Pandora
 潘多拉
+The name of the chat room
+聊天室名称
+Create Room
+创建房间
+Room Settings
+房间设置
+Previous background
+上一个背景
+Next background
+下一个背景
+Map
+地图
+Game
+游戏
+Click anywhere to exit
+(点击任意位置返回)

@@ -37,3 +37,5 @@ SourceName (SourceNumber) covers TargetName (TargetNumber), no opponent can targ
 SourceName (SourceNumber) 掩护了 TargetName (TargetNumber)，使对手在一整轮内都无法以 TargetPronounObject 为目标。
 SourceName (SourceNumber) supports SourcePronounPossessive team, giving a 25% defensive bonus for a full cycle.
 SourceName (SourceNumber) 支援了 SourcePronounPossessive 队伍，使全队在一整轮内获得 25% 的防御加成。
+Two spells were cast at the same time, there's no winner.
+两个咒语同时施放出来

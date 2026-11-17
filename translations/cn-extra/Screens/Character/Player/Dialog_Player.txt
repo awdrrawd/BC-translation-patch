@@ -3,3 +3,7 @@
 （房间管理员操作。）
 (Don't use safeword.)
 （不使用安全词。）
+(Spend 120 minutes to get ${money=100}.)
+（花费 120 分钟获得 ${money=100}。）
+(GGTS gives you ${money=100} and substracts 120 minutes to your total.)
+（GGTS 会给你 ${money=100}，并从总时长中扣除 120 分钟。）

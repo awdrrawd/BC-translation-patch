@@ -3,3 +3,7 @@ Smoking
 ### 2026-09：補齊連線與共用介面（上游 4a0f778）
 Location Sharing
 位置共享
+Select item categories or activities to block in your chat room.  They won't be visible or usable by players.
+选择要在聊天室中屏蔽的物品类别或活动。玩家将无法看到或使用它们。
+Block Categories
+选择禁用的物品种类和行动，玩家将无法在房间内看到或进行这些活动
