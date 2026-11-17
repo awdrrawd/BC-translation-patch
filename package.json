@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "pretest": "npm run gen",
-    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js scripts/bcplus.test.js scripts/bcx.test.js scripts/lookup.test.js scripts/architecture.test.js scripts/languages.test.js scripts/script-purity.test.js",
+    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js scripts/bcplus.test.js scripts/bcx.test.js scripts/lookup.test.js scripts/architecture.test.js scripts/languages.test.js scripts/bc-compat.test.js scripts/bc-compat-issue.test.js scripts/script-purity.test.js",
     "seed": "node scripts/seed-from-upstream.js",
     "upstream:keys": "node scripts/sync-text-keys.js",
     "upstream:fetch": "node scripts/fetch-upstream.js",
@@ -17,11 +17,13 @@
     "diff": "node scripts/diff-upstream.js",
     "extract": "node scripts/extract-mods.js",
     "check:translations": "node scripts/validate-translations.js",
-    "check": "npm run check:translations && npm test && npm run build && node scripts/check-generated.js"
+    "check": "npm run check:translations && npm test && npm run build && node scripts/check-generated.js",
+    "check:bc": "node scripts/check-bc-compat.js"
   },
   "author": "awdrrawd",
   "license": "MIT",
   "devDependencies": {
+    "acorn": "^8.19.0",
     "esbuild": "^0.28.2",
     "linkedom": "^0.18.15",
     "opencc-js": "^1.4.2"

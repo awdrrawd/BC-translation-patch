@@ -203,6 +203,17 @@ TW 由 CN 機轉，出現不順的詞時：
 
 `npm test` 檢查字庫與執行期行為：CSV 欄位解析、預設範圍、翻譯標記、簡繁中輸出、初始化失敗清理與重試、DOM 多批排程、資產晚到及語言切換；`npm run build` 重建發布 bundle。尚未進行實際連線遊戲的畫面驗證。
 
+### D2. BC 函式掛鉤相容性檢查
+
+本插件透過 ModSDK 掛鉤 10 個 BC 函式：`TranslationAvailable`、`TranslationAssetProcess`、`InformationSheetRun`、`DrawText`、`DrawTextFit`、`DrawTextWrap`、`DynamicDrawText`、`ActivityDictionaryText`、`ChatRoomMessage`、`ChatRoomSendLocal`。其中前兩個屬於 BC 的翻譯模組（`Scripts/Translation.js`），BC 改動翻譯流程時最容易讓掛鉤悄悄失效，因此每週由 `.github/workflows/bc-compat.yml` 比對一次：
+
+- 函式是否還存在、本體雜湊（與 ModSDK 的 `originalHash` 同一算法）是否與 `scripts/bc-compat-baseline.json` 相同。
+- 有差異時開一則 `bc-compat` issue；差異內容改變時更新內文並留言，差異全部消失後自動關閉（`scripts/bc-compat-issue.js`）。不阻擋 PR 與部署。
+- 本機：`npm run check:bc -- --bc-dir <BC 原始碼>`；確認掛鉤仍正確後加上 `--update` 重寫基準。基準目前為 R134。
+- 測試：`scripts/bc-compat.test.js`、`scripts/bc-compat-issue.test.js`（含「基準恰好涵蓋程式實際掛鉤的函式」的檢查）。
+
+這與下方的「Fetch upstream texts」不同：後者比對的是翻譯文本缺漏，這裡檢查的是掛鉤的程式碼。
+
 ### E. 官方更新後刷新
 
 在 GitHub 倉庫開啟 **Actions → Fetch upstream texts → Run workflow** 即可抓取，不必在本機執行。預設會抓取 GitHub 鏡像 `bondageclub` 分支的文本，比對目前簡中／繁中缺漏，並在執行摘要顯示來源 commit 與缺漏數量。
