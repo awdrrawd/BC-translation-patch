@@ -11,6 +11,7 @@
 | Actions 手動執行 | 相同驗證 | 僅選 main 時發布 |
 | merge queue | 相同驗證 | 否 |
 | 每週一台北時間 09:00 | Dependabot 檢查 npm 與 GitHub Actions 更新，必要時提出 PR | 不自動合併 |
+| 每週一台北時間 09:00（可手動執行） | `BC compatibility`（`bc-compat.yml`）：比對 BC 程式碼鏡像與 `scripts/bc-compat-baseline.json`，檢查本插件掛鉤的 10 個 BC 函式是否還在、內容是否改變。有差異時開一則 `bc-compat` issue，差異內容改變時更新並留言，差異消失後自動關閉；不阻擋 PR 與部署 | 否 |
 
 Workflow：`.github/workflows/build.yml`。依賴更新：`.github/dependabot.yml`。一般驗證 job 只有 contents:read；Pages 權限只給部署 job，部署不 checkout／執行專案程式，只發布已驗證產物。PR 不使用 pull_request_target，也沒有發布權限。
 

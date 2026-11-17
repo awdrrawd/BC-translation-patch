@@ -1,0 +1,46 @@
+{
+  "gameVersion": "R134",
+  "commit": "0333e3d45038eb969a4c5c7d2f95086c0707fa24",
+  "functions": {
+    "ActivityDictionaryText": {
+      "hash": "16DE113C",
+      "file": "Scripts/Activity.js"
+    },
+    "ChatRoomMessage": {
+      "hash": "657E9417",
+      "file": "Screens/Online/ChatRoom/ChatRoom.js"
+    },
+    "ChatRoomSendLocal": {
+      "hash": "01A0B998",
+      "file": "Screens/Online/ChatRoom/ChatRoom.js"
+    },
+    "DrawText": {
+      "hash": "C1BF0F50",
+      "file": "Scripts/Drawing.js"
+    },
+    "DrawTextFit": {
+      "hash": "F9A1B11E",
+      "file": "Scripts/Drawing.js"
+    },
+    "DrawTextWrap": {
+      "hash": "FF038723",
+      "file": "Scripts/Drawing.js"
+    },
+    "DynamicDrawText": {
+      "hash": "B6F147BA",
+      "file": "Scripts/DynamicDraw.js"
+    },
+    "InformationSheetRun": {
+      "hash": "82ADDEDB",
+      "file": "Screens/Character/InformationSheet/InformationSheet.js"
+    },
+    "TranslationAssetProcess": {
+      "hash": "368BF09B",
+      "file": "Scripts/Translation.js"
+    },
+    "TranslationAvailable": {
+      "hash": "CB4A0138",
+      "file": "Scripts/Translation.js"
+    }
+  }
+}
