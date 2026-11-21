@@ -6,6 +6,7 @@ import { activeLang } from "../lang.js";
 import GEN from "../dictionary.js";
 import { ChatHistoryTranslator } from "./html/utils/chatObserver.js";
 import { setupDomObserver } from "./domObserver.js";
+import { translateLscgText } from "./lscgText.js";
 import { setupBcxHelp } from "./bcxHelp.js";
 import { setupBcplusObserver } from "./bcplus.js";
 import { translateBcplusRoomNotice } from "./bcplusRooms.js";
@@ -90,7 +91,7 @@ export function setupMods(mod, addCleanup) {
     addCleanup(ChatHistoryTranslator.registerTranslationFunc((src) => lookup.html(src)));
 
     // dialog-inventory(DOM) 的道具/動作名；製作屬性(dfn)用作用域字典
-    setupDomObserver(translateAny, translateDfn, addCleanup);
+    setupDomObserver(translateAny, translateDfn, addCleanup, text => translateLscgText(text, translateAny, lookup.exactAny));
 
     // BCX 匯出/匯入等 textarea.value 說明
     setupBcxHelp(addCleanup);

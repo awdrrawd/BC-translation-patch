@@ -26,39 +26,83 @@ console.log(`字典：CN 覆寫 ${stats.cnFiles} 檔、TW 補充 ${stats.twFiles
 
 // 2) 打包
 ensureDir(path.join(distDir, "x"));
-// Content-address the data so a cached entry never silently uses another build's dictionary.
-// Drop stale content-addressed dictionaries (including legacy unprefixed ones) so dist never accumulates old builds.
+
+// 清理旧的字典文件
 for (const file of fs.readdirSync(distDir)) {
-    if (/^translations-.*\.json$/.test(file)) fs.rmSync(path.join(distDir, file));
+    if (/^translations-.*\.json$/.test(file)) {
+        fs.rmSync(path.join(distDir, file));
+    }
 }
+
+// 分别生成远程 JSON URL 和内嵌 Data URL
 const dictionaryUrls = {};
+const inlineDictionaryUrls = {};
+
 for (const language of ["CN", "TW"]) {
     const text = JSON.stringify(runtimeDictionary(generated, language));
-    const name = `translations-${language}-${createHash("sha256").update(text).digest("hex").slice(0, 16)}.json`;
+
+    // 原有 Pages 字典文件
+    const name = `translations-${language}-${createHash("sha256")
+        .update(text)
+        .digest("hex")
+        .slice(0, 16)}.json`;
+
     fs.writeFileSync(path.join(distDir, name), text, "utf8");
+
     dictionaryUrls[language] = new URL(name, cfg.pagesBaseUrl).href;
+
+    // 新增：将 JSON 转成 Base64 Data URL，直接内嵌到 JS
+    inlineDictionaryUrls[language] =
+        `data:application/json;base64,${Buffer.from(text, "utf8").toString("base64")}`;
 }
-await esbuild.build({
+
+// 公共打包配置
+const buildOptions = {
     entryPoints: [path.join(repoRoot, "src", "index.js")],
-    outfile: path.join(distDir, cfg.bundleName),
     bundle: true,
     minify: true,
     format: "iife",
     target: "es2020",
     charset: "utf8",
     legalComments: "none",
+
     define: {
         __BCTP_VERSION__: JSON.stringify(pkg.version),
         __BCTP_NAME__: JSON.stringify(cfg.modName),
         __BCTP_FULLNAME__: JSON.stringify(cfg.modFullName),
         __BCTP_REPO__: JSON.stringify(cfg.repository),
-        __BCTP_DATA_URLS__: JSON.stringify(dictionaryUrls),
     },
+
     banner: {
         js: `/* ${cfg.modFullName} v${pkg.version} | ${cfg.repository} | build ${new Date().toISOString()} */`,
     },
+};
+
+// 2.1 原有 Pages 版本：继续使用远程 JSON
+await esbuild.build({
+    ...buildOptions,
+    outfile: path.join(distDir, cfg.bundleName),
+    define: {
+        ...buildOptions.define,
+        __BCTP_DATA_URLS__: JSON.stringify(dictionaryUrls),
+    },
 });
-console.log(`已打包：dist/${cfg.bundleName}`);
+
+console.log(`已打包 Pages 版本：dist/${cfg.bundleName}`);
+
+// 2.2 新增 Console 版本：字典直接内嵌到 JS
+const consoleBundleName = `${path.parse(cfg.bundleName).name}.console.js`;
+
+await esbuild.build({
+    ...buildOptions,
+    outfile: path.join(distDir, consoleBundleName),
+    define: {
+        ...buildOptions.define,
+        __BCTP_DATA_URLS__: JSON.stringify(inlineDictionaryUrls),
+    },
+});
+
+console.log(`已打包 Console 版本：dist/${consoleBundleName}`);
 
 // 3) Tampermonkey 載入器
 const bundleUrl = cfg.pagesBaseUrl + cfg.bundleName;

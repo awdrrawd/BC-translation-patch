@@ -55,6 +55,22 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
         return value;
     };
     const cache = new WeakMap();
+    const foldedTextCache = new WeakMap();
+    const foldedText = (text, key) => {
+        if (!text || typeof key !== "string") return undefined;
+        let index = foldedTextCache.get(text);
+        if (!index) {
+            index = new Map();
+            for (const [source, value] of Object.entries(text)) {
+                const folded = source.toLowerCase();
+                // Do not guess when two source keys differ only by case.
+                if (index.has(folded)) index.set(folded, null);
+                else index.set(folded, value);
+            }
+            foldedTextCache.set(text, index);
+        }
+        return index.get(key.toLowerCase()) ?? undefined;
+    };
     const rules = entries => {
         if (!entries) return [];
         if (!cache.has(entries)) cache.set(entries, entries.map(entry => ({ ...entry, regex: new RegExp(entry.p, entry.f), literal: requiredLiteral(entry.p, entry.f) })));
@@ -64,7 +80,14 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
         for (const id of ["BCX", "LSCG"]) {
             if (id === "BCX" ? !env.BCX_Loaded || (scope === "menu" && env.CurrentScreen !== "InformationSheet") : !env.Player?.LSCG) continue;
             const data = dictionary.compat[lang]?.[id]?.[scope];
-            if (data?.text[key]) return data.text[key];
+            if (data?.text[key] !== undefined) return data.text[key];
+            // LSCG has historically changed capitalization between releases
+            // (e.g. settings labels). Apply a conservative case-fold fallback
+            // only to its own legacy table, and only when the folded key is unique.
+            if (id === "LSCG" && scope === "menu") {
+                const folded = foldedText(data?.text, key);
+                if (folded !== undefined) return folded;
+            }
             for (const { regex, r, literal } of rules(data?.regex)) {
                 if (literal && !key.includes(literal)) continue;
                 const match = regex.exec(key);
@@ -115,7 +138,7 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
         dynamic = /^Cursed Item No\. (\d+)$/.exec(key);
         if (dynamic) return `${lang === "CN" ? "诅咒物品" : "詛咒物品"} No. ${dynamic[1]}`;
         dynamic = /^Suggestion No\. (\d+)$/.exec(key);
-        if (dynamic) return `${lang === "CN" ? "暗示" : "暗示"} No. ${dynamic[1]}`;
+        if (dynamic) return `暗示第 ${dynamic[1]}`;
     }
     function activity(key) {
         const lang = getLanguage();
@@ -126,10 +149,17 @@ export function createLookup(dictionary, getLanguage, env = globalThis) {
     }
     const cachedMenu = memo("menu", menu), cachedActivity = memo("activity", activity);
     const any = key => dictionary.base[getLanguage()]?.[key] || cachedMenu(key) || cachedActivity(key);
+    // Exact, non-composite lookup for LSCG's DOM adapter. It lets LSCG-specific
+    // prefix/suffix handling run before the generic "label: live value" fallback.
+    const exactAny = key => {
+        const lang = getLanguage();
+        if (!lang) return undefined;
+        return dictionary.base[lang]?.[key] || exactMenu(key, lang) || activity(key);
+    };
     const crafting = key => dictionary.crafting[getLanguage()]?.[key] || any(key);
     const html = key => {
         const data = dictionary.compat[getLanguage()];
         return data?.supplement.html[key] || data?.html[key];
     };
-    return { menu: cachedMenu, activity: cachedActivity, any, crafting, html };
+    return { menu: cachedMenu, activity: cachedActivity, any, exactAny, crafting, html };
 }
