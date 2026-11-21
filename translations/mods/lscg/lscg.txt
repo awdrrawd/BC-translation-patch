@@ -2450,12 +2450,8 @@ Each extension adds its own settings here.
 每个扩展都会在此处添加自己的设置。
 's settings couldn't be loaded. See the browser console for details.
 的设置无法加载。详情请参阅浏览器控制台。
-Page 
-第 
-/
- / 
- page
- 页
+page
+页
 Drag the character, or use the arrow keys (shift for bigger steps).
 拖动角色，或使用方向键（按 Shift 可增大步幅）。
 Drag the character left or right, or use the arrow keys (shift for bigger steps). A layer's angle adds to All Layers.
@@ -2610,8 +2606,6 @@ Loading speech settings…
 正在加载言语设置…
 No one else in the room can be paired.
 房间内没有其他可配对的人。
-Storage:
-存储：
 Storage: 
 存储：
 BC Server
