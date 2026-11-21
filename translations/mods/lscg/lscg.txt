@@ -1882,3 +1882,1061 @@ Shock
 电击
 Force orgasm
 强制高潮
+Settings
+设置
+Advanced
+高级
+Basic
+基础
+Disabled
+已禁用
+Enable
+启用
+Disable
+禁用
+Off
+关闭
+Yes
+是
+No
+否
+Back
+返回
+Delete
+删除
+Remove
+移除
+Add
+添加
+Edit
+编辑
+Required
+必填
+Optional
+可选
+Owner
+主人
+Friends
+好友
+Lovers
+恋人
+Whitelist
+白名单
+Public
+公开
+Local
+本地
+Unlocked
+未锁定
+Zones
+区域
+Trigger
+触发器
+Trigger phrase
+触发短语
+Instructions
+指令
+Reaction
+反应规则
+Condition
+状态
+Member ID
+成员ID
+Member IDs
+成员ID
+Allowed players
+允许的玩家
+Item
+物品
+Outfits
+服装
+Wardrobe
+衣柜
+Clothes
+衣物
+Restraints
+束缚
+Body
+身体
+Parse ?
+解析？
+Take the lock off
+取下锁具
+Choose zone
+选择区域
+Global
+全局
+Unknown
+未知
+Target
+目标
+Nothing
+无
+Injector
+注射器
+Injectors
+注射器
+Collar
+项圈
+Hypnosis
+催眠
+Cursed Item
+诅咒物品
+Inexhaustible
+永不耗尽
+Speech Tuning
+言语调优
+Maps
+地图
+Load
+加载
+Unload
+卸载
+Run
+运行
+Click
+点击
+Exit
+退出
+Section is Disabled
+该分区已禁用
+Loading...
+加载中...
+Importing settings will overwrite existing settings.
+导入设置将覆盖现有设置。
+Are you sure?
+你确定要继续吗？
+Little Sera's Club Games 
+Open Triggered Hypnosis Wiki on GitHub
+Open Triggered Hypnosis Wiki on GitHub
+在 GitHub 上打开催眠触发维基
+Open Hypnotic Suggestion Wiki on GitHub
+在 GitHub 上打开催眠暗示维基
+Splatter
+体液喷射
+Opacity Override
+透明度覆盖
+Member numbers separated by commas
+成员编号用逗号分隔
+Enables breathplay using \"Choke Neck\" activity. If done repeatedly will cause blackout.
+使用「扼颈」互动行为进行呼吸控制。反复进行会导致昏厥。
+ on 
+在
+.
+。
+Current name: 
+当前名称：
+ · Current crafter: 
+ · 当前制作者：
+- Andrew co.® makes no guarantees as to the behavior of the wearer -
+- Andrew 公司®不对佩戴者的行为做任何保证 -
+Purchase - $
+购买 - $
+Orgasm
+高潮
+Denial
+拒绝高潮
+Insatiable
+贪得无厌
+Perform Activity
+执行互动
+Strip
+脱衣
+Assume Pose
+摆姿势
+Follow
+跟随
+Speak Phrase
+说出短语
+Serve
+服侍
+Forget
+遗忘
+Compel the subject to perform an activity.
+强迫对象执行某项互动。
+Compel the subject to follow someone. (Requires LSCG leashing enabled on both)
+强迫对象跟随某人（双方需均启用 LSCG 牵引）。
+Compel the subject to serve drinks.
+强迫对象端茶倒水。
+Induce overwhelming pleasure in the subject.
+在对象身上引发强烈快感。
+Compel the subject to assume a pose.
+强迫对象摆出某个姿势。
+Compel the subject to speak a phrase.
+强迫对象说出某个短语。
+Make the subjects clothing uncomfortable.
+让对象的衣服变得难以忍受。
+Prevent the subject from achieving orgasm.
+阻止对象达到高潮。
+Infuse the subject with an endless arousal.
+给对象注入无尽的兴奋。
+Remove a previous instruction from the subject.
+移除对象先前接受的一条指令。
+Configure specific target member id number or name
+指定目标成员ID或名称
+Configure specific phrase
+指定特定短语
+Induce suggestion
+植入暗示
+Induce a new hypnotic suggestion into the subject. Suggestions without a trigger phrase are discarded when you leave.
+向对象植入一个新的催眠暗示。没有触发短语的暗示会在你离开时被丢弃。
++ Induce new suggestion
++ 植入新暗示
+Delete suggestion
+删除暗示
+Name this hypnotic suggestion for future reference
+为此催眠暗示命名以便后续引用
+Trigger phrase for this suggestion.
+此暗示的触发短语。
+If checked, only the creator of this suggestion can view, edit, or trigger it.
+勾选后，只有创建此暗示的人可以查看、编辑或触发它。
+Edit��
+编辑…
+Configure��
+配置…
+No pose
+无姿势
+Random slot
+随机槽位
+No slots
+无槽位
+— remove this effect —
+— 移除此效果 —
+— choose an effect —
+— 选择一个效果 —
+— add another effect —
+— 添加另一个效果 —
+�� choose zone ��
+— 选择区域 —
+�� none, or typed below ��
+— 无，或在下方输入 —
+Body zones
+身体区域
+Magic
+魔法
+Want to wow and amaze your friends and lovers?
+想让你的朋友和恋人惊叹不已吗？
+Are you looking to impress and punish your enemies?
+想惊艳全场同时惩罚你的敌人吗？
+With just a simple signature you too can experience the thrill of Magic™!
+只需简单签名，你也能体验魔法™的刺激！
+With just a simple signature you too can experience the thrill of Magic?!
+只需简单签名，你也能体验魔法™的刺激！
+- Reveal the ancient secrets of the arcane! -
+- 揭开奥术的古老秘密！ -
+- Craft your own amazing potions! -
+- 制作你自己的神奇药水！ -
+- Share in your powers, or dont! -
+- 分享你的力量，或者不！ -
+~Sign Here~
+~在此签名~
+Apply signature to scroll
+在卷轴上签名
+~ Any sufficiently advanced technology is indistinguishable from magic ~
+~任何足够先进的技术都与魔法无异 ~
+* Signatory agrees to Magic™ Installation (ᴘᴀᴛ. ᴘᴇɴᴅ.) required to experience spell effects *
+* 签名者同意安装魔法™（专利申请中）以体验法术效果 *
+* Signatory agrees to Magic? Installation (???. ????.) required to experience spell effects *
+* 签名者同意安装魔法™以体验法术效果 *
+Use Magic? and let spells affect you.
+使用魔法™并允许法术对你生效。
+Lead-lines all your clothing.
+为你的所有衣物加装铅衬。
+Lead-lines all their clothing.
+为他们的所有衣物加装铅衬。
+not installed
+未安装
+Not installed.
+未安装。
+Hypnotizing
+催眠
+Slumbering
+沉睡
+Arousing
+兴奋
+Blinding
+致盲
+Deafening
+失聪
+Gagged
+口塞
+Petrifying
+石化
+Enlarging
+放大
+Bless
+增益
+Bane
+减益
+Pairing
+配对
+Siphoning
+转移快感
+Polymorph
+变形
+Dispel
+驱散
+X-Ray Vision
+X 光透视
+Magic Barrier
+魔法屏障
+Disarming
+缴械
+Denying
+禁止高潮
+Forced Orgasm
+强制高潮
+Tightening
+收紧
+Loosening
+放松
+No effects yet
+尚未添加效果
+What the spell does to its target, one after another in this order. Up to 
+法术对目标依次施加效果，按此顺序执行。最多 
+ effects.
+个效果。
+Effect 1
+效果1
+Effect 2
+效果2
+Effect 3
+效果3
+Effect 4
+效果4
+Effect 5
+效果5
+From extensions
+来自扩展
+Outfit settings: no outfit chosen yet
+服装设置：尚未选择服装
+Polymorph settings: no outfit chosen yet
+变形设置：尚未选择服装
+No outfit chosen yet
+尚未选择服装
+No outfit chosen
+未选择服装
+This spell has more than your limit of 
+此法术的效果数量超过了你的限制
+ effects. Remove some before adding others.
+ 个效果。请先删除一些，再添加其他效果。
+One of your saved LSCG outfits.
+你保存的 LSCG 服装之一。
+You have no saved LSCG outfits. Enter a name below instead.
+你没有已保存的 LSCG 服装。请在下方输入名称。
+both
+两者
+Both
+两者
+Clothes Only
+仅衣物
+Restraints Only
+仅束缚
+Clothes and Restraints
+衣物和束缚
+Hair
+头发
+Skin, jewelry and makeup
+皮肤、饰品和妆容
+Genitals
+生殖器
+You never roll to resist spells.
+你永远不会掷骰抵抗法术。
+They never roll to resist spells.
+他们永远不会掷骰抵抗法术。
+You never resist spells from these members.
+你永远不会抵抗这些成员施放的法术。
+They never resist spells from these members.
+他们永远不会抵抗这些成员施放的法术。
+Harmful spell effects wear off eventually; the worse they fail the roll against the caster, the longer they last.
+有害法术效果最终会消退；他们抵抗施法者的骰值失败越惨，效果持续越久。
+Outfit effects can replace your neck items.
+服装效果可以替换你的颈部物品。
+Outfit effects can replace their neck items.
+服装效果可以替换他们的颈部物品。
+How remote access to this player's Magic™ settings works.
+如何远程访问该玩家的魔法™设置。
+Let other players change your Magic™ settings through LSCG's remote settings.
+让其他玩家通过 LSCG 的远程设置更改你的魔法™设置。
+Remote access only works while they are hypnotized.
+仅在他们被催眠时远程访问才有效。
+Only whoever hypnotized them gets remote access.
+只有催眠他们的人能获得远程访问。
+** Magic? settings are locked remotely **
+** 魔法™设置已被远程锁定 **
+Astral Projection
+灵魂出窍
+Activates for \"sedative\" or \"tranquilizer\".
+对名称/描述含「sedative」或「tranquilizer」的物品激活。
+Activates for \"mind control,\" \"hypnotizing,\" or \"brainwashing\".
+对名称/描述含「mind control」「hypnotizing」或「brainwashing」的物品激活。
+Activates for \"horny\" or \"aphrodisiac\".
+对名称/描述含「horny」或「aphrodisiac」的物品激活。
+Default: 
+默认：
+ minutes per dose.
+分钟/剂。
+## Chloroform
+## 氯仿
+Cursed Item No. 
+诅咒物品第 
+Clothes + Underwear
+衣物 + 内衣
+Clothes + Cosplay
+衣物 + Cosplay
+Underwear + Cosplay
+内衣 + Cosplay
+Clothes + Underwear + Cosplay
+衣物 + 内衣 + Cosplay
+Each item applies after 
+每件物品在
+— choose outfit —
+— 选择服装 —
+Confirm (
+确认（
+)
+）
+Who do you want to cum on?
+你想射在谁身上？
+Who do you want to squirt on?
+你想喷在谁身上？
+Where on 
+喷在
+ do you want to cum?
+身上的哪里？
+ do you want to squirt?
+身上的哪里？
+Says: 
+说：
+(detector off)
+（检测器已关闭）
+hidden — set by 
+已隐藏 — 设置者：
+(deleted group)
+（已删除的组）
+Each detector can be switched off on its own. Reaction rules for a disabled detector never fire.
+每个检测器都可单独关闭。被禁用检测器的反应规则永远不会触发。
+This clears your detectors, thresholds, vocabulary, phrase groups, and every reaction rule, and puts them all back to default. This can't be undone.
+这会清空你的检测器、阈值、词汇表、短语组以及所有反应规则，并将它们恢复默认。此操作无法撤销。
+Reset everything
+重置全部
+I am a good girl, I am worthy
+我是个好女孩，我值得
+damn, hell
+Groups of words or phrases to listen for, such as release phrases or banned words. Pick a group under Reactions ('Says: …') to decide what happens when one is spoken. Comma separated; quote phrases that contain commas. Matches whole words, ignoring case. Phrases set by someone else through remote access are hidden from you.
+Groups of words or phrases to listen for, such as release phrases or banned words. Pick a group under Reactions ('Says: …') to decide what happens when one is spoken. Comma separated; quote phrases that contain commas. Matches whole words, ignoring case. Phrases set by someone else through remote access are hidden from you.
+要监听的单词或短语组，例如解除短语或禁用词。在「反应规则」下选择一个组（「说：……」）来决定说出其中内容时发生什么。使用逗号分隔；包含逗号的短语请加引号。匹配完整单词，不区分大小写。通过远程访问由其他人设置的短语对你隐藏。
+Groups of words or phrases to listen for, such as release phrases or banned words. Pick a group under Reactions ('Says: …') to decide what happens when one is spoken. Comma separated; quote phrases that contain commas. Matches whole words, ignoring case. Phrases you set are hidden from the wearer. You only see phrases you set yourself, unless you are their owner or lover.
+用于监听的词语或短语组，例如释放短语或禁用词。在「反应规则」下选择一个组（「说：……」），以决定说出其中词语时发生什么。使用逗号分隔；包含逗号的短语请加引号。匹配完整单词，不区分大小写。你设置的短语会对佩戴者隐藏。除非你是对方的主人或恋人，否则你只能看到自己设置的短语。
+Owner only
+仅主人
+Owner and lovers
+主人与恋人
+Whitelist, lovers and owner
+白名单、恋人和主人
+Everyone except blacklist
+除黑名单外的所有人
+Everyone
+所有人
+See how a line reads and why. Pick any word to score it or flag it as profane. Hover a tag to see what it changes; nothing changes until you click one.
+查看一行如何被解读及其原因。选择任意单词打分或标记为脏话。悬停标签查看其更改内容；点击前不会有任何改变。
+Ignore the word "
+忽略单词「
+" (score 0)
+」（分数 0）
+: it stops pushing any line negative or positive.
+：该词不会使任何语句的情感分数向正面或负面偏移。
+Count "
+将「
+" as negative (-3)
+」视为负面（-3）
+: lines about you that use it will read as negative.
+：使用该词的关于你的行会被解读为负面。
+" as positive (+3)
+」视为正面（+3）
+: lines about you that use it will read as positive.
+：使用该词的关于你的行会被解读为正面。
+Never treat "
+永远不将「
+" as profane
+」视为脏话
+: it is allowed in every line you say.
+：它在你说的每一行中都是允许的。
+Save Outfit:
+保存服装：
+Missing outfit
+缺少套装
+Outfit code
+服装代码
+Invalid name: Already exists!
+名称无效：已存在！
+Try Again?
+是否重试？
+Toggle Shared Crafts
+切换共享制作物
+Chaotic
+混乱
+Change randomly the item's extended options, every 10min (Incompatible with Evolving)
+每 10 分钟随机更改物品的扩展选项（与进化不兼容）
+Evolving
+进化
+Change progressively the item's extended options, until last option is reached, every 10min (Incompatible with Chaotic)
+每 10 分钟渐进式更改物品的扩展选项，直到最后一个选项（与混乱不兼容）
+Slow
+缓慢
+Increase the trigger time for Chaotic and Evolving to 30min (Only for Chaotic or Evolving, Incompatible with Quick)
+将混乱和进化的触发时间增加到 30 分钟（仅适用于混乱或进化，与快速不兼容）
+Quick
+快速
+Reduce the trigger time for Chaotic and Evolving to 3min  (Only for Chaotic or Evolving, Incompatible with Quick)
+将混乱和进化的触发时间减少到 3 分钟（仅适用于混乱或进化，与缓慢不兼容）
+Tamperproof
+防篡改
+Activate custom behavior when tampering with the item (Need to be used with Electrifying / Self-Tightening / Subduing, Incompatible with hand item)
+篡改物品时激活自定义行为（需与电击/自收紧/制服配合使用，与手持物品不兼容）
+Electrifying
+电击
+Electrifying the player when tampering with the item (Need to be used with Tamperproof)
+篡改物品时对玩家进行电击（需与防篡改配合使用）
+Self-Tightening
+自收紧
+Tighten the item when tampering with the item (Need to be used with Tamperproof)
+篡改物品时收紧物品（需与防篡改配合使用）
+Subduing
+制服
+Subdue the player with a sedating spray when tampering with the item (Need to be used with Tamperproof)
+篡改物品时用镇静喷雾制服玩家（需与防篡改配合使用）
+Cursed
+诅咒
+Curse the item (Need a selected curse in the dropdown below)
+诅咒物品（需在下方下拉框中选择一个诅咒）
+Selection for the curse to apply
+选择要施加的诅咒
+Enchant the item with magic, allowing player to use LSCG Magic. (Need hand item)
+为物品附魔，允许玩家使用 LSCG 魔法。（需要手持物品）
+Net Gun
+网枪
+Add a Shoot Netgun ability to the item (Need Medical Injector or Rainbow Wand or Baguette)
+为物品添加发射网枪能力（需要医疗注射器、彩虹魔杖或法棍面包）
+Soulbinding
+灵魂绑定
+Restraints with this will persist on the wearer's 'Astral Projection.'
+带有此属性的束缚会在佩戴者的「灵魂出窍」状态下持续存在。
+Antidote
+解毒剂
+Add curing effect to the item (Only for: Medical Injector, Latex Respirator, Filled Glass or Mug)
+为物品添加治疗效果（仅适用于：医疗注射器、乳胶呼吸器、装满的玻璃杯或马克杯）
+Add Sedative effect to the item (Only for: Medical Injector, Latex Respirator, Filled Glass or Mug)
+为物品添加镇静剂效果（仅适用于：医疗注射器、乳胶呼吸器、装满的玻璃杯或马克杯）
+Add aphrodisiac effect to the item (Only for: Medical Injector, Latex Respirator, Filled Glass or Mug)
+为物品添加春药效果（仅适用于：医疗注射器、乳胶呼吸器、装满的玻璃杯或马克杯）
+Add mind control effect to the item (Only for: Medical Injector, Latex Respirator, Filled Glass or Mug)
+为物品添加精神控制效果（仅适用于：医疗注射器、乳胶呼吸器、装满的玻璃杯或马克杯）
+You do not have access to %OPP_POSSESSIVE% mind...
+你无权访问 %OPP_POSSESSIVE% 的意识...
+%OPP_NAME% has too much willpower to let you in...
+%OPP_NAME% 的意志力太强，你无法进入...
+%OPP_NAME% seems suggestable, but not to you...
+%OPP_NAME% 看起来可被暗示，但对你不生效...
+%OPP_NAME% is resisting any hypnotic suggestions...
+%OPP_NAME% 正在抵抗任何催眠暗示...
+%OPP_NAME% does not allow remote configuration.
+%OPP_NAME% 不允许远程配置。
+You do not have permission to configure %OPP_POSSESSIVE% speech.
+你没有权限配置 %OPP_POSSESSIVE% 的言语设置。
+%OPP_NAME% didn't respond. %OPP_PRONOUN% may not allow access right now.
+%OPP_NAME% 没有回应。%OPP_PRONOUN% 现在可能不允许访问。
+Each extension adds its own settings here.
+每个扩展都会在此处添加自己的设置。
+'s settings couldn't be loaded. See the browser console for details.
+的设置无法加载。详情请参阅浏览器控制台。
+page
+页
+Drag the character, or use the arrow keys (shift for bigger steps).
+拖动角色，或使用方向键（按 Shift 可增大步幅）。
+Drag the character left or right, or use the arrow keys (shift for bigger steps). A layer's angle adds to All Layers.
+左右拖动角色，或使用方向键（按 Shift 可增大步幅）。单个图层的角度会叠加到「所有图层」上。
+Drag the character: sideways for width, up and down for height, or both together while holding Shift (right or up for bigger). Arrow keys work too: shift for bigger steps, Alt to change both. A layer's scale multiplies All Layers.
+拖动角色：左右拖调整宽度，上下拖调整高度，按住 Shift 同时拖（向右或向上可放大）。方向键同样可用：Shift 加大步幅，Alt 同时调整两者。单个图层的缩放会乘到「所有图层」上。
+X
+X 轴
+Y
+Y 轴
+No instructions yet
+尚未添加指令
+1 to 8 letters, A to Z
+1 到 8 个字母，A 到 Z
+Up to 140 characters
+最多 140 个字符
+4 digits
+4 位数字
+Mind
+心智
+Senses
+感知
+Form
+形态
+Binding
+束缚
+Desire
+欲望
+Harm
+伤害
+Fortune
+运势
+Warding
+防护
+Effects on the target's will and thoughts.
+关于目标意志与思维的效果。
+Effects on what the target can see, hear and perceive.
+关于目标视觉、听觉和感知的效果。
+Effects on the target's body, size and clothing.
+关于目标身体、体型和衣物的效果。
+Effects that restrain, gag or hold the target.
+束缚、口塞或控制目标的效果。
+Effects on the target's arousal and release.
+关于目标兴奋度和释放的效果。
+Effects that hurt the target.
+伤害目标的效果。
+Effects that help or hinder the target's skills.
+增强或削弱目标技能的效果。
+Effects that protect, or take other magic away.
+保护目标或移除其他魔法的效果。
+Damaging
+伤害
+Damages the target with a chosen damage type and an optional dice roll.
+使用选定的伤害类型和可选的骰子检定对目标造成伤害。
+Dissolving Clothes
+溶解衣物
+Dissolves the target's clothing, underwear or both.
+溶解目标的衣物、内衣或两者。
+Web
+蛛网
+Binds the target in sticky webs.
+用黏稠的蛛网束缚目标。
+Slime
+黏液
+Coats the target in hardening slime.
+用会凝固的黏液覆盖目标。
+Conjured Ropes
+召唤绳索
+Ties the target with conjured rope.
+用召唤出的绳索捆绑目标。
+Commanding
+命令
+Compels the target to kneel, follow, stay, strip or cum.
+强迫目标跪下、跟随、停留、脱衣或射精。
+Grasping
+抓取
+Seizes the target's neck, arms, legs, ass or breasts with spectral hands.
+用幽灵之手抓住目标的脖子、手臂、腿部、臀部或乳房。
+Lifts one magical effect from the target: the one the caster picks, or one at random.
+从目标身上移除一个魔法效果：由施法者选择，或随机选择。
+Half damage
+伤害减半
+No damage
+无伤害
+e.g. 2d6 + 2
+例如 2d6 + 2
+Clothing and underwear
+衣物和内衣
+Kneel
+跪下
+Stay
+停留
+Cum
+射精
+Neck
+脖子
+Arms
+手臂
+Legs
+腿部
+Ass
+臀部
+Breasts
+乳房
+Effect to lift
+要移除的效果
+- Random -
+— 随机 —
+Search spells…
+搜索法术…
+No effects
+无效果
+Needs a second target.
+需要第二个目标。
+← Back
+← 返回
+Effect 6
+效果6
+Effect 7
+效果7
+Effect 8
+效果8
+If checked, the user will be allowed to remove installed suggestions.
+勾选后，用户将可以移除已植入的暗示。
+If checked, locks the user out of their own hypnosis settings.
+勾选后，将锁定用户对自己催眠设置的访问。
+Negative self-talk and positive affirmations, including comparisons with others and how you respond to what others say about you.
+负面的自我评价和正面肯定，包括与他人比较，以及你如何回应他人对你的评价。
+Swearing, including disguised spellings like f*ck or sh1t.
+脏话，包括 f*ck 或 sh1t 之类的变体拼写。
+Speaking above a set reading grade level.
+使用高于指定阅读年级水平的表达。
+Your own groups of words and phrases, such as release phrases or banned words.
+你自己的词语和短语组，例如解除短语或禁用词。
+Type a line, or pick one of your recent lines.
+输入一条语句，或从最近语句中选择。
+Denied
+拒绝高潮
+Horny
+兴奋
+Blind
+失明
+Deaf
+失聪
+Frozen
+冻结
+Asleep
+睡眠中
+Redressed
+恢复服装
+Loading speech settings…
+正在加载言语设置…
+No one else in the room can be paired.
+房间内没有其他可配对的人。
+Storage: 
+存储：
+BC Server
+BC 服务器
+Local Storage
+本地存储
+Change Storage Location
+更改存储位置
+Edit Outfit
+编辑服装
+Crafted
+制作物品
+Inherited Outfits:
+继承服装：
+Wear outfit
+穿戴服装
+Done
+完成
+Comma separated list of member IDs. If empty will use standard Item Permissions.
+成员ID列表，逗号分隔。留空则使用标准物品权限。
+A choke, if the target allows hand chokes.
+扼喉效果，前提是目标允许徒手扼喉。
+Squeezes now and then, raising arousal a little.
+偶尔进行挤压，使兴奋度略微提升。
+Pins the arms.
+固定住手臂。
+Holds the legs still.
+固定住腿部。
+A suggested instruction.
+一条建议指令。
+Glow
+发光
+Float
+漂浮
+States
+状态
+Nothing to show.
+暂无可显示的内容。
+Delete rule
+删除规则
++ Add rule
++ 添加规则
+Remote Access
+远程访问
+Allowed member ids
+允许的成员 ID
+Who can access
+谁可以访问
+Use global defaults
+使用全局默认设置
+Take who can access and the allowed member ids from General > Remote Access. Turn it off to set them for this section alone. The trance rules below are always this section's own.
+从「通用 > 远程访问」读取访问权限级别和允许的成员 ID。关闭后可单独设置本分区的权限。下方的催眠状态规则始终由本分区独立控制。
+Same levels as BC's interaction permission, plus friends. Your owner always has access.
+权限级别与 BC 的互动权限相同，另加好友级别。你的主人始终可以访问。
+These members get in whatever the level says (the trance rules still apply).
+这些成员无论当前权限级别如何都可以访问（仍受催眠状态规则限制）。
+Remote access only works while you are hypnotized (your owner can always get in).
+只有在你被催眠时才能远程访问（你的主人始终可以访问）。
+Only whoever hypnotized you gets remote access (your owner can always get in).
+只有催眠你的人可以远程访问（你的主人始终可以访问）。
+Defaults for every section
+所有分区的默认设置
+Hypnosis, collar, magic and speech analysis can use these instead of their own settings (each has a "Use global defaults" checkbox). Whether a section allows remote access at all, and whether it can be locked, stay set on the section.
+催眠、项圈、魔法和言语分析可以使用这些全局设置，而不是各自的设置（每个分区都有「使用全局默认设置」复选框）。某个分区是否允许远程访问、是否允许被锁定，仍由该分区自身决定。
+Enable net gun
+启用网枪
+Lets you shoot nets from a crafted net gun (a medical injector, rainbow wand or baguette with "net gun" in its name or description).
+允许你使用制作的网枪发射网（名称或描述中包含“net gun”的医疗注射器、彩虹魔杖或法棍面包均可作为网枪）。
+Who can copy my outfit
+谁可以复制我的服装
+Who may copy your outfit with /lscg get-outfit-code. They also need permission to use items on you.
+谁可以通过 /lscg get-outfit-code 复制你的服装。他们还必须拥有对你使用物品的权限。
+Nobody
+任何人都不行
+Open LSCG Wiki on GitHub.
+在 GitHub 上打开 LSCG 维基。
+Dominants
+支配者
+Everyone, no exceptions
+所有人（无例外）
+Everyone, except blacklist
+所有人（黑名单除外）
+Friends, whitelist, lovers and owner
+好友、白名单、恋人和主人
+Owner, lovers, whitelist and dominants
+主人、恋人、白名单和支配者
+wearer's global default
+佩戴者的全局默认设置
+Friend
+好友
+Lover
+恋人
+Allowed
+允许
+Phrase
+短语
+Suggestion
+暗示
+Enables breathplay. Turning it off goes back to the introduction.
+启用呼吸控制。关闭后将返回介绍页面。
+Comma separated list of member IDs exclusively allowed to use your triggers and suggestions. If empty will use standard Item Permissions. Remote access to these settings has its own tab.
+仅允许这些成员 ID 使用你的触发词和暗示，多个 ID 用逗号分隔。留空则使用标准物品权限。此设置的远程访问选项位于单独的标签页中。
+Enable Enhanced Drinks and Injectors.
+启用强化饮品和注射器。
+Phrases you set are hidden from the wearer. You only see phrases you set yourself, unless you are their owner or lover.
+你设置的短语会对佩戴者隐藏。除非你是对方的主人或恋人，否则只能看到自己设置的短语。
+Phrases set by someone else through remote access are hidden from you.
+其他人通过远程访问设置的短语会对你隐藏。
+Tightens over time
+逐渐收紧
+The hand squeezes harder every minute until the target passes out, then takes hold again once they recover.
+这只手每分钟都会收得更紧，直到目标昏厥；目标恢复后，它会再次抓住目标。
+Any effect, picked by the caster or at random, or only this one.
+移除任意效果（由施法者选择或随机选取），也可以只移除此效果。
+- Any effect -
+— 任意效果 —
+Lifts
+移除
+Alphabetical
+按字母顺序
+By type
+按类型
+Sort effects
+效果排序
+By type boxes effects into groups, like the effect picker (mind, senses, binding... then extensions), alphabetical within each. Alphabetical is one list, with extension effects last.
+按类型会将效果分组，类似效果选择器（心智、感知、束缚……然后是扩展效果），并在每组内按字母排序。按字母顺序则显示为单一列表，扩展效果排在最后。
+Prevents you from casting this effect. Only someone with remote access can change this.
+阻止你施放此效果。只有拥有远程访问权限的人才能更改此设置。
+Prevent them from casting this effect
+阻止他们施放此效果
+Forbidden
+禁止施放
+Blocked effects never apply to you; "Allow self" still lets your own spells apply them. Locked effects fizzle on their step when you cast a spell, and only someone with remote access can lock them.
+被阻止的效果永远不会作用于你；「允许自身」仍可让你自己的法术施加这些效果。施法时，已锁定的效果会在执行到该步骤时失效；只有拥有远程访问权限的人才能锁定效果。
+Blocked effects never apply to them; "Allow self" still lets their own spells apply them. Locked effects fizzle on their step when they cast a spell, and only someone with remote access can lock them.
+被阻止的效果永远不会作用于他们；「允许自身」仍可让他们自己的法术施加这些效果。施法时，已锁定的效果会在执行到该步骤时失效；只有拥有远程访问权限的人才能锁定效果。
+This effect comes from an extension that isn't installed.
+此效果来自一个尚未安装的扩展。
+Not installed
+未安装
+Select a spell to teach…
+选择要教授的法术…
+Select a paired target…
+选择配对目标…
+Select a spell to cast…
+选择要施放的法术…
+Choose how to cast…
+选择施法方式…
+No spells known…
+尚未掌握法术…
+No spells match.
+没有匹配的法术。
+You can't cast this effect; it has been locked.
+此效果已被锁定，你无法施放。
+You have blocked this effect.
+你已阻止此效果。
+Your client doesn't have this effect.
+你的客户端没有此效果。
+paired
+配对
+Custom delay
+自定义延迟
+Wait (seconds)
+等待时间（秒）
+Body and Cosplay
+身体与 Cosplay
+Whole Body Only
+仅全身
+Cosplay Only
+仅 Cosplay
+Acid
+酸蚀
+Bludgeoning
+钝击
+Cold
+寒冷
+Fire
+火焰
+Force
+力场
+Lightning
+闪电
+Necrotic
+黯蚀
+Piercing
+穿刺
+Poison
+毒素
+Psychic
+心灵
+Radiant
+光耀
+Slashing
+斩击
+Thunder
+雷鸣
+Release phrases
+释放短语
+Banned words
+禁用词
+Parse outfit code
+解析服装代码
+Save item set
+保存物品套装
+Restraints/Items
+束缚/物品
+Hair/Eyebrows
+头发/眉毛
+Skin/Body
+皮肤/身体
+Genitals/Pronouns
+生殖器/代词
+None of your crafted items fit this group
+没有适用于此分组的已制作物品
+Outfit preview
+服装预览
+Save item set:
+保存物品套装：
+Missing outfit or combination
+缺少服装或组合
+Missing key
+缺少键值
+Duplicate name
+名称重复
+Missing code
+缺少代码
+no scored words
+没有可评分的单词
+✓ clean
+✓ 未检测到脏话
+Trance
+催眠状态
+Spiral overlay
+螺旋叠加效果
+Draws a slowly turning purple spiral over the screen while you are hypnotized.
+在你处于催眠状态时，在屏幕上绘制一个缓慢旋转的紫色螺旋。
+Spiral turn time (sec.)
+螺旋旋转周期（秒）
+Seconds for the spiral overlay to make one full turn. Lower is faster.
+螺旋叠加图案完成一整圈旋转所需的时间（秒）。数值越小，旋转越快。
+Let other players change your hypnosis settings through LSCG's remote settings.
+允许其他玩家通过 LSCG 的远程设置功能更改您的催眠设置。
+Let other players change your collar settings through LSCG's remote settings.
+允许其他玩家通过 LSCG 的远程设置功能更改您的项圈设置。
+Drug visuals
+药物视觉效果
+Master switch for the drugs' visual effects: the suggestible's sway, tint and blur, and the hypno spiral. (The spiral also has its own switch in Hypnosis settings.)
+药物视觉效果的总开关：涵盖“易受暗示者的摇摆感”、“色调与模糊效果”以及“催眠螺旋”。（催眠螺旋在“催眠”设置中也有其独立的开关。）
+Swaying screen
+摇晃的画面
+The warped, swaying screen while suggestible. Turn it off to keep just the green tint and blur. (Needs Drug visuals.)
+在易受暗示状态下，画面会发生扭曲与摇晃。将其关闭，则仅保留绿色色调与模糊效果。（需开启“药物视觉效果”。）
+Suggestible
+易受暗示剂
+Activates for "suggestible", "intoxicating" or "compliance". The higher it is, the more agreeable you become.
+对名称/描述含「suggestible」、「intoxicating」或「compliance」的物品激活。该数值越高，你就越容易顺从他人。
+Activates for \"suggestible\", \"intoxicating\" or \"compliance\". The higher it is, the more agreeable you become.
+对名称/描述含「suggestible」、「intoxicating」或「compliance」的物品激活。该数值越高，你就越容易顺从他人。
+Default: 3 minutes per dose.
+默认值：每剂 3 分钟。
+Default: 4 minutes per dose.
+默认值：每剂 4 分钟。
+Default: 5 minutes per dose.
+默认值：每剂 5 分钟。
+Soaked items
+浸药物品
+Crafted gags and masks with a drug word followed by "-soaked" or "-laced" (e.g. "aphrodisiac-soaked", "intoxicant-laced") dose you gradually while worn.
+带有药物名称后缀「-soaked」或「-laced」命名的自制口塞和面具（例如「aphrodisiac-soaked」，「intoxicant-laced」），在佩戴期间会逐渐向你释放药物。
+Crafted gags and masks with a drug word followed by \"-soaked\" or \"-laced\" (e.g. \"aphrodisiac-soaked\", \"intoxicant-laced\") dose you gradually while worn.
+带有药物名称后缀「-soaked」或「-laced」命名的自制口塞和面具（例如「aphrodisiac-soaked」，「intoxicant-laced」），在佩戴期间会逐渐向你释放药物。
+Allow soaked items
+允许使用浸药物品
+Allows crafted mouth, nose and face items soaked in a drug to dose you gradually.
+允许自制的口部、鼻部及面部装备浸药，并在佩戴时持续缓慢释放药物。
+Soaks never dry
+浸泡效果永不干涸
+Soaked items on you stay potent for as long as they are worn; otherwise they dry out after an hour.
+只要穿戴浸药物品，其药效就会持续保持；未穿戴的物品则会在一小时后干涸。
+Lifts one magical effect from the target: the one the caster picks, or one at random. Can be set to lift only one particular effect.
+移除目标身上的一个魔法效果：可由施法者指定要移除的效果，也可随机移除一个。还可设定为仅移除某一种特定效果。
+Optional dice, such as 2d6 + 2, totalling at most 256. Leave empty for damage with no number.
+可选的骰子表达式，例如 2d6 + 2，总点数最多为 256。留空则表示造成不指定数值的伤害。
+Owner, lovers and whitelist
+主人、恋人和白名单
+Binaural beats
+双耳节拍
+Plays a soft binaural beat while you are hypnotized, fading in as the trance starts and fading out when you wake. Needs headphones. The evidence that beats affect the brain is mixed, so treat them as atmosphere. Not recommended if you have a history of seizures.
+当你处于催眠状态时播放柔和的双耳节拍；催眠开始时逐渐淡入，醒来时逐渐淡出。需要佩戴耳机。关于双耳节拍是否会影响大脑，目前的研究证据尚不一致，因此请将其视为一种氛围效果。有癫痫发作史者不建议使用。
+Beat pattern
+节拍模式
+Alpha (about 10 Hz) is relaxed focus and theta (4 to 7 Hz) the deeper end. The glide starts in alpha and settles into theta.
+阿尔法波（约 10 Hz）代表放松而专注的状态，西塔波（4 至 7 Hz）则代表更深层的状态。渐变过程从阿尔法波开始，逐渐过渡到西塔波。
+Alpha to theta glide (10 to 5 Hz over 3 minutes)
+阿尔法波到西塔波渐变（3 分钟内从 10 Hz 降至 5 Hz）
+Alpha (10 Hz)
+阿尔法波（10 Hz）
+Theta (6 Hz)
+西塔波（6 Hz）
+Deep theta (4.5 Hz)
+深度西塔波（4.5 Hz）
+Beat volume (%)
+节拍音量（%）
+How loud the beats get. Extensions can only play them at or below this.
+设置节拍的播放音量。扩展只能以此音量或更低的音量播放节拍。
+Gas and soak emotes
+气体与浸药物品吸入动作
+Occasional emotes as you breathe in a drug from a gas or a soaked item (rate-limited below). The doses still land without them.
+当你从气体或浸药物品中吸入药物时，偶尔播放相应的动作表情（触发频率受下方设置限制）。即使不播放这些动作，药物剂量仍会正常生效。
+Emotes only to me
+动作表情仅对我可见
+Show those emotes only to you instead of saying them to the room.
+这些动作表情只对你显示，不会向整个房间公开发送。
+Minutes between emotes
+动作表情间隔（分钟）
+The least time between those emotes. 0 for no limit.
+两次动作表情之间的最短间隔时间。设为 0 表示不限制。
+Gas strength (%)
+气体强度（%）
+How strong each breath from a gas is. 100 is standard.
+每次从气体中吸入的剂量强度。100% 为标准强度。
+Soak strength (%)
+浸药物品强度（%）
+How strong each breath from a soaked item is, as a percent of a standard gas. Default 30.
+每次从浸药物品中吸入的剂量强度，以标准气体强度的百分比表示。默认值为 30%。
+Faster map drawing [EXPERIMENTAL]
+地图加速绘制【实验性】
+If checked, the map's images are drawn through a shortcut that skips some of the game's per-image work. Helps most when zoomed out. Turn off if the map looks wrong.
+勾选后，地图图像将通过一种快捷方式绘制，从而跳过游戏对每张图像执行的部分处理。缩小地图时效果最明显。如果地图显示异常，请关闭此选项。
+Light quality
+光照质量
+Half draws the lighting at half resolution, which is quicker on slow devices and makes shadow edges a little softer.
+半分辨率模式会以一半的分辨率渲染光照，在性能较弱的设备上运行更快，并使阴影边缘稍微柔和一些。
+Half (faster)
+半分辨率（更快）

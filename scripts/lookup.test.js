@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { generateDict } from "./gen-dict.js";
 import { createLookup } from "../src/mods/lookup.js";
+import { translateLscgText } from "../src/mods/lscgText.js";
 import { translateValue } from "../src/mods/displayText.js";
 import { createMissingCollector } from "../src/mods/missing.js";
 import { setupBcxHelp } from "../src/mods/bcxHelp.js";
@@ -23,6 +24,49 @@ test("lookup preserves compatibility scope and priority, with CN/TW and inactive
     assert.equal(lookup.activity("Alice spoke openly in a room."), undefined);
     lang = null;
     for (const fn of Object.values(lookup)) assert.equal(fn("None"), undefined);
+});
+
+
+
+test("LSCG DOM text translation handles lines, dynamic prefixes and status suffixes", () => {
+    const values = {
+        "Missing key": "缺少键值",
+        "Custom item": "自定义物品",
+        "Required": "必填",
+    };
+    const lookup = key => values[key];
+    assert.equal(translateLscgText("Save item set:\nMissing key", lookup), "保存物品套装：\n缺少键值");
+    assert.equal(translateLscgText("Added by extension: Example Pack", lookup), "由扩展程序添加：Example Pack");
+    assert.equal(translateLscgText("Custom item (blocked)", lookup), "自定义物品（已屏蔽）");
+    assert.equal(translateLscgText("Remote access: Owner only", key => key === "Remote access: Owner only" ? "远程访问: Owner only" : values[key], () => undefined), "远程访问：仅限主人");
+    assert.equal(translateLscgText("  Required  ", lookup), "  必填  ");
+    assert.equal(translateLscgText("a user-entered note", lookup), undefined, "unknown user text is never guessed");
+});
+
+test("LSCG legacy menu lookup tolerates unique capitalization changes only", () => {
+    const data = {
+        base: { CN: {} },
+        crafting: { CN: {} },
+        activity: { CN: {} },
+        surfaces: { CN: {} },
+        modMenu: { CN: {} },
+        modRegex: { CN: [] },
+        compat: { CN: {
+            supplement: { menu: {}, activity: {}, html: {} },
+            LSCG: { menu: { text: {
+                "LSCG Settings": "LSCG 设置",
+                "General": "通用设置",
+                "Config": "配置甲",
+                "CONFIG": "配置乙",
+            }, regex: [] } },
+        } },
+    };
+    const lookup = createLookup(data, () => "CN", { Player: { LSCG: true }, CurrentScreen: "InformationSheet" });
+    assert.equal(lookup.menu("LSCG SETTINGS"), "LSCG 设置");
+    assert.equal(lookup.menu("general"), "通用设置");
+    assert.equal(lookup.menu("Suggestion No. 12"), "暗示第 12");
+    assert.equal(lookup.menu("Config"), "配置甲", "exact matches retain priority");
+    assert.equal(lookup.menu("config"), undefined, "ambiguous case-fold collisions are not guessed");
 });
 
 test("compatibility migration preserves regex patterns, flags and replacement references in TW", () => {

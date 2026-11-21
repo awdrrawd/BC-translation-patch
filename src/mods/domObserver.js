@@ -1,4 +1,4 @@
-import { createIdleBatchProcessor } from "./idleBatch.js";
+import { createFrameBatchProcessor, createIdleBatchProcessor } from "./idleBatch.js";
 
 import { translateValue } from "./displayText.js";
 
@@ -67,25 +67,50 @@ function setupDfnObserver(translate, addCleanup) {
     start();
 }
 
-// 時間切片排程器：把一批節點的翻譯工作分散到多個閒置時段執行，
-// 避免道具格子一次很多時，單一個 idle callback 又整批卡住主執行緒。
-const ATTRIBUTES = [['title', 'title'], ['aria-label', 'ariaLabel'], ['placeholder', 'placeholder']];
+// LSCG settings use frame-priority scheduling below; general inventory text stays idle-batched.
+const ATTRIBUTES = ['title', 'aria-label', 'placeholder', 'label', 'alt'];
+const ATTRIBUTE_SELECTOR = ATTRIBUTES.map(attribute => `[${attribute}]`).join(', ');
+
+// Read/write real HTML attributes instead of reflected DOM properties (el.ariaLabel, el.label ...).
+// Reflected properties are not implemented everywhere (e.g. linkedom, older browsers), which made
+// aria-label silently untranslated. A cached per-element/attribute view keeps translateValue's
+// "remember the original text" behaviour stable across calls.
+const attributeViews = new WeakMap();
+function attributeView(el, attribute) {
+    let views = attributeViews.get(el);
+    if (!views) attributeViews.set(el, views = {});
+    return views[attribute] ??= {
+        get value() { return el.getAttribute(attribute) ?? ""; },
+        set value(next) { el.setAttribute(attribute, next); },
+    };
+}
+function translateAttributes(el, translate) {
+    for (const attribute of ATTRIBUTES) {
+        if (el.hasAttribute(attribute)) translateValue(attributeView(el, attribute), "value", translate);
+    }
+}
 function setupLscgSettingsObserver(translate, addCleanup) {
     let disposed = false, frame;
-    const selector = '[id^="lscg-"][id$="-settings"], #lscg-outfit-edit, #lscg-outfits';
-    const processor = createIdleBatchProcessor(root => {
+    // DomSettingsHost marks every settings root with .lscg-screen. Prefer that
+    // contract over IDs ending in "-settings": LSCG 0.9.18 also mounts
+    // lscg-outfit-chrome, whose ID does not have that suffix. The outfit dialog
+    // is a standalone DomOverlayHost whose visible panel is marked .lscg-apply.
+    const selector = [
+        '.lscg-screen',
+        '.lscg-apply',
+        '[id^="lscg-"][id$="-settings"]',
+        '#lscg-outfit-edit',
+        '#lscg-outfits',
+    ].join(', ');
+    // Settings are small, user-facing surfaces. Translate in rAF (before paint),
+    // not requestIdleCallback (which permits a visible English frame).
+    const processor = createFrameBatchProcessor(root => {
         if (!root.isConnected) return;
         translateTextNodes(root, translate);
         // Labels/tooltips belong to the settings UI. Never translate input values.
-        // Only elements that actually carry the attribute need a record (every Element has the ariaLabel property).
-        for (const el of root.querySelectorAll('[title], [aria-label], [placeholder]')) {
-            for (const [attribute, property] of ATTRIBUTES) {
-                if (el.hasAttribute(attribute)) translateValue(el, property, translate);
-            }
-        }
-        for (const [attribute, property] of ATTRIBUTES) {
-            if (root.hasAttribute(attribute)) translateValue(root, property, translate);
-        }
+        // Only elements that actually carry one of these reflected label attributes are queued.
+        for (const el of root.querySelectorAll(ATTRIBUTE_SELECTOR)) translateAttributes(el, translate);
+        translateAttributes(root, translate);
     });
     addCleanup(() => { disposed = true; processor.dispose(); cancelAnimationFrame(frame); });
     const collect = node => {
@@ -114,7 +139,7 @@ function setupLscgSettingsObserver(translate, addCleanup) {
     const start = () => {
         if (disposed) return;
         if (!document.body) { frame = requestAnimationFrame(start); return; }
-        obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['title', 'aria-label', 'placeholder'] });
+        obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATTRIBUTES });
         collect(document.body);
     };
     const refresh = () => collect(document.body);
@@ -123,9 +148,9 @@ function setupLscgSettingsObserver(translate, addCleanup) {
     start();
 }
 
-export function setupDomObserver(translate, translateDfn, addCleanup) {
+export function setupDomObserver(translate, translateDfn, addCleanup, translateLscg = translate) {
     setupDfnObserver(translateDfn || translate, addCleanup);
-    setupLscgSettingsObserver(translate, addCleanup);
+    setupLscgSettingsObserver(translateLscg || translate, addCleanup);
     let disposed = false, frame;
     addCleanup(() => { disposed = true; cancelAnimationFrame(frame); });
 

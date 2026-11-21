@@ -166,12 +166,19 @@ test("LSCG substituted messages cover every added template and blank departure t
 });
 import { setupDomObserver } from "../src/mods/domObserver.js";
 
-test("settings mutations translate only changed descendants and preserve non-display text", t => {
-    const { document } = parseHTML('<html><body><section id="lscg-test-settings"><div><span>Label</span></div><script>Label</script><textarea>Label</textarea><dfn>Label</dfn></section><aside>Label</aside></body></html>');
-    const callbacks = [], work = [], cleanups = [];
+test("LSCG DomSettingsHost and outfit overlays translate before paint; non-display text stays intact", t => {
+    const { document } = parseHTML(`<html><body>
+        <section id="lscg-test-settings"><div><span>Label</span></div><script>Label</script><textarea>Label</textarea><dfn>Label</dfn></section>
+        <div id="lscg-outfit-chrome" class="lscg-overlay lscg-screen lscg-kit"><span>Label</span></div>
+        <div id="lscg-apply-outfit" class="lscg-overlay"><div class="lscg-apply" role="dialog" aria-label="Label"><span>Label</span><select><optgroup label="Label"><option>Label</option></optgroup></select></div></div>
+        <aside>Label</aside>
+    </body></html>`);
+    const callbacks = [], frames = [], idle = [], cleanups = [];
     const globals = { document, NodeFilter: { SHOW_TEXT: 4 },
         MutationObserver: class { constructor(fn) { callbacks.push(fn); } observe() {} disconnect() {} },
-        requestIdleCallback: fn => { work.push(fn); return 1; }, cancelIdleCallback() {}, cancelAnimationFrame() {},
+        requestAnimationFrame: fn => { frames.push(fn); return frames.length; },
+        cancelAnimationFrame() {},
+        requestIdleCallback: fn => { idle.push(fn); return idle.length; }, cancelIdleCallback() {},
         setTimeout: () => 1, clearTimeout() {} };
     const previous = Object.fromEntries(Object.keys(globals).map(key => [key, Object.getOwnPropertyDescriptor(globalThis, key)]));
     Object.assign(globalThis, globals);
@@ -183,39 +190,59 @@ test("settings mutations translate only changed descendants and preserve non-dis
     });
     let active = true;
     setupDomObserver(text => active && text === "Label" ? "Translated" : undefined, undefined, fn => cleanups.push(fn));
-    const flush = () => { while (work.length) work.shift()({ didTimeout: true }); };
-    flush();
+    assert.equal(frames.length, 1, "settings roots are scheduled for the next animation frame");
+    assert.equal(idle.length, 0, "settings translation must not wait for requestIdleCallback");
+    const flushFrame = () => { while (frames.length) frames.shift()(); };
+    flushFrame();
+
     const root = document.querySelector("section"), span = root.querySelector("span");
+    const chrome = document.querySelector("#lscg-outfit-chrome");
+    const dialog = document.querySelector("#lscg-apply-outfit");
     assert.equal(span.textContent, "Translated");
+    assert.equal(chrome.textContent, "Translated", "DomSettingsHost roots are found by .lscg-screen");
+    const applyRoot = dialog.querySelector(".lscg-apply");
+    assert.equal(applyRoot.querySelector("span").textContent, "Translated", "the standalone apply-outfit overlay is included");
+    assert.equal(applyRoot.getAttribute("aria-label"), "Translated");
+    assert.equal(applyRoot.querySelector("optgroup").getAttribute("label"), "Translated", "native optgroup label attributes are translated");
+    assert.equal(applyRoot.querySelector("option").textContent, "Translated");
     for (const tag of ["script", "textarea", "dfn"]) assert.equal(root.querySelector(tag).textContent, "Label");
     assert.equal(document.querySelector("aside").textContent, "Label");
+
     const notify = callbacks[1];
     let scans = 0;
     const query = root.querySelectorAll.bind(root);
     t.mock.method(root, "querySelectorAll", selector => { scans++; return query(selector); });
     span.firstChild.data = "Label";
     notify([{ type: "characterData", target: span.firstChild }]);
-    flush();
+    assert.equal(frames.length, 1);
+    flushFrame();
     assert.equal(span.textContent, "Translated");
     span.setAttribute("title", "Label");
     notify([{ type: "attributes", target: span }]);
-    flush();
-    assert.equal(span.title, "Translated");
+    flushFrame();
+    assert.equal(span.getAttribute("title"), "Translated");
+    const optionGroup = dialog.querySelector("optgroup");
+    optionGroup.setAttribute("label", "Label");
+    notify([{ type: "attributes", target: optionGroup }]);
+    flushFrame();
+    assert.equal(optionGroup.getAttribute("label"), "Translated", "label attribute mutations are observed");
     const child = document.createElement("button");
     child.textContent = "Label";
     span.parentElement.append(child);
     notify([{ type: "childList", target: span.parentElement, addedNodes: [child] }]);
-    flush();
+    flushFrame();
     assert.equal(child.textContent, "Translated");
     child.textContent = "Label";
     notify([{ type: "childList", target: child, addedNodes: [child.firstChild] }]);
-    flush();
+    flushFrame();
     assert.equal(child.textContent, "Translated");
     assert.equal(scans, 0, "descendant edits must not rescan the settings root");
     active = false;
     document.dispatchEvent(new document.defaultView.Event("bctp-language-change"));
-    flush();
+    flushFrame();
     assert.equal(span.textContent, "Label");
-    assert.equal(span.title, "Label");
+    assert.equal(span.getAttribute("title"), "Label");
+    assert.equal(dialog.querySelector(".lscg-apply").getAttribute("aria-label"), "Label");
+    assert.equal(optionGroup.getAttribute("label"), "Label");
     assert.equal(child.textContent, "Label");
 });
