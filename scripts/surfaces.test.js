@@ -203,7 +203,7 @@ test("LSCG DomSettingsHost and outfit overlays translate before paint; non-displ
     const applyRoot = dialog.querySelector(".lscg-apply");
     assert.equal(applyRoot.querySelector("span").textContent, "Translated", "the standalone apply-outfit overlay is included");
     assert.equal(applyRoot.getAttribute("aria-label"), "Translated");
-    assert.equal(applyRoot.querySelector("optgroup").label, "Translated", "native optgroup label attributes are translated");
+    assert.equal(applyRoot.querySelector("optgroup").getAttribute("label"), "Translated", "native optgroup label attributes are translated");
     assert.equal(applyRoot.querySelector("option").textContent, "Translated");
     for (const tag of ["script", "textarea", "dfn"]) assert.equal(root.querySelector(tag).textContent, "Label");
     assert.equal(document.querySelector("aside").textContent, "Label");
@@ -220,12 +220,12 @@ test("LSCG DomSettingsHost and outfit overlays translate before paint; non-displ
     span.setAttribute("title", "Label");
     notify([{ type: "attributes", target: span }]);
     flushFrame();
-    assert.equal(span.title, "Translated");
+    assert.equal(span.getAttribute("title"), "Translated");
     const optionGroup = dialog.querySelector("optgroup");
-    optionGroup.label = "Label";
+    optionGroup.setAttribute("label", "Label");
     notify([{ type: "attributes", target: optionGroup }]);
     flushFrame();
-    assert.equal(optionGroup.label, "Translated", "label attribute mutations are observed");
+    assert.equal(optionGroup.getAttribute("label"), "Translated", "label attribute mutations are observed");
     const child = document.createElement("button");
     child.textContent = "Label";
     span.parentElement.append(child);
@@ -241,8 +241,8 @@ test("LSCG DomSettingsHost and outfit overlays translate before paint; non-displ
     document.dispatchEvent(new document.defaultView.Event("bctp-language-change"));
     flushFrame();
     assert.equal(span.textContent, "Label");
-    assert.equal(span.title, "Label");
+    assert.equal(span.getAttribute("title"), "Label");
     assert.equal(dialog.querySelector(".lscg-apply").getAttribute("aria-label"), "Label");
-    assert.equal(optionGroup.label, "Label");
+    assert.equal(optionGroup.getAttribute("label"), "Label");
     assert.equal(child.textContent, "Label");
 });

@@ -68,8 +68,27 @@ function setupDfnObserver(translate, addCleanup) {
 }
 
 // LSCG settings use frame-priority scheduling below; general inventory text stays idle-batched.
-const ATTRIBUTES = [['title', 'title'], ['aria-label', 'ariaLabel'], ['placeholder', 'placeholder'], ['label', 'label'], ['alt', 'alt']];
-const ATTRIBUTE_SELECTOR = '[title], [aria-label], [placeholder], [label], [alt]';
+const ATTRIBUTES = ['title', 'aria-label', 'placeholder', 'label', 'alt'];
+const ATTRIBUTE_SELECTOR = ATTRIBUTES.map(attribute => `[${attribute}]`).join(', ');
+
+// Read/write real HTML attributes instead of reflected DOM properties (el.ariaLabel, el.label ...).
+// Reflected properties are not implemented everywhere (e.g. linkedom, older browsers), which made
+// aria-label silently untranslated. A cached per-element/attribute view keeps translateValue's
+// "remember the original text" behaviour stable across calls.
+const attributeViews = new WeakMap();
+function attributeView(el, attribute) {
+    let views = attributeViews.get(el);
+    if (!views) attributeViews.set(el, views = {});
+    return views[attribute] ??= {
+        get value() { return el.getAttribute(attribute) ?? ""; },
+        set value(next) { el.setAttribute(attribute, next); },
+    };
+}
+function translateAttributes(el, translate) {
+    for (const attribute of ATTRIBUTES) {
+        if (el.hasAttribute(attribute)) translateValue(attributeView(el, attribute), "value", translate);
+    }
+}
 function setupLscgSettingsObserver(translate, addCleanup) {
     let disposed = false, frame;
     // DomSettingsHost marks every settings root with .lscg-screen. Prefer that
@@ -90,14 +109,8 @@ function setupLscgSettingsObserver(translate, addCleanup) {
         translateTextNodes(root, translate);
         // Labels/tooltips belong to the settings UI. Never translate input values.
         // Only elements that actually carry one of these reflected label attributes are queued.
-        for (const el of root.querySelectorAll(ATTRIBUTE_SELECTOR)) {
-            for (const [attribute, property] of ATTRIBUTES) {
-                if (el.hasAttribute(attribute)) translateValue(el, property, translate);
-            }
-        }
-        for (const [attribute, property] of ATTRIBUTES) {
-            if (root.hasAttribute(attribute)) translateValue(root, property, translate);
-        }
+        for (const el of root.querySelectorAll(ATTRIBUTE_SELECTOR)) translateAttributes(el, translate);
+        translateAttributes(root, translate);
     });
     addCleanup(() => { disposed = true; processor.dispose(); cancelAnimationFrame(frame); });
     const collect = node => {
@@ -126,7 +139,7 @@ function setupLscgSettingsObserver(translate, addCleanup) {
     const start = () => {
         if (disposed) return;
         if (!document.body) { frame = requestAnimationFrame(start); return; }
-        obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATTRIBUTES.map(([attribute]) => attribute) });
+        obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATTRIBUTES });
         collect(document.body);
     };
     const refresh = () => collect(document.body);
