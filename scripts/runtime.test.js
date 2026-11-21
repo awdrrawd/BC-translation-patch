@@ -5,7 +5,7 @@ import vm from "node:vm";
 import fs from "node:fs";
 import { build } from "esbuild";
 import { createScope, startOnce } from "../src/lifecycle.js";
-import { createIdleBatchProcessor } from "../src/mods/idleBatch.js";
+import { createFrameBatchProcessor, createIdleBatchProcessor } from "../src/mods/idleBatch.js";
 import { applyAssetDescriptions, watchReadiness } from "../src/assetDescriptions.js";
 import { translateValue } from "../src/mods/displayText.js";
 
@@ -43,6 +43,23 @@ for (const idle of [true, false]) test(`all 101 nodes finish in multiple batches
     assert.equal(clock.jobs.size,0);
     queue.push(103);
     assert.equal(clock.jobs.size,0);
+});
+
+
+test("frame-priority batches deduplicate work and do not wait for idle time", () => {
+    const clock = scheduler(true), seen = [];
+    const queue = createFrameBatchProcessor(item => seen.push(item), clock.env);
+    queue.push("settings-root");
+    queue.push("settings-root");
+    queue.push("outfit-dialog");
+    assert.equal(clock.jobs.size, 1, "all pending settings work shares one animation frame");
+    clock.run();
+    assert.deepEqual(seen, ["settings-root", "outfit-dialog"]);
+    queue.push("cancelled");
+    queue.dispose();
+    assert.equal(clock.jobs.size, 0);
+    queue.push("after-dispose");
+    assert.equal(clock.jobs.size, 0);
 });
 
 test("zero idle budget waits, then timeout makes bounded progress", () => {
