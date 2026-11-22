@@ -136,3 +136,30 @@ test("ECHS popup is translated, but only for the real ECHS add-on and without to
     assert.equal(spans[0].textContent, "Nobody is under you right now.");
     assert.equal(options[0].getAttribute("label"), null);
 });
+
+test("ECHS popup descriptions and chip rows are translated; the /echs command line stays as typed", async () => {
+    const h = harness({ bcModSdk: { getModsInfo: () => [{ name: "ECHS" }] } });
+    const body = h.window.document.body;
+    body.innerHTML = `<div id="echs-popup">` +
+        `<button class="echs-pop-item"><div class="echs-pop-cmd">/echs agree</div><div class="echs-pop-desc">Accept a hypnosis attempt — cooperative, improves their roll. Under: stop resisting</div></button>` +
+        `<div class="echs-pop-entry"><div class="echs-pop-desc">by Rei (#12345), 45/65 — reaches Entranced  ** HOLDING YOU NOW **</div>` +
+        `<div class="echs-pop-buttons"><button class="echs-pop-chip" title="/echs triggers 1">details</button><button class="echs-pop-chip">forget</button></div></div>` +
+        `<div class="echs-pop-desc">full strength, works once · you cannot move</div>` +
+        `<div class="echs-pop-desc">Rei turned off Cannot Move</div>` +
+        `<div class="echs-pop-buttons"><button class="echs-pop-chip">Wake</button><button class="echs-pop-chip">make grant</button></div></div>`;
+    setupModDomObserver(dictionaries, h.getLang, fn => h.cleanups.push(fn), h.env);
+    await h.flush();
+    const cn = dictionaries.CN.echs;
+    assert.equal(body.querySelector(".echs-pop-cmd").textContent, "/echs agree", "the command line is what COMMANDER needs");
+    const descs = body.querySelectorAll(".echs-pop-desc");
+    assert.ok(/[\u3400-\u9fff]/.test(descs[0].textContent), descs[0].textContent);
+    assert.ok(descs[1].textContent.includes("Rei") && descs[1].textContent.includes(translateModText("Entranced", cn)), descs[1].textContent);
+    assert.ok(/[\u3400-\u9fff]/.test(descs[2].textContent) && descs[2].textContent.endsWith("you cannot move"), "what a trigger does stays as spoken");
+    assert.ok(descs[3].textContent.includes("Rei") && descs[3].textContent.includes(translateModText("Cannot Move", cn)), descs[3].textContent);
+    const chips = [...body.querySelectorAll(".echs-pop-chip")];
+    assert.deepEqual(chips.map(chip => chip.textContent), ["详情", "忘记", "醒来", "改为 grant"]);
+    assert.equal(chips[0].getAttribute("title"), "/echs triggers 1");
+    h.cleanups.forEach(fn => fn());
+    assert.equal(chips[0].textContent, "details");
+    assert.equal(descs[3].textContent, "Rei turned off Cannot Move");
+});
