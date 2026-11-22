@@ -158,11 +158,12 @@ export function getMainCanvas(env = globalThis) {
     return undefined;
 }
 
-/** True only while ECHS's own Preferences > Extensions screen (or an Information Sheet panel) is up. */
+/** True only while ECHS's own Preference > Extensions screen (or an Information Sheet panel) is up. */
 export function isEchsScreen(env = globalThis) {
     const screen = env.CurrentScreen;
     if (screen === "InformationSheet") return true;
-    if (screen !== "Preferences") return false;
+    // BC's screen name is "Preference" (Preference.js: CommonSetScreen("Character", "Preference")).
+    if (screen !== "Preference") return false;
     const current = env.PreferenceExtensionsCurrent ?? lexical.current();
     const settings = env.PreferenceExtensionsSettings ?? lexical.settings();
     return !!current && current === settings?.HypnosisAddon;
