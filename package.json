@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "pretest": "npm run gen",
-    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js scripts/bcplus.test.js scripts/modSurfaces.test.js scripts/bcx.test.js scripts/lookup.test.js scripts/architecture.test.js scripts/languages.test.js scripts/bc-compat.test.js scripts/bc-compat-issue.test.js scripts/script-purity.test.js",
+    "test": "node --test scripts/coverage.test.js scripts/runtime.test.js scripts/surfaces.test.js scripts/quality.test.js scripts/dictionary.test.js scripts/bcplus.test.js scripts/modSurfaces.test.js scripts/echsCanvas.test.js scripts/bcx.test.js scripts/lookup.test.js scripts/architecture.test.js scripts/languages.test.js scripts/bc-compat.test.js scripts/bc-compat-issue.test.js scripts/script-purity.test.js",
     "seed": "node scripts/seed-from-upstream.js",
     "upstream:keys": "node scripts/sync-text-keys.js",
     "upstream:fetch": "node scripts/fetch-upstream.js",

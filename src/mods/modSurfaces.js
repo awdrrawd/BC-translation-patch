@@ -19,6 +19,7 @@ function literalOf(source) {
     return source.split(PLACEHOLDER).filter((_, index) => index % 3 === 0)
         .reduce((best, part) => part.length > best.length ? part : best, "");
 }
+const fixedLength = source => source.split(PLACEHOLDER).filter((_, index) => index % 3 === 0).join("").length;
 
 function compile(map) {
     let entry = compiled.get(map);
@@ -36,10 +37,11 @@ function compile(map) {
             last = match.index + match[0].length;
         }
         pattern += escapeRegExp(key.slice(last));
-        rules.push({ regex: new RegExp(`^${pattern}$`, "s"), names, target, literal: literalOf(key) });
+        rules.push({ regex: new RegExp(`^${pattern}$`, "s"), names, target, literal: literalOf(key), fixed: fixedLength(key) });
     }
-    // The most specific (longest fixed text) template is tried first.
-    rules.sort((a, b) => b.literal.length - a.literal.length);
+    // The most specific (longest fixed text) template is tried first; equal runs fall back to the total fixed text,
+    // so `"x" stops at: {tier}.` beats `"x" stops at: {value}`.
+    rules.sort((a, b) => b.literal.length - a.literal.length || b.fixed - a.fixed);
     entry = { exact, rules, cache: new Map() };
     compiled.set(map, entry);
     return entry;

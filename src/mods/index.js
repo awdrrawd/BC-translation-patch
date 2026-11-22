@@ -13,6 +13,7 @@ import { translateBcplusRoomNotice } from "./bcplusRooms.js";
 import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
 import { translateModText } from "./modSurfaces.js";
 import { setupModDomObserver, isEchsLoaded } from "./modDom.js";
+import { setupEchsCanvas } from "./echsCanvas.js";
 
 import { createLookup } from "./lookup.js";
 import { createMissingCollector } from "./missing.js";
@@ -24,11 +25,13 @@ const missing = createMissingCollector();
 // ECHS draws its settings, setup wizard and prompts on the canvas; its own strings win over generic lookups.
 // Loaded-state is cached because DrawText runs for every label of every frame.
 let echsState = { at: 0, loaded: false };
-const echsText = text => {
+const echsLoaded = () => {
     const now = Date.now();
     if (now - echsState.at > 2000) echsState = { at: now, loaded: isEchsLoaded() };
-    return echsState.loaded ? translateModText(text, GEN.surfaces?.[activeLang()]?.echs) : undefined;
+    return echsState.loaded;
 };
+const echsDictionary = () => activeLang() ? GEN.surfaces?.[activeLang()]?.echs : undefined;
+const echsText = text => echsLoaded() ? translateModText(text, echsDictionary()) : undefined;
 export const getMissing = missing.list;
 export const clearMissing = missing.clear;
 
@@ -112,4 +115,7 @@ export function setupMods(mod, addCleanup) {
     setupSurfaceObserver(GEN.surfaces || {}, activeLang, addCleanup);
     setupBcplusObserver(GEN.surfaces || {}, activeLang, addCleanup);
     setupModDomObserver(GEN.surfaces || {}, activeLang, addCleanup);
+
+    // ECHS 設定頁的多數文字由 MainCanvas.fillText 直接繪製（不經 DrawText hook），在此補翻。
+    setupEchsCanvas(echsDictionary, echsLoaded, addCleanup);
 }
