@@ -11,6 +11,8 @@ const escapeRegExp = text => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const normalize = text => text.replace(/\s+/g, " ").trim();
 // Marks drawn before a label (checkbox state, list bullets, disclosure arrows).
 const PREFIX = /^([✓✔☑☐↺▸▾+−-]+\s+)(\S.*)$/s;
+// A whole label wrapped in square brackets, e.g. a depth tier drawn as "[Drifting]".
+const BRACKETED = /^\[([^\[\]]+)\]$/;
 const MAX_CACHE = 512;
 
 const compiled = new WeakMap();
@@ -78,6 +80,11 @@ function translateKey(key, entry, depth = 0) {
     if (prefixed) {
         const rest = translateKey(prefixed[2], entry, depth + 1);
         if (rest !== undefined) return prefixed[1] + rest;
+    }
+    const bracketed = depth < 2 && BRACKETED.exec(key);
+    if (bracketed) {
+        const inner = translateKey(bracketed[1], entry, depth + 1);
+        if (inner !== undefined) return `[${inner}]`;
     }
     return undefined;
 }

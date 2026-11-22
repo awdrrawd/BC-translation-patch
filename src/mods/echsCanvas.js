@@ -133,13 +133,39 @@ export function createEchsCanvasText({ dictionary, enabled }) {
     return { install };
 }
 
+/**
+ * BC declares these with `let` (Drawing.js: `let MainCanvas`, Extensions.js: `let PreferenceExtensionsCurrent`,
+ * Preference.js: `let PreferenceExtensionsSettings`). A top-level `let` is a global *lexical* binding, NOT a
+ * property of window, so `globalThis.MainCanvas` is undefined (or, for MainCanvas, the <canvas id="MainCanvas">
+ * element, which has no 2D methods) and `globalThis.PreferenceExtensionsCurrent` is always undefined.
+ * A bare identifier does see them, so read through `typeof`, which never throws when the name is missing.
+ * `env` is consulted first so tests (and any build that does expose them on window) keep working.
+ */
+const lexical = {
+    mainCanvas: () => typeof MainCanvas !== "undefined" ? MainCanvas : undefined,
+    current: () => typeof PreferenceExtensionsCurrent !== "undefined" ? PreferenceExtensionsCurrent : undefined,
+    settings: () => typeof PreferenceExtensionsSettings !== "undefined" ? PreferenceExtensionsSettings : undefined,
+};
+const is2d = ctx => !!ctx && typeof ctx.fillText === "function" && typeof ctx.measureText === "function";
+
+/** The game's 2D context. Last resort: the canvas element hands back the very same context object. */
+export function getMainCanvas(env = globalThis) {
+    for (const candidate of [env.MainCanvas, lexical.mainCanvas()]) if (is2d(candidate)) return candidate;
+    try {
+        const ctx = env.document?.getElementById?.("MainCanvas")?.getContext?.("2d");
+        if (is2d(ctx)) return ctx;
+    } catch { /* no canvas yet */ }
+    return undefined;
+}
+
 /** True only while ECHS's own Preferences > Extensions screen (or an Information Sheet panel) is up. */
 export function isEchsScreen(env = globalThis) {
     const screen = env.CurrentScreen;
     if (screen === "InformationSheet") return true;
     if (screen !== "Preferences") return false;
-    const current = env.PreferenceExtensionsCurrent;
-    return !!current && current === env.PreferenceExtensionsSettings?.HypnosisAddon;
+    const current = env.PreferenceExtensionsCurrent ?? lexical.current();
+    const settings = env.PreferenceExtensionsSettings ?? lexical.settings();
+    return !!current && current === settings?.HypnosisAddon;
 }
 
 /**
@@ -151,8 +177,8 @@ export function setupEchsCanvas(dictionary, echsLoaded, addCleanup, env = global
     const layer = createEchsCanvasText({ dictionary, enabled: () => !!dictionary() && echsLoaded() && isEchsScreen(env) });
     let patched = null, uninstall = null;
     const attach = () => {
-        const ctx = env.MainCanvas;
-        if (!ctx || ctx === patched || typeof ctx.fillText !== "function") return;
+        const ctx = getMainCanvas(env);
+        if (!ctx || ctx === patched) return;
         uninstall?.();
         patched = ctx;
         uninstall = layer.install(ctx);
