@@ -1621,6 +1621,12 @@ Parse the outfit code
 解析套装代码
 Parse ✅
 解析 ✅
+ has no settings.
+没有设置
+Pick a lock. It goes on the 
+挑选一把锁。用于
+empty
+空
 Parts to put on
 要穿上的部位
 Password
@@ -2454,14 +2460,14 @@ page
 页
 Drag the character, or use the arrow keys (shift for bigger steps).
 拖动角色，或使用方向键（按 Shift 可增大步幅）。
+Drag the character, or use the arrow keys (shift for bigger steps). A layer's offset adds to All Layers.
+拖动角色，或使用方向键（按 Shift 可增大步幅）。单个图层的偏移会叠加到「所有图层」上。
 Drag the character left or right, or use the arrow keys (shift for bigger steps). A layer's angle adds to All Layers.
 左右拖动角色，或使用方向键（按 Shift 可增大步幅）。单个图层的角度会叠加到「所有图层」上。
 Drag the character: sideways for width, up and down for height, or both together while holding Shift (right or up for bigger). Arrow keys work too: shift for bigger steps, Alt to change both. A layer's scale multiplies All Layers.
 拖动角色：左右拖调整宽度，上下拖调整高度，按住 Shift 同时拖（向右或向上可放大）。方向键同样可用：Shift 加大步幅，Alt 同时调整两者。单个图层的缩放会乘到「所有图层」上。
-X
-X 轴
-Y
-Y 轴
+Width
+宽度
 No instructions yet
 尚未添加指令
 1 to 8 letters, A to Z
