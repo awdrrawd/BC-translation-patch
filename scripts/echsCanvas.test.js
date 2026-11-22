@@ -150,9 +150,9 @@ test("uninstall restores the canvas and a patched canvas keeps working", () => {
 
 test("isEchsScreen is true only for ECHS's own Preferences screen or the information sheet", () => {
     const mine = { run() {} };
-    assert.equal(isEchsScreen({ CurrentScreen: "Preferences", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: { HypnosisAddon: mine } }), true);
-    assert.equal(isEchsScreen({ CurrentScreen: "Preferences", PreferenceExtensionsCurrent: { run() {} }, PreferenceExtensionsSettings: { HypnosisAddon: mine } }), false);
-    assert.equal(isEchsScreen({ CurrentScreen: "Preferences", PreferenceExtensionsCurrent: null, PreferenceExtensionsSettings: { HypnosisAddon: mine } }), false);
+    assert.equal(isEchsScreen({ CurrentScreen: "Preference", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: { HypnosisAddon: mine } }), true);
+    assert.equal(isEchsScreen({ CurrentScreen: "Preference", PreferenceExtensionsCurrent: { run() {} }, PreferenceExtensionsSettings: { HypnosisAddon: mine } }), false);
+    assert.equal(isEchsScreen({ CurrentScreen: "Preference", PreferenceExtensionsCurrent: null, PreferenceExtensionsSettings: { HypnosisAddon: mine } }), false);
     assert.equal(isEchsScreen({ CurrentScreen: "ChatRoom" }), false);
     assert.equal(isEchsScreen({ CurrentScreen: "InformationSheet" }), true);
     assert.equal(isEchsScreen({}), false);
@@ -162,7 +162,7 @@ test("setupEchsCanvas waits for MainCanvas, follows the language, and cleans up"
     const mine = { run() {} };
     let lang = "CN", poll, cleanup;
     const env = {
-        CurrentScreen: "Preferences", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: { HypnosisAddon: mine },
+        CurrentScreen: "Preference", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: { HypnosisAddon: mine },
         setInterval(fn) { poll = fn; return 7; }, clearInterval(id) { assert.equal(id, 7); poll = null; },
     };
     setupEchsCanvas(() => dictionaries[lang]?.echs, () => true, fn => { cleanup = fn; }, env);
@@ -214,7 +214,7 @@ test("isEchsScreen and the canvas patch work with real `let` globals, even when 
     vm.runInThisContext("MainCanvas = __echsTest.ctx; PreferenceExtensionsSettings = { HypnosisAddon: __echsTest.mine }; PreferenceExtensionsCurrent = __echsTest.mine;");
     try {
         // window.MainCanvas is the element with the same id: no fillText, so it must be ignored.
-        const env = { CurrentScreen: "Preferences", MainCanvas: { tagName: "CANVAS" }, setInterval(fn) { env.poll = fn; return 1; }, clearInterval() {} };
+        const env = { CurrentScreen: "Preference", MainCanvas: { tagName: "CANVAS" }, setInterval(fn) { env.poll = fn; return 1; }, clearInterval() {} };
         assert.equal(getMainCanvas(env), ctx);
         assert.equal(isEchsScreen(env), true);
         let cleanup;
@@ -252,4 +252,11 @@ test("Depth tab strings drawn through fillText: bracketed tiers, rows, blurb and
         assert.equal(ctx.drawn[0].text, tier);
         assert.ok(ctx.drawn.every(d => /[\u3400-\u9fff]/.test(d.text)), JSON.stringify(ctx.drawn));
     }
+});
+
+test("the real BC screen name is \"Preference\"; the plural never matches", () => {
+    const mine = { run() {} };
+    const settings = { HypnosisAddon: mine };
+    assert.equal(isEchsScreen({ CurrentScreen: "Preference", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: settings }), true);
+    assert.equal(isEchsScreen({ CurrentScreen: "Preferences", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: settings }), false);
 });
