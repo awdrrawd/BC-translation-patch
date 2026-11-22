@@ -218,6 +218,8 @@ export function generateDict() {
     // Dedicated DOM dictionaries never enter the global menu/keyword lookup.
     const surfaceRaw = readJsonOptional(path.join(trRoot, "ui", "surfaces.json"), {});
     surfaceRaw.bcplus = readJsonOptional(path.join(trRoot, "mods", "bcplus", "ui.json"), {});
+    // Mods that draw their own UI: exact strings plus {name}/{#n} templates (see src/mods/modSurfaces.js).
+    for (const mod of ["echs", "littlish"]) surfaceRaw[mod] = readJsonOptional(path.join(trRoot, "mods", mod, "ui.json"), {});
     const surfaces = { CN: surfaceRaw, TW: {} };
     for (const [scope, entries] of Object.entries(surfaceRaw)) {
         surfaces.TW[scope] = Object.fromEntries(Object.entries(entries).map(([en, zh]) =>

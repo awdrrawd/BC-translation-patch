@@ -11,6 +11,9 @@ import { setupBcxHelp } from "./bcxHelp.js";
 import { setupBcplusObserver } from "./bcplus.js";
 import { translateBcplusRoomNotice } from "./bcplusRooms.js";
 import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
+import { translateModText } from "./modSurfaces.js";
+import { setupModDomObserver, isEchsLoaded } from "./modDom.js";
+import { setupEchsCanvas } from "./echsCanvas.js";
 
 import { createLookup } from "./lookup.js";
 import { createMissingCollector } from "./missing.js";
@@ -18,6 +21,17 @@ import { createMissingCollector } from "./missing.js";
 const lookup = createLookup(GEN, activeLang);
 const { menu: tryMenu, activity: tryActivity, any: translateAny, crafting: translateDfn } = lookup;
 const missing = createMissingCollector();
+
+// ECHS draws its settings, setup wizard and prompts on the canvas; its own strings win over generic lookups.
+// Loaded-state is cached because DrawText runs for every label of every frame.
+let echsState = { at: 0, loaded: false };
+const echsLoaded = () => {
+    const now = Date.now();
+    if (now - echsState.at > 2000) echsState = { at: now, loaded: isEchsLoaded() };
+    return echsState.loaded;
+};
+const echsDictionary = () => activeLang() ? GEN.surfaces?.[activeLang()]?.echs : undefined;
+const echsText = text => echsLoaded() ? translateModText(text, echsDictionary()) : undefined;
 export const getMissing = missing.list;
 export const clearMissing = missing.clear;
 
@@ -36,7 +50,7 @@ export function setupMods(mod, addCleanup) {
                     if (name) args[0] = name;
                     return next(args);
                 }
-                const t = translateBcxLog(fn, args, activeLang(), tryMenu) || roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
+                const t = echsText(args[0]) || translateBcxLog(fn, args, activeLang(), tryMenu) || roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
                 if (t) args[0] = t;
                 else if (/[A-Za-z]/.test(args[0])) missing.add(args[0].trim());
             }
@@ -78,7 +92,10 @@ export function setupMods(mod, addCleanup) {
     // 本地訊息（部分 mod 的提示/動作）
     mod.hookFunction("ChatRoomSendLocal", 0, (args, next) => {
         if (on() && typeof args[0] === "string") {
-            const t = translateBcplusRoomNotice(args[0], GEN.surfaces, activeLang()) || tryMenu(args[0]);
+            // ECHS wraps its private notices in [brackets]; translate the inside and keep the brackets.
+            const bracketed = /^\[([\s\S]*)\]$/.exec(args[0]);
+            const echs = bracketed && echsText(bracketed[1]);
+            const t = (echs && `[${echs}]`) || translateBcplusRoomNotice(args[0], GEN.surfaces, activeLang()) || tryMenu(args[0]);
             if (t) args[0] = t;
         }
         return next(args);
@@ -97,4 +114,8 @@ export function setupMods(mod, addCleanup) {
     setupBcxHelp(addCleanup);
     setupSurfaceObserver(GEN.surfaces || {}, activeLang, addCleanup);
     setupBcplusObserver(GEN.surfaces || {}, activeLang, addCleanup);
+    setupModDomObserver(GEN.surfaces || {}, activeLang, addCleanup);
+
+    // ECHS 設定頁的多數文字由 MainCanvas.fillText 直接繪製（不經 DrawText hook），在此補翻。
+    setupEchsCanvas(echsDictionary, echsLoaded, addCleanup);
 }

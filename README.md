@@ -60,6 +60,7 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 4. **動作字典與聊天動作** — `ActivityDictionaryText` hook 翻動作名；`ChatRoomMessage` hook 翻聊天室裡的動作/活動訊息模板（替換名字前），再交給遊戲 `CommonStringSubstitute` 填名字。
 5. **DOM 選單** — [`domObserver.js`](src/mods/domObserver.js)：`MutationObserver` 翻 `dialog-inventory` 道具名、快捷鍵、製作屬性 `<dfn>`。**啟動時會補掃既有節點**（同樣為了 Electron 晚載入的情境）。
 6. **BCX 特殊表面** — [`bcxHelp.js`](src/mods/bcxHelp.js) 輪詢替換 `textarea.value` 的說明；`chatObserver` 翻聊天記錄輸出的 HTML 說明。
+7. **ECHS canvas 直繪文字** — [`echsCanvas.js`](src/mods/echsCanvas.js)：ECHS 設定頁的多數文字由 `MainCanvas.fillText` / `measureText` 直接繪製、不經 `DrawText` 系列 hook，這一層只在 ECHS 自己的畫面開啟時包住這兩個方法，查 `echs` 字庫翻譯（見下方「ECHS 設定頁補譯」）。
 
 載入分為兩階段：原本網址的 `bc-translation-patch.js` 先建立 `BCTP` 狀態，再依遊戲目前語言，於背景下載 `translations-CN-<內容雜湊>.json` 或 `translations-TW-<內容雜湊>.json`。非 CN/TW 不下載字庫；首次切換至另一語言才下載另一份，同一頁面切回時重用記憶體快取。大型字庫不再包含於入口 JS，因此下載不受 PCM 主程式載入的 30 秒限制；不需修改 PCM 或插件網址。JSON 使用建置時的絕對 Pages 網址，支援 PCM 的內嵌執行與快取重放。
 
@@ -104,6 +105,9 @@ src/
     domObserver.js   dialog-inventory / 快捷鍵 / dfn 的 DOM 翻譯
     bcxHelp.js       BCX textarea 說明輪詢替換
     html/            聊天記錄 HTML 翻譯
+    modSurfaces.js   ECHS / Littlish Club 字庫查表（精確鍵 + {name}/{#n} 模板）
+    echsCanvas.js    ECHS 設定頁 fillText / measureText 翻譯（整句、自動換行文字、畫面限定）
+    modDom.js        ECHS 彈窗與 Littlish Club 子畫面的 DOM 翻譯
 scripts/
   seed-from-upstream.js  從官方原始碼種入 cn/ 與 official-tw.json
   gen-dict.js            合併翻譯來源 → dict.json
@@ -175,6 +179,14 @@ mod 自己畫 canvas/DOM，不走官方 CSV，字典放 `translations/mods/`：
 - **零星補譯**：優先放對應 `translations/mods` 字典；既有 ECHO 相容資料與優先覆寫位於 [`translations/compat.json`](translations/compat.json)，由同一建置流程產生 CN/TW。
 - **BCX 匯出/匯入等長說明**（塞進 `textarea`）：加到 `translations/mods/bcx-help.json`（`"英文": "中文"`）。
 
+**ECHS（Erotic Chat Hypnosis Suite）與 Littlish Club** 各有獨立字庫，簡中來源為
+`translations/mods/echs/ui.json` 與 `translations/mods/littlish/ui.json`（`"英文": "中文"`），繁中由建置流程生成。
+
+- 鍵可含佔位符：`{name}` 為任意文字（字庫已有的詞會被一併翻譯，例如 `Toy mode: {value}` 的 `On`/`Off`）、`{#n}` 只比對數字。精確鍵優先，其次是固定文字最長的模板。譯文必須原樣保留相同的佔位符（`npm test` 會檢查）。
+- **ECHS**：設定頁、設定精靈與提示框是 canvas。按鈕與置中文字（分頁、`Hide advanced` 等）經現有 `DrawText` 系列 hook 翻譯；**勾選項、分組標題、說明列、提示框等用 `fillText` 直繪的文字改由 `src/mods/echsCanvas.js` 翻譯**。`[…]` 私人提示經 `ChatRoomSendLocal`；彈窗（`#echs-popup`）與下拉選單由 `src/mods/modDom.js` 翻譯。只在 ModSDK 登錄了 `ECHS` 時才啟用。點擊後會打進聊天框的催眠語句（`sink deeper`、`wake up` 等）**刻意不翻**，因為 ECHS 靠英文原文比對。
+- **Littlish Club**：用 zois-core 建立 DOM 選單，只在 `window.LITTLISH_CLUB.inModSubscreen()` 為真（子畫面開啟）時掃描，並跳過聊天記錄、輸入框與 textarea。含標記的段落（如 `<b>Creator:</b> …`）以整段 HTML 比對。
+- 尚未涵蓋：ECHS「幫助」分頁（逐行硬換行的長文，整句比對不到）、「已植入」分頁的觸發詞詳情（含玩家輸入的詞與名字的動態句）、ECHS 的敘事／旁白訊息與指令回覆（含玩家名的動態長句）、Littlish Club 寫入記錄與聊天室的動作訊息。這些要等實際遊戲內用 `BCTP.missing()` 收集後再補。
+
 ### C. 繁中用語修正
 
 TW 由 CN 機轉，出現不順的詞時：
@@ -202,6 +214,32 @@ TW 由 CN 機轉，出現不順的詞時：
 驗證結果：43 個 CSV 的 CN 缺口為 0；TW 僅剩角色對話中 2 句 Kinky Dungeon 啟動提示，依本次範圍暫不翻譯。未新增單機劇情翻譯。這是上述本機版本的 CSV 覆蓋檢查，不代表未來版本或未經 CSV 的硬編碼字串也已全部翻譯。
 
 `npm test` 檢查字庫與執行期行為：CSV 欄位解析、預設範圍、翻譯標記、簡繁中輸出、初始化失敗清理與重試、DOM 多批排程、資產晚到及語言切換；`npm run build` 重建發布 bundle。尚未進行實際連線遊戲的畫面驗證。
+
+### 2026-11 ECHS 設定頁補譯
+
+**問題**：ECHS 設定頁只有左側分頁標題有翻，右側的設定值（`Hypnosis Enabled`、`Movement Restriction`…）、分組標題與說明列都維持英文，雖然這些字串早已在 `translations/mods/echs/ui.json`。原因是 ECHS 的 `drawLeftTextFit` / `drawLeftTextWrap` / 提示框直接呼叫 `MainCanvas.fillText`，完全繞過 `DrawText` 系列 hook；分頁走 `DrawButton`→`DrawTextFit` 所以有翻。
+
+**修正**（新增 [`src/mods/echsCanvas.js`](src/mods/echsCanvas.js)，由 `mods/index.js` 啟動）：
+
+- 只在 `Preferences` 畫面且目前開啟的是 ECHS 自己的擴充設定（`PreferenceExtensionsCurrent` 等於 `PreferenceExtensionsSettings.HypnosisAddon`）、或 `InformationSheet`（ECHS 遙控面板）時，才包住 `MainCanvas.fillText` 與 `measureText`；其他畫面完全不碰。ECHS 未載入、語言非 CN/TW、離開畫面時都不翻譯，外掛卸載會還原。
+- **整句文字**：`fillText` 與 `measureText` 一起查同一份 `echs` 字庫。連 `measureText` 都翻，ECHS 的「縮字到放得下」就會以中文寬度計算，不會再把英文截成 `…`。
+- **自動換行的文字**（下拉設定的說明、提示框、設定精靈說明）：ECHS 是一行英文一行英文送來。第一行若剛好是「唯一一個字庫鍵」的開頭，就吞掉後續英文行，改以同一欄寬重新換行畫出譯文，並置中在原本那塊文字的垂直範圍。有歧義的開頭不猜；若後續行沒有接上，已有的譯文也會補畫出來，不會整段消失。
+- 順手修正 `modSurfaces.js` 樣板平手時的選擇：固定文字總長較長者優先（`"Sink deeper" stops at: {tier}.` 現在贏過 `…: {value}`，精靈摘要的層級名稱因此會被翻到）。
+
+**字庫補譯**（`translations/mods/echs/ui.json` 新增 43 筆，繁中由建置生成）：
+
+| 類別 | 內容 |
+|------|------|
+| 設定頁按鈕與欄位 | `Setup`、`Exit`、`Holding`、`Prev`、`Next`、`Cancel`、`Apply`、`Find:`、`Experience`、`Trust`、`value`、`detail`、`Toy mode is for:` |
+| 統計分頁每列 | `{#n} interactions · just now / never / {#b}m·h·d ago`、`never`、`just now` |
+| 設定精靈摘要 | `When someone tries: …` 四種組合 |
+| Extreme 極限鎖定 | 唯讀橫幅與拒絕訊息（含日期）、確認前四段警告、到期續約提示與兩顆按鈕、續約／解除／套用的回報句 |
+
+這些字串由 ECHS 原始碼（`menu.ts`、`wizard.ts`、`panel.ts`、`extreme.ts`、`trust.ts`）逐一抽出，與字庫比對後補上缺值；聊天旁白與指令回覆本次不處理。
+
+**測試**：新增 `scripts/echsCanvas.test.js`（11 項）——整句翻譯與 TW、以翻譯後寬度縮字、畫面限定與 CJK／未知文字不動、自動換行吞行與置中、換行中斷補畫、歧義不猜、卸載還原、畫面判斷、延後出現的 `MainCanvas` 與語言切換，以及新增字庫項。`npm run check` 全數通過（105 項測試）。
+
+**限制**：尚未在實際連線遊戲內驗證畫面；多行說明是以英文欄寬估計中文換行寬度，版面可能與 ECHS 原生略有差異。
 
 ### D2. BC 函式掛鉤相容性檢查
 
