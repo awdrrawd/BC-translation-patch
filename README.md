@@ -241,6 +241,30 @@ TW 由 CN 機轉，出現不順的詞時：
 
 **限制**：尚未在實際連線遊戲內驗證畫面；多行說明是以英文欄寬估計中文換行寬度，版面可能與 ECHS 原生略有差異。
 
+### 2026-11 ECHS 補譯（二）：Trance Defaults 子項目、私人旁白與說明頁
+
+**問題**：恍惚默認分頁中縮排在「無法移動」底下的子項目 `...and no one else can move you either`（ECHS v1.12.0 新增，`tranceNoOneMoves`）仍顯示英文。原因單純：字庫 `translations/mods/echs/ui.json` 沒有這個鍵；繪製路徑（`fillText` / `measureText`）與其他列相同，不需要改程式。
+
+**同批補上的遺漏**（由 ECHS 原始碼 `menu.ts`、`popup.ts`、`help.ts`、`follow.ts`、`keyholder.ts`、`recovery.ts`、`voice.ts` 逐一抽出並與字庫比對，新增 158 筆；繁中由建置生成）：
+
+| 類別 | 內容 |
+|------|------|
+| 深度分頁 | 重設與「唤起可觸及」提示（含 `{name}` 樣板）、不彈窗回應的三種說明句 |
+| ECHS 彈窗 | `Asked {who}'s ECHS …` 狀態列、觸發詞列表的 `word hidden` / `a compulsion`、`missed: …`、`Typed. Finish it (…)` |
+| 私人旁白 | 只有自己看得到的 `[...]` 提示（`tellPlayer`，經 `ChatRoomSendLocal`）：恢復、追隨、持鑰人、被迫動作等 |
+| 說明頁 | 分頁名與說明、各段標題、不含口說用語的純說明段落 |
+
+**不翻譯（刻意保留英文）**：
+
+- **觸發詞與口說用語**：ECHS 以聊天內容比對，包含彈窗「Say / Suggestions」所輸入的每句話（`sink deeper`、`wake up`、`kiss me`、`your trigger word is …`、`remember trigger`、`forget every trigger I gave you` 等）以及玩家自訂的觸發詞本身。
+- **`/echs` 指令**與其參數。
+- **含口說用語的說明段落**：說明頁中夾有引號範例的段落整段不收錄；標題或說明句裡帶有口說用語者，譯文內以原文逐字保留（例如 `“remove everything I planted”`）。
+- 聊天室中送給別人的旁白（`tellRoom` 表情）與其他玩家的聊天訊息：本插件的 `ChatRoomMessage` 掛鉤只改 `Action` / `Activity` 動作模板，不碰一般聊天，這次也沒有放寬。
+
+**測試**：`scripts/echsCanvas.test.js` 新增 6 項（共 120 項，`npm run check` 全數通過）——子項目翻譯（CN/TW、`fillText` + `measureText`）、**口說用語／指令／觸發詞一律不翻譯**（含 `Missy, ` 前綴，且字庫鍵不得等於口說用語）、樣板的名字與數字、私人旁白、說明頁整段吞行翻譯與引號範例原樣、TW 逐筆生成。
+
+**限制**：說明頁為手動斷行，且部分段落夾有動態值（`getMaxAttempts()` 等）或口說範例，因此只翻能整段對應的純說明；其餘維持英文。`flavor.ts` 的氛圍句庫（隨機旁白）與 `session.ts` 的嘗試結果提示（開頭是動態英文氛圍句）本次未處理。尚未在實際連線遊戲內驗證畫面。
+
 ### D2. BC 函式掛鉤相容性檢查
 
 本插件透過 ModSDK 掛鉤 10 個 BC 函式：`TranslationAvailable`、`TranslationAssetProcess`、`InformationSheetRun`、`DrawText`、`DrawTextFit`、`DrawTextWrap`、`DynamicDrawText`、`ActivityDictionaryText`、`ChatRoomMessage`、`ChatRoomSendLocal`。其中前兩個屬於 BC 的翻譯模組（`Scripts/Translation.js`），BC 改動翻譯流程時最容易讓掛鉤悄悄失效，因此每週由 `.github/workflows/bc-compat.yml` 比對一次：
