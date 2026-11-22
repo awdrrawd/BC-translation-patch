@@ -104,6 +104,8 @@ src/
     domObserver.js   dialog-inventory / 快捷鍵 / dfn 的 DOM 翻譯
     bcxHelp.js       BCX textarea 說明輪詢替換
     html/            聊天記錄 HTML 翻譯
+    modSurfaces.js   ECHS / Littlish Club 字庫查表（精確鍵 + {name}/{#n} 模板）
+    modDom.js        ECHS 彈窗與 Littlish Club 子畫面的 DOM 翻譯
 scripts/
   seed-from-upstream.js  從官方原始碼種入 cn/ 與 official-tw.json
   gen-dict.js            合併翻譯來源 → dict.json
@@ -174,6 +176,14 @@ mod 自己畫 canvas/DOM，不走官方 CSV，字典放 `translations/mods/`：
 - **有明確英文原文的**：加到對應的 `translations/mods/bcx/*.txt` 或 `lscg/*.txt`（英文一行、中文一行）。
 - **零星補譯**：優先放對應 `translations/mods` 字典；既有 ECHO 相容資料與優先覆寫位於 [`translations/compat.json`](translations/compat.json)，由同一建置流程產生 CN/TW。
 - **BCX 匯出/匯入等長說明**（塞進 `textarea`）：加到 `translations/mods/bcx-help.json`（`"英文": "中文"`）。
+
+**ECHS（Erotic Chat Hypnosis Suite）與 Littlish Club** 各有獨立字庫，簡中來源為
+`translations/mods/echs/ui.json` 與 `translations/mods/littlish/ui.json`（`"英文": "中文"`），繁中由建置流程生成。
+
+- 鍵可含佔位符：`{name}` 為任意文字（字庫已有的詞會被一併翻譯，例如 `Toy mode: {value}` 的 `On`/`Off`）、`{#n}` 只比對數字。精確鍵優先，其次是固定文字最長的模板。譯文必須原樣保留相同的佔位符（`npm test` 會檢查）。
+- **ECHS**：設定頁、設定精靈與提示框是 canvas，經現有 `DrawText` 系列 hook 翻譯，`[…]` 私人提示經 `ChatRoomSendLocal`；彈窗（`#echs-popup`）與下拉選單由 `src/mods/modDom.js` 翻譯。只在 ModSDK 登錄了 `ECHS` 時才啟用。點擊後會打進聊天框的催眠語句（`sink deeper`、`wake up` 等）**刻意不翻**，因為 ECHS 靠英文原文比對。
+- **Littlish Club**：用 zois-core 建立 DOM 選單，只在 `window.LITTLISH_CLUB.inModSubscreen()` 為真（子畫面開啟）時掃描，並跳過聊天記錄、輸入框與 textarea。含標記的段落（如 `<b>Creator:</b> …`）以整段 HTML 比對。
+- 尚未涵蓋：ECHS「幫助」分頁（直接用 canvas `fillText` 繪製，無法 hook）、ECHS 的敘事／旁白訊息與指令回覆（含玩家名的動態長句）、Littlish Club 寫入記錄與聊天室的動作訊息。這些要等實際遊戲內用 `BCTP.missing()` 收集後再補。
 
 ### C. 繁中用語修正
 
