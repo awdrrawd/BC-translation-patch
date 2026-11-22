@@ -5,6 +5,21 @@
 - **CN 為單一維護來源**，**TW 由 [OpenCC](https://github.com/BYVoid/OpenCC)（`s2twp`）自動生成** + 詞彙/逐句覆寫。
 - 翻譯**按原始檔路徑餵回遊戲自己的翻譯管線**（`TranslationCache` + `TranslationAvailable`），因此原生文字保留檔案作用域；補譯與指定資產資料會依生成規則覆寫。
 
+
+## 支援的插件
+
+| 插件 | 原始碼 | 翻譯範圍 |
+|------|--------|----------|
+| Bondage Club（遊戲本體） | [awdrrawd/Bondage-College-Mirror](https://github.com/awdrrawd/Bondage-College-Mirror/tree/bondageclub)（`bondageclub` 分支） | 官方尚未翻譯的 CSV/TXT 字串、道具、動作 |
+| BCX | [Jomshir98/bondage-club-extended](https://github.com/Jomshir98/bondage-club-extended) | 選單、規則、指令說明、日誌 |
+| BC-plus | [Seles84/bc-plus](https://github.com/Seles84/bc-plus) | 主視窗與確認框（Shadow DOM） |
+| LSCG | [littlesera/LSCG](https://github.com/littlesera/LSCG) | 設定頁、效果說明、動作訊息 |
+| Littlish Club | [FurryZoi/Littlish-Club](https://github.com/FurryZoi/Littlish-Club) | 子畫面 DOM 選單 |
+| ECHS（Erotic Chat Hypnosis Suite） | [Dwfreegethub/HypnosisAddon](https://github.com/Dwfreegethub/HypnosisAddon) | 設定頁、設定精靈、彈窗、私人旁白、說明頁 |
+| Galia's Gambling Club（GGC） | [galia-bc/galia.github.io](https://github.com/galia-bc/galia.github.io) | 偏好設定頁、手機、遊戲、銀行、契約、群聊、對決、聊天通知與房間動作訊息 |
+
+更新紀錄見 [CHANGELOG.md](CHANGELOG.md)。
+
 ---
 
 ## 設計原則
@@ -61,6 +76,7 @@ BC 的翻譯是**分檔、分作用域**的：每個畫面/資料檔各有自己
 5. **DOM 選單** — [`domObserver.js`](src/mods/domObserver.js)：`MutationObserver` 翻 `dialog-inventory` 道具名、快捷鍵、製作屬性 `<dfn>`。**啟動時會補掃既有節點**（同樣為了 Electron 晚載入的情境）。
 6. **BCX 特殊表面** — [`bcxHelp.js`](src/mods/bcxHelp.js) 輪詢替換 `textarea.value` 的說明；`chatObserver` 翻聊天記錄輸出的 HTML 說明。
 7. **ECHS canvas 直繪文字** — [`echsCanvas.js`](src/mods/echsCanvas.js)：ECHS 設定頁的多數文字由 `MainCanvas.fillText` / `measureText` 直接繪製、不經 `DrawText` 系列 hook，這一層只在 ECHS 自己的畫面開啟時包住這兩個方法，查 `echs` 字庫翻譯（見下方「ECHS 設定頁補譯」）。
+8. **Galia's Gambling Club** — [`galia.js`](src/mods/galia.js)：GGC 幾乎都畫在自己的 canvas（`canvas[id^="clubgaming-"]`）上，沿用 `echsCanvas.js` 的文字層（含 `strokeText` 描邊）；聊天室中畫在 `MainCanvas` 上的對決、物品文字與骰子動畫用另一份只含 GGC 句子的字庫；寫進聊天記錄的 GGC 通知由專屬 observer 只翻 GGC 自己的行。偏好設定頁走既有 `DrawText` hook，手機通話／簡訊視窗與群聊分頁走 `modDom.js`。
 
 載入分為兩階段：原本網址的 `bc-translation-patch.js` 先建立 `BCTP` 狀態，再依遊戲目前語言，於背景下載 `translations-CN-<內容雜湊>.json` 或 `translations-TW-<內容雜湊>.json`。非 CN/TW 不下載字庫；首次切換至另一語言才下載另一份，同一頁面切回時重用記憶體快取。大型字庫不再包含於入口 JS，因此下載不受 PCM 主程式載入的 30 秒限制；不需修改 PCM 或插件網址。JSON 使用建置時的絕對 Pages 網址，支援 PCM 的內嵌執行與快取重放。
 
@@ -84,7 +100,7 @@ DOM 分批翻譯會持續排程到佇列清空，去除同一批重複節點，�
 translations/
   cn/                官方 CN 鏡像（seed 生成，勿手改）
   cn-extra/          ★ 補官方缺口/覆寫（鏡像官方路徑）
-  mods/              ★ BCX / LSCG 等 mod 字典 + bcx-help.json
+  mods/              ★ BCX / LSCG / ECHS / GGC 等 mod 字典 + bcx-help.json
   compat.json       舊 ECHO 相容資料與 supplement（建置時產生 CN/TW）
   official-tw.json   官方已有 _TW.txt 的路徑清單（seed 生成，避免機翻蓋官方繁中）
   tw-terms.json      ★ TW 全域詞彙替換（"信息":"訊息"）
@@ -107,7 +123,8 @@ src/
     html/            聊天記錄 HTML 翻譯
     modSurfaces.js   ECHS / Littlish Club 字庫查表（精確鍵 + {name}/{#n} 模板）
     echsCanvas.js    ECHS 設定頁 fillText / measureText 翻譯（整句、自動換行文字、畫面限定）
-    modDom.js        ECHS 彈窗與 Littlish Club 子畫面的 DOM 翻譯
+    modDom.js        ECHS 彈窗、Littlish Club 子畫面與 GGC 手機視窗的 DOM 翻譯
+    galia.js         Galia's Gambling Club：自有 canvas、房間 MainCanvas 文字、聊天通知、偏好設定頁
 scripts/
   seed-from-upstream.js  從官方原始碼種入 cn/ 與 official-tw.json
   gen-dict.js            合併翻譯來源 → dict.json
@@ -185,6 +202,12 @@ mod 自己畫 canvas/DOM，不走官方 CSV，字典放 `translations/mods/`：
 - 鍵可含佔位符：`{name}` 為任意文字（字庫已有的詞會被一併翻譯，例如 `Toy mode: {value}` 的 `On`/`Off`）、`{#n}` 只比對數字。精確鍵優先，其次是固定文字最長的模板。譯文必須原樣保留相同的佔位符（`npm test` 會檢查）。
 - **ECHS**：設定頁、設定精靈與提示框是 canvas。按鈕與置中文字（分頁、`Hide advanced` 等）經現有 `DrawText` 系列 hook 翻譯；**勾選項、分組標題、說明列、提示框等用 `fillText` 直繪的文字改由 `src/mods/echsCanvas.js` 翻譯**。`[…]` 私人提示經 `ChatRoomSendLocal`；彈窗（`#echs-popup`）與下拉選單由 `src/mods/modDom.js` 翻譯。只在 ModSDK 登錄了 `ECHS` 時才啟用。點擊後會打進聊天框的催眠語句（`sink deeper`、`wake up` 等）**刻意不翻**，因為 ECHS 靠英文原文比對。
 - **Littlish Club**：用 zois-core 建立 DOM 選單，只在 `window.LITTLISH_CLUB.inModSubscreen()` 為真（子畫面開啟）時掃描，並跳過聊天記錄、輸入框與 textarea。含標記的段落（如 `<b>Creator:</b> …`）以整段 HTML 比對。
+- **Galia's Gambling Club（GGC）**：作者未公開原始碼，字串由 `club-gaming.js` 逐段抽出。字庫分三份，簡中來源在 `translations/mods/galia/`，繁中由建置流程生成：
+  - `ui.json`（`galia`）：GGC 自己的 canvas（手機、遊戲、銀行、契約、群聊 App、環形選單）、DOM（通話／簡訊視窗、群聊分頁、輸入框提示）、偏好設定頁、聊天記錄通知與 `ChatRoomSendLocal` 提示。
+  - `room.json`（`galiaRoom`）：聊天室 `MainCanvas` 上的對決、物品文字與音效字、骰子／硬幣，以及 GGC 玩家送出的 `Action` 訊息（擲骰、拿出手機、站位移動、對決結果、契約執行）。**只在收到時翻成本機顯示**，送出的內容不變，沒裝本插件的人看到的仍是原文，作法與 LSCG 動作訊息相同。代名詞（her/his/their）與 `Name's` 以逐一列舉的句型處理。
+  - `dialog.json`（`galiaDialog`）：GGC 放進 BC 道具／動作對話框的選項（站位、內衣動作、Skirmish / Steal / Give Item）。
+  - 只在 ModSDK 登錄了 `ClubGaming` 時啟用（房間動作訊息例外：不論本機是否安裝 GGC 都會翻）。房間內角色的名字與暱稱即使剛好等於字庫鍵也不翻；玩家寫的簡訊、對話預覽與群聊名稱保持原文。
+  - **刻意不翻**：GGC 套在角色身上的製作道具名稱與描述（Trade Collar、BJ Ballgag…，屬於 BC 道具資料）、奴隸契約道具的內容、除錯用的預覽與指令、`TIC TAC TOE` 等畫在暫存 canvas 上的標題美術字，以及催眠面罩上玩家自訂的幻覺文字。
 - 尚未涵蓋：ECHS「幫助」分頁（逐行硬換行的長文，整句比對不到）、「已植入」分頁的觸發詞詳情（含玩家輸入的詞與名字的動態句）、ECHS 的敘事／旁白訊息與指令回覆（含玩家名的動態長句）、Littlish Club 寫入記錄與聊天室的動作訊息。這些要等實際遊戲內用 `BCTP.missing()` 收集後再補。
 
 ### C. 繁中用語修正
@@ -200,70 +223,6 @@ TW 由 CN 機轉，出現不順的詞時：
 - **繁中缺口**：`npm run diff -- --tw` → 產生 `reports/missing-tw.md` 與 JSON，檢查實際產出的 TW 字典；未覆寫的檔案則檢查上游官方 TW。
 - **包含單機範圍**：`npm run diff -- --all`（仍排除 KinkyDungeon 目錄）。只產生報告，不會自動翻譯。
 - **執行期缺口**：遊戲內 console 執行 `BCTP.missing()` 匯出「畫面上出現、但翻不到的英文」清單，逐條補進 A/B。最多保留 500 筆，`BCTP.clearMissing()` 清除後可重新收集。
-
-### 2026-09 字庫補齊
-
-以本機 `../BCJS/Bondage-College-master/BondageClub` 的 **R131** 原始碼為基準，新增 **1,419 筆**補充字庫資料：
-
-- 道具設定與動作訊息 668 筆、染色圖層 478 筆、染色群組 75 筆、道具名稱 41 筆。
-- 背景 35 筆，其餘連線／共用介面 105 筆，包括衣櫃、外觀變換、重新著色、牽繩斷開原因及線上遊戲訊息。
-- 另沿用官方 CN 補入 17 筆官方 TW 缺譯，涵蓋重新登入、房間管理及幸運輪盤。
-
-其中 42 筆是保留原文的角色／品牌名稱或圖層代碼，不作音譯。簡中新增來源經 OpenCC 及既有覆寫規則輸出繁中。
-
-驗證結果：43 個 CSV 的 CN 缺口為 0；TW 僅剩角色對話中 2 句 Kinky Dungeon 啟動提示，依本次範圍暫不翻譯。未新增單機劇情翻譯。這是上述本機版本的 CSV 覆蓋檢查，不代表未來版本或未經 CSV 的硬編碼字串也已全部翻譯。
-
-`npm test` 檢查字庫與執行期行為：CSV 欄位解析、預設範圍、翻譯標記、簡繁中輸出、初始化失敗清理與重試、DOM 多批排程、資產晚到及語言切換；`npm run build` 重建發布 bundle。尚未進行實際連線遊戲的畫面驗證。
-
-### 2026-11 ECHS 設定頁補譯
-
-**問題**：ECHS 設定頁只有左側分頁標題有翻，右側的設定值（`Hypnosis Enabled`、`Movement Restriction`…）、分組標題與說明列都維持英文，雖然這些字串早已在 `translations/mods/echs/ui.json`。原因是 ECHS 的 `drawLeftTextFit` / `drawLeftTextWrap` / 提示框直接呼叫 `MainCanvas.fillText`，完全繞過 `DrawText` 系列 hook；分頁走 `DrawButton`→`DrawTextFit` 所以有翻。
-
-**修正**（新增 [`src/mods/echsCanvas.js`](src/mods/echsCanvas.js)，由 `mods/index.js` 啟動）：
-
-- 只在 `Preferences` 畫面且目前開啟的是 ECHS 自己的擴充設定（`PreferenceExtensionsCurrent` 等於 `PreferenceExtensionsSettings.HypnosisAddon`）、或 `InformationSheet`（ECHS 遙控面板）時，才包住 `MainCanvas.fillText` 與 `measureText`；其他畫面完全不碰。ECHS 未載入、語言非 CN/TW、離開畫面時都不翻譯，外掛卸載會還原。
-- **整句文字**：`fillText` 與 `measureText` 一起查同一份 `echs` 字庫。連 `measureText` 都翻，ECHS 的「縮字到放得下」就會以中文寬度計算，不會再把英文截成 `…`。
-- **自動換行的文字**（下拉設定的說明、提示框、設定精靈說明）：ECHS 是一行英文一行英文送來。第一行若剛好是「唯一一個字庫鍵」的開頭，就吞掉後續英文行，改以同一欄寬重新換行畫出譯文，並置中在原本那塊文字的垂直範圍。有歧義的開頭不猜；若後續行沒有接上，已有的譯文也會補畫出來，不會整段消失。
-- 順手修正 `modSurfaces.js` 樣板平手時的選擇：固定文字總長較長者優先（`"Sink deeper" stops at: {tier}.` 現在贏過 `…: {value}`，精靈摘要的層級名稱因此會被翻到）。
-
-**字庫補譯**（`translations/mods/echs/ui.json` 新增 43 筆，繁中由建置生成）：
-
-| 類別 | 內容 |
-|------|------|
-| 設定頁按鈕與欄位 | `Setup`、`Exit`、`Holding`、`Prev`、`Next`、`Cancel`、`Apply`、`Find:`、`Experience`、`Trust`、`value`、`detail`、`Toy mode is for:` |
-| 統計分頁每列 | `{#n} interactions · just now / never / {#b}m·h·d ago`、`never`、`just now` |
-| 設定精靈摘要 | `When someone tries: …` 四種組合 |
-| Extreme 極限鎖定 | 唯讀橫幅與拒絕訊息（含日期）、確認前四段警告、到期續約提示與兩顆按鈕、續約／解除／套用的回報句 |
-
-這些字串由 ECHS 原始碼（`menu.ts`、`wizard.ts`、`panel.ts`、`extreme.ts`、`trust.ts`）逐一抽出，與字庫比對後補上缺值；聊天旁白與指令回覆本次不處理。
-
-**測試**：新增 `scripts/echsCanvas.test.js`（11 項）——整句翻譯與 TW、以翻譯後寬度縮字、畫面限定與 CJK／未知文字不動、自動換行吞行與置中、換行中斷補畫、歧義不猜、卸載還原、畫面判斷、延後出現的 `MainCanvas` 與語言切換，以及新增字庫項。`npm run check` 全數通過（105 項測試）。
-
-**限制**：尚未在實際連線遊戲內驗證畫面；多行說明是以英文欄寬估計中文換行寬度，版面可能與 ECHS 原生略有差異。
-
-### 2026-11 ECHS 補譯（二）：Trance Defaults 子項目、私人旁白與說明頁
-
-**問題**：恍惚默認分頁中縮排在「無法移動」底下的子項目 `...and no one else can move you either`（ECHS v1.12.0 新增，`tranceNoOneMoves`）仍顯示英文。原因單純：字庫 `translations/mods/echs/ui.json` 沒有這個鍵；繪製路徑（`fillText` / `measureText`）與其他列相同，不需要改程式。
-
-**同批補上的遺漏**（由 ECHS 原始碼 `menu.ts`、`popup.ts`、`help.ts`、`follow.ts`、`keyholder.ts`、`recovery.ts`、`voice.ts` 逐一抽出並與字庫比對，新增 158 筆；繁中由建置生成）：
-
-| 類別 | 內容 |
-|------|------|
-| 深度分頁 | 重設與「唤起可觸及」提示（含 `{name}` 樣板）、不彈窗回應的三種說明句 |
-| ECHS 彈窗 | `Asked {who}'s ECHS …` 狀態列、觸發詞列表的 `word hidden` / `a compulsion`、`missed: …`、`Typed. Finish it (…)` |
-| 私人旁白 | 只有自己看得到的 `[...]` 提示（`tellPlayer`，經 `ChatRoomSendLocal`）：恢復、追隨、持鑰人、被迫動作等 |
-| 說明頁 | 分頁名與說明、各段標題、不含口說用語的純說明段落 |
-
-**不翻譯（刻意保留英文）**：
-
-- **觸發詞與口說用語**：ECHS 以聊天內容比對，包含彈窗「Say / Suggestions」所輸入的每句話（`sink deeper`、`wake up`、`kiss me`、`your trigger word is …`、`remember trigger`、`forget every trigger I gave you` 等）以及玩家自訂的觸發詞本身。
-- **`/echs` 指令**與其參數。
-- **含口說用語的說明段落**：說明頁中夾有引號範例的段落整段不收錄；標題或說明句裡帶有口說用語者，譯文內以原文逐字保留（例如 `“remove everything I planted”`）。
-- 聊天室中送給別人的旁白（`tellRoom` 表情）與其他玩家的聊天訊息：本插件的 `ChatRoomMessage` 掛鉤只改 `Action` / `Activity` 動作模板，不碰一般聊天，這次也沒有放寬。
-
-**測試**：`scripts/echsCanvas.test.js` 新增 6 項（共 120 項，`npm run check` 全數通過）——子項目翻譯（CN/TW、`fillText` + `measureText`）、**口說用語／指令／觸發詞一律不翻譯**（含 `Missy, ` 前綴，且字庫鍵不得等於口說用語）、樣板的名字與數字、私人旁白、說明頁整段吞行翻譯與引號範例原樣、TW 逐筆生成。
-
-**限制**：說明頁為手動斷行，且部分段落夾有動態值（`getMaxAttempts()` 等）或口說範例，因此只翻能整段對應的純說明；其餘維持英文。`flavor.ts` 的氛圍句庫（隨機旁白）與 `session.ts` 的嘗試結果提示（開頭是動態英文氛圍句）本次未處理。尚未在實際連線遊戲內驗證畫面。
 
 ### D2. BC 函式掛鉤相容性檢查
 

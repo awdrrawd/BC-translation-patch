@@ -14,6 +14,7 @@ import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
 import { translateModText } from "./modSurfaces.js";
 import { setupModDomObserver, isEchsLoaded } from "./modDom.js";
 import { setupEchsCanvas } from "./echsCanvas.js";
+import { isGaliaLoaded, galiaPreferenceText, setupGaliaCanvas, setupGaliaChat } from "./galia.js";
 
 import { createLookup } from "./lookup.js";
 import { createMissingCollector } from "./missing.js";
@@ -32,6 +33,22 @@ const echsLoaded = () => {
 };
 const echsDictionary = () => activeLang() ? GEN.surfaces?.[activeLang()]?.echs : undefined;
 const echsText = text => echsLoaded() ? translateModText(text, echsDictionary()) : undefined;
+
+// Galia's Gambling Club (see galia.js). Same cached loaded-state as ECHS.
+let galiaState = { at: 0, loaded: false };
+const galiaLoaded = () => {
+    const now = Date.now();
+    if (now - galiaState.at > 2000) galiaState = { at: now, loaded: isGaliaLoaded() };
+    return galiaState.loaded;
+};
+const surface = scope => activeLang() ? GEN.surfaces?.[activeLang()]?.[scope] : undefined;
+const galiaPrefText = text => galiaLoaded() ? galiaPreferenceText(text, surface("galia")) : undefined;
+const galiaLocalText = text => galiaLoaded() ? translateModText(text, surface("galia")) : undefined;
+// Incoming GGC Action messages are translated for whoever reads them, as LSCG's are; only this copy changes.
+const galiaRoomText = text => translateModText(text, surface("galiaRoom"));
+const galiaDialogText = text => galiaLoaded() ? translateModText(text, surface("galiaDialog")) : undefined;
+const translateInventory = text => translateAny(text) || galiaDialogText(text);
+
 export const getMissing = missing.list;
 export const clearMissing = missing.clear;
 
@@ -50,7 +67,7 @@ export function setupMods(mod, addCleanup) {
                     if (name) args[0] = name;
                     return next(args);
                 }
-                const t = echsText(args[0]) || translateBcxLog(fn, args, activeLang(), tryMenu) || roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
+                const t = galiaPrefText(args[0]) || echsText(args[0]) || translateBcxLog(fn, args, activeLang(), tryMenu) || roomAdminText(args[0], GEN.surfaces || {}, activeLang(), screen) || tryMenu(args[0]);
                 if (t) args[0] = t;
                 else if (/[A-Za-z]/.test(args[0])) missing.add(args[0].trim());
             }
@@ -77,8 +94,10 @@ export function setupMods(mod, addCleanup) {
             const target = data.Dictionary.find((it) => it && it.Tag === tag);
             if (target && typeof target.Text === "string") {
                 const shared = data.Type === "Action" && data.Content === "Beep"
-                    ? translateCraftShare(target.Text, activeLang()) || translateNecklaceAction(target.Text, activeLang()) || translateLscgMessage(target.Text, GEN.surfaces?.[activeLang()]?.lscgMessages, activeLang()) : undefined;
-                const t = shared || tryActivity(target.Text);
+                    ? translateCraftShare(target.Text, activeLang()) || translateNecklaceAction(target.Text, activeLang()) || translateLscgMessage(target.Text, GEN.surfaces?.[activeLang()]?.lscgMessages, activeLang()) || galiaRoomText(target.Text) : undefined;
+                // GGC also sends contract results as its own Action ("GGC_Action").
+                const galia = data.Type === "Action" && data.Content === "GGC_Action" ? galiaRoomText(target.Text) : undefined;
+                const t = shared || galia || tryActivity(target.Text);
                 if (t) {
                     args = [...args];
                     args[0] = { ...data, Dictionary: data.Dictionary.map(entry =>
@@ -95,7 +114,7 @@ export function setupMods(mod, addCleanup) {
             // ECHS wraps its private notices in [brackets]; translate the inside and keep the brackets.
             const bracketed = /^\[([\s\S]*)\]$/.exec(args[0]);
             const echs = bracketed && echsText(bracketed[1]);
-            const t = (echs && `[${echs}]`) || translateBcplusRoomNotice(args[0], GEN.surfaces, activeLang()) || tryMenu(args[0]);
+            const t = (echs && `[${echs}]`) || galiaLocalText(args[0]) || translateBcplusRoomNotice(args[0], GEN.surfaces, activeLang()) || tryMenu(args[0]);
             if (t) args[0] = t;
         }
         return next(args);
@@ -108,7 +127,8 @@ export function setupMods(mod, addCleanup) {
     addCleanup(ChatHistoryTranslator.registerTranslationFunc((src) => lookup.html(src)));
 
     // dialog-inventory(DOM) 的道具/動作名；製作屬性(dfn)用作用域字典
-    setupDomObserver(translateAny, translateDfn, addCleanup, text => translateLscgText(text, translateAny, lookup.exactAny));
+    // GALIA 的站位／內衣選單也放在 dialog-inventory，同一條管線補上它的字庫，避免兩個 observer 互相還原。
+    setupDomObserver(translateInventory, translateDfn, addCleanup, text => translateLscgText(text, translateAny, lookup.exactAny));
 
     // BCX 匯出/匯入等 textarea.value 說明
     setupBcxHelp(addCleanup);
@@ -118,4 +138,9 @@ export function setupMods(mod, addCleanup) {
 
     // ECHS 設定頁的多數文字由 MainCanvas.fillText 直接繪製（不經 DrawText hook），在此補翻。
     setupEchsCanvas(echsDictionary, echsLoaded, addCleanup);
+
+    // GALIA：自有 canvas（手機、遊戲、銀行、契約、聊天、環形選單）與聊天室 MainCanvas 上的對決／動畫文字，
+    // 以及它寫進聊天記錄的系統通知。
+    setupGaliaCanvas(() => surface("galia"), () => surface("galiaRoom"), galiaLoaded, addCleanup);
+    setupGaliaChat(GEN.surfaces || {}, activeLang, galiaLoaded, addCleanup);
 }

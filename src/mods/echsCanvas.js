@@ -37,10 +37,14 @@ function wrapTranslated(text, width, measure) {
 }
 
 /**
- * @param {{ dictionary: () => Record<string,string>|undefined, enabled: () => boolean }} options
+ * Also used for Galia's Gambling Club, which draws on its own canvases with the same fillText/measureText
+ * pattern and outlines titles with strokeText.
+ * @param {{ dictionary: () => Record<string,string>|undefined, enabled: () => boolean, skip?: (text: string) => boolean }} options
+ *   skip: text that must stay as drawn even when a key matches (player names).
  * @returns {{ install(ctx: any): () => void }}
  */
-export function createEchsCanvasText({ dictionary, enabled }) {
+export function createEchsCanvasText({ dictionary, enabled, skip }) {
+    const skipped = text => !!skip && skip(text);
     let indexed = null; // { map, keys: [normalised exact key], }
     const firstLines = new Map();
 
@@ -71,6 +75,8 @@ export function createEchsCanvasText({ dictionary, enabled }) {
 
     function install(ctx) {
         const fill = ctx.fillText, measure = ctx.measureText;
+        const stroke = typeof ctx.strokeText === "function" ? ctx.strokeText : null;
+        const ownStroke = Object.prototype.hasOwnProperty.call(ctx, "strokeText");
         const rawFill = (...args) => fill.apply(ctx, args);
         const rawMeasure = text => measure.call(ctx, text).width;
         let pending = null;
@@ -90,15 +96,26 @@ export function createEchsCanvasText({ dictionary, enabled }) {
         };
 
         ctx.measureText = function (text, ...rest) {
-            if (typeof text === "string" && enabled() && !CJK.test(text)) {
+            if (typeof text === "string" && enabled() && !CJK.test(text) && !skipped(text)) {
                 const t = translateModText(text, dictionary());
                 if (t !== undefined) text = t;
             }
             return measure.call(this, text, ...rest);
         };
 
+        // Outlines are drawn whole (never word-wrapped), so only whole strings are translated here.
+        if (stroke) {
+            ctx.strokeText = function (text, ...rest) {
+                if (typeof text === "string" && enabled() && !CJK.test(text) && !skipped(text)) {
+                    const t = translateModText(text, dictionary());
+                    if (t !== undefined) text = t;
+                }
+                return stroke.call(this, text, ...rest);
+            };
+        }
+
         ctx.fillText = function (text, x, y, ...rest) {
-            if (typeof text !== "string" || !enabled()) { draw(); return fill.call(this, text, x, y, ...rest); }
+            if (typeof text !== "string" || !enabled() || skipped(text)) { draw(); return fill.call(this, text, x, y, ...rest); }
             const map = dictionary();
             const fragment = normalize(text);
             if (pending) {
@@ -158,6 +175,10 @@ export function createEchsCanvasText({ dictionary, enabled }) {
             draw();
             if (ctx.fillText !== fill && Object.prototype.hasOwnProperty.call(ctx, "fillText")) delete ctx.fillText;
             if (ctx.measureText !== measure && Object.prototype.hasOwnProperty.call(ctx, "measureText")) delete ctx.measureText;
+            if (stroke && ctx.strokeText !== stroke) {
+                if (ownStroke) ctx.strokeText = stroke;
+                else if (Object.prototype.hasOwnProperty.call(ctx, "strokeText")) delete ctx.strokeText;
+            }
         };
     }
 

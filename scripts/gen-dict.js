@@ -220,6 +220,10 @@ export function generateDict() {
     surfaceRaw.bcplus = readJsonOptional(path.join(trRoot, "mods", "bcplus", "ui.json"), {});
     // Mods that draw their own UI: exact strings plus {name}/{#n} templates (see src/mods/modSurfaces.js).
     for (const mod of ["echs", "littlish"]) surfaceRaw[mod] = readJsonOptional(path.join(trRoot, "mods", mod, "ui.json"), {});
+    // Galia's Gambling Club: its own UI, what it draws/sends into the room, and its BC dialog labels (src/mods/galia.js).
+    surfaceRaw.galia = readJsonOptional(path.join(trRoot, "mods", "galia", "ui.json"), {});
+    surfaceRaw.galiaRoom = readJsonOptional(path.join(trRoot, "mods", "galia", "room.json"), {});
+    surfaceRaw.galiaDialog = readJsonOptional(path.join(trRoot, "mods", "galia", "dialog.json"), {});
     const surfaces = { CN: surfaceRaw, TW: {} };
     for (const [scope, entries] of Object.entries(surfaceRaw)) {
         surfaces.TW[scope] = Object.fromEntries(Object.entries(entries).map(([en, zh]) =>

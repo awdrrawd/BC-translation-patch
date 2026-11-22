@@ -7,12 +7,24 @@ const NEVER = "script, style, code, pre";
 const EDITABLE = "textarea, input, [contenteditable]:not([contenteditable='false'])";
 const ATTRIBUTES = ["title", "placeholder", "aria-label"];
 
-/** Name the BC mod SDK registers ECHS under. */
-export function isEchsLoaded(env = globalThis) {
+/** True while the BC mod SDK lists a mod under this registered name. */
+export function isModLoaded(name, env = globalThis) {
     try {
-        return !!env.bcModSdk?.getModsInfo?.().some(info => info.name === "ECHS");
+        return !!env.bcModSdk?.getModsInfo?.().some(info => info.name === name);
     } catch { return false; }
 }
+
+/** Name the BC mod SDK registers ECHS under. */
+export const isEchsLoaded = (env = globalThis) => isModLoaded("ECHS", env);
+/** Galia's Gambling Club registers as "ClubGaming". */
+export const isGaliaLoaded = (env = globalThis) => isModLoaded("ClubGaming", env);
+
+// GALIA's phone texts and the names of its group chats are what players wrote; they keep their wording.
+const GALIA_PLAYER_TEXT = [
+    '[aria-label="Text message"]',
+    '[aria-label="Phone messages"] button > div > div + div', // last message shown under each conversation
+    '[data-ggc-chat-id]:not([data-ggc-chat-id="__club__"])',   // group chat tabs are named by players
+].join(", ");
 
 /**
  * Each adapter names the dictionary scope it uses and the DOM roots it owns.
@@ -21,6 +33,7 @@ export function isEchsLoaded(env = globalThis) {
 export const MOD_DOM_ADAPTERS = [
     {
         scope: "echs",
+        enabled: isEchsLoaded,
         roots: document => [
             document.getElementById("echs-popup"),
             document.getElementById("echs-popup-launcher"),
@@ -35,6 +48,27 @@ export const MOD_DOM_ADAPTERS = [
         // but only while a Littlish Club subscreen is open.
         roots: (document, env) => env.LITTLISH_CLUB?.inModSubscreen?.() ? [document.body] : [],
         skip: "#TextAreaChatLog, #chat-room-div, #InputChat, #ChatRoomChatLog",
+    },
+    {
+        // Galia's Gambling Club: the phone's call and message windows, the radial menu tooltip, the group
+        // chat tabs, its fixed inputs (bank amount/ID, chat name) and the chat box placeholder it sets.
+        // Everything else it shows is canvas (galia.js) or chat notices (galia.js).
+        scope: "galia",
+        enabled: isGaliaLoaded,
+        roots: document => [
+            document.getElementById("clubgaming-phone-calls"),
+            document.getElementById("clubgaming-radial-menu-tooltip"),
+            document.getElementById("clubgaming-group-chat-tabs"),
+            document.getElementById("InputChat"),
+            ...document.querySelectorAll('body > div[aria-label="Phone messages"], body > input[style*="z-index: 100003"]'),
+        ].filter(Boolean),
+        skip: GALIA_PLAYER_TEXT,
+    },
+    {
+        // Labels GALIA gives its activities in BC's own activity dialog (Skirmish, Steal, Give Item).
+        scope: "galiaDialog",
+        enabled: isGaliaLoaded,
+        roots: document => [...document.querySelectorAll('[id*="GGCSkirmish"], [id*="GGCSteal"], [id*="GGCGivePhone"]')],
     },
 ];
 
@@ -127,7 +161,7 @@ export function setupModDomObserver(dictionaries, getLang, addCleanup, env = glo
         const wanted = new Map();
         for (const adapter of MOD_DOM_ADAPTERS) {
             if (!dictionaries[getLang()]?.[adapter.scope]) continue;
-            if (adapter.scope === "echs" && !isEchsLoaded(env)) continue;
+            if (adapter.enabled && !adapter.enabled(env)) continue;
             for (const root of adapter.roots(document, env)) wanted.set(root, adapter);
         }
         for (const [root, { observer }] of roots) {
