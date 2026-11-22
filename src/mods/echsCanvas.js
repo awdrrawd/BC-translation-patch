@@ -62,6 +62,13 @@ export function createEchsCanvasText({ dictionary, enabled }) {
         return result;
     };
 
+    /** The single key that begins with `fragment`, which may have been cut mid-word by an ellipsis. */
+    const keyCutFrom = (fragment, map) => {
+        if (fragment.length < 12) return null;
+        const found = keysOf(map).filter(key => key.length > fragment.length && key.startsWith(fragment));
+        return found.length === 1 ? found[0] : null;
+    };
+
     function install(ctx) {
         const fill = ctx.fillText, measure = ctx.measureText;
         const rawFill = (...args) => fill.apply(ctx, args);
@@ -108,6 +115,30 @@ export function createEchsCanvasText({ dictionary, enabled }) {
             if (!map || CJK.test(text) || !/[A-Za-z]{2}/.test(fragment)) return fill.call(this, text, x, y, ...rest);
             const whole = translateModText(text, map);
             if (whole !== undefined) return fill.call(this, whole, x, y, ...rest);
+            // ECHS's drawLeftTextFit clips the ENGLISH to "...…" once even its smallest size is too wide. The
+            // translation is usually shorter, so draw it whole in that same width, shrinking a little if needed.
+            if (text.endsWith("…")) {
+                const cut = normalize(text.slice(0, -1)), cutKey = keyCutFrom(cut, map);
+                const full = cutKey && translateModText(cutKey, map);
+                if (full) {
+                    const budget = (rawMeasure(text) + rawMeasure(`${cut}${cutKey[cut.length]}…`)) / 2;
+                    const size = Number(/(\d+(?:\.\d+)?)px/.exec(ctx.font)?.[1]) || 36;
+                    const fonts = n => ctx.font.replace(/(\d+(?:\.\d+)?)px/, `${n}px`);
+                    ctx.save();
+                    let shown = full, n = size;
+                    for (; n > Math.max(14, size - 8); n--) {
+                        ctx.font = fonts(n);
+                        if (rawMeasure(full) <= budget) break;
+                    }
+                    ctx.font = fonts(n);
+                    while ([...shown].length > 1 && rawMeasure(shown) > budget) {
+                        shown = `${[...shown].slice(0, -2).join("")}…`;
+                    }
+                    fill.call(this, shown, x, y, ...rest);
+                    ctx.restore();
+                    return;
+                }
+            }
             const key = fragment.includes(" ") ? keyStartingWith(fragment, map) : null;
             const translated = key && translateModText(key, map);
             if (!translated) return fill.call(this, text, x, y, ...rest);
