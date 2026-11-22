@@ -346,3 +346,100 @@ test("Triggers tab: every scope option and the decay caption are translated in C
     }
     assert.equal(translateModText("A Deep planting lasts about 3.0 days if it is never used.", dictionaries.CN.echs), "深度植入的触发词若从不使用，约可持续 3.0 天。");
 });
+
+test("Trance Defaults: the indented \"no one else can move you\" sub-option is translated in CN and TW", () => {
+    const label = "...and no one else can move you either";
+    assert.equal(translateModText(label, dictionaries.CN.echs), "……而且其他人也无法移动你");
+    assert.equal(translateModText(label, dictionaries.TW.echs), "……而且其他人也無法移動你");
+    // ECHS draws it through fillText (and measures it first), like every other row on that tab.
+    const { ctx } = make(dictionaries.CN.echs);
+    ctx.measureText(label);
+    ctx.fillText(label, 320, 160);
+    assert.deepEqual(ctx.drawn.map(d => d.text), ["……而且其他人也无法移动你"]);
+});
+
+test("spoken phrases, trigger words and /echs commands are never translated", () => {
+    // These are what ECHS matches in chat, and what its popup types for the player.
+    const spoken = [
+        "sink deeper", "deeper and deeper", "drift deeper", "walk with me", "be still", "wake up", "you are awake",
+        "come back to me", "you cannot touch yourself", "you can touch yourself", "touch yourself", "take a sip", "kiss me",
+        "your trigger word is sleepy time", "remember trigger", "forget every trigger I gave you", "remove everything I planted",
+        "this trigger works only once", "it lasts 2 hours", "anyone can use it", "only I can use it", "you will drop into trance",
+        "you will say 'I obey' three times", "five minutes after you wake, you will kneel", "when I speak, you will kneel",
+        "that trigger holds", "I trust you", "/echs safeword", "/echs forgettrigger all", "/echs induce Missy",
+    ];
+    for (const lang of ["CN", "TW"]) {
+        const map = dictionaries[lang].echs;
+        for (const phrase of spoken) {
+            assert.equal(translateModText(phrase, map), undefined, `${lang}: "${phrase}" must stay as typed`);
+            assert.equal(translateModText(`Missy, ${phrase}`, map), undefined, `${lang}: "Missy, ${phrase}"`);
+        }
+        // Prose around a spoken phrase is translated, but the phrase itself comes through verbatim.
+        const around = translateModText("No word: only “remove everything I planted” below takes it away.", map);
+        assert.ok(around.includes("“remove everything I planted”"), around);
+        assert.ok(/[\u3400-\u9fff]/.test(around));
+        const heading = translateModText("Shaping it — before \"remember trigger\"", map);
+        assert.ok(heading.includes("“remember trigger”"), heading);
+    }
+    // No dictionary key may BE a spoken phrase (a key would translate it wherever it is drawn). Lookups are
+    // case-sensitive, and the capitalised "Wake up" is the induction prompt's button, not the spoken phrase.
+    const keys = new Set(Object.keys(dictionaries.CN.echs));
+    for (const phrase of spoken) assert.ok(!keys.has(phrase), `dictionary key equals spoken phrase: ${phrase}`);
+});
+
+test("Depth tab notices, caption and popup status lines with names and numbers", () => {
+    for (const lang of ["CN", "TW"]) {
+        const map = dictionaries[lang].echs;
+        const t = text => translateModText(text, map);
+        assert.ok(/[\u3400-\u9fff]/.test(t("Depth requirements reset to their defaults.")));
+        // The label comes from depth.ts's gate table, so it is translated on its own inside the template.
+        assert.ok(t("Made to speak: back to trust only.").includes(t("Made to speak")));
+        assert.ok(t("Clothing illusion: arousal may reach this now — anything seeded this way fades fast.").includes(t("Clothing illusion")));
+        for (const how of ["go along with it", "fight it", "neither help nor resist"]) {
+            assert.ok(/[\u3400-\u9fff]/.test(t(`No box: you ${how}. They are not told which.`)), how);
+        }
+        assert.ok(t("Asked Missy's ECHS to switch off \"Cannot Move\"…").includes(t("Cannot Move")));
+        assert.ok(t("Asked Missy's ECHS to switch off \"Cannot Move\"…").includes("Missy"));
+        assert.ok(t("Missy (your keyholder) turned on Cannot Move.").includes(t("Cannot Move")));
+        assert.ok(t("Asked Rei's ECHS to set Screen effect to Spiral…").includes("Rei"));
+        assert.ok(/[\u3400-\u9fff]/.test(t("3. word hidden")) && t("3. word hidden").startsWith("3."));
+        assert.ok(/[\u3400-\u9fff]/.test(t("2. a compulsion")));
+        assert.ok(t("Rei (your keyholder) set Screen effect to Spiral.").includes("Rei"));
+    }
+});
+
+test("private narration (only the player sees it) is translated inside its brackets", () => {
+    const map = dictionaries.CN.echs;
+    for (const line of [
+        "Whatever was holding you lets go.", "Your body does it without waiting for you to decide.",
+        "Missy no longer follows you.", "You feel the pull to follow Rei, but your setting that lets others leash you is off.",
+    ]) assert.ok(/[\u3400-\u9fff]/.test(translateModText(line, map)), line);
+});
+
+test("Help screen: headings, tab blurbs and hard-wrapped prose are translated; quoted phrases stay English", () => {
+    const cn = dictionaries.CN.echs;
+    for (const label of ["Start Here", "What to Say", "Depth & Trust", "Lasting", "The short version", "Why nothing happened",
+        "The loop, both sides of it, and every way out.", "Keyholders", "Right now, on this character"]) {
+        assert.ok(translateModText(label, cn), label);
+    }
+    // ECHS's help text is hand-wrapped: one fillText per source line, same x, rising y.
+    const lines = [
+        "Almost nothing here is a command. You SPEAK to someone, and their",
+        "own client decides whether anything lands. Nobody is ever made to",
+        "do anything — their settings answer for them.",
+    ];
+    const { ctx } = make(cn);
+    lines.forEach((line, i) => ctx.fillText(line, 60, 300 + i * 34));
+    assert.ok(ctx.drawn.length >= 1 && ctx.drawn.every(d => /[\u3400-\u9fff]/.test(d.text)), JSON.stringify(ctx.drawn));
+    assert.ok(ctx.drawn.every(d => d.x === 60));
+    // A line that is a spoken example is never touched, even next to translated prose.
+    const spoken = make(cn);
+    for (const line of ["\"Missy, your trigger word is sleepy time\"", "\"Missy, you cannot move\"      (and any others)", "\"Missy, remember trigger\""]) spoken.ctx.fillText(line, 60, 100);
+    assert.deepEqual(spoken.ctx.drawn.map(d => d.text), ["\"Missy, your trigger word is sleepy time\"", "\"Missy, you cannot move\"      (and any others)", "\"Missy, remember trigger\""]);
+});
+
+test("every new ECHS entry has a TW form generated from CN", () => {
+    const cn = dictionaries.CN.echs, tw = dictionaries.TW.echs;
+    for (const key of Object.keys(cn)) assert.ok(tw[key], `TW missing: ${key}`);
+    assert.equal(translateModText("Depth requirements reset to their defaults.", tw), "深度要求已恢復為預設值。");
+});
