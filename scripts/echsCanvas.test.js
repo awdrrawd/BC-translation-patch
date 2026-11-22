@@ -260,3 +260,89 @@ test("the real BC screen name is \"Preference\"; the plural never matches", () =
     assert.equal(isEchsScreen({ CurrentScreen: "Preference", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: settings }), true);
     assert.equal(isEchsScreen({ CurrentScreen: "Preferences", PreferenceExtensionsCurrent: mine, PreferenceExtensionsSettings: settings }), false);
 });
+
+/** A canvas whose widths follow the font size (CJK = 1em, Latin = 0.5em) and which records the font used. */
+function sizedContext() {
+    return {
+        font: "36px Arial", fillStyle: "Black", textAlign: "left", textBaseline: "middle", drawn: [], stack: [],
+        save() { this.stack.push(this.font); }, restore() { this.font = this.stack.pop(); },
+        measureText(text) {
+            const size = Number(/(\d+)px/.exec(this.font)[1]);
+            return { width: [...text].reduce((sum, c) => sum + (/[\u3400-\u9fff，。「」（）—]/.test(c) ? size : size / 2), 0) };
+        },
+        fillText(text, x, y) { this.drawn.push({ text, x, y, font: this.font }); },
+    };
+}
+
+/** ECHS's drawLeftTextFit, verbatim in behaviour: shrink to a floor of 22px, then clip with an ellipsis. */
+function echsFit(ctx, text, x, y, maxWidth) {
+    ctx.save();
+    let size = 36;
+    ctx.font = `${size}px Arial`;
+    while (size > 22 && ctx.measureText(text).width > maxWidth) { size -= 2; ctx.font = `${size}px Arial`; }
+    let out = text;
+    if (ctx.measureText(out).width > maxWidth) {
+        while (out.length > 1 && ctx.measureText(`${out}…`).width > maxWidth) out = out.slice(0, -1);
+        out = `${out}…`;
+    }
+    ctx.fillText(out, x, y);
+    ctx.restore();
+}
+
+test("a blurb that still overflows at ECHS's smallest size is drawn translated, not as clipped English", () => {
+    const blurb = "Things that outlast the session. Both need a Deep trance by default, on earned depth — though the Depth tab can let arousal reach them, at the price of fading fast.";
+    const cn = dictionaries.CN.echs, tw = dictionaries.TW.echs;
+    for (const map of [cn, tw]) {
+        const ctx = sizedContext();
+        ctx.fillText = ctx.fillText.bind(ctx);
+        createEchsCanvasText({ dictionary: () => map, enabled: () => true }).install(ctx);
+        const zh = translateModText(blurb, map);
+        const zhWidthAt22 = [...zh].length * 22;
+        // Narrower than the translation at 22px, so ECHS reaches its ellipsis branch.
+        const maxWidth = zhWidthAt22 - 40;
+        echsFit(ctx, blurb, 10, 10, maxWidth);
+        const drawn = ctx.drawn[0];
+        assert.ok(/[\u3400-\u9fff]/.test(drawn.text) && !/[A-Za-z]{3}/.test(drawn.text), drawn.text);
+        assert.ok(!drawn.text.endsWith("…"), "fits by shrinking a little rather than clipping");
+        assert.equal(drawn.text, zh);
+        assert.ok(Number(/(\d+)px/.exec(drawn.font)[1]) < 22);
+        // Same left edge and baseline as the English it replaces, and the font is restored afterwards.
+        assert.deepEqual([drawn.x, drawn.y], [10, 10]);
+        assert.equal(ctx.font, "36px Arial");
+    }
+});
+
+test("when even a shrunken translation cannot fit it is clipped in Chinese, never left in English", () => {
+    const blurb = "Things that outlast the session. Both need a Deep trance by default, on earned depth — though the Depth tab can let arousal reach them, at the price of fading fast.";
+    const ctx = sizedContext();
+    createEchsCanvasText({ dictionary: () => dictionaries.CN.echs, enabled: () => true }).install(ctx);
+    echsFit(ctx, blurb, 0, 0, 300);
+    const text = ctx.drawn[0].text;
+    assert.ok(/[\u3400-\u9fff]/.test(text) && text.endsWith("…") && !/[A-Za-z]{3}/.test(text), text);
+    ctx.font = ctx.drawn[0].font; // width at the size it was actually drawn, not the restored 36px
+    assert.ok(ctx.measureText(text).width <= 300 + 22);
+});
+
+test("an ellipsis fragment that matches several keys, or is too short, is left alone", () => {
+    const map = { "Click here to do the first thing now": "甲", "Click here to do the second thing now": "乙" };
+    const ctx = sizedContext();
+    createEchsCanvasText({ dictionary: () => map, enabled: () => true }).install(ctx);
+    ctx.fillText("Click here to do the…", 0, 0);
+    ctx.fillText("Hypnos…", 0, 0);
+    assert.deepEqual(ctx.drawn.map(d => d.text), ["Click here to do the…", "Hypnos…"]);
+});
+
+test("Triggers tab: every scope option and the decay caption are translated in CN and TW", () => {
+    for (const lang of ["CN", "TW"]) {
+        const map = dictionaries[lang].echs;
+        for (const label of [
+            "Hypnotist only", "Hypnotist and Owner", "Hypnotist, Owner and Lovers", "Hypnotist, Owner, Lovers and friends",
+            "Hypnotist, Owner, Lovers, friends and whitelist", "Hypnotist, Owner, Lovers, friends, whitelist & Dominants",
+            "Hypnotist and everyone, except blacklist", "Hypnotist and everyone, no exceptions",
+            "A planted trigger stays until it is removed.",
+            "A Deep planting lasts about 3.0 days if it is never used.", "A Deep planting lasts about 5 hours if it is never used.",
+            "A Deep planting lasts about 20 minutes if it is never used.",
+        ]) assert.ok(translateModText(label, map), `${lang}: ${label}`);
+    }
+    assert.equal(translateModText("A Deep planting lasts about 3.0 days if it is never used.", dictionaries.CN.echs), "深度植入的触发词若从不使用，约可持续 3.0 天。");
+});
