@@ -5,7 +5,7 @@ import { parseHTML } from "linkedom";
 import { generateDict } from "./gen-dict.js";
 import { translateModText } from "../src/mods/modSurfaces.js";
 import { setupModDomObserver } from "../src/mods/modDom.js";
-import { GALIA_CANVAS_SELECTOR, galiaPreferenceText, isGaliaNotice, setupGaliaCanvas, setupGaliaChat } from "../src/mods/galia.js";
+import { GALIA_CANVAS_SELECTOR, galiaPreferenceText, isGaliaNotice, setupGaliaCanvas, setupGaliaChat, setupGaliaRadialMenu } from "../src/mods/galia.js";
 
 const dictionaries = generateDict().surfaces;
 const FILES = { galia: "ui", galiaRoom: "room", galiaDialog: "dialog" };
@@ -69,6 +69,42 @@ test("the GGC preference dictionary is used only on its own page (and its button
     assert.equal(galiaPreferenceText("Play sounds", cn, at(null)), undefined);
     assert.equal(galiaPreferenceText("Galia's Gambling Club Settings", cn, at(null)), "Galia 赌博俱乐部设置");
     assert.equal(galiaPreferenceText("Play sounds", cn, at(mine, "ChatRoom")), undefined);
+});
+
+test("the phone lock screen date (en-GB weekday, day, month) is translated for every day of the year", () => {
+    const format = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long" });
+    for (const lang of ["CN", "TW"]) {
+        for (let day = 0; day < 366; day++) {
+            const date = new Date(2024, 0, 1 + day);
+            const shown = translateModText(format.format(date), dictionaries[lang].galia);
+            assert.ok(shown && !/[A-Za-z]/.test(shown), `${lang}: ${format.format(date)} -> ${shown}`);
+            assert.ok(shown.startsWith(`${date.getMonth() + 1}月${date.getDate()}日`), shown);
+        }
+    }
+});
+
+test("radial menu labels are translated before GGC draws them letter by letter, and restored on cleanup", () => {
+    const drawn = [];
+    class Menu {
+        drawArcText(ctx, text) { drawn.push(text); }
+        drawCenterText(ctx, text) { drawn.push(text); }
+    }
+    let lang = "CN", cleanup, poll;
+    const env = { ClubGamingInstance: { radialDialogMenu: new Menu() }, setInterval(fn) { poll = fn; return 1; }, clearInterval() {} };
+    setupGaliaRadialMenu(() => dictionaries[lang].galia, () => true, fn => { cleanup = fn; }, env);
+    const menu = env.ClubGamingInstance.radialDialogMenu;
+    for (const label of ["GAMES", "MISC", "OTHERS", "PHONE SERVICES", "BUY PHONE · $50", "LIAR'S DICE", "1D6"]) menu.drawArcText(null, label);
+    menu.drawCenterText(null, "CLOSE");
+    menu.drawCenterText(null, "GGC");
+    assert.deepEqual(drawn, ["游戏", "杂项", "其他", "手机服务", "购买手机 · $50", "大话骰", "1D6", "关闭", "GGC"]);
+    // GGC builds a new instance when it updates itself.
+    env.ClubGamingInstance = { radialDialogMenu: new Menu() };
+    poll();
+    drawn.length = 0;
+    env.ClubGamingInstance.radialDialogMenu.drawArcText(null, "TRADE");
+    assert.deepEqual(drawn, ["交易"]);
+    cleanup();
+    assert.equal(Object.hasOwn(env.ClubGamingInstance.radialDialogMenu, "drawArcText"), false);
 });
 
 class FakeContext {

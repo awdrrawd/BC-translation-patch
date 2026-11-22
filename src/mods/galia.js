@@ -112,6 +112,60 @@ export function setupGaliaCanvas(uiDictionary, roomDictionary, loaded, addCleanu
     scan();
 }
 
+/** Same dictionary, keyed in upper case: the radial menu draws `label.toUpperCase()` (placeholders kept as is). */
+const upperMaps = new WeakMap();
+function upperCased(map) {
+    if (!map) return undefined;
+    let upper = upperMaps.get(map);
+    if (!upper) {
+        upper = {};
+        for (const [key, value] of Object.entries(map)) {
+            const shout = key.toUpperCase().replace(/\{(#?)(\w+)\}/g, token => token.toLowerCase());
+            if (!(shout in upper)) upper[shout] = value;
+        }
+        upperMaps.set(map, upper);
+    }
+    return upper;
+}
+
+/**
+ * The radial menu (GAMES / MISC / OTHERS … around the character) draws each label one character at a time along
+ * an arc (drawArcText) and its centre (CLOSE / BACK) through drawCenterText, so a canvas-level lookup only ever
+ * sees single letters. Both methods are wrapped on the live instance (window.ClubGamingInstance.radialDialogMenu),
+ * which GGC replaces when it updates itself, so the instance is checked again on every poll.
+ */
+export function setupGaliaRadialMenu(uiDictionary, loaded, addCleanup, env = globalThis) {
+    const patched = new Map(); // menu -> originals
+    const translate = text => {
+        if (typeof text !== "string" || !loaded()) return text;
+        return translateModText(text, upperCased(uiDictionary())) ?? text;
+    };
+    const restore = menu => {
+        for (const name of ["drawArcText", "drawCenterText"]) {
+            if (Object.prototype.hasOwnProperty.call(menu, name)) delete menu[name];
+        }
+    };
+    const scan = () => {
+        const menu = env.ClubGamingInstance?.radialDialogMenu;
+        for (const old of patched.keys()) if (old !== menu) { restore(old); patched.delete(old); }
+        if (!menu || patched.has(menu) || typeof menu.drawArcText !== "function") return;
+        const arc = menu.drawArcText, centre = menu.drawCenterText;
+        // (ctx, text, ...) for both.
+        menu.drawArcText = function (ctx, text, ...rest) { return arc.call(this, ctx, translate(text), ...rest); };
+        if (typeof centre === "function") {
+            menu.drawCenterText = function (ctx, text, ...rest) { return centre.call(this, ctx, translate(text), ...rest); };
+        }
+        patched.set(menu, true);
+    };
+    const timer = env.setInterval(scan, 500);
+    addCleanup(() => {
+        env.clearInterval(timer);
+        for (const menu of patched.keys()) restore(menu);
+        patched.clear();
+    });
+    scan();
+}
+
 /** The sender label of a GGC chat notice, or undefined. Notices are `<strong>Sender:</strong> text`, the
  * action variant wraps that in a <span>, and group chat system lines put BC's metadata block in front. */
 function senderOf(element) {
