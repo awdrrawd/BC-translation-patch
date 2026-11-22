@@ -2,7 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { generateDict } from "./gen-dict.js";
 import { translateModText } from "../src/mods/modSurfaces.js";
-import { createEchsCanvasText, isEchsScreen, setupEchsCanvas } from "../src/mods/echsCanvas.js";
+import vm from "node:vm";
+import { createEchsCanvasText, isEchsScreen, setupEchsCanvas, getMainCanvas } from "../src/mods/echsCanvas.js";
 
 const dictionaries = generateDict().surfaces;
 
@@ -194,4 +195,61 @@ test("settings-screen buttons, stats rows, wizard summary and Extreme prompts ar
     assert.ok(translateModText("Extreme makes your settings read-only for 7 days, even switching hypnosis off. New triggers can still be planted, but nobody can remove one, not even its planter.", cn).includes("7 天"));
     assert.equal(translateModText("\"Sink deeper\" stops at: Deep.", cn), "「沉得更深」停在：深度。");
     assert.equal(translateModText("When someone tries: you are asked first; your owner and lovers put you straight under (toy mode).", cn)?.startsWith("有人尝试时"), true);
+});
+
+// Regression: BC declares `let MainCanvas` / `let PreferenceExtensionsCurrent` / `let PreferenceExtensionsSettings`.
+// Those are global LEXICAL bindings: reachable as bare identifiers, never as globalThis properties. The older tests
+// above put them on a fake `env`, which hid that the real game never reached the canvas layer.
+vm.runInThisContext("let MainCanvas, PreferenceExtensionsCurrent, PreferenceExtensionsSettings = {};");
+
+test("the let-declared BC globals are really invisible on globalThis (the premise of this regression)", () => {
+    assert.equal("MainCanvas" in globalThis, false);
+    assert.equal("PreferenceExtensionsCurrent" in globalThis, false);
+});
+
+test("isEchsScreen and the canvas patch work with real `let` globals, even when window.MainCanvas is the <canvas> element", () => {
+    const mine = { run() {} };
+    const ctx = fakeContext();
+    globalThis.__echsTest = { mine, ctx };
+    vm.runInThisContext("MainCanvas = __echsTest.ctx; PreferenceExtensionsSettings = { HypnosisAddon: __echsTest.mine }; PreferenceExtensionsCurrent = __echsTest.mine;");
+    try {
+        // window.MainCanvas is the element with the same id: no fillText, so it must be ignored.
+        const env = { CurrentScreen: "Preferences", MainCanvas: { tagName: "CANVAS" }, setInterval(fn) { env.poll = fn; return 1; }, clearInterval() {} };
+        assert.equal(getMainCanvas(env), ctx);
+        assert.equal(isEchsScreen(env), true);
+        let cleanup;
+        setupEchsCanvas(() => dictionaries.CN.echs, () => true, fn => { cleanup = fn; }, env);
+        ctx.fillText("Not noticing clothing changes", 0, 0);
+        ctx.fillText("[Drifting]", 0, 0);
+        assert.deepEqual(ctx.drawn.map(d => d.text), ["察觉不到衣物变化", "[漂浮]"]);
+        // Leaving the screen (BC sets Current back to null) stops translation.
+        vm.runInThisContext("PreferenceExtensionsCurrent = null;");
+        assert.equal(isEchsScreen(env), false);
+        ctx.fillText("Not noticing clothing changes", 0, 0);
+        assert.equal(ctx.drawn.at(-1).text, "Not noticing clothing changes");
+        cleanup();
+    } finally {
+        vm.runInThisContext("MainCanvas = undefined; PreferenceExtensionsCurrent = undefined; PreferenceExtensionsSettings = {};");
+        delete globalThis.__echsTest;
+    }
+});
+
+test("getMainCanvas falls back to the canvas element's own context", () => {
+    const ctx = fakeContext();
+    const env = { document: { getElementById: id => id === "MainCanvas" ? { getContext: type => type === "2d" ? ctx : null } : null } };
+    assert.equal(getMainCanvas(env), ctx);
+    assert.equal(getMainCanvas({}), undefined);
+});
+
+test("Depth tab strings drawn through fillText: bracketed tiers, rows, blurb and fitted width", () => {
+    for (const [lang, tier] of [["CN", "[漂浮]"], ["TW", "[漂浮]"]]) {
+        const map = dictionaries[lang].echs;
+        const { ctx } = make(map);
+        ctx.fillText("[Drifting]", 0, 0);
+        ctx.fillText("[Yielding]", 0, 0);
+        ctx.fillText("Cannot reach the wardrobe", 0, 0);
+        ctx.fillText("How deep you must be before each thing can reach you. The checkbox still has to be on.", 0, 0);
+        assert.equal(ctx.drawn[0].text, tier);
+        assert.ok(ctx.drawn.every(d => /[\u3400-\u9fff]/.test(d.text)), JSON.stringify(ctx.drawn));
+    }
 });
