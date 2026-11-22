@@ -14,7 +14,7 @@ import { setupBcxCanvas, translateBcxLog } from "./bcxCanvas.js";
 import { translateModText } from "./modSurfaces.js";
 import { setupModDomObserver, isEchsLoaded } from "./modDom.js";
 import { setupEchsCanvas } from "./echsCanvas.js";
-import { isGaliaLoaded, galiaPreferenceText, setupGaliaCanvas, setupGaliaChat } from "./galia.js";
+import { isGaliaLoaded, galiaPreferenceText, setupGaliaCanvas, setupGaliaChat, setupGaliaRadialMenu } from "./galia.js";
 
 import { createLookup } from "./lookup.js";
 import { createMissingCollector } from "./missing.js";
@@ -142,5 +142,6 @@ export function setupMods(mod, addCleanup) {
     // GALIA：自有 canvas（手機、遊戲、銀行、契約、聊天、環形選單）與聊天室 MainCanvas 上的對決／動畫文字，
     // 以及它寫進聊天記錄的系統通知。
     setupGaliaCanvas(() => surface("galia"), () => surface("galiaRoom"), galiaLoaded, addCleanup);
+    setupGaliaRadialMenu(() => surface("galia"), galiaLoaded, addCleanup);
     setupGaliaChat(GEN.surfaces || {}, activeLang, galiaLoaded, addCleanup);
 }

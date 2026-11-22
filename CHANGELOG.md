@@ -2,6 +2,21 @@
 
 本專案的更新紀錄。README 只描述目前的設計與維護方式，歷次修改內容記在這裡。
 
+## 2026-11 GGC 補譯（二）：環形選單與手機日期
+
+**問題**：角色身上的 GGC 環形選單（`GAMES`、`MISC`、`OTHERS`…）與手機鎖定畫面的日期仍是英文。環形選單會先把標籤轉成全大寫，再逐字畫在弧線上，畫布層只看得到單一字母；日期由 `Intl.DateTimeFormat("en-GB")` 產生（例如 `Sunday 22 November`），字庫沒有對應鍵。
+
+**修正**：
+
+- `src/mods/galia.js` 新增 `setupGaliaRadialMenu`：在 `window.ClubGamingInstance.radialDialogMenu` 的 `drawArcText` / `drawCenterText` 畫字前替換整個標籤（含中央 `CLOSE` / `BACK`）。查 `galia` 字庫時不分大小寫，不需另加大寫鍵；`1D6` / `2D6` / `GGC` 維持原樣。GGC 自我更新會換新的選單物件，每 0.5 秒重新接上，卸載時還原。
+- `ui.json` 以 7 個星期 × 12 個月列舉鎖定畫面日期，顯示為「11月22日 星期日」。時鐘為數字，不需翻譯。
+- 修正 `Others` 被銀行權限組合覆寫成「他人」，改回「其他」；銀行權限組合（`Info - Self - Others` 等）一併使用「其他」。
+- `dialog.json` 先補入 `Stand` / `Kneel` / `On all fours` / `Steal` / `Look at phone`。
+
+**測試**：`scripts/galia.test.js` 新增全年日期翻譯（CN/TW）、環形選單標籤替換、選單物件更換後重新接上與卸載還原。
+
+**限制**：站位選單（`Choose a position or pose.` 與九個站位選項）與互動動作名稱（`Place yourself at...`、`Step away from the group` 等）是 GGC 改寫 BC 對話框按鈕的 label 與狀態列，接線需確認 BC 原始碼中的元素結構，尚未處理。
+
 ## 2026-11 Galia's Gambling Club（GGC）補譯
 
 **範圍**：GGC v0.4.122（`club-gaming.js`，作者未公開原始碼）。從打包檔逐段抽出約 1,040 條玩家可見字串（排除 ModSDK、內建西洋棋函式庫、主控台日誌、CSS 與內部鍵值），整理成三份字庫，共約 1,170 筆（含為代名詞、所有格與組合句列舉的句型）。

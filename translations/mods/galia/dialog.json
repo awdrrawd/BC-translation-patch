@@ -24,5 +24,10 @@
   "Take off {item}": "脱下 {item}",
   "Skirmish": "对决",
   "Cancel skirmish": "取消对决",
-  "Give Item": "交出物品"
+  "Give Item": "交出物品",
+  "Stand": "站立",
+  "Kneel": "跪下",
+  "On all fours": "四肢着地",
+  "Steal": "偷取",
+  "Look at phone": "看手机"
 }
