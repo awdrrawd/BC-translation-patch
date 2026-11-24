@@ -4,8 +4,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
-      day: monday
-      time: '09:00'
+      day: saturday
+      time: '08:09'
       timezone: Asia/Taipei
     open-pull-requests-limit: 3
     groups:
@@ -16,7 +16,11 @@ updates:
     directory: /
     schedule:
       interval: weekly
-      day: monday
-      time: '09:00'
+      day: saturday
+      time: '08:09'
       timezone: Asia/Taipei
     open-pull-requests-limit: 3
+    groups:
+      actions:
+        patterns: ['*']
+        update-types: [minor, patch]
