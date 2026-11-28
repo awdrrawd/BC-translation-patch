@@ -1,6 +1,6 @@
 # 自動化與 GitHub 手動設定
 
-本次實作第一批 CI／字庫品質閘門，以及 Dependabot。上游定期下載、未使用程式碼掃描、完整瀏覽器 E2E 與 dependency-review-action 尚未加入。無需 PAT、額外 secrets 或付費第三方服務；GitHub Actions 的可用額度仍依帳戶方案。
+本次實作第一批 CI／字庫品質閘門，以及 Dependabot。未使用程式碼掃描、完整瀏覽器 E2E 與 dependency-review-action 尚未加入。無需 PAT、額外 secrets 或付費第三方服務；GitHub Actions 的可用額度仍依帳戶方案。
 
 ## 已寫好的行為
 
@@ -9,13 +9,13 @@
 | 任意 PR | 安裝依賴、字庫檢查、22 項測試、建置、上傳品質報告 | 否 |
 | main 推送 | 相同驗證；成功後上傳 dist，再部署 Pages | 是 |
 | Actions 手動執行 | 相同驗證 | 僅選 main 時發布 |
-| merge queue | 相同驗證 | 否 |
-| 每週一台北時間 09:00 | Dependabot 檢查 npm 與 GitHub Actions 更新，必要時提出 PR | 不自動合併 |
-| 每週一台北時間 09:00（可手動執行） | `BC compatibility`（`bc-compat.yml`）：比對 BC 程式碼鏡像與 `scripts/bc-compat-baseline.json`，檢查本插件掛鉤的 10 個 BC 函式是否還在、內容是否改變。有差異時開一則 `bc-compat` issue，差異內容改變時更新並留言，差異消失後自動關閉；不阻擋 PR 與部署 | 否 |
+| 每週六台北時間 08:09 | Dependabot 檢查 npm 與 GitHub Actions 更新，必要時提出 PR | 不自動合併 |
+| 每週一台北時間 09:07（可手動執行） | `BC compatibility`（`bc-compat.yml`，步驟在 Bondage-College-Mirror 的共用 workflow）：比對 BC 程式碼鏡像與 `scripts/bc-compat-baseline.json`，檢查本插件掛鉤的 10 個 BC 函式是否還在、內容是否改變。有差異時開一則 `bc-compat` issue，差異內容改變時更新並留言，差異消失後自動關閉；不阻擋 PR 與部署 | 否 |
+| 每週二台北時間 10:23（可手動執行） | `Fetch upstream texts`（`fetch-upstream.yml`）：下載程式碼鏡像的上游文本，比對 CN／TW 缺漏；排程執行時若有缺漏，更新一則 `upstream-texts` issue（只改內文），缺漏歸零後自動關閉。手動執行可另外產生新版官方 CN 翻譯供下載 | 否 |
 
 Workflow：`.github/workflows/build.yml`。依賴更新：`.github/dependabot.yml`。一般驗證 job 只有 contents:read；Pages 權限只給部署 job，部署不 checkout／執行專案程式，只發布已驗證產物。PR 不使用 pull_request_target，也沒有發布權限。
 
-同分支新執行會取消舊 CI。Pages 部署另有序列化群組。品質報告保留 14 天，可從 Actions 執行頁面的 Artifacts 下載 `translation-quality`；即使品質检查失敗仍嘗試上傳報告。
+同一個 PR 有新提交時取消舊 CI；main 的驗證與部署不中斷。Pages 部署另有序列化群組。品質報告保留 14 天，可從 Actions 執行頁面的 Artifacts 下載 `translation-quality`；即使品質检查失敗仍嘗試上傳報告。
 
 ## 你需要手動設定
 
