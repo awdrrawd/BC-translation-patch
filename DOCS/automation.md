@@ -9,7 +9,7 @@
 | 任意 PR | 安裝依賴、字庫檢查、22 項測試、建置、上傳品質報告 | 否 |
 | main 推送 | 相同驗證；成功後上傳 dist，再部署 Pages | 是 |
 | Actions 手動執行 | 相同驗證 | 僅選 main 時發布 |
-| 每週六台北時間 08:09 | Dependabot 檢查 npm 與 GitHub Actions 更新，必要時提出 PR | 不自動合併 |
+| 每週六台北時間 08:09 | Dependabot 檢查 npm 與 GitHub Actions 更新，必要時提出 PR；新版本發布滿 7 天才提出（安全性更新不受影響） | 不自動合併 |
 | 每週一台北時間 09:07（可手動執行） | `BC compatibility`（`bc-compat.yml`，步驟在 Bondage-College-Mirror 的共用 workflow）：比對 BC 程式碼鏡像與 `scripts/bc-compat-baseline.json`，檢查本插件掛鉤的 10 個 BC 函式是否還在、內容是否改變。有差異時開一則 `bc-compat` issue，差異內容改變時更新並留言，差異消失後自動關閉；不阻擋 PR 與部署 | 否 |
 | 每週二台北時間 10:23（可手動執行） | `Fetch upstream texts`（`fetch-upstream.yml`）：下載程式碼鏡像的上游文本，比對 CN／TW 缺漏；排程執行時若有缺漏，更新一則 `upstream-texts` issue（只改內文），缺漏歸零後自動關閉。手動執行可另外產生新版官方 CN 翻譯供下載 | 否 |
 
