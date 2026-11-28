@@ -4,7 +4,6 @@ on:
   pull_request:
   push:
     branches: [main]
-  merge_group:
   workflow_dispatch:
 
 permissions:
@@ -12,7 +11,8 @@ permissions:
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  # 同一個 PR 有新提交時取消舊檢查；main 的驗證與部署不中斷。
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   verify:

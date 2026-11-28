@@ -1,6 +1,8 @@
 name: Fetch upstream texts
 
 on:
+  schedule:
+    - cron: '23 2 * * 2' # 每週二 10:23 Asia/Taipei：比對上游文本，有缺翻譯時更新追蹤 issue
   workflow_dispatch:
     inputs:
       refresh_cn:
@@ -14,6 +16,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: fetch-upstream-${{ github.ref }}
@@ -54,6 +57,7 @@ jobs:
           npm run diff -- "${args[@]}"
           npm run diff -- --tw "${args[@]}"
       - name: Summarize source and missing translations
+        id: summary
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
@@ -64,7 +68,11 @@ jobs:
             lines.push(`${lang.toUpperCase()}: ${report.reduce((total, row) => total + row.missing.length, 0)} missing strings across ${report.length} files.`);
           }
           lines.push('', 'Download upstream-texts-and-reports below for the source texts and detailed reports. Repository files are unchanged.');
-          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+          const text = lines.join('\n') + '\n';
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, text);
+          fs.writeFileSync(`${process.env.RUNNER_TEMP}/upstream-summary.md`, text);
+          const missing = ['cn', 'tw'].reduce((sum, lang) => sum + JSON.parse(fs.readFileSync(`reports/missing-${lang}.json`, 'utf8')).reduce((total, row) => total + row.missing.length, 0), 0);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `missing=${missing}\n`);
           NODE
       - name: Upload texts and reports
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -90,3 +98,28 @@ jobs:
             translations/official-tw.json
           if-no-files-found: error
           retention-days: 30
+      - name: Track missing translations in an issue
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          MISSING: ${{ steps.summary.outputs.missing }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          label='upstream-texts'
+          gh label create "$label" --color FBCA04 --description '每週上游文本比對：CN／TW 缺翻譯追蹤' --force >/dev/null
+          number="$(gh issue list --state open --label "$label" --json number --jq '.[0].number // empty')"
+          if [ "${MISSING:-0}" = "0" ]; then
+            if [ -n "$number" ]; then gh issue close "$number" --comment "最新一次比對已沒有缺漏的翻譯：$RUN_URL"; fi
+            exit 0
+          fi
+          body="$RUNNER_TEMP/issue.md"
+          {
+            cat "$RUNNER_TEMP/upstream-summary.md"
+            printf '\n本 issue 由每週的 Fetch upstream texts 自動更新（只改內文，不另外留言）；缺漏歸零時自動關閉。\n最新執行與可下載的報告：%s\n' "$RUN_URL"
+          } > "$body"
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file "$body"
+          else
+            gh issue create --title '上游文本有尚未翻譯的字串' --label "$label" --body-file "$body"
+          fi
